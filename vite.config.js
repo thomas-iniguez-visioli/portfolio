@@ -9,6 +9,15 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  build: {
+    assetsInlineLimit:50,
+    manifest:true,
+    ssrManifest:true,
+    rollupOptions: {
+     // assetsInlineLimit:500,
+      // https://rollupjs.org/guide/en/#big-list-of-options
+    }
+  },
   resolve: {
     
     alias: {
