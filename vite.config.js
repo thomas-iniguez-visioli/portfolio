@@ -14,6 +14,9 @@ export default defineConfig({
     manifest:true,
     ssrManifest:true,
     rollupOptions: {
+      output: {
+        MaxChunkSize: 500_0,
+      }
      // assetsInlineLimit:500,
       // https://rollupjs.org/guide/en/#big-list-of-options
     }
