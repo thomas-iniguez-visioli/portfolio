@@ -1,20 +1,20 @@
 name: Build Vue
 on: [push]
 permissions:
-  actions: read|write
-  attestations: read|write
-  checks: read|write
-  contents: read|write
-  deployments: read|write
+  actions: write
+  attestations: write
+  checks: write
+  contents: write
+  deployments: write
   id-token: write
-  issues: read|write
-  discussions: read|write
-  packages: read|write
-  pages: read|write
-  pull-requests: read|write
-  repository-projects: read|write
-  security-events: read|write
-  statuses: read|write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
 
 
 jobs:
