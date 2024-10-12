@@ -1,36 +1,11 @@
-[main (root-commit) c0bcab4] the beginning
- 34 files changed, 5209 insertions(+)
- create mode 100644 .eslintrc.cjs
- create mode 100644 .gitignore
- create mode 100644 .prettierrc.json
- create mode 100644 .vscode/extensions.json
- create mode 100644 README.md
- create mode 100644 index.html
- create mode 100644 jsconfig.json
- create mode 100644 log.txt
- create mode 100644 package-lock.json
- create mode 100644 package.json
- create mode 100644 public/RGPD.txt
- create mode 100644 public/favicon.ico
- create mode 100644 public/portfolio.txt
- create mode 100644 src/App.vue
- create mode 100644 src/assets/base.css
- create mode 100644 src/assets/logo.svg
- create mode 100644 src/assets/main.css
- create mode 100644 src/components/HelloWorld.vue
- create mode 100644 src/components/TheWelcome.vue
- create mode 100644 src/components/WelcomeItem.vue
- create mode 100644 src/components/__tests__/HelloWorld.spec.js
- create mode 100644 src/components/icons/IconCommunity.vue
- create mode 100644 src/components/icons/IconDocumentation.vue
- create mode 100644 src/components/icons/IconEcosystem.vue
- create mode 100644 src/components/icons/IconSupport.vue
- create mode 100644 src/components/icons/IconTooling.vue
- create mode 100644 src/main.js
- create mode 100644 src/router/index.js
- create mode 100644 src/stores/counter.js
- create mode 100644 src/views/AboutView.vue
- create mode 100644 src/views/HomeView.vue
- create mode 100644 src/views/projectView.vue
- create mode 100644 vite.config.js
- create mode 100644 vitest.config.js
+[main 40be317] the beginning
+ 10 files changed, 82 insertions(+), 67 deletions(-)
+ create mode 100644 docs/RGPD.txt
+ create mode 100644 docs/assets/AboutView-C6Dx7pxG.css
+ create mode 100644 docs/assets/AboutView-DBHC5cgZ.js
+ create mode 100644 docs/assets/index-BRLxTH8U.css
+ create mode 100644 docs/assets/index-zrsZH3Kj.js
+ create mode 100644 docs/assets/projectView-CqaMIhH8.js
+ create mode 100644 docs/favicon.ico
+ create mode 100644 docs/index.html
+ create mode 100644 docs/portfolio.txt
