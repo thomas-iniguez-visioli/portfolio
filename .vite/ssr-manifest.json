@@ -56,7 +56,7 @@
   "src/components/WelcomeItem.vue": [
     "/porfolio/assets/logo-_cUAdIX-.svg"
   ],
-  "src/components/WelcomeItem.vue?vue&type=style&index=0&scoped=a6faed2e&lang.css": [
+  "src/components/WelcomeItem.vue?vue&type=style&index=0&scoped=e9883d30&lang.css": [
     "/porfolio/assets/logo-_cUAdIX-.svg"
   ],
   "src/components/icons/IconCommunity.vue": [
@@ -81,22 +81,22 @@
     "/porfolio/assets/logo-_cUAdIX-.svg"
   ],
   "src/views/AboutView.vue": [
-    "/porfolio/assets/AboutView-C5DgZcX6.js",
+    "/porfolio/assets/AboutView-Dt8qz_6m.js",
     "/porfolio/assets/AboutView-C6Dx7pxG.css"
   ],
   "src/views/AboutView.vue?vue&type=style&index=0&lang.css": [
-    "/porfolio/assets/AboutView-C5DgZcX6.js",
+    "/porfolio/assets/AboutView-Dt8qz_6m.js",
     "/porfolio/assets/AboutView-C6Dx7pxG.css"
   ],
   "src/views/HomeView.vue": [
     "/porfolio/assets/logo-_cUAdIX-.svg"
   ],
   "src/views/projectView.vue": [
-    "/porfolio/assets/projectView-Dy-Q4UMZ.js",
+    "/porfolio/assets/projectView-B30Mp4vx.js",
     "/porfolio/assets/AboutView-C6Dx7pxG.css"
   ],
   "src/views/projectView.vue?vue&type=style&index=0&lang.css": [
-    "/porfolio/assets/projectView-Dy-Q4UMZ.js",
+    "/porfolio/assets/projectView-B30Mp4vx.js",
     "/porfolio/assets/AboutView-C6Dx7pxG.css"
   ]
 }
