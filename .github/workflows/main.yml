@@ -17,7 +17,7 @@ permissions:
   statuses: write
 env:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://thomas-iniguez-visioli.github.io/portfolio/
 jobs:
   build_vue:
     environment:
