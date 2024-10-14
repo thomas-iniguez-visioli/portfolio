@@ -1,0 +1,102 @@
+{
+  "\u0000plugin-vue:export-helper": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "\u0000vite/modulepreload-polyfill.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "\u0000vite/preload-helper.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "index.html": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "node_modules/@vue/shared/dist/shared.esm-bundler.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "node_modules/pinia/dist/pinia.mjs": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "node_modules/pinia/node_modules/vue-demi/lib/index.mjs": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "node_modules/vue-router/dist/vue-router.mjs": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/App.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/App.vue?vue&type=style&index=0&scoped=bb964c9a&lang.css": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/assets/logo.svg": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/assets/main.css": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/HelloWorld.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/HelloWorld.vue?vue&type=style&index=0&scoped=6cf1482e&lang.css": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/TheWelcome.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/WelcomeItem.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/WelcomeItem.vue?vue&type=style&index=0&scoped=a6faed2e&lang.css": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/icons/IconCommunity.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/icons/IconDocumentation.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/icons/IconEcosystem.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/icons/IconSupport.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/components/icons/IconTooling.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/main.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/router/index.js": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/views/AboutView.vue": [
+    "/porfolio/assets/AboutView-C5DgZcX6.js",
+    "/porfolio/assets/AboutView-C6Dx7pxG.css"
+  ],
+  "src/views/AboutView.vue?vue&type=style&index=0&lang.css": [
+    "/porfolio/assets/AboutView-C5DgZcX6.js",
+    "/porfolio/assets/AboutView-C6Dx7pxG.css"
+  ],
+  "src/views/HomeView.vue": [
+    "/porfolio/assets/logo-_cUAdIX-.svg"
+  ],
+  "src/views/projectView.vue": [
+    "/porfolio/assets/projectView-Dy-Q4UMZ.js",
+    "/porfolio/assets/AboutView-C6Dx7pxG.css"
+  ],
+  "src/views/projectView.vue?vue&type=style&index=0&lang.css": [
+    "/porfolio/assets/projectView-Dy-Q4UMZ.js",
+    "/porfolio/assets/AboutView-C6Dx7pxG.css"
+  ]
+}
