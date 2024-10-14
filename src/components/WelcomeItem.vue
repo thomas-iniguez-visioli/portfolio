@@ -23,7 +23,8 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
 </script>
 <script>
 
-</script><template>
+</script>
+<template>
  
          <RouterLink to="/" id="redirect"> <slot name="heading" id ="name"></slot></RouterLink>
        
