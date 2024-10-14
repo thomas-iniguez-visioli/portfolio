@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
-  create:
+  push:
     branches: ["gh-pages"]
 
   # Allows you to run this workflow manually from the Actions tab
