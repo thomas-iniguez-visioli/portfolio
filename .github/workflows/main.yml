@@ -15,14 +15,10 @@ permissions:
   repository-projects: write
   security-events: write
   statuses: write
-env:
-      name: github-pages
-      url: https://thomas-iniguez-visioli.github.io/portfolio/
+
 jobs:
   build_vue:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    
     
     runs-on: ubuntu-latest
     name: Build Vue
@@ -34,17 +30,5 @@ jobs:
         username: 'thomas-iniguez-visioli'
         reponame: 'portfolio'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
     
-          # Upload entire repository
-        path: '.'
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
    
