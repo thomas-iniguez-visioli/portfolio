@@ -20,6 +20,10 @@ env:
       url: ${{ steps.deployment.outputs.page_url }}
 jobs:
   build_vue:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
@@ -40,4 +44,7 @@ jobs:
     
           # Upload entire repository
         path: '.'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
    
