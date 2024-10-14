@@ -1,5 +1,4 @@
-[main 40be317] the beginning
- 10 files changed, 82 insertions(+), 67 deletions(-)
+
  create mode 100644 docs/RGPD.txt
  create mode 100644 docs/assets/AboutView-C6Dx7pxG.css
  create mode 100644 docs/assets/AboutView-DBHC5cgZ.js
