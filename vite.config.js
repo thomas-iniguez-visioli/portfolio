@@ -13,7 +13,15 @@ export default defineConfig({
     minify:false,
       rollupOption:{
       output:{
-          esModule:false
+          assetFileNames: "assets/[name].[ext]",
+            entryFileNames: chunk => {
+
+                        if (chunk.facadeModuleId.endsWith('.js')) {
+                            return '[name].js'
+                        }
+                        
+
+                    }
       }
       }
     
