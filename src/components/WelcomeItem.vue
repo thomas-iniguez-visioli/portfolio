@@ -10,7 +10,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
     //console.log(item.parentElement)
     console.log(item.href.includes("project"))
     if(!item.href.includes("project")){
-      item.href=item.href+"project/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+      item.href=item.href+"portfolio/project/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
     console.log(item.href)
