@@ -35,10 +35,7 @@
   "src/App.vue": [
     "/porfolio/logo-_cUAdIX-.svg"
   ],
-  "src/App.vue?vue&type=style&index=0&scoped=bb964c9a&lang.css": [
-    "/porfolio/logo-_cUAdIX-.svg"
-  ],
-  "src/assets/logo.svg": [
+  "src/App.vue?vue&type=style&index=0&scoped=35b03d4e&lang.css": [
     "/porfolio/logo-_cUAdIX-.svg"
   ],
   "src/assets/main.css": [
@@ -74,6 +71,9 @@
   "src/components/icons/IconTooling.vue": [
     "/porfolio/logo-_cUAdIX-.svg"
   ],
+  "src/logo.svg": [
+    "/porfolio/logo-_cUAdIX-.svg"
+  ],
   "src/main.js": [
     "/porfolio/logo-_cUAdIX-.svg"
   ],
@@ -81,22 +81,22 @@
     "/porfolio/logo-_cUAdIX-.svg"
   ],
   "src/views/AboutView.vue": [
-    "/porfolio/AboutView-D9OpGY7v.js",
+    "/porfolio/AboutView-DRqnsU0m.js",
     "/porfolio/AboutView-C6Dx7pxG.css"
   ],
   "src/views/AboutView.vue?vue&type=style&index=0&lang.css": [
-    "/porfolio/AboutView-D9OpGY7v.js",
+    "/porfolio/AboutView-DRqnsU0m.js",
     "/porfolio/AboutView-C6Dx7pxG.css"
   ],
   "src/views/HomeView.vue": [
     "/porfolio/logo-_cUAdIX-.svg"
   ],
   "src/views/projectView.vue": [
-    "/porfolio/projectView-C3KcEQEy.js",
+    "/porfolio/projectView-C4_qSRdK.js",
     "/porfolio/AboutView-C6Dx7pxG.css"
   ],
   "src/views/projectView.vue?vue&type=style&index=0&lang.css": [
-    "/porfolio/projectView-C3KcEQEy.js",
+    "/porfolio/projectView-C4_qSRdK.js",
     "/porfolio/AboutView-C6Dx7pxG.css"
   ]
 }
