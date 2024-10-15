@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="thomas iniguez visioli" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/about">About</RouterLink>
        
       </nav>
