@@ -1,6 +1,6 @@
 {
   "index.html": {
-    "file": "index-CoxdvPyy.js",
+    "file": "index-COnfo6G4.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -9,18 +9,11 @@
       "src/views/projectView.vue"
     ],
     "css": [
-      "index-5QazjtM8.css"
-    ],
-    "assets": [
-      "logo-_cUAdIX-.svg"
+      "index-CUVbgL0D.css"
     ]
   },
-  "src/logo.svg": {
-    "file": "logo-_cUAdIX-.svg",
-    "src": "src/logo.svg"
-  },
   "src/views/AboutView.vue": {
-    "file": "AboutView-DRqnsU0m.js",
+    "file": "AboutView-DCc4YZrp.js",
     "name": "AboutView",
     "src": "src/views/AboutView.vue",
     "isDynamicEntry": true,
@@ -28,11 +21,11 @@
       "index.html"
     ],
     "css": [
-      "AboutView-C6Dx7pxG.css"
+      "AboutView-BkpE43Yq.css"
     ]
   },
   "src/views/projectView.vue": {
-    "file": "projectView-C4_qSRdK.js",
+    "file": "projectView-asWFguiD.js",
     "name": "projectView",
     "src": "src/views/projectView.vue",
     "isDynamicEntry": true,
@@ -40,7 +33,7 @@
       "index.html"
     ],
     "css": [
-      "AboutView-C6Dx7pxG.css"
+      "projectView-1vycffar.css"
     ]
   }
 }
