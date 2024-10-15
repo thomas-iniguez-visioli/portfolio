@@ -1,4 +1,4 @@
-import { r as ref, b as onMounted, c as createElementBlock, a as createBaseVNode, t as toDisplayString, d as renderSlot, o as openBlock } from "./index-CFz1-knn.js";
+import { r as ref, b as onMounted, c as createElementBlock, a as createBaseVNode, t as toDisplayString, d as renderSlot, o as openBlock } from "./index-05_Jl9SQ.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {
@@ -7,7 +7,7 @@ const _sfc_main = {
     const aboutContent = ref("");
     onMounted(() => {
       console.log(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", ""));
-      fetch("/" + document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", "")).then((response) => response.text()).then((data) => aboutContent.value = data).catch((error) => console.error(error));
+      fetch("/portfolio/" + document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", "")).then((response) => response.text()).then((data) => aboutContent.value = data).catch((error) => console.error(error));
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [
