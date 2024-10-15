@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-fi_j0AJ8.js","AboutView-BkpE43Yq.css","projectView-DBM-SEy6.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-AGRIbwGU.js","AboutView-BkpE43Yq.css","projectView-D-8bRWNF.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -8230,7 +8230,7 @@ const _sfc_main$7 = {
         if (item.id) {
           console.log(item.href.includes("project"));
           if (!item.href.includes("project")) {
-            item.href = item.href + "project/" + item.textContent.split("/")[item.textContent.split("/").length - 1];
+            item.href = item.href + "portfolio/project/" + item.textContent.split("/")[item.textContent.split("/").length - 1];
           }
           console.log(item.href);
         }
@@ -8243,7 +8243,7 @@ const _sfc_main$7 = {
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-c981d316"]]);
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-0f35ce7d"]]);
 const _sfc_main$6 = {};
 const _hoisted_1$4 = {
   xmlns: "http://www.w3.org/2000/svg",
@@ -8411,7 +8411,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-fi_j0AJ8.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-AGRIbwGU.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8419,7 +8419,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-DBM-SEy6.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D-8bRWNF.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
