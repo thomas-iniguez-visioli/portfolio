@@ -11,6 +11,11 @@ export default defineConfig({
   ],
   build: {
     minify:false,
+      rollupOption:{
+      output:{
+          esModule:false
+      }
+      }
     
     
 
