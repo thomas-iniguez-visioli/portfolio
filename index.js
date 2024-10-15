@@ -8155,7 +8155,7 @@ const _sfc_main$8 = {
 const App = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-ae544221"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
-  return "/porfolio/" + dep;
+  return "/portfolio/" + dep;
 };
 const seen = {};
 const __vitePreload = function preload(baseModule, deps, importerUrl) {
@@ -8400,7 +8400,7 @@ const gen = (p2) => {
   return "" + p2.params.name + ".txt";
 };
 const router = createRouter({
-  history: createWebHistory("/porfolio"),
+  history: createWebHistory("/portfolio"),
   routes: [
     {
       path: "/",
@@ -8413,7 +8413,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-ZkrPU_ww.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-oPDzqf5g.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8421,7 +8421,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-B7Y2rsyd.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-BHgUByaB.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
