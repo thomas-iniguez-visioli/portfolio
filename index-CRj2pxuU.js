@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-BPwSKaR2.js","AboutView-BkpE43Yq.css","projectView-3m6aB9VK.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-xNgLt74r.js","AboutView-BkpE43Yq.css","projectView-qjoCWoJG.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -8218,7 +8218,7 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
   });
 };
 const _hoisted_1$5 = {
-  href: "/project",
+  href: "/temp",
   id: "redirect"
 };
 const _sfc_main$7 = {
@@ -8243,7 +8243,7 @@ const _sfc_main$7 = {
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-16914acd"]]);
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-e642d2e8"]]);
 const _sfc_main$6 = {};
 const _hoisted_1$4 = {
   xmlns: "http://www.w3.org/2000/svg",
@@ -8411,7 +8411,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-BPwSKaR2.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-xNgLt74r.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8419,7 +8419,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-3m6aB9VK.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-qjoCWoJG.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
