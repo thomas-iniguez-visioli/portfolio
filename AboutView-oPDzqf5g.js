@@ -1,4 +1,4 @@
-import { _ as _export_sfc, c as createElementBlock, a as createBaseVNode, o as openBlock } from "./index.js";
+import { _ as _export_sfc, c as createElementBlock, a as createBaseVNode, o as openBlock } from "./index-CFz1-knn.js";
 const _sfc_main = {};
 const _hoisted_1 = { class: "about" };
 function _sfc_render(_ctx, _cache) {
