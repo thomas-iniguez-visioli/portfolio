@@ -12,8 +12,7 @@ export default defineConfig({
   build: {
     minify:false,
     
-    manifest:true,
-    ssrManifest:true,
+    
     rollupOptions: {
       output: {
         MaxChunkSize: 500_0,
