@@ -11,9 +11,10 @@ export default defineConfig({
   ],
   build: {
     minify:false,
+	  base:"/porfolio",
       rollupOption:{
       output:{
-          assetFileNames: "assets/[name].[ext]",
+          assetFileNames: "[name].[ext]",
             entryFileNames: chunk => {
 
                         if (chunk.facadeModuleId.endsWith('.js')) {
@@ -23,7 +24,7 @@ export default defineConfig({
 
                     },
            chunkFileNames: (chunkInfo) => {
-	 
+	 	console.log(chunkInfo.name.toLowerCase())
           return `${chunkInfo.name.toLowerCase()}.js`;
         }
       }
