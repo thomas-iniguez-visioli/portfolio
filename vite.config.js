@@ -21,7 +21,11 @@ export default defineConfig({
                         }
                         
 
-                    }
+                    },
+           chunkFileNames: (chunkInfo) => {
+	 
+          return `${chunkInfo.name.toLowerCase()}.js`;
+        }
       }
       }
     
