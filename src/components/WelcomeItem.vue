@@ -26,7 +26,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
 </script>
 <template>
  
-          <a href="/temp/" id="redirect"> <slot name="heading" id ="name"></slot></a>
+          <a href="/" id="redirect"> <slot name="heading" id ="name"></slot></a>
        
      
 </template>
