@@ -1,5 +1,5 @@
 import * as fs from "fs"
-const banned=[]
+const banned=[".git"]
 fs.readdirSync("./dist").map((item)=>{
   console.log(item)
   if(banned.includes(item)){return}
