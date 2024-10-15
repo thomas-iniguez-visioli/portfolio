@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-DCc4YZrp.js","AboutView-BkpE43Yq.css","projectView-asWFguiD.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-vhldvv4P.js","AboutView-BkpE43Yq.css","projectView-Jk0PEFqZ.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -8134,7 +8134,7 @@ const _sfc_main$8 = {
             createBaseVNode("nav", null, [
               createVNode(unref(RouterLink), { to: "/" }, {
                 default: withCtx(() => _cache[0] || (_cache[0] = [
-                  createTextVNode("Home")
+                  createTextVNode("accueil")
                 ])),
                 _: 1
               }),
@@ -8152,7 +8152,7 @@ const _sfc_main$8 = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-35b03d4e"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-ae544221"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/porfolio/" + dep;
@@ -8413,7 +8413,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-DCc4YZrp.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-vhldvv4P.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8421,7 +8421,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-asWFguiD.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-Jk0PEFqZ.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
