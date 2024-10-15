@@ -13,13 +13,7 @@ export default defineConfig({
     minify:false,
     
     
-    rollupOptions: {
-      output: {
-        MaxChunkSize: 500_0,
-      }
-     // assetsInlineLimit:500,
-      // https://rollupjs.org/guide/en/#big-list-of-options
-    }
+
   },
   resolve: {
     
