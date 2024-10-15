@@ -10,7 +10,8 @@ export default defineConfig({
     vue(),
   ],
   build: {
-    assetsInlineLimit:50,
+    minify:false,
+    
     manifest:true,
     ssrManifest:true,
     rollupOptions: {
