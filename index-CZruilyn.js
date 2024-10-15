@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-D4ulBxgu.js","AboutView-BkpE43Yq.css","projectView-B7qSWSR1.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["AboutView-BPwSKaR2.js","AboutView-BkpE43Yq.css","projectView-3m6aB9VK.js","projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -8095,7 +8095,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _hoisted_1$6 = { class: "greetings" };
+const _hoisted_1$7 = { class: "greetings" };
 const _hoisted_2 = { class: "green" };
 const _sfc_main$9 = {
   __name: "HelloWorld",
@@ -8107,7 +8107,7 @@ const _sfc_main$9 = {
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+      return openBlock(), createElementBlock("div", _hoisted_1$7, [
         createBaseVNode("h1", _hoisted_2, toDisplayString(__props.msg), 1),
         _cache[0] || (_cache[0] = createBaseVNode("h3", null, null, -1))
       ]);
@@ -8115,7 +8115,7 @@ const _sfc_main$9 = {
   }
 };
 const HelloWorld = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-6cf1482e"]]);
-const _hoisted_1$5 = { class: "wrapper" };
+const _hoisted_1$6 = { class: "wrapper" };
 const _sfc_main$8 = {
   __name: "App",
   setup(__props) {
@@ -8129,7 +8129,7 @@ const _sfc_main$8 = {
             width: "125",
             height: "125"
           }, null, -1)),
-          createBaseVNode("div", _hoisted_1$5, [
+          createBaseVNode("div", _hoisted_1$6, [
             createVNode(HelloWorld, { msg: "thomas iniguez visioli" }),
             createBaseVNode("nav", null, [
               createVNode(unref(RouterLink), { to: "/" }, {
@@ -8217,6 +8217,10 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
     return baseModule().catch(handlePreloadError);
   });
 };
+const _hoisted_1$5 = {
+  href: "/project",
+  id: "redirect"
+};
 const _sfc_main$7 = {
   __name: "WelcomeItem",
   setup(__props) {
@@ -8233,19 +8237,13 @@ const _sfc_main$7 = {
       });
     });
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(unref(RouterLink), {
-        to: "/",
-        id: "redirect"
-      }, {
-        default: withCtx(() => [
-          renderSlot(_ctx.$slots, "heading", { id: "name" }, void 0, true)
-        ]),
-        _: 3
-      });
+      return openBlock(), createElementBlock("a", _hoisted_1$5, [
+        renderSlot(_ctx.$slots, "heading", { id: "name" }, void 0, true)
+      ]);
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-e9883d30"]]);
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-16914acd"]]);
 const _sfc_main$6 = {};
 const _hoisted_1$4 = {
   xmlns: "http://www.w3.org/2000/svg",
@@ -8413,7 +8411,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-D4ulBxgu.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-BPwSKaR2.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8421,7 +8419,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-B7qSWSR1.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-3m6aB9VK.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
