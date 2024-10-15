@@ -5,13 +5,13 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base:"/porfolio",
+    base:"/portfolio",
   plugins: [
     vue(),
   ],
   build: {
     minify:false,
-	  base:"/porfolio",
+	  base:"/portfolio",
       rollupOption:{
       output:{
           assetFileNames: "[name].[ext]",
