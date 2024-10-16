@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-Dj6uXL7p.js","assets/AboutView-BkpE43Yq.css","assets/projectView-BhJcZY_9.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-DsNc-Roz.js","assets/AboutView-BkpE43Yq.css","assets/projectView-BIpbKibo.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -6308,6 +6308,8 @@ function decode(text) {
   }
   return "" + text;
 }
+const TRAILING_SLASH_RE = /\/$/;
+const removeTrailingSlash = (path) => path.replace(TRAILING_SLASH_RE, "");
 function parseURL(parseQuery2, location2, currentLocation = "/") {
   let path, query = {}, searchString = "", hash = "";
   const hashPos = location2.indexOf("#");
@@ -6408,6 +6410,25 @@ var NavigationDirection;
   NavigationDirection2["forward"] = "forward";
   NavigationDirection2["unknown"] = "";
 })(NavigationDirection || (NavigationDirection = {}));
+const START = "";
+function normalizeBase(base) {
+  if (!base) {
+    if (isBrowser) {
+      const baseEl = document.querySelector("base");
+      base = baseEl && baseEl.getAttribute("href") || "/";
+      base = base.replace(/^\w+:\/\/[^\/]+/, "");
+    } else {
+      base = "/";
+    }
+  }
+  if (base[0] !== "/" && base[0] !== "#")
+    base = "/" + base;
+  return removeTrailingSlash(base);
+}
+const BEFORE_HASH_RE = /^[^#]+#/;
+function createHref(base, location2) {
+  return base.replace(BEFORE_HASH_RE, "#") + location2;
+}
 function getElementPosition(el, offset) {
   const docRect = document.documentElement.getBoundingClientRect();
   const elRect = el.getBoundingClientRect();
@@ -6452,6 +6473,78 @@ function getSavedScrollPosition(key) {
   const scroll = scrollPositions.get(key);
   scrollPositions.delete(key);
   return scroll;
+}
+function createMemoryHistory(base = "") {
+  let listeners = [];
+  let queue2 = [START];
+  let position = 0;
+  base = normalizeBase(base);
+  function setLocation(location2) {
+    position++;
+    if (position !== queue2.length) {
+      queue2.splice(position);
+    }
+    queue2.push(location2);
+  }
+  function triggerListeners(to, from, { direction, delta }) {
+    const info = {
+      direction,
+      delta,
+      type: NavigationType.pop
+    };
+    for (const callback of listeners) {
+      callback(to, from, info);
+    }
+  }
+  const routerHistory = {
+    // rewritten by Object.defineProperty
+    location: START,
+    // TODO: should be kept in queue
+    state: {},
+    base,
+    createHref: createHref.bind(null, base),
+    replace(to) {
+      queue2.splice(position--, 1);
+      setLocation(to);
+    },
+    push(to, data) {
+      setLocation(to);
+    },
+    listen(callback) {
+      listeners.push(callback);
+      return () => {
+        const index = listeners.indexOf(callback);
+        if (index > -1)
+          listeners.splice(index, 1);
+      };
+    },
+    destroy() {
+      listeners = [];
+      queue2 = [START];
+      position = 0;
+    },
+    go(delta, shouldTrigger = true) {
+      const from = this.location;
+      const direction = (
+        // we are considering delta === 0 going forward, but in abstract mode
+        // using 0 for the delta doesn't make sense like it does in html5 where
+        // it reloads the page
+        delta < 0 ? NavigationDirection.back : NavigationDirection.forward
+      );
+      position = Math.max(0, Math.min(position + delta, queue2.length - 1));
+      if (shouldTrigger) {
+        triggerListeners(this.location, from, {
+          direction,
+          delta
+        });
+      }
+    }
+  };
+  Object.defineProperty(routerHistory, "location", {
+    enumerable: true,
+    get: () => queue2[position]
+  });
+  return routerHistory;
 }
 function isRouteLocation(route) {
   return typeof route === "string" || route && typeof route === "object";
@@ -8204,7 +8297,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-Dj6uXL7p.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-DsNc-Roz.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8212,7 +8305,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BhJcZY_9.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-BIpbKibo.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
