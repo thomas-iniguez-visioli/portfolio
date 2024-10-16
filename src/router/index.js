@@ -5,7 +5,7 @@ const gen=(p)=>{
 return ""+p.params.name+".txt"
 }
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("https://thomas-iniguez-visioli.github.io/portfolio"),
   routes: [
     {
       path: '/',
