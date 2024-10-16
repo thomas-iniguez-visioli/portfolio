@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory,createMemoryHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const gen=(p)=>{
