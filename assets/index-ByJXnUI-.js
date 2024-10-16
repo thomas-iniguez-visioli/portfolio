@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-C-samJdw.js","assets/AboutView-BkpE43Yq.css","assets/projectView-BmzGu3Bu.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-Dt2cCA_G.js","assets/AboutView-BkpE43Yq.css","assets/projectView-BZNWFwo7.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -8411,7 +8411,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-C-samJdw.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-Dt2cCA_G.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8419,7 +8419,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BmzGu3Bu.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-BZNWFwo7.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
