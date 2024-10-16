@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-Dt2cCA_G.js","assets/AboutView-BkpE43Yq.css","assets/projectView-BZNWFwo7.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-B4j2swwH.js","assets/AboutView-BkpE43Yq.css","assets/projectView-D6TRz_jK.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -6660,6 +6660,12 @@ function createWebHistory(base) {
   });
   return routerHistory;
 }
+function createWebHashHistory(base) {
+  base = location.host ? base || location.pathname + location.search : "";
+  if (!base.includes("#"))
+    base += "#";
+  return createWebHistory(base);
+}
 function isRouteLocation(route) {
   return typeof route === "string" || route && typeof route === "object";
 }
@@ -8398,7 +8404,7 @@ const gen = (p2) => {
   return "" + p2.params.name + ".txt";
 };
 const router = createRouter({
-  history: createWebHistory("/portfolio"),
+  history: createWebHashHistory("/portfolio"),
   routes: [
     {
       path: "/",
@@ -8411,7 +8417,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-Dt2cCA_G.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-B4j2swwH.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8419,7 +8425,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BZNWFwo7.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D6TRz_jK.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
