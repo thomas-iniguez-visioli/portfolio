@@ -1,4 +1,4 @@
-import { r as ref, b as onMounted, c as createElementBlock, a as createBaseVNode, d as createTextVNode, t as toDisplayString, e as renderSlot, o as openBlock } from "./index-DbbP_ba6.js";
+import { r as ref, b as onMounted, c as createElementBlock, a as createBaseVNode, d as createTextVNode, t as toDisplayString, e as renderSlot, o as openBlock } from "./index-BRData71.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {
