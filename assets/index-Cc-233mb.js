@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-DsNc-Roz.js","assets/AboutView-BkpE43Yq.css","assets/projectView-BIpbKibo.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-BNPOxW6I.js","assets/AboutView-BkpE43Yq.css","assets/projectView-Coj6OK5s.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -6338,6 +6338,11 @@ function stringifyURL(stringifyQuery2, location2) {
   const query = location2.query ? stringifyQuery2(location2.query) : "";
   return location2.path + (query && "?") + query + (location2.hash || "");
 }
+function stripBase(pathname, base) {
+  if (!base || !pathname.toLowerCase().startsWith(base.toLowerCase()))
+    return pathname;
+  return pathname.slice(base.length) || "/";
+}
 function isSameRouteLocation(stringifyQuery2, a, b) {
   const aLastIndex = a.matched.length - 1;
   const bLastIndex = b.matched.length - 1;
@@ -6410,7 +6415,6 @@ var NavigationDirection;
   NavigationDirection2["forward"] = "forward";
   NavigationDirection2["unknown"] = "";
 })(NavigationDirection || (NavigationDirection = {}));
-const START = "";
 function normalizeBase(base) {
   if (!base) {
     if (isBrowser) {
@@ -6474,75 +6478,185 @@ function getSavedScrollPosition(key) {
   scrollPositions.delete(key);
   return scroll;
 }
-function createMemoryHistory(base = "") {
+let createBaseLocation = () => location.protocol + "//" + location.host;
+function createCurrentLocation(base, location2) {
+  const { pathname, search, hash } = location2;
+  const hashPos = base.indexOf("#");
+  if (hashPos > -1) {
+    let slicePos = hash.includes(base.slice(hashPos)) ? base.slice(hashPos).length : 1;
+    let pathFromHash = hash.slice(slicePos);
+    if (pathFromHash[0] !== "/")
+      pathFromHash = "/" + pathFromHash;
+    return stripBase(pathFromHash, "");
+  }
+  const path = stripBase(pathname, base);
+  return path + search + hash;
+}
+function useHistoryListeners(base, historyState, currentLocation, replace) {
   let listeners = [];
-  let queue2 = [START];
-  let position = 0;
-  base = normalizeBase(base);
-  function setLocation(location2) {
-    position++;
-    if (position !== queue2.length) {
-      queue2.splice(position);
-    }
-    queue2.push(location2);
-  }
-  function triggerListeners(to, from, { direction, delta }) {
-    const info = {
-      direction,
-      delta,
-      type: NavigationType.pop
-    };
-    for (const callback of listeners) {
-      callback(to, from, info);
-    }
-  }
-  const routerHistory = {
-    // rewritten by Object.defineProperty
-    location: START,
-    // TODO: should be kept in queue
-    state: {},
-    base,
-    createHref: createHref.bind(null, base),
-    replace(to) {
-      queue2.splice(position--, 1);
-      setLocation(to);
-    },
-    push(to, data) {
-      setLocation(to);
-    },
-    listen(callback) {
-      listeners.push(callback);
-      return () => {
-        const index = listeners.indexOf(callback);
-        if (index > -1)
-          listeners.splice(index, 1);
-      };
-    },
-    destroy() {
-      listeners = [];
-      queue2 = [START];
-      position = 0;
-    },
-    go(delta, shouldTrigger = true) {
-      const from = this.location;
-      const direction = (
-        // we are considering delta === 0 going forward, but in abstract mode
-        // using 0 for the delta doesn't make sense like it does in html5 where
-        // it reloads the page
-        delta < 0 ? NavigationDirection.back : NavigationDirection.forward
-      );
-      position = Math.max(0, Math.min(position + delta, queue2.length - 1));
-      if (shouldTrigger) {
-        triggerListeners(this.location, from, {
-          direction,
-          delta
-        });
+  let teardowns = [];
+  let pauseState = null;
+  const popStateHandler = ({ state }) => {
+    const to = createCurrentLocation(base, location);
+    const from = currentLocation.value;
+    const fromState = historyState.value;
+    let delta = 0;
+    if (state) {
+      currentLocation.value = to;
+      historyState.value = state;
+      if (pauseState && pauseState === from) {
+        pauseState = null;
+        return;
       }
+      delta = fromState ? state.position - fromState.position : 0;
+    } else {
+      replace(to);
     }
+    listeners.forEach((listener) => {
+      listener(currentLocation.value, from, {
+        delta,
+        type: NavigationType.pop,
+        direction: delta ? delta > 0 ? NavigationDirection.forward : NavigationDirection.back : NavigationDirection.unknown
+      });
+    });
   };
+  function pauseListeners() {
+    pauseState = currentLocation.value;
+  }
+  function listen(callback) {
+    listeners.push(callback);
+    const teardown = () => {
+      const index = listeners.indexOf(callback);
+      if (index > -1)
+        listeners.splice(index, 1);
+    };
+    teardowns.push(teardown);
+    return teardown;
+  }
+  function beforeUnloadListener() {
+    const { history: history2 } = window;
+    if (!history2.state)
+      return;
+    history2.replaceState(assign({}, history2.state, { scroll: computeScrollPosition() }), "");
+  }
+  function destroy() {
+    for (const teardown of teardowns)
+      teardown();
+    teardowns = [];
+    window.removeEventListener("popstate", popStateHandler);
+    window.removeEventListener("beforeunload", beforeUnloadListener);
+  }
+  window.addEventListener("popstate", popStateHandler);
+  window.addEventListener("beforeunload", beforeUnloadListener, {
+    passive: true
+  });
+  return {
+    pauseListeners,
+    listen,
+    destroy
+  };
+}
+function buildState(back, current, forward, replaced = false, computeScroll = false) {
+  return {
+    back,
+    current,
+    forward,
+    replaced,
+    position: window.history.length,
+    scroll: computeScroll ? computeScrollPosition() : null
+  };
+}
+function useHistoryStateNavigation(base) {
+  const { history: history2, location: location2 } = window;
+  const currentLocation = {
+    value: createCurrentLocation(base, location2)
+  };
+  const historyState = { value: history2.state };
+  if (!historyState.value) {
+    changeLocation(currentLocation.value, {
+      back: null,
+      current: currentLocation.value,
+      forward: null,
+      // the length is off by one, we need to decrease it
+      position: history2.length - 1,
+      replaced: true,
+      // don't add a scroll as the user may have an anchor, and we want
+      // scrollBehavior to be triggered without a saved position
+      scroll: null
+    }, true);
+  }
+  function changeLocation(to, state, replace2) {
+    const hashIndex = base.indexOf("#");
+    const url = hashIndex > -1 ? (location2.host && document.querySelector("base") ? base : base.slice(hashIndex)) + to : createBaseLocation() + base + to;
+    try {
+      history2[replace2 ? "replaceState" : "pushState"](state, "", url);
+      historyState.value = state;
+    } catch (err) {
+      {
+        console.error(err);
+      }
+      location2[replace2 ? "replace" : "assign"](url);
+    }
+  }
+  function replace(to, data) {
+    const state = assign({}, history2.state, buildState(
+      historyState.value.back,
+      // keep back and forward entries but override current position
+      to,
+      historyState.value.forward,
+      true
+    ), data, { position: historyState.value.position });
+    changeLocation(to, state, true);
+    currentLocation.value = to;
+  }
+  function push(to, data) {
+    const currentState = assign(
+      {},
+      // use current history state to gracefully handle a wrong call to
+      // history.replaceState
+      // https://github.com/vuejs/router/issues/366
+      historyState.value,
+      history2.state,
+      {
+        forward: to,
+        scroll: computeScrollPosition()
+      }
+    );
+    changeLocation(currentState.current, currentState, true);
+    const state = assign({}, buildState(currentLocation.value, to, null), { position: currentState.position + 1 }, data);
+    changeLocation(to, state, false);
+    currentLocation.value = to;
+  }
+  return {
+    location: currentLocation,
+    state: historyState,
+    push,
+    replace
+  };
+}
+function createWebHistory(base) {
+  base = normalizeBase(base);
+  const historyNavigation = useHistoryStateNavigation(base);
+  const historyListeners = useHistoryListeners(base, historyNavigation.state, historyNavigation.location, historyNavigation.replace);
+  function go(delta, triggerListeners = true) {
+    if (!triggerListeners)
+      historyListeners.pauseListeners();
+    history.go(delta);
+  }
+  const routerHistory = assign({
+    // it's overridden right after
+    location: "",
+    base,
+    go,
+    createHref: createHref.bind(null, base)
+  }, historyNavigation, historyListeners);
   Object.defineProperty(routerHistory, "location", {
     enumerable: true,
-    get: () => queue2[position]
+    get: () => historyNavigation.location.value
+  });
+  Object.defineProperty(routerHistory, "state", {
+    enumerable: true,
+    get: () => historyNavigation.state.value
   });
   return routerHistory;
 }
@@ -8284,7 +8398,7 @@ const gen = (p2) => {
   return "" + p2.params.name + ".txt";
 };
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
@@ -8297,7 +8411,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-DsNc-Roz.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-BNPOxW6I.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8305,7 +8419,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BIpbKibo.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-Coj6OK5s.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
