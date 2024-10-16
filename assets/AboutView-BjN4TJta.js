@@ -1,4 +1,4 @@
-import { _ as _export_sfc, c as createElementBlock, a as createBaseVNode, o as openBlock } from "./index-DVN-mEqu.js";
+import { _ as _export_sfc, c as createElementBlock, a as createBaseVNode, o as openBlock } from "./index-CgiuZi-g.js";
 const _sfc_main = {};
 const _hoisted_1 = { class: "about" };
 function _sfc_render(_ctx, _cache) {
