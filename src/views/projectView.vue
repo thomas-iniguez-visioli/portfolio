@@ -18,7 +18,7 @@ onMounted(() => {
   console.log(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
   fetch("/portfolio/"+document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
     .then(response => response.text())
-    .then(data => aboutContent.innerHTML = data)
+    .then(data => aboutContent.value = data)
     .catch(error => console.error(error))
 })
 /*
