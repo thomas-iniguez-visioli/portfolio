@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, e as createTextVNode } from "./index-Dc5yfO3C.js";
+import { _ as _export_sfc, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, e as createTextVNode } from "./index-MxGfO9Ru.js";
 const _hoisted_1$5 = {
   href: "/",
   id: "redirect"
