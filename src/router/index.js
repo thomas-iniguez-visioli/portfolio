@@ -1,5 +1,5 @@
-import { createRouter, createWebHashHistory,createMemoryHistory,createWebHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter,createWebHistory} from 'vue-router'
+
 
 const gen=(p)=>{
 return ""+p.params.name+".txt"
@@ -10,7 +10,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component:() => import('../views/HomeView.vue')
     },
     {
       path: '/about',
