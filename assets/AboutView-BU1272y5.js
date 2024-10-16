@@ -1,4 +1,4 @@
-import { _ as _export_sfc, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-MxGfO9Ru.js";
+import { _ as _export_sfc, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BEffCoc7.js";
 const _sfc_main = {};
 const _hoisted_1 = { class: "about" };
 function _sfc_render(_ctx, _cache) {
