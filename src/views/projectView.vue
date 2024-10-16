@@ -1,9 +1,8 @@
 <template>
     <div class="about">
       <p class="log"></p>
-        <router-view v-slot="{ aboutContent}">
-  <component :is="Component" />
-</router-view>
+        {{ aboutContent}}
+
      
       <i hidden="true">
       <slot name="name"></slot>
@@ -19,7 +18,7 @@ onMounted(() => {
   console.log(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
   fetch("/portfolio/"+document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
     .then(response => response.text())
-    .then(data => aboutContent.value = data)
+    .then(data => aboutContent.innerHTML = data)
     .catch(error => console.error(error))
 })
 /*
