@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-B-DDeliQ.js","assets/AboutView-BkpE43Yq.css","assets/projectView-ChZpXePK.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/AboutView-C-samJdw.js","assets/AboutView-BkpE43Yq.css","assets/projectView-BmzGu3Bu.js","assets/projectView-1vycffar.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -2339,46 +2339,7 @@ const onRenderTracked = createHook("rtc");
 function onErrorCaptured(hook, target = currentInstance) {
   injectHook("ec", hook, target);
 }
-const COMPONENTS = "components";
-function resolveComponent(name, maybeSelfReference) {
-  return resolveAsset(COMPONENTS, name, true, maybeSelfReference) || name;
-}
 const NULL_DYNAMIC_COMPONENT = Symbol.for("v-ndc");
-function resolveDynamicComponent(component) {
-  if (isString(component)) {
-    return resolveAsset(COMPONENTS, component, false) || component;
-  } else {
-    return component || NULL_DYNAMIC_COMPONENT;
-  }
-}
-function resolveAsset(type, name, warnMissing = true, maybeSelfReference = false) {
-  const instance = currentRenderingInstance || currentInstance;
-  if (instance) {
-    const Component = instance.type;
-    {
-      const selfName = getComponentName(
-        Component,
-        false
-      );
-      if (selfName && (selfName === name || selfName === camelize(name) || selfName === capitalize(camelize(name)))) {
-        return Component;
-      }
-    }
-    const res = (
-      // local registration
-      // check instance[type] first which is resolved for options API
-      resolve(instance[type] || Component[type], name) || // global registration
-      resolve(instance.appContext[type], name)
-    );
-    if (!res && maybeSelfReference) {
-      return Component;
-    }
-    return res;
-  }
-}
-function resolve(registry, name) {
-  return registry && (registry[name] || registry[camelize(name)] || registry[capitalize(camelize(name))]);
-}
 function renderSlot(slots, name, props = {}, fallback, noSlotted) {
   if (currentRenderingInstance.ce || currentRenderingInstance.parent && isAsyncWrapper(currentRenderingInstance.parent) && currentRenderingInstance.parent.ce) {
     if (name !== "default") props.name = name;
@@ -7119,7 +7080,7 @@ function createRouterMatcher(routes, globalOptions) {
     if (matcher.record.name && !isAliasRecord(matcher))
       matcherMap.set(matcher.record.name, matcher);
   }
-  function resolve2(location2, currentLocation) {
+  function resolve(location2, currentLocation) {
     let matcher;
     let params = {};
     let path;
@@ -7183,7 +7144,7 @@ function createRouterMatcher(routes, globalOptions) {
   }
   return {
     addRoute,
-    resolve: resolve2,
+    resolve,
     removeRoute,
     clearRoutes,
     getRoutes,
@@ -7362,7 +7323,7 @@ function useCallbacks() {
 function guardToPromiseFn(guard, to, from, record, name, runWithContext = (fn) => fn()) {
   const enterCallbackArray = record && // name is defined if record is because of the function overload
   (record.enterCallbacks[name] = record.enterCallbacks[name] || []);
-  return () => new Promise((resolve2, reject) => {
+  return () => new Promise((resolve, reject) => {
     const next = (valid) => {
       if (valid === false) {
         reject(createRouterError(4, {
@@ -7381,7 +7342,7 @@ function guardToPromiseFn(guard, to, from, record, name, runWithContext = (fn) =
         record.enterCallbacks[name] === enterCallbackArray && typeof valid === "function") {
           enterCallbackArray.push(valid);
         }
-        resolve2();
+        resolve();
       }
     };
     const guardReturn = runWithContext(() => guard.call(record && record.instances[name], to, from, next));
@@ -7670,7 +7631,7 @@ function createRouter(options) {
   function hasRoute(name) {
     return !!matcher.getRecordMatcher(name);
   }
-  function resolve2(rawLocation, currentLocation) {
+  function resolve(rawLocation, currentLocation) {
     currentLocation = assign({}, currentLocation || currentRoute.value);
     if (typeof rawLocation === "string") {
       const locationNormalized = parseURL(parseQuery$1, rawLocation, currentLocation.path);
@@ -7764,7 +7725,7 @@ function createRouter(options) {
     }
   }
   function pushWithRedirect(to, redirectedFrom) {
-    const targetLocation = pendingLocation = resolve2(to);
+    const targetLocation = pendingLocation = resolve(to);
     const from = currentRoute.value;
     const data = to.state;
     const force = to.force;
@@ -7928,7 +7889,7 @@ function createRouter(options) {
     removeHistoryListener = routerHistory.listen((to, _from, info) => {
       if (!router2.listening)
         return;
-      const toLocation = resolve2(to);
+      const toLocation = resolve(to);
       const shouldRedirect = handleRedirectRecord(toLocation);
       if (shouldRedirect) {
         pushWithRedirect(assign(shouldRedirect, { replace: true }), toLocation).catch(noop);
@@ -8015,15 +7976,15 @@ function createRouter(options) {
   function isReady() {
     if (ready && currentRoute.value !== START_LOCATION_NORMALIZED)
       return Promise.resolve();
-    return new Promise((resolve22, reject) => {
-      readyHandlers.add([resolve22, reject]);
+    return new Promise((resolve2, reject) => {
+      readyHandlers.add([resolve2, reject]);
     });
   }
   function markAsReady(err) {
     if (!ready) {
       ready = !err;
       setupListeners();
-      readyHandlers.list().forEach(([resolve22, reject]) => err ? reject(err) : resolve22());
+      readyHandlers.list().forEach(([resolve2, reject]) => err ? reject(err) : resolve2());
       readyHandlers.reset();
     }
     return err;
@@ -8046,7 +8007,7 @@ function createRouter(options) {
     clearRoutes: matcher.clearRoutes,
     hasRoute,
     getRoutes,
-    resolve: resolve2,
+    resolve,
     options,
     push,
     replace,
@@ -8450,7 +8411,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-B-DDeliQ.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-C-samJdw.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/project/:name",
@@ -8458,7 +8419,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-ChZpXePK.js"), true ? __vite__mapDeps([2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-BmzGu3Bu.js"), true ? __vite__mapDeps([2,3]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
@@ -8474,12 +8435,9 @@ export {
   createBaseVNode as a,
   onMounted as b,
   createElementBlock as c,
-  createVNode as d,
+  createTextVNode as d,
   renderSlot as e,
-  resolveComponent as f,
-  createBlock as g,
-  resolveDynamicComponent as h,
   openBlock as o,
   ref as r,
-  withCtx as w
+  toDisplayString as t
 };
