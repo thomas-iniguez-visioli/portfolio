@@ -1,7 +1,10 @@
 <template>
     <div class="about">
       <p class="log"></p>
-      <h1>{{ aboutContent }}</h1>
+        <router-view v-slot="{ aboutContent}">
+  <component :is="Component" />
+</router-view>
+     
       <i hidden="true">
       <slot name="name"></slot>
     </i>
