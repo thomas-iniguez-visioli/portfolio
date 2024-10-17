@@ -1,4 +1,4 @@
-import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-DDtmJJxW.js";
+import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-Dj_h3xKS.js";
 const _hoisted_1 = { class: "about" };
 const _sfc_main = {
   __name: "AboutView",
