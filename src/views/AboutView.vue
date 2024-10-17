@@ -2,19 +2,15 @@
 
   <div class="about">
     <h1>This is an about page</h1>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+
   </div>
 </template>
-<script>
-import {  onMounted } from 'vue'
-onMounted(() => {
-  var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf';
+<script setup>
 
-  // Loaded via <script> tag, create shortcut to access PDF.js exports.
-  var { pdfjsLib } = globalThis;
-
-  // The workerSrc property shall be specified.
-  pdfjsLib.GlobalWorkerOptions.workerSrc = `/pdf.worker.mjs`;
-})
+fetch("/portfolio/cv.txt").then(response => response.text())
+    .then(data => document.getElementsByClassName("about")["0"].innerHTML = data.replace("thomas.iniguez@free.fr","thomas.iniguez+<le nom de votre entreprise>@free.fr"))
+    .catch(error => console.error(error))
 </script>
 <style>
 @media (min-width: 1024px) {
