@@ -2,7 +2,7 @@
 
   <div class="about">
     <h1>This is an about page</h1>
-    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <img src="cv.png" alt="mon cv " >
 
   </div>
 </template>
