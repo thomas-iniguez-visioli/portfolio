@@ -2,7 +2,7 @@
 
   <div class="about">
     <h1>This is an about page</h1>
-    <img src="cv.png" alt="mon cv " >
+    <img src="/portfolio/cv.png" alt="mon cv " >
 
   </div>
 </template>
