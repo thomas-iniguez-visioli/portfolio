@@ -1,4 +1,5 @@
-import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-Dj_h3xKS.js";
+import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-Bp4rSh5H.js";
+const _imports_0 = "/portfolio/assets/cv-Bbg8av0A.png";
 const _hoisted_1 = { class: "about" };
 const _sfc_main = {
   __name: "AboutView",
@@ -6,10 +7,9 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, _cache[0] || (_cache[0] = [
         createBaseVNode("h1", null, "This is an about page", -1),
-        createBaseVNode("canvas", {
-          id: "myCanvas",
-          width: "200",
-          height: "100"
+        createBaseVNode("img", {
+          src: _imports_0,
+          alt: "mon cv "
         }, null, -1)
       ]));
     };
