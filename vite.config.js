@@ -8,7 +8,26 @@ export default defineConfig({
     base:"/portfolio",
   plugins: [
     vue(),
-  ],
+  ],configureWebpack:{
+    mode: 'development',
+    devtool: false,
+    optimization: {
+      splitChunks: {
+        
+           
+        chunks: 'all',
+        minSize: 150,
+        maxSize: 2500,
+        maxAsyncRequests: 30,
+        maxInitialRequests: 30,
+        enforceSizeThreshold: 50000,
+        
+      },
+    
+     
+    },
+
+  },
   build: {
     minify:false,
 	  base:"/portfolio",

@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "pinia": "^2.1.7",
-    "portfolio": "file:",
+    "portfolio": "file:../portfolio",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
