@@ -1,6 +1,6 @@
 import './main.css'
 
-import { createApp,Vue } from 'vue'
+import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
