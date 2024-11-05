@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - id: Build-Vue
-      uses: alphaleadership/VuePagesAction@1.0.19
+      uses: alphaleadership/VuePagesAction@latest
       with:
         username: 'thomas-iniguez-visioli'
         reponame: 'portfolio'
