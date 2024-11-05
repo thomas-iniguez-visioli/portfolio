@@ -1,7 +1,7 @@
 <template>
 
   <div class="about">
-    <h1>This is an about page</h1>
+ 
     <img src="../../public/cv.png" alt="mon cv " >
 
   </div>
