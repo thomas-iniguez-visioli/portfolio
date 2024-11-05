@@ -11,7 +11,7 @@ import DocumentationIcon from './icons/IconDocumentation.vue'
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>RGPD</template>
+    <template #heading>portfolio</template>
 
    
   </WelcomeItem>,<p></p><p></p>
@@ -19,7 +19,7 @@ import DocumentationIcon from './icons/IconDocumentation.vue'
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>portfolio</template>
+    <template #heading>RGPD</template>
 
    
   </WelcomeItem>
