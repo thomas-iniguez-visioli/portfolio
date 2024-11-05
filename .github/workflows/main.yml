@@ -27,8 +27,8 @@ jobs:
     - id: Build-Vue
       uses: alphaleadership/VuePagesAction@latest
       with:
-        username: 'thomas-iniguez-visioli'
-        reponame: 'portfolio'
+        username: 'githubname'
+        reponame: 'githubrepo'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
     
    
