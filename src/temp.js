@@ -4,6 +4,7 @@ export default defineComponent({
   // example using composition api
   setup() {
     const log = useLogger()
+    console.log(log)
     log.info('Setting up MyComponent...')
     return {}
   }
