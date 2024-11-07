@@ -8,12 +8,12 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   //console.log(item.href)
   if(item.id){
     //console.log(item.parentElement)
-    console.log(item.href.includes("project"))
+    log.info(item.href.includes("project"))
     if(!item.href.includes("project")){
       item.href=item.href+"portfolio/project/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
-    console.log(item.href)
+    log.info(item.href)
     //item.text=item.parentElement.name.tex
     //return item
   }
