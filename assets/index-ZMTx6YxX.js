@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-BRCwKFYk.js","assets/HomeView-BIatx_ZI.css","assets/AboutView-CH4CPlaN.js","assets/AboutView-DNtNIo95.css","assets/projectView-BfJlcHx4.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-Dvtyngs8.js","assets/HomeView-BIatx_ZI.css","assets/AboutView-DhwZTpkS.js","assets/AboutView-DNtNIo95.css","assets/projectView-DqyfEDHU.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12531,7 +12531,7 @@ const _sfc_main = {
   __name: "App",
   setup(__props) {
     console.log(temp.setup());
-    console.log(temp);
+    console.log($log);
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         createBaseVNode("header", null, [
@@ -12565,7 +12565,7 @@ const _sfc_main = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-f6137888"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-ec349f92"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/portfolio/" + dep;
@@ -12639,7 +12639,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-BRCwKFYk.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-Dvtyngs8.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/cv",
@@ -12647,7 +12647,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-CH4CPlaN.js"), true ? __vite__mapDeps([2,3]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-DhwZTpkS.js"), true ? __vite__mapDeps([2,3]) : void 0)
     },
     {
       path: "/project/:name",
@@ -12655,7 +12655,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BfJlcHx4.js"), true ? __vite__mapDeps([4,5]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-DqyfEDHU.js"), true ? __vite__mapDeps([4,5]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
@@ -12682,7 +12682,7 @@ const logger = dist.createLogger({
 const app = createApp(App);
 console.log(logger);
 logger.install(app);
-app.use(createPinia()).use(logger).use(test);
+app.use(createPinia()).use(test);
 app.use(router);
 app.mount("#app");
 export {
