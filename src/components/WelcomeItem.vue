@@ -2,7 +2,7 @@
 import { RouterLink} from 'vue-router'
 import {  onMounted } from 'vue'
 import * as c from '../temp'
-log=c.default.setup()
+const log=c.default.setup()
 console.log(log)
 onMounted(() => {
  

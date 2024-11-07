@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import * as c from './temp'
-log=c.default.setup()
+const log=c.default.setup()
 console.log(log)
 </script>
 
