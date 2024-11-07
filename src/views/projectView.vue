@@ -12,7 +12,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import * as c from '../temp'
-log=c.default.setup()
+const log=c.default.setup()
 console.log(log)
 const aboutContent = ref('')
 
