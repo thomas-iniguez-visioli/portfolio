@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink} from 'vue-router'
 import {  onMounted } from 'vue'
+import * as c from './temp'
+console.log(c.default.setup())
 onMounted(() => {
  
 Object.keys(document.getElementsByTagName("a")).map((ite)=>{
