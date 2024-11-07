@@ -1,4 +1,4 @@
-import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BftXzyRB.js";
+import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BEFaltZG.js";
 const _imports_0 = "/portfolio/assets/cv-Bbg8av0A.png";
 const _hoisted_1 = { class: "about" };
 const _sfc_main = {

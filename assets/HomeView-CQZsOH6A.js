@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-BftXzyRB.js";
+import { _ as _export_sfc, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-BEFaltZG.js";
 const _hoisted_1$1 = {
   href: "/",
   id: "redirect"
@@ -44,8 +44,8 @@ const _sfc_main$1 = {
   setup(__props) {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
-        _cache[2] || (_cache[2] = createBaseVNode("p", null, null, -1)),
         _cache[3] || (_cache[3] = createBaseVNode("p", null, null, -1)),
+        _cache[4] || (_cache[4] = createBaseVNode("p", null, null, -1)),
         createVNode(WelcomeItem, null, {
           icon: withCtx(() => [
             createVNode(DocumentationIcon)
@@ -55,14 +55,26 @@ const _sfc_main$1 = {
           ])),
           _: 1
         }),
-        _cache[4] || (_cache[4] = createTextVNode(",")),
-        _cache[5] || (_cache[5] = createBaseVNode("p", null, null, -1)),
+        _cache[5] || (_cache[5] = createTextVNode(",")),
         _cache[6] || (_cache[6] = createBaseVNode("p", null, null, -1)),
+        _cache[7] || (_cache[7] = createBaseVNode("p", null, null, -1)),
         createVNode(WelcomeItem, null, {
           icon: withCtx(() => [
             createVNode(DocumentationIcon)
           ]),
           heading: withCtx(() => _cache[1] || (_cache[1] = [
+            createTextVNode("cv")
+          ])),
+          _: 1
+        }),
+        _cache[8] || (_cache[8] = createTextVNode(",")),
+        _cache[9] || (_cache[9] = createBaseVNode("p", null, null, -1)),
+        _cache[10] || (_cache[10] = createBaseVNode("p", null, null, -1)),
+        createVNode(WelcomeItem, null, {
+          icon: withCtx(() => [
+            createVNode(DocumentationIcon)
+          ]),
+          heading: withCtx(() => _cache[2] || (_cache[2] = [
             createTextVNode("portfolio")
           ])),
           _: 1
