@@ -1,7 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-console.log(JSON.stringify(this.$log,null,2))
+import * as c from './temp'
+console.log(c)
 
 </script>
 
