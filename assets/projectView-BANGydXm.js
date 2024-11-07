@@ -1,4 +1,4 @@
-import { f as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, t as toDisplayString, r as renderSlot, a as openBlock } from "./index-Cwk1lcka.js";
+import { f as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, t as toDisplayString, r as renderSlot, a as openBlock } from "./index-TNdZdS4I.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {
@@ -6,8 +6,8 @@ const _sfc_main = {
   setup(__props) {
     const aboutContent = ref("");
     onMounted(() => {
-      $log(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", ""));
-      fetch("/portfolio/" + document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", "")).then((response) => response.text()).then((data) => document.getElementsByClassName("about")["0"].innerHTML = data).catch((error) => $log(error));
+      console.log(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", ""));
+      fetch("/portfolio/" + document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", "")).then((response) => response.text()).then((data) => document.getElementsByClassName("about")["0"].innerHTML = data).catch((error) => console.log(error));
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [

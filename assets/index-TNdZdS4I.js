@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-D3WAfF1P.js","assets/HomeView-CViLulPc.css","assets/AboutView-B6V7qx0U.js","assets/AboutView-DNtNIo95.css","assets/projectView-C1Y5aNeX.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-D5WJxS-V.js","assets/HomeView-CbCtRGmN.css","assets/AboutView-ZqCezdou.js","assets/AboutView-DNtNIo95.css","assets/projectView-BANGydXm.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12308,141 +12308,6 @@ const _sfc_main$1 = {
   }
 };
 const HelloWorld = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-6cf1482e"]]);
-const _hoisted_1 = { class: "wrapper" };
-const _sfc_main = {
-  __name: "App",
-  setup(__props) {
-    console.log(JSON.stringify(this.$log, null, 2));
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock(Fragment, null, [
-        createBaseVNode("header", null, [
-          _cache[2] || (_cache[2] = createBaseVNode("img", {
-            alt: "Vue logo",
-            class: "logo",
-            src: _imports_0,
-            width: "125",
-            height: "125"
-          }, null, -1)),
-          createBaseVNode("div", _hoisted_1, [
-            createVNode(HelloWorld, { msg: "thomas iniguez visioli" }),
-            createBaseVNode("nav", null, [
-              createVNode(unref(RouterLink), { to: "/" }, {
-                default: withCtx(() => _cache[0] || (_cache[0] = [
-                  createTextVNode("accueil")
-                ])),
-                _: 1
-              }),
-              createVNode(unref(RouterLink), { to: "/cv" }, {
-                default: withCtx(() => _cache[1] || (_cache[1] = [
-                  createTextVNode("cv")
-                ])),
-                _: 1
-              })
-            ])
-          ])
-        ]),
-        createVNode(unref(RouterView))
-      ], 64);
-    };
-  }
-};
-const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-90fc6983"]]);
-const scriptRel = "modulepreload";
-const assetsURL = function(dep) {
-  return "/portfolio/" + dep;
-};
-const seen = {};
-const __vitePreload = function preload(baseModule, deps, importerUrl) {
-  let promise = Promise.resolve();
-  if (deps && deps.length > 0) {
-    document.getElementsByTagName("link");
-    const cspNonceMeta = document.querySelector(
-      "meta[property=csp-nonce]"
-    );
-    const cspNonce = (cspNonceMeta == null ? void 0 : cspNonceMeta.nonce) || (cspNonceMeta == null ? void 0 : cspNonceMeta.getAttribute("nonce"));
-    promise = Promise.allSettled(
-      deps.map((dep) => {
-        dep = assetsURL(dep);
-        if (dep in seen) return;
-        seen[dep] = true;
-        const isCss = dep.endsWith(".css");
-        const cssSelector = isCss ? '[rel="stylesheet"]' : "";
-        if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
-          return;
-        }
-        const link = document.createElement("link");
-        link.rel = isCss ? "stylesheet" : scriptRel;
-        if (!isCss) {
-          link.as = "script";
-        }
-        link.crossOrigin = "";
-        link.href = dep;
-        if (cspNonce) {
-          link.setAttribute("nonce", cspNonce);
-        }
-        document.head.appendChild(link);
-        if (isCss) {
-          return new Promise((res, rej) => {
-            link.addEventListener("load", res);
-            link.addEventListener(
-              "error",
-              () => rej(new Error(`Unable to preload CSS for ${dep}`))
-            );
-          });
-        }
-      })
-    );
-  }
-  function handlePreloadError(err) {
-    const e = new Event("vite:preloadError", {
-      cancelable: true
-    });
-    e.payload = err;
-    window.dispatchEvent(e);
-    if (!e.defaultPrevented) {
-      throw err;
-    }
-  }
-  return promise.then((res) => {
-    for (const item of res || []) {
-      if (item.status !== "rejected") continue;
-      handlePreloadError(item.reason);
-    }
-    return baseModule().catch(handlePreloadError);
-  });
-};
-const gen = (p2) => {
-  return "projet/" + p2.params.name + ".txt";
-};
-const router = createRouter({
-  history: createWebHistory("/portfolio"),
-  routes: [
-    {
-      path: "/",
-      name: "home",
-      component: () => __vitePreload(() => import("./HomeView-D3WAfF1P.js"), true ? __vite__mapDeps([0,1]) : void 0)
-    },
-    {
-      path: "/cv",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-B6V7qx0U.js"), true ? __vite__mapDeps([2,3]) : void 0)
-    },
-    {
-      path: "/project/:name",
-      name: "temp",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C1Y5aNeX.js"), true ? __vite__mapDeps([4,5]) : void 0),
-      props: (params) => {
-        return { name: gen(params) };
-      }
-    }
-  ]
-});
 function getAugmentedNamespace(n) {
   if (n.__esModule) return n;
   var f = n.default;
@@ -12648,23 +12513,6 @@ hooks.StringifyAndParseObjectsHook = {
     return hooks_1.StringifyAndParseObjectsHook;
   } });
 })(dist);
-const ServerLogHook = {
-  run(event) {
-    console.log("/log", { severity: event.level, data: event.argumentArray });
-  }
-  // example using async/await:
-  // async run(event: LogEvent) {
-  //   await axios.post('/log', { severity: event.level, data: event.argumentArray })
-  // }
-};
-const logger = dist.createLogger({
-  enabled: true,
-  consoleEnabled: false,
-  level: "debug",
-  prefixFormat: ({ level, caller }) => caller ? `[${level.toUpperCase()}] [${caller == null ? void 0 : caller.fileName}:${caller == null ? void 0 : caller.functionName}:${caller == null ? void 0 : caller.lineNumber}]` : `[${level.toUpperCase()}]`,
-  beforeHooks: [dist.StringifyObjectsHook],
-  afterHooks: [ServerLogHook]
-});
 const temp = /* @__PURE__ */ defineComponent({
   // example using composition api
   setup() {
@@ -12693,6 +12541,158 @@ const test = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty
   __proto__: null,
   default: temp
 }, Symbol.toStringTag, { value: "Module" }));
+const _hoisted_1 = { class: "wrapper" };
+const _sfc_main = {
+  __name: "App",
+  setup(__props) {
+    console.log(test);
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock(Fragment, null, [
+        createBaseVNode("header", null, [
+          _cache[2] || (_cache[2] = createBaseVNode("img", {
+            alt: "Vue logo",
+            class: "logo",
+            src: _imports_0,
+            width: "125",
+            height: "125"
+          }, null, -1)),
+          createBaseVNode("div", _hoisted_1, [
+            createVNode(HelloWorld, { msg: "thomas iniguez visioli" }),
+            createBaseVNode("nav", null, [
+              createVNode(unref(RouterLink), { to: "/" }, {
+                default: withCtx(() => _cache[0] || (_cache[0] = [
+                  createTextVNode("accueil")
+                ])),
+                _: 1
+              }),
+              createVNode(unref(RouterLink), { to: "/cv" }, {
+                default: withCtx(() => _cache[1] || (_cache[1] = [
+                  createTextVNode("cv")
+                ])),
+                _: 1
+              })
+            ])
+          ])
+        ]),
+        createVNode(unref(RouterView))
+      ], 64);
+    };
+  }
+};
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-8d9cad42"]]);
+const scriptRel = "modulepreload";
+const assetsURL = function(dep) {
+  return "/portfolio/" + dep;
+};
+const seen = {};
+const __vitePreload = function preload(baseModule, deps, importerUrl) {
+  let promise = Promise.resolve();
+  if (deps && deps.length > 0) {
+    document.getElementsByTagName("link");
+    const cspNonceMeta = document.querySelector(
+      "meta[property=csp-nonce]"
+    );
+    const cspNonce = (cspNonceMeta == null ? void 0 : cspNonceMeta.nonce) || (cspNonceMeta == null ? void 0 : cspNonceMeta.getAttribute("nonce"));
+    promise = Promise.allSettled(
+      deps.map((dep) => {
+        dep = assetsURL(dep);
+        if (dep in seen) return;
+        seen[dep] = true;
+        const isCss = dep.endsWith(".css");
+        const cssSelector = isCss ? '[rel="stylesheet"]' : "";
+        if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
+          return;
+        }
+        const link = document.createElement("link");
+        link.rel = isCss ? "stylesheet" : scriptRel;
+        if (!isCss) {
+          link.as = "script";
+        }
+        link.crossOrigin = "";
+        link.href = dep;
+        if (cspNonce) {
+          link.setAttribute("nonce", cspNonce);
+        }
+        document.head.appendChild(link);
+        if (isCss) {
+          return new Promise((res, rej) => {
+            link.addEventListener("load", res);
+            link.addEventListener(
+              "error",
+              () => rej(new Error(`Unable to preload CSS for ${dep}`))
+            );
+          });
+        }
+      })
+    );
+  }
+  function handlePreloadError(err) {
+    const e = new Event("vite:preloadError", {
+      cancelable: true
+    });
+    e.payload = err;
+    window.dispatchEvent(e);
+    if (!e.defaultPrevented) {
+      throw err;
+    }
+  }
+  return promise.then((res) => {
+    for (const item of res || []) {
+      if (item.status !== "rejected") continue;
+      handlePreloadError(item.reason);
+    }
+    return baseModule().catch(handlePreloadError);
+  });
+};
+const gen = (p2) => {
+  return "projet/" + p2.params.name + ".txt";
+};
+const router = createRouter({
+  history: createWebHistory("/portfolio"),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: () => __vitePreload(() => import("./HomeView-D5WJxS-V.js"), true ? __vite__mapDeps([0,1]) : void 0)
+    },
+    {
+      path: "/cv",
+      name: "about",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => __vitePreload(() => import("./AboutView-ZqCezdou.js"), true ? __vite__mapDeps([2,3]) : void 0)
+    },
+    {
+      path: "/project/:name",
+      name: "temp",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => __vitePreload(() => import("./projectView-BANGydXm.js"), true ? __vite__mapDeps([4,5]) : void 0),
+      props: (params) => {
+        return { name: gen(params) };
+      }
+    }
+  ]
+});
+const ServerLogHook = {
+  run(event) {
+    console.log("/log", { severity: event.level, data: event.argumentArray });
+  }
+  // example using async/await:
+  // async run(event: LogEvent) {
+  //   await axios.post('/log', { severity: event.level, data: event.argumentArray })
+  // }
+};
+const logger = dist.createLogger({
+  enabled: true,
+  consoleEnabled: false,
+  level: "debug",
+  prefixFormat: ({ level, caller }) => caller ? `[${level.toUpperCase()}] [${caller == null ? void 0 : caller.fileName}:${caller == null ? void 0 : caller.functionName}:${caller == null ? void 0 : caller.lineNumber}]` : `[${level.toUpperCase()}]`,
+  beforeHooks: [dist.StringifyObjectsHook],
+  afterHooks: [ServerLogHook]
+});
 const app = createApp(App);
 console.log(logger);
 app.use(createPinia()).use(logger).use(test);
