@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-D5WJxS-V.js","assets/HomeView-CbCtRGmN.css","assets/AboutView-ZqCezdou.js","assets/AboutView-DNtNIo95.css","assets/projectView-BANGydXm.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-OZp-vO5u.js","assets/HomeView-CbCtRGmN.css","assets/AboutView-BfKp2Tew.js","assets/AboutView-DNtNIo95.css","assets/projectView-BKW9ya7s.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12519,23 +12519,8 @@ const temp = /* @__PURE__ */ defineComponent({
     const log = dist.useLogger();
     log.info("Setting up MyComponent...");
     return {};
-  },
-  // example using options api
-  methods: {
-    test() {
-      const testObject = {
-        name: "test",
-        value: "this is a test object"
-      };
-      this.$log.debug("Test Message", testObject);
-      this.$log.info("Test Message", testObject);
-      this.$log.warn("Test Message", testObject);
-      this.$log.error("Test Message", testObject);
-      this.$log.log("Test Message", testObject);
-      this.$log.apply({ level: "error" });
-      this.$log.warn("This is not logged now");
-    }
   }
+  // example using options api
 });
 const test = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
@@ -12545,7 +12530,7 @@ const _hoisted_1 = { class: "wrapper" };
 const _sfc_main = {
   __name: "App",
   setup(__props) {
-    console.log(test);
+    console.log(temp.setup());
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         createBaseVNode("header", null, [
@@ -12579,7 +12564,7 @@ const _sfc_main = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-8d9cad42"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-7025bc45"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/portfolio/" + dep;
@@ -12653,7 +12638,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-D5WJxS-V.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-OZp-vO5u.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/cv",
@@ -12661,7 +12646,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-ZqCezdou.js"), true ? __vite__mapDeps([2,3]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-BfKp2Tew.js"), true ? __vite__mapDeps([2,3]) : void 0)
     },
     {
       path: "/project/:name",
@@ -12669,7 +12654,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BANGydXm.js"), true ? __vite__mapDeps([4,5]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-BKW9ya7s.js"), true ? __vite__mapDeps([4,5]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
