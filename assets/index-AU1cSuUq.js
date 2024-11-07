@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-B8S1G6aG.js","assets/HomeView-Cbdel5tH.css","assets/AboutView-on9NUTHY.js","assets/AboutView-DNtNIo95.css","assets/projectView-CiW-xTws.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-DeW0NHg2.js","assets/HomeView-Cbdel5tH.css","assets/AboutView-CROzdBuS.js","assets/AboutView-DNtNIo95.css","assets/projectView-owNobfad.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12640,7 +12640,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-B8S1G6aG.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-DeW0NHg2.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/cv",
@@ -12648,7 +12648,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-on9NUTHY.js"), true ? __vite__mapDeps([2,3]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-CROzdBuS.js"), true ? __vite__mapDeps([2,3]) : void 0)
     },
     {
       path: "/project/:name",
@@ -12656,7 +12656,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CiW-xTws.js"), true ? __vite__mapDeps([4,5]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-owNobfad.js"), true ? __vite__mapDeps([4,5]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
@@ -12665,7 +12665,7 @@ const router = createRouter({
 });
 const ServerLogHook = {
   run(event) {
-    console.log("/log", { severity: event.level, data: event.argumentArray });
+    console.log({ severity: event.level, data: event.argumentArray });
   }
   // example using async/await:
   // async run(event: LogEvent) {
