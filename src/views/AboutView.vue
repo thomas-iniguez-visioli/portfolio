@@ -2,7 +2,7 @@
 
   <div class="about">
  
-    <pdf src="cv_stage_bts.pdf" alt="mon cv " ></pdf>
+    <pdf  src="/cv_stage_bts.pdf" alt="mon cv " ></pdf>
 
   </div>
 </template>
