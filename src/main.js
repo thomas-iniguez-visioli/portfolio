@@ -7,7 +7,7 @@ import App from './App.vue'
 import router from './router'
 import logger from './logger'
 const app = createApp(App)
-
+console.log(logger)
 app.use(createPinia()).use(logger)
 app.use(router)
 
