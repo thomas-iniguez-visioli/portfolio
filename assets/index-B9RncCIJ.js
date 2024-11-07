@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-OZp-vO5u.js","assets/HomeView-CbCtRGmN.css","assets/AboutView-BfKp2Tew.js","assets/AboutView-DNtNIo95.css","assets/projectView-BKW9ya7s.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-Cxt_7QDk.js","assets/HomeView-CbCtRGmN.css","assets/AboutView-Cf7TLh1V.js","assets/AboutView-DNtNIo95.css","assets/projectView-Bw2_Wlr8.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12638,7 +12638,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-OZp-vO5u.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-Cxt_7QDk.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/cv",
@@ -12646,7 +12646,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-BfKp2Tew.js"), true ? __vite__mapDeps([2,3]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-Cf7TLh1V.js"), true ? __vite__mapDeps([2,3]) : void 0)
     },
     {
       path: "/project/:name",
@@ -12654,7 +12654,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BKW9ya7s.js"), true ? __vite__mapDeps([4,5]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-Bw2_Wlr8.js"), true ? __vite__mapDeps([4,5]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
@@ -12680,6 +12680,7 @@ const logger = dist.createLogger({
 });
 const app = createApp(App);
 console.log(logger);
+logger.install(app);
 app.use(createPinia()).use(logger).use(test);
 app.use(router);
 app.mount("#app");
