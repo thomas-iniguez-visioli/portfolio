@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-tslbIJIW.js","assets/HomeView-BIatx_ZI.css","assets/AboutView-Dj1aADBh.js","assets/AboutView-DNtNIo95.css","assets/projectView-D2lMb6_s.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-B8xKt7xx.js","assets/HomeView-CS7QeiXm.css","assets/AboutView-CyU6cCLm.js","assets/AboutView-DNtNIo95.css","assets/projectView-A7CaZF-g.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12640,7 +12640,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-tslbIJIW.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-B8xKt7xx.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/cv",
@@ -12648,7 +12648,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-Dj1aADBh.js"), true ? __vite__mapDeps([2,3]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-CyU6cCLm.js"), true ? __vite__mapDeps([2,3]) : void 0)
     },
     {
       path: "/project/:name",
@@ -12656,7 +12656,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-D2lMb6_s.js"), true ? __vite__mapDeps([4,5]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-A7CaZF-g.js"), true ? __vite__mapDeps([4,5]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
