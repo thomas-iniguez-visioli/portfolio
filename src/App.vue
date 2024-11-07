@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-console.log(JSON.stringify(document,null,2))
+console.log(JSON.stringify($log,null,2))
 
 </script>
 
