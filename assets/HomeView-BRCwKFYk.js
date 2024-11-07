@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-BEFaltZG.js";
+import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-tIyMenF8.js";
 const _hoisted_1$1 = {
   href: "/",
   id: "redirect"
@@ -6,6 +6,7 @@ const _hoisted_1$1 = {
 const _sfc_main$3 = {
   __name: "WelcomeItem",
   setup(__props) {
+    console.log(temp.setup());
     onMounted(() => {
       Object.keys(document.getElementsByTagName("a")).map((ite) => {
         const item = document.getElementsByTagName("a")[ite];
@@ -25,7 +26,7 @@ const _sfc_main$3 = {
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-3ff3d486"]]);
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-9c969d12"]]);
 const _sfc_main$2 = {};
 const _hoisted_1 = {
   xmlns: "http://www.w3.org/2000/svg",

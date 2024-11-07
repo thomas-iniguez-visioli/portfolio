@@ -1,9 +1,11 @@
-import { f as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, t as toDisplayString, r as renderSlot, a as openBlock } from "./index-BEFaltZG.js";
+import { t as temp, f as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, g as toDisplayString, r as renderSlot, a as openBlock } from "./index-tIyMenF8.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {
   __name: "projectView",
   setup(__props) {
+    console.log(temp.setup());
+    console.log(log);
     const aboutContent = ref("");
     onMounted(() => {
       log.info(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project", ""));
