@@ -1,4 +1,4 @@
-import { t as temp, g as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, h as toDisplayString, r as renderSlot, a as openBlock } from "./index-C1_g7ZDA.js";
+import { t as temp, g as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, h as toDisplayString, r as renderSlot, a as openBlock } from "./index-B4rEqUSL.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {
