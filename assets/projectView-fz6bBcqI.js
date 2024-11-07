@@ -1,4 +1,4 @@
-import { f as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, t as toDisplayString, r as renderSlot, a as openBlock } from "./index-Ckrkd530.js";
+import { f as ref, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, t as toDisplayString, r as renderSlot, a as openBlock } from "./index-CeAUK4bg.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {
