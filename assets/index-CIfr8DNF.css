@@ -131,49 +131,49 @@ h3[data-v-6cf1482e] {
 }
 }
 
-header[data-v-ec349f92] {
+header[data-v-2b95c047] {
   line-height: 1.5;
   max-height: 100vh;
 }
-.logo[data-v-ec349f92] {
+.logo[data-v-2b95c047] {
   display: block;
   margin: 0 auto 2rem;
 }
-nav[data-v-ec349f92] {
+nav[data-v-2b95c047] {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
-nav a.router-link-exact-active[data-v-ec349f92] {
+nav a.router-link-exact-active[data-v-2b95c047] {
   color: var(--color-text);
 }
-nav a.router-link-exact-active[data-v-ec349f92]:hover {
+nav a.router-link-exact-active[data-v-2b95c047]:hover {
   background-color: transparent;
 }
-nav a[data-v-ec349f92] {
+nav a[data-v-2b95c047] {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
-nav a[data-v-ec349f92]:first-of-type {
+nav a[data-v-2b95c047]:first-of-type {
   border: 0;
 }
 @media (min-width: 1024px) {
-header[data-v-ec349f92] {
+header[data-v-2b95c047] {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
 }
-.logo[data-v-ec349f92] {
+.logo[data-v-2b95c047] {
     margin: 0 2rem 0 0;
 }
-header .wrapper[data-v-ec349f92] {
+header .wrapper[data-v-2b95c047] {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
 }
-nav[data-v-ec349f92] {
+nav[data-v-2b95c047] {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
