@@ -2,7 +2,7 @@ import { createLogger, StringifyObjectsHook, LoggerHook, LogEvent } from 'vue-lo
 const ServerLogHook = {
     run(event) {
         console.log(event.argumentArray[0])
-      console.log(event.level+"     "+  event.data )
+      console.log(event.level+"     "+  event.argumentArray )
     }
     // example using async/await:
     // async run(event: LogEvent) {
