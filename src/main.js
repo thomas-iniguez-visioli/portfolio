@@ -10,7 +10,7 @@ import * as test from './temp'
 const app = createApp(App)
 console.log(logger)
 logger.install(app)
-app.use(createPinia()).use(logger).use(test)
+app.use(createPinia()).use(test)
 app.use(router)
 
 app.mount('#app')
