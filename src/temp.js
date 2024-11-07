@@ -6,7 +6,7 @@ export default defineComponent({
     const log = useLogger()
     console.log(log)
     log.info('Setting up MyComponent...')
-    return {}
+    return log
   }
   // example using options api
   
