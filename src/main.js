@@ -9,6 +9,7 @@ import logger from './logger'
 import * as test from './temp'
 const app = createApp(App)
 console.log(logger)
+logger.install(app)
 app.use(createPinia()).use(logger).use(test)
 app.use(router)
 
