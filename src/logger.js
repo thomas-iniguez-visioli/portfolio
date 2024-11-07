@@ -12,7 +12,8 @@ const ServerLogHook = {
 const logger = createLogger({
   enabled: true,
   consoleEnabled:false,
-  level: 'debug',prefixFormat: ({ level, caller }) => (
+  level: 'debug',
+  prefixFormat: ({ level, caller }) => (
     caller
       ? `[${level.toUpperCase()}] [${caller?.fileName}:${caller?.functionName}:${caller?.lineNumber}]`
       : `[${level.toUpperCase()}]`
