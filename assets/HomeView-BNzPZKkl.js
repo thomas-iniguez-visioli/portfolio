@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-B9RncCIJ.js";
+import { _ as _export_sfc, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-BftXzyRB.js";
 const _hoisted_1$1 = {
   href: "/",
   id: "redirect"
@@ -10,11 +10,11 @@ const _sfc_main$3 = {
       Object.keys(document.getElementsByTagName("a")).map((ite) => {
         const item = document.getElementsByTagName("a")[ite];
         if (item.id) {
-          console.log(item.href.includes("project"));
+          log.info(item.href.includes("project"));
           if (!item.href.includes("project")) {
             item.href = item.href + "portfolio/project/" + item.textContent.split("/")[item.textContent.split("/").length - 1];
           }
-          console.log(item.href);
+          log.info(item.href);
         }
       });
     });
@@ -25,7 +25,7 @@ const _sfc_main$3 = {
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-0f35ce7d"]]);
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-3ff3d486"]]);
 const _sfc_main$2 = {};
 const _hoisted_1 = {
   xmlns: "http://www.w3.org/2000/svg",
