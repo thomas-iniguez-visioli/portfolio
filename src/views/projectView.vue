@@ -15,11 +15,11 @@ import { ref, onMounted } from 'vue'
 const aboutContent = ref('')
 
 onMounted(() => {
-  console.log(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
+  $log(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
   fetch("/portfolio/"+document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
     .then(response => response.text())
     .then(data => document.getElementsByClassName("about")["0"].innerHTML = data)
-    .catch(error => console.error(error))
+    .catch(error => $log(error))
 })
 /*
 
