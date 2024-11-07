@@ -1,5 +1,5 @@
-import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-DleqjE3Q.js";
-const _imports_0 = "/portfolio/assets/cv-Bbg8av0A.png";
+import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BuHn4nC2.js";
+const _imports_0 = "/portfolio/assets/cv_stage_bts-CKp4wNNi.pdf";
 const _hoisted_1 = { class: "about" };
 const _sfc_main = {
   __name: "AboutView",
