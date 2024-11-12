@@ -32,9 +32,9 @@ onMounted(() => {
   <style>
   @media (min-width: 1024px) {
     .about {
-      min-height: 100vh;
+      min-height: auto;
       display: grid;
-      align-items: normal;
+      align-items: center;
     }
   }
   </style>
