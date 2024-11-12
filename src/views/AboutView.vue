@@ -1,12 +1,6 @@
 <template>
 
-<script type="module">
-  // If absolute URL from the remote server is provided, configure the CORS
-  // header on that server.
-  
-</script>
 
-<h1>PDF.js 'Hello, world!' example</h1>
 
 
 
