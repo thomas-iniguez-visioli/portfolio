@@ -1,4 +1,4 @@
-import { c as createElementBlock, a as openBlock } from "./index-DC3WLrFa.js";
+import { c as createElementBlock, o as openBlock } from "./index-CENY87GT.js";
 const _hoisted_1 = { id: "the-canvas" };
 const _sfc_main = {
   __name: "AboutView",
