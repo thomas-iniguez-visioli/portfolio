@@ -16,7 +16,7 @@ console.log(log)
       <nav>
         <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/cv">cv</RouterLink>
-        <RouterLink to="/situation">cv</RouterLink>
+        <RouterLink to="/situation">situation</RouterLink>
       </nav>
     </div>
   </header>
