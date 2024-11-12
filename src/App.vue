@@ -8,7 +8,7 @@ console.log(log)
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="photo.jpg" width="125" height="auto" />
 
     <div class="wrapper">
       <HelloWorld msg="thomas iniguez visioli" />
