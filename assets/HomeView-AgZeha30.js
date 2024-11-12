@@ -1,7 +1,7 @@
-import { _ as _sfc_main$1 } from "./TheWelcome-CnRuc4_S.js";
-import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-IjpaWaW5.js";
+import { _ as _sfc_main$1 } from "./TheWelcome-DGFPdBso.js";
+import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-3FgNgEWo.js";
 const _sfc_main = {
-  __name: "situation",
+  __name: "HomeView",
   setup(__props) {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("main", null, [
