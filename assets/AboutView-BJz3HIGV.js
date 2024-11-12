@@ -1,4 +1,5 @@
-import { c as createElementBlock, b as createBaseVNode, F as Fragment, a as openBlock } from "./index-ZIHPh0Q0.js";
+import { c as createElementBlock, a as openBlock } from "./index-H32QQc4o.js";
+const _hoisted_1 = { id: "the-canvas" };
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
@@ -30,10 +31,7 @@ const _sfc_main = {
       console.error(reason);
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock(Fragment, null, [
-        _cache[0] || (_cache[0] = createBaseVNode("h1", null, "PDF.js 'Hello, world!' example", -1)),
-        _cache[1] || (_cache[1] = createBaseVNode("canvas", { id: "the-canvas" }, null, -1))
-      ], 64);
+      return openBlock(), createElementBlock("canvas", _hoisted_1);
     };
   }
 };
