@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-S7yp3BXj.js","assets/IconDocumentation-C4IlvUyl.js","assets/HomeView-D02uuVgF.css","assets/situation-3M33coRI.js","assets/situation-BxNiYbRu.css","assets/AboutView-_C9PpbNh.js","assets/AboutView-DNtNIo95.css","assets/projectView-BOCbmVJK.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-BgRqEh-u.js","assets/IconDocumentation-Doq-p-mB.js","assets/HomeView-D02uuVgF.css","assets/situation-BPoWh0_B.js","assets/situation-BxNiYbRu.css","assets/AboutView-Bo8ywO97.js","assets/AboutView-DNtNIo95.css","assets/projectView-aLhJ3EtV.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12560,7 +12560,7 @@ const _sfc_main = {
               }),
               createVNode(unref(RouterLink), { to: "/situation" }, {
                 default: withCtx(() => _cache[2] || (_cache[2] = [
-                  createTextVNode("situation")
+                  createTextVNode("situation professionelle")
                 ])),
                 _: 1
               })
@@ -12572,7 +12572,7 @@ const _sfc_main = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-daf6e84c"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-bf781d2b"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/portfolio/" + dep;
@@ -12646,12 +12646,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-S7yp3BXj.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-BgRqEh-u.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-3M33coRI.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-BPoWh0_B.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/cv",
@@ -12659,7 +12659,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-_C9PpbNh.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-Bo8ywO97.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
       path: "/projet/:name",
@@ -12667,7 +12667,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-BOCbmVJK.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-aLhJ3EtV.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
