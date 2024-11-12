@@ -3,7 +3,7 @@
 <script type="module">
   // If absolute URL from the remote server is provided, configure the CORS
   // header on that server.
-  var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf';
+  var url = 'cv_stage_bts.pdf';
 
   // Loaded via <script> tag, create shortcut to access PDF.js exports.
   var { pdfjsLib } = globalThis;
@@ -48,7 +48,7 @@
 
 <h1>PDF.js 'Hello, world!' example</h1>
 
-<p>Please use <a href="https://mozilla.github.io/pdf.js/getting_started/#download"><i>official releases</i></a> in production environments.</p>
+<
 
 <canvas id="the-canvas"></canvas>
 </template>
