@@ -11,8 +11,8 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   //console.log(item.href)
   if(item.id){
     //console.log(item.parentElement)
-    log.info(item.href.includes("project"))
-    if(!item.href.includes("project")){
+    log.info(item.href.includes("projet"))
+    if(!item.href.includes("projet")){
       item.href=item.href+"portfolio/projet/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
