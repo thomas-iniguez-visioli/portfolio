@@ -33,7 +33,7 @@ loadingTask.promise.then(function(pdf) {
     var context = canvas.getContext('2d');
     canvas.height = viewport.height;
     canvas.width = viewport.width;
-
+    console.log(canvas)
     // Render PDF page into canvas context
     var renderContext = {
       canvasContext: context,
