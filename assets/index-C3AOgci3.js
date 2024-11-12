@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-Dv6zEtGO.js","assets/HomeView-Cbdel5tH.css","assets/AboutView-DYHvWDoe.js","assets/AboutView-DNtNIo95.css","assets/projectView-CMP_shuz.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-Brlf6owq.js","assets/HomeView-Cbdel5tH.css","assets/AboutView-Cb_xTkqH.js","assets/AboutView-DNtNIo95.css","assets/projectView-Cmi_1m-p.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12640,7 +12640,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-Dv6zEtGO.js"), true ? __vite__mapDeps([0,1]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-Brlf6owq.js"), true ? __vite__mapDeps([0,1]) : void 0)
     },
     {
       path: "/cv",
@@ -12648,7 +12648,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-DYHvWDoe.js"), true ? __vite__mapDeps([2,3]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-Cb_xTkqH.js"), true ? __vite__mapDeps([2,3]) : void 0)
     },
     {
       path: "/project/:name",
@@ -12656,7 +12656,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CMP_shuz.js"), true ? __vite__mapDeps([4,5]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-Cmi_1m-p.js"), true ? __vite__mapDeps([4,5]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }
@@ -12695,9 +12695,8 @@ export {
   createElementBlock as c,
   createVNode as d,
   createTextVNode as e,
-  resolveComponent as f,
-  ref as g,
-  toDisplayString as h,
+  ref as f,
+  toDisplayString as g,
   onMounted as o,
   renderSlot as r,
   temp as t,
