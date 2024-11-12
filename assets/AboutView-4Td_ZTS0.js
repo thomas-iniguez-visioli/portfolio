@@ -1,4 +1,4 @@
-import { c as createElementBlock, b as createBaseVNode, F as Fragment, a as openBlock } from "./index-DKNAJTsI.js";
+import { c as createElementBlock, b as createBaseVNode, F as Fragment, a as openBlock } from "./index-voo92x6y.js";
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
@@ -33,7 +33,9 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         _cache[0] || (_cache[0] = createBaseVNode("canvas", { id: "the-canvas" }, null, -1)),
-        _cache[1] || (_cache[1] = createBaseVNode("button", { src: "cv_stage_bts.pdf" }, "téléchargée", -1))
+        _cache[1] || (_cache[1] = createBaseVNode("a", { href: "cv_stage_bts.pdf" }, [
+          createBaseVNode("canvas", { id: "the-canvas" })
+        ], -1))
       ], 64);
     };
   }
