@@ -1,4 +1,4 @@
-import { c as createElementBlock, a as openBlock } from "./index-D9nqaxNI.js";
+import { c as createElementBlock, a as openBlock } from "./index-DC3WLrFa.js";
 const _hoisted_1 = { id: "the-canvas" };
 const _sfc_main = {
   __name: "AboutView",
@@ -12,7 +12,7 @@ const _sfc_main = {
       var pageNumber = 1;
       pdf.getPage(pageNumber).then(function(page) {
         console.log("Page loaded");
-        var scale = 1.5;
+        var scale = 1;
         var viewport = page.getViewport({ scale });
         var canvas = document.getElementById("the-canvas");
         var context = canvas.getContext("2d");
