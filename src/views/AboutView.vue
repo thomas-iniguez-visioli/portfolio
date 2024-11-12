@@ -1,5 +1,5 @@
 <template>
-<canvas id="the-canvas"></canvas>
+
 <a href= 'cv_stage_bts.pdf'><canvas id="the-canvas"></canvas></a>
 </template>
 <script setup>
