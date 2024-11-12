@@ -1,5 +1,4 @@
-import { c as createElementBlock, o as openBlock } from "./index-CENY87GT.js";
-const _hoisted_1 = { id: "the-canvas" };
+import { c as createElementBlock, e as createBaseVNode, F as Fragment, o as openBlock } from "./index-IjpaWaW5.js";
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
@@ -32,7 +31,10 @@ const _sfc_main = {
       console.error(reason);
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("canvas", _hoisted_1);
+      return openBlock(), createElementBlock(Fragment, null, [
+        _cache[0] || (_cache[0] = createBaseVNode("canvas", { id: "the-canvas" }, null, -1)),
+        _cache[1] || (_cache[1] = createBaseVNode("button", { src: "cv_stage_bts.pdf" }, null, -1))
+      ], 64);
     };
   }
 };

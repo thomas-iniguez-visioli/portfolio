@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-J8sW6zFe.js","assets/TheWelcome-A-CsCwUB.js","assets/TheWelcome-Cbdel5tH.css","assets/situation-Bg2Yo7yY.js","assets/AboutView-JuptoDyZ.js","assets/AboutView-DNtNIo95.css","assets/projectView-C-_uScKS.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-CH2t0mEK.js","assets/TheWelcome-CnRuc4_S.js","assets/TheWelcome-Cbdel5tH.css","assets/situation-kqMZQzHz.js","assets/AboutView-4jEHxSxT.js","assets/AboutView-DNtNIo95.css","assets/projectView-Dly8TsEx.js","assets/projectView-D2hBl14a.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12646,12 +12646,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-J8sW6zFe.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-CH2t0mEK.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "home",
-      component: () => __vitePreload(() => import("./situation-Bg2Yo7yY.js"), true ? __vite__mapDeps([3,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./situation-kqMZQzHz.js"), true ? __vite__mapDeps([3,1,2]) : void 0)
     },
     {
       path: "/cv",
@@ -12659,7 +12659,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-JuptoDyZ.js"), true ? __vite__mapDeps([4,5]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-4jEHxSxT.js"), true ? __vite__mapDeps([4,5]) : void 0)
     },
     {
       path: "/project/:name",
@@ -12667,7 +12667,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C-_uScKS.js"), true ? __vite__mapDeps([6,7]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-Dly8TsEx.js"), true ? __vite__mapDeps([6,7]) : void 0),
       props: (params) => {
         return { name: gen(params) };
       }

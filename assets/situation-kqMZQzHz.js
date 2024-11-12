@@ -1,5 +1,5 @@
-import { _ as _sfc_main$1 } from "./TheWelcome-A-CsCwUB.js";
-import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-CENY87GT.js";
+import { _ as _sfc_main$1 } from "./TheWelcome-CnRuc4_S.js";
+import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-IjpaWaW5.js";
 const _sfc_main = {
   __name: "situation",
   setup(__props) {
