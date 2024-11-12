@@ -10,11 +10,11 @@
     </div>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue'
+import {  onMounted } from 'vue'
 import * as c from '../temp'
 const log=c.default.setup()
 console.log(log)
-const aboutContent = ref('')
+
 
 onMounted(() => {
   log.info(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/projet",""))
