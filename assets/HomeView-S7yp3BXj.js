@@ -1,5 +1,5 @@
-import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-DRHQes8q.js";
-import { D as DocumentationIcon } from "./IconDocumentation-DZFpYg5_.js";
+import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-DvZODv7I.js";
+import { D as DocumentationIcon } from "./IconDocumentation-C4IlvUyl.js";
 const _hoisted_1 = {
   href: "/",
   id: "redirect"
@@ -53,7 +53,7 @@ const _sfc_main$1 = {
             createVNode(DocumentationIcon)
           ]),
           heading: withCtx(() => _cache[1] || (_cache[1] = [
-            createTextVNode("portfolio")
+            createTextVNode("france-nuit")
           ])),
           _: 1
         })
