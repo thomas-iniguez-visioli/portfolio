@@ -1,4 +1,4 @@
-import { c as createElementBlock, a as openBlock } from "./index-H32QQc4o.js";
+import { c as createElementBlock, a as openBlock } from "./index-D9nqaxNI.js";
 const _hoisted_1 = { id: "the-canvas" };
 const _sfc_main = {
   __name: "AboutView",
@@ -18,6 +18,7 @@ const _sfc_main = {
         var context = canvas.getContext("2d");
         canvas.height = viewport.height;
         canvas.width = viewport.width;
+        console.log(canvas);
         var renderContext = {
           canvasContext: context,
           viewport
