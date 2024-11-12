@@ -13,7 +13,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
     //console.log(item.parentElement)
     log.info(item.href.includes("project"))
     if(!item.href.includes("project")){
-      item.href=item.href+"portfolio/project/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+      item.href=item.href+"portfolio/projet/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
     log.info(item.href)

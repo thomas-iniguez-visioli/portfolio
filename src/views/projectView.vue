@@ -17,8 +17,8 @@ console.log(log)
 const aboutContent = ref('')
 
 onMounted(() => {
-  log.info(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
-  fetch("/portfolio/"+document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/project",""))
+  log.info(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/projet",""))
+  fetch("/portfolio/"+document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/projet",""))
     .then(response => response.text())
     .then(data => document.getElementsByClassName("about")["0"].innerHTML = data)
     .catch(error => log.error(error))
