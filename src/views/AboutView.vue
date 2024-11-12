@@ -1,6 +1,6 @@
 <template>
 <canvas id="the-canvas"></canvas>
-<button src= 'cv_stage_bts.pdf'></button>
+<button src= 'cv_stage_bts.pdf'>téléchargée</button>
 </template>
 <script setup>
 var url = 'cv_stage_bts.pdf';
