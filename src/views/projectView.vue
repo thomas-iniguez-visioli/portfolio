@@ -34,7 +34,7 @@ onMounted(() => {
     .about {
       min-height: 100vh;
       display: grid;
-      align-items: center;
+      align-items: normal;
     }
   }
   </style>
