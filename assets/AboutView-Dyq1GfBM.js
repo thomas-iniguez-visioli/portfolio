@@ -1,4 +1,4 @@
-import { c as createElementBlock, e as createBaseVNode, F as Fragment, o as openBlock } from "./index-3FgNgEWo.js";
+import { c as createElementBlock, b as createBaseVNode, F as Fragment, a as openBlock } from "./index-C3jILKVx.js";
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
