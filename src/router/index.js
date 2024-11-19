@@ -24,7 +24,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     }, {
-      path: '/projet/:name',
+      path: '/projet/local/:name',
       name: 'temp',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -32,7 +32,7 @@ const router = createRouter({
       component: () => import('../views/projectView.vue'),
       props:(params)=>{return {name:gen(params,'Projet')}}
     }, {
-      path: '/situation/:name',
+      path: '/situation/local/:name',
       name: 'temp',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
