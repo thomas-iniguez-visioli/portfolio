@@ -12,9 +12,9 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   console.log(item.href)
   if(item.id){
     //console.log(item.parentElement)
-    log.info(item.href.includes("situation"))
-    if(!item.href.includes("situation")){
-      item.href=item.href+"portfolio/situation/local/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+    log.info(item.href.includes("projet"))
+    if(!item.href.includes("projet")){
+      item.href=item.href+"portfolio/projet/local/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
     log.info(item.href)

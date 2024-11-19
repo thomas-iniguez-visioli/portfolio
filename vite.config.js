@@ -56,7 +56,7 @@ export default defineConfig({
     
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      'project':fileURLToPath(new URL('./project', import.meta.url))
+     
     }
   }
 })

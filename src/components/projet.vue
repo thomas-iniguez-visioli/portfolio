@@ -1,6 +1,6 @@
 
     <script setup>
-    import WelcomeItem from './situationItem.vue'
+    import WelcomeItem from './projetItem.vue'
     import DocumentationIcon from './icons/IconDocumentation.vue'
     
     </script>
@@ -11,7 +11,15 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>1</template>
+        <template #heading>france-nuit</template>
+    
+       
+      </WelcomeItem>,<p></p><p></p>
+      <WelcomeItem>
+        <template #icon>
+          <DocumentationIcon />
+        </template>
+        <template #heading>RGPD</template>
     
        
       </WelcomeItem>
