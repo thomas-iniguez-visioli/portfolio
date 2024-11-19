@@ -5,7 +5,7 @@ const banned=[".git"]
 fs.writeFileSync("./index.html",fs.readFileSync("./index.html").toString().replace("peoplename",config.name))
 fs.writeFileSync("./src/App.vue",fs.readFileSync("./src/App.vue").toString().replace("peoplename",config.name))
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
-fs.writeFileSync("./src/components/TheWelcome.vue",`
+fs.writeFileSync("./src/components/projet.vue",`
   <script setup>
   import WelcomeItem from './WelcomeItem.vue'
   import DocumentationIcon from './icons/IconDocumentation.vue'
