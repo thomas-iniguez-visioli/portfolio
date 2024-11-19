@@ -7,7 +7,7 @@ console.log(log)
 </script>
 
 <template>
-  maj
+
   <header>
     <img alt="Vue logo" class="logo" src="/photo.jpg" width="125" height="auto" />
 
