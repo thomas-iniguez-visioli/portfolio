@@ -12,7 +12,7 @@ const ServerLogHook = {
 // create logger with options
 const logger = createLogger({
   enabled: true,
-  consoleEnabled:false,
+  consoleEnabled:true,
   level: 'debug',
   prefixFormat: ({ level, caller }) => (
     caller
