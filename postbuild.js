@@ -40,7 +40,7 @@ onMounted(() => {
  
 Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   const item=document.getElementsByTagName("a")[ite]
-  //console.log(item.href)
+  console.log(item.href)
   if(item.id){
     //console.log(item.parentElement)
     log.info(item.href.includes("${file.name}"))
