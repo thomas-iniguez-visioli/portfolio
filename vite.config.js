@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
   ],configureWebpack:{
     mode: 'development',
-    devtool: false,
+    devtool: true,
     optimization: {
       splitChunks: {
         
