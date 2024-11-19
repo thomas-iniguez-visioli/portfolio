@@ -6,7 +6,7 @@ fs.writeFileSync("./index.html",fs.readFileSync("./index.html").toString().repla
 fs.writeFileSync("./src/App.vue",fs.readFileSync("./src/App.vue").toString().replace("peoplename",config.name))
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
 fs.readdirSync("./public/", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
-  fs.writeFileSync(`./src/components/${file.name}.vue`,`
+  fs.writeFileSync(`./src/components/${file.name.toLowerCase()}.vue`,`
     <script setup>
     import WelcomeItem from './${file.name}Item.vue'
     import DocumentationIcon from './icons/IconDocumentation.vue'
