@@ -44,9 +44,10 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   if(item.id){
     //console.log(item.parentElement)
     log.info(item.href.includes("${file.name.replace("projet","local")}"))
-    if(!item.href.includes("${file.name.replace("projet","local")}")){
-      item.href=item.href+"portfolio/${file.name.replace("projet","local")}/"+item.textContent.split("/")[item.textContent.split("/").length-1]
-    }
+
+      item.href=window.location.href
++"/portfolio/${file.name.replace("projet","local")}/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+    
     
     log.info(item.href)
     //item.text=item.parentElement.name.tex
