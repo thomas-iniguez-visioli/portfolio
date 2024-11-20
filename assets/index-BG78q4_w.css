@@ -131,49 +131,49 @@ h3[data-v-6cf1482e] {
 }
 }
 
-header[data-v-521ec1f9] {
+header[data-v-5c994c7e] {
   line-height: 1.5;
   max-height: 100vh;
 }
-.logo[data-v-521ec1f9] {
+.logo[data-v-5c994c7e] {
   display: block;
   margin: 0 auto 2rem;
 }
-nav[data-v-521ec1f9] {
+nav[data-v-5c994c7e] {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
-nav a.router-link-exact-active[data-v-521ec1f9] {
+nav a.router-link-exact-active[data-v-5c994c7e] {
   color: var(--color-text);
 }
-nav a.router-link-exact-active[data-v-521ec1f9]:hover {
+nav a.router-link-exact-active[data-v-5c994c7e]:hover {
   background-color: transparent;
 }
-nav a[data-v-521ec1f9] {
+nav a[data-v-5c994c7e] {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
-nav a[data-v-521ec1f9]:first-of-type {
+nav a[data-v-5c994c7e]:first-of-type {
   border: 0;
 }
 @media (min-width: 1024px) {
-header[data-v-521ec1f9] {
+header[data-v-5c994c7e] {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
 }
-.logo[data-v-521ec1f9] {
+.logo[data-v-5c994c7e] {
     margin: 0 2rem 0 0;
 }
-header .wrapper[data-v-521ec1f9] {
+header .wrapper[data-v-5c994c7e] {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
 }
-nav[data-v-521ec1f9] {
+nav[data-v-5c994c7e] {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
