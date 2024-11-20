@@ -4,9 +4,9 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import * as c from './temp'
 const log=c.default.setup()
-console.log(log)
+//console.log(log)
 
-console.log(log)
+//console.log(log)
 onMounted(() => {
 log.info(window.location.href
 )
