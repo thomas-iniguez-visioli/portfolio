@@ -4,9 +4,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import * as c from './temp'
 const log=c.default.setup()
 console.log(log)
-  import {  onMounted } from 'vue'
-import * as c from '../temp'
-const log=c.default.setup()
+
 console.log(log)
 onMounted(() => {
 log.info(document.href)
