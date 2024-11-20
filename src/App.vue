@@ -10,7 +10,7 @@ const log=c.default.setup()
 onMounted(() => {
 log.info(window.location.href
 )
-  log.info( $router.getRoutes())
+  log.info( $route.getRoutes())
 })
 
 </script>
