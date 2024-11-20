@@ -1,11 +1,10 @@
-import { t as temp, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, f as toDisplayString, r as renderSlot, a as openBlock } from "./index-5cts6mp5.js";
+import { t as temp, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, f as toDisplayString, r as renderSlot, a as openBlock } from "./index-CoynQsMN.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {
   __name: "projectView",
   setup(__props) {
     const log = temp.setup();
-    console.log(log);
     onMounted(() => {
       log.info(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/projet", ""));
       fetch("/portfolio/" + document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/projet", "")).then((response) => response.text()).then((data) => document.getElementsByClassName("about")["0"].innerHTML = data).catch((error) => log.error(error));
