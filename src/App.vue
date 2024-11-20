@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+  import{onMounted}from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import * as c from './temp'
 const log=c.default.setup()
