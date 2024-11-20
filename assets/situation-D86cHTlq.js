@@ -1,5 +1,5 @@
-import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, e as createTextVNode } from "./index-CoynQsMN.js";
-import { D as DocumentationIcon } from "./IconDocumentation-CucUHXcU.js";
+import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, F as Fragment, e as createTextVNode } from "./index-BUQvZNv2.js";
+import { D as DocumentationIcon } from "./IconDocumentation-R8LeZFei.js";
 const _hoisted_1 = {
   href: "/",
   id: "redirect"
@@ -8,7 +8,6 @@ const _sfc_main$2 = {
   __name: "situationItem",
   setup(__props) {
     const log = temp.setup();
-    console.log(log);
     onMounted(() => {
       Object.keys(document.getElementsByTagName("a")).map((ite) => {
         const item = document.getElementsByTagName("a")[ite];
@@ -27,7 +26,7 @@ const _sfc_main$2 = {
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-9841f9cd"]]);
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-c6479ac7"]]);
 const _sfc_main$1 = {
   __name: "situation",
   setup(__props) {
