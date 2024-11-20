@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-WAzsJny5.js","assets/IconDocumentation-CnIarLSO.js","assets/HomeView-D6GcSwbG.css","assets/situation-B9HTfOdA.js","assets/situation-DtjnADU6.css","assets/AboutView-CcNG4gJ5.js","assets/AboutView-DNtNIo95.css","assets/projectView-Bt2puvj3.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-CY_p0DS4.js","assets/IconDocumentation-qBMYfzy6.js","assets/HomeView-Dp1384jE.css","assets/situation-xmd4kQlc.js","assets/situation-9Wj8wCA5.css","assets/AboutView-DtIUcl7_.js","assets/AboutView-DNtNIo95.css","assets/projectView-D2_sY5_P.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12652,12 +12652,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-WAzsJny5.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-CY_p0DS4.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-B9HTfOdA.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-xmd4kQlc.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/cv",
@@ -12665,7 +12665,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-CcNG4gJ5.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-DtIUcl7_.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
       path: "/local/:name",
@@ -12673,7 +12673,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-Bt2puvj3.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D2_sY5_P.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen(params, "projet") };
       }
@@ -12684,7 +12684,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-Bt2puvj3.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D2_sY5_P.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen(params, "situation") };
       }
