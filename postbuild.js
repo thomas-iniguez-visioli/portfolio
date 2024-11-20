@@ -45,7 +45,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
     //console.log(item.parentElement)
     log.info(item.href.includes("${file.name}"))
     if(!item.href.includes("${file.name}")){
-      item.href=item.href+"portfolio/${file.name}/local/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+      item.href=item.href+"portfolio/local/${file.name}/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
     log.info(item.href)
