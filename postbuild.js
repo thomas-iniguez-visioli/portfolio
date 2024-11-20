@@ -43,8 +43,8 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   console.log(item.href)
   if(item.id){
     //console.log(item.parentElement)
-    log.info(item.href.includes("${file.name}"))
-    if(!item.href.includes("${file.name}")){
+    log.info(item.href.includes("${file.name.replace("projet","local")}"))
+    if(!item.href.includes("${file.name.replace("projet","local")}")){
       item.href=item.href+"portfolio/${file.name.replace("projet","local")}/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
