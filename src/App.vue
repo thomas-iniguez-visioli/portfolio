@@ -10,6 +10,7 @@ console.log(log)
 onMounted(() => {
 log.info(window.location.href
 )
+  log.info( this.$router.getRoutes())
 })
 
 </script>
