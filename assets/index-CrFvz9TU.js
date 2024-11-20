@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-C7uTqr0b.js","assets/IconDocumentation-BI2xUvTt.js","assets/HomeView-aPkUPE5m.css","assets/situation-CHiDmH97.js","assets/situation-Dkp3ZYE2.css","assets/AboutView-BXgoBuJt.js","assets/AboutView-DNtNIo95.css","assets/projectView-CWCw17xY.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-Ch19oQuq.js","assets/IconDocumentation-BCzLVS6p.js","assets/HomeView-aPkUPE5m.css","assets/situation-nBNQ8VTR.js","assets/situation-Dkp3ZYE2.css","assets/AboutView-CFeTNJGg.js","assets/AboutView-DNtNIo95.css","assets/projectView-BCu_NttJ.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -2724,7 +2724,7 @@ function useTransitionState() {
     isUnmounting: false,
     leavingVNodes: /* @__PURE__ */ new Map()
   };
-  onMounted(() => {
+  onMounted$1(() => {
     state.isMounted = true;
   });
   onBeforeUnmount(() => {
@@ -4013,7 +4013,7 @@ const KeepAliveImpl = {
         }
       }
     };
-    onMounted(cacheSubtree);
+    onMounted$1(cacheSubtree);
     onUpdated(cacheSubtree);
     onBeforeUnmount(() => {
       cache.forEach((cached) => {
@@ -4171,7 +4171,7 @@ const createHook = (lifecycle) => (hook, target = currentInstance) => {
   }
 };
 const onBeforeMount = createHook("bm");
-const onMounted = createHook("m");
+const onMounted$1 = createHook("m");
 const onBeforeUpdate = createHook(
   "bu"
 );
@@ -4674,7 +4674,7 @@ function applyOptions(instance) {
     }
   }
   registerLifecycleHook(onBeforeMount, beforeMount);
-  registerLifecycleHook(onMounted, mounted);
+  registerLifecycleHook(onMounted$1, mounted);
   registerLifecycleHook(onBeforeUpdate, beforeUpdate);
   registerLifecycleHook(onUpdated, updated);
   registerLifecycleHook(onActivated, activated);
@@ -8979,7 +8979,7 @@ function useCssVars(getter) {
   onBeforeMount(() => {
     watchPostEffect(setVars);
   });
-  onMounted(() => {
+  onMounted$1(() => {
     const ob = new MutationObserver(setVars);
     ob.observe(instance.subTree.el.parentNode, { childList: true });
     onUnmounted(() => ob.disconnect());
@@ -10309,7 +10309,7 @@ const vue_runtime_esmBundler = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obj
   onBeforeUpdate,
   onDeactivated,
   onErrorCaptured,
-  onMounted,
+  onMounted: onMounted$1,
   onRenderTracked,
   onRenderTriggered,
   onScopeDispose,
@@ -12533,6 +12533,10 @@ const _sfc_main = {
   setup(__props) {
     const log = temp.setup();
     console.log(log);
+    console.log(log);
+    onMounted(() => {
+      log.info(document.href);
+    });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         createBaseVNode("header", null, [
@@ -12572,7 +12576,7 @@ const _sfc_main = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-0a4a28fe"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-31003b9b"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/portfolio/" + dep;
@@ -12646,12 +12650,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-C7uTqr0b.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-Ch19oQuq.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-CHiDmH97.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-nBNQ8VTR.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/cv",
@@ -12659,7 +12663,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-BXgoBuJt.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-CFeTNJGg.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
       path: "/local/projet/:name",
@@ -12667,7 +12671,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CWCw17xY.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-BCu_NttJ.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen(params, "projet") };
       }
@@ -12678,7 +12682,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CWCw17xY.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-BCu_NttJ.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen(params, "situation") };
       }
@@ -12718,7 +12722,7 @@ export {
   createVNode as d,
   createTextVNode as e,
   toDisplayString as f,
-  onMounted as o,
+  onMounted$1 as o,
   renderSlot as r,
   temp as t,
   withCtx as w
