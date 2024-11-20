@@ -8,7 +8,7 @@ console.log(log)
 
 console.log(log)
 onMounted(() => {
-log.info(document.href)
+log.info(Document.href)
 })
 
 </script>
