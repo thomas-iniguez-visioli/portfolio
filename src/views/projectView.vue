@@ -13,7 +13,7 @@
 import {  onMounted } from 'vue'
 import * as c from '../temp'
 const log=c.default.setup()
-console.log(log)
+//console.log(log)
 
 
 onMounted(() => {
