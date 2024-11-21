@@ -46,7 +46,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
     log.info(item.href.includes("${file.name}"))
 
       item.href=window.location.href+"${file.name}/"+item.textContent.split("/")[item.textContent.split("/").length-1]
-    
+    item.href=item.href.replace("situationsituation",'situation').replace("projetprojet",'projet')
     
     log.info(item.href)
     //item.text=item.parentElement.name.tex
