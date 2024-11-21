@@ -171,7 +171,7 @@ const router = createRouter({
       return fs.readdirSync(`./public/${folder}`).map((file)=>{
 return `{
       path: '/${folder}/${file.split(".")[0]}',
-      name: 'temp',
+      name: '${folder}',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
