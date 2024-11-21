@@ -5,7 +5,7 @@ const banned=[".git"]
 fs.writeFileSync("./index.html",fs.readFileSync("./index.html").toString().replace("peoplename",config.name))
 fs.writeFileSync("./src/App.vue",fs.readFileSync("./src/App.vue").toString().replace("peoplename",config.name))
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
-fs.readdirSync("./public/", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
+const tobuild=fs.readdirSync("./public/", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
   fs.writeFileSync(`./src/components/${file.name.toLowerCase()}.vue`,`
     <script setup>
     import WelcomeItem from './${file.name}Item.vue'
@@ -43,7 +43,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   console.log(item.href)
   if(item.id){
     //console.log(item.parentElement)
-    log.info(item.href.includes("${file.name.replace("projet","local")}"))
+    log.info(item.href.includes("${file.name}"))
 
       item.href=window.location.href+item.textContent.split("/")[item.textContent.split("/").length-1]
     
@@ -140,6 +140,49 @@ h3 {
 </style>
 
       `)
+      return file.name
+})
+fs.writeFileSync("./src\\router\\index.js",`import { createRouter,createWebHistory} from 'vue-router'
+
+
+const gen=(p,type)=>{
+return type+"/"+p+".txt"
+}
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component:() => import('../views/HomeView.vue')
+    }, {
+      path: '/situation',
+      name: 'situation',
+      component:() => import('../views/situation.vue')
+    },
+    {
+      path: '/cv',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/AboutView.vue')
+    }, ${tobuild.map((folder)=>{
+      return fs.readdirSync(`./public/${folder}`).map((file)=>{
+return `{
+      path: '/${folder}/${file.split(".")[0]}',
+      name: 'temp',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:(params)=>{return {name:gen(${file.split(".")[0]},'${folder}')}}
+    }`
+      }).join(",")
+    }).join("\n")}
+  ]
 })
 
+export default router
+`)
 
