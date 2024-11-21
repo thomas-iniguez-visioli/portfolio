@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-iKfUqDwS.js","assets/IconDocumentation-BCg9GDT6.js","assets/HomeView-CxjmVk4d.css","assets/situation-CdEIvN8d.js","assets/situation-kiPbj9Ix.css","assets/AboutView-CBR6_lOF.js","assets/AboutView-DNtNIo95.css","assets/projectView-CuVSvGsc.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-CrdsfWsH.js","assets/IconDocumentation-DNsL1Wn6.js","assets/HomeView-CxjmVk4d.css","assets/situation-DcP9Ssx1.js","assets/situation-kiPbj9Ix.css","assets/AboutView-CX58__Ed.js","assets/AboutView-DNtNIo95.css","assets/projectView-CPNMqNT_.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -12642,6 +12642,7 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
   });
 };
 const gen = (p2, type) => {
+  console.log();
   return type + "/" + p2 + ".txt";
 };
 const router = createRouter({
@@ -12650,12 +12651,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-iKfUqDwS.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-CrdsfWsH.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-CdEIvN8d.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-DcP9Ssx1.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/cv",
@@ -12663,37 +12664,37 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-CBR6_lOF.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-CX58__Ed.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
-      path: "/projet/france-nuit",
-      name: "projet",
+      path: "/projet/francenuit",
+      name: "projet-france-nuit",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CuVSvGsc.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CPNMqNT_.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen("france-nuit", "projet") };
       }
     },
     {
       path: "/projet/RGPD",
-      name: "projet",
+      name: "projet-RGPD",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CuVSvGsc.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CPNMqNT_.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen("RGPD", "projet") };
       }
     },
     {
       path: "/situation/1",
-      name: "situation",
+      name: "situation-1",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CuVSvGsc.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CPNMqNT_.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: (params) => {
         return { name: gen("1", "situation") };
       }
