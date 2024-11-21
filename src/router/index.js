@@ -2,7 +2,7 @@ import { createRouter,createWebHistory} from 'vue-router'
 
 
 const gen=(p,type)=>{
-  console.log()
+  console.log(type+"/"+p+".txt")
 return type+"/"+p+".txt"
 }
 const router = createRouter({
@@ -40,15 +40,23 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
       props:(params)=>{return {name:gen("RGPD",'projet')}}
-    },
-{
-      path: '/situation/1',
-      name: 'situation-1',
+    },{
+      path: '/projet/uptime',
+      name: 'projet-uptime',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
-      props:(params)=>{return {name:gen("1",'situation')}}
+      props:(params)=>{return {name:gen("uptime",'projet')}}
+    },
+{
+      path: '/situation/example',
+      name: 'situation-example',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:(params)=>{return {name:gen("example",'situation')}}
     }
   ]
 })

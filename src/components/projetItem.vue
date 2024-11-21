@@ -15,7 +15,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
     log.info(item.href.includes("projet"))
 
       item.href=window.location.href+"projet/"+item.textContent.split("/")[item.textContent.split("/").length-1]
-    
+    item.href=item.href.replace("situationsituation",'situation').replace("projetprojet",'projet')
     
     log.info(item.href)
     //item.text=item.parentElement.name.tex

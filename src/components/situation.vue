@@ -11,7 +11,7 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>1</template>
+        <template #heading>example</template>
     
        
       </WelcomeItem>

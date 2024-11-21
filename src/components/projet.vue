@@ -22,6 +22,14 @@
         <template #heading>RGPD</template>
     
        
+      </WelcomeItem>,<p></p><p></p>
+      <WelcomeItem>
+        <template #icon>
+          <DocumentationIcon />
+        </template>
+        <template #heading>uptime</template>
+    
+       
       </WelcomeItem>
       
       

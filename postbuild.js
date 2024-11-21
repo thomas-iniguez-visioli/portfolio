@@ -1,6 +1,6 @@
 import * as fs from'fs'
 const config=JSON.parse(fs.readFileSync('./config.json'))
-const banned=[".git"]
+
 
 fs.writeFileSync("./index.html",fs.readFileSync("./index.html").toString().replace("peoplename",config.name))
 fs.writeFileSync("./src/App.vue",fs.readFileSync("./src/App.vue").toString().replace("peoplename",config.name))
@@ -177,7 +177,7 @@ return `{
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
-      props:(params)=>{return {name:gen("${file.split(".")[0]}",'${folder}')}}
+      props:()=>{return {name:gen("${file.split(".")[0]}",'${folder}')}}
     }`
       }).join(",")
     }).join(",\n")}
