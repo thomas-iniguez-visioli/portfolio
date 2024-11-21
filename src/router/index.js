@@ -2,6 +2,7 @@ import { createRouter,createWebHistory} from 'vue-router'
 
 
 const gen=(p,type)=>{
+  console.log()
 return type+"/"+p+".txt"
 }
 const router = createRouter({
@@ -24,8 +25,8 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     }, {
-      path: '/projet/france-nuit',
-      name: 'projet',
+      path: '/projet/francenuit',
+      name: 'projet-france-nuit',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -33,7 +34,7 @@ const router = createRouter({
       props:(params)=>{return {name:gen("france-nuit",'projet')}}
     },{
       path: '/projet/RGPD',
-      name: 'projet',
+      name: 'projet-RGPD',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -42,7 +43,7 @@ const router = createRouter({
     },
 {
       path: '/situation/1',
-      name: 'situation',
+      name: 'situation-1',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

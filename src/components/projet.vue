@@ -11,7 +11,7 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>france-nuit</template>
+        <template #heading>francenuit</template>
     
        
       </WelcomeItem>,<p></p><p></p>

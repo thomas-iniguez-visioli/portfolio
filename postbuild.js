@@ -146,6 +146,7 @@ fs.writeFileSync("./src\\router\\index.js",`import { createRouter,createWebHisto
 
 
 const gen=(p,type)=>{
+  console.log(type+"/"+p+".txt")
 return type+"/"+p+".txt"
 }
 const router = createRouter({
