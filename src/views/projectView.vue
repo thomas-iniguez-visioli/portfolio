@@ -18,7 +18,7 @@ const log=c.default.setup()
 
 onMounted(() => {
   log.info(document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/projet",""))
-  fetch("/portfolio/"+document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent.replace("/projet",""))
+  fetch("/portfolio/"+document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent)
     .then(response => response.text())
     .then(data => document.getElementsByClassName("about")["0"].innerHTML = data)
     .catch(error => log.error(error))
