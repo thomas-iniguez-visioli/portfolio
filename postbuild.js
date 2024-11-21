@@ -20,7 +20,7 @@ const tobuild=fs.readdirSync("./public/", { withFileTypes: true }).filter(de => 
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>${item.split(".")[0]}</template>
+        <template #heading>${item.split(".")[0].replace("-",'')}</template>
     
        
       </WelcomeItem>`
@@ -170,7 +170,7 @@ const router = createRouter({
     }, ${tobuild.map((folder)=>{
       return fs.readdirSync(`./public/${folder}`).map((file)=>{
 return `{
-      path: '/${folder}/${file.split(".")[0]}',
+      path: '/${folder}/${file.split(".")[0].replace("-",'')}',
       name: '${folder}-${file.split(".")[0]}',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
