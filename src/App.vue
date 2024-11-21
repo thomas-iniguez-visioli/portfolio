@@ -21,7 +21,7 @@ log.info(window.location.href
     <img alt="Vue logo" class="logo" src="/photo.jpg" width="125" height="auto" />
 
     <div class="wrapper">
-      <HelloWorld msg="thomas iniguez visioliupdate" />
+      <HelloWorld msg="thomas iniguez visioli" />
 
       <nav>
         <RouterLink to="/">accueil</RouterLink>
