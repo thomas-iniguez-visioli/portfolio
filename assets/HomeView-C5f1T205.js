@@ -1,5 +1,5 @@
-import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-BVM0el6U.js";
-import { D as DocumentationIcon } from "./IconDocumentation-DNsL1Wn6.js";
+import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-DIXwZ3yu.js";
+import { D as DocumentationIcon } from "./IconDocumentation-DnsS-4OB.js";
 const _hoisted_1 = {
   href: "/",
   id: "redirect"
@@ -15,6 +15,7 @@ const _sfc_main$2 = {
         if (item.id) {
           log.info(item.href.includes("projet"));
           item.href = window.location.href + "projet/" + item.textContent.split("/")[item.textContent.split("/").length - 1];
+          item.href = item.href.replace("situationsituation", "situation").replace("projetprojet", "projet");
           log.info(item.href);
         }
       });
@@ -26,7 +27,7 @@ const _sfc_main$2 = {
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-9c95847a"]]);
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-6b13e6e2"]]);
 const _sfc_main$1 = {
   __name: "projet",
   setup(__props) {
