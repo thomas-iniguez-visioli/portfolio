@@ -11,7 +11,15 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>example</template>
+        <template #heading>tp</template>
+    
+       
+      </WelcomeItem>,<p></p><p></p>
+      <WelcomeItem>
+        <template #icon>
+          <DocumentationIcon />
+        </template>
+        <template #heading>tp1</template>
     
        
       </WelcomeItem>
