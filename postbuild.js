@@ -142,7 +142,7 @@ h3 {
       `)
       return file.name
 })
-fs.writeFileSync("./src\\router\\index.js",`import { createRouter,createWebHistory} from 'vue-router'
+fs.writeFileSync("./src/router/index.js",`import { createRouter,createWebHistory} from 'vue-router'
 
 
 const gen=(p,type)=>{
