@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import VueRssFeed from "../node-modules/vue-rss-feed/src/VueRssFeed.vue";
   import{onMounted}from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import * as c from './temp'
