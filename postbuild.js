@@ -206,7 +206,7 @@ function curlEquivalent(url) {
       console.log(`File downloaded and saved to ${filePath}`);
     });
   }).on('error', err => {
-    fs.unlink(filePath);
+    fs.unlinkSync(filePath);
     console.error(err.message);
   });
 }
