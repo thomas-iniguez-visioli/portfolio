@@ -1,4 +1,4 @@
-import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BUrD3AYS.js";
+import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BdByLYt9.js";
 const _hoisted_1 = { href: "cv_stage_bts.pdf" };
 const _sfc_main = {
   __name: "suiviView",
@@ -20,7 +20,6 @@ const _sfc_main = {
           const items = xmlDoc.querySelectorAll("item");
           console.log(items);
           const rssContent = Array.from(items).slice(5).map((item, id, ar) => {
-            return item.outerHTML;
             const cod = new DOMParser().parseFromString(item.outerHTML, "application/html");
             const title = cod.querySelector("title").textContent;
             const link = cod.querySelector("link").textContent;
