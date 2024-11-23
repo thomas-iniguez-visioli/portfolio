@@ -1,12 +1,9 @@
-import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-Doedat4r.js";
+import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-Uitqdob3.js";
 const _hoisted_1 = { class: "rss" };
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
     onMounted(() => {
-      log.info(
-        window.location.href
-      );
       async function fetchRSSFeed(url) {
         try {
           const response = await fetch(url, { mode: "no-cors" });
