@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-Uitqdob3.js";
+import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-DTsPldS_.js";
 const _hoisted_1 = { class: "rss" };
 const _sfc_main = {
   __name: "suiviView",
@@ -17,7 +17,7 @@ const _sfc_main = {
           const items = xmlDoc.querySelectorAll("item");
           console.log(items);
           const rssContent = Array.from(items).slice(5).map((item, id, ar) => {
-            const cod = new DOMParser().parseFromString(item.outerHTML, "application/html");
+            const cod = new DOMParser().parseFromString(item.outerHTML, "text/html");
             const title = cod.querySelector("title").textContent;
             const link = cod.querySelector("link").textContent;
             const description = cod.querySelector("description").textContent;
