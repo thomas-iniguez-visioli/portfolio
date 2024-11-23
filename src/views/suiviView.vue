@@ -28,7 +28,7 @@ async function fetchRSSFeed(url) {
       console.log(link)
       const description = cod.documentElement.querySelector('description').textContent;
       console.log(description)
-      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:${title}</a><br>${description}`;
+      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:${title}</a><br\\>${description}<br\\>`;
     }).join('');
     document.querySelector('.rss').innerHTML = rssContent;
     } catch (error) {
