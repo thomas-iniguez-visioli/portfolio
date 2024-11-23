@@ -25,7 +25,7 @@ async function fetchRSSFeed(url) {
 }
 
 // Example RSS feed URL
-const rssUrl = 'https://example.com/rss';
+const rssUrl = 'https://bonjourlafuite.eu.org/feed.xml';
 fetchRSSFeed(rssUrl);
 })
 
@@ -38,13 +38,14 @@ fetchRSSFeed(rssUrl);
 
     <div class="wrapper">
       <HelloWorld msg="thomas iniguez visioli" />
-      <h1> suivis des fuite de donnée</h1>
+     
       
       <nav>
         <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/cv">cv</RouterLink>
         <RouterLink to="/situation">situation professionelle</RouterLink>
       </nav>
+      <h1> suivis des fuite de donnée</h1>
       <div class="rss"></div>
     </div>
   </header>
