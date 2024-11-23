@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-DbjE6iMB.js";
+import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-CpWH-xyY.js";
 const _hoisted_1 = { class: "rss" };
 const _sfc_main = {
   __name: "suiviView",
@@ -20,7 +20,7 @@ const _sfc_main = {
             console.log(cod.documentElement.querySelector);
             const title = cod.documentElement.querySelector("title").textContent;
             console.log(title);
-            const link = cod.documentElement.querySelector("guid").textContent;
+            const link = url;
             console.log(link);
             const description = cod.documentElement.querySelector("description").textContent;
             console.log(description);
