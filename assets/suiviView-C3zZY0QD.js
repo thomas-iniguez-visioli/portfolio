@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-DwSSglPj.js";
+import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-BCI8jCHs.js";
 const _hoisted_1 = { class: "rss" };
 const _sfc_main = {
   __name: "suiviView",
@@ -19,8 +19,11 @@ const _sfc_main = {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/html");
             console.log(cod.documentElement.querySelector);
             const title = cod.documentElement.querySelector("title").textContent;
+            console.log(title);
             const link = cod.documentElement.querySelector("link").textContent;
+            console.log(link);
             const description = cod.documentElement.querySelector("description").textContent;
+            console.log(description);
             return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:${title}</a><br>${description}`;
           }).join("");
           document.querySelector(".rss").innerHTML = rssContent;
