@@ -3,6 +3,7 @@
 <div class="rss"></div>
 </template>
 <script setup>
+  import{onMounted}from 'vue'
 onMounted(() => {
 log.info(window.location.href
 )
