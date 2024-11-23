@@ -19,6 +19,16 @@ async function fetchRSSFeed(url) {
         }
         const rssText = await response.text();
         console.log(rssText); // Output raw XML text
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(rssText, "application/xml");
+    const items = xmlDoc.querySelectorAll('item');
+    const rssContent = items.map(item => {
+      const title = item.querySelector('title').textContent;
+      const link = item.querySelector('link').textContent;
+      const description = item.querySelector('description').textContent;
+      return `<a href="${link}" target="_blank">${title}</a><br>${description}`;
+    }).join('');
+    document.querySelector('.rss').innerHTML = rssContent;
     } catch (error) {
         console.error('Error type 2 fetching RSS feed:', error);
     }
