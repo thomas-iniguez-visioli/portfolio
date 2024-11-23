@@ -21,6 +21,7 @@ async function fetchRSSFeed(url) {
     const rssContent = Array.from(items).slice(5).map((item,id,ar) => {
      
       const cod=new DOMParser().parseFromString(item.outerHTML,"text/html");
+      console.log(cod)
       const title = cod.querySelector('title').textContent;
       const link = cod.querySelector('link').textContent;
       const description = cod.querySelector('description').textContent;
