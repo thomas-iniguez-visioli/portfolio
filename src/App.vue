@@ -15,7 +15,7 @@ async function fetchRSSFeed(url) {
     try {
         const response = await fetch(url, { mode: 'no-cors'});
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${JSON.stringify(response,null,2)}`);
+            throw new Error(`HTTP error! status: ${response.statusText}`);
         }
         const rssText = await response.text();
         console.log(rssText); // Output raw XML text
