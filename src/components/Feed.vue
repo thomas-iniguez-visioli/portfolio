@@ -60,7 +60,7 @@ export default {
       this.feed = {};
       try {
         console.log("https:"+"/"+"/"+this.feedUrl.replace('"',''))
-        const data = await fetch("https:"+"/"+"/"+this.feedUrl.replace('"',''));
+        const data = await fetch("http:"+"/"+"/"+this.feedUrl.replace('"',''));
         if (data.ok) {
           const text = await data.text();
           const parser = new RSSParser();

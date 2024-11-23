@@ -11,7 +11,22 @@ const log=c.default.setup()
 onMounted(() => {
 log.info(window.location.href
 )
-  //log.info( $route.getRoutes())
+async function fetchRSSFeed(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const rssText = await response.text();
+        console.log(rssText); // Output raw XML text
+    } catch (error) {
+        console.error('Error fetching RSS feed:', error);
+    }
+}
+
+// Example RSS feed URL
+const rssUrl = 'https://example.com/rss';
+fetchRSSFeed(rssUrl);
 })
 
 </script>
@@ -24,12 +39,13 @@ log.info(window.location.href
     <div class="wrapper">
       <HelloWorld msg="thomas iniguez visioli" />
       <h1> suivis des fuite de donnée</h1>
-       <VueRssFeed :feedUrl= '"https://thomas-iniguez-visioli.github.io/portfolio/feed.xml"' :name="rgpd" :limit="5"/>
+      
       <nav>
         <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/cv">cv</RouterLink>
         <RouterLink to="/situation">situation professionelle</RouterLink>
       </nav>
+      <div class="rss"></div>
     </div>
   </header>
 
