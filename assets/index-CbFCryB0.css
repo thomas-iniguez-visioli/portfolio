@@ -238,49 +238,49 @@ h3[data-v-6cf1482e] {
 }
 }
 
-header[data-v-e8c566e8] {
+header[data-v-db1feaad] {
   line-height: 1.5;
   max-height: 100vh;
 }
-.logo[data-v-e8c566e8] {
+.logo[data-v-db1feaad] {
   display: block;
   margin: 0 auto 2rem;
 }
-nav[data-v-e8c566e8] {
+nav[data-v-db1feaad] {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
-nav a.router-link-exact-active[data-v-e8c566e8] {
+nav a.router-link-exact-active[data-v-db1feaad] {
   color: var(--color-text);
 }
-nav a.router-link-exact-active[data-v-e8c566e8]:hover {
+nav a.router-link-exact-active[data-v-db1feaad]:hover {
   background-color: transparent;
 }
-nav a[data-v-e8c566e8] {
+nav a[data-v-db1feaad] {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
-nav a[data-v-e8c566e8]:first-of-type {
+nav a[data-v-db1feaad]:first-of-type {
   border: 0;
 }
 @media (min-width: 1024px) {
-header[data-v-e8c566e8] {
+header[data-v-db1feaad] {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
 }
-.logo[data-v-e8c566e8] {
+.logo[data-v-db1feaad] {
     margin: 0 2rem 0 0;
 }
-header .wrapper[data-v-e8c566e8] {
+header .wrapper[data-v-db1feaad] {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
 }
-nav[data-v-e8c566e8] {
+nav[data-v-db1feaad] {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
