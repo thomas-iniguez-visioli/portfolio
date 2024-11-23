@@ -24,7 +24,7 @@ async function fetchRSSFeed(url) {
       console.log(cod.documentElement.querySelector)
       const title = cod.documentElement.querySelector('title').textContent;
       console.log(title)
-      const link = cod.documentElement.querySelector('link').textContent;
+      const link = cod.documentElement.querySelector('guid').textContent;
       console.log(link)
       const description = cod.documentElement.querySelector('description').textContent;
       console.log(description)
