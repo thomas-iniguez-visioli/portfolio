@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-7n44yQXy.js";
+import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-CGMNXhgX.js";
 const _hoisted_1 = { class: "rss" };
 const _sfc_main = {
   __name: "suiviView",
@@ -24,8 +24,8 @@ const _sfc_main = {
             console.log(link);
             const description = cod.documentElement.querySelector("description").textContent;
             console.log(description);
-            return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:${title}</a><br\\>${description}<br\\>`;
-          }).join("<br\\>");
+            return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:${title}</a><br>${description}<br>`;
+          }).join("<br>");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
           console.error("Error type 2 fetching RSS feed:", error);
