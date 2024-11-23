@@ -1,4 +1,4 @@
-import { c as createElementBlock, a as openBlock } from "./index-B8qxsjxO.js";
+import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-Doedat4r.js";
 const _hoisted_1 = { class: "rss" };
 const _sfc_main = {
   __name: "suiviView",
