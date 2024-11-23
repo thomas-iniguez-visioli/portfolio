@@ -145,26 +145,26 @@ a[data-v-70292cdd] {
   color: #42b983;
 }
 
-h1[data-v-1be4218f] {
+h1[data-v-34a26691] {
   margin: 5px;
   font-size: 20px;
 }
-.feed[data-v-1be4218f] {
+.feed[data-v-34a26691] {
   text-align: left;
 }
-a[data-v-1be4218f] {
+a[data-v-34a26691] {
   color: #42b983;
 }
 /* CSS Spinner */
-.spinner[data-v-1be4218f] {
+.spinner[data-v-34a26691] {
   margin: 40px auto 0;
   width: 150px;
   text-align: center;
 }
-.error[data-v-1be4218f] {
+.error[data-v-34a26691] {
   color: red;
 }
-.spinner > div[data-v-1be4218f] {
+.spinner > div[data-v-34a26691] {
   width: 18px;
   height: 18px;
   /* background-color: #ff641b; */
@@ -174,18 +174,18 @@ a[data-v-1be4218f] {
 
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: sk-bouncedelay-1be4218f 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay-1be4218f 1.4s infinite ease-in-out both;
+  -webkit-animation: sk-bouncedelay-34a26691 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay-34a26691 1.4s infinite ease-in-out both;
 }
-.spinner .bounce1[data-v-1be4218f] {
+.spinner .bounce1[data-v-34a26691] {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-.spinner .bounce2[data-v-1be4218f] {
+.spinner .bounce2[data-v-34a26691] {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-@-webkit-keyframes sk-bouncedelay-1be4218f {
+@-webkit-keyframes sk-bouncedelay-34a26691 {
 0%,
   80%,
   100% {
@@ -195,7 +195,7 @@ a[data-v-1be4218f] {
     -webkit-transform: scale(1);
 }
 }
-@keyframes sk-bouncedelay-1be4218f {
+@keyframes sk-bouncedelay-34a26691 {
 0%,
   80%,
   100% {
