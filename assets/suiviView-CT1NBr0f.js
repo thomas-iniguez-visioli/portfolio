@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-DNp36Eah.js";
+import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-Dso_ZqEr.js";
 const _hoisted_1 = { class: "rss" };
 const _sfc_main = {
   __name: "suiviView",
@@ -15,14 +15,9 @@ const _sfc_main = {
           const parser = new DOMParser();
           const xmlDoc = parser.parseFromString(rssText, "application/xml");
           const items = xmlDoc.querySelectorAll("item");
-          console.log(items);
           const rssContent = Array.from(items).slice(5).map((item, id, ar) => {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/html");
             console.log(cod);
-            const title = cod.querySelector("title").textContent;
-            const link = cod.querySelector("link").textContent;
-            const description = cod.querySelector("description").textContent;
-            return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:${title}</a><br>${description}`;
           }).join("");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
