@@ -5,8 +5,7 @@
 <script setup>
   import{onMounted}from 'vue'
 onMounted(() => {
-log.info(window.location.href
-)
+
 async function fetchRSSFeed(url) {
     try {
         const response = await fetch(url, { mode: 'no-cors'});
