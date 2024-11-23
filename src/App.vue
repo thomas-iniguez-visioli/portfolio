@@ -22,7 +22,7 @@ log.info(window.location.href
 
     <div class="wrapper">
       <HelloWorld msg="thomas iniguez visioli" />
-
+       <VueRssFeed :feedUrl="https://bonjourlafuite.eu.org/feed.xml" :name="rgpd" :limit="5"/>
       <nav>
         <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/cv">cv</RouterLink>
