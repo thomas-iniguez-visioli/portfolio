@@ -59,7 +59,7 @@ export default {
       this.loading = true;
       this.feed = {};
       try {
-        const data = await fetch(this.feedUrl);
+        const data = await fetch("https:"+"/"+"/"+this.feedUrl);
         if (data.ok) {
           const text = await data.text();
           const parser = new RSSParser();
