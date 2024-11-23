@@ -27,7 +27,7 @@ async function fetchRSSFeed(url) {
       const cod=new DOMParser().parseFromString(item.outerHTML);
       const title = cod.querySelector('title').textContent;
       const link = cod.querySelector('link').textContent;
-      const description = item.querySelector('description').textContent;
+      const description = cod.querySelector('description').textContent;
       return `<a href="${link}" target="_blank">${title}</a><br>${description}`;
     }).join('');
     document.querySelector('.rss').innerHTML = rssContent;
