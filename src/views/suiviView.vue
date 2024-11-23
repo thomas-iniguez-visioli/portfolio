@@ -1,6 +1,6 @@
 <template>
 
-<a href= 'cv_stage_bts.pdf'><canvas id="the-canvas"></canvas></a>
+<div class="rss"></div>
 </template>
 <script setup>
 onMounted(() => {
