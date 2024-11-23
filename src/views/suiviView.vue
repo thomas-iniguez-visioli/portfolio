@@ -21,11 +21,11 @@ async function fetchRSSFeed(url) {
     const rssContent = Array.from(items).slice(5).map((item,id,ar) => {
      
       const cod=new DOMParser().parseFromString(item.outerHTML,"text/html");
-      console.log(cod)
-    /*  const title = cod.querySelector('title').textContent;
-      const link = cod.querySelector('link').textContent;
-      const description = cod.querySelector('description').textContent;
-      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:${title}</a><br>${description}`;*/
+      console.log(cod.documentElement.querySelector)
+      const title = cod.documentElement.querySelector('title').textContent;
+      const link = cod.documentElement.querySelector('link').textContent;
+      const description = cod.documentElement.querySelector('description').textContent;
+      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:${title}</a><br>${description}`;
     }).join('');
     document.querySelector('.rss').innerHTML = rssContent;
     } catch (error) {
