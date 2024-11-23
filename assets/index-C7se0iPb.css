@@ -238,49 +238,49 @@ h3[data-v-6cf1482e] {
 }
 }
 
-header[data-v-eb23b3a1] {
+header[data-v-4675592b] {
   line-height: 1.5;
   max-height: 100vh;
 }
-.logo[data-v-eb23b3a1] {
+.logo[data-v-4675592b] {
   display: block;
   margin: 0 auto 2rem;
 }
-nav[data-v-eb23b3a1] {
+nav[data-v-4675592b] {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
-nav a.router-link-exact-active[data-v-eb23b3a1] {
+nav a.router-link-exact-active[data-v-4675592b] {
   color: var(--color-text);
 }
-nav a.router-link-exact-active[data-v-eb23b3a1]:hover {
+nav a.router-link-exact-active[data-v-4675592b]:hover {
   background-color: transparent;
 }
-nav a[data-v-eb23b3a1] {
+nav a[data-v-4675592b] {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
-nav a[data-v-eb23b3a1]:first-of-type {
+nav a[data-v-4675592b]:first-of-type {
   border: 0;
 }
 @media (min-width: 1024px) {
-header[data-v-eb23b3a1] {
+header[data-v-4675592b] {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
 }
-.logo[data-v-eb23b3a1] {
+.logo[data-v-4675592b] {
     margin: 0 2rem 0 0;
 }
-header .wrapper[data-v-eb23b3a1] {
+header .wrapper[data-v-4675592b] {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
 }
-nav[data-v-eb23b3a1] {
+nav[data-v-4675592b] {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
