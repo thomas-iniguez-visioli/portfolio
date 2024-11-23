@@ -186,4 +186,22 @@ return `{
 
 export default router
 `)
+import * as https from 'node:https' 
+
+
+function curlEquivalent(url) {
+  const filePath = `public/${url.split('/').pop()}`;
+  const file = fs.createWriteStream(filePath);
+  const request = https.get(url, response => {
+    response.pipe(file);
+    file.on('finish', () => {
+      file.close();
+      console.log(`File downloaded and saved to ${filePath}`);
+    });
+  }).on('error', err => {
+    fs.unlink(filePath);
+    console.error(err.message);
+  });
+}
+curlEquivalent("https://bonjourlafuite.eu.org/feed.xml")
 

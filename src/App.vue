@@ -25,7 +25,7 @@ async function fetchRSSFeed(url) {
 }
 
 // Example RSS feed URL
-const rssUrl = 'https://bonjourlafuite.eu.org/feed.xml';
+const rssUrl = 'https://thomas-iniguez-visioli.github.io/portfolio/feed.xml';
 fetchRSSFeed(rssUrl);
 })
 
