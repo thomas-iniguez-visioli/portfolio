@@ -1,4 +1,4 @@
-import { t as temp, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, f as toDisplayString, r as renderSlot, a as openBlock } from "./index-Dlwi-A1R.js";
+import { t as temp, o as onMounted, c as createElementBlock, b as createBaseVNode, e as createTextVNode, f as toDisplayString, r as renderSlot, a as openBlock } from "./index-D8d8RBBV.js";
 const _hoisted_1 = { class: "about" };
 const _hoisted_2 = { hidden: "true" };
 const _sfc_main = {

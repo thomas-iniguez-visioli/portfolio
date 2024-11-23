@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-txLS24VV.js","assets/IconDocumentation-Bb9ojjG4.js","assets/HomeView-CaNXXK5g.css","assets/situation-BcSUSBKY.js","assets/situation-DNpq39rx.css","assets/AboutView-QM1PeRTX.js","assets/AboutView-DNtNIo95.css","assets/projectView-DCgeP-e_.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-DOtFTNEj.js","assets/IconDocumentation-BigLa9V3.js","assets/HomeView-CaNXXK5g.css","assets/situation-Cu38Oukr.js","assets/situation-DNpq39rx.css","assets/AboutView-f05-I6Y8.js","assets/AboutView-DNtNIo95.css","assets/projectView-CQdxYRqK.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -10780,15 +10780,15 @@ function useHistoryStateNavigation(base) {
   }
   function changeLocation(to, state, replace2) {
     const hashIndex = base.indexOf("#");
-    const url2 = hashIndex > -1 ? (location2.host && document.querySelector("base") ? base : base.slice(hashIndex)) + to : createBaseLocation() + base + to;
+    const url = hashIndex > -1 ? (location2.host && document.querySelector("base") ? base : base.slice(hashIndex)) + to : createBaseLocation() + base + to;
     try {
-      history2[replace2 ? "replaceState" : "pushState"](state, "", url2);
+      history2[replace2 ? "replaceState" : "pushState"](state, "", url);
       historyState.value = state;
     } catch (err) {
       {
         console.error(err);
       }
-      location2[replace2 ? "replace" : "assign"](url2);
+      location2[replace2 ? "replace" : "assign"](url);
     }
   }
   function replace(to, data) {
@@ -12288,83 +12288,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target2;
 };
-const parseDate = (tdate) => {
-  const systemDate = new Date(Date.parse(tdate));
-  const userDate = /* @__PURE__ */ new Date();
-  const diff = Math.floor((userDate - systemDate) / 1e3);
-  if (diff < 59) {
-    return diff + "s";
-  }
-  if (diff <= 3540) {
-    return Math.round(diff / 60) + "m";
-  }
-  if (diff <= 86400) {
-    return Math.round(diff / 3600) + "h";
-  }
-  if (diff < 604800) {
-    return Math.round(diff / 86400) + "d";
-  }
-  return systemDate.toString().substring(4, 10);
-};
-const _sfc_main$4 = {
-  name: "Article",
-  props: ["article"],
-  methods: {
-    getHostname() {
-      try {
-        const urlObj = new URL(this.article.link);
-        return urlObj.hostname.replace("www.", "").replace("ww2.", "");
-      } catch (e) {
-        console.error(e.toString());
-      }
-    },
-    getDateTime() {
-      if (this.article.isoDate) {
-        return parseDate(this.article.isoDate);
-      }
-    }
-  }
-};
-const _hoisted_1$4 = { class: "article" };
-const _hoisted_2$2 = { class: "title" };
-const _hoisted_3$1 = ["href"];
-const _hoisted_4$1 = { class: "body" };
-const _hoisted_5$1 = ["innerHTML"];
-const _hoisted_6$1 = { class: "footer" };
-const _hoisted_7 = { class: "hostname" };
-const _hoisted_8 = {
-  key: 0,
-  class: "middot"
-};
-const _hoisted_9 = { class: "datetime" };
-function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$4, [
-    createBaseVNode("div", _hoisted_2$2, [
-      createBaseVNode("a", {
-        href: $props.article.link,
-        target: "_blank"
-      }, [
-        createBaseVNode("h3", null, toDisplayString($props.article.title), 1)
-      ], 8, _hoisted_3$1)
-    ]),
-    createBaseVNode("div", _hoisted_4$1, [
-      createBaseVNode("p", {
-        class: "content",
-        innerHTML: $props.article.content
-      }, null, 8, _hoisted_5$1)
-    ]),
-    createBaseVNode("div", _hoisted_6$1, [
-      createBaseVNode("span", _hoisted_7, toDisplayString(this.getHostname()), 1),
-      $props.article.isoDate ? (openBlock(), createElementBlock("span", _hoisted_8, "•")) : createCommentVNode("", true),
-      createBaseVNode("span", _hoisted_9, toDisplayString(this.getDateTime()), 1)
-    ])
-  ]);
-}
-const Article = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$2], ["__scopeId", "data-v-70292cdd"]]);
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
-function getDefaultExportFromCjs(x) {
-  return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
-}
 function getAugmentedNamespace(n) {
   if (n.__esModule) return n;
   var f = n.default;
@@ -12395,7 +12319,7 @@ const __viteBrowserExternal$1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Ob
   default: __viteBrowserExternal
 }, Symbol.toStringTag, { value: "Module" }));
 const require$$3 = /* @__PURE__ */ getAugmentedNamespace(__viteBrowserExternal$1);
-var xml2js$2 = {};
+var xml2js$1 = {};
 var defaults = {};
 var hasRequiredDefaults;
 function requireDefaults() {
@@ -16387,7 +16311,7 @@ function requireBuilder() {
   }).call(commonjsGlobal);
   return builder;
 }
-var parser$1 = {};
+var parser = {};
 var sax = {};
 var hasRequiredSax;
 function requireSax() {
@@ -17903,7 +17827,7 @@ function requireProcessors() {
 }
 var hasRequiredParser;
 function requireParser() {
-  if (hasRequiredParser) return parser$1;
+  if (hasRequiredParser) return parser;
   hasRequiredParser = 1;
   (function(exports) {
     (function() {
@@ -17941,8 +17865,8 @@ function requireParser() {
         return item;
       };
       exports.Parser = function(superClass) {
-        extend2(Parser2, superClass);
-        function Parser2(opts) {
+        extend2(Parser, superClass);
+        function Parser(opts) {
           this.parseStringPromise = bind(this.parseStringPromise, this);
           this.parseString = bind(this.parseString, this);
           this.reset = bind(this.reset, this);
@@ -17975,7 +17899,7 @@ function requireParser() {
           }
           this.reset();
         }
-        Parser2.prototype.processAsync = function() {
+        Parser.prototype.processAsync = function() {
           var chunk, err;
           try {
             if (this.remaining.length <= this.options.chunkSize) {
@@ -17997,7 +17921,7 @@ function requireParser() {
             }
           }
         };
-        Parser2.prototype.assignOrPush = function(obj, key, newValue) {
+        Parser.prototype.assignOrPush = function(obj, key, newValue) {
           if (!(key in obj)) {
             if (!this.options.explicitArray) {
               return obj[key] = newValue;
@@ -18011,7 +17935,7 @@ function requireParser() {
             return obj[key].push(newValue);
           }
         };
-        Parser2.prototype.reset = function() {
+        Parser.prototype.reset = function() {
           var attrkey, charkey, ontext, stack2;
           this.removeAllListeners();
           this.saxParser = sax2.parser(this.options.strict, {
@@ -18204,7 +18128,7 @@ function requireParser() {
             };
           }();
         };
-        Parser2.prototype.parseString = function(str, cb) {
+        Parser.prototype.parseString = function(str, cb) {
           var err;
           if (cb != null && typeof cb === "function") {
             this.on("end", function(result) {
@@ -18239,7 +18163,7 @@ function requireParser() {
             }
           }
         };
-        Parser2.prototype.parseStringPromise = function(str) {
+        Parser.prototype.parseStringPromise = function(str) {
           return new Promise(/* @__PURE__ */ function(_this) {
             return function(resolve2, reject) {
               return _this.parseString(str, function(err, value) {
@@ -18252,7 +18176,7 @@ function requireParser() {
             };
           }(this));
         };
-        return Parser2;
+        return Parser;
       }(events);
       exports.parseString = function(str, a, b) {
         var cb, options, parser2;
@@ -18281,8 +18205,8 @@ function requireParser() {
         return parser2.parseStringPromise(str);
       };
     }).call(commonjsGlobal);
-  })(parser$1);
-  return parser$1;
+  })(parser);
+  return parser;
 }
 (function() {
   var builder2, defaults2, parser2, processors2, extend2 = function(child, parent) {
@@ -18301,23 +18225,22 @@ function requireParser() {
   builder2 = requireBuilder();
   parser2 = requireParser();
   processors2 = requireProcessors();
-  xml2js$2.defaults = defaults2.defaults;
-  xml2js$2.processors = processors2;
-  xml2js$2.ValidationError = function(superClass) {
+  xml2js$1.defaults = defaults2.defaults;
+  xml2js$1.processors = processors2;
+  xml2js$1.ValidationError = function(superClass) {
     extend2(ValidationError, superClass);
     function ValidationError(message) {
       this.message = message;
     }
     return ValidationError;
   }(Error);
-  xml2js$2.Builder = builder2.Builder;
-  xml2js$2.Parser = parser2.Parser;
-  xml2js$2.parseString = parser2.parseString;
-  xml2js$2.parseStringPromise = parser2.parseStringPromise;
+  xml2js$1.Builder = builder2.Builder;
+  xml2js$1.Parser = parser2.Parser;
+  xml2js$1.parseString = parser2.parseString;
+  xml2js$1.parseStringPromise = parser2.parseStringPromise;
 }).call(commonjsGlobal);
-var fields$2 = { exports: {} };
-const fields$1 = fields$2.exports = {};
-fields$1.feed = [
+const fields = {};
+fields.feed = [
   ["author", "creator"],
   ["dc:publisher", "publisher"],
   ["dc:creator", "creator"],
@@ -18342,7 +18265,7 @@ fields$1.feed = [
   "skipHours",
   "skipDays"
 ];
-fields$1.item = [
+fields.item = [
   ["author", "creator"],
   ["dc:creator", "creator"],
   ["dc:date", "date"],
@@ -18364,13 +18287,13 @@ fields$1.item = [
 var mapItunesField = function(f) {
   return ["itunes:" + f, f];
 };
-fields$1.podcastFeed = [
+fields.podcastFeed = [
   "author",
   "subtitle",
   "summary",
   "explicit"
 ].map(mapItunesField);
-fields$1.podcastItem = [
+fields.podcastItem = [
   "author",
   "subtitle",
   "summary",
@@ -18383,8 +18306,6 @@ fields$1.podcastItem = [
   "keywords",
   "episodeType"
 ].map(mapItunesField);
-var fieldsExports = fields$2.exports;
-var utils$2 = { exports: {} };
 var lib = {};
 var decode = {};
 const Aacute$1 = "Á";
@@ -23129,35 +23050,35 @@ function getASCIIEncoder(obj) {
     return decode_2.decodeXML;
   } });
 })(lib);
-const utils$1 = utils$2.exports = {};
+const utils = {};
 const entities = lib;
-const xml2js$1 = xml2js$2;
-utils$1.stripHtml = function(str) {
+const xml2js = xml2js$1;
+utils.stripHtml = function(str) {
   str = str.replace(/([^\n])<\/?(h|br|p|ul|ol|li|blockquote|section|table|tr|div)(?:.|\n)*?>([^\n])/gm, "$1\n$3");
   str = str.replace(/<(?:.|\n)*?>/gm, "");
   return str;
 };
-utils$1.getSnippet = function(str) {
-  return entities.decodeHTML(utils$1.stripHtml(str)).trim();
+utils.getSnippet = function(str) {
+  return entities.decodeHTML(utils.stripHtml(str)).trim();
 };
-utils$1.getLink = function(links, rel, fallbackIdx) {
+utils.getLink = function(links, rel, fallbackIdx) {
   if (!links) return;
   for (let i = 0; i < links.length; ++i) {
     if (links[i].$.rel === rel) return links[i].$.href;
   }
   if (links[fallbackIdx]) return links[fallbackIdx].$.href;
 };
-utils$1.getContent = function(content) {
+utils.getContent = function(content) {
   if (typeof content._ === "string") {
     return content._;
   } else if (typeof content === "object") {
-    let builder2 = new xml2js$1.Builder({ headless: true, explicitRoot: true, rootName: "div", renderOpts: { pretty: false } });
+    let builder2 = new xml2js.Builder({ headless: true, explicitRoot: true, rootName: "div", renderOpts: { pretty: false } });
     return builder2.buildObject(content);
   } else {
     return content;
   }
 };
-utils$1.copyFromXML = function(xml, dest, fields2) {
+utils.copyFromXML = function(xml, dest, fields2) {
   fields2.forEach(function(f) {
     let from = f;
     let to = f;
@@ -23177,11 +23098,11 @@ utils$1.copyFromXML = function(xml, dest, fields2) {
       dest[to] = dest[to]._;
     }
     if (includeSnippet && dest[to] && typeof dest[to] === "string") {
-      dest[to + "Snippet"] = utils$1.getSnippet(dest[to]);
+      dest[to + "Snippet"] = utils.getSnippet(dest[to]);
     }
   });
 };
-utils$1.maybePromisify = function(callback, promise) {
+utils.maybePromisify = function(callback, promise) {
   if (!callback) return promise;
   return promise.then(
     (data) => setTimeout(() => callback(null, data)),
@@ -23195,7 +23116,7 @@ const ENCODING_ALIASES = {
   "utf-8": "utf8",
   "iso-8859-1": "latin1"
 };
-utils$1.getEncodingFromContentType = function(contentType) {
+utils.getEncodingFromContentType = function(contentType) {
   contentType = contentType || "";
   let match = contentType.match(ENCODING_REGEX);
   let encoding = (match || [])[2] || "";
@@ -23206,454 +23127,6 @@ utils$1.getEncodingFromContentType = function(contentType) {
   }
   return encoding;
 };
-var utilsExports = utils$2.exports;
-const http = require$$3;
-const https = require$$3;
-const xml2js = xml2js$2;
-const url = require$$3;
-const fields = fieldsExports;
-const utils = utilsExports;
-const DEFAULT_HEADERS = {
-  "User-Agent": "rss-parser",
-  "Accept": "application/rss+xml"
-};
-const DEFAULT_MAX_REDIRECTS = 5;
-const DEFAULT_TIMEOUT = 6e4;
-class Parser {
-  constructor(options = {}) {
-    options.headers = options.headers || {};
-    options.xml2js = options.xml2js || {};
-    options.customFields = options.customFields || {};
-    options.customFields.item = options.customFields.item || [];
-    options.customFields.feed = options.customFields.feed || [];
-    options.requestOptions = options.requestOptions || {};
-    if (!options.maxRedirects) options.maxRedirects = DEFAULT_MAX_REDIRECTS;
-    if (!options.timeout) options.timeout = DEFAULT_TIMEOUT;
-    this.options = options;
-    this.xmlParser = new xml2js.Parser(this.options.xml2js);
-  }
-  parseString(xml, callback) {
-    let prom = new Promise((resolve2, reject) => {
-      this.xmlParser.parseString(xml, (err, result) => {
-        if (err) return reject(err);
-        if (!result) {
-          return reject(new Error("Unable to parse XML."));
-        }
-        let feed = null;
-        if (result.feed) {
-          feed = this.buildAtomFeed(result);
-        } else if (result.rss && result.rss.$ && result.rss.$.version && result.rss.$.version.match(/^2/)) {
-          feed = this.buildRSS2(result);
-        } else if (result["rdf:RDF"]) {
-          feed = this.buildRSS1(result);
-        } else if (result.rss && result.rss.$ && result.rss.$.version && result.rss.$.version.match(/0\.9/)) {
-          feed = this.buildRSS0_9(result);
-        } else if (result.rss && this.options.defaultRSS) {
-          switch (this.options.defaultRSS) {
-            case 0.9:
-              feed = this.buildRSS0_9(result);
-              break;
-            case 1:
-              feed = this.buildRSS1(result);
-              break;
-            case 2:
-              feed = this.buildRSS2(result);
-              break;
-            default:
-              return reject(new Error("default RSS version not recognized."));
-          }
-        } else {
-          return reject(new Error("Feed not recognized as RSS 1 or 2."));
-        }
-        resolve2(feed);
-      });
-    });
-    prom = utils.maybePromisify(callback, prom);
-    return prom;
-  }
-  parseURL(feedUrl, callback, redirectCount = 0) {
-    let xml = "";
-    let get = feedUrl.indexOf("https") === 0 ? https.get : http.get;
-    let urlParts = url.parse(feedUrl);
-    let headers = Object.assign({}, DEFAULT_HEADERS, this.options.headers);
-    let timeout = null;
-    let prom = new Promise((resolve2, reject) => {
-      const requestOpts = Object.assign({ headers }, urlParts, this.options.requestOptions);
-      let req = get(requestOpts, (res) => {
-        if (this.options.maxRedirects && res.statusCode >= 300 && res.statusCode < 400 && res.headers["location"]) {
-          if (redirectCount === this.options.maxRedirects) {
-            return reject(new Error("Too many redirects"));
-          } else {
-            const newLocation = url.resolve(feedUrl, res.headers["location"]);
-            return this.parseURL(newLocation, null, redirectCount + 1).then(resolve2, reject);
-          }
-        } else if (res.statusCode >= 300) {
-          return reject(new Error("Status code " + res.statusCode));
-        }
-        let encoding = utils.getEncodingFromContentType(res.headers["content-type"]);
-        res.setEncoding(encoding);
-        res.on("data", (chunk) => {
-          xml += chunk;
-        });
-        res.on("end", () => {
-          return this.parseString(xml).then(resolve2, reject);
-        });
-      });
-      req.on("error", reject);
-      timeout = setTimeout(() => {
-        return reject(new Error("Request timed out after " + this.options.timeout + "ms"));
-      }, this.options.timeout);
-    }).then((data) => {
-      clearTimeout(timeout);
-      return Promise.resolve(data);
-    }, (e) => {
-      clearTimeout(timeout);
-      return Promise.reject(e);
-    });
-    prom = utils.maybePromisify(callback, prom);
-    return prom;
-  }
-  buildAtomFeed(xmlObj) {
-    let feed = { items: [] };
-    utils.copyFromXML(xmlObj.feed, feed, this.options.customFields.feed);
-    if (xmlObj.feed.link) {
-      feed.link = utils.getLink(xmlObj.feed.link, "alternate", 0);
-      feed.feedUrl = utils.getLink(xmlObj.feed.link, "self", 1);
-    }
-    if (xmlObj.feed.title) {
-      let title = xmlObj.feed.title[0] || "";
-      if (title._) title = title._;
-      if (title) feed.title = title;
-    }
-    if (xmlObj.feed.updated) {
-      feed.lastBuildDate = xmlObj.feed.updated[0];
-    }
-    feed.items = (xmlObj.feed.entry || []).map((entry) => this.parseItemAtom(entry));
-    return feed;
-  }
-  parseItemAtom(entry) {
-    let item = {};
-    utils.copyFromXML(entry, item, this.options.customFields.item);
-    if (entry.title) {
-      let title = entry.title[0] || "";
-      if (title._) title = title._;
-      if (title) item.title = title;
-    }
-    if (entry.link && entry.link.length) {
-      item.link = utils.getLink(entry.link, "alternate", 0);
-    }
-    if (entry.published && entry.published.length && entry.published[0].length) item.pubDate = new Date(entry.published[0]).toISOString();
-    if (!item.pubDate && entry.updated && entry.updated.length && entry.updated[0].length) item.pubDate = new Date(entry.updated[0]).toISOString();
-    if (entry.author && entry.author.length && entry.author[0].name && entry.author[0].name.length) item.author = entry.author[0].name[0];
-    if (entry.content && entry.content.length) {
-      item.content = utils.getContent(entry.content[0]);
-      item.contentSnippet = utils.getSnippet(item.content);
-    }
-    if (entry.summary && entry.summary.length) {
-      item.summary = utils.getContent(entry.summary[0]);
-    }
-    if (entry.id) {
-      item.id = entry.id[0];
-    }
-    this.setISODate(item);
-    return item;
-  }
-  buildRSS0_9(xmlObj) {
-    var channel = xmlObj.rss.channel[0];
-    var items = channel.item;
-    return this.buildRSS(channel, items);
-  }
-  buildRSS1(xmlObj) {
-    xmlObj = xmlObj["rdf:RDF"];
-    let channel = xmlObj.channel[0];
-    let items = xmlObj.item;
-    return this.buildRSS(channel, items);
-  }
-  buildRSS2(xmlObj) {
-    let channel = xmlObj.rss.channel[0];
-    let items = channel.item;
-    let feed = this.buildRSS(channel, items);
-    if (xmlObj.rss.$ && xmlObj.rss.$["xmlns:itunes"]) {
-      this.decorateItunes(feed, channel);
-    }
-    return feed;
-  }
-  buildRSS(channel, items) {
-    items = items || [];
-    let feed = { items: [] };
-    let feedFields = fields.feed.concat(this.options.customFields.feed);
-    let itemFields = fields.item.concat(this.options.customFields.item);
-    if (channel["atom:link"] && channel["atom:link"][0] && channel["atom:link"][0].$) {
-      feed.feedUrl = channel["atom:link"][0].$.href;
-    }
-    if (channel.image && channel.image[0] && channel.image[0].url) {
-      feed.image = {};
-      let image2 = channel.image[0];
-      if (image2.link) feed.image.link = image2.link[0];
-      if (image2.url) feed.image.url = image2.url[0];
-      if (image2.title) feed.image.title = image2.title[0];
-      if (image2.width) feed.image.width = image2.width[0];
-      if (image2.height) feed.image.height = image2.height[0];
-    }
-    const paginationLinks = this.generatePaginationLinks(channel);
-    if (Object.keys(paginationLinks).length) {
-      feed.paginationLinks = paginationLinks;
-    }
-    utils.copyFromXML(channel, feed, feedFields);
-    feed.items = items.map((xmlItem) => this.parseItemRss(xmlItem, itemFields));
-    return feed;
-  }
-  parseItemRss(xmlItem, itemFields) {
-    let item = {};
-    utils.copyFromXML(xmlItem, item, itemFields);
-    if (xmlItem.enclosure) {
-      item.enclosure = xmlItem.enclosure[0].$;
-    }
-    if (xmlItem.description) {
-      item.content = utils.getContent(xmlItem.description[0]);
-      item.contentSnippet = utils.getSnippet(item.content);
-    }
-    if (xmlItem.guid) {
-      item.guid = xmlItem.guid[0];
-      if (item.guid._) item.guid = item.guid._;
-    }
-    if (xmlItem.$ && xmlItem.$["rdf:about"]) {
-      item["rdf:about"] = xmlItem.$["rdf:about"];
-    }
-    if (xmlItem.category) item.categories = xmlItem.category;
-    this.setISODate(item);
-    return item;
-  }
-  /**
-   * Add iTunes specific fields from XML to extracted JSON
-   *
-   * @access public
-   * @param {object} feed extracted
-   * @param {object} channel parsed XML
-   */
-  decorateItunes(feed, channel) {
-    let items = channel.item || [];
-    feed.itunes = {};
-    if (channel["itunes:owner"]) {
-      let owner = {};
-      if (channel["itunes:owner"][0]["itunes:name"]) {
-        owner.name = channel["itunes:owner"][0]["itunes:name"][0];
-      }
-      if (channel["itunes:owner"][0]["itunes:email"]) {
-        owner.email = channel["itunes:owner"][0]["itunes:email"][0];
-      }
-      feed.itunes.owner = owner;
-    }
-    if (channel["itunes:image"]) {
-      let image2;
-      let hasImageHref = channel["itunes:image"][0] && channel["itunes:image"][0].$ && channel["itunes:image"][0].$.href;
-      image2 = hasImageHref ? channel["itunes:image"][0].$.href : null;
-      if (image2) {
-        feed.itunes.image = image2;
-      }
-    }
-    if (channel["itunes:category"]) {
-      const categoriesWithSubs = channel["itunes:category"].map((category) => {
-        return {
-          name: category && category.$ && category.$.text,
-          subs: category["itunes:category"] ? category["itunes:category"].map((subcategory) => ({
-            name: subcategory && subcategory.$ && subcategory.$.text
-          })) : null
-        };
-      });
-      feed.itunes.categories = categoriesWithSubs.map((category) => category.name);
-      feed.itunes.categoriesWithSubs = categoriesWithSubs;
-    }
-    if (channel["itunes:keywords"]) {
-      if (channel["itunes:keywords"].length > 1) {
-        feed.itunes.keywords = channel["itunes:keywords"].map(
-          (keyword) => keyword && keyword.$ && keyword.$.text
-        );
-      } else {
-        let keywords = channel["itunes:keywords"][0];
-        if (keywords && typeof keywords._ === "string") {
-          keywords = keywords._;
-        }
-        if (keywords && keywords.$ && keywords.$.text) {
-          feed.itunes.keywords = keywords.$.text.split(",");
-        } else if (typeof keywords === "string") {
-          feed.itunes.keywords = keywords.split(",");
-        }
-      }
-    }
-    utils.copyFromXML(channel, feed.itunes, fields.podcastFeed);
-    items.forEach((item, index) => {
-      let entry = feed.items[index];
-      entry.itunes = {};
-      utils.copyFromXML(item, entry.itunes, fields.podcastItem);
-      let image2 = item["itunes:image"];
-      if (image2 && image2[0] && image2[0].$ && image2[0].$.href) {
-        entry.itunes.image = image2[0].$.href;
-      }
-    });
-  }
-  setISODate(item) {
-    let date = item.pubDate || item.date;
-    if (date) {
-      try {
-        item.isoDate = new Date(date.trim()).toISOString();
-      } catch (e) {
-      }
-    }
-  }
-  /**
-   * Generates a pagination object where the rel attribute is the key and href attribute is the value
-   *  { self: 'self-url', first: 'first-url', ...  }
-   *
-   * @access private
-   * @param {Object} channel parsed XML
-   * @returns {Object}
-   */
-  generatePaginationLinks(channel) {
-    if (!channel["atom:link"]) {
-      return {};
-    }
-    const paginationRelAttributes = ["self", "first", "next", "prev", "last"];
-    return channel["atom:link"].reduce((paginationLinks, link) => {
-      if (!link.$ || !paginationRelAttributes.includes(link.$.rel)) {
-        return paginationLinks;
-      }
-      paginationLinks[link.$.rel] = link.$.href;
-      return paginationLinks;
-    }, {});
-  }
-}
-var parser = Parser;
-var rssParser = parser;
-const RSSParser = /* @__PURE__ */ getDefaultExportFromCjs(rssParser);
-const _sfc_main$3 = {
-  name: "Feed",
-  components: {
-    Article
-  },
-  props: {
-    feedUrl: String,
-    name: String,
-    limit: Number,
-    loadMore: Boolean
-  },
-  data() {
-    return {
-      loading: true,
-      error: "",
-      feed: {}
-    };
-  },
-  created() {
-    this.fetchData();
-  },
-  watch: {
-    feedUrl() {
-      this.fetchData();
-    },
-    limit(newVal, oldVal) {
-      if (newVal !== oldVal) {
-        this.getArticles();
-      }
-    }
-  },
-  methods: {
-    async fetchData() {
-      this.error = "";
-      this.loading = true;
-      this.feed = {};
-      try {
-        console.log("https://" + this.feedUrl.replace('"', ""));
-        const data = await fetch("https://" + this.feedUrl.replace('"', ""));
-        if (data.ok) {
-          const text = await data.text();
-          const parser2 = new RSSParser();
-          parser2.parseString(text, (err, parsed) => {
-            this.loading = false;
-            if (err) {
-              this.error = `Error occured while parsing RSS Feed ${err.toString()}`;
-            } else {
-              this.feed = parsed;
-            }
-          });
-        } else {
-          this.error = "Error occured while fetching the feed";
-          this.loading = false;
-        }
-      } catch (e) {
-        if (e.toString() === "TypeError: Failed to fetch") {
-          this.error = "Error due to CORS policy";
-        } else {
-          this.error = e.toString();
-        }
-        this.loading = false;
-      }
-    },
-    getArticles() {
-      if (this.feed.items && this.feed.items) {
-        return this.feed.items.slice(0, this.limit);
-      }
-    }
-  }
-};
-const _hoisted_1$3 = {
-  key: 0,
-  class: "error"
-};
-const _hoisted_2$1 = {
-  key: 1,
-  class: "feed"
-};
-const _hoisted_3 = { key: 0 };
-const _hoisted_4 = { key: 1 };
-const _hoisted_5 = {
-  key: 2,
-  class: "spinner"
-};
-const _hoisted_6 = { class: "articles-container" };
-function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Article = resolveComponent("Article");
-  return $data.error ? (openBlock(), createElementBlock("div", _hoisted_1$3, toDisplayString($data.error), 1)) : (openBlock(), createElementBlock("div", _hoisted_2$1, [
-    $props.name ? (openBlock(), createElementBlock("h1", _hoisted_3, toDisplayString($props.name), 1)) : (openBlock(), createElementBlock("h1", _hoisted_4, toDisplayString($data.feed.title), 1)),
-    $data.loading ? (openBlock(), createElementBlock("div", _hoisted_5, _cache[0] || (_cache[0] = [
-      createBaseVNode("div", { class: "bounce1" }, null, -1),
-      createBaseVNode("div", { class: "bounce2" }, null, -1),
-      createBaseVNode("div", { class: "bounce3" }, null, -1)
-    ]))) : createCommentVNode("", true),
-    createBaseVNode("div", _hoisted_6, [
-      (openBlock(true), createElementBlock(Fragment, null, renderList($options.getArticles(), (article, index) => {
-        return openBlock(), createBlock(_component_Article, {
-          key: index,
-          article
-        }, null, 8, ["article"]);
-      }), 128))
-    ])
-  ]));
-}
-const Feed = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$1], ["__scopeId", "data-v-0049883b"]]);
-const _sfc_main$2 = {
-  name: "VueRssFeed",
-  components: {
-    Feed
-  },
-  props: {
-    feedUrl: String,
-    name: String,
-    limit: Number
-  }
-};
-const _hoisted_1$2 = { class: "vue-rss-feed" };
-function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Feed = resolveComponent("Feed");
-  return openBlock(), createElementBlock("div", _hoisted_1$2, [
-    createVNode(_component_Feed, {
-      feedUrl: $props.feedUrl,
-      name: $props.name,
-      limit: $props.limit
-    }, null, 8, ["feedUrl", "name", "limit"])
-  ]);
-}
-const VueRssFeed = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render], ["__scopeId", "data-v-b686636c"]]);
 const _hoisted_1$1 = { class: "greetings" };
 const _hoisted_2 = { class: "green" };
 const _sfc_main$1 = {
@@ -23878,11 +23351,25 @@ const _sfc_main = {
       log.info(
         window.location.href
       );
+      async function fetchRSSFeed(url) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const rssText = await response.text();
+          console.log(rssText);
+        } catch (error) {
+          console.error("Error fetching RSS feed:", error);
+        }
+      }
+      const rssUrl = "https://example.com/rss";
+      fetchRSSFeed(rssUrl);
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         createBaseVNode("header", null, [
-          _cache[4] || (_cache[4] = createBaseVNode("img", {
+          _cache[5] || (_cache[5] = createBaseVNode("img", {
             alt: "Vue logo",
             class: "logo",
             src: _imports_0,
@@ -23892,11 +23379,6 @@ const _sfc_main = {
           createBaseVNode("div", _hoisted_1, [
             createVNode(HelloWorld, { msg: "thomas iniguez visioli" }),
             _cache[3] || (_cache[3] = createBaseVNode("h1", null, " suivis des fuite de donnée", -1)),
-            createVNode(VueRssFeed, {
-              feedUrl: "https://thomas-iniguez-visioli.github.io/portfolio/feed.xml",
-              name: _ctx.rgpd,
-              limit: 5
-            }, null, 8, ["name"]),
             createBaseVNode("nav", null, [
               createVNode(unref(RouterLink), { to: "/" }, {
                 default: withCtx(() => _cache[0] || (_cache[0] = [
@@ -23916,7 +23398,8 @@ const _sfc_main = {
                 ])),
                 _: 1
               })
-            ])
+            ]),
+            _cache[4] || (_cache[4] = createBaseVNode("div", { class: "rss" }, null, -1))
           ])
         ]),
         createVNode(unref(RouterView))
@@ -23924,7 +23407,7 @@ const _sfc_main = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-8020d745"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-a1a82b75"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/portfolio/" + dep;
@@ -23999,12 +23482,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-txLS24VV.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-DOtFTNEj.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-BcSUSBKY.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-Cu38Oukr.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/cv",
@@ -24012,7 +23495,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-QM1PeRTX.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-f05-I6Y8.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
       path: "/projet/RGPD",
@@ -24020,7 +23503,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-DCgeP-e_.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CQdxYRqK.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("RGPD", "projet") };
       }
@@ -24031,7 +23514,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-DCgeP-e_.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CQdxYRqK.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("france-nuit", "projet") };
       }
@@ -24042,7 +23525,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-DCgeP-e_.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CQdxYRqK.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("uptime", "projet") };
       }
@@ -24053,7 +23536,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-DCgeP-e_.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CQdxYRqK.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("tp", "situation") };
       }
@@ -24064,7 +23547,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-DCgeP-e_.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CQdxYRqK.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("tp1", "situation") };
       }
