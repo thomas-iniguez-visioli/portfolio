@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-BQMmXdNL.js","assets/IconDocumentation-l7p85mh7.js","assets/HomeView-CaNXXK5g.css","assets/situation-BemFawjP.js","assets/situation-DNpq39rx.css","assets/AboutView-nTVSj1IJ.js","assets/AboutView-DNtNIo95.css","assets/projectView-YUVoA1SN.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-cutGx1IM.js","assets/IconDocumentation-DN9Emua6.js","assets/HomeView-CaNXXK5g.css","assets/situation-qpHKyzOw.js","assets/situation-DNpq39rx.css","assets/AboutView-BUj-sevp.js","assets/AboutView-DNtNIo95.css","assets/projectView-vaUuBva2.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -23563,7 +23563,7 @@ const _sfc_main$3 = {
       this.loading = true;
       this.feed = {};
       try {
-        const data = await fetch(this.feedUrl);
+        const data = await fetch("https://" + this.feedUrl);
         if (data.ok) {
           const text = await data.text();
           const parser2 = new RSSParser();
@@ -23629,7 +23629,7 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ]));
 }
-const Feed = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$1], ["__scopeId", "data-v-31449a0a"]]);
+const Feed = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$1], ["__scopeId", "data-v-1be4218f"]]);
 const _sfc_main$2 = {
   name: "VueRssFeed",
   components: {
@@ -23997,12 +23997,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-BQMmXdNL.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-cutGx1IM.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-BemFawjP.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-qpHKyzOw.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/cv",
@@ -24010,7 +24010,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-nTVSj1IJ.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-BUj-sevp.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
       path: "/projet/RGPD",
@@ -24018,7 +24018,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-YUVoA1SN.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-vaUuBva2.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("RGPD", "projet") };
       }
@@ -24029,7 +24029,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-YUVoA1SN.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-vaUuBva2.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("france-nuit", "projet") };
       }
@@ -24040,7 +24040,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-YUVoA1SN.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-vaUuBva2.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("uptime", "projet") };
       }
@@ -24051,7 +24051,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-YUVoA1SN.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-vaUuBva2.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("tp", "situation") };
       }
@@ -24062,7 +24062,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-YUVoA1SN.js"), true ? __vite__mapDeps([7,8]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-vaUuBva2.js"), true ? __vite__mapDeps([7,8]) : void 0),
       props: () => {
         return { name: gen("tp1", "situation") };
       }
