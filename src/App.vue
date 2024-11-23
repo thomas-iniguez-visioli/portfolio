@@ -20,7 +20,7 @@ async function fetchRSSFeed(url) {
         const rssText = await response.text();
         console.log(rssText); // Output raw XML text
     } catch (error) {
-        console.error('Error fetching RSS feed:', error);
+        console.error('Error type 2 fetching RSS feed:', error);
     }
 }
 
