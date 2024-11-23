@@ -59,6 +59,7 @@ export default {
       this.loading = true;
       this.feed = {};
       try {
+        console.log("https:"+"/"+"/"+this.feedUrl.replace('"',''))
         const data = await fetch("https:"+"/"+"/"+this.feedUrl.replace('"',''));
         if (data.ok) {
           const text = await data.text();
