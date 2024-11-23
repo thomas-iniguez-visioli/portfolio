@@ -26,7 +26,7 @@ async function fetchRSSFeed(url) {
       console.log(title)
       const link = url;
       console.log(link)
-      const description = cod.documentElement.querySelector('description').textContent;
+      const description = cod.documentElement.querySelector('description').textContent.replace("<li>","<br>").replace("</li>","<br>");
       console.log(description)
       return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:${title}</a><br>${description}<br>`;
     }).join('<br>');
