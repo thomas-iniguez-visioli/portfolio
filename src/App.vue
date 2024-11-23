@@ -23,12 +23,12 @@ async function fetchRSSFeed(url) {
     const xmlDoc = parser.parseFromString(rssText, "application/xml");
     const items = xmlDoc.querySelectorAll('item');
     console.log(items)
-    const rssContent = Array.from(items).map(item => {
+    const rssContent = Array.from(items).map((item,id,ar) => {
       const cod=new DOMParser().parseFromString(item.outerHTML);
       const title = cod.querySelector('title').textContent;
       const link = cod.querySelector('link').textContent;
       const description = cod.querySelector('description').textContent;
-      return `<a href="${link}" target="_blank">${title}</a><br>${description}`;
+      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:${title}</a><br>${description}`;
     }).join('');
     document.querySelector('.rss').innerHTML = rssContent;
     } catch (error) {
