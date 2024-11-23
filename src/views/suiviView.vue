@@ -29,7 +29,7 @@ async function fetchRSSFeed(url) {
       const description = cod.documentElement.querySelector('description').textContent;
       console.log(description)
       return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:${title}</a><br\\>${description}<br\\>`;
-    }).join('');
+    }).join('<br\\>');
     document.querySelector('.rss').innerHTML = rssContent;
     } catch (error) {
         console.error('Error type 2 fetching RSS feed:', error);
