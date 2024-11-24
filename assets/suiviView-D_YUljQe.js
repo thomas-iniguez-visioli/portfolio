@@ -1,5 +1,4 @@
-import { o as onMounted, c as createElementBlock, a as openBlock } from "./index-D-SADz-e.js";
-const _hoisted_1 = { class: "rss" };
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CarBS0ry.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -22,7 +21,8 @@ const _sfc_main = {
             console.log(title);
             const link = url;
             console.log(link);
-            const description = cod.documentElement.querySelector("description").innerHTML;
+            const description = cod.documentElement.querySelector("description").innerHTML.replace("]]>", " ");
+            ;
             console.log(description);
             return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:  ${title}</a><br>${description}<br>`;
           }).join("<br>");
@@ -35,7 +35,9 @@ const _sfc_main = {
       fetchRSSFeed(rssUrl);
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1);
+      return openBlock(), createElementBlock("main", null, _cache[0] || (_cache[0] = [
+        createBaseVNode("div", { class: "rss" }, null, -1)
+      ]));
     };
   }
 };
