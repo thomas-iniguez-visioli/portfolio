@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-DuJKgnrm.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BmUm6otM.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -36,7 +36,9 @@ const _sfc_main = {
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("main", null, _cache[0] || (_cache[0] = [
-        createBaseVNode("div", { class: "rss" }, null, -1)
+        createBaseVNode("div", { class: "rss" }, [
+          createBaseVNode("h6", null, "chargement en cours ...")
+        ], -1)
       ]));
     };
   }
