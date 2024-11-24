@@ -1,5 +1,5 @@
 import * as fs from'fs'
-fs.readdirSync("./dist").map((file)=>{
+fs.readdirSync("./dist/assets").map((file)=>{
     if(file=='.git'){
         return
     }if(file=='projet'){
@@ -9,5 +9,5 @@ fs.readdirSync("./dist").map((file)=>{
         return
     }
 
-    fs.writeFileSync("./dist/"+file,fs.readFileSync("./dist/"+file).toString().replace("]]>"," >"))
+    fs.writeFileSync("./dist/assets/"+file,fs.readFileSync("./dist/assets/"+file).toString().replace("]]>"," >"))
 })
