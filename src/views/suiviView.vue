@@ -1,5 +1,9 @@
 <template>
-<main><div class="rss"></div></main>
+<main>
+  <div class="rss">
+    <h6>chargement en cours ...</h6>
+  </div>
+</main>
 
 </template>
 <script setup>
