@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BA17yd7U.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BHWpj1yl.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -24,7 +24,7 @@ const _sfc_main = {
             const description = cod.documentElement.querySelector("description").innerHTML.replace("<!--[CDATA[", " ").replace("]]>", " ");
             ;
             console.log(description);
-            return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:  ${title}</a><br>${description}<br>`;
+            return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:  ${title}</a><br>${description.replace("]]>", " ")}<br>`;
           }).join("<br>");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
@@ -37,7 +37,7 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("main", null, _cache[0] || (_cache[0] = [
         createBaseVNode("div", { class: "rss" }, [
-          createBaseVNode("h6", null, "chargement en cours ...")
+          createBaseVNode("h6", null, "chargement en cours ... ")
         ], -1)
       ]));
     };
