@@ -27,7 +27,7 @@ const log=c.default.setup()
         <RouterLink to="/situation">situation professionelle</RouterLink>
       </nav>
       <h1> suivis des fuite de donnée</h1>
-      <div class="rss"></div>
+     
     </div>
   </header>
 
