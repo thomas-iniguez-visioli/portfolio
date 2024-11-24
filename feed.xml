@@ -8,9 +8,19 @@
     <generator>Eleventy</generator>
     
       <item>
+        <title>SFR</title>
+        <pubDate>Sun, 24 Nov 2024 01:00:00 +0000</pubDate>
+        <description><![CDATA[3.6 millions de clients<ul><li>nom, prénom</li><li>adresse email</li><li>adresse postale, code postal, ville</li><li>date de naissance, département de naissance</li><li>numéro de téléphone</li></ul>]]></description>
+        <guid isPermaLink="true">https://bonjourlafuite.eu.org#SFR-2024-11-24</guid>
+        
+        <category>leak</category>
+        
+      </item>
+    
+      <item>
         <title>Banque de France</title>
         <pubDate>Sat, 23 Nov 2024 01:00:00 +0000</pubDate>
-        <description><ul><li>identité des employés, poste, salaire</li><li>identité des clients, comptes bancaires, historique</li><li>webmail</li><li>documents stratégiques, rapports financiers</li></ul>></description>
+        <description><![CDATA[<ul><li>identité des employés, poste, salaire</li><li>identité des clients, comptes bancaires, historique</li><li>webmail</li><li>documents stratégiques, rapports financiers</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Banque de France-2024-11-23</guid>
         
         <category>leak</category>
@@ -22,7 +32,7 @@
       <item>
         <title>Companie de Transport Strasbourgeoise</title>
         <pubDate>Fri, 22 Nov 2024 01:00:00 +0000</pubDate>
-        <description><ul><li>inconnu</li></ul>></description>
+        <description><![CDATA[<ul><li>inconnu</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Companie de Transport Strasbourgeoise-2024-11-22</guid>
         
         <category>leak</category>
@@ -32,7 +42,7 @@
       <item>
         <title>Chambres d’agriculture</title>
         <pubDate>Thu, 21 Nov 2024 01:00:00 +0000</pubDate>
-        <description>></description>
+        <description><![CDATA[]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Chambres d’agriculture-2024-11-21</guid>
         
         <category>leak</category>
@@ -42,7 +52,7 @@
       <item>
         <title>Direct Assurance</title>
         <pubDate>Tue, 19 Nov 2024 01:00:00 +0000</pubDate>
-        <description><<ul><li>nom</li><li>adresse email</li><li>numéros de téléphone</li><li>IBAN</li></ul></description>
+        <description><![CDATA[<ul><li>nom</li><li>adresse email</li><li>numéros de téléphone</li><li>IBAN</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Direct Assurance-2024-11-19</guid>
         
         <category>leak</category>
@@ -54,7 +64,7 @@
       <item>
         <title>Mediboard</title>
         <pubDate>Tue, 19 Nov 2024 01:00:00 +0000</pubDate>
-        <description>750 000 patients<ul><li>nom, prénom</li><li>date de naissance et de décès</li><li>genre</li><li>numéro de téléphone</li><li>médecin traitant</li><li>prescriptions médicales</li><li>identifiant externe</li><li>historique des soins</li></ul></description>
+        <description><![CDATA[750 000 patients<ul><li>nom, prénom</li><li>date de naissance et de décès</li><li>genre</li><li>numéro de téléphone</li><li>médecin traitant</li><li>prescriptions médicales</li><li>identifiant externe</li><li>historique des soins</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Mediboard-2024-11-19</guid>
         
         <category>leak</category>
@@ -66,7 +76,7 @@
       <item>
         <title>Auchan</title>
         <pubDate>Tue, 19 Nov 2024 01:00:00 +0000</pubDate>
-        <description><ul><li>nom, prénom</li><li>adresse email</li><li>adresse postale</li><li>téléphone</li><li>composition familiale</li><li>date de naissance</li><li>numéro de carte de fidélité, montant de la cagnotte</li></ul></description>
+        <description><![CDATA[<ul><li>nom, prénom</li><li>adresse email</li><li>adresse postale</li><li>téléphone</li><li>composition familiale</li><li>date de naissance</li><li>numéro de carte de fidélité, montant de la cagnotte</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Auchan-2024-11-19</guid>
         
         <category>leak</category>
@@ -76,7 +86,7 @@
       <item>
         <title>Le Point</title>
         <pubDate>Mon, 18 Nov 2024 01:00:00 +0000</pubDate>
-        <description><ul><li>nom</li><li>adresse email</li><li>numéro de téléphone</li><li>adresse postale</li><li>date de naissance</li></ul></description>
+        <description><![CDATA[<ul><li>nom</li><li>adresse email</li><li>numéro de téléphone</li><li>adresse postale</li><li>date de naissance</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Le Point-2024-11-18</guid>
         
         <category>leak</category>
@@ -86,7 +96,7 @@
       <item>
         <title>Huttopia</title>
         <pubDate>Thu, 14 Nov 2024 01:00:00 +0000</pubDate>
-        <description><ul><li>nom, prénom</li><li>adresse email</li></ul></description>
+        <description><![CDATA[<ul><li>nom, prénom</li><li>adresse email</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Huttopia-2024-11-14</guid>
         
         <category>leak</category>
@@ -96,18 +106,8 @@
       <item>
         <title>Molotov</title>
         <pubDate>Wed, 13 Nov 2024 01:00:00 +0000</pubDate>
-        <description>10 millions de personnes<ul><li>adresse email</li><li>nom, prénom</li><li>date de naissance</li></ul></description>
+        <description><![CDATA[10 millions de personnes<ul><li>adresse email</li><li>nom, prénom</li><li>date de naissance</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Molotov-2024-11-13</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>Picard</title>
-        <pubDate>Tue, 12 Nov 2024 01:00:00 +0000</pubDate>
-        <description>45 000 personnes<ul><li>nom, prénom</li><li>date de naissance</li><li>adresse email</li><li>adresse postale</li><li>numéro de téléphone</li><li>numéro de carte de fidélité</li><li>points de fidélité</li><li>bons de réduction</li><li>historique des commandes</li><li>tickets de caisse</li><li>liste d’achats</li><li>favoris d’achat</li></ul></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Picard-2024-11-12</guid>
         
         <category>leak</category>
         

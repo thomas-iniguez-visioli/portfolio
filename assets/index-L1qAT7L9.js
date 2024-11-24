@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-BbXBUaoA.js","assets/IconDocumentation-BNkJxGLx.js","assets/HomeView-CaNXXK5g.css","assets/situation-DcVpg9rh.js","assets/situation-DNpq39rx.css","assets/suiviView-QBW3ns1y.js","assets/suiviView-DNtNIo95.css","assets/AboutView-FltXHxev.js","assets/projectView-CkawbqMR.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-DNjw2xW0.js","assets/IconDocumentation-DEAVFcxG.js","assets/HomeView-CaNXXK5g.css","assets/situation-BGEJFRdg.js","assets/situation-DNpq39rx.css","assets/suiviView-BwA_QQWJ.js","assets/suiviView-DNtNIo95.css","assets/AboutView-DuVNboON.js","assets/projectView-DZ9eGqv5.js","assets/projectView-Do52k5X6.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -37,7 +37,7 @@ const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-BbXBUa
   }
 })();
 /**
-* @vue/shared v3.5.12
+* @vue/shared v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -296,7 +296,7 @@ const stringifySymbol = (v, i = "") => {
   );
 };
 /**
-* @vue/reactivity v3.5.12
+* @vue/reactivity v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -378,17 +378,21 @@ class EffectScope {
   }
   stop(fromParent) {
     if (this._active) {
+      this._active = false;
       let i, l;
       for (i = 0, l = this.effects.length; i < l; i++) {
         this.effects[i].stop();
       }
+      this.effects.length = 0;
       for (i = 0, l = this.cleanups.length; i < l; i++) {
         this.cleanups[i]();
       }
+      this.cleanups.length = 0;
       if (this.scopes) {
         for (i = 0, l = this.scopes.length; i < l; i++) {
           this.scopes[i].stop(true);
         }
+        this.scopes.length = 0;
       }
       if (!this.detached && this.parent && !fromParent) {
         const last = this.parent.scopes.pop();
@@ -398,7 +402,6 @@ class EffectScope {
         }
       }
       this.parent = void 0;
-      this._active = false;
     }
   }
 }
@@ -1081,6 +1084,7 @@ class BaseReactiveHandler {
     this._isShallow = _isShallow;
   }
   get(target, key, receiver) {
+    if (key === "__v_skip") return target["__v_skip"];
     const isReadonly2 = this._isReadonly, isShallow2 = this._isShallow;
     if (key === "__v_isReactive") {
       return !isReadonly2;
@@ -1801,7 +1805,7 @@ function watch$1(source, cb, options = EMPTY_OBJ) {
   const scope = getCurrentScope();
   const watchHandle = () => {
     effect2.stop();
-    if (scope) {
+    if (scope && scope.active) {
       remove(scope.effects, effect2);
     }
   };
@@ -1911,7 +1915,7 @@ function traverse(value, depth = Infinity, seen2) {
   return value;
 }
 /**
-* @vue/runtime-core v3.5.12
+* @vue/runtime-core v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -2489,11 +2493,32 @@ const TeleportImpl = {
         updateCssVars(n2, true);
       }
       if (isTeleportDeferred(n2.props)) {
-        queuePostRenderEffect(mountToTarget, parentSuspense);
+        queuePostRenderEffect(() => {
+          mountToTarget();
+          n2.el.__isMounted = true;
+        }, parentSuspense);
       } else {
         mountToTarget();
       }
     } else {
+      if (isTeleportDeferred(n2.props) && !n1.el.__isMounted) {
+        queuePostRenderEffect(() => {
+          TeleportImpl.process(
+            n1,
+            n2,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized,
+            internals
+          );
+          delete n1.el.__isMounted;
+        }, parentSuspense);
+        return;
+      }
       n2.el = n1.el;
       n2.targetStart = n1.targetStart;
       const mainAnchor = n2.anchor = n1.anchor;
@@ -2789,10 +2814,9 @@ const BaseTransitionImpl = {
       if (innerChild.type !== Comment) {
         setTransitionHooks(innerChild, enterHooks);
       }
-      const oldChild = instance.subTree;
-      const oldInnerChild = oldChild && getInnerChild$1(oldChild);
+      let oldInnerChild = instance.subTree && getInnerChild$1(instance.subTree);
       if (oldInnerChild && oldInnerChild.type !== Comment && !isSameVNodeType(innerChild, oldInnerChild) && recursiveGetSubtree(instance).type !== Comment) {
-        const leavingHooks = resolveTransitionHooks(
+        let leavingHooks = resolveTransitionHooks(
           oldInnerChild,
           rawProps,
           state,
@@ -2807,6 +2831,7 @@ const BaseTransitionImpl = {
               instance.update();
             }
             delete leavingHooks.afterLeave;
+            oldInnerChild = void 0;
           };
           return emptyPlaceholder(child);
         } else if (mode === "in-out" && innerChild.type !== Comment) {
@@ -2820,10 +2845,19 @@ const BaseTransitionImpl = {
               earlyRemove();
               el[leaveCbKey] = void 0;
               delete enterHooks.delayedLeave;
+              oldInnerChild = void 0;
             };
-            enterHooks.delayedLeave = delayedLeave;
+            enterHooks.delayedLeave = () => {
+              delayedLeave();
+              delete enterHooks.delayedLeave;
+              oldInnerChild = void 0;
+            };
           };
+        } else {
+          oldInnerChild = void 0;
         }
+      } else if (oldInnerChild) {
+        oldInnerChild = void 0;
       }
       return child;
     };
@@ -3099,6 +3133,9 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
     return;
   }
   if (isAsyncWrapper(vnode) && !isUnmount) {
+    if (vnode.shapeFlag & 512 && vnode.type.__asyncResolved && vnode.component.subTree.component) {
+      setRef(rawRef, oldRawRef, parentSuspense, vnode.component.subTree);
+    }
     return;
   }
   const refValue = vnode.shapeFlag & 4 ? getComponentPublicInstance(vnode.component) : vnode.el;
@@ -3326,7 +3363,7 @@ function createHydrationFunctions(rendererInternals) {
             getContainerType(container),
             optimized
           );
-          if (isAsyncWrapper(vnode)) {
+          if (isAsyncWrapper(vnode) && !vnode.type.__asyncResolved) {
             let subTree;
             if (isFragmentStart) {
               subTree = createVNode(Fragment);
@@ -3579,6 +3616,10 @@ function createHydrationFunctions(rendererInternals) {
       getContainerType(container),
       slotScopeIds
     );
+    if (parentComponent) {
+      parentComponent.vnode.el = vnode.el;
+      updateHOCHostEl(parentComponent, vnode.el);
+    }
     return next;
   };
   const locateClosingAnchor = (node, open = "[", close = "]") => {
@@ -7831,9 +7872,9 @@ function closeBlock() {
   currentBlock = blockStack[blockStack.length - 1] || null;
 }
 let isBlockTreeEnabled = 1;
-function setBlockTracking(value) {
+function setBlockTracking(value, inVOnce = false) {
   isBlockTreeEnabled += value;
-  if (value < 0 && currentBlock) {
+  if (value < 0 && currentBlock && inVOnce) {
     currentBlock.hasOnce = true;
   }
 }
@@ -8521,7 +8562,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-const version = "3.5.12";
+const version = "3.5.13";
 const warn = NOOP;
 const ErrorTypeStrings = ErrorTypeStrings$1;
 const devtools = devtools$1;
@@ -8543,7 +8584,7 @@ const resolveFilter = null;
 const compatUtils = null;
 const DeprecationTypes = null;
 /**
-* @vue/runtime-dom v3.5.12
+* @vue/runtime-dom v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -8707,7 +8748,8 @@ function resolveTransitionProps(rawProps) {
     onAppear = onEnter,
     onAppearCancelled = onEnterCancelled
   } = baseProps;
-  const finishEnter = (el, isAppear, done) => {
+  const finishEnter = (el, isAppear, done, isCancelled) => {
+    el._enterCancelled = isCancelled;
     removeTransitionClass(el, isAppear ? appearToClass : enterToClass);
     removeTransitionClass(el, isAppear ? appearActiveClass : enterActiveClass);
     done && done();
@@ -8750,8 +8792,13 @@ function resolveTransitionProps(rawProps) {
       el._isLeaving = true;
       const resolve2 = () => finishLeave(el, done);
       addTransitionClass(el, leaveFromClass);
-      addTransitionClass(el, leaveActiveClass);
-      forceReflow();
+      if (!el._enterCancelled) {
+        forceReflow();
+        addTransitionClass(el, leaveActiveClass);
+      } else {
+        addTransitionClass(el, leaveActiveClass);
+        forceReflow();
+      }
       nextFrame(() => {
         if (!el._isLeaving) {
           return;
@@ -8765,11 +8812,11 @@ function resolveTransitionProps(rawProps) {
       callHook(onLeave, [el, resolve2]);
     },
     onEnterCancelled(el) {
-      finishEnter(el, false);
+      finishEnter(el, false, void 0, true);
       callHook(onEnterCancelled, [el]);
     },
     onAppearCancelled(el) {
-      finishEnter(el, true);
+      finishEnter(el, true, void 0, true);
       callHook(onAppearCancelled, [el]);
     },
     onLeaveCancelled(el) {
@@ -8976,10 +9023,11 @@ function useCssVars(getter) {
     }
     updateTeleports(vars);
   };
-  onBeforeMount(() => {
-    watchPostEffect(setVars);
+  onBeforeUpdate(() => {
+    queuePostFlushCb(setVars);
   });
   onMounted(() => {
+    watch(setVars, NOOP, { flush: "post" });
     const ob = new MutationObserver(setVars);
     ob.observe(instance.subTree.el.parentNode, { childList: true });
     onUnmounted(() => ob.disconnect());
@@ -9533,6 +9581,8 @@ class VueElement extends BaseClass {
         this._update();
       }
       if (shouldReflect) {
+        const ob = this._ob;
+        ob && ob.disconnect();
         if (val === true) {
           this.setAttribute(hyphenate(key), "");
         } else if (typeof val === "string" || typeof val === "number") {
@@ -9540,6 +9590,7 @@ class VueElement extends BaseClass {
         } else if (!val) {
           this.removeAttribute(hyphenate(key));
         }
+        ob && ob.observe(this, { attributes: true });
       }
     }
   }
@@ -10208,7 +10259,7 @@ const initDirectivesForSSR = () => {
   }
 };
 /**
-* vue v3.5.12
+* vue v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -10388,7 +10439,7 @@ const vue_runtime_esmBundler = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obj
 }, Symbol.toStringTag, { value: "Module" }));
 var isVue2 = false;
 /*!
- * pinia v2.2.4
+ * pinia v2.2.6
  * (c) 2024 Eduardo San Martin Morote
  * @license MIT
  */
@@ -12564,7 +12615,12 @@ const _sfc_main = {
                 _: 1
               })
             ]),
-            _cache[3] || (_cache[3] = createBaseVNode("h1", null, " suivis des fuite de donnée", -1))
+            createVNode(unref(RouterLink), { to: "/suivi" }, {
+              default: withCtx(() => _cache[3] || (_cache[3] = [
+                createTextVNode("veille")
+              ])),
+              _: 1
+            })
           ])
         ]),
         createVNode(unref(RouterView))
@@ -12572,7 +12628,7 @@ const _sfc_main = {
     };
   }
 };
-const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-4f397596"]]);
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-165958b7"]]);
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
   return "/portfolio/" + dep;
@@ -12647,12 +12703,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-BbXBUaoA.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-DNjw2xW0.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-DcVpg9rh.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-BGEJFRdg.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/suivi",
@@ -12660,7 +12716,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./suiviView-QBW3ns1y.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./suiviView-BwA_QQWJ.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
       path: "/cv",
@@ -12668,7 +12724,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-FltXHxev.js"), true ? __vite__mapDeps([7,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-DuVNboON.js"), true ? __vite__mapDeps([7,6]) : void 0)
     },
     {
       path: "/projet/RGPD",
@@ -12676,7 +12732,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CkawbqMR.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-DZ9eGqv5.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("RGPD", "projet") };
       }
@@ -12687,7 +12743,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CkawbqMR.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-DZ9eGqv5.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("france-nuit", "projet") };
       }
@@ -12698,7 +12754,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CkawbqMR.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-DZ9eGqv5.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("uptime", "projet") };
       }
@@ -12709,7 +12765,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CkawbqMR.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-DZ9eGqv5.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("tp", "situation") };
       }
@@ -12720,7 +12776,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CkawbqMR.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-DZ9eGqv5.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("tp1", "situation") };
       }
