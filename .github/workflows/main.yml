@@ -2,8 +2,7 @@ name: Build Vue
 on: 
  - workflow_dispatch
  - schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '30 5,17 * * *'
+    - cron: '0 8,20 * * *'
 permissions:
   actions: write
   attestations: write
