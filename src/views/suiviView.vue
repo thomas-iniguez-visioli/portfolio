@@ -1,6 +1,6 @@
 <template>
+<main><div class="rss"></div></main>
 
-<div class="rss"></div>
 </template>
 <script setup>
   import{onMounted}from 'vue'
@@ -26,7 +26,7 @@ async function fetchRSSFeed(url) {
       console.log(title)
       const link = url;
       console.log(link)
-      const description = cod.documentElement.querySelector('description').innerHTML;
+      const description = cod.documentElement.querySelector('description').innerHTML.replace("]]>"," ");;
       console.log(description)
       return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:  ${title}</a><br>${description}<br>`;
     }).join('<br>');
