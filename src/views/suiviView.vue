@@ -30,7 +30,7 @@ async function fetchRSSFeed(url) {
       console.log(title)
       const link = "https://bonjourlafuite.eu.org";
       console.log(link)
-      const description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA["," ").replace("]]>"," ");;
+      const description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA["," ").replace(";"," ");;
       console.log(description)
       return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:  ${title}</a><br>${description.replace("]]&gt"," ")}<br>`;
     }).join('<br>');
