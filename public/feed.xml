@@ -8,6 +8,18 @@
     <generator>Eleventy</generator>
     
       <item>
+        <title>SFR</title>
+        <pubDate>Sun, 24 Nov 2024 01:00:00 +0000</pubDate>
+        <description><![CDATA[3.6 millions de clients<ul><li>nom, prénom</li><li>adresse email</li><li>adresse postale, code postal, ville</li><li>date de naissance, département de naissance</li><li>numéro de téléphone</li><li>150 000 IBAN</li></ul>]]></description>
+        <guid isPermaLink="true">https://bonjourlafuite.eu.org#SFR-2024-11-24</guid>
+        
+        <category>leak</category>
+        
+        <category>sensitive</category>
+        
+      </item>
+    
+      <item>
         <title>Banque de France</title>
         <pubDate>Sat, 23 Nov 2024 01:00:00 +0000</pubDate>
         <description><![CDATA[<ul><li>identité des employés, poste, salaire</li><li>identité des clients, comptes bancaires, historique</li><li>webmail</li><li>documents stratégiques, rapports financiers</li></ul>]]></description>
@@ -98,16 +110,6 @@
         <pubDate>Wed, 13 Nov 2024 01:00:00 +0000</pubDate>
         <description><![CDATA[10 millions de personnes<ul><li>adresse email</li><li>nom, prénom</li><li>date de naissance</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Molotov-2024-11-13</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>Picard</title>
-        <pubDate>Tue, 12 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[45 000 personnes<ul><li>nom, prénom</li><li>date de naissance</li><li>adresse email</li><li>adresse postale</li><li>numéro de téléphone</li><li>numéro de carte de fidélité</li><li>points de fidélité</li><li>bons de réduction</li><li>historique des commandes</li><li>tickets de caisse</li><li>liste d’achats</li><li>favoris d’achat</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Picard-2024-11-12</guid>
         
         <category>leak</category>
         
