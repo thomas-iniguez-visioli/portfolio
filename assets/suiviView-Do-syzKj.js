@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-L1qAT7L9.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-D941MiMC.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -12,7 +12,7 @@ const _sfc_main = {
           const rssText = await response.text();
           console.log(rssText);
           const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(rssText, "application/xml");
+          const xmlDoc = parser.parseFromString(rssText, "text/xml");
           const items = xmlDoc.querySelectorAll("item");
           const rssContent = Array.from(items).slice(5).map((item, id, ar) => {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/html");
