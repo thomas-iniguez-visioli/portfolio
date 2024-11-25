@@ -22,7 +22,7 @@ async function fetchRSSFeed(url) {
     const xmlDoc = parser.parseFromString(rssText, "text/xml");
     const items = xmlDoc.querySelectorAll('item');
    // console.log(items)
-    const rssContent = Array.from(items).slice(5).map((item,id,ar) => {
+    const rssContent = Array.from(items).map((item,id,ar) => {
      
       const cod=new DOMParser().parseFromString(item.outerHTML,"text/html");
       console.log(cod.documentElement.querySelector)
@@ -30,9 +30,9 @@ async function fetchRSSFeed(url) {
       console.log(title)
       const link = "https://bonjourlafuite.eu.org";
       console.log(link)
-      const description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA["," ").replace(";"," ");;
+      const description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA[","").replace(";","");;
       console.log(description)
-      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:  ${title}</a><br>${description.replace("]]&gt"," ")}<br>`;
+      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:  ${title}</a><br>${description.replace("]]&gt","")}<br>`;
     }).join('<br>');
     document.querySelector('.rss').innerHTML = rssContent;
     } catch (error) {
