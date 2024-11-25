@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-rRq7f0Yc.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-DCav-BfH.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -24,7 +24,7 @@ const _sfc_main = {
             const description = cod.documentElement.querySelector("description").innerHTML.replace("<!--[CDATA[", "").replace(";", "").replace("]]-->", "").replace("--", " ");
             ;
             console.log(description);
-            return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:  ${title}</a><br><il>${description.replace("]]&gt", "")}</il><br>`;
+            return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:  ${title}</a><br><li>${description.replace("]]&gt", "")}</li><br>`;
           }).join("<br>");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
