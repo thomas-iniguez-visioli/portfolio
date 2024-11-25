@@ -28,7 +28,7 @@ async function fetchRSSFeed(url) {
       console.log(cod.documentElement.querySelector)
       const title = cod.documentElement.querySelector('title').textContent;
       console.log(title)
-      const link = url;
+      const link = "https://bonjourlafuite.eu.org";
       console.log(link)
       const description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA["," ").replace("]]>"," ");;
       console.log(description)
