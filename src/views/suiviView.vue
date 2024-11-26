@@ -17,7 +17,7 @@ async function fetchRSSFeed(url) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const rssText = await response.text();
-        console.log(rssText); // Output raw XML text
+       // console.log(rssText); // Output raw XML text
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(rssText, "text/xml");
     const items = xmlDoc.querySelectorAll('item');
@@ -25,17 +25,17 @@ async function fetchRSSFeed(url) {
     const rssContent = Array.from(items).map((item,id,ar) => {
      
       const cod=new DOMParser().parseFromString(item.outerHTML,"text/html");
-      console.log(cod.documentElement.querySelector)
+    //  console.log(cod.documentElement.querySelector)
       const title = cod.documentElement.querySelector('title').textContent;
-      console.log(title)
+    //  console.log(title)
       const link = "https://bonjourlafuite.eu.org";
-      console.log(link)
+    //  console.log(link)
       var description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA[","").replace(";","").replace("]]","");;
       if(cod.documentElement.querySelector('description').innerHTML=="<![CDATA[]]>"){
-        console.log(cod.documentElement.querySelector('description').innerHTML)
+        console.log(cod.documentElement.querySelector('description'))
         description="null"
       }
-      console.log(description)
+      //console.log(description)
       return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:  ${title}</a><br>${description.replace("]]&gt","</ul>").replace("-->","> ").replace("&gt","</ul>")}<br>`;
     }).join('<br>');
     document.querySelector('.rss').innerHTML = rssContent;
