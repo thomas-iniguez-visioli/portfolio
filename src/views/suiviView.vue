@@ -32,7 +32,7 @@ async function fetchRSSFeed(url) {
     //  console.log(link)
         console.log(cod.documentElement.querySelector('description'))
       var description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA[","").replace(";","").replace("]]","");;
-      if(cod.documentElement.querySelector('description').innerHTML=="<![CDATA[]]>"){
+      if(cod.documentElement.querySelector('description').innerHTML=="<!--[CDATA[]]-->"){
       
         description="null"
       }
