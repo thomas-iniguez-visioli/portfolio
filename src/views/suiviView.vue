@@ -31,7 +31,7 @@ async function fetchRSSFeed(url) {
       const link = "https://bonjourlafuite.eu.org";
       console.log(link)
       var description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA[","").replace(";","").replace("]]","");;
-      if(code.documentElement.querySelector('description').innerHTML=="<![CDATA[]]>"){
+      if(cod.documentElement.querySelector('description').innerHTML=="<![CDATA[]]>"){
         description="null"
       }
       console.log(description)
