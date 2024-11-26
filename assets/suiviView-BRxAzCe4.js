@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-D6Pl2BBY.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-C0J0SW_B.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -21,7 +21,7 @@ const _sfc_main = {
             console.log(title);
             const link = "https://bonjourlafuite.eu.org";
             console.log(link);
-            const description = cod.documentElement.querySelector("description").innerHTML.replace("<!--[CDATA[", "").replace(";", "").replace("]]-->", "").replace("-->", " ");
+            const description = cod.documentElement.querySelector("description").innerHTML.replace("<!--[CDATA[", "").replace(";", "").replace(" >", "").replace("-->", " ");
             ;
             console.log(description);
             return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:  ${title}</a><br>${description.replace("]]&gt", "</ul>")}><br>`;
