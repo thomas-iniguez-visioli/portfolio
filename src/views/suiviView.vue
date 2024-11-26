@@ -30,9 +30,9 @@ async function fetchRSSFeed(url) {
       console.log(title)
       const link = "https://bonjourlafuite.eu.org";
       console.log(link)
-      const description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA[","").replace(";","").replace("]]","").replace("-->"," ");;
+      const description = cod.documentElement.querySelector('description').innerHTML.replace("<!--[CDATA[","").replace(";","").replace("]]","");;
       console.log(description)
-      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:  ${title}</a><br>${description.replace("]]&gt","</ul>")}<br>`;
+      return `<a href="${link}" target="_blank">fuite numéro ${ar.length-id}:  ${title}</a><br>${description.replace("]]&gt","</ul>").replace("-->"," ")}<br>`;
     }).join('<br>');
     document.querySelector('.rss').innerHTML = rssContent;
     } catch (error) {
