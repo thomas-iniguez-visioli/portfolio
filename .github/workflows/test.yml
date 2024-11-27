@@ -23,7 +23,7 @@ jobs:
         uses: zachleat/github-issue-to-json-file@v5.0.0
         with:
           # This controls where the JSON files are generated
-          folder: "/public"
+          folder: "public"
           # This tells the action which GitHub Issue Form template file to use
           issue-template: "custom.yml"
           # This controls which property we use to key the file name hash off of (values should be unique in your data set)
