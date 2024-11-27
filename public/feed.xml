@@ -8,6 +8,16 @@
     <generator>Eleventy</generator>
     
       <item>
+        <title>JVS</title>
+        <pubDate>Tue, 26 Nov 2024 01:00:00 +0000</pubDate>
+        <description><![CDATA[<ul><li>nom, prénom</li><li>adresse email</li><li>login</li><li>numéro de téléphone</li><li>collectivité</li></ul>]]></description>
+        <guid isPermaLink="true">https://bonjourlafuite.eu.org#JVS-2024-11-26</guid>
+        
+        <category>leak</category>
+        
+      </item>
+    
+      <item>
         <title>SFR</title>
         <pubDate>Sun, 24 Nov 2024 01:00:00 +0000</pubDate>
         <description><![CDATA[3.6 millions de clients<ul><li>nom, prénom</li><li>adresse email</li><li>adresse postale, code postal, ville</li><li>date de naissance, département de naissance</li><li>numéro de téléphone</li><li>150 000 IBAN</li></ul>]]></description>
@@ -100,16 +110,6 @@
         <pubDate>Thu, 14 Nov 2024 01:00:00 +0000</pubDate>
         <description><![CDATA[<ul><li>nom, prénom</li><li>adresse email</li></ul>]]></description>
         <guid isPermaLink="true">https://bonjourlafuite.eu.org#Huttopia-2024-11-14</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>Molotov</title>
-        <pubDate>Wed, 13 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[10 millions de personnes<ul><li>adresse email</li><li>nom, prénom</li><li>date de naissance</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Molotov-2024-11-13</guid>
         
         <category>leak</category>
         
