@@ -36,7 +36,7 @@ jobs:
           git commit -m "Adding data file for #${{ env.IssueNumber }}"
           git push
       - name: Close issue
-        uses: peter-evans/close-issue@v1
+        uses: peter-evans/close-issue@v3
         with:
           issue-number: "${{ env.IssueNumber }}"
           comment: "Thank you! Your data file has been added!"
