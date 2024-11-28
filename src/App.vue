@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+
   import{onMounted}from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import * as c from './temp'
@@ -7,11 +8,7 @@ const log=c.default.setup()
 //console.log(log)
 
 //console.log(log)
-onMounted(() => {
-log.info(window.location.href
-)
-  //log.info( $route.getRoutes())
-})
+
 
 </script>
 
@@ -22,12 +19,15 @@ log.info(window.location.href
 
     <div class="wrapper">
       <HelloWorld msg="thomas iniguez visioli" />
-
+     
+      
       <nav>
         <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/cv">cv</RouterLink>
         <RouterLink to="/situation">situation professionelle</RouterLink>
       </nav>
+      <RouterLink to="/suivi">veille</RouterLink>
+     
     </div>
   </header>
 

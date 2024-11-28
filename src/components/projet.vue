@@ -11,7 +11,7 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>francenuit</template>
+        <template #heading>RGPD</template>
     
        
       </WelcomeItem>,<p></p><p></p>
@@ -19,7 +19,7 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>RGPD</template>
+        <template #heading>francenuit</template>
     
        
       </WelcomeItem>,<p></p><p></p>

@@ -25,7 +25,13 @@ export default defineConfig({
       },
     
      
-    },
+    },   proxy: {
+      '^/feed': {
+        target: 'https://bonjourlafuite.eu.org/',
+        ws: true,
+        changeOrigin: true
+      },
+    }
 
   },
   build: {
