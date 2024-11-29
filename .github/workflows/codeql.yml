@@ -89,7 +89,7 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
-        output: "./result.sarif"
+        output: "./"
     
         category: "/language:${{matrix.language}}"
     - name: Checkout repository
@@ -98,7 +98,7 @@ jobs:
       uses: github/codeql-action/upload-sarif@v3
       with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: results.sarif
+          sarif_file: javascript.sarif
           # Optional category for the results
           # Used to differentiate multiple results for one commit
           category: my-analysis-tool
@@ -108,7 +108,7 @@ jobs:
     # Allowed values: 'sonar', 'codeql', 'semgrep', 'defectdojo', 'contrast', 'checkmarx', 'snyk'
     # Required
             tool: codeql
-            file: "result.sarif"
+            file: "javascript.sarif"
     # Token for authenticating requests to Sonar.
     # Required, when tool is "sonar". Only required for private repository.
 
