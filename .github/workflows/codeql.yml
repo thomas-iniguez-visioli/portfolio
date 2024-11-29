@@ -92,8 +92,7 @@ jobs:
         output: "./sarif"
     
         category: "/language:${{matrix.language}}"
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    
     - name: Upload SARIF file
       
       uses: pixee/upload-tool-results-action@v2.4.0
