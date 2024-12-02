@@ -198,11 +198,12 @@ import * as https from 'node:https'
 
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
-  const file = fs.createWriteStream(filePath);
+  const file = fs.createWriteStream(filePath+".new");
   const request = https.get(url, response => {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
+      fs.rename('public/feed.xml.new','public/feed.xml'
       console.log(`File downloaded and saved to ${filePath}`);
     });
   }).on('error', err => {
