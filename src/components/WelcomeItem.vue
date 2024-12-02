@@ -1,6 +1,9 @@
 <script setup>
 import { RouterLink} from 'vue-router'
 import {  onMounted } from 'vue'
+import * as c from '../temp'
+const log=c.default.setup()
+console.log(log)
 onMounted(() => {
  
 Object.keys(document.getElementsByTagName("a")).map((ite)=>{
@@ -8,12 +11,12 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
   //console.log(item.href)
   if(item.id){
     //console.log(item.parentElement)
-    console.log(item.href.includes("project"))
-    if(!item.href.includes("project")){
-      item.href=item.href+"project/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+    log.info(item.href.includes("projet"))
+    if(!item.href.includes("projet")){
+      item.href=item.href+"portfolio/projet/"+item.textContent.split("/")[item.textContent.split("/").length-1]
     }
     
-    console.log(item.href)
+    log.info(item.href)
     //item.text=item.parentElement.name.tex
     //return item
   }
@@ -26,7 +29,7 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
 </script>
 <template>
  
-         <RouterLink to="/" id="redirect"> <slot name="heading" id ="name"></slot></RouterLink>
+          <a href="/" id="redirect"> <slot name="heading" id ="name"></slot></a>
        
      
 </template>

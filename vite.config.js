@@ -5,13 +5,38 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base:"/porfolio",
+    base:"/portfolio",
   plugins: [
     vue(),
-  ],
+  ],configureWebpack:{
+    mode: 'development',
+    devtool: true,
+    optimization: {
+      splitChunks: {
+        
+           
+        chunks: 'all',
+        minSize: 150,
+        maxSize: 2500,
+        maxAsyncRequests: 30,
+        maxInitialRequests: 30,
+        enforceSizeThreshold: 50000,
+        
+      },
+    
+     
+    },   proxy: {
+      '^/feed': {
+        target: 'https://bonjourlafuite.eu.org/',
+        ws: true,
+        changeOrigin: true
+      },
+    }
+
+  },
   build: {
     minify:false,
-	  base:"/porfolio",
+	  base:"/portfolio",
       rollupOption:{
       output:{
           assetFileNames: "[name].[ext]",
@@ -37,7 +62,7 @@ export default defineConfig({
     
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      'project':fileURLToPath(new URL('./project', import.meta.url))
+     
     }
   }
 })

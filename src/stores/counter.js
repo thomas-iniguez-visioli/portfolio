@@ -10,9 +10,3 @@ export const useCounterStore = defineStore('counter', () => {
 
   return { count, doubleCount, increment }
 })
-export const projectStore = defineStore('project', (name) => {
-  const count = ref(name)
- 
-
-  return { count }
-})
