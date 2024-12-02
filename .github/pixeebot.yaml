@@ -1,2 +1,4 @@
 codemods:
   catalog: more
+provider:
+      codeql
