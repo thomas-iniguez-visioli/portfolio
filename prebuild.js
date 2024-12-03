@@ -1,7 +1,7 @@
 import * as fs from'fs'
 const config=JSON.parse(fs.readFileSync('./config.json'))
 
-
+console.log("test")
 fs.writeFileSync("./index.html",fs.readFileSync("./index.html").toString().replace("peoplename",config.name))
 fs.writeFileSync("./src/App.vue",fs.readFileSync("./src/App.vue").toString().replace("peoplename",config.name))
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
@@ -198,11 +198,12 @@ import * as https from 'node:https'
 
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
-  const file = fs.createWriteStream(filePath);
+  const file = fs.createWriteStream(filePath+".new");
   const request = https.get(url, response => {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
+      fs.rename('public/feed.xml.new','public/feed.xml')
       console.log(`File downloaded and saved to ${filePath}`);
     });
   }).on('error', err => {
