@@ -96,3 +96,9 @@ jobs:
           # Use any supported SARIF tool here
           tool: codeql
           file: ../results/javascript.sarif
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run Python script to create PR
+      uses: docker://codemodder/ci-integrations
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
