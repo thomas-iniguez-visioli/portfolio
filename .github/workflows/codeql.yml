@@ -94,4 +94,4 @@ jobs:
       with:
           # Use any supported SARIF tool here
           tool: codeql
-          file: unknown
+          file: ../results/javascript.sarif
