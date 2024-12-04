@@ -9,5 +9,4 @@ export default defineComponent({
     return log
   }
   // example using options api
-  
 })

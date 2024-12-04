@@ -1,37 +1,33 @@
 <script setup>
-import { RouterLink} from 'vue-router'
-import {  onMounted } from 'vue'
+import { RouterLink } from 'vue-router'
+import { onMounted } from 'vue'
 import * as c from '../temp'
-const log=c.default.setup()
+const log = c.default.setup()
 console.log(log)
 onMounted(() => {
- 
-Object.keys(document.getElementsByTagName("a")).map((ite)=>{
-  const item=document.getElementsByTagName("a")[ite]
-  //console.log(item.href)
-  if(item.id){
-    //console.log(item.parentElement)
-    log.info(item.href.includes("projet"))
-    if(!item.href.includes("projet")){
-      item.href=item.href+"portfolio/projet/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+  Object.keys(document.getElementsByTagName('a')).map((ite) => {
+    const item = document.getElementsByTagName('a')[ite]
+    //console.log(item.href)
+    if (item.id) {
+      //console.log(item.parentElement)
+      log.info(item.href.includes('projet'))
+      if (!item.href.includes('projet')) {
+        item.href =
+          item.href +
+          'portfolio/projet/' +
+          item.textContent.split('/')[item.textContent.split('/').length - 1]
+      }
+
+      log.info(item.href)
+      //item.text=item.parentElement.name.tex
+      //return item
     }
-    
-    log.info(item.href)
-    //item.text=item.parentElement.name.tex
-    //return item
-  }
-  
-})})
-
+  })
+})
 </script>
-<script>
-
-</script>
+<script></script>
 <template>
- 
-          <a href="/" id="redirect"> <slot name="heading" id ="name"></slot></a>
-       
-     
+  <a href="/" id="redirect"> <slot name="heading" id="name"></slot></a>
 </template>
 
 <style scoped>

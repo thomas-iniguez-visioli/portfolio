@@ -1,33 +1,28 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 
-  import{onMounted}from 'vue'
+import { onMounted } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import * as c from './temp'
-const log=c.default.setup()
+const log = c.default.setup()
 //console.log(log)
 
 //console.log(log)
-
-
 </script>
 
 <template>
-
   <header>
     <img alt="Vue logo" class="logo" src="/photo.jpg" width="125" height="auto" />
 
     <div class="wrapper">
       <HelloWorld msg="thomas iniguez visioli" />
-     
-      
+
       <nav>
         <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/cv">cv</RouterLink>
         <RouterLink to="/situation">situation professionelle</RouterLink>
       </nav>
       <RouterLink to="/suivi">veille</RouterLink>
-     
     </div>
   </header>
 
