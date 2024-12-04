@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 import { onMounted } from 'vue'
 import * as c from '../temp'
+import he from 'he'
 const log = c.default.setup()
 console.log(log)
 onMounted(() => {
@@ -15,7 +16,7 @@ onMounted(() => {
         item.href =
           item.href +
           'portfolio/projet/' +
-          item.textContent.split('/')[item.textContent.split('/').length - 1]
+          he.encode(item.textContent.split('/')[item.textContent.split('/').length - 1])
       }
 
       log.info(item.href)
