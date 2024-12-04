@@ -1,3 +1,5 @@
+import DOMPurify from 'dompurify';
+
 (() => {
   "use strict";
   var e,
@@ -549,7 +551,7 @@
                 t("string" == typeof e ? { type: "error", target: {} } : e);
             };
             (n.onload = n.onerror = s),
-              (n.src = e),
+              (n.src = DOMPurify.sanitize(e)),
               (n.async = !1),
               (f = setTimeout(() => s({ type: "timeout", target: n }), r)),
               document.head.appendChild(n);
