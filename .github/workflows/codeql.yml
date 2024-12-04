@@ -38,6 +38,7 @@ jobs:
       # only required for workflows in private repositories
       actions: read
       contents: write
+      id-token: write
 
     strategy:
       fail-fast: false
