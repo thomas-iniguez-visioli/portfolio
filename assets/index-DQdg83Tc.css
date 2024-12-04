@@ -111,69 +111,69 @@ a,
   }
 }
 
-h1[data-v-6cf1482e] {
+h1[data-v-1d138eea] {
   font-weight: 500;
   font-size: 2.6rem;
   position: relative;
   top: -10px;
 }
-h3[data-v-6cf1482e] {
+h3[data-v-1d138eea] {
   font-size: 1.2rem;
 }
-.greetings h1[data-v-6cf1482e],
-.greetings h3[data-v-6cf1482e] {
+.greetings h1[data-v-1d138eea],
+.greetings h3[data-v-1d138eea] {
   text-align: center;
 }
 @media (min-width: 1024px) {
-.greetings h1[data-v-6cf1482e],
-  .greetings h3[data-v-6cf1482e] {
+.greetings h1[data-v-1d138eea],
+  .greetings h3[data-v-1d138eea] {
     text-align: left;
 }
 }
 
-header[data-v-165958b7] {
+header[data-v-1ce618a2] {
   line-height: 1.5;
   max-height: 100vh;
 }
-.logo[data-v-165958b7] {
+.logo[data-v-1ce618a2] {
   display: block;
   margin: 0 auto 2rem;
 }
-nav[data-v-165958b7] {
+nav[data-v-1ce618a2] {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
-nav a.router-link-exact-active[data-v-165958b7] {
+nav a.router-link-exact-active[data-v-1ce618a2] {
   color: var(--color-text);
 }
-nav a.router-link-exact-active[data-v-165958b7]:hover {
+nav a.router-link-exact-active[data-v-1ce618a2]:hover {
   background-color: transparent;
 }
-nav a[data-v-165958b7] {
+nav a[data-v-1ce618a2] {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
-nav a[data-v-165958b7]:first-of-type {
+nav a[data-v-1ce618a2]:first-of-type {
   border: 0;
 }
 @media (min-width: 1024px) {
-header[data-v-165958b7] {
+header[data-v-1ce618a2] {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
 }
-.logo[data-v-165958b7] {
+.logo[data-v-1ce618a2] {
     margin: 0 2rem 0 0;
 }
-header .wrapper[data-v-165958b7] {
+header .wrapper[data-v-1ce618a2] {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
 }
-nav[data-v-165958b7] {
+nav[data-v-1ce618a2] {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
