@@ -208,7 +208,7 @@ function curlEquivalent(url) {
     });
   }).on('error', err => {
    //fs.unlinkSync(filePath);
-    console.error(err.message);
+    console.log(err.message);
   });
 }
 curlEquivalent("https://bonjourlafuite.eu.org/feed.xml")
