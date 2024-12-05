@@ -47,7 +47,7 @@ function getFrameLocation() {
 
 // Not a top window
 if (window !== window.top) {
-  window.prompt = function(text, defaultText) {
+  window.prompt = function (text, defaultText) {
     if (document.body.hasAttribute('SideeXPlayingFlag')) {
       return window.top.prompt(text, defaultText)
     } else {
@@ -59,7 +59,7 @@ if (window !== window.top) {
           recordedType: 'prompt',
           recordedMessage: text,
           recordedResult: result,
-          frameLocation: frameLocation,
+          frameLocation: frameLocation
         },
         '*'
       )
@@ -67,7 +67,7 @@ if (window !== window.top) {
     }
   }
 
-  window.confirm = function(text) {
+  window.confirm = function (text) {
     if (document.body.hasAttribute('SideeXPlayingFlag')) {
       return window.top.confirm(text)
     } else {
@@ -79,7 +79,7 @@ if (window !== window.top) {
           recordedType: 'confirm',
           recordedMessage: text,
           recordedResult: result,
-          frameLocation: frameLocation,
+          frameLocation: frameLocation
         },
         '*'
       )
@@ -87,7 +87,7 @@ if (window !== window.top) {
     }
   }
 
-  window.alert = function(text) {
+  window.alert = function (text) {
     if (document.body.hasAttribute('SideeXPlayingFlag')) {
       recordedAlert = text
       // Response directly
@@ -95,7 +95,7 @@ if (window !== window.top) {
         {
           direction: 'from-page-script',
           response: 'alert',
-          value: recordedAlert,
+          value: recordedAlert
         },
         '*'
       )
@@ -109,7 +109,7 @@ if (window !== window.top) {
           recordedType: 'alert',
           recordedMessage: text,
           recordedResult: result,
-          frameLocation: frameLocation,
+          frameLocation: frameLocation
         },
         '*'
       )
@@ -119,7 +119,7 @@ if (window !== window.top) {
 } else {
   // top window
 
-  window.prompt = function(text, defaultText) {
+  window.prompt = function (text, defaultText) {
     recordedPrompt = text
     if (document.body.hasAttribute('setPrompt')) {
       document.body.removeAttribute('setPrompt')
@@ -133,14 +133,14 @@ if (window !== window.top) {
           recordedType: 'prompt',
           recordedMessage: text,
           recordedResult: result,
-          frameLocation: frameLocation,
+          frameLocation: frameLocation
         },
         '*'
       )
       return result
     }
   }
-  window.confirm = function(text) {
+  window.confirm = function (text) {
     recordedConfirmation = text
     if (document.body.hasAttribute('setConfirm')) {
       document.body.removeAttribute('setConfirm')
@@ -154,14 +154,14 @@ if (window !== window.top) {
           recordedType: 'confirm',
           recordedMessage: text,
           recordedResult: result,
-          frameLocation: frameLocation,
+          frameLocation: frameLocation
         },
         '*'
       )
       return result
     }
   }
-  window.alert = function(text) {
+  window.alert = function (text) {
     recordedAlert = text
     if (document.body.hasAttribute('SideeXPlayingFlag')) {
       // Response directly
@@ -169,7 +169,7 @@ if (window !== window.top) {
         {
           direction: 'from-page-script',
           response: 'alert',
-          value: recordedAlert,
+          value: recordedAlert
         },
         '*'
       )
@@ -183,7 +183,7 @@ if (window !== window.top) {
           recordedType: 'alert',
           recordedMessage: text,
           recordedResult: result,
-          frameLocation: frameLocation,
+          frameLocation: frameLocation
         },
         '*'
       )
@@ -198,11 +198,7 @@ if (window == window.top) {
 }
 
 function handler(event) {
-  if (
-    event.source == window &&
-    event.data &&
-    event.data.direction == 'from-content-script'
-  ) {
+  if (event.source == window && event.data && event.data.direction == 'from-content-script') {
     if (event.data.detach) {
       window.removeEventListener('message', handler)
       window.prompt = originalPrompt
@@ -218,7 +214,7 @@ function handler(event) {
         window.postMessage(
           {
             direction: 'from-page-script',
-            response: 'prompt',
+            response: 'prompt'
           },
           '*'
         )
@@ -230,7 +226,7 @@ function handler(event) {
           {
             direction: 'from-page-script',
             response: 'prompt',
-            value: result,
+            value: result
           },
           '*'
         )
@@ -241,7 +237,7 @@ function handler(event) {
         window.postMessage(
           {
             direction: 'from-page-script',
-            response: 'confirm',
+            response: 'confirm'
           },
           '*'
         )
@@ -254,7 +250,7 @@ function handler(event) {
             {
               direction: 'from-page-script',
               response: 'confirm',
-              value: result,
+              value: result
             },
             '*'
           )
@@ -266,7 +262,7 @@ function handler(event) {
         window.postMessage(
           {
             direction: 'from-page-script',
-            response: 'alert',
+            response: 'alert'
           },
           '*'
         )

@@ -26,7 +26,7 @@
 }
 .KhPLRA {
   display: grid;
-  grid-template-areas: "content";
+  grid-template-areas: 'content';
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   position: relative;
@@ -116,7 +116,7 @@
 .XemTdQ:before {
   background-color: currentColor;
   border-radius: 2em;
-  content: "";
+  content: '';
   height: 100%;
   opacity: 0.1;
   position: absolute;

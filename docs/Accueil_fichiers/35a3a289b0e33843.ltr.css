@@ -1,6 +1,6 @@
 .nMvVqA {
   display: grid;
-  grid-template-areas: "corner-block horizontal-headers" "vertical-headers sheet";
+  grid-template-areas: 'corner-block horizontal-headers' 'vertical-headers sheet';
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   position: relative;
@@ -191,7 +191,7 @@
 }
 .OsKKIQ {
   display: grid;
-  grid-template-areas: "corner-block horizontal-headers" "vertical-headers sheet";
+  grid-template-areas: 'corner-block horizontal-headers' 'vertical-headers sheet';
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   position: relative;

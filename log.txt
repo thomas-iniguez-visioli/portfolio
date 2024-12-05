@@ -14,3 +14,5 @@
 Deleting original file Legends Never Die - Opening Ceremony  2017 World Championship Finals [mP3fGkpmVM0].f251.webm (pass -k to keep)
 Deleting original file Legends Never Die - Opening Ceremony  2017 World Championship Finals [mP3fGkpmVM0].f303.webm (pass -k to keep)
 test
+test
+getaddrinfo EAI_AGAIN bonjourlafuite.eu.org
