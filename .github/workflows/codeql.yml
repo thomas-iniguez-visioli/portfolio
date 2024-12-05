@@ -42,7 +42,7 @@ jobs:
 
     strategy:
       fail-fast: false
-      cleanup-level: low
+      
       matrix:
         include:
         - language: javascript-typescript
