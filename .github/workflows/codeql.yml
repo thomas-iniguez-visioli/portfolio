@@ -92,7 +92,7 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
-    - uses: pixee/upload-tool-results-action@v2
+    - uses: pixee/upload-tool-results-action@v2.4.0
       with:
           # Use any supported SARIF tool here
           tool: codeql
