@@ -42,6 +42,7 @@ jobs:
 
     strategy:
       fail-fast: false
+      cleanup-level: none
       matrix:
         include:
         - language: javascript-typescript
