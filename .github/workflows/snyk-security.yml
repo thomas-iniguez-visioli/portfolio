@@ -46,7 +46,15 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Snyk Code test
         run: snyk code test --json > snyk-code.json  || true
-      
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.4.3
+        with:
+    # Artifact name
+            name: code.json # optional, default is artifact
+    # A file, directory or wildcard pattern that describes what to upload
+            path: snyk-code.json
+    # The desired behavior if no files are found using the provided path.
+
 
         # Runs Snyk Infrastructure as Code (IaC) analysis and uploads result to Snyk.
         # Use || true to not fail the pipeline.
