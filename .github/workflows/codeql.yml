@@ -95,5 +95,5 @@ jobs:
       with:
           # Use any supported SARIF tool here
           tool: codeql
-          file: ../results/javascript.sarif
+          file: "/home/runner/work/portfolio/results/javascript.sarif"
   
