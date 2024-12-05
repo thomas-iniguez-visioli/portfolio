@@ -54,7 +54,7 @@ jobs:
         uses: pixee/upload-tool-results-action@v2.4.0
         with:
           tool: 'snyk'
-          
+          file: snyk-code.sarif
         # Snyk can be used to break the build when it detects security issues.
         # In this case we want to upload the SAST issues to GitHub Code Scanning
         
