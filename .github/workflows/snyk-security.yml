@@ -45,14 +45,14 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Snyk Code test
-        run: snyk code test --json > snyk-code.json  || true
+        run: snyk code test --sarif > snyk-code.sarif  || true
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.3
         with:
     # Artifact name
-            name: code.json # optional, default is artifact
+            name: code # optional, default is artifact
     # A file, directory or wildcard pattern that describes what to upload
-            path: snyk-code.json
+            path: snyk-code.sarif
     # The desired behavior if no files are found using the provided path.
 
 
@@ -63,7 +63,7 @@ jobs:
         uses: pixee/upload-tool-results-action@v2
         with:
           tool: 'snyk'
-          file: snyk-code.json
+          file: snyk-code.sarif
         # Snyk can be used to break the build when it detects security issues.
         # In this case we want to upload the SAST issues to GitHub Code Scanning
         
