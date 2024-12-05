@@ -52,7 +52,7 @@ jobs:
         # Use || true to not fail the pipeline.
      
       - name: Upload result to GitHub Code Scanning
-        uses: pixee/upload-tool-results-action@v2.4.0
+        uses: pixee/upload-tool-results-action@v2
         with:
           tool: 'snyk'
           file: snyk-code.json
