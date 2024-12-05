@@ -53,17 +53,17 @@ jobs:
 
         # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
-      - name: Snyk Code test
-        run: snyk code test --sarif > snyk-code.sarif  || true
+    - name: Snyk Code test
+      run: snyk code test --sarif > snyk-code.sarif  || true
 
         # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
-      - name: Snyk Open Source monitor
-        run: snyk monitor --all-projects
+     - name: Snyk Open Source monitor
+       run: snyk monitor --all-projects
 
         # Runs Snyk Infrastructure as Code (IaC) analysis and uploads result to Snyk.
         # Use || true to not fail the pipeline.
-      - name: Snyk IaC test and report
-        run: snyk iac test --report  || true
+     - name: Snyk IaC test and report
+       run: snyk iac test --report  || true
 
         # Build the docker image for testing
       
@@ -71,8 +71,8 @@ jobs:
 
 
         # Push the Snyk Code results into GitHub Code Scanning tab
-      - name: Upload result to GitHub Code Scanning
-        uses: pixee/upload-tool-results-action@v2.4.0
-        with:
+    - name: Upload result to GitHub Code Scanning
+      uses: pixee/upload-tool-results-action@v2.4.0
+      with:
           tool: snyk
           file: snyk-code.sarif
