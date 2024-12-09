@@ -201,11 +201,11 @@ const staticDnsAgent = (resolvconf) => new https.Agent({
     cb(null, resolvconf, undefined)
   }
 });
-var resolvConf= dns.lookup()
+//var resolvConf= dns.lookup()
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
   const file = fs.createWriteStream(filePath+".new");
-  const request = https.get(url,  {agent: staticDnsAgent(resolveConf)},response => {
+  const request = https.get(url,  {agent: staticDnsAgent()},response => {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
