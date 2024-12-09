@@ -203,7 +203,7 @@ const staticDnsAgent = (resolvconf) => new https.Agent({
 });
 var resolvConf=[]
 resolvConf.push({
-  address: '<ipv6-address1>', 
+  address: '82.67.8.211', 
   family: 4,
 })
 function curlEquivalent(url) {
