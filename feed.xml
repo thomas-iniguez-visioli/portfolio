@@ -1,119 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C’est qui qui a fuité aujourd’hui ?</title>
-    <description>Une sponso avec Pampers peut-être ?</description>
-    <link>https://bonjourlafuite.eu.org/</link>
-    <atom:link href="https://bonjourlafuite.eu.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <generator>Eleventy</generator>
-    
-      <item>
-        <title>Deloitte</title>
-        <pubDate>Wed, 04 Dec 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Deloitte-2024-12-04</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>Guy Demarle</title>
-        <pubDate>Tue, 03 Dec 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[<ul><li>nom, prénom</li><li>adresse postale</li><li>adresse email</li><li>numéro de téléphone</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Guy Demarle-2024-12-03</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>Norauto</title>
-        <pubDate>Mon, 02 Dec 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[<ul><li>nom, prénom</li><li>adresse email</li><li>adresse postale</li><li>numéro de téléphone</li><li>numéro de pièce d’identité</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Norauto-2024-12-02</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>JVS</title>
-        <pubDate>Tue, 26 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[<ul><li>nom, prénom</li><li>adresse email</li><li>login</li><li>numéro de téléphone</li><li>collectivité</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#JVS-2024-11-26</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>SFR</title>
-        <pubDate>Sun, 24 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[3.6 millions de clients<ul><li>nom, prénom</li><li>adresse email</li><li>adresse postale, code postal, ville</li><li>date de naissance, département de naissance</li><li>numéro de téléphone</li><li>150 000 IBAN</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#SFR-2024-11-24</guid>
-        
-        <category>leak</category>
-        
-        <category>sensitive</category>
-        
-      </item>
-    
-      <item>
-        <title>Banque de France</title>
-        <pubDate>Sat, 23 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[<ul><li>identité des employés, poste, salaire</li><li>identité des clients, comptes bancaires, historique</li><li>webmail</li><li>documents stratégiques, rapports financiers</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Banque de France-2024-11-23</guid>
-        
-        <category>leak</category>
-        
-        <category>sensitive</category>
-        
-      </item>
-    
-      <item>
-        <title>Companie de Transport Strasbourgeoise</title>
-        <pubDate>Fri, 22 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[<ul><li>inconnu</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Companie de Transport Strasbourgeoise-2024-11-22</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>Chambres d’agriculture</title>
-        <pubDate>Thu, 21 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Chambres d’agriculture-2024-11-21</guid>
-        
-        <category>leak</category>
-        
-      </item>
-    
-      <item>
-        <title>Direct Assurance</title>
-        <pubDate>Tue, 19 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[<ul><li>nom</li><li>adresse email</li><li>numéros de téléphone</li><li>IBAN</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Direct Assurance-2024-11-19</guid>
-        
-        <category>leak</category>
-        
-        <category>sensitive</category>
-        
-      </item>
-    
-      <item>
-        <title>Mediboard</title>
-        <pubDate>Tue, 19 Nov 2024 01:00:00 +0000</pubDate>
-        <description><![CDATA[750 000 patients<ul><li>nom, prénom</li><li>date de naissance et de décès</li><li>genre</li><li>numéro de téléphone</li><li>médecin traitant</li><li>prescriptions médicales</li><li>identifiant externe</li><li>historique des soins</li></ul>]]></description>
-        <guid isPermaLink="true">https://bonjourlafuite.eu.org#Mediboard-2024-11-19</guid>
-        
-        <category>leak</category>
-        
-        <category>sensitive</category>
-        
-      </item>
-    
+    <title>Node.js News</title>
+    <link>https://nodejs.github.io/nodejs-news-feeder/feed.xml</link>
+    <atom:link href="https://nodejs.github.io/nodejs-news-feeder/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Node.js Core most relevant news</description>
+    <pubDate>Tue, 13 Jun 2023 04:17:50 GMT</pubDate>
+    <language>en-us</language>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <lastBuildDate>Mon, 09 Dec 2024 00:46:00 GMT</lastBuildDate>
+    <image>
+      <title>Node.js News</title>
+      <url>https://nodejs.org/static/images/logo-hexagon-card.png</url>
+      <link>https://github.com/nodejs/nodejs-news-feeder</link>
+    </image>
+    <item>
+      <title>Released thomas-iniguez-visioli/vbcq 0.0.1</title>
+      <description><![CDATA[<p>Released thomas-iniguez-visioli/vbcq 0.0.1 by alphaleadership. <a href="https://github.com/thomas-iniguez-visioli/vbcq/releases/tag/0.0.1">More details</a></p>
+]]></description>
+      <pubDate>Fri, 06 Dec 2024 15:29:00 GMT</pubDate>
+      <link>https://github.com/thomas-iniguez-visioli/vbcq/releases/tag/0.0.1</link>
+      <guid>https://github.com/thomas-iniguez-visioli/vbcq/releases/tag/0.0.1</guid>
+    </item>
+    <item>
+      <title>Retrospective for thomas-iniguez-visioli from 2024-11-30 to 2024-12-07</title>
+      <description><![CDATA[<p>Reporting on 8 Issues from 2 authors, 28 Pull Requests from 3 authors, and 0 Discussions from 0 authors.</p>]]></description>
+      <pubDate>Sat, 30 Nov 2024 00:00:00 GMT</pubDate>
+      <link>https://github.com/thomas-iniguez-visioli/retro-weekly/blob/main/retros/2024-12-07.md</link>
+      <guid>https://github.com/thomas-iniguez-visioli/retro-weekly/blob/main/retros/2024-12-07.md</guid>
+    </item>
+    <item>
+      <title>Retrospective for thomas-iniguez-visioli from 2024-05-26 to 2024-06-02</title>
+      <description><![CDATA[<p>Reporting on 50 Issues from 17 authors, 50 Pull Requests from 18 authors, and 7 Discussions from 7 authors.</p>]]></description>
+      <pubDate>Sun, 26 May 2024 00:00:00 GMT</pubDate>
+      <link>https://github.com/thomas-iniguez-visioli/retro-weekly/blob/main/retros/2024-11-29</link>
+      <guid>https://github.com/thomas-iniguez-visioli/retro-weekly/blob/main/retros/2024-11-29</guid>
+    </item>
   </channel>
 </rss>
