@@ -38,7 +38,7 @@ onMounted(() => {
             description = '<ul><li>inconnu</li></ul>'
           }
           //console.log(description)
-          return `<a href="${link}" target="_blank">fuite numéro ${ar.length - id}:  ${title}</a><br>${description.replace(']]&gt', '</ul>').replace('-->', '> ').replace('&gt', '</ul>')}<br>`
+          return `<a href="${link}" target="_blank">item ${ar.length - id}:  ${title}</a><br>${description.replace(']]&gt', '</ul>').replace('-->', '> ').replace('&gt', '</ul>')}<br>`
         })
         .join('<br>')
       document.querySelector('.rss').innerHTML = rssContent
