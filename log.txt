@@ -22,3 +22,5 @@ bonjourlafuite.eu.org
 { family: undefined, hints: 32 }
 undefined
 File downloaded and saved to public/feed.xml
+test
+getaddrinfo EAI_AGAIN bonjourlafuite.eu.org
