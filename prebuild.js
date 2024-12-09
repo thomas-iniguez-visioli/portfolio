@@ -203,7 +203,7 @@ function curlEquivalent(url) {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
-      fs.rename('public/feed.xml.new','public/feed.xml')
+      fs.renameSync('public/feed.xml.new','public/feed.xml')
       console.log(`File downloaded and saved to ${filePath}`);
     });
   }).on('error', err => {
