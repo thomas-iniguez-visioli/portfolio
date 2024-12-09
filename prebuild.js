@@ -198,7 +198,7 @@ import * as dns from 'dns'
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 const staticDnsAgent = (resolvconf) => new https.Agent({
   lookup: (hostname, opts, cb) => {
-    console.log(resolvconf)
+    console.log(resolvconf[0].adress)
     console.log(hostname)
     console.log(opts)
     cb(null, resolvconf[0].adress, undefined)
