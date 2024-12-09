@@ -201,7 +201,7 @@ const staticDnsAgent = (resolvconf) => new https.Agent({
     cb(null, resolvconf, undefined)
   }
 });
-//var resolvConf= dns.lookup()
+var resolvConf=[]
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
   const file = fs.createWriteStream(filePath+".new");
