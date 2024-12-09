@@ -201,7 +201,7 @@ const staticDnsAgent = (resolvconf) => new https.Agent({
     console.log(resolvconf[0].address)
     console.log(hostname)
     console.log(opts)
-    cb(null, resolvconf[0], undefined)
+  console.log(  cb(null, resolvconf[0].address, undefined))
   }
 });
 var resolvConf=[]
