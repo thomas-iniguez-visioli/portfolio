@@ -224,5 +224,5 @@ function curlEquivalent(url) {
     console.log(err.message);
   });
 }
-curlEquivalent("https://bonjourlafuite.eu.org/feed.xml")
+curlEquivalent("https://thomas-iniguez-visioli.github.io/nodejs-news-feeder/feed.xml")
 
