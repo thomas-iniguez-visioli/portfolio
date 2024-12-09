@@ -32,3 +32,5 @@ test
 getaddrinfo EAI_AGAIN bonjourlafuite.eu.org
 test
 Invalid IP address: undefined
+test
+Invalid IP address: undefined
