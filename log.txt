@@ -43,3 +43,8 @@ undefined
 bonjourlafuite.eu.org
 { family: undefined, hints: 32 }
 Invalid IP address: undefined
+test
+[ { address: '82.67.8.211', family: 4 } ]
+bonjourlafuite.eu.org
+{ family: undefined, hints: 32 }
+Invalid IP address: [ [Object] ]
