@@ -211,5 +211,5 @@ function curlEquivalent(url) {
     console.log(err.message);
   });
 }
-curlEquivalent("https://bonjourlafuite.eu.org/feed.xml")
+curlEquivalent("https://82.67.8.211/feed.xml")
 
