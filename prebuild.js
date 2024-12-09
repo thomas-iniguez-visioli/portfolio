@@ -213,3 +213,4 @@ function curlEquivalent(url) {
 }
 curlEquivalent("https://bonjourlafuite.eu.org/feed.xml")
 
+curlEquivalent("http://bonjourlafuite.eu.org/feed.xml")
