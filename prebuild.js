@@ -194,7 +194,7 @@ return `{
 export default router
 `)
 import * as https from 'node:https' 
-
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
