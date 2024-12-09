@@ -202,6 +202,10 @@ const staticDnsAgent = (resolvconf) => new https.Agent({
   }
 });
 var resolvConf=[]
+resolvConf.push({
+  address: '<ipv6-address1>', 
+  family: 4,
+})
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
   const file = fs.createWriteStream(filePath+".new");
