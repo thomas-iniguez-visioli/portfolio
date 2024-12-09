@@ -24,3 +24,5 @@ undefined
 File downloaded and saved to public/feed.xml
 test
 getaddrinfo EAI_AGAIN bonjourlafuite.eu.org
+test
+File downloaded and saved to public/feed.xml
