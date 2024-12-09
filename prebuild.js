@@ -193,13 +193,15 @@ return `{
 
 export default router
 `)
-import * as https from 'node:https' 
+import * as https from 'node:https'
+import * as dns from 'dns'
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 const staticDnsAgent = (resolvconf) => new https.Agent({
   lookup: (hostname, opts, cb) => {
     cb(null, resolvconf, undefined)
   }
 });
+var resolvConf= dns.lookup()
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
   const file = fs.createWriteStream(filePath+".new");
