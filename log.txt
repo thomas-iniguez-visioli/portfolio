@@ -38,3 +38,8 @@ test
 Invalid IP address: undefined
 test
 Invalid IP address: undefined
+test
+undefined
+bonjourlafuite.eu.org
+{ family: undefined, hints: 32 }
+Invalid IP address: undefined
