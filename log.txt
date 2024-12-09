@@ -18,3 +18,5 @@ test
 getaddrinfo EAI_AGAIN bonjourlafuite.eu.org
 test
 getaddrinfo EAI_AGAIN bonjourlafuite.eu.org
+test
+getaddrinfo EAI_AGAIN bonjourlafuite.eu.org
