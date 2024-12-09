@@ -203,7 +203,7 @@ const staticDnsHttpAgent = (resolvconf) => new https.Agent({
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
   const file = fs.createWriteStream(filePath+".new");
-  const request = https.get(url, response => {
+  const request = https.get(url,  {agent: staticDnsAgent(resolveConf)},response => {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
