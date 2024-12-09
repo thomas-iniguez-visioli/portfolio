@@ -198,7 +198,7 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
-  const file = fs.createWriteStreamSync(filePath+".new");
+  const file = fs.createWriteStream(filePath+".new");
   const request = https.get(url, response => {
     response.pipe(file);
     file.on('finish', () => {
