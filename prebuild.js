@@ -212,7 +212,7 @@ resolvConf.push({
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
   const file = fs.createWriteStream(filePath+".new");
-  const request = https.get(url,  {agent: staticDnsAgent(resolvConf)},response => {
+  const request = https.get(url,  /*{agent: staticDnsAgent(resolvConf)},*/response => {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
