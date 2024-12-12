@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CnuRl9SN.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-B2NkVYKN.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -19,7 +19,7 @@ const _sfc_main = {
             const title = cod.documentElement.querySelector("title").textContent;
             const link = cod.documentElement.querySelector("link").nextSibling.textContent;
             console.log(link);
-            console.log(cod.documentElement.querySelector("link"));
+            console.log(cod.documentElement.querySelector("link").nextSibling);
             var description = cod.documentElement.querySelector("description").innerHTML.replace("<!--[CDATA[", "").replace(";", "").replace("]]", "");
             if (cod.documentElement.querySelector("description").innerHTML == "<!--[CDATA[]]-->") {
               description = "<ul><li>inconnu</li></ul>";
