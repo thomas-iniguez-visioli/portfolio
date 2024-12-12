@@ -19,7 +19,7 @@ onMounted(() => {
       const parser = new DOMParser()
       const xmlDoc = parser.parseFromString(rssText, 'text/xml')
       const items = xmlDoc.querySelectorAll('item')
-      // console.log(items)
+       console.log(items)
       const rssContent = Array.from(items)
         .map((item, id, ar) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/html')
@@ -27,8 +27,8 @@ onMounted(() => {
           const title = cod.documentElement.querySelector('title').textContent
           //  console.log(title)
           const link = cod.documentElement.querySelector('link').textContent
-          //  console.log(link)
-          console.log()
+            console.log(link)
+          console.log(cod.documentElement.querySelector('link'))
           var description = cod.documentElement
             .querySelector('description')
             .innerHTML.replace('<!--[CDATA[', '')
