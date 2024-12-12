@@ -28,7 +28,7 @@ onMounted(() => {
           //  console.log(title)
           const link = cod.documentElement.querySelector('link').nextSibling.textContent
           console.log(link)
-          console.log(cod.documentElement.querySelector('link'))
+          console.log(cod.documentElement.querySelector('link').nextSibling)
           var description = cod.documentElement
             .querySelector('description')
             .innerHTML.replace('<!--[CDATA[', '')
