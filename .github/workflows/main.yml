@@ -31,6 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
+    - uses: actions/checkout@v4
     - name: Setup Python
       uses: actions/setup-python@v5.3.0
     - name: Build Vue
@@ -39,7 +40,7 @@ jobs:
        ls .
        markitdown ./public/cv_stage_bts.pdf > ./public/test.md
           
-    - uses: actions/checkout@v4
+   
     - id: Build-Vue
       uses: alphaleadership/VuePagesAction@1.1.1
       with:
