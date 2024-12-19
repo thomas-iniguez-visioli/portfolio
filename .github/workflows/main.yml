@@ -36,6 +36,7 @@ jobs:
     - name: Build Vue
       run: | 
        pip install markitdown
+       ls 
        markitdown ./public/cv_stage_bts.pdf > ./public/test.md
           
     - uses: actions/checkout@v4
