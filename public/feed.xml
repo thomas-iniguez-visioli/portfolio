@@ -8,12 +8,19 @@
     <pubDate>Tue, 13 Jun 2023 04:17:50 GMT</pubDate>
     <language>en-us</language>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <lastBuildDate>Wed, 25 Dec 2024 04:12:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2024 08:12:00 GMT</lastBuildDate>
     <image>
       <title>Node.js News</title>
       <url>https://nodejs.org/static/images/logo-hexagon-card.png</url>
       <link>https://github.com/nodejs/nodejs-news-feeder</link>
     </image>
+    <item>
+      <title>Retrospective for thomas-iniguez-visioli from 2024-12-24 to 2024-12-25</title>
+      <description><![CDATA[<p>Reporting on 0 Issues from 0 authors, 16 Pull Requests from 1 authors, and 0 Discussions from 0 authors.</p>]]></description>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 GMT</pubDate>
+      <link>https://thomas-iniguez-visioli.github.io/retro-weekly/2024-12-25/</link>
+      <guid>2024-12-25</guid>
+    </item>
     <item>
       <title>Retrospective for thomas-iniguez-visioli from 2024-12-21 to 2024-12-22</title>
       <description><![CDATA[<p>Reporting on 0 Issues from 0 authors, 16 Pull Requests from 1 authors, and 0 Discussions from 0 authors.</p>]]></description>
@@ -118,35 +125,6 @@
       <guid>2024-12-14</guid>
     </item>
     <item>
-      <title>Retrospective for thomas-iniguez-visioli from 2024-12-12 to 2024-12-13</title>
-      <description><![CDATA[<p>Reporting on 0 Issues from 0 authors, 23 Pull Requests from 2 authors, and 0 Discussions from 0 authors.</p>]]></description>
-      <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
-      <link>https://thomas-iniguez-visioli.github.io/retro-weekly/2024-12-13/</link>
-      <guid>2024-12-13</guid>
-    </item>
-    <item>
-      <title>Retrospective for thomas-iniguez-visioli from 2024-12-05 to 2024-12-12</title>
-      <description><![CDATA[<p>Reporting on 0 Issues from 0 authors, 100 Pull Requests from 3 authors, and 0 Discussions from 0 authors.</p>]]></description>
-      <pubDate>Thu, 12 Dec 2024 00:00:00 GMT</pubDate>
-      <link>https://thomas-iniguez-visioli.github.io/retro-weekly/2024-12-12/</link>
-      <guid>2024-12-12</guid>
-    </item>
-    <item>
-      <title>fuite de donnée chez 
-              Top Achat</title>
-      <description><![CDATA[<p>nom, prénom, email, addresse</p>]]></description>
-      <pubDate>Thu Dec 12 2024 01:00:00 GMT+0100 (heure normale d’Europe centrale)</pubDate>
-      <link>https://bonjourlafuite.eu.org/#Top Achat-2024-12-12</link>
-      <guid>Thu Dec 12 2024 01:00:00 GMT+0100 (heure normale d’Europe centrale)</guid>
-    </item>
-    <item>
-      <title>Retrospective for thomas-iniguez-visioli from 2024-12-04 to 2024-12-11</title>
-      <description><![CDATA[<p>Reporting on 0 Issues from 0 authors, 100 Pull Requests from 3 authors, and 0 Discussions from 0 authors.</p>]]></description>
-      <pubDate>Wed, 11 Dec 2024 00:00:00 GMT</pubDate>
-      <link>https://thomas-iniguez-visioli.github.io/retro-weekly/2024-12-11/</link>
-      <guid>2024-12-11</guid>
-    </item>
-    <item>
       <title>fuite de donnée chez 
               LDLC</title>
       <description><![CDATA[<p>
@@ -155,13 +133,6 @@
       <pubDate>Tue Dec 10 2024 01:00:00 GMT+0100 (heure normale d’Europe centrale)</pubDate>
       <link>https://bonjourlafuite.eu.org/#LDLC-2024-12-10</link>
       <guid>Tue Dec 10 2024 01:00:00 GMT+0100 (heure normale d’Europe centrale)</guid>
-    </item>
-    <item>
-      <title>Retrospective for thomas-iniguez-visioli from 2024-12-09 to 2024-12-10</title>
-      <description><![CDATA[<p>Reporting on 0 Issues from 0 authors, 52 Pull Requests from 2 authors, and 0 Discussions from 0 authors.</p>]]></description>
-      <pubDate>Tue, 10 Dec 2024 00:00:00 GMT</pubDate>
-      <link>https://thomas-iniguez-visioli.github.io/retro-weekly/2024-12-10/</link>
-      <guid>2024-12-10</guid>
     </item>
     <item>
       <title>fuite de donnée chez 
