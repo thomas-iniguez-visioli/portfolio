@@ -12,13 +12,13 @@
     "format": "prettier --write src/ docs/"
   },
   "dependencies": {
+    "dompurify": "^3.2.2",
+    "he": "^1.2.0",
     "pinia": "^2.1.7",
     "portfolio": "file:../portfolio",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3",
-    "vue-rss-feed": "^0.2.4",
-    "dompurify": "^3.2.2",
-    "he": "^1.2.0"
+    "vue-rss-feed": "^0.2.4"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
@@ -30,6 +30,7 @@
     "jsdom": "^24.1.0",
     "prettier": "^3.2.5",
     "vite": "^5.3.1",
+    "vite-vue-md": "^1.4.0",
     "vitest": "^1.6.0",
     "vue-logger-plugin": "2.2.3"
   }
