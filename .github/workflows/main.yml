@@ -32,6 +32,15 @@ jobs:
     name: Build Vue
     steps:
     - uses: actions/checkout@v4
+    - name: Setup Python
+      uses: actions/setup-python@v5.3.0
+    - name: Build Vue
+      run: | 
+       pip install git+https://github.com/microsoft/markitdown.git
+       ls .
+       markitdown ./public/cv_stage_bts.pdf > ./public/test.md
+          
+   
     - id: Build-Vue
       uses: alphaleadership/VuePagesAction@1.1.1
       with:

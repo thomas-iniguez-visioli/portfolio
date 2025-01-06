@@ -193,23 +193,36 @@ return `{
 
 export default router
 `)
-import * as https from 'node:https' 
-
-
+import * as https from 'node:https'
+import * as dns from 'dns'
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+const staticDnsAgent = (resolvconf) => new https.Agent({
+  lookup: (hostname, opts, cb) => {
+    console.log(resolvconf[0].address)
+    console.log(hostname)
+    console.log(opts)
+  console.log(  cb(null, resolvconf[0].address, resolvconf[0].family))
+  }
+});
+var resolvConf=[]
+resolvConf.push({
+  address: '82.67.8.211', 
+  family: 4,
+})
 function curlEquivalent(url) {
   const filePath = `public/${url.split('/').pop()}`;
   const file = fs.createWriteStream(filePath+".new");
-  const request = https.get(url, response => {
+  const request = https.get(url,  /*{agent: staticDnsAgent(resolvConf)},*/response => {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
-      fs.rename('public/feed.xml.new','public/feed.xml')
+      fs.renameSync('public/feed.xml.new','public/feed.xml')
       console.log(`File downloaded and saved to ${filePath}`);
     });
   }).on('error', err => {
    //fs.unlinkSync(filePath);
-    console.error(err.message);
+    console.log(err.message);
   });
 }
-curlEquivalent("https://bonjourlafuite.eu.org/feed.xml")
+curlEquivalent("https://thomas-iniguez-visioli.github.io/nodejs-news-feeder/feed.xml")
 
