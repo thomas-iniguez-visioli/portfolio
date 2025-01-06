@@ -1,19 +1,19 @@
 # Thomas Iniguez
 
-| ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg) | **FORMATION**                                    |
+| ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg) | **CENTRES D’INTÉRETS**                                    |
 | ------------------------------------------------------------------------------- | ------------------------------------------------ |
 |                                                                                 | - Lecture                                        |
 | **STAGE D’OBSERVATION**                                                         | - Informatique et intelligence artificielle      |
 | Découverte des différents métiers de l’entreprise :                             | - Histoire, principalement la 2ᵉ Guerre mondiale |
 | - Commercial                                                                    |                                                  |
-| - Comptabilité                                                                  |                                                  |
+| - Comptabilité                                                                  | ------------------------------------------------ |
 | - PAO                                                                           | **CENTRES D’INTÉRETS**                           |
 | - Conception                                                                    | - RECHERCHE                                      |
 | - Logistique...                                                                 | - STAGE RÉSEAU                                   |
-| **Publigraphic - Pont l’Abbé**                                                  | - BTS SIO                                        |
+| *Publigraphic - Pont l’Abbé*                                                    | - BTS SIO                                        |
 | Stage de 3ᵉ                                                                     |                                                  |
 
-| **EXPÉRIENCE PROFESSIONNELLE**                    | **PROFIL PERSONNEL**                                                    |
+| **formation**                    | **PROFIL PERSONNEL**                                                    |
 | ------------------------------------------------- | ----------------------------------------------------------------------- |
 | **LYCÉE YVES THÉPOT - QUIMPER**                   | - Divers : Linux, Windows, C#, Node.js, Python, SQL, HTML, CSS, JS, PHP |
 | Participe aux Olympiades de l’ingénieur en équipe | - Logiciels : Visual Studio Code, Node.js, OpenOffice                   |
