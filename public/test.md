@@ -1,4 +1,4 @@
-# Thomas Iniguez
+
 
 | ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg) | **CENTRES D’INTÉRETS**                                    |
 | ------------------------------------------------------------------------------- | ------------------------------------------------ |
@@ -12,7 +12,6 @@
 | - Logistique...                                                                 | - STAGE RÉSEAU                                   |
 | *Publigraphic - Pont l’Abbé*                                                    | - BTS SIO                                        |
 | Stage de 3ᵉ                                                                     |                                                  |
-
 | **formation**                    | **PROFIL PERSONNEL**                                                    |
 | ------------------------------------------------- | ----------------------------------------------------------------------- |
 | **LYCÉE YVES THÉPOT - QUIMPER**                   | - Divers : Linux, Windows, C#, Node.js, Python, SQL, HTML, CSS, JS, PHP |
@@ -21,7 +20,6 @@
 |                                                   | - Test et débogage de logiciels                                         |
 | **COLLÈGE PAUL LANGEVIN - GUILVINEC**             |                                                                         |
 | 2020 - Brevet des Collèges                        |                                                                         |
-
 | **COORDONNÉES**                     | **MES ATOUTS**               |
 | ----------------------------------- | ---------------------------- |
 | 1, allée James Bargain              | - Communication              |
@@ -31,7 +29,6 @@
 | **Mobilité :** transports en commun | - Sérieux                    |
 |                                     | - Maîtrise de l’informatique |
 |                                     | - Force de proposition       |
-
 | **DOMAINE D’EXPERTISE** | **LYCÉE CHAPTAL - QUIMPER**                                                         |
 | ----------------------- | ----------------------------------------------------------------------------------- |
 |                         | 2024 - BTS SIO SISR - en cours                                                      |
