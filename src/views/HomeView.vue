@@ -4,7 +4,7 @@ import TheWelcome from '../components/projet.vue'
 
 <template>
   <main>
-    bien le bonjour voici mes différent projet
+    Bien le bonjour voici mes différents projets
     <TheWelcome />
   </main>
 </template>
