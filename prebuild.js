@@ -156,7 +156,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component:() => import('../views/HomeView.vue')
-    }{
+    },{
       path: '/test',
       name: 'temp',
       component:() => import('../views/cv.md')
