@@ -2,12 +2,14 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
+ import vueMd from 'vite-vue-md'
 // https://vitejs.dev/config/
 export default defineConfig({
     base:"/portfolio",
   plugins: [
-    vue(),
+    vue({
+             include: [/\.vue$/, /\.md$/] // ← Treat MD files as Vue components
+          }),vueMd()
   ],configureWebpack:{
     mode: 'development',
     devtool: true,
