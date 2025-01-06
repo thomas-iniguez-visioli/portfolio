@@ -5,7 +5,7 @@
     </div>
   </main>
 </template>
-<script setup>/*
+<script setup>
 import { onMounted } from 'vue'
 onMounted(() => {
   async function fetchRSSFeed(url) {
@@ -50,7 +50,7 @@ onMounted(() => {
   // Example RSS feed URL
   const rssUrl = 'https://thomas-iniguez-visioli.github.io/portfolio/feed.xml'
   fetchRSSFeed(rssUrl)
-})*/
+})
 </script>
 <style>
 @media (min-width: 1024px) {
