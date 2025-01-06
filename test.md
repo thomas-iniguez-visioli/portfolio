@@ -1,10 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parser Markdown en Deux Colonnes</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="markdown-content"></div>
+
+<script>
+    const markdown = `
 # Thomas Iniguez
 
-<div style="display: flex;">
-
-<div style="flex: 1; padding-right: 10px;">
-  
 ![Thomas Iniguez](image_url)
+
+<div class="columns">
+<div class="column">
 
 ### FORMATION
 - Lecture
@@ -28,8 +55,7 @@ Découverte des différents métiers de l’entreprise :
 Stage de 3ᵉ
 
 </div>
-
-<div style="flex: 1; padding-left: 10px;">
+<div class="column">
 
 ### EXPÉRIENCE PROFESSIONNELLE
 **LYCÉE YVES THÉPOT - QUIMPER**  
@@ -68,5 +94,12 @@ thomas.iniguez@free.fr
 Anime une conférence sur l’IA à la maison pour tous dans le cadre du Pixel Festival
 
 </div>
-
 </div>
+    `;
+
+    document.getElementById('markdown-content').innerHTML = marked(markdown);
+</script>
+
+</body>
+</html>
+
