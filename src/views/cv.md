@@ -1,6 +1,6 @@
 # Thomas Iniguez
 
-| ![Thomas Iniguez](image_url)                                           | **FORMATION**                                                         |
+| ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg)                                           | **FORMATION**                                                         |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------|
 |                                                                        | - Lecture                                                              |
 | **STAGE D’OBSERVATION**                                                | - Informatique et intelligence artificielle                            |
