@@ -1,16 +1,16 @@
 
 
-| ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg) | **CENTRES D’INTÉRETS**                                    |
+| ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg) |  RECHERCHE   STAGE RÉSEAU   BTS SIO                              |
 | ------------------------------------------------------------------------------- | ------------------------------------------------ |
-|                                                                                 | - Lecture                                        |
+|                                                                                 | **CENTRES D’INTÉRETS**                                      |
 | **STAGE D’OBSERVATION**                                                         | - Informatique et intelligence artificielle      |
 | Découverte des différents métiers de l’entreprise :                             | - Histoire, principalement la 2ᵉ Guerre mondiale |
-| - Commercial                                                                    |                                                  |
+| - Commercial                                                                    |  -lecture                                                |
 | - Comptabilité                                                                  | ------------------------------------------------ |
-| - PAO                                                                           | **CENTRES D’INTÉRETS**                           |
-| - Conception                                                                    | - RECHERCHE                                      |
-| - Logistique...                                                                 | - STAGE RÉSEAU                                   |
-| *Publigraphic - Pont l’Abbé*                                                    | - BTS SIO                                        |
+| - PAO                                                                           |                           |
+| - Conception                                                                    |                                        |
+| - Logistique...                                                                 |                                    |
+| *Publigraphic - Pont l’Abbé*                                                    |                                         |
 | Stage de 3ᵉ                                                                     |                                                  |
 | **formation**                    | **PROFIL PERSONNEL**                                                    |
 | ------------------------------------------------- | ----------------------------------------------------------------------- |
