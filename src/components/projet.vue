@@ -30,6 +30,14 @@
         <template #heading>uptime</template>
     
        
+      </WelcomeItem>,<p></p><p></p>
+      <WelcomeItem>
+        <template #icon>
+          <DocumentationIcon />
+        </template>
+        <template #heading>youtube</template>
+    
+       
       </WelcomeItem>
       
       

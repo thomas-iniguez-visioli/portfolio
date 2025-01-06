@@ -55,6 +55,14 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
       props:()=>{return {name:gen("uptime",'projet')}}
+    },{
+      path: '/projet/youtube',
+      name: 'projet-youtube',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:()=>{return {name:gen("youtube",'projet')}}
     },
 {
       path: '/situation/tp',
