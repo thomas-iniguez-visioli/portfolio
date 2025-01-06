@@ -1,6 +1,6 @@
 
 
-| ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg) |  RECHERCHE   STAGE RÉSEAU   BTS SIO                              |
+| ![Thomas Iniguez](https://thomas-iniguez-visioli.github.io/portfolio/photo.jpg) | *RECHERCHE   STAGE RÉSEAU   BTS SIO*                            |
 | ------------------------------------------------------------------------------- | ------------------------------------------------ |
 |                                                                                 | **CENTRES D’INTÉRETS**                                      |
 | **STAGE D’OBSERVATION**                                                         | - Informatique et intelligence artificielle      |
