@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-Cm9EJK43.js","assets/IconDocumentation-mjKW8Adm.js","assets/HomeView-CaNXXK5g.css","assets/situation-DKtmtrZe.js","assets/situation-DNpq39rx.css","assets/suiviView-DxWBqM1A.js","assets/suiviView-DNtNIo95.css","assets/AboutView-CsOXq5Tz.js","assets/projectView-CIUlEz3B.js","assets/projectView-BmFxIURO.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-BWurAj26.js","assets/IconDocumentation-C6qG7-Dx.js","assets/HomeView-CaNXXK5g.css","assets/situation-BxV7nlsk.js","assets/situation-DNpq39rx.css","assets/suiviView-CH1iK6Yq.js","assets/suiviView-DNtNIo95.css","assets/AboutView-A9D28s1V.js","assets/projectView-D0cf9k2o.js","assets/projectView-BmFxIURO.css"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -436,7 +436,7 @@ class ReactiveEffect {
   }
   resume() {
     if (this.flags & 64) {
-      this.flags &= ~64;
+      this.flags &= -65;
       if (pausedQueueEffects.has(this)) {
         pausedQueueEffects.delete(this);
         this.trigger();
@@ -471,7 +471,7 @@ class ReactiveEffect {
       cleanupDeps(this);
       activeSub = prevEffect;
       shouldTrack = prevShouldTrack;
-      this.flags &= ~2;
+      this.flags &= -3;
     }
   }
   stop() {
@@ -482,7 +482,7 @@ class ReactiveEffect {
       this.deps = this.depsTail = void 0;
       cleanupEffect(this);
       this.onStop && this.onStop();
-      this.flags &= ~1;
+      this.flags &= -2;
     }
   }
   trigger() {
@@ -532,7 +532,7 @@ function endBatch() {
     while (e) {
       const next = e.next;
       e.next = void 0;
-      e.flags &= ~8;
+      e.flags &= -9;
       e = next;
     }
   }
@@ -543,7 +543,7 @@ function endBatch() {
     while (e) {
       const next = e.next;
       e.next = void 0;
-      e.flags &= ~8;
+      e.flags &= -9;
       if (e.flags & 1) {
         try {
           ;
@@ -599,7 +599,7 @@ function refreshComputed(computed2) {
   if (computed2.flags & 4 && !(computed2.flags & 16)) {
     return;
   }
-  computed2.flags &= ~16;
+  computed2.flags &= -17;
   if (computed2.globalVersion === globalVersion) {
     return;
   }
@@ -607,7 +607,7 @@ function refreshComputed(computed2) {
   const dep = computed2.dep;
   computed2.flags |= 2;
   if (dep.version > 0 && !computed2.isSSR && computed2.deps && !isDirty(computed2)) {
-    computed2.flags &= ~2;
+    computed2.flags &= -3;
     return;
   }
   const prevSub = activeSub;
@@ -628,7 +628,7 @@ function refreshComputed(computed2) {
     activeSub = prevSub;
     shouldTrack = prevShouldTrack;
     cleanupDeps(computed2);
-    computed2.flags &= ~2;
+    computed2.flags &= -3;
   }
 }
 function removeSub(link, soft = false) {
@@ -644,7 +644,7 @@ function removeSub(link, soft = false) {
   if (dep.subs === link) {
     dep.subs = prevSub;
     if (!prevSub && dep.computed) {
-      dep.computed.flags &= ~4;
+      dep.computed.flags &= -5;
       for (let l = dep.computed.deps; l; l = l.nextDep) {
         removeSub(l, true);
       }
@@ -2228,11 +2228,11 @@ function flushPreFlushCbs(instance, seen2, i = flushIndex + 1) {
       queue.splice(i, 1);
       i--;
       if (cb.flags & 4) {
-        cb.flags &= ~1;
+        cb.flags &= -2;
       }
       cb();
       if (!(cb.flags & 4)) {
-        cb.flags &= ~1;
+        cb.flags &= -2;
       }
     }
   }
@@ -2251,10 +2251,10 @@ function flushPostFlushCbs(seen2) {
     for (postFlushIndex = 0; postFlushIndex < activePostFlushCbs.length; postFlushIndex++) {
       const cb = activePostFlushCbs[postFlushIndex];
       if (cb.flags & 4) {
-        cb.flags &= ~1;
+        cb.flags &= -2;
       }
       if (!(cb.flags & 8)) cb();
-      cb.flags &= ~1;
+      cb.flags &= -2;
     }
     activePostFlushCbs = null;
     postFlushIndex = 0;
@@ -2284,7 +2284,7 @@ function flushJobs(seen2) {
     for (; flushIndex < queue.length; flushIndex++) {
       const job = queue[flushIndex];
       if (job) {
-        job.flags &= ~1;
+        job.flags &= -2;
       }
     }
     flushIndex = -1;
@@ -4094,7 +4094,7 @@ const KeepAliveImpl = {
       );
       const { include, exclude, max } = props;
       if (include && (!name || !matches(include, name)) || exclude && name && matches(exclude, name)) {
-        vnode.shapeFlag &= ~256;
+        vnode.shapeFlag &= -257;
         current = vnode;
         return rawVNode;
       }
@@ -4181,8 +4181,8 @@ function injectToKeepAliveRoot(hook, type, target, keepAliveRoot) {
   }, target);
 }
 function resetShapeFlag(vnode) {
-  vnode.shapeFlag &= ~256;
-  vnode.shapeFlag &= ~512;
+  vnode.shapeFlag &= -257;
+  vnode.shapeFlag &= -513;
 }
 function getInnerChild(vnode) {
   return vnode.shapeFlag & 128 ? vnode.ssContent : vnode;
@@ -6742,8 +6742,8 @@ function toggleRecurse({ effect: effect2, job }, allowed) {
     effect2.flags |= 32;
     job.flags |= 4;
   } else {
-    effect2.flags &= ~32;
-    job.flags &= ~4;
+    effect2.flags &= -33;
+    job.flags &= -5;
   }
 }
 function needTransition(parentSuspense, transition) {
@@ -10437,7 +10437,6 @@ const vue_runtime_esmBundler = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Obj
   withModifiers,
   withScopeId
 }, Symbol.toStringTag, { value: "Module" }));
-var isVue2 = false;
 /*!
  * pinia v2.3.0
  * (c) 2024 Eduardo San Martin Morote
@@ -10469,7 +10468,7 @@ function createPinia() {
       }
     },
     use(plugin) {
-      if (!this._a && !isVue2) {
+      if (!this._a && true) {
         toBeInstalled.push(plugin);
       } else {
         _p.push(plugin);
@@ -12399,7 +12398,6 @@ const require$$0 = /* @__PURE__ */ getAugmentedNamespace(vue_runtime_esmBundler)
 Object.defineProperty(logger$1, "__esModule", { value: true });
 logger$1.useLogger = logger$1.createLogger = logger$1.VueLogger = void 0;
 const vue_1 = require$$0;
-const isProduction = true;
 const loggerSymbol = Symbol("vue-logger-plugin");
 const levels = ["debug", "info", "warn", "error", "log"];
 const defaultOptions = {
@@ -12526,9 +12524,6 @@ function createLogger(options = {}) {
 logger$1.createLogger = createLogger;
 function useLogger() {
   const logger2 = vue_1.inject(loggerSymbol);
-  if (!logger2 && !isProduction) {
-    console.warn("vue-logger-plugin :: useLogger missing inject");
-  }
   return logger2;
 }
 logger$1.useLogger = useLogger;
@@ -12713,17 +12708,17 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-Cm9EJK43.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-BWurAj26.js"), true ? __vite__mapDeps([0,1,2]) : void 0)
     },
     {
       path: "/test",
       name: "temp",
-      component: () => __vitePreload(() => import("./cv-JoRf_wIS.js"), true ? [] : void 0)
+      component: () => __vitePreload(() => import("./cv-I7TZOqLU.js"), true ? [] : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-DKtmtrZe.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
+      component: () => __vitePreload(() => import("./situation-BxV7nlsk.js"), true ? __vite__mapDeps([3,1,4]) : void 0)
     },
     {
       path: "/suivi",
@@ -12731,7 +12726,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./suiviView-DxWBqM1A.js"), true ? __vite__mapDeps([5,6]) : void 0)
+      component: () => __vitePreload(() => import("./suiviView-CH1iK6Yq.js"), true ? __vite__mapDeps([5,6]) : void 0)
     },
     {
       path: "/cv",
@@ -12739,7 +12734,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-CsOXq5Tz.js"), true ? __vite__mapDeps([7,6]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-A9D28s1V.js"), true ? __vite__mapDeps([7,6]) : void 0)
     },
     {
       path: "/projet/RGPD",
@@ -12747,7 +12742,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CIUlEz3B.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D0cf9k2o.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("RGPD", "projet") };
       }
@@ -12758,7 +12753,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CIUlEz3B.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D0cf9k2o.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("france-nuit", "projet") };
       }
@@ -12769,7 +12764,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CIUlEz3B.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D0cf9k2o.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("uptime", "projet") };
       }
@@ -12780,7 +12775,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CIUlEz3B.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D0cf9k2o.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("youtube", "projet") };
       }
@@ -12791,7 +12786,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CIUlEz3B.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D0cf9k2o.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("tp", "situation") };
       }
@@ -12802,7 +12797,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-CIUlEz3B.js"), true ? __vite__mapDeps([8,9]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-D0cf9k2o.js"), true ? __vite__mapDeps([8,9]) : void 0),
       props: () => {
         return { name: gen("tp1", "situation") };
       }

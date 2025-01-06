@@ -1,104 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parser Markdown en Deux Colonnes</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="viewport" content="width=210mm, height=297mm, initial-scale=1.0">
+    <title>CV Thomas Iniguez</title>
     <style>
-        .columns {
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
         }
         .column {
-            flex: 1;
-            padding: 10px;
+            width: 48%;
+            padding: 1%;
+            box-sizing: border-box;
         }
-        img {
-            max-width: 100%;
+        .column:first-child {
+            border-right: 2px solid #ddd;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .contact-info, .education, .experience, .skills, .interests, .strengths, .projects {
+            padding: 10px 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .profile-img {
+            width: 100%;
+            max-width: 150px;
             height: auto;
+            display: block;
+            margin: 0 auto 20px;
         }
     </style>
 </head>
 <body>
 
-<div id="markdown-content"></div>
+<div class="container">
+    <div class="column">
+        <h1>Thomas Iniguez</h1>
+        <img src="photo.jpg" alt="Photo de Thomas Iniguez" class="profile-img">
+      
+        
+        <div class="section contact-info">
+            <h2>Coordonnées</h2>
+            <p>1, allée James Bargain, 29000 Quimper</p>
+            <p>07.66.76.92.01</p>
+            <p>thomas.iniguez@free.fr</p>
+            <p>Mobilité : transports en commun</p>
+        </div>
 
-<script>
-    const markdown = `
-# Thomas Iniguez
+        <div class="section education">
+            <h2>Formation</h2>
+            <p>2024 - Baccalauréat STI2D option SIN Mention Bien, Lycée Yves Thépot, Quimper</p>
+            <p>2020 - Brevet des Collèges, Collège Paul Langevin, Guilvinec</p>
+            <p>2024 - BTS SIO SISR (en cours), Lycée Chaptal, Quimper</p>
+        </div>
 
-![Thomas Iniguez](image_url)
+        <div class="section skills">
+            <h2>Compétences Acquises</h2>
+            <p>Technologies : Linux, Windows, C#, Node.js, Python, SQL, HTML, CSS, JS, PHP</p>
+            <p>Logiciels : Visual Studio Code, Node.js, Open Office</p>
+            <p>Compétences : Modélisation de bases de données, Test et débogage de logiciels</p>
+        </div>
+    </div>
 
-<div class="columns">
-<div class="column">
+    <div class="column">
+        <h1><strong>Recherche de Stage BTS SIO SISR</strong></h1>
+        <div class="section experience">
+            <h2>Expérience Professionnelle</h2>
+            <p>Stage d’observation chez Publigraphic, Pont l’Abbé - Découverte des métiers : Commercial, Comptabilité, PAO, Conception, Logistique...</p>
+            <p>Participation aux Olympiades de l’ingénieur en équipe, Lycée Yves Thépot, Quimper</p>
+            <p>Animation d’une conférence sur l’IA à la maison pour tous dans le cadre du Pixel Festival</p>
+        </div>
 
-### FORMATION
-- Lecture
-- Informatique et intelligence artificielle
-- Histoire, principalement la 2ᵉ Guerre mondiale
+        <div class="section projects">
+            <h2>Projets Personnels</h2>
+            <p id="site-web">site web</p>
+            <p id="portfolio">portfolio</p>
+            <p id="application">application</p>
+            <script>
+                const links = [
+                    { id: "site-web", href: "https://france-nuit.github.io/article/" },
+                    { id: "portfolio", href: "https://thomas-iniguez-visioli.github.io/portfolio/" },
+                    { id: "application", href: "application" }
+                ];
 
-### CENTRES D’INTÉRETS
-- RECHERCHE
-- STAGE RÉSEAU
-- BTS SIO
+                links.forEach(link => {
+                    const element = document.getElementById(link.id);
+                    element.innerHTML = `<a href="${link.href}">${link.id.replace("-", " ")}</a> (${link.href})`;
+                });
+            </script>
+        </div>
 
-### STAGE D’OBSERVATION
-Découverte des différents métiers de l’entreprise :
-- Commercial
-- Comptabilité
-- PAO
-- Conception
-- Logistique...
+        <div class="section interests">
+            <h2>Centres d’intérêts</h2>
+            <p>Lecture</br> Informatique et intelligence artificielle</br> Histoire (2ème Guerre mondiale)</p>
+        </div>
 
-**Publigraphic - Pont l’Abbé**  
-Stage de 3ᵉ
-
+        <div class="section strengths">
+            <h2>Mes Atouts</h2>
+            <p>Communication, Sens du relationnel, Capacité d’adaptation, Ponctualité, Sérieux, Maîtrise de l’informatique, Force de proposition</p>
+        </div>
+    </div>
 </div>
-<div class="column">
-
-### EXPÉRIENCE PROFESSIONNELLE
-**LYCÉE YVES THÉPOT - QUIMPER**  
-Participe aux Olympiades de l’ingénieur en équipe  
-2024 - Baccalauréat STI2D option SIN Mention Bien
-
-**COLLÈGE PAUL LANGEVIN - GUILVINEC**  
-2020 - Brevet des Collèges
-
-### PROFIL PERSONNEL
-- Divers : Linux, Windows, C#, Node.js, Python, SQL, HTML, CSS, JS, PHP
-- Logiciels : Visual Studio Code, Node.js, OpenOffice
-- Modélisation de bases de données
-- Test et débogage de logiciels
-
-### COORDONNÉES
-1, allée James Bargain  
-29000 Quimper  
-07.66.76.92.01  
-thomas.iniguez@free.fr  
-
-**Mobilité :** transports en commun
-
-### MES ATOUTS
-- Communication
-- Sens du relationnel
-- Capacité d’adaptation
-- Ponctuel
-- Sérieux
-- Maîtrise de l’informatique
-- Force de proposition
-
-### DOMAINE D’EXPERTISE
-**LYCÉE CHAPTAL - QUIMPER**  
-2024 - BTS SIO SISR - en cours  
-Anime une conférence sur l’IA à la maison pour tous dans le cadre du Pixel Festival
-
-</div>
- document.getElementById('markdown-content').innerHTML=JSON.stringify(marked,null,2)
-    document.getElementById('markdown-content').innerHTML = marked(markdown);
-</script>
 
 </body>
 </html>
-
