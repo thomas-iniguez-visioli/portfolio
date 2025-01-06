@@ -1,2 +1,2 @@
-<h1>un outil pour regardée youtube sans pub </h1>
+<h1>un outil pour regarder youtube sans pub </h1>
 <a href="https://github.com/alphaleadership/youtube-public/releases/latest">[download]</a>

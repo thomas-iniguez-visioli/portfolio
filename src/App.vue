@@ -15,12 +15,12 @@ const log = c.default.setup()
     <img alt="Vue logo" class="logo" src="/photo.jpg" width="125" height="auto" />
 
     <div class="wrapper">
-      <HelloWorld msg="thomas iniguez visioli" />
+      <HelloWorld msg="Thomas Iniguez Visioli" />
 
       <nav>
         <RouterLink to="/">accueil</RouterLink>
         <RouterLink to="/cv">cv</RouterLink>
-        <RouterLink to="/situation">situation professionelle</RouterLink>
+        <RouterLink to="/situation">Situation Professionnelle</RouterLink>
       </nav>
       <RouterLink to="/suivi">veille</RouterLink>
     </div>
