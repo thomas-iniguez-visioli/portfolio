@@ -4,7 +4,8 @@ import TheWelcome from '../components/situation.vue'
 
 <template>
   <main>
-    bien le bonjour voici les différentes situations professionnelles dans lesquelles je me suis trouvé
+    bien le bonjour voici les différentes situations professionnelles dans lesquelles je me suis
+    trouvé
     <TheWelcome />
   </main>
 </template>
