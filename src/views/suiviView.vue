@@ -5,7 +5,7 @@
     </div>
   </main>
 </template>
-<script setup>
+<script setup>/*
 import { onMounted } from 'vue'
 onMounted(() => {
   async function fetchRSSFeed(url) {
@@ -24,7 +24,7 @@ onMounted(() => {
         .map((item, id, ar) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/html')
           //  console.log(cod.documentElement.querySelector)
-          const title = cod.documentElement.querySelector('title').textContent
+          const title = "test"//cod.documentElement.querySelector('title').textContent
           //  console.log(title)
           const link = cod.documentElement.querySelector('link').nextSibling.textContent
           console.log(link)
@@ -50,7 +50,7 @@ onMounted(() => {
   // Example RSS feed URL
   const rssUrl = 'https://thomas-iniguez-visioli.github.io/portfolio/feed.xml'
   fetchRSSFeed(rssUrl)
-})
+})*/
 </script>
 <style>
 @media (min-width: 1024px) {
