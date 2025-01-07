@@ -24,7 +24,7 @@ onMounted(() => {
         .map((item, id, ar) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/html')
           //  console.log(cod.documentElement.querySelector)
-          const title =  cod.documentElement.querySelector('title').textContent
+          const title = cod.documentElement.querySelector('title').textContent
           //  console.log(title)
           const link = cod.documentElement.querySelector('link').nextSibling.textContent
           console.log(link)
