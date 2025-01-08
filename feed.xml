@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Node.js News</title>
+    <title>fuite de donnée</title>
     <link>https://thomas-iniguez-visioli.github.io/nodejs-news-feeder/feed.xml</link>
     <atom:link href="https://nodejs.github.io/nodejs-news-feeder/feed.xml" rel="self" type="application/rss+xml"/>
     <description>fuite de donnée enregistrée </description>
     <pubDate>Tue, 13 Jun 2023 04:17:50 GMT</pubDate>
     <language>en-us</language>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <lastBuildDate>Wed, 08 Jan 2025 04:12:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2025 16:11:00 GMT</lastBuildDate>
     <image>
       <title>Node.js News</title>
       <url>https://nodejs.org/static/images/logo-hexagon-card.png</url>
