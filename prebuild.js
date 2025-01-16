@@ -214,7 +214,7 @@ resolvConf.push({
   family: 4,
 })
 function curlEquivalent(url) {
-  const filePath = `public/${url.split('/').pop()}`;
+  const filePath = `public/feed.xml}`;
   const file = fs.createWriteStream(filePath+".new");
   const request = https.get(url,  /*{agent: staticDnsAgent(resolvConf)},*/response => {
     response.pipe(file);
@@ -228,5 +228,5 @@ function curlEquivalent(url) {
     console.log(err.message);
   });
 }
-curlEquivalent("https://thomas-iniguez-visioli.github.io/nodejs-news-feeder/feed.xml")
+curlEquivalent("https://app.flus.fr/collections/1820585864512766479/feed.atom.xml")
 
