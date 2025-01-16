@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-YFtn8Tyn.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CWaAY3ub.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -7,6 +7,7 @@ const _sfc_main = {
         try {
           const response = await fetch(url, { mode: "no-cors" });
           if (!response.ok) {
+            console.log(response);
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           const rssText = await response.text();
