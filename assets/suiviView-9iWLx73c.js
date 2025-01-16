@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-ggjdJtJs.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-C3BW61ht.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -23,7 +23,7 @@ const _sfc_main = {
             if (cod.documentElement.querySelector("content").innerHTML == "<!--[CDATA[]]-->") {
               description = "<ul><li>inconnu</li></ul>";
             }
-            d.map((item2) => {
+            d.forEach((item2) => {
               description = description.replace(
                 `<!--[CDATA[
                 
