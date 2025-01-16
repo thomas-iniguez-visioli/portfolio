@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BvdAwa3S.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-ggjdJtJs.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -32,7 +32,7 @@ const _sfc_main = {
               );
             });
             return `<hr/>${description}`;
-          }).join("<br>");
+          }).join("<hr/><br/>");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
           console.error("Error type 2 fetching RSS feed:", error);
