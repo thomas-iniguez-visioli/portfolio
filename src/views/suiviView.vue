@@ -19,7 +19,7 @@ onMounted(() => {
       // console.log(rssText); // Output raw XML text
       const parser = new DOMParser()
       const xmlDoc = parser.parseFromString(rssText, 'text/xml')
-      const items = xmlDoc.querySelectorAll('item')
+      const items = xmlDoc.querySelectorAll('entry')
       console.log(items)
       /*const rssContent = Array.from(items)
         .map((item, id, ar) => {
