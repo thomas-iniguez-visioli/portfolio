@@ -49,7 +49,7 @@ onMounted(() => {
   }
 
   // Example RSS feed URL
-  const rssUrl = 'https://thomas-iniguez-visioli.github.io/portfolio/feed.xml'
+  const rssUrl = 'http://localhost:5173/portfolio/feed.xml'
   fetchRSSFeed(rssUrl)
 })
 </script>
