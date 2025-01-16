@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BvLioqxx.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-YFtn8Tyn.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -31,7 +31,7 @@ const _sfc_main = {
           console.error("Error type 2 fetching RSS feed:", error);
         }
       }
-      const rssUrl = "https://thomas-iniguez-visioli.github.io/portfolio/feed.xml";
+      const rssUrl = "https://app.flus.fr/collections/1820585864512766479/feed.atom.xml";
       fetchRSSFeed(rssUrl);
     });
     return (_ctx, _cache) => {
