@@ -38,7 +38,7 @@ onMounted(() => {
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
-          d.map((item) => {
+          d.fore((item) => {
             description = description.replace(
               `<!--[CDATA[
                 
