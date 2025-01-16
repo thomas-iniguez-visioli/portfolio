@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BaWhLoGN.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CWfr-lYv.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -21,12 +21,17 @@ const _sfc_main = {
             const link = cod.documentElement.querySelector("link").nextSibling.textContent;
             console.log(link);
             console.log(cod.documentElement.querySelector("link").nextSibling);
-            var description = cod.documentElement.querySelector("content").innerHTML.replace("<!--[CDATA[", "").replace(";", "").replace("]]", "");
+            var description = cod.documentElement.querySelector("content").innerHTML.replace(" >", "");
             if (cod.documentElement.querySelector("content").innerHTML == "<!--[CDATA[]]-->") {
               description = "<ul><li>inconnu</li></ul>";
             }
             d.map((item2) => {
-              description = description.replace(`<!--[CDATA[ <${item2}-->`, `<${item2}>`);
+              description = description.replace(
+                `<!--[CDATA[
+                
+               <${item2}-->`,
+                `<${item2}>`
+              );
             });
             return `${description}<hr>`;
           }).join("<br>");
