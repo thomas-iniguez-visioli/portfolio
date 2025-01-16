@@ -214,7 +214,7 @@ resolvConf.push({
   family: 4,
 })
 function curlEquivalent(url) {
-  const filePath = `./public/feed.xml}`;
+  const filePath = `./public/feed.xml`;
   const file = fs.createWriteStream(filePath+".new");
   const request = https.get(url,  /*{agent: staticDnsAgent(resolvConf)},*/response => {
     response.pipe(file);
