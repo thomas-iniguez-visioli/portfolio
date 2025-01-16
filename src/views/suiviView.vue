@@ -21,7 +21,7 @@ onMounted(() => {
       const xmlDoc = parser.parseFromString(rssText, 'text/xml')
       const items = xmlDoc.querySelectorAll('item')
       console.log(items)
-      const rssContent = Array.from(items)
+      /*const rssContent = Array.from(items)
         .map((item, id, ar) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/html')
           //  console.log(cod.documentElement.querySelector)
@@ -42,7 +42,7 @@ onMounted(() => {
           return `<a href="${link}" target="_blank">item ${ar.length - id}:  ${title}</a><br>${description.replace(']]&gt', '</ul>').replace('-->', '> ').replace('&gt', '</ul>')}<br>`
         })
         .join('<br>')
-      document.querySelector('.rss').innerHTML = rssContent
+      document.querySelector('.rss').innerHTML = rssContent*/
     } catch (error) {
       console.error('Error type 2 fetching RSS feed:', error)
     }
