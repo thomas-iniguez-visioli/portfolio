@@ -21,6 +21,7 @@ onMounted(() => {
       const xmlDoc = parser.parseFromString(rssText, 'text/xml')
       const items = xmlDoc.querySelectorAll('entry')
       console.log(items)
+      const d=["p","div"]
       const rssContent = Array.from(items)
         .map((item) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/xml')
