@@ -25,7 +25,7 @@ onMounted(() => {
         .map((item, id, ar) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/xml')
           //  console.log(cod.documentElement.querySelector)
-          const title = cod.documentElement.querySelector('title').textContent
+
           //  console.log(title)
           const link = cod.documentElement.querySelector('link').nextSibling.textContent
           console.log(link)
@@ -39,7 +39,7 @@ onMounted(() => {
             description = '<ul><li>inconnu</li></ul>'
           }
           //console.log(description)
-          return `${description.replace(']]&gt', '</ul>').replace('-->', '> ').replace('&gt', '</ul>')}<br>`
+          return `${description}<hr>`
         })
         .join('<br>')
       document.querySelector('.rss').innerHTML = rssContent
