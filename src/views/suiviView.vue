@@ -33,14 +33,17 @@ onMounted(() => {
           console.log(cod.documentElement.querySelector('link').nextSibling)
           var description = cod.documentElement
             .querySelector('content')
-            .innerHTML.replace("]]>","")
+            .innerHTML.replace(']]>', '')
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
           d.map((item) => {
-            description = description.replace(`<!--[CDATA[
+            description = description.replace(
+              `<!--[CDATA[
                 
-               <${item}-->`, `<${item}>`)
+               <${item}-->`,
+              `<${item}>`
+            )
           })
           //console.log(description)
           return `${description}<hr>`
