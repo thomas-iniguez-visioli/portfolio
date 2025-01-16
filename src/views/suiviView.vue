@@ -49,7 +49,7 @@ onMounted(() => {
   }
 
   // Example RSS feed URL
-  const rssUrl = '/feed.xml'
+  const rssUrl = '/portfolio/feed.xml'
   fetchRSSFeed(rssUrl)
 })
 </script>
