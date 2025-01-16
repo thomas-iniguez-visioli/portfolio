@@ -46,7 +46,7 @@ onMounted(() => {
               `<${item}>`
             )
           })
-          //console.log(description)
+          console.log(description)
           return `<hr/>${description}`
         })
         .join('<hr/><br/>')
