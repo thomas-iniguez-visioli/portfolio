@@ -40,7 +40,7 @@ onMounted(() => {
             description = '<ul><li>inconnu</li></ul>'
           }
           d.map((item)=>{
-            description.rep
+            description.replace()
           })
           //console.log(description)
           return `${description}<hr>`
