@@ -49,7 +49,7 @@ onMounted(() => {
           //console.log(description)
           return `<hr/>${description}`
         })
-        .join('<hr/>')
+        .join('<hr/><br/>')
       document.querySelector('.rss').innerHTML = rssContent
     } catch (error) {
       console.error('Error type 2 fetching RSS feed:', error)
