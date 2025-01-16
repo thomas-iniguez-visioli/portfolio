@@ -47,7 +47,7 @@ onMounted(() => {
             )
           })
           //console.log(description)
-          return `${description}<hr>`
+          return `<hr>${description}`
         })
         .join('<br>')
       document.querySelector('.rss').innerHTML = rssContent
