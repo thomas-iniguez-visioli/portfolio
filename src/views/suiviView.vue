@@ -24,11 +24,11 @@ onMounted(() => {
       const d = ['p', 'div']
       const rssContent = Array.from(items)
         .map((item) => {
-          const cod = new DOMParser().parseFromString(item.outerHTML, 'text/xml')
+          const cod = new DOMParser().parseFromString(item.CDATA_SECTION_NODE, 'text/xml')
           //  console.log(cod.documentElement.querySelector)
 
           //  console.log(title)
-          const link = cod.documentElement.querySelector('link').
+          const link = cod.documentElement.querySelector('link')
           console.log(link)
           console.log(cod.documentElement.querySelector('link').nextSibling)
           var description = cod.documentElement
