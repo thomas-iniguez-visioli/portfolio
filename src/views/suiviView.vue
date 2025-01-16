@@ -39,6 +39,9 @@ onMounted(() => {
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
+          d.map((item)=>{
+            description.rep
+          })
           //console.log(description)
           return `${description}<hr>`
         })
