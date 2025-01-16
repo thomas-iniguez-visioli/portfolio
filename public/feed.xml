@@ -12,10 +12,27 @@
     </author>
     <generator>flus/1.1.0 (https://app.flus.fr/about)</generator>
 
-            <updated>2025-01-16T14:10:08+01:00</updated>
+            <updated>2025-01-16T21:09:23+01:00</updated>
     
             <category term="Sciences et technologies"></category>
     
+            <entry>
+            <title>Retrospective for thomas-iniguez-visioli from 2024-12-23 to 2024-12-24</title>
+            <id>tag:app.flus.fr,2025-01-08:links/1820666567734944472</id>
+
+                            <link href="https://app.flus.fr/links/1820666567734944472" rel="alternate" type="text/html" />
+                <link href="https://thomas-iniguez-visioli.github.io/retro-weekly/2024-12-24/" rel="via" type="text/html" />
+            
+            
+            <published>2025-01-16T21:09:23+01:00</published>
+            <updated>2025-01-16T21:09:23+01:00</updated>
+
+            <content type="html"><![CDATA[
+                
+                <p>
+                    — « <a href="https://thomas-iniguez-visioli.github.io/retro-weekly/2024-12-24/">Retrospective for thomas-iniguez-visioli from 2024-12-23 to 2024-12-24</a> » a été publié sur thomas-iniguez-visioli.github.io                </p>
+            ]]></content>
+        </entry>
             <entry>
             <title>fuite de donnée chez 
               Peugeot</title>
@@ -565,23 +582,6 @@
                 <p>
                     — « <a href="https://bonjourlafuite.eu.org/#Cybertek-2024-09-12">fuite de donnée chez 
               Cybertek</a> » a été publié sur bonjourlafuite.eu.org                </p>
-            ]]></content>
-        </entry>
-            <entry>
-            <title>fuite de donnée chez               Ticketmaster</title>
-            <id>tag:app.flus.fr,2025-01-07:links/1820585604568916528</id>
-
-                            <link href="https://app.flus.fr/links/1820585604568916528" rel="alternate" type="text/html" />
-                <link href="https://bonjourlafuite.eu.org/#Ticketmaster-2024-04-28" rel="via" type="text/html" />
-            
-            
-            <published>2025-01-16T13:41:01+01:00</published>
-            <updated>2025-01-16T13:41:01+01:00</updated>
-
-            <content type="html"><![CDATA[
-                
-                <p>
-                    — « <a href="https://bonjourlafuite.eu.org/#Ticketmaster-2024-04-28">fuite de donnée chez               Ticketmaster</a> » a été publié sur bonjourlafuite.eu.org                </p>
             ]]></content>
         </entry>
     </feed>
