@@ -21,7 +21,7 @@ onMounted(() => {
       const xmlDoc = parser.parseFromString(rssText, 'text/xml')
       const items = xmlDoc.querySelectorAll('entry')
       console.log(items)
-      const d=["p","div"]
+      const d = ['p', 'div']
       const rssContent = Array.from(items)
         .map((item) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/xml')
@@ -39,8 +39,8 @@ onMounted(() => {
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
-          d.map((item)=>{
-            description=description.replace(`<${item}-->`,`<${item}>`)
+          d.map((item) => {
+            description = description.replace(`<${item}-->`, `<${item}>`)
           })
           //console.log(description)
           return `${description}<hr>`
