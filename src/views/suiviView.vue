@@ -12,6 +12,7 @@ onMounted(() => {
     try {
       const response = await fetch(url, { mode: 'no-cors' })
       if (!response.ok) {
+        console.log(response)
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const rssText = await response.text()
