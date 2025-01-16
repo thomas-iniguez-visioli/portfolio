@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-Cav3dN1H.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CM0-rbXb.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -31,7 +31,7 @@ const _sfc_main = {
                 `<${item2}>`
               );
             });
-            return `${description}<hr>`;
+            return `<hr>${description}`;
           }).join("<br>");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
