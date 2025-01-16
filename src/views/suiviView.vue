@@ -40,7 +40,9 @@ onMounted(() => {
             description = '<ul><li>inconnu</li></ul>'
           }
           d.map((item) => {
-            description = description.replace(`<!--[CDATA[ <${item}-->`, `<${item}>`)
+            description = description.replace(`<!--[CDATA[
+                
+               <${item}-->`, `<${item}>`)
           })
           //console.log(description)
           return `${description}<hr>`
