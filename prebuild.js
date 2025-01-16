@@ -220,6 +220,7 @@ function curlEquivalent(url) {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
+      console.log(fs.readdirSync("./public"))
       fs.renameSync('./public/feed.xml.new','./public/feed.xml')
       console.log(`File downloaded and saved to ${filePath}`);
     });
