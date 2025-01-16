@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-Bm08SAl5.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-UW_Pt44T.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -17,7 +17,6 @@ const _sfc_main = {
           console.log(items);
           const rssContent = Array.from(items).map((item, id, ar) => {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/xml");
-            const title = cod.documentElement.querySelector("title").textContent;
             const link = cod.documentElement.querySelector("link").nextSibling.textContent;
             console.log(link);
             console.log(cod.documentElement.querySelector("link").nextSibling);
@@ -25,7 +24,7 @@ const _sfc_main = {
             if (cod.documentElement.querySelector("content").innerHTML == "<!--[CDATA[]]-->") {
               description = "<ul><li>inconnu</li></ul>";
             }
-            return `<a href="${link}" target="_blank">item ${ar.length - id}:  ${title}</a><br>${description.replace("]]&gt", "</ul>").replace("-->", "> ").replace("&gt", "</ul>")}<br>`;
+            return `${description}<hr>`;
           }).join("<br>");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
