@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-tUhWs7Jo.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-Bm08SAl5.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -32,7 +32,7 @@ const _sfc_main = {
           console.error("Error type 2 fetching RSS feed:", error);
         }
       }
-      const rssUrl = "http://localhost:5173/portfolio/feed.xml";
+      const rssUrl = "/portfolio/feed.xml";
       fetchRSSFeed(rssUrl);
     });
     return (_ctx, _cache) => {
