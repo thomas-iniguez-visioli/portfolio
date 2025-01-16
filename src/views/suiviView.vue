@@ -20,7 +20,7 @@ onMounted(() => {
       const parser = new DOMParser()
       const xmlDoc = parser.parseFromString(rssText, 'text/xml')
       const items = xmlDoc.querySelectorAll('entry')
-      console.log(items)
+      //console.log(items)
       const d = ['p', 'div']
       const rssContent = Array.from(items)
         .map((item) => {
@@ -31,7 +31,7 @@ onMounted(() => {
           //  console.log(title)
           //const link = cod.documentElement.querySelector('link')
           //console.log(link)
-          console.log(cod.documentElement.querySelector('link').nextSibling)
+        //  console.log(cod.documentElement.querySelector('link').nextSibling)
           var description = cod.documentElement
             .querySelector('content')
             .innerHTML.replace(']]>', '')
