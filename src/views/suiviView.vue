@@ -31,7 +31,7 @@ onMounted(() => {
           //  console.log(title)
           //const link = cod.documentElement.querySelector('link')
           //console.log(link)
-        //  console.log(cod.documentElement.querySelector('link').nextSibling)
+          //  console.log(cod.documentElement.querySelector('link').nextSibling)
           var description = cod.documentElement
             .querySelector('content')
             .innerHTML.replace(']]>', '')
