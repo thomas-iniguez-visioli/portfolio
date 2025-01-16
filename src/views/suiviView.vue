@@ -28,7 +28,7 @@ onMounted(() => {
           //  console.log(cod.documentElement.querySelector)
 
           //  console.log(title)
-          const link = cod.documentElement.querySelector('link').nextSibling.textContent
+          const link = cod.documentElement.querySelector('link') 
           console.log(link)
           console.log(cod.documentElement.querySelector('link').nextSibling)
           var description = cod.documentElement
