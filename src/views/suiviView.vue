@@ -22,7 +22,7 @@ onMounted(() => {
       const items = xmlDoc.querySelectorAll('entry')
       console.log(items)
       const rssContent = Array.from(items)
-        .map((item, id, ar) => {
+        .map((item) => {
           const cod = new DOMParser().parseFromString(item.outerHTML, 'text/xml')
           //  console.log(cod.documentElement.querySelector)
 
