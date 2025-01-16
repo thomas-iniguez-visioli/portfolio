@@ -41,7 +41,7 @@ onMounted(() => {
           d.forEach((item) => {
             description = description.replace(
               `<!--[CDATA[
-                
+                 
                <${item}-->`,
               `<${item}>`
             )
