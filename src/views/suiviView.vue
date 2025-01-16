@@ -33,9 +33,7 @@ onMounted(() => {
           console.log(cod.documentElement.querySelector('link').nextSibling)
           var description = cod.documentElement
             .querySelector('content')
-            .innerHTML.replace('<!--[CDATA[', '')
-            .replace(';', '')
-            .replace(']]', '')
+            .innerHTML
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
