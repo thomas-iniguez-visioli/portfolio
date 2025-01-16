@@ -39,10 +39,7 @@ onMounted(() => {
             description = '<ul><li>inconnu</li></ul>'
           }
           d.forEach((item) => {
-            description = description.replace(
-              `]]>`,
-              ` `
-            )
+            description = description.replace(`]]>`, ` `)
           })
           console.log(description)
           return `<hr/>${description}`
