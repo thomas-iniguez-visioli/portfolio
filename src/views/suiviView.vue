@@ -25,7 +25,7 @@ onMounted(() => {
       const rssContent = Array.from(items)
         .map((item) => {
           console.log(item.CDATA_SECTION_NODE)
-          const cod = new DOMParser().parseFromString(item.CDATA_SECTION_NODE, 'text/xml')
+          const cod = new DOMParser().parseFromString(item.outerHTML, 'text/xml')
           //  console.log(cod.documentElement.querySelector)
 
           //  console.log(title)
