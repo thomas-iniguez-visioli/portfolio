@@ -223,6 +223,7 @@ function curlEquivalent(url) {
       fs.renameSync('public/feed.xml.new','public/feed.xml')
       console.log(`File downloaded and saved to ${filePath}`);
     });
+    file.on("error",((err)=>{console.log(err)})
   }).on('error', err => {
    //fs.unlinkSync(filePath);
     console.log(err.message);
