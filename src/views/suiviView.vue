@@ -49,7 +49,7 @@ onMounted(() => {
   }
 
   // Example RSS feed URL
-  const rssUrl = 'https://app.flus.fr/collections/1820585864512766479/feed.atom.xml'
+  const rssUrl = 'https://thomas-iniguez-visioli.github.io/portfolio/feed.xml'
   fetchRSSFeed(rssUrl)
 })
 </script>
