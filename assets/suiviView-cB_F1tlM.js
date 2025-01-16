@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CW0kXu0y.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-C4pF3UWw.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -13,13 +13,13 @@ const _sfc_main = {
           const rssText = await response.text();
           const parser = new DOMParser();
           const xmlDoc = parser.parseFromString(rssText, "text/xml");
-          const items = xmlDoc.querySelectorAll("item");
+          const items = xmlDoc.querySelectorAll("entry");
           console.log(items);
         } catch (error) {
           console.error("Error type 2 fetching RSS feed:", error);
         }
       }
-      const rssUrl = "https://thomas-iniguez-visioli.github.io/portfolio/feed.xml";
+      const rssUrl = "http://localhost:5173/portfolio/feed.xml";
       fetchRSSFeed(rssUrl);
     });
     return (_ctx, _cache) => {
