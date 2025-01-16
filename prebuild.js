@@ -214,13 +214,13 @@ resolvConf.push({
   family: 4,
 })
 function curlEquivalent(url) {
-  const filePath = `public/feed.xml}`;
+  const filePath = `./public/feed.xml}`;
   const file = fs.createWriteStream(filePath+".new");
   const request = https.get(url,  /*{agent: staticDnsAgent(resolvConf)},*/response => {
     response.pipe(file);
     file.on('finish', () => {
       file.close();
-      fs.renameSync('public/feed.xml.new','public/feed.xml')
+      fs.renameSync('./public/feed.xml.new','./public/feed.xml')
       console.log(`File downloaded and saved to ${filePath}`);
     });
     file.on("error",((err)=>{console.log(err)})
