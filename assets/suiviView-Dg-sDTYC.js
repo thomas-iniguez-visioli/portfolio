@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-KQcFPz5a.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CV2hQ9_t.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -22,12 +22,7 @@ const _sfc_main = {
               description = "<ul><li>inconnu</li></ul>";
             }
             d.forEach((item2) => {
-              description = description.replace(
-                `<!--[CDATA[
-                 
-               <${item2}-->`,
-                `<${item2}>`
-              );
+              description = description.replace(`]]>`, ` `);
             });
             console.log(description);
             return `<hr/>${description}`;
