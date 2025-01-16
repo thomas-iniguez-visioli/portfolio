@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-C3BW61ht.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BwBbRCFr.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -26,7 +26,7 @@ const _sfc_main = {
             d.forEach((item2) => {
               description = description.replace(
                 `<!--[CDATA[
-                
+                 
                <${item2}-->`,
                 `<${item2}>`
               );
