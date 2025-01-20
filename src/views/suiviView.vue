@@ -43,8 +43,11 @@ onMounted(() => {
             description = description.replace(`]]>`, ` `)
           })
           //console.log(description)
-          return {content:`<hr/>${description}`}
-        }).map((item)=>{return item.content})
+          return { content: `<hr/>${description}` }
+        })
+        .map((item) => {
+          return item.content
+        })
         .join('<hr/><br/>')
       document.querySelector('.rss').innerHTML = rssContent
     } catch (error) {
