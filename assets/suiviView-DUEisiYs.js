@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-B4KWkVUK.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BoErCr5-.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -27,7 +27,12 @@ const _sfc_main = {
             d.forEach((item2) => {
               description = description.replace(`]]>`, ` `);
             });
-            return { content: `<hr/>${description}` };
+            return {
+              content: `<hr/>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/>${description}`,
+              date: new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")
+            };
+          }).sort((a, b) => {
+            return a.date - b.date;
           }).map((item) => {
             return item.content;
           }).join("<hr/><br/>");
