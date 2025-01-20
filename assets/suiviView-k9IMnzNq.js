@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BoErCr5-.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-D2h4PDfv.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -32,7 +32,7 @@ const _sfc_main = {
               date: new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")
             };
           }).sort((a, b) => {
-            return a.date - b.date;
+            return b.date - a.date;
           }).map((item) => {
             return item.content;
           }).join("<hr/><br/>");
