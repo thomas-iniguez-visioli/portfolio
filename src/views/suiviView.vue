@@ -35,7 +35,7 @@ onMounted(() => {
           var description = cod.documentElement
             .querySelector('content')
             .innerHTML.replace(']]>', '')
-          console.log(New DOMParser()).parseFromString(description,'text/html))
+          console.log(New DOMParser().parseFromString(description,'text/html'))
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
