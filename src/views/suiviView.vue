@@ -51,8 +51,14 @@ onMounted(() => {
             description = description.replace(`]]>`, ` `)
           })
           //console.log(description)
-          return { content: `<hr/>${description}` }
-        })
+          return { content: `<hr/>${new DOMParser()
+              .parseFromString(description, 'text/html')
+              .documentElement.querySelector('a')
+              .href.split('#')[1].split('-').slice(-3).join("-")}<br/>${description}`,date:  new DOMParser()
+              .parseFromString(description, 'text/html')
+              .documentElement.querySelector('a')
+              .href.split('#')[1].split('-').slice(-3).join("-") }
+        }).sort((a,b)=>{return a.date-b.date})
         .map((item) => {
           return item.content
         })
