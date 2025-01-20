@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CBNK4pG4.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-Phpv3xU7.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -18,7 +18,9 @@ const _sfc_main = {
           const rssContent = Array.from(items).map((item) => {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/xml");
             var description = cod.documentElement.querySelector("content").innerHTML.replace(" >", "");
-            console.log(new DOMParser().parseFromString(description, "text/html").body);
+            console.log(
+              new DOMParser().parseFromString(description, "text/html").body.firstElementChild.href.split("#")
+            );
             if (cod.documentElement.querySelector("content").innerHTML == "<!--[CDATA[]]-->") {
               description = "<ul><li>inconnu</li></ul>";
             }
