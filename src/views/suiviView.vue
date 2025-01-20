@@ -69,7 +69,7 @@ onMounted(() => {
           }
         })
         .sort((a, b) => {
-          return a.date - b.date
+          return b.date - a.date
         })
         .map((item) => {
           return item.content
