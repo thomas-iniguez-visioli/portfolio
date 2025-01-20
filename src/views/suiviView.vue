@@ -35,15 +35,16 @@ onMounted(() => {
           var description = cod.documentElement
             .querySelector('content')
             .innerHTML.replace(']]>', '')
+          console.log(New DOMParser()).parseFromString(description,'text/html))
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
           d.forEach((item) => {
             description = description.replace(`]]>`, ` `)
           })
-          console.log(description)
-          return `<hr/>${description}`
-        })
+          //console.log(description)
+          return {content:`<hr/>${description}`}
+        }).map((item)=>{return item.content})
         .join('<hr/><br/>')
       document.querySelector('.rss').innerHTML = rssContent
     } catch (error) {
