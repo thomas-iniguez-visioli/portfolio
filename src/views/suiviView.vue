@@ -39,7 +39,7 @@ onMounted(() => {
             new DOMParser()
               .parseFromString(description, 'text/html')
               .documentElement.querySelector('a')
-              .href.split('#')
+              .href.split('#')[1].split('-').slice(-3).join("-")
           )
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
