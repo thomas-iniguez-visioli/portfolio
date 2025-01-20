@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-CV2hQ9_t.js";
+import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-BTTjXRs9.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -18,14 +18,16 @@ const _sfc_main = {
           const rssContent = Array.from(items).map((item) => {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/xml");
             var description = cod.documentElement.querySelector("content").innerHTML.replace(" >", "");
+            console.log(new DOMParser().parseFromString(description, "text/html"));
             if (cod.documentElement.querySelector("content").innerHTML == "<!--[CDATA[]]-->") {
               description = "<ul><li>inconnu</li></ul>";
             }
             d.forEach((item2) => {
               description = description.replace(`]]>`, ` `);
             });
-            console.log(description);
-            return `<hr/>${description}`;
+            return { content: `<hr/>${description}` };
+          }).map((item) => {
+            return item.content;
           }).join("<hr/><br/>");
           document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
