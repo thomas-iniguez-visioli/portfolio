@@ -156,10 +156,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component:() => import('../views/HomeView.vue')
-    },{
-      path: '/test',
-      name: 'temp',
-      component:() => import('../views/cv.md')
     }, {
       path: '/situation',
       name: 'situation',
@@ -191,6 +187,14 @@ return `{
       props:()=>{return {name:gen("${file.split(".")[0]}",'${folder}')}}
     }`
       }).join(",")
+    }).join(",\n")},
+    ${tobuild.map((folder)=>{
+      return `{
+      path: '/${folder}',
+      name: '${folder}',
+      component: () => import('../components/${folder}.vue'),
+      props:()=>{return {name:gen("${folder}",'${folder}')}}
+    }`
     }).join(",\n")}
   ]
 })

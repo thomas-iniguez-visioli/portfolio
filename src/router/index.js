@@ -12,10 +12,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component:() => import('../views/HomeView.vue')
-    },{
-      path: '/test',
-      name: 'temp',
-      component:() => import('../views/cv.md')
     }, {
       path: '/situation',
       name: 'situation',
@@ -84,6 +80,24 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
       props:()=>{return {name:gen("tp1",'situation')}}
+    },
+    {
+      path: '/lettre_de_motivation',
+      name: 'lettre_de_motivation',
+      component: () => import('../components/lettre_de_motivation.vue'),
+      props:()=>{return {name:gen("lettre_de_motivation",'lettre_de_motivation')}}
+    },
+{
+      path: '/projet',
+      name: 'projet',
+      component: () => import('../components/projet.vue'),
+      props:()=>{return {name:gen("projet",'projet')}}
+    },
+{
+      path: '/situation',
+      name: 'situation',
+      component: () => import('../components/situation.vue'),
+      props:()=>{return {name:gen("situation",'situation')}}
     }
   ]
 })
