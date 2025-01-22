@@ -1,5 +1,5 @@
-import { c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-D2h4PDfv.js";
-const _hoisted_1 = { href: "cv_stage_bts.pdf" };
+import { c as createElementBlock, o as openBlock } from "./index-B7KDYj73.js";
+const _hoisted_1 = { ref: "cv" };
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
@@ -35,9 +35,7 @@ const _sfc_main = {
       }
     );
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("a", _hoisted_1, _cache[0] || (_cache[0] = [
-        createBaseVNode("canvas", { id: "the-canvas" }, null, -1)
-      ]));
+      return openBlock(), createElementBlock("div", _hoisted_1, null, 512);
     };
   }
 };

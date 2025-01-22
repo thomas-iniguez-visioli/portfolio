@@ -1,4 +1,4 @@
-import { o as onMounted, c as createElementBlock, b as createBaseVNode, a as openBlock } from "./index-D2h4PDfv.js";
+import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-B7KDYj73.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {

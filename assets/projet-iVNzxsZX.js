@@ -1,10 +1,10 @@
-import { _ as _export_sfc, t as temp, o as onMounted, a as openBlock, c as createElementBlock, r as renderSlot, b as createBaseVNode, d as createVNode, w as withCtx, e as createTextVNode, F as Fragment } from "./index-D2h4PDfv.js";
-import { D as DocumentationIcon } from "./IconDocumentation-j1Z-x4_v.js";
+import { _ as _export_sfc, t as temp, d as onMounted, o as openBlock, c as createElementBlock, r as renderSlot, e as createBaseVNode, b as createVNode, w as withCtx, a as createTextVNode, F as Fragment } from "./index-B7KDYj73.js";
+import { D as DocumentationIcon } from "./IconDocumentation-7u7LHO-C.js";
 const _hoisted_1 = {
   href: "/",
   id: "redirect"
 };
-const _sfc_main$2 = {
+const _sfc_main$1 = {
   __name: "projetItem",
   setup(__props) {
     const log = temp.setup();
@@ -27,8 +27,8 @@ const _sfc_main$2 = {
     };
   }
 };
-const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-6b13e6e2"]]);
-const _sfc_main$1 = {
+const WelcomeItem = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-6b13e6e2"]]);
+const _sfc_main = {
   __name: "projet",
   setup(__props) {
     return (_ctx, _cache) => {
@@ -40,7 +40,7 @@ const _sfc_main$1 = {
             createVNode(DocumentationIcon)
           ]),
           heading: withCtx(() => _cache[0] || (_cache[0] = [
-            createTextVNode("RGPD")
+            createTextVNode("francenuit")
           ])),
           _: 1
         }),
@@ -52,7 +52,7 @@ const _sfc_main$1 = {
             createVNode(DocumentationIcon)
           ]),
           heading: withCtx(() => _cache[1] || (_cache[1] = [
-            createTextVNode("francenuit")
+            createTextVNode("RGPD")
           ])),
           _: 1
         }),
@@ -81,17 +81,6 @@ const _sfc_main$1 = {
           _: 1
         })
       ], 64);
-    };
-  }
-};
-const _sfc_main = {
-  __name: "HomeView",
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("main", null, [
-        _cache[0] || (_cache[0] = createTextVNode(" Bien le bonjour voici mes différents projets ")),
-        createVNode(_sfc_main$1)
-      ]);
     };
   }
 };
