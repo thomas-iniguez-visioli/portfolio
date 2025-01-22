@@ -74,7 +74,6 @@ fetch("/portfolio/test.html").then(response => response.text()).then((data) => {
   }, 1000);
 })
   */
-
 </script>
 <style>
 @media (min-width: 1024px) {
