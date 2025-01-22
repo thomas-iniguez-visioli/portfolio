@@ -1,5 +1,5 @@
 <template>
-  <div ref="cv"></div>
+<a href= 'cv_stage_bts.pdf'><canvas id="the-canvas"></canvas></a>
 </template>
 <script setup>
 var url = 'cv_stage_bts.pdf'
