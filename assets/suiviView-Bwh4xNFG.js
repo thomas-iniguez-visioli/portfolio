@@ -17,7 +17,7 @@ const _sfc_main = {
           const d = ["p", "div"];
           const rssContent = Array.from(items).map((item) => {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/xml");
-            var description = cod.documentElement.querySelector("content").innerHTML.replace(" >", "");
+            var description = cod.documentElement.querySelector("content").innerHTML.replace("]]>", "");
             console.log(
               new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")
             );
