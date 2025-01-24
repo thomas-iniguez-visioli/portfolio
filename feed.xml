@@ -12,10 +12,29 @@
     </author>
     <generator>flus/1.1.0 (https://app.flus.fr/about)</generator>
 
-            <updated>2025-01-23T14:02:10+01:00</updated>
+            <updated>2025-01-24T15:21:34+01:00</updated>
     
             <category term="Sciences et technologies"></category>
     
+            <entry>
+            <title>fuite de donnée chez 
+              E.Leclerc</title>
+            <id>tag:app.flus.fr,2025-01-24:links/1822140393449158901</id>
+
+                            <link href="https://app.flus.fr/links/1822140393449158901" rel="alternate" type="text/html" />
+                <link href="https://bonjourlafuite.eu.org/#E.Leclerc-2025-01-24" rel="via" type="text/html" />
+            
+            
+            <published>2025-01-24T15:21:34+01:00</published>
+            <updated>2025-01-24T15:21:34+01:00</updated>
+
+            <content type="html"><![CDATA[
+                
+                <p>
+                    — « <a href="https://bonjourlafuite.eu.org/#E.Leclerc-2025-01-24">fuite de donnée chez 
+              E.Leclerc</a> » a été publié sur bonjourlafuite.eu.org                </p>
+            ]]></content>
+        </entry>
             <entry>
             <title>fuite de donnée chez Kiabi</title>
             <id>tag:app.flus.fr,2025-01-23:links/1822044801601079739</id>
@@ -563,25 +582,6 @@
                 <p>
                     — « <a href="https://bonjourlafuite.eu.org/#Ornikar-2024-10-24">fuite de donnée chez 
               Ornikar</a> » a été publié sur bonjourlafuite.eu.org                </p>
-            ]]></content>
-        </entry>
-            <entry>
-            <title>fuite de donnée chez 
-              Le Slip Français</title>
-            <id>tag:app.flus.fr,2025-01-07:links/1820585604563111734</id>
-
-                            <link href="https://app.flus.fr/links/1820585604563111734" rel="alternate" type="text/html" />
-                <link href="https://bonjourlafuite.eu.org/#Le%20Slip%20Fran%C3%A7ais-2024-04-15" rel="via" type="text/html" />
-            
-            
-            <published>2025-01-16T14:05:24+01:00</published>
-            <updated>2025-01-16T14:05:24+01:00</updated>
-
-            <content type="html"><![CDATA[
-                
-                <p>
-                    — « <a href="https://bonjourlafuite.eu.org/#Le%20Slip%20Fran%C3%A7ais-2024-04-15">fuite de donnée chez 
-              Le Slip Français</a> » a été publié sur bonjourlafuite.eu.org                </p>
             ]]></content>
         </entry>
     </feed>
