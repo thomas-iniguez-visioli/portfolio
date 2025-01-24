@@ -12,10 +12,27 @@
     </author>
     <generator>flus/1.1.0 (https://app.flus.fr/about)</generator>
 
-            <updated>2025-01-24T15:21:34+01:00</updated>
+            <updated>2025-01-24T16:07:03+01:00</updated>
     
             <category term="Sciences et technologies"></category>
     
+            <entry>
+            <title>C’est qui qui a fuité aujourd’hui ?</title>
+            <id>tag:app.flus.fr,2025-01-20:links/1821762911627832431</id>
+
+                            <link href="https://app.flus.fr/links/1821762911627832431" rel="alternate" type="text/html" />
+                <link href="https://bonjourlafuite.eu.org/#Mediboard-2024-11-19" rel="via" type="text/html" />
+            
+            
+            <published>2025-01-24T16:07:03+01:00</published>
+            <updated>2025-01-24T16:07:03+01:00</updated>
+
+            <content type="html"><![CDATA[
+                
+                <p>
+                    — « <a href="https://bonjourlafuite.eu.org/#Mediboard-2024-11-19">C’est qui qui a fuité aujourd’hui ?</a> » a été publié sur bonjourlafuite.eu.org                </p>
+            ]]></content>
+        </entry>
             <entry>
             <title>fuite de donnée chez 
               E.Leclerc</title>
@@ -563,25 +580,6 @@
                 <p>
                     — « <a href="https://bonjourlafuite.eu.org/#Meilleurtaux-2024-09-30">fuite de donnée chez 
               Meilleurtaux</a> » a été publié sur bonjourlafuite.eu.org                </p>
-            ]]></content>
-        </entry>
-            <entry>
-            <title>fuite de donnée chez 
-              Ornikar</title>
-            <id>tag:app.flus.fr,2025-01-07:links/1820585604560054976</id>
-
-                            <link href="https://app.flus.fr/links/1820585604560054976" rel="alternate" type="text/html" />
-                <link href="https://bonjourlafuite.eu.org/#Ornikar-2024-10-24" rel="via" type="text/html" />
-            
-            
-            <published>2025-01-16T14:05:38+01:00</published>
-            <updated>2025-01-16T14:05:38+01:00</updated>
-
-            <content type="html"><![CDATA[
-                
-                <p>
-                    — « <a href="https://bonjourlafuite.eu.org/#Ornikar-2024-10-24">fuite de donnée chez 
-              Ornikar</a> » a été publié sur bonjourlafuite.eu.org                </p>
             ]]></content>
         </entry>
     </feed>
