@@ -1,9 +1,10 @@
-import { c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-D--kZ5V6.js";
+import { c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-CSjWOzvL.js";
 const _hoisted_1 = { href: "cv_stage_bts.pdf" };
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
     var url = "cv_stage_bts.pdf";
+    console.log(globalThis);
     var { pdfjsLib } = globalThis;
     pdfjsLib.GlobalWorkerOptions.workerSrc = "//mozilla.github.io/pdf.js/build/pdf.worker.mjs";
     var loadingTask = pdfjsLib.getDocument(url);
