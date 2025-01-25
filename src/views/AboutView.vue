@@ -1,5 +1,5 @@
 <template>
-  <a href="cv_stage_bts.pdf"><canvas id="the-canvas"></canvas></a>
+  <iframe src="cv_stage_bts.pdf" width="210mm" height="297mm"></iframe>
 </template>
 <script setup>
 var url = 'cv_stage_bts.pdf'
