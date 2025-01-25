@@ -1,9 +1,4 @@
-import { c as createElementBlock, o as openBlock } from "./index-q9yPH5fj.js";
-const _hoisted_1 = {
-  src: "cv_stage_bts.pdf",
-  width: "210mm",
-  height: "297mm"
-};
+import { c as createElementBlock, o as openBlock } from "./index-DEVi92HR.js";
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
@@ -40,7 +35,9 @@ const _sfc_main = {
       }
     );
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("iframe", _hoisted_1);
+      return openBlock(), createElementBlock("button", {
+        onClick: _cache[0] || (_cache[0] = (...args) => _ctx.downloadCV && _ctx.downloadCV(...args))
+      }, "Télécharger le CV");
     };
   }
 };
