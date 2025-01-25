@@ -3,7 +3,7 @@
 </template>
 <script setup>
 var url = 'cv_stage_bts.pdf'
-
+console.log(globalThis)
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
 var { pdfjsLib } = globalThis
 
