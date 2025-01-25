@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "npm run format && node prebuild && git pull && git push &&vite build&& node postbuild && git commit -a -m \"update\"&&vite build ",
+    "build": "npm run format && node prebuild && git pull && git push &&vite build&& node postbuild &&vite build ",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore docs/* docs/*/*",
