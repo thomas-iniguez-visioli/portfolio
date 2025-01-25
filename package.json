@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore docs/* docs/*/*",
-    "format": "prettier --write src/ docs/"
+    "format": "prettier --write src/ docs/ && hexo clean "
   },
   "dependencies": {
     "dompurify": "^3.2.2",
