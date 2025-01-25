@@ -1,5 +1,5 @@
 <template>
-  <iframe src="cv_stage_bts.pdf" width="210mm" height="297mm"></iframe>
+  <button @click="downloadCV">Télécharger le CV</button>
 </template>
 <script setup>
 var url = 'cv_stage_bts.pdf'
