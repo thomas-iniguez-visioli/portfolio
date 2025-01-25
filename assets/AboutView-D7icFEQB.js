@@ -1,4 +1,4 @@
-import { c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-CSjWOzvL.js";
+import { c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-CyzQkaqj.js";
 const _hoisted_1 = { href: "cv_stage_bts.pdf" };
 const _sfc_main = {
   __name: "AboutView",
