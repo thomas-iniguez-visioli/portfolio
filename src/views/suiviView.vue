@@ -47,7 +47,7 @@ onMounted(() => {
           
           //console.log(description)
           return {
-            content: `<hr/>${new DOMParser()
+            content: `<hr/><strong>${new DOMParser()
               .parseFromString(description, 'text/html')
               .documentElement.querySelector('a')
               .href.split('#')[1]
