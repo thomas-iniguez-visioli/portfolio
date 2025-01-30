@@ -1,4 +1,4 @@
-import { c as createElementBlock, o as openBlock } from "./index-QRkA0Mfy.js";
+import { c as createElementBlock, o as openBlock } from "./index-C7GmEUoU.js";
 const _sfc_main = {
   __name: "AboutView",
   setup(__props) {

@@ -1,4 +1,4 @@
-import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-QRkA0Mfy.js";
+import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-C7GmEUoU.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -28,9 +28,15 @@ const _sfc_main = {
               description = description.replace(`]]>`, ` `);
             });
             return {
-              content: `<hr/>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/>${description}`,
+              content: `<hr/>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/>
+              ${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-")[0]}<br/>${description}`,
               date: new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")
             };
+          }).map((item) => {
+            var data = item.date.split("-");
+            var date = `${data[0]}-${data[1]}-${data[2]}`;
+            item.date = date;
+            return item;
           }).sort((a, b) => {
             return b.date - a.date;
           }).map((item) => {
