@@ -77,6 +77,7 @@ onMounted(() => {
           return b.date - a.date
         })
         .map((item) => {
+          console.log(item.content)
           return item.content
         })
         .join('<hr/><br/>')
