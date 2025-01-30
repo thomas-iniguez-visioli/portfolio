@@ -53,7 +53,12 @@ onMounted(() => {
               .href.split('#')[1]
               .split('-')
               .slice(-3)
-              .join('-')}<br/>${description}`,
+              .join('-')}<br/>
+              ${new DOMParser()
+              .parseFromString(description, 'text/html')
+              .documentElement.querySelector('a')
+              .href.split('#')[1].split("-")[0]
+             }<br/>${description}`,
             date: new DOMParser()
               .parseFromString(description, 'text/html')
               .documentElement.querySelector('a')
@@ -62,6 +67,11 @@ onMounted(() => {
               .slice(-3)
               .join('-')
           }
+        }).map((item)=>{
+          var data=item.date.split("-")
+          var date =`${data[0]}-${data[1]}-${data[2]}`
+          item.date=date
+          return item
         })
         .sort((a, b) => {
           return b.date - a.date
