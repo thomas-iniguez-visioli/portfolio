@@ -54,13 +54,13 @@ onMounted(() => {
               .split('-')
               .slice(-3)
               .join('-')}<br/><strong>
-              ${
-                decodeURI(new DOMParser()
+              ${decodeURI(
+                new DOMParser()
                   .parseFromString(description, 'text/html')
                   .documentElement.querySelector('a')
                   .href.split('#')[1]
-                  .split('-')[0])
-              }</strong><br/>${description}`,
+                  .split('-')[0]
+              )}</strong><br/>${description}`,
             date: new DOMParser()
               .parseFromString(description, 'text/html')
               .documentElement.querySelector('a')
