@@ -1,4 +1,4 @@
-import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-CMSoSEx8.js";
+import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-C6o7PMR4.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -24,9 +24,7 @@ const _sfc_main = {
             if (cod.documentElement.querySelector("content").innerHTML == "<!--[CDATA[]]-->") {
               description = "<ul><li>inconnu</li></ul>";
             }
-            d.forEach((item2) => {
-              description = description.replace(`]]>`, ` `);
-            });
+            description = description.replace(`<!--[CDATA[<p-->`, `<p> `);
             return {
               content: `<hr/>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/><strong>
               ${decodeURI(
