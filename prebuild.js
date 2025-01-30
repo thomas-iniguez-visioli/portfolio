@@ -234,5 +234,5 @@ function curlEquivalent(url) {
     console.log(err.message);
   });
 }
-curlEquivalent("https://app.flus.fr/collections/1820585864512766479/feed.atom.xml")
+curlEquivalent("https://feed-blush.vercel.app/atom.xml")
 
