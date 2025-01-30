@@ -1,4 +1,4 @@
-import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-C7GmEUoU.js";
+import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-CMSoSEx8.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -28,8 +28,10 @@ const _sfc_main = {
               description = description.replace(`]]>`, ` `);
             });
             return {
-              content: `<hr/>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/>
-              ${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-")[0]}<br/>${description}`,
+              content: `<hr/>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/><strong>
+              ${decodeURI(
+                new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-")[0]
+              )}</strong><br/>${description}`,
               date: new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")
             };
           }).map((item) => {
@@ -40,6 +42,7 @@ const _sfc_main = {
           }).sort((a, b) => {
             return b.date - a.date;
           }).map((item) => {
+            console.log(item.content);
             return item.content;
           }).join("<hr/><br/>");
           document.querySelector(".rss").innerHTML = rssContent;
