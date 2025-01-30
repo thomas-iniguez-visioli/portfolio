@@ -1,4 +1,4 @@
-import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-C6o7PMR4.js";
+import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-C4h8Egs8.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -26,7 +26,7 @@ const _sfc_main = {
             }
             description = description.replace(`<!--[CDATA[<p-->`, `<p> `);
             return {
-              content: `<hr/>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/><strong>
+              content: `<hr/><strong>${new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")}<br/><strong>
               ${decodeURI(
                 new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-")[0]
               )}</strong><br/>${description}`,
