@@ -42,9 +42,9 @@ onMounted(() => {
           if (cod.documentElement.querySelector('content').innerHTML == '<!--[CDATA[]]-->') {
             description = '<ul><li>inconnu</li></ul>'
           }
-         
-            description = description.replace(`<!--[CDATA[<p-->`, `<p> `)
-          
+
+          description = description.replace(`<!--[CDATA[<p-->`, `<p> `)
+
           //console.log(description)
           return {
             content: `<hr/>${new DOMParser()
