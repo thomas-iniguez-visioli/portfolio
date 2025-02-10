@@ -487,9 +487,10 @@
   src:
     url(images/a9b8e7902ec1ab885d382156f33738e5.woff2) format('woff2'),
     url(images/013277426f0d555d96c7a75503df5754.woff) format('woff');
-  unicode-range: u+00b1-00b3, u+00b9, u+00bc-00be, u+0394, u+03a9, u+03bc, u+03c0, u+2044, u+2070,
-    u+2074-2089, u+2126, u+212e, u+2153-2154, u+215b-215e, u+2202, u+2206, u+220f, u+2211-2212,
-    u+2215, u+2219, u+221a, u+221e, u+222b, u+2248, u+2260, u+2264-2265, u+25ca;
+  unicode-range:
+    u+00b1-00b3, u+00b9, u+00bc-00be, u+0394, u+03a9, u+03bc, u+03c0, u+2044, u+2070, u+2074-2089,
+    u+2126, u+212e, u+2153-2154, u+215b-215e, u+2202, u+2206, u+220f, u+2211-2212, u+2215, u+2219,
+    u+221a, u+221e, u+222b, u+2248, u+2260, u+2264-2265, u+25ca;
 }
 @font-face {
   font-display: swap;
@@ -499,10 +500,10 @@
   src:
     url(images/d97a6ffa507b670a5b1664f98fc1183d.woff2) format('woff2'),
     url(images/1de7434d86166b0614ff3d61cda11a54.woff) format('woff');
-  unicode-range: u+00a1, u+00aa-00ab, u+00af, u+00b8, u+00ba-00bb, u+00bf, u+00c0-00d6, u+00d8-00f6,
-    u+00f8-0148, u+014a-017e, u+0192, u+01b5-01b6, u+01fc-01fd, u+0218-021b, u+0237, u+02c6-02c7,
-    u+02c9, u+02d8-02dd, u+1e80-1e85, u+1e9e, u+1ef2-1ef3, u+2030, u+2039-203a, u+20ac, u+20ba,
-    u+2113;
+  unicode-range:
+    u+00a1, u+00aa-00ab, u+00af, u+00b8, u+00ba-00bb, u+00bf, u+00c0-00d6, u+00d8-00f6, u+00f8-0148,
+    u+014a-017e, u+0192, u+01b5-01b6, u+01fc-01fd, u+0218-021b, u+0237, u+02c6-02c7, u+02c9,
+    u+02d8-02dd, u+1e80-1e85, u+1e9e, u+1ef2-1ef3, u+2030, u+2039-203a, u+20ac, u+20ba, u+2113;
 }
 @font-face {
   font-display: swap;
@@ -512,10 +513,10 @@
   src:
     url(images/cff149ee1e9d2be50ac77bcd86769d05.woff2) format('woff2'),
     url(images/f93a5165fac252ecfd593929c4e6146f.woff) format('woff');
-  unicode-range: u+0020-007e, u+00a0, u+00a2-00a9, u+00ac-00ae, u+00b0, u+00b4-00b7, u+00d7, u+00f7,
-    u+0300-0304, u+0306-0308, u+030a-030c, u+0312, u+0326-0328, u+2013-2014, u+2018-201a,
-    u+201c-201e, u+2020-2022, u+2026, u+2117, u+2120, u+2122, u+2190-2199, u+fb01-fb02, u+feff,
-    u+fffc-fffd;
+  unicode-range:
+    u+0020-007e, u+00a0, u+00a2-00a9, u+00ac-00ae, u+00b0, u+00b4-00b7, u+00d7, u+00f7, u+0300-0304,
+    u+0306-0308, u+030a-030c, u+0312, u+0326-0328, u+2013-2014, u+2018-201a, u+201c-201e,
+    u+2020-2022, u+2026, u+2117, u+2120, u+2122, u+2190-2199, u+fb01-fb02, u+feff, u+fffc-fffd;
 }
 @font-face {
   font-display: swap;
@@ -715,11 +716,12 @@
   src:
     url(images/f4113bb9d3def37ca7f5c7cd2341ec33.woff2) format('woff2'),
     url(images/614a39a4813512a63e905b12dc5f41ba.woff) format('woff');
-  unicode-range: u+0020-005f, u+0061-007a, u+007c, u+00a0, u+00a7, u+00a9, u+00c0-00c3, u+00c8-00ca,
-    u+00cc-00cd, u+00d2-00d5, u+00d9-00da, u+00dd, u+00e0-00e3, u+00e8-00ea, u+00ec-00ed,
-    u+00f2-00f5, u+00f9-00fa, u+00fd, u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169,
-    u+01a0-01a1, u+01af-01b0, u+0300-0303, u+0306, u+0309, u+031b, u+0323, u+1ea0-1ef9, u+2010-2011,
-    u+2013-2014, u+2018-2019, u+201c-201d, u+2020-2021, u+2026, u+2030, u+20ab;
+  unicode-range:
+    u+0020-005f, u+0061-007a, u+007c, u+00a0, u+00a7, u+00a9, u+00c0-00c3, u+00c8-00ca, u+00cc-00cd,
+    u+00d2-00d5, u+00d9-00da, u+00dd, u+00e0-00e3, u+00e8-00ea, u+00ec-00ed, u+00f2-00f5,
+    u+00f9-00fa, u+00fd, u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169, u+01a0-01a1,
+    u+01af-01b0, u+0300-0303, u+0306, u+0309, u+031b, u+0323, u+1ea0-1ef9, u+2010-2011, u+2013-2014,
+    u+2018-2019, u+201c-201d, u+2020-2021, u+2026, u+2030, u+20ab;
 }
 @font-face {
   font-display: swap;
@@ -729,11 +731,12 @@
   src:
     url(images/5989cf357de7427311e30576891372df.woff2) format('woff2'),
     url(images/b3571e313b47ed988fc8429322af7677.woff) format('woff');
-  unicode-range: u+0020-005f, u+0061-007a, u+007c, u+00a0, u+00a7, u+00a9, u+00c0-00c3, u+00c8-00ca,
-    u+00cc-00cd, u+00d2-00d5, u+00d9-00da, u+00dd, u+00e0-00e3, u+00e8-00ea, u+00ec-00ed,
-    u+00f2-00f5, u+00f9-00fa, u+00fd, u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169,
-    u+01a0-01a1, u+01af-01b0, u+0300-0303, u+0306, u+0309, u+031b, u+0323, u+1ea0-1ef9, u+2010-2011,
-    u+2013-2014, u+2018-2019, u+201c-201d, u+2020-2021, u+2026, u+2030, u+20ab;
+  unicode-range:
+    u+0020-005f, u+0061-007a, u+007c, u+00a0, u+00a7, u+00a9, u+00c0-00c3, u+00c8-00ca, u+00cc-00cd,
+    u+00d2-00d5, u+00d9-00da, u+00dd, u+00e0-00e3, u+00e8-00ea, u+00ec-00ed, u+00f2-00f5,
+    u+00f9-00fa, u+00fd, u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169, u+01a0-01a1,
+    u+01af-01b0, u+0300-0303, u+0306, u+0309, u+031b, u+0323, u+1ea0-1ef9, u+2010-2011, u+2013-2014,
+    u+2018-2019, u+201c-201d, u+2020-2021, u+2026, u+2030, u+20ab;
 }
 @font-face {
   font-display: swap;
@@ -743,11 +746,12 @@
   src:
     url(images/5d050a324d95a6a18dae93e08c01bd6b.woff2) format('woff2'),
     url(images/08f3a04653878f9b2369ec3c327d7c46.woff) format('woff');
-  unicode-range: u+0020-005f, u+0061-007a, u+007c, u+00a0, u+00a7, u+00a9, u+00c0-00c3, u+00c8-00ca,
-    u+00cc-00cd, u+00d2-00d5, u+00d9-00da, u+00dd, u+00e0-00e3, u+00e8-00ea, u+00ec-00ed,
-    u+00f2-00f5, u+00f9-00fa, u+00fd, u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169,
-    u+01a0-01a1, u+01af-01b0, u+0300-0303, u+0306, u+0309, u+031b, u+0323, u+1ea0-1ef9, u+2010-2011,
-    u+2013-2014, u+2018-2019, u+201c-201d, u+2020-2021, u+2026, u+2030, u+20ab;
+  unicode-range:
+    u+0020-005f, u+0061-007a, u+007c, u+00a0, u+00a7, u+00a9, u+00c0-00c3, u+00c8-00ca, u+00cc-00cd,
+    u+00d2-00d5, u+00d9-00da, u+00dd, u+00e0-00e3, u+00e8-00ea, u+00ec-00ed, u+00f2-00f5,
+    u+00f9-00fa, u+00fd, u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169, u+01a0-01a1,
+    u+01af-01b0, u+0300-0303, u+0306, u+0309, u+031b, u+0323, u+1ea0-1ef9, u+2010-2011, u+2013-2014,
+    u+2018-2019, u+201c-201d, u+2020-2021, u+2026, u+2030, u+20ab;
 }
 .fP4ZCw {
   -webkit-font-smoothing: antialiased;
@@ -1367,7 +1371,8 @@
   --xpFk1A: hsla(0, 0%, 100%, 0.15);
 }
 .x1Lyuw {
-  background-image: linear-gradient(45deg, var(--xpFk1A) 25%, transparent 25%),
+  background-image:
+    linear-gradient(45deg, var(--xpFk1A) 25%, transparent 25%),
     linear-gradient(-45deg, var(--xpFk1A) 25%, transparent 25%),
     linear-gradient(45deg, transparent 75%, var(--xpFk1A) 75%),
     linear-gradient(-45deg, transparent 75%, var(--xpFk1A) 75%);
@@ -5359,8 +5364,9 @@ _:future {
   src:
     url(images/eafec10d3f23f994fb6dc59545035460.woff2) format('woff2'),
     url(images/89ba4e29dc7a63cd15959a5bb068bb0e.woff) format('woff');
-  unicode-range: u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169, u+01a0-01a1, u+01af-01b0,
-    u+1ea0-1ef9, u+20ab;
+  unicode-range:
+    u+0102-0103, u+0110-0111, u+0128-0129, u+0168-0169, u+01a0-01a1, u+01af-01b0, u+1ea0-1ef9,
+    u+20ab;
 }
 @font-face {
   font-display: swap;
@@ -5370,8 +5376,8 @@ _:future {
   src:
     url(images/6923b1967484e2b12e1016fb33061791.woff2) format('woff2'),
     url(images/89ba4e29dc7a63cd15959a5bb068bb0e.woff) format('woff');
-  unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f,
-    u+a720-a7ff;
+  unicode-range:
+    u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff;
 }
 @font-face {
   font-display: swap;
@@ -5381,8 +5387,9 @@ _:future {
   src:
     url(images/ff9d619b59f5cb3529b100448f398ac5.woff2) format('woff2'),
     url(images/89ba4e29dc7a63cd15959a5bb068bb0e.woff) format('woff');
-  unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f,
-    u+2074, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+  unicode-range:
+    u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac,
+    u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
 }
 .BPSSJQ {
   display: flex;
