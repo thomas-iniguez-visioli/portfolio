@@ -1,5 +1,5 @@
-import { _ as _export_sfc, t as temp, d as onMounted, o as openBlock, c as createElementBlock, r as renderSlot, e as createBaseVNode, b as createVNode, w as withCtx, a as createTextVNode, F as Fragment } from "./index-C4h8Egs8.js";
-import { D as DocumentationIcon } from "./IconDocumentation-BV6nj-_K.js";
+import { _ as _export_sfc, t as temp, d as onMounted, c as createElementBlock, r as renderSlot, o as openBlock, e as createBaseVNode, b as createVNode, a as createTextVNode, w as withCtx, F as Fragment } from "./index-BojEivK1.js";
+import { D as DocumentationIcon } from "./IconDocumentation-DHr4tpTg.js";
 const _hoisted_1 = {
   href: "/",
   id: "redirect"
