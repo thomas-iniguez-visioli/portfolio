@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-czjf6TdJ.js","assets/projet-H31lNYbg.js","assets/IconDocumentation-DHr4tpTg.js","assets/projet-CaNXXK5g.css","assets/situation-CHeMO9_w.js","assets/situation-CHRa_exM.js","assets/situation-DNpq39rx.css","assets/suiviView-C18u9FAt.js","assets/suiviView-DNtNIo95.css","assets/AboutView-C43lITSh.js","assets/projectView-C-vPgkCH.js","assets/projectView-BmFxIURO.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/HomeView-DeMr1uXw.js","assets/projet-BuuRroG5.js","assets/IconDocumentation-BV6nj-_K.js","assets/projet-CaNXXK5g.css","assets/situation-DW7t3bBX.js","assets/situation-CfLKRXR-.js","assets/situation-DNpq39rx.css","assets/suiviView-ClOz_Fd_.js","assets/suiviView-DNtNIo95.css","assets/AboutView-BtbTo4uS.js","assets/projectView-CDoMOD4x.js","assets/projectView-BmFxIURO.css"])))=>i.map(i=>d[i]);
 var __defProp = Object.defineProperty;
 var __typeError = (msg) => {
   throw TypeError(msg);
@@ -12728,12 +12728,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView-czjf6TdJ.js"), true ? __vite__mapDeps([0,1,2,3]) : void 0)
+      component: () => __vitePreload(() => import("./HomeView-DeMr1uXw.js"), true ? __vite__mapDeps([0,1,2,3]) : void 0)
     },
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-CHeMO9_w.js"), true ? __vite__mapDeps([4,5,2,6]) : void 0)
+      component: () => __vitePreload(() => import("./situation-DW7t3bBX.js"), true ? __vite__mapDeps([4,5,2,6]) : void 0)
     },
     {
       path: "/suivi",
@@ -12741,7 +12741,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./suiviView-C18u9FAt.js"), true ? __vite__mapDeps([7,8]) : void 0)
+      component: () => __vitePreload(() => import("./suiviView-ClOz_Fd_.js"), true ? __vite__mapDeps([7,8]) : void 0)
     },
     {
       path: "/cv",
@@ -12749,7 +12749,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./AboutView-C43lITSh.js"), true ? __vite__mapDeps([9,8]) : void 0)
+      component: () => __vitePreload(() => import("./AboutView-BtbTo4uS.js"), true ? __vite__mapDeps([9,8]) : void 0)
     },
     {
       path: "/projet/francenuit",
@@ -12757,7 +12757,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C-vPgkCH.js"), true ? __vite__mapDeps([10,11]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CDoMOD4x.js"), true ? __vite__mapDeps([10,11]) : void 0),
       props: () => {
         return { name: gen("france-nuit", "projet") };
       }
@@ -12768,7 +12768,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C-vPgkCH.js"), true ? __vite__mapDeps([10,11]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CDoMOD4x.js"), true ? __vite__mapDeps([10,11]) : void 0),
       props: () => {
         return { name: gen("RGPD", "projet") };
       }
@@ -12779,7 +12779,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C-vPgkCH.js"), true ? __vite__mapDeps([10,11]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CDoMOD4x.js"), true ? __vite__mapDeps([10,11]) : void 0),
       props: () => {
         return { name: gen("uptime", "projet") };
       }
@@ -12790,7 +12790,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C-vPgkCH.js"), true ? __vite__mapDeps([10,11]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CDoMOD4x.js"), true ? __vite__mapDeps([10,11]) : void 0),
       props: () => {
         return { name: gen("youtube", "projet") };
       }
@@ -12801,7 +12801,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C-vPgkCH.js"), true ? __vite__mapDeps([10,11]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CDoMOD4x.js"), true ? __vite__mapDeps([10,11]) : void 0),
       props: () => {
         return { name: gen("tp", "situation") };
       }
@@ -12812,7 +12812,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => __vitePreload(() => import("./projectView-C-vPgkCH.js"), true ? __vite__mapDeps([10,11]) : void 0),
+      component: () => __vitePreload(() => import("./projectView-CDoMOD4x.js"), true ? __vite__mapDeps([10,11]) : void 0),
       props: () => {
         return { name: gen("tp1", "situation") };
       }
@@ -12820,7 +12820,7 @@ const router = createRouter({
     {
       path: "/projet",
       name: "projet",
-      component: () => __vitePreload(() => import("./projet-H31lNYbg.js"), true ? __vite__mapDeps([1,2,3]) : void 0),
+      component: () => __vitePreload(() => import("./projet-BuuRroG5.js"), true ? __vite__mapDeps([1,2,3]) : void 0),
       props: () => {
         return { name: gen("projet", "projet") };
       }
@@ -12828,7 +12828,7 @@ const router = createRouter({
     {
       path: "/situation",
       name: "situation",
-      component: () => __vitePreload(() => import("./situation-CHRa_exM.js"), true ? __vite__mapDeps([5,2,6]) : void 0),
+      component: () => __vitePreload(() => import("./situation-CfLKRXR-.js"), true ? __vite__mapDeps([5,2,6]) : void 0),
       props: () => {
         return { name: gen("situation", "situation") };
       }
@@ -13060,6 +13060,7 @@ const RenderingIntentFlag = {
   ANY: 1,
   DISPLAY: 2,
   PRINT: 4,
+  SAVE: 8,
   ANNOTATIONS_FORMS: 16,
   ANNOTATIONS_STORAGE: 32,
   ANNOTATIONS_DISABLE: 64,
@@ -13112,6 +13113,10 @@ const TextRenderingMode = {
   STROKE: 1,
   FILL_STROKE: 2,
   INVISIBLE: 3,
+  FILL_ADD_TO_PATH: 4,
+  STROKE_ADD_TO_PATH: 5,
+  FILL_STROKE_ADD_TO_PATH: 6,
+  ADD_TO_PATH: 7,
   FILL_STROKE_MASK: 3,
   ADD_TO_PATH_FLAG: 4
 };
@@ -13138,7 +13143,15 @@ const AnnotationType = {
   INK: 15,
   POPUP: 16,
   FILEATTACHMENT: 17,
-  WIDGET: 20
+  SOUND: 18,
+  MOVIE: 19,
+  WIDGET: 20,
+  SCREEN: 21,
+  PRINTERMARK: 22,
+  TRAPNET: 23,
+  WATERMARK: 24,
+  THREED: 25,
+  REDACT: 26
 };
 const AnnotationBorderStyleType = {
   SOLID: 1,
@@ -21872,12 +21885,10 @@ const _CanvasGraphics = class _CanvasGraphics {
     const pattern = this._getPattern(objId);
     ctx.fillStyle = pattern.getPattern(ctx, this, getCurrentTransformInverse(ctx), PathType.SHADING);
     const inv = getCurrentTransformInverse(ctx);
-    if (inv) {
+    {
       const { width, height } = ctx.canvas;
       const [x0, y0, x1, y1] = Util.getAxialAlignedBoundingBox([0, 0, width, height], inv);
       this.ctx.fillRect(x0, y0, x1 - x0, y1 - y0);
-    } else {
-      this.ctx.fillRect(-1e10, -1e10, 2e10, 2e10);
     }
     this.compose(this.current.getClippedPathBoundingBox());
     this.restore();
