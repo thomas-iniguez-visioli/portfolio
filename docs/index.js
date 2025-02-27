@@ -6678,7 +6678,7 @@
     };
   
     var pdfUnescape = function pdfUnescape(value) {
-      return value.replace(/\\\(/g, "(").replace(/\\\)/g, ")").replace(/\\\\/g, "\\");
+      return value.replace(/\\\\/g, "\\").replace(/\\\(/g, "(").replace(/\\\)/g, ")");
     };
   
     var f2 = function f2(number) {
