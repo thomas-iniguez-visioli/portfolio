@@ -32,9 +32,13 @@ jobs:
     name: Build Vue
     steps:
     - uses: actions/checkout@v4
+      with:
+          persist-credentials: false
     - name: Setup Python
       uses: actions/setup-python@v5.3.0
-    - name: install new modumle 
+    - name: install new module 
+      env: 
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
       run: |
           npm install -D vite-vue-md 
           npm i
