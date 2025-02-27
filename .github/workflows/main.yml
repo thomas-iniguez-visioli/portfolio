@@ -34,9 +34,9 @@ jobs:
       with:
           persist-credentials: false
 
-    - name: install new module 
-      env: 
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+    - name: install new module
+      
+      
       
       run: |
 
