@@ -28,7 +28,7 @@ jobs:
   build_vue:
     
     
-    runs-on: linux-latest
+    runs-on: unbuntu-latest
     name: Build Vue
     steps:
     - uses: actions/checkout@v4
