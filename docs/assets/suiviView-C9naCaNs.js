@@ -43,7 +43,7 @@ const _sfc_main = {
             console.log(item.content);
             return item.content;
           }).join("<hr/><br/>");
-          document.querySelector(".rss").innerHTML = rssContent;
+          document.querySelector(".rss").innerText = rssContent;
         } catch (error) {
           console.error("Error type 2 fetching RSS feed:", error);
         }
