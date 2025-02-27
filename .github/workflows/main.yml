@@ -39,8 +39,7 @@ jobs:
     - name: install new module 
       env: 
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      with:
-          persist-credentials: false
+      
       run: |
           npm install -D vite-vue-md 
           npm i
