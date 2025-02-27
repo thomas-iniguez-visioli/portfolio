@@ -49,7 +49,7 @@ jobs:
     - name: run create/update pull request
       uses: gr2m/create-or-update-pull-request-action@v1.10.0 # Create a PR or update the Action's existing PR
       env: 
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           author: 'ci <temp@free.fr>'
           body: >
