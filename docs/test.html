@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=210mm, height=297mm, initial-scale=1.0">
+    <title>CV Thomas Iniguez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            width: 48%;
+            padding: 1%;
+            box-sizing: border-box;
+            align-content: start;
+        }
+        .column:first-child {
+            border-right: 2px solid #ddd;
+            border-top: 2px solid #ddd;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .contact-info, .education, .experience, .skills, .interests, .strengths, .projects {
+            padding: 10px 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .profile-img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+       
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column">
+        <h1>Thomas Iniguez</h1>
+        <img src="photo.jpg" alt="Photo de Thomas Iniguez" class="profile-img">
+      
+        
+        <div class="section contact-info">
+            <h2>Coordonnées</h2>
+            <p>1, allée James Bargain, 29000 Quimper</p>
+            <p>07.66.76.92.01</p>
+            <p>thomas.iniguez@free.fr</p>
+            <p>Mobilité : transports en commun</p>
+        </div>
+
+        <div class="section education">
+            <h2>Formation</h2>
+            <p>2024 - BTS SIO SISR (en cours), Lycée Chaptal, Quimper</p>
+            <p>2024 - Baccalauréat STI2D option SIN, Mention Bien, Lycée Yves Thépot, Quimper</p>
+            <p>2020 - Brevet des Collèges, Collège Paul Langevin, Le Guilvinec</p>
+          
+        </div>
+
+        <div class="section skills">
+            <h2>Compétences Acquises</h2>
+            <p>Technologies : <img src="/portfolio/skill.jpg" style="width: 75%;" />Linux, Windows, C#, Node.js, Python, SQL, HTML, CSS, JS, PHP</p>
+            <p>Logiciels : Visual Studio Code, Node.js, Open Office</p>
+            <p>Compétences : Modélisation de bases de données, Test et débogage de logiciels</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <h1><strong>Recherche de Stage BTS SIO SISR</strong></h1>
+        <div class="section experience">
+            <h2>Expérience Professionnelle</h2>
+            <p>Stage d’observation chez Publigraphic, Pont l’Abbé - Découverte des métiers : Commercial, Comptabilité, PAO, Conception, Logistique...</p>
+            <p>Participation aux Olympiades de l’ingénieur en équipe, Lycée Yves Thépot, Quimper</p>
+            <p>Animation d’une conférence sur l’IA à la maison pour tous dans le cadre du Pixel Festival</p>
+        </div>
+
+        <div class="section projects">
+            <h2>Projets Personnels</h2>
+            <p id="site-web">site web</p>
+            <p id="portfolio">portfolio</p>
+            <p id="application">application</p>
+            <script>
+                const links = [
+                    { id: "site-web", href: "https://france-nuit.github.io/article/" },
+                    { id: "portfolio", href: "https://thomas-iniguez-visioli.github.io/portfolio/" },
+                    { id: "application", href: "https://github.com/alphaleadership/youtube-public/releases/latest" }
+                ];
+
+                links.forEach(link => {
+                    const element = document.getElementById(link.id);
+                    element.innerHTML = `<a href="${link.href}">${link.id.replace("-", " ")}</a> (${link.href})`;
+                });
+            </script>
+        </div>
+
+        <div class="section interests">
+            <h2>Centres d’intérêts</h2>
+            <p>Lecture</br> Informatique et intelligence artificielle</br> Histoire (2ème Guerre mondiale)</p>
+        </div>
+
+        <div class="section strengths">
+            <h2>Mes Atouts</h2>
+            <p>Communication, Sens du relationnel, Capacité d’adaptation, Ponctualité, Sérieux, Maîtrise de l’informatique, Force de proposition</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
