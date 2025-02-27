@@ -40,6 +40,8 @@ export default defineConfig({
   build: {
     minify:false,
 	  base:"/portfolio",
+	      outDir: '../dist',
+    emptyOutDir: true, 
       rollupOption:{
       output:{
           assetFileNames: "[name].[ext]",
