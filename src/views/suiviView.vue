@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="rss">
-      <h6>chargement en cours ...</h6>
+      <h6>chargement encours ...</h6>
     </div>
   </main>
 </template>
