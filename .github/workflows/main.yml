@@ -28,7 +28,7 @@ jobs:
   build_vue:
     
     
-    runs-on: windows-latest
+    runs-on: linux-latest
     name: Build Vue
     steps:
     - uses: actions/checkout@v4
