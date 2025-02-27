@@ -29,19 +29,23 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
-      - uses: actions/checkout@v4
+
+    - uses: actions/checkout@v4
+      with:
+          persist-credentials: false
+    - name: Setup Python
+      uses: actions/setup-python@v5.3.0
+    - name: install new module 
+      env: 
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
       
-      - name: Setup Python
-        uses: actions/setup-python@v5.3.0
-      
-      - name: install new module 
-        env: 
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        run: |
+      run: |
+
           npm install -D vite-vue-md 
           npm i
           npm run build
    
+
       # Leave this line unchanged
       - name: run create/update pull request
         uses: gr2m/create-or-update-pull-request-action@v1.10.0 # Create a PR or update the Action's existing PR
@@ -58,4 +62,4 @@ jobs:
           assignees: alphaleadership # change to whoever you want to be assigned to this PR
           auto-merge: squash
           path: "."
-# il ne crée pas la pull request
+
