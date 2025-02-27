@@ -1,6 +1,7 @@
 name: Analyze with Semgrep and Fix with Pixee
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
