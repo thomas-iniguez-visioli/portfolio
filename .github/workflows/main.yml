@@ -1,13 +1,13 @@
 name: Build Vue
-on: 
- workflow_dispatch:
- push:
- schedule:
+on:
+  workflow_dispatch:
+  push:
+  schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/30 * * * *'
- issues:
-   types:
-     - closed
+    - cron: '*/30 * * * *'
+  issues:
+    types:
+      - closed
 permissions:
   actions: write
   attestations: write
@@ -26,39 +26,36 @@ permissions:
 
 jobs:
   build_vue:
-    
-    
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     name: Build Vue
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       
-    - name: Setup Python
-      uses: actions/setup-python@v5.3.0
-    - name: install new module 
-      env: 
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      run: |
+      - name: Setup Python
+        uses: actions/setup-python@v5.3.0
+      
+      - name: install new module 
+        env: 
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
           npm install -D vite-vue-md 
           npm i
           npm run build
    
-    # Leave this line unchanged
-    - name: run create/update pull request
-      uses: gr2m/create-or-update-pull-request-action@v1.10.0 # Create a PR or update the Action's existing PR
-      env: 
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      with:
-
+      # Leave this line unchanged
+      - name: run create/update pull request
+        uses: gr2m/create-or-update-pull-request-action@v1.10.0 # Create a PR or update the Action's existing PR
+        env: 
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
           author: 'ci <temp@free.fr>'
-
           body: >
             Here's a new weekly retro, automatically generated with
             GitHub Actions and `@retrogen/generate`.
           branch: retrogen  # Custom branch *just* for this Action.
           commit-message: 'doc: generate weekly retro'
           title: 'doc: generate weekly retro'
-          assignees: bnb # change to whoever you want to be assigned to this PR
+          assignees: alphaleadership # change to whoever you want to be assigned to this PR
           auto-merge: squash
           path: "."
-   
+# il ne crée pas la pull request
