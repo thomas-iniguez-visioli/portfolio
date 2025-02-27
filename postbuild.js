@@ -10,7 +10,7 @@ fs.readdirSync("./dist/assets").map((file)=>{
     }
 
     fs.writeFileSync("./dist/assets/"+file,fs.readFileSync("./dist/assets/"+file).toString().replace("]]>"," >"))
-})
+})/*
 import puppeteer from 'puppeteer';
 
 (async () => {
@@ -26,5 +26,5 @@ import puppeteer from 'puppeteer';
   }
   await page.pdf({ path: 'dist/cv_stage_bts.pdf',  margin: { top: '1px', right: '1px', bottom: '1px', left: '1px' } }); 
   await browser.close();
-})();
+})();*/
 
