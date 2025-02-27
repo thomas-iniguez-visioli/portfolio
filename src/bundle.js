@@ -1,4 +1,4 @@
- var __webpack_require__ = {}
+var __webpack_require__ = {}
 ;(() => {
   __webpack_require__.d = (exports, definition) => {
     for (var key in definition) {
