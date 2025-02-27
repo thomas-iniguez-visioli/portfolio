@@ -121,7 +121,7 @@
         g.onload = function() {
           if (200 === g.status || 0 === g.status) {
             var b2 = document.createElement("div");
-            b2.innerHTML = g.responseText;
+            b2.innerText = g.responseText;
             for (var d2 = null, b2 = b2.childNodes, e2 = 0, h2 = b2.length; e2 < h2; ++e2) {
               var p = b2[e2];
               if (p.nodeType === Node.ELEMENT_NODE && p.classList.contains(CSS_CLASS_NAMES.page_frame)) {
