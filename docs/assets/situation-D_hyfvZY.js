@@ -1,6 +1,6 @@
-import _sfc_main$1 from "./situation-CoD6l_2F.js";
-import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-CHIhqd4T.js";
-import "./IconDocumentation-BvHQ_zGX.js";
+import _sfc_main$1 from "./situation-HoTsxdyi.js";
+import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-Cso3-spR.js";
+import "./IconDocumentation-yMuaRVgq.js";
 const _sfc_main = {
   __name: "situation",
   setup(__props) {
