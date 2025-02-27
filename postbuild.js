@@ -9,7 +9,7 @@ fs.readdirSync("./dist/assets").map((file)=>{
         return
     }
 
-    fs.writeFileSync("./dist/assets/"+file,fs.readFileSync("./dist/assets/"+file).toString().replace("]]>"," >"))
+    fs.writeFileSync("./docs/assets/"+file,fs.readFileSync("./docs/assets/"+file).toString().replace("]]>"," >"))
 })/*
 import puppeteer from 'puppeteer';
 
