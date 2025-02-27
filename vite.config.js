@@ -40,7 +40,7 @@ export default defineConfig({
   build: {
     minify:false,
 	  base:"/portfolio",
-	      outDir: '../dist',
+	      outDir: './docs',
     emptyOutDir: true, 
       rollupOption:{
       output:{
