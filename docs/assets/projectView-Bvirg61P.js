@@ -11,7 +11,7 @@ const _sfc_main = {
       );
       fetch(
         "/portfolio/" + document.getElementsByClassName("about")["0"].attributes.getNamedItem("name").textContent
-      ).then((response) => response.text()).then((data) => document.getElementsByClassName("about")["0"].innerText = data).catch((error) => log.error(error));
+      ).then((response) => response.text()).then((data) => document.getElementsByClassName("about")["0"].innerHTML = data).catch((error) => log.error(error));
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [
