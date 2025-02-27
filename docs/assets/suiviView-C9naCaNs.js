@@ -1,4 +1,4 @@
-import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-CHIhqd4T.js";
+import { d as onMounted, c as createElementBlock, e as createBaseVNode, o as openBlock } from "./index-Cso3-spR.js";
 const _sfc_main = {
   __name: "suiviView",
   setup(__props) {
@@ -43,7 +43,7 @@ const _sfc_main = {
             console.log(item.content);
             return item.content;
           }).join("<hr/><br/>");
-          document.querySelector(".rss").innerText = rssContent;
+          document.querySelector(".rss").innerHTML = rssContent;
         } catch (error) {
           console.error("Error type 2 fetching RSS feed:", error);
         }
@@ -54,7 +54,7 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("main", null, _cache[0] || (_cache[0] = [
         createBaseVNode("div", { class: "rss" }, [
-          createBaseVNode("h6", null, "chargement en cours ...")
+          createBaseVNode("h6", null, "chargement encours ...")
         ], -1)
       ]));
     };
