@@ -1,5 +1,5 @@
 import * as fs from'fs'
-fs.readdirSync("./dist/assets").map((file)=>{
+fs.readdirSync("./docs/assets").map((file)=>{
     if(file=='.git'){
         return
     }if(file=='projet'){
