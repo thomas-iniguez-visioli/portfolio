@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
     base:"/portfolio",
+	outputDir:"./docs",
   plugins: [
     vue({
              include: [/\.vue$/, /\.md$/] // ← Treat MD files as Vue components
