@@ -20,7 +20,7 @@ const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>${item.split(".")[0].replace("-",'')}</template></WelcomeItem><br/>`
+        <template #heading>${item.split(".")[0].replace("-",'')}</template></WelcomeItem><hr/>`
     })}
       
       
