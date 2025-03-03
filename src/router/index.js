@@ -32,21 +32,54 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     }, {
-      path: '/static/projet',
-      name: 'static-projet',
+      path: '/projet/RGPD',
+      name: 'projet-RGPD',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
-      props:()=>{return {name:gen("projet",'static')}}
+      props:()=>{return {name:gen("RGPD",'projet')}}
     },{
-      path: '/static/situation',
-      name: 'static-situation',
+      path: '/projet/francenuit',
+      name: 'projet-france-nuit',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
-      props:()=>{return {name:gen("situation",'static')}}
+      props:()=>{return {name:gen("france-nuit",'projet')}}
+    },{
+      path: '/projet/uptime',
+      name: 'projet-uptime',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:()=>{return {name:gen("uptime",'projet')}}
+    },{
+      path: '/projet/youtube',
+      name: 'projet-youtube',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:()=>{return {name:gen("youtube",'projet')}}
+    },
+{
+      path: '/situation/tp',
+      name: 'situation-tp',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:()=>{return {name:gen("tp",'situation')}}
+    },{
+      path: '/situation/tp1',
+      name: 'situation-tp1',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:()=>{return {name:gen("tp1",'situation')}}
     },
     {
       path: '/static',
