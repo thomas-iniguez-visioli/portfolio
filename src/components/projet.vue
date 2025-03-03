@@ -46,8 +46,7 @@ import DocumentationIcon from './icons/IconDocumentation.vue'
       
       
     </template>
-    <template #heading>francenuit</template> </WelcomeItem
-  >,
+    <template #heading>francenuit</template> </WelcomeItem>,
   <p></p>
   <p></p>
   <WelcomeItem>
