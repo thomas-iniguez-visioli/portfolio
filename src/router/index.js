@@ -3,7 +3,7 @@ import { createRouter,createWebHistory} from 'vue-router'
 
 const gen=(p,type)=>{
   console.log(type+"/"+p+".txt")
-return "/porfolio/"+type+"/"+p+".txt"
+return ""+type+"/"+p+".txt"
 }
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

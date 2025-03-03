@@ -20,10 +20,7 @@ const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>${item.split(".")[0].replace("-",'')}</template></WelcomeItem>
-    
-       
-      `
+        <template #heading>${item.split(".")[0].replace("-",'')}</template></WelcomeItem><hr/>`
     })}
       
       
@@ -147,7 +144,7 @@ fs.writeFileSync("./src/router/index.js",`import { createRouter,createWebHistory
 
 const gen=(p,type)=>{
   console.log(type+"/"+p+".txt")
-return "/porfolio/"+type+"/"+p+".txt"
+return ""+type+"/"+p+".txt"
 }
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

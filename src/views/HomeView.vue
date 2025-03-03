@@ -5,6 +5,9 @@ import TheWelcome from '../components/projet.vue'
 <template>
   <main>
     Bien le bonjour voici mes différents projets
+
     <TheWelcome />
+
+
   </main>
 </template>

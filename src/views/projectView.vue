@@ -11,16 +11,18 @@
 import { onMounted } from 'vue'
 import * as c from '../temp'
 const log = {
+
   info: console.log,
   error: console.error
 }
 //console.log(log) //
 function streamToString(stream) {
   return JSON.parse(stream)
-}
+
 
 onMounted(() => {
   console.log(
+
     '/portfolio/static/' +
       document
         .getElementsByClassName('about')
@@ -51,6 +53,7 @@ onMounted(() => {
     })
     .then((data) => {
       document.getElementsByClassName('about')['0'].innerHTML = data.toString()
+
       console.log(data)
     })
     .catch((error) => log.error(error))
