@@ -13149,7 +13149,7 @@ const Sequences = {
   Cdata: new Uint8Array([67, 68, 65, 84, 65, 91]),
   // CDATA[
   CdataEnd: new Uint8Array([93, 93, 62]),
-  // ]]>
+  //  >
   CommentEnd: new Uint8Array([45, 45, 62]),
   // `-->`
   ScriptEnd: new Uint8Array([60, 47, 115, 99, 114, 105, 112, 116]),
