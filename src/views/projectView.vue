@@ -11,36 +11,49 @@
 import { onMounted } from 'vue'
 import * as c from '../temp'
 const log = {
-  info:console.log,
-  error:console.error
+
+  info: console.log,
+  error: console.error
 }
 //console.log(log) //
 function streamToString(stream) {
-    return JSON.parse(stream)
-}
+  return JSON.parse(stream)
+
 
 onMounted(() => {
   console.log(
-   '/portfolio/static/' +
-      document.getElementsByClassName('about')['0'].attributes.getNamedItem('name').textContent.replace('/portfolio/', '')
+
+    '/portfolio/static/' +
+      document
+        .getElementsByClassName('about')
+        ['0'].attributes.getNamedItem('name')
+        .textContent.replace('/portfolio/', '')
   )
   fetch(
     '/portfolio/static/' +
-      document.getElementsByClassName('about')['0'].attributes.getNamedItem('name').textContent.replace('/portfolio/', '') 
+      document
+        .getElementsByClassName('about')
+        ['0'].attributes.getNamedItem('name')
+        .textContent.replace('/portfolio/', '')
   )
     .then((response) => {
-      const data=response.body.getReader().read().then(({ value, done }) => {
-      if (done || !value) return '';
+      const data = response.body
+        .getReader()
+        .read()
+        .then(({ value, done }) => {
+          if (done || !value) return ''
 
-      // Convertir les données en texte
-      const text = new TextDecoder().decode(value);
+          // Convertir les données en texte
+          const text = new TextDecoder().decode(value)
 
-      console.log("📜 Contenu chargé :", text);
-      return text;
+          console.log('📜 Contenu chargé :', text)
+          return text
+        })
+      return data
     })
-    return data
-    })
-    .then((data) => {document.getElementsByClassName('about')['0'].innerHTML = data.toString()
+    .then((data) => {
+      document.getElementsByClassName('about')['0'].innerHTML = data.toString()
+
       console.log(data)
     })
     .catch((error) => log.error(error))
