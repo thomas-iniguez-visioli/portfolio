@@ -1,38 +1,35 @@
-
-     <script setup>
-import { RouterLink} from 'vue-router'
-import {  onMounted } from 'vue'
+<script setup>
+import { RouterLink } from 'vue-router'
+import { onMounted } from 'vue'
 import * as c from '../temp'
-const log=c.default.setup()
+const log = c.default.setup()
 
 onMounted(() => {
- 
-Object.keys(document.getElementsByTagName("a")).map((ite)=>{
-  const item=document.getElementsByTagName("a")[ite]
-  console.log(item.href)
-  if(item.id){
-    //console.log(item.parentElement)
-    log.info(item.href.includes("static"))
+  Object.keys(document.getElementsByTagName('a')).map((ite) => {
+    const item = document.getElementsByTagName('a')[ite]
+    console.log(item.href)
+    if (item.id) {
+      //console.log(item.parentElement)
+      log.info(item.href.includes('static'))
 
-      item.href=window.location.href+"static/"+item.textContent.split("/")[item.textContent.split("/").length-1]
-    item.href=item.href.replace("situationsituation",'situation').replace("projetprojet",'projet')
-    
-    log.info(item.href)
-    //item.text=item.parentElement.name.tex
-    //return item
-  }
-  
-})})
+      item.href =
+        window.location.href +
+        'static/' +
+        item.textContent.split('/')[item.textContent.split('/').length - 1]
+      item.href = item.href
+        .replace('situationsituation', 'situation')
+        .replace('projetprojet', 'projet')
 
+      log.info(item.href)
+      //item.text=item.parentElement.name.tex
+      //return item
+    }
+  })
+})
 </script>
-<script>
-
-</script>
+<script></script>
 <template>
- 
-          <a href="/" id="redirect"> <slot name="heading" id ="name"></slot></a>
-       
-     
+  <a href="/" id="redirect"> <slot name="heading" id="name"></slot></a>
 </template>
 
 <style scoped>
@@ -107,5 +104,3 @@ h3 {
   }
 }
 </style>
-
-      
