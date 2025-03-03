@@ -18,7 +18,7 @@ const log = {
 //console.log(log) //
 function streamToString(stream) {
   return JSON.parse(stream)
-
+}
 
 onMounted(() => {
   console.log(
