@@ -47,7 +47,8 @@ appType :"mpa",
     emptyOutDir: true, 
       rollupOption:{
 	      input:{
-		      main:"./index.html"
+		      main:"./index.html",
+		      projet:"./index.html"
 	      },
       output:{
           assetFileNames: "[name].[ext]",
