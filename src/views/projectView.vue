@@ -24,7 +24,7 @@ onMounted(() => {
       .textContent.replace('/projet', '')
   )
   fetch(
-    '/portfolio/' +
+    '/portfolio/static/' +
       document.getElementsByClassName('about')['0'].attributes.getNamedItem('name').textContent
   )
     .then((response) => response.text())
