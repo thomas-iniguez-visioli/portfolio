@@ -39,7 +39,7 @@ export default defineConfig({
   },
   build: {
     minify:false,
-	  base:"/portfolio",
+	  base:"/portfolio/",
 	      outDir: './docs',
     emptyOutDir: true, 
       rollupOption:{
