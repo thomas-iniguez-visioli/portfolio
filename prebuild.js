@@ -14,7 +14,7 @@ const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(
     </script>
     
     <template>
-    ${fs.readdirSync("./public/static"+file.name).map((item)=>{
+    ${fs.readdirSync("./public/static/"+file.name).map((item)=>{
       return `<p></p><p></p>
       <WelcomeItem>
         <template #icon>
