@@ -8,7 +8,7 @@
     "build": "npm run format && npm run lint  && node prebuild  &&vite build&& node postbuild &&vite build ",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore docs/* docs/*/*",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-pattern .gitignore docs/* docs/*/*",
     "format": "prettier --write src/   "
   },
   "dependencies": {
