@@ -1,9 +1,6 @@
 <template>
-  test
-
   <div class="about">
     <p class="log"></p>
-    {{ aboutContent }}
 
     <i hidden="true">
       <slot name="name"></slot>
