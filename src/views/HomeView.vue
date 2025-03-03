@@ -7,7 +7,5 @@ import TheWelcome from '../components/projet.vue'
     Bien le bonjour voici mes différents projets
 
     <TheWelcome />
-
-
   </main>
 </template>

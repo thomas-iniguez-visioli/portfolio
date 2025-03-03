@@ -2,34 +2,34 @@
 > portfolio@0.0.1 format
 > prettier --write src/
 
-src/App.vue 112ms (unchanged)
-src/base.css 11ms (unchanged)
-src/bundle.js 1610ms (unchanged)
+src/App.vue 110ms (unchanged)
+src/base.css 10ms (unchanged)
+src/bundle.js 2078ms (unchanged)
 src/components/__tests__/HelloWorld.spec.js 3ms (unchanged)
 src/components/HelloWorld.vue 13ms (unchanged)
 src/components/icons/IconCommunity.vue 5ms (unchanged)
-src/components/icons/IconDocumentation.vue 3ms (unchanged)
-src/components/icons/IconEcosystem.vue 3ms (unchanged)
+src/components/icons/IconDocumentation.vue 5ms (unchanged)
+src/components/icons/IconEcosystem.vue 4ms (unchanged)
 src/components/icons/IconSupport.vue 2ms (unchanged)
 src/components/icons/IconTooling.vue 2ms (unchanged)
 src/components/lettre_de_motivation.vue 2ms (unchanged)
-src/components/lettre_de_motivationItem.vue 16ms (unchanged)
-src/components/projet.vue 7ms
-src/components/projetItem.vue 15ms
-src/components/situation.vue 5ms
-src/components/situationItem.vue 18ms
-src/components/static.vue 3ms (unchanged)
-src/components/staticItem.vue 17ms (unchanged)
-src/components/TheWelcome.vue 5ms (unchanged)
+src/components/lettre_de_motivationItem.vue 20ms (unchanged)
+src/components/projet.vue 8ms
+src/components/projetItem.vue 14ms
+src/components/situation.vue 6ms
+src/components/situationItem.vue 16ms
+src/components/static.vue 6ms (unchanged)
+src/components/staticItem.vue 13ms (unchanged)
+src/components/TheWelcome.vue 4ms (unchanged)
 src/components/WelcomeItem.vue 9ms (unchanged)
 src/logger.js 3ms (unchanged)
 src/main.css 5ms (unchanged)
 src/main.js 2ms (unchanged)
-src/router/index.js 9ms
+src/router/index.js 8ms
 src/stores/counter.js 2ms (unchanged)
 src/temp.js 1ms (unchanged)
 src/views/AboutView.vue 8ms (unchanged)
-src/views/HomeView.vue 4ms
-src/views/projectView.vue 17ms
-src/views/situation.vue 2ms (unchanged)
-src/views/suiviView.vue 19ms (unchanged)
+src/views/HomeView.vue 3ms
+src/views/projectView.vue 16ms
+src/views/situation.vue 3ms (unchanged)
+src/views/suiviView.vue 20ms (unchanged)

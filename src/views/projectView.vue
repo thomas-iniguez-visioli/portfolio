@@ -11,7 +11,6 @@
 import { onMounted } from 'vue'
 import * as c from '../temp'
 const log = {
-
   info: console.log,
   error: console.error
 }
@@ -22,7 +21,6 @@ function streamToString(stream) {
 
 onMounted(() => {
   console.log(
-
     '/portfolio/static/' +
       document
         .getElementsByClassName('about')
@@ -58,7 +56,6 @@ onMounted(() => {
     })
     .catch((error) => log.error(error))
 })
-
 </script>
 
 <style>
