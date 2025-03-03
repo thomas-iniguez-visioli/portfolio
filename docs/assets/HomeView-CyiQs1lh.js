@@ -1,6 +1,6 @@
-import _sfc_main$1 from "./projet-BXvbZgdP.js";
-import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-Cso3-spR.js";
-import "./IconDocumentation-yMuaRVgq.js";
+import _sfc_main$1 from "./projet-I_wmilEr.js";
+import { c as createElementBlock, a as createTextVNode, b as createVNode, o as openBlock } from "./index-BHM2O0Rq.js";
+import "./IconDocumentation-DqZJodVi.js";
 const _sfc_main = {
   __name: "HomeView",
   setup(__props) {
