@@ -40,7 +40,7 @@ jobs:
       
       run: |
 
-          npm install -D vite-vue-md 
+          
           npm i
           npm run build
    
