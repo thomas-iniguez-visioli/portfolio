@@ -15,21 +15,7 @@ appType :"mpa",
   ],configureWebpack:{
     mode: 'production',
     devtool: true,
-    optimization: {
-      splitChunks: {
-        
-           
-        chunks: 'all',
-        minSize: 150,
-        maxSize: 2500,
-        maxAsyncRequests: 30,
-        maxInitialRequests: 30,
-        enforceSizeThreshold: 50000,
-        
-      },
-    
-     
-    },   proxy: {
+      proxy: {
       '^/feed': {
         target: 'https://bonjourlafuite.eu.org/',
         ws: true,
