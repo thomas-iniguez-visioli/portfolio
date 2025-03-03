@@ -39,6 +39,7 @@ export default defineConfig({
   },
   build: {
 	  emitAssets:true,
+	  ssrEmitAssets :true,
     minify:false,
 	  base:"/portfolio/",
 	      outDir: './docs',
