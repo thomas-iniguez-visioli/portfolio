@@ -13380,7 +13380,7 @@ class Tokenizer {
     return false;
   }
   /**
-   * Comments and CDATA end with `-->` and `]]>`.
+   * Comments and CDATA end with `-->` and ` >`.
    *
    * Their common qualities are:
    * - Their end sequences have a distinct character they start with.
