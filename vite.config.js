@@ -7,7 +7,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
 appType :"mpa",
     base:"/portfolio/",
-	outDir:"./docs",
+	
   plugins: [
     vue({
              include: [/\.vue$/, /\.md$/] // ← Treat MD files as Vue components
@@ -43,7 +43,7 @@ appType :"mpa",
 	  ssrEmitAssets :true,
     minify:false,
 	  base:"/portfolio/",
-	      outDir: './docs',
+	  
     emptyOutDir: false, 
       rollupOption:{
 	      input:{
