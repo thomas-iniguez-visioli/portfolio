@@ -41,7 +41,7 @@ jobs:
       run: |
 
           
-          npm i
+          npx pnpm i
           npm run build
    
 
