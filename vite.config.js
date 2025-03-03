@@ -39,6 +39,7 @@ appType :"mpa",
 
   },
   build: {
+	  appType :"mpa",
 	  emitAssets:true,
 	  ssrEmitAssets :true,
     minify:false,
