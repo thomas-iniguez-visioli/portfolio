@@ -46,6 +46,9 @@ appType :"mpa",
 	      outDir: './docs',
     emptyOutDir: true, 
       rollupOption:{
+	      input:{
+		      main:"./index.html"
+	      },
       output:{
           assetFileNames: "[name].[ext]",
             entryFileNames: chunk => {
