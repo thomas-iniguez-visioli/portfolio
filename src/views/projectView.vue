@@ -1,12 +1,12 @@
 <template>
-  test
+ 
 
   <div class="about">
     <p class="log"></p>
-    {{ aboutContent }}
+    
 
     <i hidden="true">
-      <slot name="name"></slot>
+      <slot name="name">{{ name }}</slot>
     </i>
   </div>
 </template>
@@ -14,7 +14,7 @@
 import { onMounted } from 'vue'
 import * as c from '../temp'
 const log = c.default.setup()
-//console.log(log)
+//console.log(log) //
 
 onMounted(() => {
   log.info(
