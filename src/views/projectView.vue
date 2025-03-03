@@ -1,9 +1,13 @@
 <template>
+
+ 
+
   <div class="about">
     <p class="log"></p>
 
+
     <i hidden="true">
-      <slot name="name"></slot>
+      <slot name="name">{{ name }}</slot>
     </i>
   </div>
 </template>
@@ -11,7 +15,7 @@
 import { onMounted } from 'vue'
 import * as c from '../temp'
 const log = c.default.setup()
-//console.log(log)
+//console.log(log) //
 
 onMounted(() => {
   log.info(
@@ -21,7 +25,7 @@ onMounted(() => {
       .textContent.replace('/projet', '')
   )
   fetch(
-    '/portfolio/' +
+    '/portfolio/static/' +
       document.getElementsByClassName('about')['0'].attributes.getNamedItem('name').textContent
   )
     .then((response) => response.text())

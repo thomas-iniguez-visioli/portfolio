@@ -5,7 +5,7 @@ console.log("test")
 fs.writeFileSync("./index.html",fs.readFileSync("./index.html").toString().replace("peoplename",config.name))
 fs.writeFileSync("./src/App.vue",fs.readFileSync("./src/App.vue").toString().replace("peoplename",config.name))
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
-const tobuild=fs.readdirSync("./public/", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
+const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
   fs.writeFileSync(`./src/components/${file.name.toLowerCase()}.vue`,`
     <script setup>
     import WelcomeItem from './${file.name}Item.vue'
@@ -14,7 +14,7 @@ const tobuild=fs.readdirSync("./public/", { withFileTypes: true }).filter(de => 
     </script>
     
     <template>
-    ${fs.readdirSync("./public/"+file.name).map((item)=>{
+    ${fs.readdirSync("./public/static/"+file.name).map((item)=>{
       return `<p></p><p></p>
       <WelcomeItem>
         <template #icon>
@@ -147,7 +147,7 @@ fs.writeFileSync("./src/router/index.js",`import { createRouter,createWebHistory
 
 const gen=(p,type)=>{
   console.log(type+"/"+p+".txt")
-return type+"/"+p+".txt"
+return "/porfolio/"+type+"/"+p+".txt"
 }
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -176,7 +176,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     }, ${tobuild.map((folder)=>{
-      return fs.readdirSync(`./public/${folder}`).map((file)=>{
+      return fs.readdirSync(`./public/static/${folder}`).map((file)=>{
 return `{
       path: '/${folder}/${file.split(".")[0].replace("-",'')}',
       name: '${folder}-${file.split(".")[0]}',

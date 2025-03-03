@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-appType :"mpa",
+
     base:"/portfolio/",
 	
   plugins: [
@@ -25,7 +25,7 @@ appType :"mpa",
 
   },
   build: {
-	  appType :"mpa",
+	  
 	  emitAssets:true,
 	  ssrEmitAssets :true,
     minify:false,
