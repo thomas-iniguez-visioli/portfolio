@@ -58,9 +58,7 @@ onMounted(() => {
     })
     .catch((error) => log.error(error))
 })
-/*
 
-*/
 </script>
 
 <style>
