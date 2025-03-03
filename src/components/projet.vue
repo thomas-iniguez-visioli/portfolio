@@ -15,34 +15,34 @@ import DocumentationIcon from './icons/IconDocumentation.vue'
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>francenuit</template>
+        <template #heading>RGPD</template></WelcomeItem>
     
        
-      </WelcomeItem>,<p></p><p></p>
+      ,<p></p><p></p>
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>RGPD</template>
+        <template #heading>francenuit</template></WelcomeItem>
     
        
-      </WelcomeItem>,<p></p><p></p>
+      ,<p></p><p></p>
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>uptime</template>
+        <template #heading>uptime</template></WelcomeItem>
     
        
-      </WelcomeItem>,<p></p><p></p>
+      ,<p></p><p></p>
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>youtube</template>
+        <template #heading>youtube</template></WelcomeItem>
     
        
-      </WelcomeItem>
+      
       
       
     </template>
