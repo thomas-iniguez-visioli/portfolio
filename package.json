@@ -31,7 +31,6 @@
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
     "vite": "^6.2.0",
-    "vite-vue-md": "^1.4.0",
     "vitest": "^3.0.7",
     "vue-logger-plugin": "2.2.3"
   }
