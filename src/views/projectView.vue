@@ -1,9 +1,6 @@
 <template>
- 
-
   <div class="about">
     <p class="log"></p>
-    
 
     <i hidden="true">
       <slot name="name">{{ name }}</slot>

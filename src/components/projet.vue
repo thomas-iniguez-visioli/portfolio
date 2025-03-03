@@ -1,3 +1,7 @@
+<script setup>
+import WelcomeItem from './projetItem.vue'
+import DocumentationIcon from './icons/IconDocumentation.vue'
+</script>
 
     <script setup>
     import WelcomeItem from './projetItem.vue'
@@ -11,35 +15,61 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>francenuit</template>
+        <template #heading>RGPD</template></WelcomeItem>
     
        
-      </WelcomeItem>,<p></p><p></p>
+      ,<p></p><p></p>
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>RGPD</template>
+        <template #heading>francenuit</template></WelcomeItem>
     
        
-      </WelcomeItem>,<p></p><p></p>
+      ,<p></p><p></p>
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>uptime</template>
+        <template #heading>uptime</template></WelcomeItem>
     
        
-      </WelcomeItem>,<p></p><p></p>
+      ,<p></p><p></p>
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>youtube</template>
+        <template #heading>youtube</template></WelcomeItem>
     
        
-      </WelcomeItem>
+      
       
       
     </template>
-    
+    <template #heading>francenuit</template> </WelcomeItem
+  >,
+  <p></p>
+  <p></p>
+  <WelcomeItem>
+    <template #icon>
+      <DocumentationIcon />
+    </template>
+    <template #heading>RGPD</template> </WelcomeItem
+  >,
+  <p></p>
+  <p></p>
+  <WelcomeItem>
+    <template #icon>
+      <DocumentationIcon />
+    </template>
+    <template #heading>uptime</template> </WelcomeItem
+  >,
+  <p></p>
+  <p></p>
+  <WelcomeItem>
+    <template #icon>
+      <DocumentationIcon />
+    </template>
+    <template #heading>youtube</template>
+  </WelcomeItem>
+</template>
