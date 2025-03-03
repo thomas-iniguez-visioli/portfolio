@@ -2,32 +2,32 @@
 > portfolio@0.0.1 format
 > prettier --write src/
 
-src/App.vue 124ms (unchanged)
-src/base.css 10ms (unchanged)
-src/bundle.js 2036ms (unchanged)
-src/components/__tests__/HelloWorld.spec.js 4ms (unchanged)
-src/components/HelloWorld.vue 14ms (unchanged)
-src/components/icons/IconCommunity.vue 5ms (unchanged)
-src/components/icons/IconDocumentation.vue 4ms (unchanged)
-src/components/icons/IconEcosystem.vue 4ms (unchanged)
-src/components/icons/IconSupport.vue 2ms (unchanged)
+src/App.vue 107ms (unchanged)
+src/base.css 11ms (unchanged)
+src/bundle.js 1878ms (unchanged)
+src/components/__tests__/HelloWorld.spec.js 3ms (unchanged)
+src/components/HelloWorld.vue 13ms (unchanged)
+src/components/icons/IconCommunity.vue 4ms (unchanged)
+src/components/icons/IconDocumentation.vue 3ms (unchanged)
+src/components/icons/IconEcosystem.vue 3ms (unchanged)
+src/components/icons/IconSupport.vue 1ms (unchanged)
 src/components/icons/IconTooling.vue 2ms (unchanged)
 src/components/lettre_de_motivation.vue 2ms (unchanged)
-src/components/lettre_de_motivationItem.vue 14ms (unchanged)
+src/components/lettre_de_motivationItem.vue 17ms (unchanged)
 src/components/projet.vue 8ms
-src/components/projetItem.vue 14ms
-src/components/situation.vue 6ms
-src/components/situationItem.vue 14ms
-src/components/TheWelcome.vue 6ms (unchanged)
+src/components/projetItem.vue 18ms
+src/components/situation.vue 4ms
+src/components/situationItem.vue 13ms
+src/components/TheWelcome.vue 8ms (unchanged)
 src/components/WelcomeItem.vue 13ms (unchanged)
-src/logger.js 5ms (unchanged)
-src/main.css 4ms (unchanged)
+src/logger.js 3ms (unchanged)
+src/main.css 3ms (unchanged)
 src/main.js 3ms (unchanged)
-src/router/index.js 10ms
-src/stores/counter.js 2ms (unchanged)
-src/temp.js 4ms (unchanged)
-src/views/AboutView.vue 9ms (unchanged)
+src/router/index.js 8ms
+src/stores/counter.js 3ms (unchanged)
+src/temp.js 2ms (unchanged)
+src/views/AboutView.vue 10ms (unchanged)
 src/views/HomeView.vue 2ms (unchanged)
-src/views/projectView.vue 5ms (unchanged)
-src/views/situation.vue 2ms (unchanged)
-src/views/suiviView.vue 15ms (unchanged)
+src/views/projectView.vue 8ms (unchanged)
+src/views/situation.vue 3ms (unchanged)
+src/views/suiviView.vue 17ms (unchanged)
