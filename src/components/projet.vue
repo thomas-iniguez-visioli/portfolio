@@ -11,22 +11,22 @@
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>RGPD</template></WelcomeItem><br/>,
+        <template #heading>RGPD</template></WelcomeItem><hr/>,
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>francenuit</template></WelcomeItem><br/>,
+        <template #heading>francenuit</template></WelcomeItem><hr/>,
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>uptime</template></WelcomeItem><br/>,
+        <template #heading>uptime</template></WelcomeItem><hr/>,
       <WelcomeItem>
         <template #icon>
           <DocumentationIcon />
         </template>
-        <template #heading>youtube</template></WelcomeItem><br/>
+        <template #heading>youtube</template></WelcomeItem><hr/>
       
       
     </template>
