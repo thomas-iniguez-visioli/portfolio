@@ -38,6 +38,7 @@ export default defineConfig({
 
   },
   build: {
+	  emitAssets:true,
     minify:false,
 	  base:"/portfolio/",
 	      outDir: './docs',
