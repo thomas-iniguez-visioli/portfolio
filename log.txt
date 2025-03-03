@@ -1,54 +1,33 @@
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
-test
-File downloaded and saved to public/feed.xml
+
+> portfolio@0.0.1 format
+> prettier --write src/
+
+src/App.vue 114ms (unchanged)
+src/base.css 12ms (unchanged)
+src/bundle.js 1968ms (unchanged)
+src/components/__tests__/HelloWorld.spec.js 4ms (unchanged)
+src/components/HelloWorld.vue 13ms (unchanged)
+src/components/icons/IconCommunity.vue 4ms (unchanged)
+src/components/icons/IconDocumentation.vue 3ms (unchanged)
+src/components/icons/IconEcosystem.vue 3ms (unchanged)
+src/components/icons/IconSupport.vue 2ms (unchanged)
+src/components/icons/IconTooling.vue 3ms (unchanged)
+src/components/lettre_de_motivation.vue 2ms (unchanged)
+src/components/lettre_de_motivationItem.vue 13ms (unchanged)
+src/components/projet.vue 7ms
+src/components/projetItem.vue 18ms
+src/components/situation.vue 5ms
+src/components/situationItem.vue 13ms
+src/components/TheWelcome.vue 5ms (unchanged)
+src/components/WelcomeItem.vue 13ms (unchanged)
+src/logger.js 5ms (unchanged)
+src/main.css 3ms (unchanged)
+src/main.js 2ms (unchanged)
+src/router/index.js 9ms
+src/stores/counter.js 3ms (unchanged)
+src/temp.js 2ms (unchanged)
+src/views/AboutView.vue 11ms (unchanged)
+src/views/HomeView.vue 3ms (unchanged)
+src/views/projectView.vue 6ms (unchanged)
+src/views/situation.vue 2ms (unchanged)
+src/views/suiviView.vue 17ms (unchanged)
