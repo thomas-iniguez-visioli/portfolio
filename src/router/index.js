@@ -32,14 +32,6 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     }, {
-      path: '/projet/RGPD',
-      name: 'projet-RGPD',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/projectView.vue'),
-      props:()=>{return {name:gen("RGPD",'projet')}}
-    },{
       path: '/projet/francenuit',
       name: 'projet-france-nuit',
       // route level code-splitting
@@ -47,6 +39,14 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue'),
       props:()=>{return {name:gen("france-nuit",'projet')}}
+    },{
+      path: '/projet/RGPD',
+      name: 'projet-RGPD',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/projectView.vue'),
+      props:()=>{return {name:gen("RGPD",'projet')}}
     },{
       path: '/projet/uptime',
       name: 'projet-uptime',

@@ -1,7 +1,7 @@
 
     <script setup>
     import WelcomeItem from './situationItem.vue'
-    import DocumentationIcon from './icons/IconDocumentation.vue'
+  
     
     </script>
     
@@ -9,12 +9,12 @@
     
       <WelcomeItem>
         <template #icon>
-          <DocumentationIcon />
+          
         </template>
         <template #heading>tp</template></WelcomeItem><hr/>,
       <WelcomeItem>
         <template #icon>
-          <DocumentationIcon />
+          
         </template>
         <template #heading>tp1</template></WelcomeItem><hr/>
       
