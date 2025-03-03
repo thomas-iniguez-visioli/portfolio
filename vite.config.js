@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
- import vueMd from 'vite-vue-md'
+
 // https://vitejs.dev/config/
 export default defineConfig({
 appType :"mpa",
@@ -11,7 +11,7 @@ appType :"mpa",
   plugins: [
     vue({
              include: [/\.vue$/, /\.md$/] // ← Treat MD files as Vue components
-          }),vueMd()
+          })
   ],configureWebpack:{
     mode: 'development',
     devtool: true,
@@ -44,7 +44,7 @@ appType :"mpa",
     minify:false,
 	  base:"/portfolio/",
 	      outDir: './docs',
-    emptyOutDir: true, 
+    emptyOutDir: false, 
       rollupOption:{
 	      input:{
 		      main:"./index.html",
