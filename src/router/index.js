@@ -82,10 +82,16 @@ const router = createRouter({
       props:()=>{return {name:gen("tp1",'situation')}}
     },
     {
-      path: '/static',
-      name: 'static',
-      component: () => import('../components/static.vue'),
-      props:()=>{return {name:gen("static",'static')}}
+      path: '/projet',
+      name: 'projet',
+      component: () => import('../components/projet.vue'),
+      props:()=>{return {name:gen("projet",'projet')}}
+    },
+{
+      path: '/situation',
+      name: 'situation',
+      component: () => import('../components/situation.vue'),
+      props:()=>{return {name:gen("situation",'situation')}}
     }
   ]
 })
