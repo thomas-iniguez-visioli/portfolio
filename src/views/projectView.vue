@@ -1,4 +1,4 @@
-<template>
+<template> test 
   <div class="about">
     <p class="log"></p>
     {{ aboutContent }}
