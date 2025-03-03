@@ -13,7 +13,7 @@ appType :"mpa",
              include: [/\.vue$/, /\.md$/] // ← Treat MD files as Vue components
           })
   ],configureWebpack:{
-    mode: 'development',
+    mode: 'production',
     devtool: true,
     optimization: {
       splitChunks: {
