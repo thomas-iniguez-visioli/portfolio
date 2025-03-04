@@ -29,7 +29,25 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 0
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+# abbrlink config
+abbrlink:
+  alg: crc16      #support crc16(default) and crc32
+  rep: dec        #support dec(default) and hex
+  allow: ['post','school','cpp',"java","blog"] #Allowed template types. The default is (" post ")
+  disallow: []
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
