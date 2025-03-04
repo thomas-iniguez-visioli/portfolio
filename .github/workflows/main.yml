@@ -26,7 +26,7 @@ permissions:
 
 jobs:
   build_vue:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     name: Build Vue
     steps:
 
@@ -39,7 +39,7 @@ jobs:
       
       
       run: |
-
+          del pnpm-lock.yaml
           
           npx pnpm i
           npm run build

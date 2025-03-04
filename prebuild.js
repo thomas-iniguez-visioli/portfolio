@@ -9,16 +9,16 @@ const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(
   fs.writeFileSync(`./src/components/${file.name.toLowerCase()}.vue`,`
     <script setup>
     import WelcomeItem from './${file.name}Item.vue'
-    import DocumentationIcon from './icons/IconDocumentation.vue'
+  
     
     </script>
     
     <template>
     ${fs.readdirSync("./public/static/"+file.name).map((item)=>{
-      return `
+      return `<p></p><p></p>
       <WelcomeItem>
         <template #icon>
-          <DocumentationIcon />
+          
         </template>
         <template #heading>${item.split(".")[0].replace("-",'')}</template></WelcomeItem><hr/>`
     })}
