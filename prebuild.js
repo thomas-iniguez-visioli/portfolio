@@ -14,7 +14,7 @@ const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(
     </script>
     
     <template>
-    ${fs.readdirSync("./public/static"+file.name).map((item)=>{
+    ${fs.readdirSync("./public/static/"+file.name).map((item)=>{
       return `<p></p><p></p>
       <WelcomeItem>
         <template #icon>
@@ -176,7 +176,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     }, ${tobuild.map((folder)=>{
-      return fs.readdirSync(`./public/${folder}`).map((file)=>{
+      return fs.readdirSync(`./public/static/${folder}`).map((file)=>{
 return `{
       path: '/${folder}/${file.split(".")[0].replace("-",'')}',
       name: '${folder}-${file.split(".")[0]}',
