@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "npm run format && rmdir /s /q src && npx hexo init src",
+    "build": "npm run format && del /s /q src&& rmdir /s /q src && npx hexo init src",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-pattern .gitignore docs/* docs/*/*",
