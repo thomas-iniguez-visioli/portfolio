@@ -39,7 +39,7 @@ jobs:
       
       
       run: |
-
+          del pnpm.lock
           
           npx pnpm i
           npm run build
