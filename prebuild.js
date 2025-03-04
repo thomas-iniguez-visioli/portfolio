@@ -9,21 +9,22 @@ const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(
   fs.writeFileSync(`./src/components/${file.name.toLowerCase()}.vue`,`
     <script setup>
     import WelcomeItem from './${file.name}Item.vue'
-    import DocumentationIcon from './icons/IconDocumentation.vue'
+  
     
     </script>
     
     <template>
     ${fs.readdirSync("./public/static/"+file.name).map((item)=>{
+<<<<<<< HEAD
       return `<p></p><p></p>
+=======
+      return `
+>>>>>>> 2120aee1ab96bc7ef12f63cc6f329a3ee7117fd3
       <WelcomeItem>
         <template #icon>
-          <DocumentationIcon />
+          
         </template>
-        <template #heading>${item.split(".")[0].replace("-",'')}</template>
-    
-       
-      </WelcomeItem>`
+        <template #heading>${item.split(".")[0].replace("-",'')}</template></WelcomeItem><hr/>`
     })}
       
       
@@ -147,7 +148,7 @@ fs.writeFileSync("./src/router/index.js",`import { createRouter,createWebHistory
 
 const gen=(p,type)=>{
   console.log(type+"/"+p+".txt")
-return "/porfolio/"+type+"/"+p+".txt"
+return ""+type+"/"+p+".txt"
 }
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

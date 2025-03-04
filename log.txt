@@ -2,6 +2,7 @@
 > portfolio@0.0.1 format
 > prettier --write src/
 
+<<<<<<< HEAD
 src/App.vue 108ms (unchanged)
 src/base.css 11ms (unchanged)
 src/bundle.js 1687ms (unchanged)
@@ -31,3 +32,36 @@ src/views/HomeView.vue 2ms (unchanged)
 src/views/projectView.vue 7ms (unchanged)
 src/views/situation.vue 2ms (unchanged)
 src/views/suiviView.vue 13ms (unchanged)
+=======
+src/App.vue 106ms (unchanged)
+src/base.css 11ms (unchanged)
+src/bundle.js 1393ms (unchanged)
+src/components/__tests__/HelloWorld.spec.js 3ms (unchanged)
+src/components/HelloWorld.vue 8ms (unchanged)
+src/components/icons/IconCommunity.vue 4ms (unchanged)
+src/components/icons/IconDocumentation.vue 3ms (unchanged)
+src/components/icons/IconEcosystem.vue 3ms (unchanged)
+src/components/icons/IconSupport.vue 2ms (unchanged)
+src/components/icons/IconTooling.vue 2ms (unchanged)
+src/components/lettre_de_motivation.vue 2ms (unchanged)
+src/components/lettre_de_motivationItem.vue 13ms (unchanged)
+src/components/projet.vue 5ms
+src/components/projetItem.vue 11ms
+src/components/situation.vue 3ms
+src/components/situationItem.vue 13ms
+src/components/static.vue 3ms (unchanged)
+src/components/staticItem.vue 9ms (unchanged)
+src/components/TheWelcome.vue 4ms (unchanged)
+src/components/WelcomeItem.vue 13ms (unchanged)
+src/logger.js 5ms (unchanged)
+src/main.css 4ms (unchanged)
+src/main.js 3ms (unchanged)
+src/router/index.js 6ms
+src/stores/counter.js 2ms (unchanged)
+src/temp.js 1ms (unchanged)
+src/views/AboutView.vue 8ms (unchanged)
+src/views/HomeView.vue 3ms (unchanged)
+src/views/projectView.vue 9ms (unchanged)
+src/views/situation.vue 2ms (unchanged)
+src/views/suiviView.vue 12ms (unchanged)
+>>>>>>> 2120aee1ab96bc7ef12f63cc6f329a3ee7117fd3

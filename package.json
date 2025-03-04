@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "npm run format >log.txt  && node prebuild  &&vite build && node postbuild &&vite build ",
+    "build": "npm run format && del /s /q src&& rmdir /s /q src && npx hexo init src",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-pattern .gitignore docs/* docs/*/*",
@@ -19,17 +19,28 @@
     "simple-git": "^3.27.0",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3",
-    "vue-rss-feed": "^0.2.4"
+    "vue-rss-feed": "^0.2.4",
+    "vue-template-compiler": "^2.7.16"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-replace": "^6.0.2",
     "@rushstack/eslint-patch": "^1.8.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/test-utils": "^2.4.6",
+    "autoprefixer": "^10.4.20",
+    "esbuild-plugin-vue3": "^0.4.2",
     "eslint": "^9.21.0",
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
+    "rollup": "^4.34.9",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0",
     "vite": "^6.2.0",
     "vitest": "^3.0.7",
     "vue-logger-plugin": "2.2.3"

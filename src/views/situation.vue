@@ -1,7 +1,3 @@
-<script setup>
-import TheWelcome from '../components/situation.vue'
-</script>
-
 <template>
   <main>
     bien le bonjour voici les différentes situations professionnelles dans lesquelles je me suis
@@ -9,3 +5,6 @@ import TheWelcome from '../components/situation.vue'
     <TheWelcome />
   </main>
 </template>
+<script setup>
+import TheWelcome from '../components/situation.vue'
+</script>
