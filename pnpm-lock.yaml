@@ -18,7 +18,10 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1(typescript@4.9.5)(vue@3.5.13(typescript@4.9.5))
       puppeteer:
+
         specifier: ^24.3.1
+
+      
         version: 24.3.1(typescript@4.9.5)
       simple-git:
         specifier: ^3.27.0
