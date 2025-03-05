@@ -138,68 +138,10 @@ h3 {
       `)
       return file.name
 })
-fs.writeFileSync("./src/router/index.js",`import { createRouter,createWebHistory} from 'vue-router'
 
-
-const gen=(p,type)=>{
-  console.log(type+"/"+p+".txt")
-return ""+type+"/"+p+".txt"
-}
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component:() => import('../views/HomeView.vue')
-    }, {
-      path: '/situation',
-      name: 'situation',
-      component:() => import('../views/situation.vue')
-    },{
-      path: '/suivi',
-      name: 'veille',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/suiviView.vue')
-    },
-    {
-      path: '/cv',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }, ${tobuild.map((folder)=>{
-      return fs.readdirSync(`./public/static/${folder}`).map((file)=>{
-return `{
-      path: '/${folder}/${file.split(".")[0].replace("-",'')}',
-      name: '${folder}-${file.split(".")[0]}',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/projectView.vue'),
-      props:()=>{return {name:gen("${file.split(".")[0]}",'${folder}')}}
-    }`
-      }).join(",")
-    }).join(",\n")},
-    ${tobuild.map((folder)=>{
-      return `{
-      path: '/${folder}',
-      name: '${folder}',
-      component: () => import('../components/${folder}.vue'),
-      props:()=>{return {name:gen("${folder}",'${folder}')}}
-    }`
-    }).join(",\n")}
-  ]
-})
-
-export default router
-`)
 import * as https from 'node:https'
 import * as dns from 'dns'
-process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+
 const staticDnsAgent = (resolvconf) => new https.Agent({
   lookup: (hostname, opts, cb) => {
     console.log(resolvconf[0].address)
