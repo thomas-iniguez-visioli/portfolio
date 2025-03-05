@@ -61,7 +61,9 @@ var searchFunc = function (path, search_id, content_id) {
             data.title = "Untitled";
           }
           var data_title = data.title.trim().toLowerCase();
-          var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+          var data_content = data.content.trim();
+          while (data_content !== (data_content = data_content.replace(/<[^>]+>/g, "")));
+          data_content = data_content.toLowerCase();
           var data_url = data.url;
           var index_title = -1;
           var index_content = -1;
