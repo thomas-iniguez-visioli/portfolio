@@ -1,2 +1,2 @@
 <h1>pour voir si un site est en panne  </h1>
-<a href="https://alphaleadership.github.io/status/">[lien actif]</a>
+<a href="https://thomas-iniguez-visioli.github.io/status/">[lien actif]</a>
