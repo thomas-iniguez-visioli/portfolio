@@ -5,9 +5,9 @@
 en travaux
 ,Là où j'ai aidé à faire appliquer le rgpd 
 <a href="https://france-nuit.github.io/article/">[redacted]</a> 
-,<h1>pour voir si un site est en panne  </h1>
+,pour voir si un site est en panne 
 <a href="https://thomas-iniguez-visioli.github.io/status/">[lien actif]</a>
-,<h1>un outil pour regarder youtube sans pub </h1>
+,un outil pour regarder youtube sans pub 
 <a href="https://github.com/thomas-iniguez-visioli/youtube-public/releases/latest">[download]</a>
 
       
