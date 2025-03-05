@@ -2,11 +2,10 @@ import * as fs from'fs'
 const config=JSON.parse(fs.readFileSync('./config.json'))
 
 console.log("test")
-fs.writeFileSync("./index.html",fs.readFileSync("./index.html").toString().replace("peoplename",config.name))
-fs.writeFileSync("./src/App.vue",fs.readFileSync("./src/App.vue").toString().replace("peoplename",config.name))
+
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
 const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
-  fs.writeFileSync(`./src/components/${file.name.toLowerCase()}.vue`,`
+  fs.writeFileSync(`./src/source/_posts/${file.name.toLowerCase()}.md`,`
     <script setup>
     import WelcomeItem from './${file.name}Item.vue'
   
