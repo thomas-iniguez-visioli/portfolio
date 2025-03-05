@@ -1,6 +1,6 @@
 
  
-    <h1>projet de site internet parodique destiné à parodier France soir </h1>
+    projet de site internet parodique destiné à parodier France soir 
 <a href="https://france-nuit.github.io/article/">un lien</a>
 en travaux
 ,Là où j'ai aidé à faire appliquer le rgpd 
