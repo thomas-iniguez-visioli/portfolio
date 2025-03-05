@@ -25,7 +25,7 @@ const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(
       
     </template>
     `)
-    fs.writeFileSync(`./src/components/${file.name}Item.vue`,`
+    fs.writeFileSync(`./src/${file.name}Item.vue`,`
      <script setup>
 import { RouterLink} from 'vue-router'
 import {  onMounted } from 'vue'
