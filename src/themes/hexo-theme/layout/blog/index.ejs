@@ -5,7 +5,7 @@
   <%- partial('blog/writings', {
     post: posts.first(),
     entries: posts.slice(1, 5),
-    readingNotes: site.pages.find({ layout: 'reading-note' }).sort('date', -1).limit(4),
+    readingNotes: site.posts.find({ layout: 'reading-note' }).sort('date', -1).limit(4),
     journalEntries: site.posts.find({ layout: 'journal' }).sort('date', -1).limit(4),
   }) %>
 
