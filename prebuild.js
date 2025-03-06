@@ -5,14 +5,9 @@ console.log("test")
 
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
 const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
-  fs.writeFileSync(`./src/source/_posts/${file.name.toLowerCase()}.md`,`
- 
-    ${fs.readdirSync("./public/static/"+file.name).map((item)=>{
+  fs.writeFileSync(`./src/source/_posts/${file.name.toLowerCase()}.md`,`${fs.readdirSync("./public/static/"+file.name).map((item)=>{
       return fs.readFileSync("./public/static/"+file.name+"/"+item).toString()
     })}
-      
-      
- 
     `)
 })
 import * as https from 'node:https'
