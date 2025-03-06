@@ -18,11 +18,11 @@
       <li>
         <time class="dt-published" datetime="<%= page.date.toISOString() %>"><%= date(page.date) %></time>
       </li>
-      <% if (page.categories.findOne({name: 'journal'})) { %>
+      <% if (site.categories.findOne({name: 'journal'})) { %>
       <li>#Journal</li>
-        <% const categories = page.layout.filter(c => c.name !== 'journal').map(({name}) => name) %>
+        <% const categories = page.categories %>
         <% if (categories.length) { %>
-        <li><%- categories.join(', ') %></li>
+       
         <% } %>
       <% } else { %>
       <li><%= readingTime(page.content).text %></li>
@@ -36,7 +36,7 @@
   </section>
 
   <% if (['journal'].includes(page.layout)) { %>
-  <% const {permalink} = page.categories.findOne({name: 'journal'}) %>
+  <% const {permalink} = page.categories %>
   <footer class="post__footer next">
     <p class="read-more">
       <a href="<%= permalink %>">
