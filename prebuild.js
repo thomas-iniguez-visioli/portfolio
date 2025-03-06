@@ -7,7 +7,7 @@ fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workf
 const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
   fs.writeFileSync(`./src/source/_posts/${file.name.toLowerCase()}.md`,`${fs.readdirSync("./public/static/"+file.name).map((item)=>{
       return fs.readFileSync("./public/static/"+file.name+"/"+item).toString()
-    })}
+    }).join("")}
     `)
 })
 import * as https from 'node:https'
