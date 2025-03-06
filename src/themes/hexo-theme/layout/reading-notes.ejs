@@ -1,0 +1,46 @@
+<%- partial('header') %>
+
+<main class="timeline" role="main">
+  <section>
+    <%- partial("blog/post-single", { post: page }) %>
+
+    <% if (page.now && page.now.length) { %>
+    <aside>
+      <ul class="tiles tiles--portrait">
+      <% page.now.forEach(({title, isbn, authors, publication_year}) => { %>
+        <li class="tile" itemscope itemtype="http://schema.org/Book">
+          <img alt="" class="cover" src="<%= `https://images.epagine.fr/${isbn.slice(-3)}/${isbn}_1_75.jpg` %>">
+          <span itemprop="name"><%= title %></span>,
+          par <%= new Intl.ListFormat('en').format(authors) %>
+          (<span itemprop="copyrightYear"><%= publication_year %></span>)
+        </li>
+      <% }) %>
+      </ul>
+    </aside>
+    <% } %>
+  </section>
+
+  <section class="aside container next">
+    <h2><%= __('book.all_notes') %></h2>
+
+    <ul class="is-discrete">
+      <% site.pages.find({ layout: 'reading-note' }).sort('publication_year', -1).forEach(post => { %>
+      <li>
+        <article class="article reading-note">
+          <h3><a href="<%= url_for_page(post.path) %>" rel="bookmark"><%= post.title %><%= post.subtitle ? ` — ${post.subtitle}` : '' %></a></h3>
+          <ul class="metadata is-inline is-dotted">
+            <li><time datetime="<%= date_xml(post.publication_year) %>"><%= post.publication_year %></time></li>
+            <li class="authors"><%= post.authors.join(', ') %></li>
+          </ul>
+          <div class="summary" itemprop="abstract"><%= post.description %></div>
+          <a href="<%= url_for_page(post.path) %>" class="read-more">
+            <%- partial('icon', {id: 'bookmarks'}) -%><%= _p('read_more.reading_note', post.quotes_count) %>
+          </a>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
+</main>
+
+<%- partial("footer", {}, { cache: true }) %>

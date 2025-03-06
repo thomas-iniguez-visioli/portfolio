@@ -1,0 +1,91 @@
+repost_tag: This blogpost has originally been published on %s as %s.
+pictures:
+  label:
+    one: picture
+    other: pictures
+  count:
+    zero: No picture
+    one: 1 picture series
+    other: "%d pictures series"
+metadata:
+  label:
+    one: picture
+    other: pictures
+  count:
+    zero: No picture
+    one: 1 picture
+    other: "%d pictures"
+  published_in: Published in <time datetime="%s">%s</time>
+  author:
+    one: Author
+    other: "Authors"
+  suggest_edit: Noticed something? Suggest a change
+  thanks_to: Thanks to %s.
+
+book:
+  description: Description
+  reading_notes: "%d Reading Notes"
+  notes: All the Notes
+  find_in_store: Find in a bookstore
+  url: Read more about the book
+
+read_more:
+  article: Read the rest
+  reading_notes: Read the %d notes
+  summary: Display summary
+
+load:
+  comments: Load comments
+
+most_recent_post: Most recent post
+writings:
+  posts: Essays
+  journal: Journal entries
+  reading_notes: Reading notes
+
+talk:
+  post: Talk
+  workshop: Workshop
+  meetup: Meetup
+  conference: Conference
+
+hosted:
+  organized: organized
+  in: in %s
+  by: hosted by <a href="%s" target="_blank" rel="noopener">%s</a>
+  page: Event page
+
+explain:
+  disqus: |
+    Comments no longer works at the moment.
+    I used to host them on Disqus.com but decided to quit this platform.
+  search: Type what you are looking for
+
+more:
+  writings: More writings
+  work: Notable projects
+  topic: More content about “%s”
+  testimonies: Some testimonies
+  archives: Browse the archives
+  reading_notes: Browse all reading notes
+  journal: Browse all journal entries
+  feed: Get the writings RSS feed
+  photography: More pictures
+  photography_archives: Browse my photography archives
+  photography_feed: Get the pictures RSS feed
+  comments: Read and react to comments
+  talks: Talks and conferences
+  workshops: Workshops
+
+featured:
+  talks: Featured Presentations
+
+categories:
+  Journal: |
+    A short format to document learnings, brain bites and long-term explorations.
+
+search:
+  label: Search
+  powered_by: Search is powered by
+work: Work
+hire_me: Hire me

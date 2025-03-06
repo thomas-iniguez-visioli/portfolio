@@ -1,0 +1,8 @@
+<%- partial('header') %>
+
+<main role="main">
+  <%- partial("blog/post-single", { post: page }) %>
+  <%- partial("blog/comments", { post: page }) %>
+</main>
+
+<%- partial("footer", {}, { cache: true }) %>

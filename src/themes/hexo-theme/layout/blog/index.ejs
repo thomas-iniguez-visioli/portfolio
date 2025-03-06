@@ -1,0 +1,16 @@
+<%- partial('header') %>
+<% const posts = site.posts.find({ layout: 'post' }).sort('date', -1).limit(10) %>
+
+<main role="main">
+  <%- partial('blog/writings', {
+    post: posts.first(),
+    entries: posts.slice(1, 5),
+    readingNotes: site.pages.find({ layout: 'reading-note' }).sort('date', -1).limit(4),
+    journalEntries: site.posts.find({ layout: 'journal' }).sort('date', -1).limit(4),
+  }) %>
+
+ 
+  <%- partial('blog/pictures', {}) %>
+</main>
+
+<%- partial("footer", {}, { cache: true }) %>

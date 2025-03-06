@@ -1,0 +1,17 @@
+<div class="post-cover">
+  <%- partial("_hero", { post: post }) %>
+
+  <div class="post-cover__body">
+    <div class="container">
+      <section>
+        <div class="post-cover__content">
+          <% if(typeof archiveType !== 'undefined'){ -%>
+          <h1 class="title"><%= archiveType %></h1>
+
+          <p><%= page.posts.length %> articles published so far.</p>
+          <% } -%>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

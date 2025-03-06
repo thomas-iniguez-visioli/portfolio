@@ -1,0 +1,85 @@
+<section id="featured">
+  <header class="next container">
+    <h1><%= __('featured.talks') %></h1>
+  </header>
+
+  <ul class="is-discrete talks talks--featured">
+    <% site.categories.findOne({ name: 'Featured' }).posts.sort('date', -1).forEach(post => { %>
+    <li class="type--<%= post.layout %>">
+      <article class="article article__card talk">
+        <h2 class="event-name"><%- post.title || post.event.name %></h2>
+
+        <div class="cover full">
+          <img src="<%- url_for_page(post.path) %><%- post.cover %>" alt="" role="presentation">
+        </div>
+
+        <ul class="metadata">
+          <%_ if (post.with) { %>
+            <li class="metadata--co-host"><%= __('with') _%>
+            <%- post.with.map(el => somebody(el)).map(({name, url}) => `<a href="${url}" target="_blank" rel="noopener">${name}</a>`).join(', ') _%>
+          </li>
+          <% } _%>
+          <li class="metadata--event">
+            <%- partial('icon', {id: 'at'}) -%>
+            <a href="<%- post.event.url %>" target="_blank"><%- post.event.name %></a>
+          </li>
+          <%_ if (post.external || post.slides) { %>
+            <li class="metadata--artifact">
+              <%- partial('icon', {id: 'browse'}) -%>
+              <a href="<%= url_for(post.external || post.path) %>" rel="bookmark" lang="<%= post.lang || config.language %>" class="<%= post.external ? 'external' : '' %>"><%= __('slideshow') %></a>
+            </li>
+          <% } _%>
+          <%_ if (post.event && post.video) { %>
+            <li class="metadata--artifact">
+              <%- partial('icon', {id: 'youtube'}) -%>
+              <a href="<%= post.video %>"><%= __('watch') %></a>
+              (<%= post.event.duration %> minutes)
+            </li>
+          <% } _%>
+          <%_ if (post.event && post.audio) { %>
+            <li class="metadata--artifact">
+              <%- partial('icon', {id: 'youtube'}) -%>
+              <a href="<%= post.audio %>"><%= __('listen') %></a>
+            </li>
+          <% } _%>
+        </ul>
+
+        <% if (post.description) { %>
+        <div class="summary"><%= post.description %></div>
+        <% } %>
+      </article>
+    </li>
+    <% }) %>
+  </ul>
+</section>
+
+<section id="talks">
+  <header class="next container">
+    <h1><%= __('more.talks') %></h1>
+  </header>
+
+  <ul class="is-discrete with-metadata">
+    <% const nonFeaturedCategories = site.categories.findOne({ name: { $in: ['Talk'], $nin: ['Featured']} }) %>
+    <% site.categories.findOne({ name: { $in: ['Talk'], $nin: ['Featured']} }).posts.sort('date', -1).forEach(post => { %>
+    <li>
+      <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time>
+      <%- post.event.url ? `<a href="${post.event.url}" target="_blank">${post.title || post.event.name}</a>` : (post.title || post.event.name) %>
+    </li>
+    <% }) %>
+  </ul>
+</section>
+
+<section class="aside aside--half" id="workshops">
+  <header class="next container">
+    <h1><%= __('more.workshops') %></h1>
+  </header>
+
+  <ul class="is-discrete with-metadata">
+    <% site.categories.findOne({ name: 'Workshop' }).posts.sort('date', -1).forEach(post => { %>
+    <li>
+      <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time>
+      <%- post.event.url ? `<a href="${post.event.url}" target="_blank">${post.title || post.event.name}</a>` : (post.title || post.event.name) %>
+    </li>
+    <% }) %>
+  </ul>
+</section>

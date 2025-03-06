@@ -1,0 +1,53 @@
+description: >
+  thomas iniguez visioli
+author: thomas iniguez visioli
+email: thomas.iniguez@free.fr
+
+graph:
+  twitter:            
+  mastodon:           
+  fediverse_creator:  ''
+  github:             
+  gitlab:             
+  framagit:           
+  pro:                
+  old:                
+
+
+summary:
+  home: |
+    Hello and welcome to my online&nbsp;space.
+    Here, I explore a way to document my journey through life.
+
+    _Enjoy!_ — Thomas
+  work: >
+    I combine web development, UX research and human-centered agile practices
+    to put people at ease, to create a shared understanding of the _whys_ and the _whats_
+    and to move from ideas to prototyping then to production.
+
+links:
+  - label: Writings
+    href: /
+  - label: Talks
+    href: /talks/
+  - label: Reading Notes
+    href: /reading-notes/
+  - label: Photography
+    href: /photography/
+
+  - label: About
+    href: /about/
+
+
+less:
+  layouts:
+    series-day-to-day:
+      - styles/series-day-to-day.css
+    series-default:
+      - styles/series-default.css
+  paths:
+    - source/less
+    - node_modules/bootstrap/less
+    - node_modules/hexo-theme-thom4/source/less
+    - node_modules/hexo-theme-thom4/node_modules
+    - node_modules

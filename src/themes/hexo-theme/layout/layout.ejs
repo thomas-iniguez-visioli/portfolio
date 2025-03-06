@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="<%- config.language %>" prefix="og: http://ogp.me/ns#">
+<head><%- partial('_head') %></head>
+<body class="home <%= `site-${config.layout} content-${page.layout}` %>">
+<%- body %>
+<script src="<%= url_for(`/assets/js/main.js?v=${process.env.npm_package_version}`)%>" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<header class="header container">
+
+  <div class="profile-picture">
+    <a href="<%= url_for('/' )%>" rel="home">
+      <img src="/assets/avatar.avif" alt="<%= config.title %>" class="is-avatar is-responsive">
+    </a>
+  </div>
+
+  <div class="presentation"><%- markdown(theme.description) %></div>
+
+  <nav>
+    <ul class="is-inline is-dotted">
+      <% getNavLinks(theme.links).forEach(link => { %>
+        <li class="<%= link.classNames %>"><a href="<%= link.href %>" lang="<%= link.lang || config.language %>"><%= link.label %></a></li>
+      <% }) %>
+    </ul>
+  </nav>
+</header>
+
+<section id="search" class="container<%= page.display_search ? ' is-active' : ''%>">
+  <form action="#" role="search">
+    <input type="search" name="q" placeholder="<%= __('explain.search') %>" spellcheck autocomplete required><button type="submit"><%- partial('icon', {id: 'search', alt: __('search.label')}) %></button>
+  </form>
+
+  <ul class="search-results is-discrete with-metadata"></ul>
+
+  <p class="next">
+    <a href="https://www.algolia.com" class="credits" target="_blank" rel="noreferrer noopener">
+      <%= __('search.powered_by') %>
+      <%- partial('icon', {id: 'algolia', alt: 'Algolia', size: 'auto'}) %>
+    </a>
+  </p>
+</section>

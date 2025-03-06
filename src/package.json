@@ -12,6 +12,7 @@
     "version": "7.3.0"
   },
   "dependencies": {
+    "group-array": "^1.0.0",
     "hexo": "^7.3.0",
     "hexo-enhancer": "^1.0.10",
     "hexo-generator-archive": "^2.0.0",
@@ -23,6 +24,9 @@
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "markdown-it-container": "^4.0.0",
+    "reading-time": "^1.5.0",
+    "somebody": "^3.0.0"
   }
 }
