@@ -1,7 +1,2 @@
-
- 
-    content ,content ozeuor
-      
-      
- 
+content content ozeuor
     
