@@ -6,7 +6,7 @@
       <li>
         <%- _p('metadata.published_in', date_xml(post.publication_year), post.publication_year) %>
       </li>
-      <li class="authors"><%= post.authors.join(', ') %></li>
+
     </ul>
 
     <h2 class="h5"><%= post.subtitle || __('book.description') %></h2>
@@ -31,7 +31,7 @@
   </header>
 
   <div class="post__content post__content--text e-content next">
-    <h2><%= _p('book.notes', post.quotes_count) %></h2>
+
 
     <%- post.content %>
   </div>

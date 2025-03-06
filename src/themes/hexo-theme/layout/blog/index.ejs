@@ -1,15 +1,15 @@
 <%- partial('header') %>
-<% const posts = site.posts.find({ layout: 'post' }).sort('date', -1).limit(10) %>
+
 
 <main role="main">
   <%- partial('blog/writings', {
-    post: posts.first(),
-    entries: posts.slice(1, 5),
+    post: site.posts.first(),
+    entries: site.posts.slice(1, 5),
     readingNotes: site.posts.find({ layout: 'reading-note' }).sort('date', -1).limit(4),
     journalEntries: site.posts.find({ layout: 'journal' }).sort('date', -1).limit(4),
   }) %>
 
- 
+
   <%- partial('blog/pictures', {}) %>
 </main>
 

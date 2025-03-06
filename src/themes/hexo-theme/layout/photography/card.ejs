@@ -49,6 +49,6 @@
       <%= post.authors.join(', ') %>
       <% } -%>
     </li>
-    <li class="metadata metadata--tags"><%= (post.category || []).map(d => `#${d.name}`).join(' ') %></li>
+    <li class="metadata metadata--tags"><%= (post.categories || []).map(d => `#${d.name}`).join(' ') %></li>
   </ul>
 </article>

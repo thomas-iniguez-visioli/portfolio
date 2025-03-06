@@ -19,7 +19,8 @@ title: ${item.replace(".txt","")}
 date: ${new Date().toISOString()}
 tags:
 layout: '${getlayout(file.name.toLowerCase())}'
-category: 
+lang: fr
+categories: 
   - ${getlayout(file.name.toLowerCase())}
 ---
 ${fs.readFileSync("./public/static/"+file.name+"/"+item).toString()}`)

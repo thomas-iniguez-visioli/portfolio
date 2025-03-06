@@ -1,6 +1,6 @@
 ---
 title: youtube
-date: 2025-03-06T15:13:37.409Z
+date: 2025-03-06T15:13:15.461Z
 tags:
 layout: 'journal'
 lang: fr

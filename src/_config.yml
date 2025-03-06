@@ -84,7 +84,8 @@ index_generator:
 layout: blog
 # Category & Tag
 default_category: uncategorized
-category_map: [journal,reading-note]
+category_map: 
+    - journal: Journal
 
 tag_map:
 

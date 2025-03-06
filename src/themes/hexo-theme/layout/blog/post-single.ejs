@@ -1,57 +1,63 @@
-<% const d = moment(post.date) -%>
-<article class="h-entry post article <%= typeof classNames === 'string' ? classNames : '' %> container" aria-labelledby="post-title" aria-describedby="read" lang="<%= post.lang || config.language %>">
+<% const d = moment(page.date) -%>
+<article class="h-entry page article <%= typeof classNames === 'string' ? classNames : '' %> container" aria-labelledby="page-title" aria-describedby="read" lang="<%= page.lang || config.language %>">
   <header class="post__header">
-    <% if (post.cover) { %>
-    <div class="<%= ['cover', post.cover.type].filter(d=>d).join(' ') %>">
-      <img src="<%= post.image %>" alt="" class="is-responsive is-cover">
+    <% if (page.cover) { %>
+    <div class="<%= ['cover', page.cover.type].filter(d=>d).join(' ') %>">
+      <img src="<%= page.image %>" alt="" class="is-responsive is-cover">
     </div>
     <% } %>
 
-    <h1 id="post-title"><%= post.title %></h1>
+    <h1 id="page-title"><%= page.title %></h1>
 
     <% if (is_page()) { %>
-    <%- toc(post.content, {list_number: false}).replace(/>§/g, '>') %>
+    <%- toc(page.content, {list_number: false}).replace(/>§/g, '>') %>
     <% } %>
 
-    <% if (is_post(post)) { %>
+    <% if (is_post(page)) { %>
     <ul class="metadata is-inline is-dotted">
       <li>
-        <time class="dt-published" datetime="<%= post.date.toISOString() %>"><%= date(post.date) %></time>
+        <time class="dt-published" datetime="<%= page.date.toISOString() %>"><%= date(page.date) %></time>
       </li>
-      
-      <li>#journal</li>
-   
-      <li><%= readingTime(post.content).text %></li>
-    
+      <% if (page.categories.findOne({name: 'journal'})) { %>
+      <li>#Journal</li>
+        <% const categories = page.layout.filter(c => c.name !== 'journal').map(({name}) => name) %>
+        <% if (categories.length) { %>
+        <li><%- categories.join(', ') %></li>
+        <% } %>
+      <% } else { %>
+      <li><%= readingTime(page.content).text %></li>
+      <% } %>
     </ul>
     <% } %>
   </header>
 
   <section id="read" class="post__content post__content--text e-content">
-    <%- post.content %>
+    <%- page.content %>
   </section>
 
-  <% if (['journal'].includes(post.layout)) { %>
-  
+  <% if (['journal'].includes(page.layout)) { %>
+  <% const {permalink} = page.categories.findOne({name: 'journal'}) %>
   <footer class="post__footer next">
     <p class="read-more">
-
+      <a href="<%= permalink %>">
+        <%- partial('icon', {id: 'coffee'}) -%><%= __('more.journal') %>
+      </a>
     </p>
   </footer>
   <% } %>
 
-  <% if (is_post() && post.layout === 'post') { %>
+  <% if (is_post() && page.layout === 'page') { %>
   <footer class="post__footer next" aria-label="Feedback links">
-    <% if (post.thanks_to) { %>
-    <%- markdown(__('metadata.thanks_to', post.thanks_to)) %>
+    <% if (page.thanks_to) { %>
+    <%- markdown(__('metadata.thanks_to', page.thanks_to)) %>
     <% } %>
     <ul class="is-discrete read-more">
       <li>
-        <a href="https://github.com/thom4parisot/thom4.net/tree/main/source/<%= post.source %>">
+        <a href="https://github.com/thom4parisot/thom4.net/tree/main/source/<%= page.source %>">
           <%- partial('icon', {id: 'html-tag'}) -%><%= __('metadata.suggest_edit') %>
         </a>
       </li>
-      <% if (post.comments) { %><li>
+      <% if (page.comments) { %><li>
         <a href="#comments">
           <%- partial('icon', {id: 'reactions'}) -%><%= __('more.comments') %>
         </a>
@@ -66,18 +72,18 @@
   <% } %>
 
 
-  <% if (is_post() && post.layout === 'post' && post.category.first()) { %>
-  <% const category = post.category.first() %>
-  <% const aside = post.category.first().posts.find({ date: {$lt: post.date}}).sort('date', -1).limit(4) %>
+  <% if (is_post() && page.layout === 'page' && page.categories.first()) { %>
+  <% const category = page.categories.first() %>
+  <% const aside = page.categories.first().posts.find({ date: {$lt: page.date}}).sort('date', -1).limit(4) %>
   <% if (aside.length) { %>
   <aside class="next" aria-labelledby="next-content-title">
     <h2 id="next-content-title"><%= __('more.topic', category.name)%></h2>
 
     <ul class="is-discrete with-metadata">
-      <% aside.forEach(post => { %>
+      <% aside.forEach(page => { %>
       <li>
-        <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time>
-        <a href="<%= url_for(post.path) %>" rel="bookmark" lang="<%= post.lang || config.lang %>"><%= post.title.replace(/☕️ journal : /, '') %></a>
+        <time class="metadata" datetime="<%= date_xml(page.date) %>"><%= date(page.date) %></time>
+        <a href="<%= url_for(page.path) %>" rel="bookmark" lang="<%= page.lang || config.lang %>"><%= page.title.replace(/☕️ Journal : /, '') %></a>
       </li>
       <% }) %>
     </ul>
@@ -85,21 +91,21 @@
   <% } %>
   <% } %>
 
-  <% if (is_post() && post.layout === 'journal') { %>
-  <% const category = post.category.last() %>
-  <% const next = category.posts.find({ date: {$gte: post.date} }).sort('date', -1).limit(4) %>
-  <% const previous = category.posts.find({ date: {$lt: post.date} }).sort('date', -1).limit(4) %>
+  <% if (is_post() && page.layout === 'journal') { %>
+  <% const category = page.categories.last() %>
+  <% const next = category.posts.find({ date: {$gte: page.date} }).sort('date', -1).limit(4) %>
+  <% const previous = category.posts.find({ date: {$lt: page.date} }).sort('date', -1).limit(4) %>
   <% const aside = [].concat(next.toArray(), previous.toArray()) %>
-  <% if (aside.length && category !== post.category.first()) { %>
+  <% if (aside.length && category !== page.categories.first()) { %>
   <aside class="next" aria-labelledby="next-category-title">
     <h2 id="next-category-title"><%= __('more.topic', category.name)%></h2>
 
     <ul class="is-discrete with-metadata">
       <% aside.forEach(p => { %>
-      <% const title = p.title.replace(/☕️ journal : /, '') %>
-      <li<%- post.path === p.path ? ' aria-current="true"' : '' -%>>
+      <% const title = p.title.replace(/☕️ Journal : /, '') %>
+      <li<%- page.path === p.path ? ' aria-current="true"' : '' -%>>
         <time class="metadata" datetime="<%= date_xml(p.date) %>"><%= date(p.date) %></time>
-        <% if (post.path === p.path) { %>
+        <% if (page.path === p.path) { %>
         <span><%= title %></span>
         <% } else { %>
         <a href="<%= url_for(p.path) %>" rel="bookmark" lang="<%= p.lang || config.lang %>"><%= title %></a>

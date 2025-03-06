@@ -4,7 +4,7 @@
   </header>
 
   <ul class="is-discrete talks talks--featured">
-    <% site.category.findOne({ name: 'Featured' }).posts.sort('date', -1).forEach(post => { %>
+    <% site.categories.findOne({ name: 'Featured' }).posts.sort('date', -1).forEach(post => { %>
     <li class="type--<%= post.layout %>">
       <article class="article article__card talk">
         <h2 class="event-name"><%- post.title || post.event.name %></h2>
@@ -59,8 +59,8 @@
   </header>
 
   <ul class="is-discrete with-metadata">
-    <% const nonFeaturedcategory = site.category.findOne({ name: { $in: ['Talk'], $nin: ['Featured']} }) %>
-    <% site.category.findOne({ name: { $in: ['Talk'], $nin: ['Featured']} }).posts.sort('date', -1).forEach(post => { %>
+    <% const nonFeaturedCategories = site.categories.findOne({ name: { $in: ['Talk'], $nin: ['Featured']} }) %>
+    <% site.categories.findOne({ name: { $in: ['Talk'], $nin: ['Featured']} }).posts.sort('date', -1).forEach(post => { %>
     <li>
       <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time>
       <%- post.event.url ? `<a href="${post.event.url}" target="_blank">${post.title || post.event.name}</a>` : (post.title || post.event.name) %>
@@ -75,7 +75,7 @@
   </header>
 
   <ul class="is-discrete with-metadata">
-    <% site.category.findOne({ name: 'Workshop' }).posts.sort('date', -1).forEach(post => { %>
+    <% site.categories.findOne({ name: 'Workshop' }).posts.sort('date', -1).forEach(post => { %>
     <li>
       <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time>
       <%- post.event.url ? `<a href="${post.event.url}" target="_blank">${post.title || post.event.name}</a>` : (post.title || post.event.name) %>

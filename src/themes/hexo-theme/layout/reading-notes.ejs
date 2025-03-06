@@ -24,7 +24,7 @@
     <h2><%= __('book.all_notes') %></h2>
 
     <ul class="is-discrete">
-      <% site.pages.find({ layout: 'reading-note' }).sort('publication_year', -1).forEach(post => { %>
+      <% site.posts.find({ layout: 'reading-note' }).sort('publication_year', -1).forEach(post => { %>
       <li>
         <article class="article reading-note">
           <h3><a href="<%= url_for_page(post.path) %>" rel="bookmark"><%= post.title %><%= post.subtitle ? ` — ${post.subtitle}` : '' %></a></h3>

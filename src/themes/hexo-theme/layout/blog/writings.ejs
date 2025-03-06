@@ -1,22 +1,22 @@
 <section class="container with-aside">
-  <article itemscope itemtype="https://schema.org/Article" class="article article__card" id="latest-writing" aria-label="<%= post.title %>" aria-describedby="latest-writing-content" lang="<%= post.lang || config.language %>">
-    <h2 class="h3" itemprop="name"><a href="<%= url_for(post.path) %>" rel="bookmark"><%= post.title %></a></h2>
+  <article itemscope itemtype="https://schema.org/Article" class="article article__card" id="latest-writing" aria-label="<%= page.title %>" aria-describedby="latest-writing-content" lang="<%= page.lang || config.language %>">
+    <h2 class="h3" itemprop="name"><a href="<%= url_for(page.path) %>" rel="bookmark"><%= page.title%></a></h2>
 
-    <div class="<%= ['cover', post.cover && post.cover.type].filter(d=>d).join(' ') %>">
-      <% if (post.cover) { %><img src="<%= post.image %>" itemprop="thumbnailUrl" alt="" class="is-responsive"><% } %>
+    <div class="<%= ['cover', page.cover && page.cover.type].filter(d=>d).join(' ') %>">
+      <% if (page.cover) { %><img src="<%= page.image %>" itemprop="thumbnailUrl" alt="" class="is-responsive"><% } %>
     </div>
 
     <ul class="metadata is-inline is-dotted">
       <li>
-        <time itemprop="datePublished" class="dt-published" datetime="<%= post.date.toISOString() %>"><%= date(post.date) %></time>
+        <time itemprop="datePublished" class="dt-published" datetime="<%= page.date %>"><%= date(page.date) %></time>
       </li>
-      <li itemprop="timeRequired"><%= readingTime(post.content).text %></li>
+    
     </ul>
 
-    <div class="summary" itemprop="abstract" id="latest-writing-content"><%- post.description || post.excerpt %></div>
+    <div class="summary" itemprop="abstract" id="latest-writing-content"><%- page.description || page.excerpt %></div>
 
     <p class="read-more">
-      <a href="<%= url_for(post.path) %>" itemprop="url">
+      <a href="<%= url_for(page.path) %>" itemprop="url">
         <%- partial('icon', {id: 'bookmarks'}) -%><%= _p('read_more.article') %>
       </a>
     </p>
@@ -28,10 +28,10 @@
     <h2 id="next-posts-title"><%= _p('writings.posts') %></h2>
 
     <ul class="is-discrete with-metadata">
-      <% entries.forEach(post => { %>
+      <% readingNotes.forEach(page => { %>
       <li>
-        <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time>
-        <a href="<%= url_for(post.path) %>" rel="bookmark"><%= post.title %></a>
+        <time class="metadata" datetime="<%= date_xml(page.date) %>"><%= date(page.date) %></time>
+        <a href="<%= url_for(page.path) %>" rel="bookmark"><%= page.title %></a>
       </li>
       <% }) %>
     </ul>
@@ -50,15 +50,15 @@
     <h2 id="next-journal-title"><%= _p('writings.journal') %></h2>
 
     <ul class="is-discrete with-metadata">
-      <% journalEntries.forEach(post => { %>
+      <% journalEntries.forEach(page => { %>
       <li>
-        <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'Do MMMM') %></time>
-        <a href="<%= url_for(post.path) %>" rel="bookmark"><%= post.title.replace('☕️ journal : ', '') %></a>
+        <time class="metadata" datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'Do MMMM') %></time>
+        <a href="<%= url_for(page.path) %>" rel="bookmark"><%= page.title.replace('☕️ projet : ', '') %></a>
       </li>
       <% }) %>
     </ul>
 
-    <p><a href="<%= url_for('/category/journal/') %>" class="read-more">
+    <p><a href="<%= url_for('/categories/journal/') %>" class="read-more">
       <%- partial('icon', {id: 'coffee'}) -%><%= __('more.journal') %>
     </a></p>
   </aside>
