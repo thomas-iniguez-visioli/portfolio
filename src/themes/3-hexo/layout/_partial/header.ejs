@@ -44,18 +44,18 @@ site.myTags.sort(function(a,b){
 })
 
 // 对 category 进行排序
-site['myCategories']= []
-site.categories.forEach(function (item) {
+site['mycategory']= []
+site.category.forEach(function (item) {
   // 数量排除隐藏的文章
   item.posts.length = item.posts.length - item.posts.data.filter(i=>i.hidden).length
-  site.myCategories.push({
+  site.mycategory.push({
     _id: item._id,
     name: item.name,
     parent: item.parent,
     posts: item.posts
   })
 })
-site.myCategories.sort(function (a, b) {
+site.mycategory.sort(function (a, b) {
   if (theme.category && theme.category.sort) {
     return theme.category.sort.indexOf(a.name) === -1
             ? theme.category.sort.indexOf(b.name) === -1 ? String(a.name).localeCompare(String(b.name), 'zh') : 1

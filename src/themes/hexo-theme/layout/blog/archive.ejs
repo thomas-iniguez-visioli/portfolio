@@ -3,7 +3,7 @@
 <main role="main" class="container">
   <h1><%= is_category() ? page.category : 'Archives' %></h1>
 
-  <%- is_category() ? markdown(__(`categories.${page.category}`)) : '' %>
+  <%- is_category() ? markdown(__(`category.${page.category}`)) : '' %>
 
   <% for (const [year, posts] of (page.years || [[page.year, page.posts]])) { %>
   <section id="year-<%= year %>">
@@ -13,7 +13,7 @@
       <% posts.forEach(post => { %>
       <li>
         <time class="metadata" datetime="<%= date_xml(post.date) %>"><%= date(post.date) %></time>
-        <a href="<%= url_for(post.path) %>" rel="bookmark" lang="<%= post.lang || config.lang %>"><%= post.title.replace(/☕️ Journal : /, '') %></a>
+        <a href="<%= url_for(post.path) %>" rel="bookmark" lang="<%= post.lang || config.lang %>"><%= post.title.replace(/☕️ journal : /, '') %></a>
       </li>
       <% }) %>
     </ul>

@@ -109,8 +109,8 @@ $(".nav-left ul li>div").on("click", function (e) {
     $(".nav-left li>div.active").removeClass("active");
     $(this).addClass("active");
     $searchInput.val("").change();
-    var categories = String($(this).data('rel')).split('<--->');
-    $('#default-panel > .right-title').text(categories[categories.length - 1]);
+    var category = String($(this).data('rel')).split('<--->');
+    $('#default-panel > .right-title').text(category[category.length - 1]);
     $('#default-panel').show().siblings().hide();
     $outlineList.hide()
 });
@@ -337,13 +337,13 @@ function inputChange() {
         $outlineList.hide();
         $('#title-list-nav').show();
     }
-    var categories = String($(".nav-left ul li>div.active").data('rel')).split('<--->')
+    var category = String($(".nav-left ul li>div.active").data('rel')).split('<--->')
     // 处理特殊字符
-    for (i = 0; i < categories.length; i++) {
-        categories[i] =  categories[i]
+    for (i = 0; i < category.length; i++) {
+        category[i] =  category[i]
           .replace(/(?=\/|\\|#|\(|\)|\[|\]|\.)/g, "\\")
     }
-    var activeTitle = categories.join('.');
+    var activeTitle = category.join('.');
     var searchType = '';
     var containType = '';
     $('#no-item-tips').hide()
@@ -374,8 +374,8 @@ function inputChange() {
         $(".nav-right nav").find("a." + activeTitle + ":"+ ($('#search-panel > .icon-case-sensitive').hasClass('active') ? 'containsSensitive' : 'contains') + "('" + val + "')").css("display", "block");
         $(".nav-right nav a").each(function () {
             var title = $(this).children('.post-title').attr('title');
-            for (i = 0; i < categories.length; i++) {
-                if (!$(this).hasClass(categories[i])) {
+            for (i = 0; i < category.length; i++) {
+                if (!$(this).hasClass(category[i])) {
                     $(this).css('display', 'none').children('.post-title').html(title)
                     return true;
                 }

@@ -40,7 +40,7 @@ load:
 most_recent_post: Most recent post
 writings:
   posts: Essays
-  journal: Journal entries
+  journal: journal entries
   reading_notes: Reading notes
 
 talk:
@@ -80,8 +80,8 @@ more:
 featured:
   talks: Featured Presentations
 
-categories:
-  Journal: |
+category:
+  journal: |
     A short format to document learnings, brain bites and long-term explorations.
 
 search:

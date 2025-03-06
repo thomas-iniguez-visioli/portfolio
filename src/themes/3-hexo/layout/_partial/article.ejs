@@ -9,12 +9,12 @@
         <% if (theme.author.on==true && post.author) {%>
         <span class="author"><a><%=post.author %></a></span>
         <%}%>
-        <% if (post.categories && post.categories.length){ %>
+        <% if (post.category && post.category.length){ %>
         <span class="book">
             <i class="iconfont icon-category"></i>
             <% var categoryPath = []%>
-            <% post.categories.forEach(function(category, i){ categoryPath.push(category.name)%>
-            <a  data-rel="<%=categoryPath.join('<--->')%>"><%=category.name%></a><% if (i !== post.categories.length - 1) { %> <% if (theme.category && theme.category.sub) {%>><%} else {%>/<%}%> <% } %>
+            <% post.category.forEach(function(category, i){ categoryPath.push(category.name)%>
+            <a  data-rel="<%=categoryPath.join('<--->')%>"><%=category.name%></a><% if (i !== post.category.length - 1) { %> <% if (theme.category && theme.category.sub) {%>><%} else {%>/<%}%> <% } %>
             <% }) %>
         </span>
         <% } %>

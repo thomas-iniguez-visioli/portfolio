@@ -37,7 +37,7 @@
 if (theme.category && theme.category.sub) {
     // 生成一个 parent_id => childrenCategory
     var childCategoryMap = {};
-    site.myCategories.forEach(function (category) {
+    site.mycategory.forEach(function (category) {
         if (category.parent) {
             if (childCategoryMap[category.parent]) {
                 childCategoryMap[category.parent].push(category);
@@ -74,7 +74,7 @@ if (theme.category && theme.category.sub) {
             <% } %>
         </div>
     </li>
-    <% site.myCategories.forEach(function(category){ %>
+    <% site.mycategory.forEach(function(category){ %>
         <% if (theme.category && theme.category.sub) { %>
             <% if(!category.parent) { %>
                 <%= renderCategory(category) %>

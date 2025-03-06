@@ -59,7 +59,7 @@ load:
 most_recent_post: Dernier article en date
 writings:
   posts: Essais
-  journal: Journal
+  journal: journal
   reading_notes: Notes de lecture
 
 talk:
@@ -80,8 +80,8 @@ explain:
     Ils étaient hébergés sur Disqus.com jusqu'à ce que je prenne la décision d'arrêter le recours à cette plate-forme.
   search: Mots à rechercher sur ce site
 
-categories:
-  Journal: |
+category:
+  journal: |
     Un format court pour documenter mes apprentissages, des réflexions
     et des explorations de vie.
 
