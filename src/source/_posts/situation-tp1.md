@@ -1,6 +1,6 @@
 ---
 title: tp1
-date: 2025-03-10T15:44:23.944Z
+date: 2025-03-10T15:53:46.960Z
 tags:
 layout: 'reading-note'
 lang: fr
