@@ -40,7 +40,7 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1(rollup@4.34.9)
       '@rollup/plugin-commonjs':
-        specifier: ^28.0.2
+        specifier: ^28.0.3
         version: 28.0.3(rollup@4.34.9)
       '@rollup/plugin-node-resolve':
         specifier: ^16.0.0
