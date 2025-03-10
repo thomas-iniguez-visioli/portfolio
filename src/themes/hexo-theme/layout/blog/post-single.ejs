@@ -102,7 +102,7 @@
 
     <ul class="is-discrete with-metadata">
       <% aside.forEach(p => { %>
-      <% const title = p.title.replace(/☕️ Journal : /, '') %>
+      <% const title = p.title.replace(/☕️ Journal : /, 'projet') %>
       <li<%- page.path === p.path ? ' aria-current="true"' : '' -%>>
         <time class="metadata" datetime="<%= date_xml(p.date) %>"><%= date(p.date) %></time>
         <% if (page.path === p.path) { %>
