@@ -53,7 +53,7 @@
       <% journalEntries.forEach(page => { %>
       <li>
         <time class="metadata" datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'Do MMMM') %></time>
-        <a href="<%= url_for(page.path) %>" rel="bookmark"><%= page.title.replace('☕️ journal: ', projet ') %></a>
+        <a href="<%= url_for(page.path) %>" rel="bookmark"><%= page.title.replace('☕️ journal: ', 'projet ') %></a>
       </li>
       <% }) %>
     </ul>
