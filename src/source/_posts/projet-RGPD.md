@@ -1,6 +1,6 @@
 ---
 title: RGPD
-date: 2025-03-10T15:53:46.958Z
+date: 2025-03-11T07:33:39.640Z
 tags:
 layout: 'journal'
 lang: fr
