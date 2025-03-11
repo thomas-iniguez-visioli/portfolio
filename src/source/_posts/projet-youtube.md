@@ -1,11 +1,11 @@
 ---
 title: youtube
-date: 2025-03-11T15:39:37.583Z
+date: 2025-03-11T15:53:01.700Z
 tags:
-layout: 'journal'
+layout: 'reading-note'
 lang: fr
 categories: 
-  - journal
+  - reading-note
 ---
 un outil pour regarder youtube sans pub 
 <a href="https://github.com/thomas-iniguez-visioli/youtube-public/releases/latest">[download]</a>

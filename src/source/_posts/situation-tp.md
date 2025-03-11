@@ -1,10 +1,10 @@
 ---
 title: tp
-date: 2025-03-11T15:39:37.583Z
+date: 2025-03-11T15:53:01.701Z
 tags:
-layout: 'reading-note'
+layout: 'journal'
 lang: fr
 categories: 
-  - reading-note
+  - journal
 ---
 content 
