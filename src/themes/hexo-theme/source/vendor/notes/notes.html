@@ -408,7 +408,7 @@
 							notesValue.innerHTML = marked( data.notes );
 						}
 						else {
-							notesValue.innerHTML = data.notes;
+							notesValue.innerHTML = DOMPurify.sanitize(data.notes);
 						}
 					}
 					else {
