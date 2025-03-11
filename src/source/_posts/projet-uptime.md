@@ -1,6 +1,6 @@
 ---
 title: uptime
-date: 2025-03-11T15:11:54.385Z
+date: 2025-03-11T15:39:37.582Z
 tags:
 layout: 'journal'
 lang: fr
