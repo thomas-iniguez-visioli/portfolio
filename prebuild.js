@@ -3,7 +3,7 @@ const config=JSON.parse(fs.readFileSync('./config.json'))
 
 console.log("test")
 const getlayout=(title)=>{
-  if(title=="projet"){
+  if(title!=="projet"){
     return "journal"
   }else{
     return "reading-note"
