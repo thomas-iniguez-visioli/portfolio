@@ -43,7 +43,7 @@ importers:
         specifier: ^28.0.3
         version: 28.0.3(rollup@4.35.0)
       '@rollup/plugin-node-resolve':
-        specifier: ^16.0.0
+        specifier: ^16.0.1
         version: 16.0.1(rollup@4.35.0)
       '@rollup/plugin-replace':
         specifier: ^6.0.2
