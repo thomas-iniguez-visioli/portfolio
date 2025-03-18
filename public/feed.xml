@@ -6,7 +6,7 @@
   <link href="https://feed-blush.vercel.app/atom.xml" rel="self"/>
   
   <link href="https://feed-blush.vercel.app/"/>
-  <updated>2025-03-13T12:31:10.390Z</updated>
+  <updated>2025-03-18T08:14:56.222Z</updated>
   <id>https://feed-blush.vercel.app/</id>
   
   <author>
@@ -17,11 +17,277 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Appel</title>
+    <link href="https://feed-blush.vercel.app/30F3Z5S/"/>
+    <id>https://feed-blush.vercel.app/30F3Z5S/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>Appel à commentaires sur le vote par internet pour les élections non politiques</p><pre><code>  anssiadm</code></pre><p>lun 10&#x2F;03&#x2F;2025 - 15:40</p><p>Ce guide de recommandations cible la mise en œuvre du vote par Internet pour le vote non politique (associations<br>élections professionnelles<br>etc.). Il est destiné aux organisateurs de ces scrutins<br>aux prestataires fournisseurs de solutions de vote par Internet ainsi qu’aux tiers intervenant dans la vérification de la sincérité des scrutins. </p><p>Ce guide s’inscrit dans le cadre d’une collaboration avec la Commission Nationale Informatique et Libertés (CNIL) et la mise à jour en 2025 de la recommandation relative à la sécurité des systèmes de vote par correspondance électronique<br>appelé aussi vote par Internet. Un projet de recommandation a été publié le 20 janvier 2025 sous la forme d’une consultation publique.</p><p>Précisément<br>la recommandation de la CNIL définit des objectifs de sécurité à remplir pour protéger les données personnelles et respecter les grands principes électoraux (secret du vote<br>sincérité du scrutin<br>transparence). Le guide ANSSI fait<br>pour chaque objectif CNIL<br>des recommandations techniques pour répondre à l’objectif.</p><p>Le guide couvre uniquement le recours au vote par Internet pour les élections non politiques<br>telles que les élections professionnelles.</p><p>Les observations<br>commentaires et propositions peuvent être transmis jusqu’au 11 avril 2025<br>à l’adresse <a href="mailto:&#118;&#111;&#x74;&#x65;&#x2d;&#101;&#108;&#101;&#x63;&#116;&#x72;&#111;&#x6e;&#105;&#113;&#x75;&#x65;&#x40;&#x73;&#x73;&#x69;&#46;&#x67;&#111;&#117;&#118;&#46;&#102;&#114;">vote-electronique@ssi.gouv.fr</a> et à l’aide de la fiche de relecture ci-dessous.</p><p>Le public cible de cet appel à commentaires inclut :</p><p>Les organisateurs de scrutin.</p><p>Les prestataires fournisseurs de solutions de vote par correspondance électronique.</p><p>Les tiers intervenant dans la vérification de la sincérité des scrutins<br>en particulier les experts indépendants (au sens de la délibération de la CNIL).</p><p>L’ANSSI publiera<br>à l’issue de l’appel à commentaires et après consolidation des commentaires reçus<br>la version finale du guide ainsi qu’une synthèse anonymisée de ces commentaires.</p><p>L’ANSSI remercie par avance tous ceux qui répondront à cet appel à commentaires.</p><p>PIèce jointe</p><p>PDF</p><p>GuideVPI_consultation_publique.pdf</p><p>PIèce jointe</p><p>VND.OPENXMLFORMATS-OFFICEDOCUMENT.SPREADSHEETML.SHEET</p><p>GuideVPI_fiche_relecture.xlsx</p>
+    	  <a href="https://cyber.gouv.fr/actualites/appel-commentaires-sur-le-vote-par-internet-pour-les-elections-non-politiques" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Appel à commentaires sur le vote par internet pour les élections non politiques&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;lun 10&amp;#x2F;03</summary>
+      
+    
+    
+    
+    <category term="appel" scheme="https://feed-blush.vercel.app/category/appel/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lalgorithme</title>
+    <link href="https://feed-blush.vercel.app/4TT9GC/"/>
+    <id>https://feed-blush.vercel.app/4TT9GC/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>L’algorithme HAETAE lauréat de la compétition coréenne de cryptographie post-quantique</p><pre><code>  anssiadm</code></pre><p>jeu 06&#x2F;02&#x2F;2025 - 11:05</p><p>La compétition KpqC qui a débuté en 2022<br>visait à sélectionner des algorithmes de cryptographie post-quantique. Julien Devevey<br>cryptologue du Laboratoire de Cryptographie de l’ANSSI<br>a participé à la conception de l’algorithme HAETAE qui a remporté cette compétition le 16 janvier 2025.</p><p>La compétition coréenne<br>qui a débuté en 2022<br>visait la sélection et de la standardisation d’algorithmes post-quantiques KpqC qui opposait 16 algorithmes candidats. La cryptographie post quantique est l’ensemble des algorithmes cryptographiques [à clé publique] conçus pour résister non seulement aux attaques des ordinateurs actuels mais également aux attaques d’ordinateurs quantiques de très grande capacité. Les algorithmes post-quantiques peuvent être implémentés sur les ordinateurs actuels.</p><p>Parmi les 8 candidats qui restaient en lice au terme d’une présélection réalisée en 2023<br>la compétition a abouti à une sélection finale de 4 algorithmes le 16 janvier 2025.</p><p>Parmi les deux schémas de signature post-quantique sélectionnés figure HAETAE<br>fruit d’une coopération entre des équipes françaises<br>coréennes et allemandes. HAETAE<br>dont Julien Devevey<br>cryptologue à l’ANSSI est l’un des concepteurs<br>est fondé<br>de même que le standard NIST ML-DSA<br>sur la difficulté conjecturée du problème de réseaux euclidiens Module-LWE et sur une variante dite avec rejets du paradigme de Fiat-Shamir. Mais il est plus compact que ML-DSA : à niveau de sécurité égal<br>son intégration dans certains protocoles de l’internet nécessite de ce fait moins de fragmentation.</p><p>Les trois autres algorithmes de la sélection finale de la compétition KpqC sont un autre schéma de signature<br>AIMer<br>et deux schémas de chiffrement et d’établissement de clé<br>NTRU+ et SMAUG-T.</p><p>Pour en savoir plus :</p><p>HAETAE: Shorter Lattice-Based Fiat-Shamir Signatures</p><p>SMAUG-T &amp; HAETAE - HAETAE</p>
+    	  <a href="https://cyber.gouv.fr/actualites/lalgorithme-haetae-laureat-de-la-competition-coreenne-de-cryptographie-post-quantique" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;L’algorithme HAETAE lauréat de la compétition coréenne de cryptographie post-quantique&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;jeu 06&amp;</summary>
+      
+    
+    
+    
+    <category term="lalgorithme" scheme="https://feed-blush.vercel.app/category/lalgorithme/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lanssi</title>
+    <link href="https://feed-blush.vercel.app/383H45S/"/>
+    <id>https://feed-blush.vercel.app/383H45S/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>L’ANSSI et le BSI publient un rapport sur la cybersécurité des grands événements sportifs grâce à la coopération avec le secteur privé</p><pre><code>  anssiadm</code></pre><p>mer 18&#x2F;12&#x2F;2024 - 08:56</p><p>L’Agence nationale de la sécurité des systèmes d’information (ANSSI) et l’Office fédéral allemand pour la sécurité de l’information (Bundesamt für Sicherheit in der Informationstechnik – BSI) ont publié leur 9ème rapport annuel conjoint<br>dédié cette année à la cybersécurité des grands évènements sportifs appliquée sous le prisme de la coopération.</p><p>La cybersécurité des grands événements sportifs représente un défi majeur pour le pays hôte en raison de la complexité organisationnelle<br>de la multiplicité des acteurs impliqués<br>et de la visibilité mondiale à laquelle il est exposé. Autant d’éléments qui augmentent le risque d’attaques cyber pouvant compromettre la sécurité de l’ensemble du territoire<br>entraver l’expérience de millions de spectateurs et nuire à la réputation des organisateurs.</p><p>En 2024<br>les Jeux Olympiques et Paralympiques de Paris et le Championnat d’Europe-UEFA de football ont imposé à la France et l’Allemagne d’assurer la sécurité numérique et physique de toutes les parties prenantes<br>et ce<br>dans plusieurs villes et durant plusieurs semaines<br>dans un contexte géopolitique tendu. L’objectif principal étant d’éviter une interruption significative des épreuves ou des tournois<br>dont la cause serait un incident cyber.</p><p>Pour ces deux événements<br>une série de mesures préventives et réactives ont été mises en place avec tous les acteurs concernés de chaque ville hôte<br>afin de garantir le bon niveau de sécurité des systèmes d’information particulièrement exposés lors du déroulement des événements. Pour ce faire<br>il a fallu tisser des relations collaboratives entre les partenaires<br>les entreprises privées et les communautés locales<br>les fédérations ainsi que les associations.</p><p>Ce rapport met en lumière le caractère essentiel de la coopération avec le secteur privé afin de garantir la cybersécurité des grands évènements sportifs. Cette coopération est l’occasion de construire et consolider une solide relation de confiance<br>d’établir une communication améliorée sur le long terme<br>ce qui s’avère primordial en cas de crise.</p><pre><code>    Rapport conjoint ANSSI - BSI                      </code></pre><p>Vous souhaitez consulter les éditions précédentes : 2023 ​​​​​​&#x2F; 2022 &#x2F; 2021 &#x2F; 2020 &#x2F; 2019 &#x2F; 2018</p>
+    	  <a href="https://cyber.gouv.fr/actualites/lanssi-et-le-bsi-publient-un-rapport-sur-la-cybersecurite-des-grands-evenements-sportifs" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;L’ANSSI et le BSI publient un rapport sur la cybersécurité des grands événements sportifs grâce à la coopération avec le secteur privé&lt;/p</summary>
+      
+    
+    
+    
+    <category term="lanssi" scheme="https://feed-blush.vercel.app/category/lanssi/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lanssi</title>
+    <link href="https://feed-blush.vercel.app/383H45S/"/>
+    <id>https://feed-blush.vercel.app/383H45S/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>L’ANSSI met à jour les référentiels PASSI (version 2.2) et PRIS (version 3.0)</p><pre><code>  anssiadm</code></pre><p>ven 29&#x2F;11&#x2F;2024 - 10:07</p><p>Les référentiels pour la qualification des prestataires d’audit de la sécurité des systèmes d’information (PASSI) et de réponse aux incidents de sécurité (PRIS) évoluent. Les nouvelles versions des référentiels permettent d’adresser un panel plus important de bénéficiaires pour des prestations mieux adaptées à leurs besoins.</p><p>Les nouveaux référentiels permettent d’assurer une cohérence avec les travaux actuellement menés dans le cadre du règlement européen dit « CyberSecurity Act » avec l’apparition de deux niveaux de qualification : élevé et substantiel.</p><p>Ils permettent également de mieux prendre en compte les contraintes opérationnelles des prestations d’audit et de réponse tout en préservant le niveau d’expertise et de savoir-faire des prestataires qualifiés.</p><p>Si ces nouvelles versions deviennent désormais la référence<br>les évaluations actuellement en cours selon la version 2.0 du référentiel PASSI et du référentiel PRIS peuvent néanmoins être poursuivies et menées à leur terme. Les notes disponibles en bas de page présentent les modalités de transition.</p><p>La qualification d’un prestataire apporte aux bénéficiaires des garanties sur l’impartialité et la compétence du prestataire<br>la confiance que l’on peut lui accorder et sa capacité à protéger les informations et supports relatifs à la prestation.</p><p>Vous souhaitez qualifier votre service ou évaluer la conformité d’un prestataire aux exigences des référentiels de l’ANSSI ? Contactez l’Agence via industries[at]ssi.gouv.fr.</p><p>Le référentiel PASSI (version 2.2)</p><p>La note relative aux critères et modalités de transition vers le référentiel PASSI (version 2.2)</p><p>Le référentiel PRIS (version 3.0)</p><p>La note relative aux critères et modalités de transition vers le référentiel PRIS (version 3.0)</p><p>Les référentiels d’exigences pour la qualification</p><p>Les procédures et formulaires pour la qualification</p><p>La liste des prestataires qualifiés</p><p>La liste des centres d’évaluation</p>
+    	  <a href="https://cyber.gouv.fr/actualites/lanssi-met-jour-les-referentiels-passi-version-22-et-pris-version-30" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;L’ANSSI met à jour les référentiels PASSI (version 2.2) et PRIS (version 3.0)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ven 29&amp;#x2F;11&amp;#</summary>
+      
+    
+    
+    
+    <category term="lanssi" scheme="https://feed-blush.vercel.app/category/lanssi/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lanssi</title>
+    <link href="https://feed-blush.vercel.app/383H45S/"/>
+    <id>https://feed-blush.vercel.app/383H45S/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>L’ANSSI partage son guichet de diodes Eurydice en open-source</p><pre><code>  anssiadm</code></pre><p>ven 20&#x2F;12&#x2F;2024 - 08:42</p><p>L’ANSSI publie le code source d’Eurydice<br>une solution facilitant le transfert sécurisé de fichiers entre deux réseaux<br>via une diode physique.</p><p>Depuis 2021<br>les experts de l’ANSSI ont développé Eurydice<br>une solution intuitive permettant de transférer de l’information entre deux réseaux distincts et de niveaux de sécurité différents<br>via une diode physique<br>en garantissant l’intégrité des données.</p><p>Pour les utilisateurs<br>Eurydice propose une interface web intuitive et ergonomique (fonctionnalités d’upload drag-n-drop<br>visualisation rapide des fichiers<br>etc.) ainsi qu’une API pour scripter les actions<br>avec la possibilité d’ajouter des métadonnées supplémentaires aux fichiers transférés. Ce guichet de diodes élaboré par l’ANSSI facilite également la prise en mains des administrateurs en mettant à disposition des fonctionnalités multiples (gestion des comptes utilisateurs<br>authentification par Kerberos<br>endpoint de métrics<br>etc.).</p><p>Le partage du code source d’Eurydice sur la plateforme Github s’inscrit dans la continuité de l’engagement de l’ANSSI pour l’Open source. L’investissement de l’Agence – en tant que contributeur logiciel libre au sein de l’État - répond à un réel enjeu de sécurité et de souveraineté en permettant d’élaborer des solutions adaptées à de nouveaux cas d’usage<br>de sécuriser les composants de base les plus utilisés<br>mais également de développer<br>entretenir et partager sa compétence et sa maîtrise des technologies clés du numérique.</p><p>Le projet Eurydice<br>grâce à l’open source<br>est ainsi mis à disposition par l’ANSSI pour que le plus grand nombre puisse profiter de cette solution sécurisée et contribuer à son développement.</p><pre><code>    Retrouvez le détail du projet Eurydice sur Github                            Schéma de fonctionnement complet d&#39;Eurydice</code></pre>
+    	  <a href="https://cyber.gouv.fr/actualites/lanssi-partage-son-guichet-de-diodes-eurydice-en-open-source" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;L’ANSSI partage son guichet de diodes Eurydice en open-source&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ven 20&amp;#x2F;12&amp;#x2F;2024 - 08:42</summary>
+      
+    
+    
+    
+    <category term="lanssi" scheme="https://feed-blush.vercel.app/category/lanssi/"/>
+    
+    
+    <category term="nom" scheme="https://feed-blush.vercel.app/tags/nom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lanssi</title>
+    <link href="https://feed-blush.vercel.app/383H45S/"/>
+    <id>https://feed-blush.vercel.app/383H45S/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>L’ANSSI publie son état de la menace sur le cloud computing </p><pre><code>  anssiadm</code></pre><p>jeu 20&#x2F;02&#x2F;2025 - 08:36</p><p>La démocratisation des solutions cloud s’accompagne de nouvelles problématiques en matière de sécurité. Avec cet état de la menace<br>l’ANSSI offre une cartographie des enjeux auxquels les fournisseurs de services cloud et les organisations qui y ont recours devront faire face<br>ainsi que ses recommandations.</p><p>Cloud computing - Etat de la menace informatique</p><p>Le cloud computing est devenu partie intégrante de nos usages numériques notamment parce que cette technologie offre de nombreux avantages<br>mais il est nécessaire de connaître les menaces et de mesurer les risques qui accompagnent son utilisation. Pour ce faire<br>l’ANSSI met à disposition son état de la menace sur le cloud et partage ses recommandations de sécurité pour y faire face.</p><p>L’ environnement cloud<br>une cible grandissante des cyberattaques</p><p>Les environnements cloud sont de plus en plus la cible d’attaquants cherchant à compromettre l’intégrité de ces systèmes. Cela s’explique notamment par l’intérêt pour les données traitées par les fournisseurs de service cloud<br>mais également parce qu’ils offrent une entrée potentielle vers les organisations qui utilisent ces services.</p><p>Le ciblage d’environnement cloud fait désormais partie intégrante du mode opératoire des attaquants qui ont développé des compétences bien spécifiques et poursuivent des finalités lucratives<br>d’espionnage<br>et ou de déstabilisation. Cette maîtrise grandissante de ces environnements cloud entraîne l’accroissement des tentatives de latéralisation depuis des environnements on-premise compromis vers le cloud et réciproquement.</p><p>Les vulnérabilités dans des équipements de bordure (tels que des VPN) sont notamment devenues des points d’entrée privilégiés pour les attaquants. Ils exploitent également les mauvaises configurations et les défauts de sécurisation (permissions excessives<br>applications obsolètes).</p><p>L’utilisation du cloud pose de nouveaux défis en matière de sécurité informatique</p><p>Une tendance grandissante identifiée par l’ANSSI dans son rapport est l’utilisation des services de cloud comme infrastructures d’attaques. Les acteurs malveillants utilisent désormais des services cloud à des fins malveillantes<br>dans le but de stocker<br>des codes malveillants ou des données volées sur des plateformes grand public. Il devient alors très complexe de détecter les activités malveillantes en les dissimulant au sein du trafic légitime des utilisateurs de ces plateformes.</p><p>Les enjeux de sécurité qui accompagnent l’utilisation du cloud imposent de s’interroger sur les responsabilités qui incombent aussi bien aux fournisseurs de services cloud qu’aux utilisateurs de ces plateformes. L’ANSSI fait le constat que de nombreux incidents de sécurité sont dus à une faiblesse dans le cloisonnement entre les systèmes d’information en partie liée à l’usage du cloud ou aux manquements dans la supervision des systèmes d’information.</p><p>Les recommandations et les bonnes pratiques pour un cloud mieux sécurisé</p><p>Dans son état de la menace<br>l’ANSSI partage ses recommandations<br>aussi bien pour les fournisseurs de cloud que pour les clients<br>qui visent à mettre en place des mesures de sécurité claires et des bonnes pratiques.</p><p>L’hébergement de certaines données dans le cloud nécessitent de réaliser une analyse de risques afin de déterminer l’offre adaptée. Pour accompagner les entités publiques et privées<br>l’ANSSI met à disposition :</p><p>ses recommandations sur l’hébergement des systèmes d’informations sensibles dans le cloud. Cette série de recommandations précisent<br>en fonction du type de SI<br>de la sensibilité des données et du niveau de la menace<br>les types d’offres cloud à privilégier.</p><p>L’ANSSI recommande de privilégier des offres cloisonnées entre clients de type SecNumCloud pour des activités sensibles. Le référentiel SecNumCloud propose un ensemble de règles de sécurité à suivre garantissant un haut niveau d’exigence tant du point de vue technique<br>qu’opérationnel ou juridique.</p><p>Enfin<br>le recours au cloud impose la prise en compte de l’évolution des capacités de supervision afin de se prémunir contre les menaces abordées dans le document.</p><pre><code>    Consultez l&#39;état de menace sur le secteur cloud</code></pre>
+    	  <a href="https://cyber.gouv.fr/actualites/lanssi-publie-son-etat-de-la-menace-sur-le-cloud-computing" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;L’ANSSI publie son état de la menace sur le cloud computing &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;jeu 20&amp;#x2F;02&amp;#x2F;2025 - 08:36&lt;</summary>
+      
+    
+    
+    
+    <category term="lanssi" scheme="https://feed-blush.vercel.app/category/lanssi/"/>
+    
+    
+    <category term="nom" scheme="https://feed-blush.vercel.app/tags/nom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lanssi</title>
+    <link href="https://feed-blush.vercel.app/383H45S/"/>
+    <id>https://feed-blush.vercel.app/383H45S/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>L’ANSSI publie son plan stratégique 2025-2027</p><pre><code>  anssiadm</code></pre><p>jeu 06&#x2F;03&#x2F;2025 - 15:09</p><p>A l’issue d’une réflexion collective menée au cours des derniers mois<br>l’ANSSI publie aujourd’hui son plan stratégique pour la période 2025-2027.</p><p>L’intelligence artificielle<br>le cloud ou bien encore le développement potentiel d’un ordinateur quantique capable de remettre en cause les propriétés fondamentales de la cryptographie asymétrique<br>ces technologies bouleversent notre monde et notre approche du cyberespace alors que la menace cyber affecte dorénavant tous les pans de notre économie et de notre société. Cette menace est par ailleurs accentuée par une situation internationale de plus en plus conflictuelle<br>qui a des répercussions toujours plus significatives dans le cyberespace.</p><p>Depuis plusieurs années<br>la France et l’Union européenne (UE) travaillent à la prise en compte de ces paramètres au travers notamment de réseaux de coopération et de différents textes règlementaires (directive sur la sécurité des réseaux et des systèmes d’information (NIS 2)<br>règlement sur la résilience cyber (CRA)<br>etc.)<br>qui participent tous à un objectif d’élévation générale de la cybersécurité de l’UE et de ses Etats membres.</p><p>La réussite des Jeux olympiques et paralympiques de Paris 2024 (JOP) a été l’aboutissement d’un travail intense durant deux ans des agents de l’ANSSI et de « l’équipe de France » de la cybersécurité dans son ensemble. Au-delà des enseignements qui ont déjà été tirés sur le travail de préparation<br>d’entrainement et d’articulation avec l’écosystème<br>y compris international<br>cette réussite des JOP est venue consacrer un modèle français de la cybersécurité qui repose sur une séparation claire<br>au sein de l’État<br>entre les missions défensives et offensives<br>l’Agence étant chargée de coordonner le champ de la défense et de la protection des systèmes d’information.</p><p>Forte de ces constats<br>prenant acte des évolutions du paysage cyber et s’appuyant sur la compétence<br>l’ouverture et l’agilité qui constituent ses trois valeurs centrales<br>l’ANSSI a rédigé un nouveau plan stratégique cinq ans après le Manifeste<br>dernier document stratégique publié par l’Agence à l’occasion de ses 10 ans. Dans le cadre posé par la stratégie nationale de cybersécurité<br>ce plan a vocation à guider l’ANSSI au cours des prochaines années dans une logique de co-construction avec l’ensemble des parties prenantes et en permettant au collectif national des acteurs de la cybersécurité d’amplifier leurs actions et leur impact.</p><p>Il est construit autour de 4 axes :</p><p>Amplifier et coordonner la réponse cyber face à la massification de la menace</p><p>Développer les expertises indispensables pour contrer les menaces cyber</p><p>Promouvoir une action cyber européenne et internationale efficace</p><p>Renforcer la prise en compte des enjeux sociétaux dans l’action de l’ANSSI</p><p>Avec ce plan<br>l’ANSSI s’inscrit plus que jamais « au cœur d’un collectif<br>pour une nation cyber-résiliente ».</p><pre><code>    Consultez le plan stratégique de l’ANSSI 2025-2027</code></pre>
+    	  <a href="https://cyber.gouv.fr/actualites/lanssi-publie-son-plan-strategique-2025-2027" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;L’ANSSI publie son plan stratégique 2025-2027&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;jeu 06&amp;#x2F;03&amp;#x2F;2025 - 15:09&lt;/p&gt;
+&lt;p&gt;A l’issu</summary>
+      
+    
+    
+    
+    <category term="lanssi" scheme="https://feed-blush.vercel.app/category/lanssi/"/>
+    
+    
+    <category term="nom" scheme="https://feed-blush.vercel.app/tags/nom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Panorama</title>
+    <link href="https://feed-blush.vercel.app/1B9RT3C/"/>
+    <id>https://feed-blush.vercel.app/1B9RT3C/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>Panorama de la cybermenace 2024 : mobilisation et vigilance face aux attaquants</p><pre><code>  anssiadm</code></pre><p>mar 11&#x2F;03&#x2F;2025 - 08:10</p><p>Le panorama de la cybermenace 2024 dresse le bilan d’une année marquée par une pression désormais constante pesant tant sur l’écosystème national que sur les systèmes d’information les plus critiques. Pour faire face<br>l’ensemble des acteurs cyber français sont enjoints à maintenir leur mobilisation et leur vigilance de tous les instants.</p><p>Au cours de l’année 2024<br>l’ANSSI a traité<br>avec différents niveaux de mobilisation<br>4 386 événements de sécurité1<br>soit une augmentation de 15 % par rapport à l’année précédente. Ainsi<br>3 004 signalements2 et 1 361 incidents3 ont été portés à la connaissance de l’Agence.</p><p>Trois principales menaces : cybercriminels<br>attaquants réputés liés à la Russie et attaquants réputés liées à la Chine</p><p>La menace portée par l’écosystème cybercriminel - principalement caractérisée par des attaques visant l’extorsion de rançons<br>via des fuites de données et des attaques par rançongiciel – s’est imposée comme un risque global et quotidien pour toutes les organisations françaises. Parmi les victimes de rançongiciels connues de l’ANSSI<br>les PME&#x2F;TPE&#x2F;ETI (37 %)<br>les collectivités territoriales (17 %)<br>ainsi que les établissements d’enseignement supérieur (12 %) et les entreprises stratégiques (12 %) ont été plus particulièrement touchés<br>avec des conséquences souvent très graves sur leur fonctionnement<br>leur réputation et leur continuité d’activité.</p><p>Une hausse des attaques à but de déstabilisation a également été observée<br>généralement menées par des groupes dits « hacktivistes » cherchant à attirer l’attention en mettant en œuvre des attaques de faible technicité mais à forte visibilité. Par exemple<br>les attaques par déni de service (DDoS) contre des cibles françaises ont doublé par rapport à 2023<br>avec une recrudescence pendant la période des Jeux. Malgré les conséquences limitées de ces dernières<br>le sabotage de petites installations industrielles a aussi été relevé. Ces attaques représentent une évolution vers une logique de sabotage<br>pour laquelle une vigilance s’impose.</p><p>À l’instar des années précédentes<br>ce sont les attaques à finalité d’espionnage qui ont le plus mobilisé les équipes opérationnelles de l’ANSSI. Les attaquants réputés liés aux intérêts stratégiques russes ont poursuivi leurs attaques guidées principalement par la recherche d’informations pouvant soutenir leurs efforts militaires ou diplomatiques. De son côté<br>l’activité associée aux modes opératoires réputés chinois a été particulièrement dense et répandue à des fins de captation de renseignements d’ordres stratégique et économique. Par ailleurs<br>le ciblage d’opérateurs de télécommunications s’est avéré intense et plusieurs incidents d’importance ont été traités par l’Agence.</p><p>Mobilisation et vigilance des acteurs français : l’héritage indispensable des jeux</p><p>L’année 2024 a été marquée par l’organisation des JOP<br>dont l’exposition médiatique et la surface d’attaque ont constitué des opportunités majeures pour les acteurs malveillants. Cependant<br>aucune de ces attaques n’a porté atteinte au déroulement de l’événement grâce à la bonne préparation et la grande mobilisation des équipes de l’ANSSI et de l’ensemble de l’écosystème cyber français.</p><p>Outre des opportunités conjoncturelles comme les Jeux<br>les attaquants se saisissent de toutes les faiblesses techniques exposées par les systèmes d’information (SI). Face à ce niveau de sécurité insuffisant<br>l’Agence enjoint les organisations à durcir et maintenir en condition de sécurité leurs SI afin de réduire la surface d’attaque. En particulier<br>au regard du nombre et de l’impact des vulnérabilités affectant les équipements de sécurité situés en bordure de SI – qui ont représenté plus de la moitié des opérations de cyberdéfense de l’ANSSI - l’Agence rappelle la nécessité urgente d’appliquer les correctifs de sécurité et ce le plus rapidement possible afin de se protéger d’exploitations opportunistes.</p><p>L’ANSSI au cœur d’un collectif<br>pour une nation cyber-résiliente</p><p>L’année écoulée a conforté l’Agence dans sa volonté de consolider un écosystème relai efficace. En effet<br>le renforcement des acteurs qui le composent<br>tels que les centres de réponse à incidents cyber (CSIRT) territoriaux<br>sectoriels ou ministériels<br>a déjà permis à l’ANSSI de concentrer son implication sur des attaques ayant des impacts plus critiques.</p><p>Face à l’ensemble de ces menaces<br>la France n’est pas désarmée : les travaux sur le volet cyber du projet de loi Résilience<br>visant à transporter la directive NIS 2 en France<br>constituent un pan essentiel de sa réponse. La démarche de co-construction choisie pour cette transposition a permis d’adapter au mieux le texte aux réalités et enjeux des entités afin d’en favoriser son appropriation et sa mise en œuvre</p><p>Enfin<br>il apparaît indispensable pour l’ANSSI de maintenir la pression sur l’écosystème cybercriminel en poursuivant sa coopération avec les autres services de l’État et les partenaires internationaux. Cette coopération a notamment permis de réaliser des opérations de démantèlement sur l’année écoulée.</p><pre><code>    Consultez le Panorama de la cybermenace 2024                      </code></pre><p>1 - Événements portés à la connaissance de l’ANSSI et qui ont donné lieu à un traitement par les équipes opérationnelles.</p><p>2 - Les signalements regroupent tous les comportements anormaux ou inattendus pouvant avoir un caractère malveillant ou ouvrir la voie à des usages néfastes à l’encontre d’un SI.</p><p>3 - Un incident est un évènement de sécurité où l’ANSSI est en mesure de confirmer qu’un acteur malveillant a conduit des actions avec succès sur le système d’information de la victime. À titre d’illustration<br>un déni de service avec impact ou la compromission de compte de messagerie rentrent dans cette catégorie.</p>
+    	  <a href="https://cyber.gouv.fr/actualites/panorama-de-la-cybermenace-2024-mobilisation-et-vigilance-face-aux-attaquants" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Panorama de la cybermenace 2024 : mobilisation et vigilance face aux attaquants&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;mar 11&amp;#x2F;03</summary>
+      
+    
+    
+    
+    <category term="panorama" scheme="https://feed-blush.vercel.app/category/panorama/"/>
+    
+    
+    <category term="nom" scheme="https://feed-blush.vercel.app/tags/nom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sommet</title>
+    <link href="https://feed-blush.vercel.app/3K1PSGC/"/>
+    <id>https://feed-blush.vercel.app/3K1PSGC/</id>
+    <published>2025-03-18T08:14:56.222Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>Sommet pour l’action sur l’intelligence artificielle : retour sur les travaux de l’ANSSI</p><pre><code>  anssiadm</code></pre><p>lun 17&#x2F;02&#x2F;2025 - 15:34</p><p>Dans le cadre du Sommet pour l’action sur l’IA<br>organisé à Paris du 6 au 11 février 2025<br>l’ANSSI a piloté<br>au sein de l’axe « IA de confiance »<br>les travaux menés ces derniers mois sur la cybersécurité. L’occasion de promouvoir son approche visant à privilégier une meilleure prise en compte des risques cyber pour développer la confiance dans l’IA.</p><p>L’ANSSI a organisé un exercice de crise cyber lors du Sommet de l’IA.</p><p>L’expertise de l’ANSSI au service d’une meilleure appréhension des risques cyber de l’IA</p><p>En tant qu’autorité nationale en matière de cyberdéfense et de cybersécurité<br>l’ANSSI a travaillé à l’identification et la bonne compréhension des risques cyber des systèmes d’intelligence artificielle (SIA)<br>en collaboration avec ses partenaires nationaux et internationaux<br>également réunis à Paris à l’occasion du Sommet pour l’action sur l’IA.</p><p>Des systèmes d’information qui posent de nouveaux défis à la cybersécurité</p><p>Dans les travaux qu’elle a menés<br>l’ANSSI souligne en premier lieu que les systèmes intégrant une IA (SIA) demeurent fondamentalement des systèmes logiciels<br>soumis en tout état de cause aux mêmes vulnérabilités que des systèmes plus classiques<br>comme le détournement de comptes utilisateurs ou administrateurs ou l’exploitation de vulnérabilités dans les composants logiciels intégrés dans le système. Les scénarios de cyberattaque classiques restent ainsi aujourd’hui les plus crédibles contre de tels SIA. Le respect des bonnes pratiques de cybersécurité applicables à tout système d’information<br>est ainsi un enjeu primordial pour la mise en œuvre d’une IA de confiance.</p><p> « Le temps fort qu’a constitué le Sommet pour l’action sur l’IA a démontré la nécessité de mieux faire travailler ensemble les experts de l’IA et ceux de la cybersécurité afin d’objectiver les risques et opportunités<br>loin des marchands de peur et des marchands de rêves.»<br>précise Vincent Strubel<br>directeur général de l’ANSSI.</p><p>L’ANSSI s’implique dans le développement d’une IA de confiance qui bénéficie à tous</p><p>Afin d’accompagner le développement d’une IA de confiance qui bénéficie à tous et pour tous les usages<br>quelle que soit leur criticité<br>l’ANSSI promeut une approche par les risques.</p><p>Pour guider notamment les dirigeants et les producteurs de solutions d’IA<br>plusieurs livrables ont été dévoilés à l’occasion du Sommet :</p><p>Le document de référence « Building trust in AI through a cyber risk approach » : co-signé par de 19 partenaires internationaux et 5 partenaires nationaux a été présenté le 7 février lors des journées scientifiques organisées par l’Institut Polytechnique de Paris. Il met en évidence les risques cyber auxquels sont exposés les systèmes d’IA et relaie les principales recommandations stratégiques afin de favoriser une meilleure prise en compte de la cybersécurité dans le développement et l’intégration de ces systèmes. Cette analyse de risque a été élaborée suite aux consultations de plusieurs entités publiques et privées matures sur le sujet de l’IA<br>afin de s’assurer de toujours conserver un ancrage des travaux dans le réel. Un document également disponible en français.</p><p>L’exercice de crise cyber<br>organisé par l’ANSSI le 11 février au Campus Cyber<br>a mobilisé près de 200 participants experts cyber et experts IA dans l’objectif de développer une meilleure compréhension mutuelle de leurs attentes. Alors que le scénario proposé comprenait une cyberattaque affectant un SIA et sa chaine d’approvisionnement (supply chain)<br>les participants ont pu échanger des bonnes pratiques tout en étant sensibilisés aux risques cyber. Des axes d’amélioration en matière de gestion de crise cyber ont notamment été identifiés lors de l’exercice et un retour d’expérience sera prochainement organisé.</p><p>La rencontre des directeurs d’agences cyber partenaires s’est déroulée en parallèle du Sommet. L’ANSSI et ses partenaires internationaux ont pu contribuer activement aux débats en cours sur la sécurisation de l’IA. Tous sont pleinement engagés dans le traitement<br>à l’échelle internationale<br>de ces questions<br>tout en veillant à explorer les modalités d’articulation et de coopération internationale en la matière. </p><p>La table-ronde à laquelle a participé l’ANSSI<br>lors du Business Day.</p><p>L’ANSSI a également participé au Business Day de l’AI Action Summit<br>qui a réuni des acteurs économiques français et internationaux à Station F<br>afin de mettre en avant le rôle transformateur de l’IA pour le développement des entreprises. L’Agence est intervenue à la table ronde intitulée « La gouvernance du Règlement sur l’IA (RIA) en France : comment travailler avec les autorités compétentes ? » aux côtés de représentants de la CNIL<br>du ministère de l’économie (DGCCRF) et de la DGE. Le RIA vise à encadrer le développement et l’utilisation de l’IA pour garantir la sécurité<br>les droits fondamentaux et la protection des données. L’Agence  n’a pas vocation à assumer un rôle d’autorité de surveillance de marché des systèmes d’IA au sens du RIA<br>mais s’impliquera toutefois sur les aspects de cybersécurité pour :</p><p>Accompagner les administrations dans le déploiement de leurs systèmes d’IA sur les aspects cybersécurité ;</p><p>Contribuer à l’évaluation de la cybersécurité des modèles et systèmes d’IA avec les différentes parties impliquées ;</p><p>Accompagner les offreurs et les acquéreurs de solutions de cybersécurité implémentant de l’IA dans leurs produits ;</p><p>Sensibiliser l’ensemble de l’écosystème aux enjeux de cybersécurité liés à l’IA ;</p><p>Participer aux instances de normalisation à l’échelle européenne qui régissent les exigences applicables en matière de cybersécurité aux systèmes d’IA.</p>
+    	  <a href="https://cyber.gouv.fr/actualites/sommet-pour-laction-sur-lintelligence-artificielle-retour-sur-les-travaux-de-lanssi" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Sommet pour l’action sur l’intelligence artificielle : retour sur les travaux de l’ANSSI&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  anssiadm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;lun 1</summary>
+      
+    
+    
+    
+    <category term="sommet" scheme="https://feed-blush.vercel.app/category/sommet/"/>
+    
+    
+    <category term="nom" scheme="https://feed-blush.vercel.app/tags/nom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Laforêt</title>
+    <link href="https://feed-blush.vercel.app/2H43RG9/"/>
+    <id>https://feed-blush.vercel.app/2H43RG9/</id>
+    <published>2025-03-13T00:00:00.000Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>dossier locataire<br>pièces d’identité<br>RIB</p>
+    	  <a href="https://bonjourlafuite.eu.org/#Laforêt-2025-03-13" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;dossier locataire&lt;br&gt;pièces d’identité&lt;br&gt;RIB&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Laforêt" scheme="https://feed-blush.vercel.app/category/Laforet/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Université De Rennes I</title>
     <link href="https://feed-blush.vercel.app/35KBGBA/"/>
     <id>https://feed-blush.vercel.app/35KBGBA/</id>
     <published>2025-03-10T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>projets gitlab<br>espaces de stockage<br>base de données<br>infrastructure Kubernetes<br>VPN<br>emails<br>téléphones<br>facturation<br>clefs SSH<br>données étudiants</p>
     	  <a href="https://bonjourlafuite.eu.org/#Université de Rennes I-2025-03-10" target="_blank">source</a>]]></content>
@@ -44,7 +310,7 @@
     <link href="https://feed-blush.vercel.app/27GJ9KS/"/>
     <id>https://feed-blush.vercel.app/27GJ9KS/</id>
     <published>2025-03-07T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>20Go</p>
     	  <a href="https://bonjourlafuite.eu.org/#Université de la Sorbonne-2025-03-07" target="_blank">source</a>]]></content>
@@ -68,7 +334,7 @@
     <link href="https://feed-blush.vercel.app/YKBK9Q/"/>
     <id>https://feed-blush.vercel.app/YKBK9Q/</id>
     <published>2025-03-05T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>identité<br>adresse email<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#UTwin-2025-03-05" target="_blank">source</a>]]></content>
@@ -94,7 +360,7 @@
     <link href="https://feed-blush.vercel.app/3HJH21M/"/>
     <id>https://feed-blush.vercel.app/3HJH21M/</id>
     <published>2025-03-04T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>coordonnées de contact<br>programme de fidélité</p>
     	  <a href="https://bonjourlafuite.eu.org/#Côté Sushi-2025-03-04" target="_blank">source</a>]]></content>
@@ -122,7 +388,7 @@
     <link href="https://feed-blush.vercel.app/151F78Y/"/>
     <id>https://feed-blush.vercel.app/151F78Y/</id>
     <published>2025-03-04T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>email<br>adresse postale<br>année de naissance<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#La Poste-2025-03-04" target="_blank">source</a>]]></content>
@@ -150,7 +416,7 @@
     <link href="https://feed-blush.vercel.app/26TTP6B/"/>
     <id>https://feed-blush.vercel.app/26TTP6B/</id>
     <published>2025-02-28T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>plan d’intervention et de maintenance des centrales<br>résultats des contrôles et opérations de sécurité<br>identifiants des agents de maintenance</p>
     	  <a href="https://bonjourlafuite.eu.org/#EDF DPIH-2025-02-28" target="_blank">source</a>]]></content>
@@ -173,7 +439,7 @@
     <link href="https://feed-blush.vercel.app/1NCN27N/"/>
     <id>https://feed-blush.vercel.app/1NCN27N/</id>
     <published>2025-02-28T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>email<br>téléphone<br>IBAN</p>
     	  <a href="https://bonjourlafuite.eu.org/#Zephir-2025-02-28" target="_blank">source</a>]]></content>
@@ -201,9 +467,9 @@
     <link href="https://feed-blush.vercel.app/Y2F5CP/"/>
     <id>https://feed-blush.vercel.app/Y2F5CP/</id>
     <published>2025-02-28T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
-    <content type="html"><![CDATA[<p>civilité<br>nom<br>prénom<br>date de naissance<br>adresse<br>téléphone<br>email<br>ville et payes de naissance<br>nationalité<br>numéro de sécurité sociale<br>numéro Pôle Emploi<br>numéro carte VTC<br>diplôme<br>niveau d’étude<br>donnée stockée  de manière non sécurisée (.csv) fuite prévisible<br>pas d’information de notification cnil ou anssi </p>
+    <content type="html"><![CDATA[<p>civilité<br>nom<br>prénom<br>date de naissance<br>adresse<br>téléphone<br>email<br>ville et payes de naissance<br>nationalité<br>numéro de sécurité sociale<br>numéro Pôle Emploi<br>numéro carte VTC<br>diplôme<br>niveau d’étude</p>
     	  <a href="https://bonjourlafuite.eu.org/#École Nationale de la Sécurité-2025-02-28" target="_blank">source</a>]]></content>
     
     
@@ -228,7 +494,7 @@
     <link href="https://feed-blush.vercel.app/14D5D0S/"/>
     <id>https://feed-blush.vercel.app/14D5D0S/</id>
     <published>2025-02-26T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>téléphone<br>adresse<br>n° allocataire<br>organisme référent<br>formulaire RSA &amp; CAF<br>CV<br>date ouverture des droits<br>date de cessation d’inscription<br>notification projet personnalisé<br>modalité accompagnement<br>status analphabétisme<br>capacité à utiliser des outils informatiques<br>solution de garde d’enfant<br>soutien par un réseau professionnel<br>nombre de candidatures<br>vie professionnelle<br>expérience associative et professionnelle<br>formations<br>savoir-faire<br>métiers envisagés<br>centre d’intérêt<br>certification<br>langue<br>connaissance des outils bureautique<br>permis de conduire</p>
     	  <a href="https://bonjourlafuite.eu.org/#Nord Emploi-2025-02-26" target="_blank">source</a>]]></content>
@@ -255,7 +521,7 @@
     <link href="https://feed-blush.vercel.app/376VW6D/"/>
     <id>https://feed-blush.vercel.app/376VW6D/</id>
     <published>2025-02-21T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>genre<br>date et lieu de naissance<br>nationalité<br>adresse postale<br>adresse email<br>numéro de téléphone<br>photo<br>copie du justificatif d’identité</p>
     	  <a href="https://bonjourlafuite.eu.org/#Fédération Française de Foot-2025-02-21" target="_blank">source</a>]]></content>
@@ -284,7 +550,7 @@
     <link href="https://feed-blush.vercel.app/S9BBG0/"/>
     <id>https://feed-blush.vercel.app/S9BBG0/</id>
     <published>2025-02-19T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>login<br>mot de passe hashé<br>email</p>
     	  <a href="https://bonjourlafuite.eu.org/#Service Départemental d&#39;Incendie et de Secours de la Vienne-2025-02-19" target="_blank">source</a>]]></content>
@@ -308,7 +574,7 @@
     <link href="https://feed-blush.vercel.app/3Q31CPE/"/>
     <id>https://feed-blush.vercel.app/3Q31CPE/</id>
     <published>2025-02-17T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>numéro de téléphone<br>adresse mail</p>
     	  <a href="https://bonjourlafuite.eu.org/#Sport Découverte-2025-02-17" target="_blank">source</a>]]></content>
@@ -336,7 +602,7 @@
     <link href="https://feed-blush.vercel.app/3EAT5BQ/"/>
     <id>https://feed-blush.vercel.app/3EAT5BQ/</id>
     <published>2025-02-13T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>numéro de téléphone<br>code postal</p>
     	  <a href="https://bonjourlafuite.eu.org/#Mutuelle des motards-2025-02-13" target="_blank">source</a>]]></content>
@@ -366,7 +632,7 @@
     <link href="https://feed-blush.vercel.app/30XVFY3/"/>
     <id>https://feed-blush.vercel.app/30XVFY3/</id>
     <published>2025-02-12T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>70 000 personnes</p>
     	  <a href="https://bonjourlafuite.eu.org/#Caisse des dépôts et des consignations-2025-02-12" target="_blank">source</a>]]></content>
@@ -390,7 +656,7 @@
     <link href="https://feed-blush.vercel.app/2R6AR5F/"/>
     <id>https://feed-blush.vercel.app/2R6AR5F/</id>
     <published>2025-02-12T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>numéro de téléphone<br>adresse<br>signature</p>
     	  <a href="https://bonjourlafuite.eu.org/#Chronopost-2025-02-12" target="_blank">source</a>]]></content>
@@ -418,7 +684,7 @@
     <link href="https://feed-blush.vercel.app/2AH4GEB/"/>
     <id>https://feed-blush.vercel.app/2AH4GEB/</id>
     <published>2025-02-11T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>email<br>numéro de téléphone<br>détail de la commande</p>
     	  <a href="https://bonjourlafuite.eu.org/#King Jouet-2025-02-11" target="_blank">source</a>]]></content>
@@ -446,7 +712,7 @@
     <link href="https://feed-blush.vercel.app/GE32V/"/>
     <id>https://feed-blush.vercel.app/GE32V/</id>
     <published>2025-02-06T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom complet<br>adresse postale<br>adresse email<br>numéro de téléphone<br>données de préférence Thermomix</p>
     	  <a href="https://bonjourlafuite.eu.org/#Espace-Recettes.fr Vorwerk-2025-02-06" target="_blank">source</a>]]></content>
@@ -474,7 +740,7 @@
     <link href="https://feed-blush.vercel.app/21BNY4X/"/>
     <id>https://feed-blush.vercel.app/21BNY4X/</id>
     <published>2025-02-03T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>addresse postale<br>historique interventions</p>
     	  <a href="https://bonjourlafuite.eu.org/#EDF-2025-02-03" target="_blank">source</a>]]></content>
@@ -506,7 +772,7 @@
     <link href="https://feed-blush.vercel.app/1T5WBSW/"/>
     <id>https://feed-blush.vercel.app/1T5WBSW/</id>
     <published>2025-01-28T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>addresse postale</p>
     	  <a href="https://bonjourlafuite.eu.org/#Conforama-2025-01-28" target="_blank">source</a>]]></content>
@@ -538,16 +804,15 @@
     <link href="https://feed-blush.vercel.app/16N43T1/"/>
     <id>https://feed-blush.vercel.app/16N43T1/</id>
     <published>2025-01-27T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
-    <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>adresse postale<br>téléphone<br>adresse email<br>IBAN</p>
+    <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>adresse postale<br>téléphone<br>adresse email<br>IBAN<br>numéro de sécurité sociale<br>résultat d’examen de santé</p>
     	  <a href="https://bonjourlafuite.eu.org/#AIDES-2025-01-27" target="_blank">source</a>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;nom&lt;br&gt;prénom&lt;br&gt;date de naissance&lt;br&gt;adresse postale&lt;br&gt;téléphone&lt;br&gt;adresse email&lt;br&gt;IBAN&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;nom&lt;br&gt;prénom&lt;br&gt;date de naissance&lt;br&gt;adresse postale&lt;br&gt;téléphone&lt;br&gt;adresse email&lt;br&gt;IBAN&lt;br&gt;numéro de sécurité sociale&lt;br&gt;résultat d’e</summary>
       
     
     
@@ -568,7 +833,7 @@
     <link href="https://feed-blush.vercel.app/1PTXH0X/"/>
     <id>https://feed-blush.vercel.app/1PTXH0X/</id>
     <published>2025-01-24T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>identifiant d’accès<br>numéro de dossier<br>montant de prime<br>libellé de prestation</p>
     	  <a href="https://bonjourlafuite.eu.org/#E.Leclerc-2025-01-24" target="_blank">source</a>]]></content>
@@ -598,7 +863,7 @@
     <link href="https://feed-blush.vercel.app/102QZPS/"/>
     <id>https://feed-blush.vercel.app/102QZPS/</id>
     <published>2025-01-24T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse postale<br>adresse email<br>identifiant<br>date de naissance<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#Fédération Française Montagne Escalade-2025-01-24" target="_blank">source</a>]]></content>
@@ -628,7 +893,7 @@
     <link href="https://feed-blush.vercel.app/2P1MP9M/"/>
     <id>https://feed-blush.vercel.app/2P1MP9M/</id>
     <published>2025-01-20T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>sexe<br>date de naissance<br>adresse postale<br>téléphone<br>adresse email<br>photo de profil</p>
     	  <a href="https://bonjourlafuite.eu.org/#Fédération Française de tir à l&#39;arc-2025-01-20" target="_blank">source</a>]]></content>
@@ -658,7 +923,7 @@
     <link href="https://feed-blush.vercel.app/DVR78J/"/>
     <id>https://feed-blush.vercel.app/DVR78J/</id>
     <published>2025-01-14T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>64 512 comptes</p>
     	  <a href="https://bonjourlafuite.eu.org/#Fédération Française de Force-2025-01-14" target="_blank">source</a>]]></content>
@@ -682,7 +947,7 @@
     <link href="https://feed-blush.vercel.app/3FW98M5/"/>
     <id>https://feed-blush.vercel.app/3FW98M5/</id>
     <published>2025-01-14T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>date et lieu de naissance<br>numéro de téléphone<br>numéro de licence</p>
     	  <a href="https://bonjourlafuite.eu.org/#Fédération Française de Roller Skateboard-2025-01-14" target="_blank">source</a>]]></content>
@@ -712,7 +977,7 @@
     <link href="https://feed-blush.vercel.app/22SYNR2/"/>
     <id>https://feed-blush.vercel.app/22SYNR2/</id>
     <published>2025-01-14T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>IBAN</p>
     	  <a href="https://bonjourlafuite.eu.org/#Kiabi-2025-01-14" target="_blank">source</a>]]></content>
@@ -736,11 +1001,39 @@
   </entry>
   
   <entry>
+    <title>Participez</title>
+    <link href="https://feed-blush.vercel.app/2P3H78T/"/>
+    <id>https://feed-blush.vercel.app/2P3H78T/</id>
+    <published>2025-01-01T00:00:00.000Z</published>
+    <updated>2025-03-18T08:14:56.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>Participez au France Cybersecurity Challenge (FCSC) 2025 !</p><pre><code>  abarraud</code></pre><p>lun 13&#x2F;01&#x2F;2025 - 09:19</p><p>Participez au FCSC du 18 au 27 avril 2025 ! Mesurez-vous aux épreuves du CTF de l’ANSSI et tentez de gagner votre place pour la Team France qui défendra nos couleurs lors de l’European Cybersecurity Challenge (ECSC) à Varsovie. </p><pre><code>    France Cybersecurity Challenge 2025                          </code></pre><p>Le France Cybersecurity Challenge (FCSC) est un Capture The Flag (CTF) de type jeopardy créé par les équipes de l’ANSSI et lancé en 2019. L’objectif ? Résoudre des épreuves en individuel pour gagner un maximum de points durant les 10 jours de compétition. Crypto<br>reverse<br>pwn<br>web<br>forensics<br>algorithmique<br>hardware… plusieurs catégories d’épreuves sont disponibles<br>de quoi ravir le plus grand nombre.</p><p>Cette année<br>le challenge se tiendra du vendredi 18 avril au dimanche 27 avril avec une grande nouveauté : l’introduction d’une journée « speedrun » (rapidité)<br>le samedi 26 avril 2025.</p><p>Trois catégories d’âge à l’inscription </p><p>Catégorie junior :</p><ul><li><p>Être né(e)s en 2005<br>2006<br>2007<br>2008<br>2009<br>2010 ou 2011 ;</p></li><li><p>Être de nationalité française ;</p></li><li><p>Candidater pour intégrer la Team France et participer à l’European Cybersecurity Challenge (ECSC).</p></li></ul><p>Catégorie senior :</p><ul><li><p>Être né(e)s en 2000<br>2001<br>2002<br>2003 ou 2004 ;</p></li><li><p>Être de nationalité française ;</p></li><li><p>Candidater pour intégrer la Team France et participer à l’European Cybersecurity Challenge (ECSC).</p></li></ul><p>Hors catégorie :</p><ul><li><p>Si vous n’êtes pas éligible pour une question d’âge ;</p></li><li><p>Si vous n’êtes pas de nationalité française ;</p></li><li><p>Si vous ne souhaitez pas candidater pour intégrer la Team France et participer à l’European Cybersecurity Challenge (ECSC).</p></li></ul><p> </p><p>Vous avez moins de 25 ans ? Le FCSC est l’opportunité pour vous d’être sélectionné pour la Team France qui représentera nos couleurs lors de l’European Cybersecurity Challenge (ECSC) 2025. La prochaine édition aura lieu à Varsovie en Pologne<br>du 6 au 10 octobre 2025.</p><p>Les modalités de qualification à la phase d’entretien pour rejoindre la Team France évoluent avec l’introduction de la journée « speedrun » (rapidité) :</p><p>Le top 5 du classement général junior et senior devient non qualifiant.</p><p>Les top 3 par catégories (junior et senior) restent qualifiants sur les catégories principales.</p><p>Un top 5 « rapidité » junior et senior est introduit. Il aura lieu sur un second ensemble d’épreuves disponibles pendant ~10h le dernier samedi du FCSC (samedi 26 avril). Ces épreuves n’influenceront pas le classement des top 3 de catégories qualifiantes<br>mais compteront dans le scoreboard général.</p>
+    	  <a href="https://cyber.gouv.fr/actualites/participez-au-france-cybersecurity-challenge-fcsc-2025" target="_blank">source</a>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Participez au France Cybersecurity Challenge (FCSC) 2025 !&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  abarraud
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;lun 13&amp;#x2F;01&amp;#x2F;2025 - 09:19&lt;/p</summary>
+      
+    
+    
+    
+    <category term="participez" scheme="https://feed-blush.vercel.app/category/participez/"/>
+    
+    
+    <category term="nom" scheme="https://feed-blush.vercel.app/tags/nom/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Cogitis</title>
     <link href="https://feed-blush.vercel.app/19DMBH5/"/>
     <id>https://feed-blush.vercel.app/19DMBH5/</id>
     <published>2024-12-31T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>82Go</p>
     	  <a href="https://bonjourlafuite.eu.org/#Cogitis-2024-12-31" target="_blank">source</a>]]></content>
@@ -764,7 +1057,7 @@
     <link href="https://feed-blush.vercel.app/1X7TXS6/"/>
     <id>https://feed-blush.vercel.app/1X7TXS6/</id>
     <published>2024-12-30T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Atos-2024-12-30" target="_blank">source</a>]]></content>
@@ -788,7 +1081,7 @@
     <link href="https://feed-blush.vercel.app/21GHNVB/"/>
     <id>https://feed-blush.vercel.app/21GHNVB/</id>
     <published>2024-12-27T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Arsoé-2024-12-27" target="_blank">source</a>]]></content>
@@ -812,7 +1105,7 @@
     <link href="https://feed-blush.vercel.app/1G6K819/"/>
     <id>https://feed-blush.vercel.app/1G6K819/</id>
     <published>2024-12-27T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>données client<br>localisation</p>
     	  <a href="https://bonjourlafuite.eu.org/#Volkswagen-2024-12-27" target="_blank">source</a>]]></content>
@@ -836,7 +1129,7 @@
     <link href="https://feed-blush.vercel.app/2555GX3/"/>
     <id>https://feed-blush.vercel.app/2555GX3/</id>
     <published>2024-12-26T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Peugeot-2024-12-26" target="_blank">source</a>]]></content>
@@ -860,7 +1153,7 @@
     <link href="https://feed-blush.vercel.app/7RK8N0/"/>
     <id>https://feed-blush.vercel.app/7RK8N0/</id>
     <published>2024-12-25T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Cyberhaven-2024-12-25" target="_blank">source</a>]]></content>
@@ -884,7 +1177,7 @@
     <link href="https://feed-blush.vercel.app/1VP9GEW/"/>
     <id>https://feed-blush.vercel.app/1VP9GEW/</id>
     <published>2024-12-20T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Electro Dépôt-2024-12-20" target="_blank">source</a>]]></content>
@@ -908,7 +1201,7 @@
     <link href="https://feed-blush.vercel.app/GMW6KC/"/>
     <id>https://feed-blush.vercel.app/GMW6KC/</id>
     <published>2024-12-20T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Go Sport-2024-12-20" target="_blank">source</a>]]></content>
@@ -932,7 +1225,7 @@
     <link href="https://feed-blush.vercel.app/3JS4NPB/"/>
     <id>https://feed-blush.vercel.app/3JS4NPB/</id>
     <published>2024-12-20T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Sport 2000-2024-12-20" target="_blank">source</a>]]></content>
@@ -956,7 +1249,7 @@
     <link href="https://feed-blush.vercel.app/8BPAD3/"/>
     <id>https://feed-blush.vercel.app/8BPAD3/</id>
     <published>2024-12-20T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Wakanim-2024-12-20" target="_blank">source</a>]]></content>
@@ -980,7 +1273,7 @@
     <link href="https://feed-blush.vercel.app/5F4FWH/"/>
     <id>https://feed-blush.vercel.app/5F4FWH/</id>
     <published>2024-12-12T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>email<br>addresse</p>
     	  <a href="https://bonjourlafuite.eu.org/#Top Achat-2024-12-12" target="_blank">source</a>]]></content>
@@ -1008,7 +1301,7 @@
     <link href="https://feed-blush.vercel.app/T0R3D6/"/>
     <id>https://feed-blush.vercel.app/T0R3D6/</id>
     <published>2024-12-10T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#LDLC-2024-12-10" target="_blank">source</a>]]></content>
@@ -1032,7 +1325,7 @@
     <link href="https://feed-blush.vercel.app/B743N1/"/>
     <id>https://feed-blush.vercel.app/B743N1/</id>
     <published>2024-12-04T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Deloitte-2024-12-04" target="_blank">source</a>]]></content>
@@ -1056,7 +1349,7 @@
     <link href="https://feed-blush.vercel.app/24441EZ/"/>
     <id>https://feed-blush.vercel.app/24441EZ/</id>
     <published>2024-12-03T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse postale<br>adresse email<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#Guy Demarle-2024-12-03" target="_blank">source</a>]]></content>
@@ -1086,7 +1379,7 @@
     <link href="https://feed-blush.vercel.app/2T1C9CW/"/>
     <id>https://feed-blush.vercel.app/2T1C9CW/</id>
     <published>2024-12-02T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>numéro de téléphone<br>numéro de pièce d’identité</p>
     	  <a href="https://bonjourlafuite.eu.org/#Norauto-2024-12-02" target="_blank">source</a>]]></content>
@@ -1116,7 +1409,7 @@
     <link href="https://feed-blush.vercel.app/1RMCEJC/"/>
     <id>https://feed-blush.vercel.app/1RMCEJC/</id>
     <published>2024-11-27T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>login<br>mot de passe hashé<br>date de naissance<br>téléphone<br>adresse postale</p>
     	  <a href="https://bonjourlafuite.eu.org/#Ze Camping-2024-11-27" target="_blank">source</a>]]></content>
@@ -1144,7 +1437,7 @@
     <link href="https://feed-blush.vercel.app/2ECYAWR/"/>
     <id>https://feed-blush.vercel.app/2ECYAWR/</id>
     <published>2024-11-26T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>login<br>numéro de téléphone<br>collectivité</p>
     	  <a href="https://bonjourlafuite.eu.org/#JVS-2024-11-26" target="_blank">source</a>]]></content>
@@ -1174,7 +1467,7 @@
     <link href="https://feed-blush.vercel.app/2SFV4D0/"/>
     <id>https://feed-blush.vercel.app/2SFV4D0/</id>
     <published>2024-11-24T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>code postal<br>ville<br>date de naissance<br>département de naissance<br>numéro de téléphone<br>150 000 IBAN</p>
     	  <a href="https://bonjourlafuite.eu.org/#SFR-2024-11-24" target="_blank">source</a>]]></content>
@@ -1203,7 +1496,7 @@
     <link href="https://feed-blush.vercel.app/1RB7WJ8/"/>
     <id>https://feed-blush.vercel.app/1RB7WJ8/</id>
     <published>2024-11-23T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>identité des employés<br>poste<br>salaire<br>identité des clients<br>comptes bancaires<br>historique<br>webmail<br>documents stratégiques<br>rapports financiers</p>
     	  <a href="https://bonjourlafuite.eu.org/#Banque de France-2024-11-23" target="_blank">source</a>]]></content>
@@ -1226,7 +1519,7 @@
     <link href="https://feed-blush.vercel.app/38A53D2/"/>
     <id>https://feed-blush.vercel.app/38A53D2/</id>
     <published>2024-11-22T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>inconnu</p>
     	  <a href="https://bonjourlafuite.eu.org/#Companie de Transport Strasbourgeoise-2024-11-22" target="_blank">source</a>]]></content>
@@ -1250,7 +1543,7 @@
     <link href="https://feed-blush.vercel.app/3MGNY53/"/>
     <id>https://feed-blush.vercel.app/3MGNY53/</id>
     <published>2024-11-21T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>pas d’information actuellement</p>
     	  <a href="https://bonjourlafuite.eu.org/#Chambres d’agriculture-2024-11-21" target="_blank">source</a>]]></content>
@@ -1274,7 +1567,7 @@
     <link href="https://feed-blush.vercel.app/3YMZGRS/"/>
     <id>https://feed-blush.vercel.app/3YMZGRS/</id>
     <published>2024-11-19T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>téléphone<br>composition familiale<br>date de naissance<br>numéro de carte de fidélité<br>montant de la cagnotte</p>
     	  <a href="https://bonjourlafuite.eu.org/#Auchan-2024-11-19" target="_blank">source</a>]]></content>
@@ -1303,7 +1596,7 @@
     <link href="https://feed-blush.vercel.app/W9Z7QV/"/>
     <id>https://feed-blush.vercel.app/W9Z7QV/</id>
     <published>2024-11-19T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>adresse email<br>numéros de téléphone<br>IBAN</p>
     	  <a href="https://bonjourlafuite.eu.org/#Direct Assurance-2024-11-19" target="_blank">source</a>]]></content>
@@ -1331,7 +1624,7 @@
     <link href="https://feed-blush.vercel.app/2FTKD0Z/"/>
     <id>https://feed-blush.vercel.app/2FTKD0Z/</id>
     <published>2024-11-19T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance et de décès<br>genre<br>numéro de téléphone<br>médecin traitant<br>prescriptions médicales<br>identifiant externe<br>historique des soins</p>
     	  <a href="https://bonjourlafuite.eu.org/#Mediboard-2024-11-19" target="_blank">source</a>]]></content>
@@ -1358,7 +1651,7 @@
     <link href="https://feed-blush.vercel.app/1TQ8HC2/"/>
     <id>https://feed-blush.vercel.app/1TQ8HC2/</id>
     <published>2024-11-18T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>adresse email<br>numéro de téléphone<br>adresse postale<br>date de naissance</p>
     	  <a href="https://bonjourlafuite.eu.org/#Le Point-2024-11-18" target="_blank">source</a>]]></content>
@@ -1386,7 +1679,7 @@
     <link href="https://feed-blush.vercel.app/2DBZJ0/"/>
     <id>https://feed-blush.vercel.app/2DBZJ0/</id>
     <published>2024-11-14T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email</p>
     	  <a href="https://bonjourlafuite.eu.org/#Huttopia-2024-11-14" target="_blank">source</a>]]></content>
@@ -1416,7 +1709,7 @@
     <link href="https://feed-blush.vercel.app/1V6WT5W/"/>
     <id>https://feed-blush.vercel.app/1V6WT5W/</id>
     <published>2024-11-13T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>adresse email<br>nom<br>prénom<br>date de naissance</p>
     	  <a href="https://bonjourlafuite.eu.org/#Molotov-2024-11-13" target="_blank">source</a>]]></content>
@@ -1446,7 +1739,7 @@
     <link href="https://feed-blush.vercel.app/F3XYX7/"/>
     <id>https://feed-blush.vercel.app/F3XYX7/</id>
     <published>2024-11-12T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>adresse email<br>adresse postale<br>numéro de téléphone<br>numéro de carte de fidélité<br>points de fidélité<br>bons de réduction<br>historique des commandes<br>tickets de caisse<br>liste d’achats<br>favoris d’achat</p>
     	  <a href="https://bonjourlafuite.eu.org/#Picard-2024-11-12" target="_blank">source</a>]]></content>
@@ -1475,7 +1768,7 @@
     <link href="https://feed-blush.vercel.app/3PHRVQP/"/>
     <id>https://feed-blush.vercel.app/3PHRVQP/</id>
     <published>2024-10-25T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>lieu de naissance<br>adresse email<br>adresse postale<br>IBAN<br>identifiant abonné<br>type d’offre souscrite<br>date de souscription<br>abonnement actif ou non</p>
     	  <a href="https://bonjourlafuite.eu.org/#Free-2024-10-25" target="_blank">source</a>]]></content>
@@ -1504,7 +1797,7 @@
     <link href="https://feed-blush.vercel.app/1P9KRSR/"/>
     <id>https://feed-blush.vercel.app/1P9KRSR/</id>
     <published>2024-10-25T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>lieu de naissance<br>adresse email<br>adresse postale<br>identifiant abonné<br>type d’offre souscrite<br>date de souscription<br>abonnement actif ou non</p>
     	  <a href="https://bonjourlafuite.eu.org/#Free Mobile-2024-10-25" target="_blank">source</a>]]></content>
@@ -1533,7 +1826,7 @@
     <link href="https://feed-blush.vercel.app/27RCTDP/"/>
     <id>https://feed-blush.vercel.app/27RCTDP/</id>
     <published>2024-10-24T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>adresse email<br>adresse postale<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#Ornikar-2024-10-24" target="_blank">source</a>]]></content>
@@ -1563,7 +1856,7 @@
     <link href="https://feed-blush.vercel.app/12DC30B/"/>
     <id>https://feed-blush.vercel.app/12DC30B/</id>
     <published>2024-09-30T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>pays de naissance<br>adresse postale<br>numéro de téléphone<br>situation professionnelle<br>situation familiale<br>revenus</p>
     	  <a href="https://bonjourlafuite.eu.org/#Meilleurtaux-2024-09-30" target="_blank">source</a>]]></content>
@@ -1590,7 +1883,7 @@
     <link href="https://feed-blush.vercel.app/3T78HN3/"/>
     <id>https://feed-blush.vercel.app/3T78HN3/</id>
     <published>2024-09-18T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>numéro de téléphone<br>IBAN<br>type de forfait<br>identifiant de la carte SIM<br>identifiant du smartphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#RED by SFR-2024-09-18" target="_blank">source</a>]]></content>
@@ -1619,7 +1912,7 @@
     <link href="https://feed-blush.vercel.app/36ANARH/"/>
     <id>https://feed-blush.vercel.app/36ANARH/</id>
     <published>2024-09-13T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse<br>numéro de Sécurité sociale<br>montant approximatif des ressources</p>
     	  <a href="https://bonjourlafuite.eu.org/#Assurance retraite-2024-09-13" target="_blank">source</a>]]></content>
@@ -1647,7 +1940,7 @@
     <link href="https://feed-blush.vercel.app/3ZGMNJT/"/>
     <id>https://feed-blush.vercel.app/3ZGMNJT/</id>
     <published>2024-09-12T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#Cybertek-2024-09-12" target="_blank">source</a>]]></content>
@@ -1677,7 +1970,7 @@
     <link href="https://feed-blush.vercel.app/1Z7JRBE/"/>
     <id>https://feed-blush.vercel.app/1Z7JRBE/</id>
     <published>2024-09-10T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>numéro de téléphone<br>historique des commandes</p>
     	  <a href="https://bonjourlafuite.eu.org/#Cultura-2024-09-10" target="_blank">source</a>]]></content>
@@ -1707,7 +2000,7 @@
     <link href="https://feed-blush.vercel.app/1574C8F/"/>
     <id>https://feed-blush.vercel.app/1574C8F/</id>
     <published>2024-09-07T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#Boulanger-2024-09-07" target="_blank">source</a>]]></content>
@@ -1737,7 +2030,7 @@
     <link href="https://feed-blush.vercel.app/2BK1XSS/"/>
     <id>https://feed-blush.vercel.app/2BK1XSS/</id>
     <published>2024-04-28T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>numéro de téléphone<br>distorique des transactions<br>détails des commandes<br>informations bancaires (4 derniers numéros de la carte enregistrée et date d’expiration)</p>
     	  <a href="https://bonjourlafuite.eu.org/#Ticketmaster-2024-04-28" target="_blank">source</a>]]></content>
@@ -1766,7 +2059,7 @@
     <link href="https://feed-blush.vercel.app/BJCFWX/"/>
     <id>https://feed-blush.vercel.app/BJCFWX/</id>
     <published>2024-04-15T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>téléphones<br>adresse postale<br>adresse email<br>numéros de commandes</p>
     	  <a href="https://bonjourlafuite.eu.org/#Le Slip Français-2024-04-15" target="_blank">source</a>]]></content>
@@ -1796,7 +2089,7 @@
     <link href="https://feed-blush.vercel.app/A3E541/"/>
     <id>https://feed-blush.vercel.app/A3E541/</id>
     <published>2024-03-08T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>numéro de sécurité sociale<br>adresse email<br>adresse postale<br>numéro de téléphone<br>identifiants France Travail</p>
     	  <a href="https://bonjourlafuite.eu.org/#France Travail-2024-03-08" target="_blank">source</a>]]></content>
@@ -1825,7 +2118,7 @@
     <link href="https://feed-blush.vercel.app/T0R3D6/"/>
     <id>https://feed-blush.vercel.app/T0R3D6/</id>
     <published>2024-03-01T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>adresse email<br>adresse postale<br>numéro de téléphone</p>
     	  <a href="https://bonjourlafuite.eu.org/#LDLC-2024-03-01" target="_blank">source</a>]]></content>
@@ -1855,7 +2148,7 @@
     <link href="https://feed-blush.vercel.app/3WM3Y4T/"/>
     <id>https://feed-blush.vercel.app/3WM3Y4T/</id>
     <published>2024-02-06T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>numéro de sécurité sociale<br>nom de l’assureur de santé<br>contrat souscrit</p>
     	  <a href="https://bonjourlafuite.eu.org/#Almerys, Viamedis-2024-02-06" target="_blank">source</a>]]></content>
@@ -1883,7 +2176,7 @@
     <link href="https://feed-blush.vercel.app/3WM3Y4T/"/>
     <id>https://feed-blush.vercel.app/3WM3Y4T/</id>
     <published>2024-02-06T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.386Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom<br>prénom<br>date de naissance<br>numéro de sécurité sociale<br>nom de l’assureur de santé<br>contrat souscrit</p>
     	  <a href="https://bonjourlafuite.eu.org/#Almerys, Viamedis-2024-02-06" target="_blank">source</a>]]></content>
@@ -1911,7 +2204,7 @@
     <link href="https://feed-blush.vercel.app/1WQQ8VQ/"/>
     <id>https://feed-blush.vercel.app/1WQQ8VQ/</id>
     <published>2016-10-01T00:00:00.000Z</published>
-    <updated>2025-03-13T12:31:10.390Z</updated>
+    <updated>2025-03-18T08:14:56.222Z</updated>
     
     <content type="html"><![CDATA[<p>nom d’utilisateur<br>adresse email<br>Hachage des mots de passe</p>
     	  <a href="https://bonjourlafuite.eu.org/#Dailymotion-2016-10-01" target="_blank">source</a>]]></content>
