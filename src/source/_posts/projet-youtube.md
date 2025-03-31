@@ -1,6 +1,6 @@
 ---
 title: youtube
-date: 2025-03-25T15:40:32.827Z
+date: 2025-03-31T18:48:39.915Z
 tags:
 layout: 'reading-note'
 lang: fr
