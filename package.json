@@ -12,7 +12,7 @@
     "format": "prettier --write src/   "
   },
   "dependencies": {
-    "dompurify": "^3.2.2",
+    "dompurify": "^3.2.5",
     "he": "^1.2.0",
     "pinia": "^3.0.1",
     "puppeteer": "^24.6.1",
