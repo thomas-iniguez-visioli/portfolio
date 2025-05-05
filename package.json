@@ -33,7 +33,7 @@
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.21",
     "esbuild-plugin-vue3": "^0.4.2",
-    "eslint": "^9.24.0",
+    "eslint": "^9.26.0",
     "eslint-plugin-vue": "^9.33.0",
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
