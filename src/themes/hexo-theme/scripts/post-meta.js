@@ -37,7 +37,7 @@ hexo.extend.filter.register('before_post_render', function(data){
  * It's the date I moved to London
  */
 hexo.extend.filter.register('before_post_render', function(post){
-  post.publication_year=post.date
+  post.publication_year=new Date(post.date)
   if (!post.lang && post.date.isBefore('2013-03-01')) {
     post.lang = 'fr';
   }
