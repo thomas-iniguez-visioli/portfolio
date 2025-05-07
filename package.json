@@ -35,7 +35,7 @@
     "esbuild-plugin-vue3": "^0.4.2",
     "eslint": "^9.24.0",
     "eslint-plugin-vue": "^9.33.0",
-    "jsdom": "^26.0.0",
+    "jsdom": "^26.1.0",
     "prettier": "^3.5.3",
     "rollup": "^4.40.0",
     "rollup-plugin-css-only": "^4.5.2",
