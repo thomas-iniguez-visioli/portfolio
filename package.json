@@ -17,7 +17,7 @@
     "pinia": "^3.0.2",
     "puppeteer": "^24.8.2",
     "simple-git": "^3.27.0",
-    "vue": "^3.4.29",
+    "vue": "^3.5.15",
     "vue-router": "^4.5.1",
     "vue-rss-feed": "^0.2.4",
     "vue-template-compiler": "^2.7.16"
