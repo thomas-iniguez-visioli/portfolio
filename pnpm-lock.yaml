@@ -18,7 +18,7 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2(typescript@4.9.5)(vue@3.5.15(typescript@4.9.5))
       puppeteer:
-        specifier: ^24.8.2
+        specifier: ^24.9.0
         version: 24.9.0(typescript@4.9.5)
       simple-git:
         specifier: ^3.27.0
@@ -2482,8 +2482,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@3.24.4:
-    resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
+  zod@3.25.32:
+    resolution: {integrity: sha512-OSm2xTIRfW8CV5/QKgngwmQW/8aPfGdaQFlrGoErlgg/Epm7cjb6K6VEyExfe65a3VybUOnu381edLb0dfJl0g==}
 
 snapshots:
 
@@ -3116,7 +3116,7 @@ snapshots:
     dependencies:
       devtools-protocol: 0.0.1439962
       mitt: 3.0.1
-      zod: 3.24.4
+      zod: 3.25.32
 
   cliui@8.0.1:
     dependencies:
@@ -4781,4 +4781,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@3.24.4: {}
+  zod@3.25.32: {}
