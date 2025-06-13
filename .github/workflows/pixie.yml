@@ -1,24 +1,18 @@
-
-name: 'Pixee'
-
+name: Fix SonarCloud Issues with Pixeebot
 on:
-  
-  pull_request:
-    branches:
-      - main
-    types: [opened, reopened, update,synchronize]
+  check_run:
+    types: [completed]
+
+permissions:
+  id-token: write
 
 jobs:
-  pixee_fix:
+  share:
+    name: Upload Sonar Results to Pixeebot
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      contents: write
-      id-token: write
+    if: ${{ github.event.check_run.name == 'SonarCloud Code Analysis' }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Run Python script to create PR
-        uses: docker://codemodder/ci-integrations
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: pixee/upload-tool-results-action@v2
+        with:
+          tool: sonar
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
