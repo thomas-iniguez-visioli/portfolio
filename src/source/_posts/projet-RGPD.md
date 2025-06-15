@@ -1,6 +1,6 @@
 ---
 title: RGPD
-date: 2025-06-13T09:01:22.050Z
+date: 2025-06-15T17:37:34.385Z
 tags:
 layout: 'reading-note'
 lang: fr
