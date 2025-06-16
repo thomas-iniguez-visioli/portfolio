@@ -59,7 +59,7 @@ hexo.extend.filter.register('before_generate', function(){
 
 hexo.extend.filter.register('before_post_render', function(post){
   if (post.layout === 'journal') {
-    post.title = `☕️ journal : ${post.title}`;
+    post.title = `projet  ${post.title}`;
   }
 
   return post;
