@@ -15,7 +15,7 @@
   </header>
 
   <section>
-    <div class="summary"><%- post.description || post.excerpt %></div>
+    <div class="summary"><%- post.content|| post.excerpt %></div>
 
     <p class="read-more">
       <a href="<%= url_for(post.path) %>">

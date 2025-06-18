@@ -6,5 +6,8 @@ layout: 'reading-note'
 lang: fr
 categories: 
   - reading-note
+authors:
+      - thomas iniguez visioli 
+      - luc gardère 
 ---
 content 

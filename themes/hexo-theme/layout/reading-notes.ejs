@@ -34,7 +34,7 @@
           </ul>
           <div class="summary" itemprop="abstract"><%= post.description %></div>
           <a href="<%= url_for_page(post.path) %>" class="read-more">
-            <%- partial('icon', {id: 'bookmarks'}) -%><%= _p('read_more.reading_note', post.quotes_count) %>
+            <%- partial('icon', {id: 'bookmarks'}) -%><%= _p('read_more.reading_note', post.quotes_count||0) %>
           </a>
         </article>
       </li>
