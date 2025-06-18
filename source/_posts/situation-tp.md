@@ -1,10 +1,10 @@
 ---
-title: tp1
-date: 2025-06-18T06:16:00.048Z
+title: tp
+date: 2025-06-18T07:09:26.535Z
 tags:
 layout: 'journal'
 lang: fr
 categories: 
   - journal
 ---
-content ozeuor
+content 
