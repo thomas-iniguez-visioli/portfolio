@@ -9,12 +9,23 @@ const getlayout=(title)=>{
     return "reading-note"
   }
 }
+
+// Fonction pour extraire le contenu sans la date
+const getContentWithoutDate = (content) => {
+  const lines = content.split('\n')
+  const dateIndex = lines.findIndex(line => line.startsWith('date:'))
+  if (dateIndex !== -1) {
+    lines.splice(dateIndex, 1)
+  }
+  return lines.join('\n')
+}
+
 fs.writeFileSync("./.github/workflows/main.yml",fs.readFileSync("./.github/workflows/main.yml").toString().replace("githubname",config.githubname).replace("githubrepo",config.githubrepo))
 const tobuild=fs.readdirSync("./public/static", { withFileTypes: true }).filter(de => de.isDirectory()).map((file)=>{
 
 
  fs.readdirSync("./public/static/"+file.name).map((item)=>{
-    fs.writeFileSync(`./src/source/_posts/${file.name.toLowerCase()}-${item.replace(".txt","")}.md`,`---
+    const newContent = `---
 title: ${item.replace(".txt","")}
 date: ${new Date().toISOString()}
 tags:
@@ -23,8 +34,16 @@ lang: fr
 categories: 
   - ${getlayout(file.name.toLowerCase())}
 ---
-${fs.readFileSync("./public/static/"+file.name+"/"+item).toString()}`)
-      return fs.readFileSync("./public/static/"+file.name+"/"+item).toString()
+${fs.readFileSync("./public/static/"+file.name+"/"+item).toString()}`
+
+    const targetPath = `./source/_posts/${file.name.toLowerCase()}-${item.replace(".txt","")}.md`
+    
+    // Vérifier si le fichier existe et comparer le contenu sans la date
+    if (!fs.existsSync(targetPath) || getContentWithoutDate(fs.readFileSync(targetPath, 'utf8')) !== getContentWithoutDate(newContent)) {
+      fs.writeFileSync(targetPath, newContent)
+    }
+    
+    return fs.readFileSync("./public/static/"+file.name+"/"+item).toString()
     }).join("")
 })
 console.log(tobuild)
