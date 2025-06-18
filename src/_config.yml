@@ -9,11 +9,11 @@ description: ''
 keywords:
 author: thomas iniguez visioli
 language: fr
-timezone: ''
+timezone: 'Europe/Paris'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://thomas-iniguez-visioli.github.io/portfolio/
+url: https://thomas-iniguez-visioli.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -109,9 +109,7 @@ pagination_dir: page
 lang: fr
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
+
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -121,4 +119,12 @@ theme: hexo-theme
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  - type: git
+    repo: 
+      github:
+        url: "https://github.com/thomas-iniguez-visioli/thomas-iniguez-visioli.github.io.git"
+      
+        token: $TOKEN
+    message: "chore: update build"
+    name: alphaleadership
+    email: alphaleadershipyt@protonmail.com
