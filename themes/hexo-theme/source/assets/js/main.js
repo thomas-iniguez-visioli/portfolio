@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   if (tilesContainer) {
     get('https://thom4.net/photography/atom.xml')
       .then(items => items.slice(0, 8).map(post => '<li>' + render({post}) + '</li>'))
-      .then(items => tilesContainer.innerHTML = items.join(''));
+      .then(items => tilesContainer.innerText = items.join(''));
   }
 });
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       const html = parser.parseFromString(render({post}), 'text/html');
       const li = document.createElement('li');
       // li.lang = post.lang;
-      li.innerHTML = html.body.innerHTML;
+      li.innerText = html.body.innerHTML;
       searchResults.appendChild(li);
     });
   }

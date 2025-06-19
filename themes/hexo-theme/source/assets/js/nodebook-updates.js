@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
   if (updatesContainer) {
     get(updatesContainer.dataset.src)
       .then(items => items.map(commit => '<li class="commit">' + render({commit}) + '</li>'))
-      .then(items => updatesContainer.innerHTML = items.join(''));
+      .then(items => updatesContainer.innerText = items.join(''));
   }
 });
