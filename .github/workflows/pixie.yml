@@ -1,18 +1,33 @@
 name: Fix SonarCloud Issues with Pixeebot
 on:
-  check_run:
-    types: [completed]
-
+   push:
+      branches:
+        - main
+   pull_request:
+      types: [opened, synchronize, reopened]
+   workflow_dispatch:
 permissions:
   id-token: write
 
 jobs:
   share:
-    name: Upload Sonar Results to Pixeebot
     runs-on: ubuntu-latest
-    if: ${{ github.event.check_run.name == 'SonarCloud Code Analysis' }}
     steps:
-      - uses: pixee/upload-tool-results-action@v2
+      - uses: actions/checkout@v4
         with:
-          tool: sonar
-          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarQube Analysis
+        uses: SonarSource/sonarqube-scan-action@v5
+        id: sonarqube-analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    
+
+      - name: Upload SonarQube Results to Pixeebot
+        uses: pixee/upload-tool-results-action@v2
+        if: always() && steps.sonarqube-analysis.outcome == 'success'
+        with:
+            tool: sonar
+            sonar-host-url: ${{ vars.SONAR_HOST_URL }}
+            sonar-token: ${{ secrets.PIXEE_SONAR_TOKEN }}
+            sonar-component-key: "thomas-iniguez-visioli_portfolio"
