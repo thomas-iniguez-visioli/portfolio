@@ -57,3 +57,4 @@ jobs:
           body: "@pixeebot next"
           token: ${{ secrets.TOKEN }}
           assignees: pixeebot
+          commiter: arbinger <47387699+alphaleadership@users.noreply.github.com>
