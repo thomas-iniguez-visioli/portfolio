@@ -4394,7 +4394,7 @@
   
   
         if (typeof text === "string") {
-          if (text.match(/[\r?\n]/)) {
+          if (/[\r?\n]/.exec(text)) {
             text = text.split(/\r\n|\r|\n/g);
           } else {
             text = [text];
