@@ -1,5 +1,5 @@
 hexo.extend.tag.register('dailymotion', function(args){
-  var data = {
+  const data = {
     "id": args[0] || '',
     "width": args[1] || 480,
     "height": args[2] || 276

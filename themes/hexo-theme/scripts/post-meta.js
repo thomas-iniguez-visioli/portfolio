@@ -4,7 +4,7 @@ const url_for = hexo.extend.helper.get('url_for').bind(hexo);
 
 function coverUrl(post, config) {
   const {url:siteUrl=''} = config;
-  var url = post.cover ? (post.cover.url || post.cover) : (post.image ? '/' + post.image.trimStart('/') : '');
+  let url = post.cover ? (post.cover.url || post.cover) : (post.image ? '/' + post.image.trimStart('/') : '');
 
   return url ? (siteUrl + url_for(url)) : '';
 }

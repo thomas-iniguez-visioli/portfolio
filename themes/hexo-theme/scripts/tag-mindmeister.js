@@ -1,6 +1,6 @@
 hexo.extend.tag.register('mindmeister', function(args){
   //@see http://www.mindmeister.com/blog/2010/10/11/embedding-mind-maps/
-  var data = {
+  const data = {
     "id": args[0] || '',
     "width": args[1] || 600,
     "height": args[2] || 400,

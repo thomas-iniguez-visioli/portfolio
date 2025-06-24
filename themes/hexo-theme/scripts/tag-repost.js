@@ -1,7 +1,7 @@
 "use strict";
 
 hexo.extend.tag.register('repost', function(args, content){
-  var data = {
+  const data = {
     "url": args[0] || '',
     "title": Array.prototype.slice.call(args, 1).join(' ') || '',
     "domain": args[0].match(/\/\/([^\/]+)/)[1].replace('www.', '')

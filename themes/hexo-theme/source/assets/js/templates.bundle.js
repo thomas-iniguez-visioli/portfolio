@@ -29,9 +29,9 @@ const fs = {};
 // relative and absolute paths)
 function normalizeArray(parts, allowAboveRoot) {
   // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-  for (var i = parts.length - 1; i >= 0; i--) {
-    var last = parts[i];
+  let up = 0;
+  for (let i = parts.length - 1; i >= 0; i--) {
+    let last = parts[i];
     if (last === '.') {
       parts.splice(i, 1);
     } else if (last === '..') {
@@ -54,18 +54,17 @@ function normalizeArray(parts, allowAboveRoot) {
 
 // Split a filename into [root, dir, basename, ext], unix version
 // 'root' is just a slash, or nothing.
-var splitPathRe = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
-var splitPath = function (filename) {
+const splitPathRe = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+const splitPath = function (filename) {
   return splitPathRe.exec(filename).slice(1);
 };
 
 // path.resolve([from ...], to)
 // posix version
 function resolve() {
-  var resolvedPath = '',
-    resolvedAbsolute = false;
-  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-    var path = i >= 0 ? arguments[i] : '/';
+  let resolvedPath = '', resolvedAbsolute = false;
+  for (let i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    let path = i >= 0 ? arguments[i] : '/';
 
     // Skip empty and invalid entries
     if (typeof path !== 'string') {
@@ -90,8 +89,7 @@ function resolve() {
 // path.normalize(path)
 // posix version
 function normalize(path) {
-  var isPathAbsolute = isAbsolute(path),
-    trailingSlash = substr(path, -1) === '/';
+  let isPathAbsolute = isAbsolute(path), trailingSlash = substr(path, -1) === '/';
 
   // Normalize the path
   path = normalizeArray(filter(path.split('/'), function (p) {
@@ -113,7 +111,7 @@ function isAbsolute(path) {
 
 // posix version
 function join() {
-  var paths = Array.prototype.slice.call(arguments, 0);
+  let paths = Array.prototype.slice.call(arguments, 0);
   return normalize(filter(paths, function (p, index) {
     if (typeof p !== 'string') {
       throw new TypeError('Arguments to path.join must be strings');
@@ -128,40 +126,38 @@ function relative(from, to) {
   from = resolve(from).substr(1);
   to = resolve(to).substr(1);
   function trim(arr) {
-    var start = 0;
+    let start = 0;
     for (; start < arr.length; start++) {
       if (arr[start] !== '') break;
     }
-    var end = arr.length - 1;
+    let end = arr.length - 1;
     for (; end >= 0; end--) {
       if (arr[end] !== '') break;
     }
     if (start > end) return [];
     return arr.slice(start, end - start + 1);
   }
-  var fromParts = trim(from.split('/'));
-  var toParts = trim(to.split('/'));
-  var length = Math.min(fromParts.length, toParts.length);
-  var samePartsLength = length;
-  for (var i = 0; i < length; i++) {
+  let fromParts = trim(from.split('/'));
+  let toParts = trim(to.split('/'));
+  let length = Math.min(fromParts.length, toParts.length);
+  let samePartsLength = length;
+  for (let i = 0; i < length; i++) {
     if (fromParts[i] !== toParts[i]) {
       samePartsLength = i;
       break;
     }
   }
-  var outputParts = [];
-  for (var i = samePartsLength; i < fromParts.length; i++) {
+  let outputParts = [];
+  for (let i = samePartsLength; i < fromParts.length; i++) {
     outputParts.push('..');
   }
   outputParts = outputParts.concat(toParts.slice(samePartsLength));
   return outputParts.join('/');
 }
-var sep = '/';
-var delimiter = ':';
+const sep = '/';
+const delimiter = ':';
 function dirname(path) {
-  var result = splitPath(path),
-    root = result[0],
-    dir = result[1];
+  let result = splitPath(path), root = result[0], dir = result[1];
   if (!root && !dir) {
     // No dirname whatsoever
     return '.';
@@ -173,7 +169,7 @@ function dirname(path) {
   return root + dir;
 }
 function basename(path, ext) {
-  var f = splitPath(path)[2];
+  let f = splitPath(path)[2];
   // TODO: make this comparison case-insensitive on windows?
   if (ext && f.substr(-1 * ext.length) === ext) {
     f = f.substr(0, f.length - ext.length);
@@ -197,26 +193,26 @@ const require$$0 = {
 };
 function filter(xs, f) {
   if (xs.filter) return xs.filter(f);
-  var res = [];
-  for (var i = 0; i < xs.length; i++) {
+  let res = [];
+  for (let i = 0; i < xs.length; i++) {
     if (f(xs[i], i, xs)) res.push(xs[i]);
   }
   return res;
 }
 
 // String.prototype.substr - negative index don't work in IE8
-var substr = 'ab'.substr(-1) === 'b' ? function (str, start, len) {
+let substr = 'ab'.substr(-1) === 'b' ? function (str, start, len) {
   return str.substr(start, len);
 } : function (str, start, len) {
   if (start < 0) start = str.length + start;
   return str.substr(start, len);
 };
 
-var utils = createCommonjsModule(function (module, exports) {
+const utils = createCommonjsModule(function (module, exports) {
 
-  var regExpChars = /[|\\{}()[\]^$+*?.]/g;
-  var hasOwnProperty = Object.prototype.hasOwnProperty;
-  var hasOwn = function (obj, key) {
+  const regExpChars = /[|\\{}()[\]^$+*?.]/g;
+  const hasOwnProperty = Object.prototype.hasOwnProperty;
+  const hasOwn = function (obj, key) {
     return hasOwnProperty.apply(obj, [key]);
   };
 
@@ -237,14 +233,14 @@ var utils = createCommonjsModule(function (module, exports) {
     }
     return String(string).replace(regExpChars, '\\$&');
   };
-  var _ENCODE_HTML_RULES = {
+  const _ENCODE_HTML_RULES = {
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
     '"': '&#34;',
     "'": '&#39;'
   };
-  var _MATCH_HTML = /[&<>'"]/g;
+  const _MATCH_HTML = /[&<>'"]/g;
   function encode_char(c) {
     return _ENCODE_HTML_RULES[c] || c;
   }
@@ -258,7 +254,7 @@ var utils = createCommonjsModule(function (module, exports) {
    * @type {String}
    */
 
-  var escapeFuncStr = 'var _ENCODE_HTML_RULES = {\n' + '      "&": "&amp;"\n' + '    , "<": "&lt;"\n' + '    , ">": "&gt;"\n' + '    , \'"\': "&#34;"\n' + '    , "\'": "&#39;"\n' + '    }\n' + '  , _MATCH_HTML = /[&<>\'"]/g;\n' + 'function encode_char(c) {\n' + '  return _ENCODE_HTML_RULES[c] || c;\n' + '};\n';
+  const escapeFuncStr = 'var _ENCODE_HTML_RULES = {\n' + '      "&": "&amp;"\n' + '    , "<": "&lt;"\n' + '    , ">": "&gt;"\n' + '    , \'"\': "&#34;"\n' + '    , "\'": "&#39;"\n' + '    }\n' + '  , _MATCH_HTML = /[&<>\'"]/g;\n' + 'function encode_char(c) {\n' + '  return _ENCODE_HTML_RULES[c] || c;\n' + '};\n';
 
   /**
    * Escape characters reserved in XML.
@@ -309,7 +305,7 @@ var utils = createCommonjsModule(function (module, exports) {
   exports.shallowCopy = function (to, from) {
     from = from || {};
     if (to !== null && to !== undefined) {
-      for (var p in from) {
+      for (let p in from) {
         if (!hasOwn(from, p)) {
           continue;
         }
@@ -338,8 +334,8 @@ var utils = createCommonjsModule(function (module, exports) {
     list = list || [];
     from = from || {};
     if (to !== null && to !== undefined) {
-      for (var i = 0; i < list.length; i++) {
-        var p = list[i];
+      for (let i = 0; i < list.length; i++) {
+        let p = list[i];
         if (typeof from[p] != 'undefined') {
           if (!hasOwn(from, p)) {
             continue;
@@ -420,8 +416,8 @@ var utils = createCommonjsModule(function (module, exports) {
     };
   }();
   exports.hasOwnOnlyObject = function (obj) {
-    var o = exports.createNullProtoObjWherePossible();
-    for (var p in obj) {
+    const o = exports.createNullProtoObjWherePossible();
+    for (const p in obj) {
       if (hasOwn(obj, p)) {
         o[p] = obj[p];
       }
@@ -438,32 +434,32 @@ utils.hyphenToCamel;
 utils.createNullProtoObjWherePossible;
 utils.hasOwnOnlyObject;
 
-var name = "ejs";
-var description = "Embedded JavaScript templates";
-var keywords = [
+const name = "ejs";
+const description = "Embedded JavaScript templates";
+const keywords = [
 	"template",
 	"engine",
 	"ejs"
 ];
-var version = "3.1.10";
-var author = "Matthew Eernisse <mde@fleegix.org> (http://fleegix.org)";
-var license = "Apache-2.0";
-var bin = {
+const version = "3.1.10";
+const author = "Matthew Eernisse <mde@fleegix.org> (http://fleegix.org)";
+const license = "Apache-2.0";
+const bin = {
 	ejs: "./bin/cli.js"
 };
-var main = "./lib/ejs.js";
-var jsdelivr = "ejs.min.js";
-var unpkg = "ejs.min.js";
-var repository = {
+const main = "./lib/ejs.js";
+const jsdelivr = "ejs.min.js";
+const unpkg = "ejs.min.js";
+const repository = {
 	type: "git",
 	url: "git://github.com/mde/ejs.git"
 };
-var bugs = "https://github.com/mde/ejs/issues";
-var homepage = "https://github.com/mde/ejs";
-var dependencies = {
+const bugs = "https://github.com/mde/ejs/issues";
+const homepage = "https://github.com/mde/ejs";
+const dependencies = {
 	jake: "^10.8.5"
 };
-var devDependencies = {
+const devDependencies = {
 	browserify: "^16.5.1",
 	eslint: "^6.8.0",
 	"git-directory-deploy": "^1.5.1",
@@ -472,10 +468,10 @@ var devDependencies = {
 	mocha: "^10.2.0",
 	"uglify-js": "^3.3.16"
 };
-var engines = {
+const engines = {
 	node: ">=0.10.0"
 };
-var scripts = {
+const scripts = {
 	test: "npx jake test"
 };
 const _package = {
@@ -522,7 +518,7 @@ const _package$1 = /*#__PURE__*/Object.freeze({
 
 const require$$1 = getCjsExportFromNamespace(_package$1);
 
-var ejs = createCommonjsModule(function (module, exports) {
+const ejs = createCommonjsModule(function (module, exports) {
 
   /**
    * @file Embedded JavaScript templating engine. {@link http://ejs.co}
@@ -549,23 +545,23 @@ var ejs = createCommonjsModule(function (module, exports) {
    * @module ejs
    * @public
    */
-  var path = require$$0;
-  var scopeOptionWarned = false;
+  const path = require$$0;
+  const scopeOptionWarned = false;
   /** @type {string} */
-  var _VERSION_STRING = require$$1.version;
-  var _DEFAULT_OPEN_DELIMITER = '<';
-  var _DEFAULT_CLOSE_DELIMITER = '>';
-  var _DEFAULT_DELIMITER = '%';
-  var _DEFAULT_LOCALS_NAME = 'locals';
-  var _NAME = 'ejs';
-  var _REGEX_STRING = '(<%%|%%>|<%=|<%-|<%_|<%#|<%|%>|-%>|_%>)';
-  var _OPTS_PASSABLE_WITH_DATA = ['delimiter', 'scope', 'context', 'debug', 'compileDebug', 'client', '_with', 'rmWhitespace', 'strict', 'filename', 'async'];
+  const _VERSION_STRING = require$$1.version;
+  const _DEFAULT_OPEN_DELIMITER = '<';
+  const _DEFAULT_CLOSE_DELIMITER = '>';
+  const _DEFAULT_DELIMITER = '%';
+  const _DEFAULT_LOCALS_NAME = 'locals';
+  const _NAME = 'ejs';
+  const _REGEX_STRING = '(<%%|%%>|<%=|<%-|<%_|<%#|<%|%>|-%>|_%>)';
+  const _OPTS_PASSABLE_WITH_DATA = ['delimiter', 'scope', 'context', 'debug', 'compileDebug', 'client', '_with', 'rmWhitespace', 'strict', 'filename', 'async'];
   // We don't allow 'cache' option to be passed in the data obj for
   // the normal `render` call, but this is where Express 2 & 3 put it
   // so we make an exception for `renderFile`
-  var _OPTS_PASSABLE_WITH_DATA_EXPRESS = _OPTS_PASSABLE_WITH_DATA.concat('cache');
-  var _BOM = /^\uFEFF/;
-  var _JS_IDENTIFIER = /^[a-zA-Z_$][0-9a-zA-Z_$]*$/;
+  const _OPTS_PASSABLE_WITH_DATA_EXPRESS = _OPTS_PASSABLE_WITH_DATA.concat('cache');
+  const _BOM = /^\uFEFF/;
+  const _JS_IDENTIFIER = /^[a-zA-Z_$][0-9a-zA-Z_$]*$/;
 
   /**
    * EJS template function cache. This can be a LRU object from lru-cache NPM
@@ -618,11 +614,11 @@ var ejs = createCommonjsModule(function (module, exports) {
    * @return {String}
    */
   exports.resolveInclude = function (name, filename, isDir) {
-    var dirname = path.dirname;
-    var extname = path.extname;
-    var resolve = path.resolve;
-    var includePath = resolve(isDir ? filename : dirname(filename), name);
-    var ext = extname(name);
+    let dirname = path.dirname;
+    let extname = path.extname;
+    let resolve = path.resolve;
+    let includePath = resolve(isDir ? filename : dirname(filename), name);
+    let ext = extname(name);
     if (!ext) {
       includePath += '.ejs';
     }
@@ -637,7 +633,7 @@ var ejs = createCommonjsModule(function (module, exports) {
    * @return {String}
    */
   function resolvePaths(name, paths) {
-    var filePath;
+    let filePath;
     if (paths.some(function (v) {
       filePath = exports.resolveInclude(name, v, true);
       return fs.existsSync(filePath);
@@ -654,10 +650,10 @@ var ejs = createCommonjsModule(function (module, exports) {
    * @return {String}
    */
   function getIncludePath(path, options) {
-    var includePath;
-    var filePath;
-    var views = options.views;
-    var match = /^[A-Za-z]+:\\|^\//.exec(path);
+    let includePath;
+    let filePath;
+    let views = options.views;
+    let match = /^[A-Za-z]+:\\|^\//.exec(path);
 
     // Abs path
     if (match && match.length) {
@@ -707,9 +703,9 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   function handleCache(options, template) {
-    var func;
-    var filename = options.filename;
-    var hasTemplate = arguments.length > 1;
+    let func;
+    let filename = options.filename;
+    let hasTemplate = arguments.length > 1;
     if (options.cache) {
       if (!filename) {
         throw new Error('cache option requires a filename');
@@ -748,7 +744,7 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   function tryHandleCache(options, data, cb) {
-    var result;
+    let result;
     if (!cb) {
       if (typeof exports.promiseImpl == 'function') {
         return new exports.promiseImpl(function (resolve, reject) {
@@ -798,10 +794,10 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   function includeFile(path, options) {
-    var opts = utils.shallowCopy(utils.createNullProtoObjWherePossible(), options);
+    let opts = utils.shallowCopy(utils.createNullProtoObjWherePossible(), options);
     opts.filename = getIncludePath(path, opts);
     if (typeof options.includer === 'function') {
-      var includerResult = options.includer(path, opts.filename);
+      let includerResult = options.includer(path, opts.filename);
       if (includerResult) {
         if (includerResult.filename) {
           opts.filename = includerResult.filename;
@@ -829,13 +825,13 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   function rethrow(err, str, flnm, lineno, esc) {
-    var lines = str.split('\n');
-    var start = Math.max(lineno - 3, 0);
-    var end = Math.min(lines.length, lineno + 3);
-    var filename = esc(flnm);
+    let lines = str.split('\n');
+    let start = Math.max(lineno - 3, 0);
+    let end = Math.min(lines.length, lineno + 3);
+    let filename = esc(flnm);
     // Error context
-    var context = lines.slice(start, end).map(function (line, i) {
-      var curr = i + start + 1;
+    let context = lines.slice(start, end).map(function (line, i) {
+      let curr = i + start + 1;
       return (curr == lineno ? ' >> ' : '    ') + curr + '| ' + line;
     }).join('\n');
 
@@ -862,7 +858,7 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   exports.compile = function compile(template, opts) {
-    var templ;
+    let templ;
 
     // v1 compat
     // 'scope' is 'context'
@@ -896,8 +892,8 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   exports.render = function (template, d, o) {
-    var data = d || utils.createNullProtoObjWherePossible();
-    var opts = o || utils.createNullProtoObjWherePossible();
+    let data = d || utils.createNullProtoObjWherePossible();
+    let opts = o || utils.createNullProtoObjWherePossible();
 
     // No options object -- if there are optiony names
     // in the data, copy them to options
@@ -921,14 +917,14 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   exports.renderFile = function () {
-    var args = Array.prototype.slice.call(arguments);
-    var filename = args.shift();
-    var cb;
-    var opts = {
+    let args = Array.prototype.slice.call(arguments);
+    let filename = args.shift();
+    let cb;
+    let opts = {
       filename: filename
     };
-    var data;
-    var viewOpts;
+    let data;
+    let viewOpts;
 
     // Do we have a callback?
     if (typeof arguments[arguments.length - 1] == 'function') {
@@ -987,8 +983,8 @@ var ejs = createCommonjsModule(function (module, exports) {
     exports.cache.reset();
   };
   function Template(text, optsParam) {
-    var opts = utils.hasOwnOnlyObject(optsParam);
-    var options = utils.createNullProtoObjWherePossible();
+    let opts = utils.hasOwnOnlyObject(optsParam);
+    let options = utils.createNullProtoObjWherePossible();
     this.templateText = text;
     /** @type {string | null} */
     this.mode = null;
@@ -1032,27 +1028,27 @@ var ejs = createCommonjsModule(function (module, exports) {
   };
   Template.prototype = {
     createRegex: function () {
-      var str = _REGEX_STRING;
-      var delim = utils.escapeRegExpChars(this.opts.delimiter);
-      var open = utils.escapeRegExpChars(this.opts.openDelimiter);
-      var close = utils.escapeRegExpChars(this.opts.closeDelimiter);
+      let str = _REGEX_STRING;
+      let delim = utils.escapeRegExpChars(this.opts.delimiter);
+      let open = utils.escapeRegExpChars(this.opts.openDelimiter);
+      let close = utils.escapeRegExpChars(this.opts.closeDelimiter);
       str = str.replace(/%/g, delim).replace(/</g, open).replace(/>/g, close);
       return new RegExp(str);
     },
     compile: function () {
       /** @type {string} */
-      var src;
+      let src;
       /** @type {ClientFunction} */
-      var fn;
-      var opts = this.opts;
-      var prepended = '';
-      var appended = '';
+      let fn;
+      let opts = this.opts;
+      let prepended = '';
+      let appended = '';
       /** @type {EscapeCallback} */
-      var escapeFn = opts.escapeFunction;
+      let escapeFn = opts.escapeFunction;
       /** @type {FunctionConstructor} */
-      var ctor;
+      let ctor;
       /** @type {string} */
-      var sanitizedFilename = opts.filename ? JSON.stringify(opts.filename) : 'undefined';
+      let sanitizedFilename = opts.filename ? JSON.stringify(opts.filename) : 'undefined';
       if (!this.source) {
         this.generateSource();
         prepended += '  var __output = "";\n' + '  function __append(s) { if (s !== undefined && s !== null) __output += s }\n';
@@ -1066,9 +1062,9 @@ var ejs = createCommonjsModule(function (module, exports) {
           throw new Error('localsName is not a valid JS identifier.');
         }
         if (opts.destructuredLocals && opts.destructuredLocals.length) {
-          var destructuring = '  var __locals = (' + opts.localsName + ' || {}),\n';
-          for (var i = 0; i < opts.destructuredLocals.length; i++) {
-            var name = opts.destructuredLocals[i];
+          let destructuring = '  var __locals = (' + opts.localsName + ' || {}),\n';
+          for (let i = 0; i < opts.destructuredLocals.length; i++) {
+            let name = opts.destructuredLocals[i];
             if (!_JS_IDENTIFIER.test(name)) {
               throw new Error('destructuredLocals[' + i + '] is not a valid JS identifier.');
             }
@@ -1143,9 +1139,9 @@ var ejs = createCommonjsModule(function (module, exports) {
       // Return a callable function which will execute the function
       // created by the source-code, with the passed data as locals
       // Adds a local `include` function which allows full recursive include
-      var returnedFn = opts.client ? fn : function anonymous(data) {
-        var include = function (path, includeData) {
-          var d = utils.shallowCopy(utils.createNullProtoObjWherePossible(), data);
+      let returnedFn = opts.client ? fn : function anonymous(data) {
+        let include = function (path, includeData) {
+          let d = utils.shallowCopy(utils.createNullProtoObjWherePossible(), data);
           if (includeData) {
             d = utils.shallowCopy(d, includeData);
           }
@@ -1154,8 +1150,8 @@ var ejs = createCommonjsModule(function (module, exports) {
         return fn.apply(opts.context, [data || utils.createNullProtoObjWherePossible(), escapeFn, include, rethrow]);
       };
       if (opts.filename && typeof Object.defineProperty === 'function') {
-        var filename = opts.filename;
-        var basename = path.basename(filename, path.extname(filename));
+        let filename = opts.filename;
+        let basename = path.basename(filename, path.extname(filename));
         try {
           Object.defineProperty(returnedFn, 'name', {
             value: basename,
@@ -1168,7 +1164,7 @@ var ejs = createCommonjsModule(function (module, exports) {
       return returnedFn;
     },
     generateSource: function () {
-      var opts = this.opts;
+      let opts = this.opts;
       if (opts.rmWhitespace) {
         // Have to use two separate replace here as `^` and `$` operators don't
         // work well with `\r` and empty lines don't work well with the `m` flag.
@@ -1177,14 +1173,14 @@ var ejs = createCommonjsModule(function (module, exports) {
 
       // Slurp spaces and tabs before <%_ and after _%>
       this.templateText = this.templateText.replace(/[ \t]*<%_/gm, '<%_').replace(/_%>[ \t]*/gm, '_%>');
-      var self = this;
-      var matches = this.parseTemplateText();
-      var d = this.opts.delimiter;
-      var o = this.opts.openDelimiter;
-      var c = this.opts.closeDelimiter;
+      let self = this;
+      let matches = this.parseTemplateText();
+      let d = this.opts.delimiter;
+      let o = this.opts.openDelimiter;
+      let c = this.opts.closeDelimiter;
       if (matches && matches.length) {
         matches.forEach(function (line, index) {
-          var closing;
+          let closing;
           // If this is an opening tag, check for closing tags
           // FIXME: May end up with some false positives here
           // Better to store modes as k/v with openDelimiter + delimiter as key
@@ -1202,11 +1198,11 @@ var ejs = createCommonjsModule(function (module, exports) {
       }
     },
     parseTemplateText: function () {
-      var str = this.templateText;
-      var pat = this.regex;
-      var result = pat.exec(str);
-      var arr = [];
-      var firstPos;
+      let str = this.templateText;
+      let pat = this.regex;
+      let result = pat.exec(str);
+      let arr = [];
+      let firstPos;
       while (result) {
         firstPos = result.index;
         if (firstPos !== 0) {
@@ -1249,11 +1245,11 @@ var ejs = createCommonjsModule(function (module, exports) {
       this.source += '    ; __append("' + line + '")' + '\n';
     },
     scanLine: function (line) {
-      var self = this;
-      var d = this.opts.delimiter;
-      var o = this.opts.openDelimiter;
-      var c = this.opts.closeDelimiter;
-      var newLineCount = 0;
+      let self = this;
+      let d = this.opts.delimiter;
+      let o = this.opts.openDelimiter;
+      let c = this.opts.closeDelimiter;
+      let newLineCount = 0;
       newLineCount = line.split('\n').length - 1;
       switch (line) {
         case o + d:
@@ -1387,7 +1383,7 @@ ejs.fileLoader;
 ejs.localsName;
 ejs.promiseImpl;
 ejs.resolveInclude;
-var ejs_6 = ejs.compile;
+let ejs_6 = ejs.compile;
 ejs.render;
 ejs.renderFile;
 ejs.Template;
@@ -1405,22 +1401,22 @@ const photographyTileEjs = "<article class=\"tile is-square\">\n  <img src=\"<%=
 
 // import searchResultString from '../../../layout/common/search-result.ejs';
 
-var searchResultTemplate = ejs_6(searchResultEjs, {
+let searchResultTemplate = ejs_6(searchResultEjs, {
   client: false
 });
-var nodebookUpdateTemplate = ejs_6(nodebookUpdateEjs, {
+let nodebookUpdateTemplate = ejs_6(nodebookUpdateEjs, {
   client: false
 });
-var photographyTileTemplate = ejs_6(photographyTileEjs, {
+let photographyTileTemplate = ejs_6(photographyTileEjs, {
   client: false
 });
-var search = function search(data) {
+let search = function search(data) {
   return searchResultTemplate(data, {});
 };
-var nodebookUpdate = function nodebookUpdate(data) {
+let nodebookUpdate = function nodebookUpdate(data) {
   return nodebookUpdateTemplate(data, {});
 };
-var photography = function photography(data) {
+let photography = function photography(data) {
   return photographyTileTemplate(data, {});
 };
 

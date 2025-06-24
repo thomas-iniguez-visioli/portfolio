@@ -70,7 +70,7 @@
       return _typeof(obj);
     }
   
-    var globalObject = function () {
+    const globalObject = function () {
       return "undefined" !== typeof window ? window : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : this;
     }();
   
@@ -100,7 +100,7 @@
       }
     }
   
-    var console = {
+    const console = {
       log: consoleLog,
       warn: consoleWarn,
       error: consoleError
@@ -127,7 +127,7 @@
     }
   
     function download(url, name, opts) {
-      var xhr = new XMLHttpRequest();
+      let xhr = new XMLHttpRequest();
       xhr.open("GET", url);
       xhr.responseType = "blob";
   
@@ -143,7 +143,7 @@
     }
   
     function corsEnabled(url) {
-      var xhr = new XMLHttpRequest(); // use sync to avoid popup blocker
+      let xhr = new XMLHttpRequest(); // use sync to avoid popup blocker
   
       xhr.open("HEAD", url, false);
   
@@ -165,13 +165,13 @@
       }
     }
   
-    var saveAs = globalObject.saveAs || ( // probably in some web worker
-    (typeof window === "undefined" ? "undefined" : _typeof(window)) !== "object" || window !== globalObject ? function saveAs() {
+    const saveAs = globalObject.saveAs || ( // probably in some web worker
+    ((typeof window === "undefined" ? "undefined" : _typeof(window)) !== "object" || window !== globalObject ? // Use download attribute first if possible (#193 Lumia mobile) unless this is a native app
+    function saveAs() {
       /* noop */
-    } : // Use download attribute first if possible (#193 Lumia mobile) unless this is a native app
-    typeof HTMLAnchorElement !== "undefined" && "download" in HTMLAnchorElement.prototype ? function saveAs(blob, name, opts) {
-      var URL = globalObject.URL || globalObject.webkitURL;
-      var a = document.createElement("a");
+    } : typeof HTMLAnchorElement !== "undefined" && "download" in HTMLAnchorElement.prototype ? function saveAs(blob, name, opts) {
+      const URL = globalObject.URL || globalObject.webkitURL;
+      const a = document.createElement("a");
       name = name || blob.name || "download";
       a.download = name;
       a.rel = "noopener"; // tabnabbing
@@ -255,7 +255,7 @@
           URL.revokeObjectURL(url);
         }, 4e4); // 40s
       }
-    });
+    }));
   
     /**
      * A class to parse color values
@@ -9712,7 +9712,7 @@
           additionalKeyValues.push({
             key: "ColorSpace",
             value: "[/Indexed /DeviceRGB " + ( // if an indexed png defines more than one colour with transparency, we've created a sMask
-            image.palette.length / 3 - 1) + " " + ("sMask" in image && typeof image.sMask !== "undefined" ? image.objectId + 2 : image.objectId + 1) + " 0 R]"
+            (image.palette.length / 3 - 1)) + " " + ("sMask" in image && typeof image.sMask !== "undefined" ? image.objectId + 2 : image.objectId + 1) + " 0 R]"
           });
         } else {
           additionalKeyValues.push({

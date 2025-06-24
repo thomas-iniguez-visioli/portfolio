@@ -166,10 +166,10 @@
     }
   
     var saveAs = globalObject.saveAs || ( // probably in some web worker
-    (typeof window === "undefined" ? "undefined" : _typeof(window)) !== "object" || window !== globalObject ? function saveAs() {
+    ((typeof window === "undefined" ? "undefined" : _typeof(window)) !== "object" || window !== globalObject ? // Use download attribute first if possible (#193 Lumia mobile) unless this is a native app
+    function saveAs() {
       /* noop */
-    } : // Use download attribute first if possible (#193 Lumia mobile) unless this is a native app
-    typeof HTMLAnchorElement !== "undefined" && "download" in HTMLAnchorElement.prototype ? function saveAs(blob, name, opts) {
+    } : typeof HTMLAnchorElement !== "undefined" && "download" in HTMLAnchorElement.prototype ? function saveAs(blob, name, opts) {
       var URL = globalObject.URL || globalObject.webkitURL;
       var a = document.createElement("a");
       name = name || blob.name || "download";
@@ -255,7 +255,7 @@
           URL.revokeObjectURL(url);
         }, 4e4); // 40s
       }
-    });
+    }));
   
     /**
      * A class to parse color values
@@ -1528,13 +1528,13 @@
         }
       };
   
-      var fileId = "00000000000000000000000000000000";
+      const fileId = "00000000000000000000000000000000";
   
-      var getFileId = API.__private__.getFileId = function () {
+      const getFileId = API.__private__.getFileId = function () {
         return fileId;
       };
   
-      var setFileId = API.__private__.setFileId = function (value) {
+      const setFileId = API.__private__.setFileId = function (value) {
         if (typeof value !== "undefined" && /^[a-fA-F0-9]{32}$/.test(value)) {
           fileId = value.toUpperCase();
         } else {
@@ -1577,9 +1577,9 @@
         return getFileId();
       };
   
-      var creationDate;
+      let creationDate;
   
-      var convertDateToPDFDate = API.__private__.convertDateToPDFDate = function (parmDate) {
+      const convertDateToPDFDate = API.__private__.convertDateToPDFDate = function (parmDate) {
         var result = "";
         var tzoffset = parmDate.getTimezoneOffset(),
             tzsign = tzoffset < 0 ? "+" : "-",
@@ -1590,7 +1590,7 @@
         return result;
       };
   
-      var convertPDFDateToDate = API.__private__.convertPDFDateToDate = function (parmPDFDate) {
+      const convertPDFDateToDate = API.__private__.convertPDFDateToDate = function (parmPDFDate) {
         var year = parseInt(parmPDFDate.substr(2, 4), 10);
         var month = parseInt(parmPDFDate.substr(6, 2), 10) - 1;
         var date = parseInt(parmPDFDate.substr(8, 2), 10);
@@ -1603,7 +1603,7 @@
         return resultingDate;
       };
   
-      var setCreationDate = API.__private__.setCreationDate = function (date) {
+      const setCreationDate = API.__private__.setCreationDate = function (date) {
         var tmpCreationDateString;
         var regexPDFCreationDate = /^D:(20[0-2][0-9]|203[0-7]|19[7-9][0-9])(0[0-9]|1[0-2])([0-2][0-9]|3[0-1])(0[0-9]|1[0-9]|2[0-3])(0[0-9]|[1-5][0-9])(0[0-9]|[1-5][0-9])(\+0[0-9]|\+1[0-4]|-0[0-9]|-1[0-1])'(0[0-9]|[1-5][0-9])'?$/;
   
@@ -1623,7 +1623,7 @@
         return creationDate;
       };
   
-      var getCreationDate = API.__private__.getCreationDate = function (type) {
+      const getCreationDate = API.__private__.getCreationDate = function (type) {
         var result = creationDate;
   
         if (type === "jsDate") {
@@ -1660,28 +1660,28 @@
         return getCreationDate(type);
       };
   
-      var padd2 = API.__private__.padd2 = function (number) {
+      const padd2 = API.__private__.padd2 = function (number) {
         return ("0" + parseInt(number)).slice(-2);
       };
   
-      var padd2Hex = API.__private__.padd2Hex = function (hexString) {
+      const padd2Hex = API.__private__.padd2Hex = function (hexString) {
         hexString = hexString.toString();
         return ("00" + hexString).substr(hexString.length);
       };
   
-      var objectNumber = 0; // 'n' Current object number
+      let objectNumber = 0; // 'n' Current object number
   
-      var offsets = []; // List of offsets. Activated and reset by buildDocument(). Pupulated by various calls buildDocument makes.
+      let offsets = []; // List of offsets. Activated and reset by buildDocument(). Pupulated by various calls buildDocument makes.
   
-      var content = [];
-      var contentLength = 0;
-      var additionalObjects = [];
-      var pages = [];
-      var currentPage;
-      var hasCustomDestination = false;
-      var outputDestination = content;
+      let content = [];
+      let contentLength = 0;
+      let additionalObjects = [];
+      let pages = [];
+      let currentPage;
+      let hasCustomDestination = false;
+      let outputDestination = content;
   
-      var resetDocument = function resetDocument() {
+      const resetDocument = function resetDocument() {
         //reset fields relevant for objectNumber generation and xref.
         objectNumber = 0;
         contentLength = 0;
@@ -1697,7 +1697,7 @@
         outputDestination = destination;
       };
   
-      var setOutputDestination = function setOutputDestination(destination) {
+      const setOutputDestination = function setOutputDestination(destination) {
         if (!hasCustomDestination) {
           outputDestination = destination;
         }
@@ -1708,21 +1708,19 @@
         outputDestination = content;
       };
   
-      var out = API.__private__.out = function (string) {
+      const out = API.__private__.out = function (string) {
         string = string.toString();
         contentLength += string.length + 1;
         outputDestination.push(string);
         return outputDestination;
       };
   
-      var write = API.__private__.write = function (value) {
+      const write = API.__private__.write = function (value) {
         return out(arguments.length === 1 ? value.toString() : Array.prototype.join.call(arguments, " "));
       };
   
-      var getArrayBuffer = API.__private__.getArrayBuffer = function (data) {
-        var len = data.length,
-            ab = new ArrayBuffer(len),
-            u8 = new Uint8Array(ab);
+      const getArrayBuffer = API.__private__.getArrayBuffer = function (data) {
+        const len = data.length, ab = new ArrayBuffer(len), u8 = new Uint8Array(ab);
   
         while (len--) {
           u8[len] = data.charCodeAt(len);
@@ -9712,7 +9710,7 @@
           additionalKeyValues.push({
             key: "ColorSpace",
             value: "[/Indexed /DeviceRGB " + ( // if an indexed png defines more than one colour with transparency, we've created a sMask
-            image.palette.length / 3 - 1) + " " + ("sMask" in image && typeof image.sMask !== "undefined" ? image.objectId + 2 : image.objectId + 1) + " 0 R]"
+            (image.palette.length / 3 - 1)) + " " + ("sMask" in image && typeof image.sMask !== "undefined" ? image.objectId + 2 : image.objectId + 1) + " 0 R]"
           });
         } else {
           additionalKeyValues.push({
