@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run clean && node prebuild.mjs && npx hexo deploy && rmdir .deploy_git",
+    "build": "npm run clean && node prebuild.mjs && npx hexo deploy && rmdir .deploy_git -r ",
     "clean": "npx hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
