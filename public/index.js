@@ -8333,7 +8333,7 @@
         _Opt = value;
   
         if (this.sort) {
-          _Opt.sort();
+          _Opt.sort((a, b) => a.localeCompare(b));
         }
       };
       /**
@@ -8444,7 +8444,7 @@
           if (Boolean(value) === true) {
             this.Ff = setBitForPdf(this.Ff, 20);
   
-            _Opt.sort();
+            _Opt.sort((a, b) => a.localeCompare(b));
           } else {
             this.Ff = clearBitForPdf(this.Ff, 20);
           }
