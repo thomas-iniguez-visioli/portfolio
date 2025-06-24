@@ -33,6 +33,8 @@ layout: '${getlayout(file.name.toLowerCase())}'
 lang: fr
 categories: 
   - ${getlayout(file.name.toLowerCase())}
+authors:
+    - thomas iniguez visioli
 ---
 ${fs.readFileSync("./public/static/"+file.name+"/"+item).toString()}`
 
