@@ -3,9 +3,9 @@ const _sfc_main = {
   __name: "AboutView",
   setup(__props) {
     const downloadCV = () => {
-      var url = "cv_stage_bts.pdf";
+      const url = "cv_stage_bts.pdf";
       fetch(url).then((response) => response.blob()).then((blob) => {
-        var link = document.createElement("a");
+        const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
         link.download = "cv_stage_bts.pdf";
         link.click();

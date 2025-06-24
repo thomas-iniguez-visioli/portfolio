@@ -1,5 +1,5 @@
 hexo.extend.tag.register('slideshare', function(args){
-  var data = {
+  const data = {
     "id": args[0] || '',
     "width": args[1] || 427,
     "height": args[2] || 356

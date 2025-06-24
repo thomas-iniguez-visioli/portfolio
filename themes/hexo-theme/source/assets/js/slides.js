@@ -39,7 +39,7 @@ Reveal.addEventListener('ready', function() {
   });
 
   $$('section[data-background]').forEach(function(el){
-    var isEmpty = Array.from(el.children).every(function(child){
+    const isEmpty = Array.from(el.children).every(function(child){
       return (typeof child.nodeValue === 'text' && child.nodeValue.trim() === '') || child.classList.contains('notes');
     });
 

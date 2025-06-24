@@ -17,7 +17,7 @@ const _sfc_main = {
           const d = ["p", "div"];
           const rssContent = Array.from(items).map((item) => {
             const cod = new DOMParser().parseFromString(item.outerHTML, "text/xml");
-            var description = cod.documentElement.querySelector("content").innerHTML.replace(" >", "");
+            let description = cod.documentElement.querySelector("content").innerHTML.replace(" >", "");
             console.log(
               new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")
             );
@@ -33,8 +33,8 @@ const _sfc_main = {
               date: new DOMParser().parseFromString(description, "text/html").documentElement.querySelector("a").href.split("#")[1].split("-").slice(-3).join("-")
             };
           }).map((item) => {
-            var data = item.date.split("-");
-            var date = `${data[0]}-${data[1]}-${data[2]}`;
+            const data = item.date.split("-");
+            const date = `${data[0]}-${data[1]}-${data[2]}`;
             item.date = date;
             return item;
           }).sort((a, b) => {
