@@ -1,33 +1,25 @@
-name: Fix SonarCloud Issues with Pixeebot
 on:
-   push:
-      branches:
-        - main
-   pull_request:
+  # Trigger analysis when pushing to your main branches, and when creating a pull request.
+  push:
+    branches:
+      - main
+      - master
+      - develop
+      - 'releases/**'
+  pull_request:
       types: [opened, synchronize, reopened]
-   workflow_dispatch:
-permissions:
-  id-token: write
 
+name: Main Workflow
 jobs:
-  share:
+  sonarqube:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: SonarQube Analysis
-        uses: SonarSource/sonarqube-scan-action@v5
-        id: sonarqube-analysis
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    
-
-      - name: Upload SonarQube Results to Pixeebot
-        uses: pixee/upload-tool-results-action@v2
-        if: always() && steps.sonarqube-analysis.outcome == 'success'
-        with:
-            tool: sonar
-            sonar-host-url: ${{ vars.SONAR_HOST_URL }}
-            sonar-token: ${{ secrets.PIXEE_SONAR_TOKEN }}
-            sonar-component-key: "thomas-iniguez-visioli_portfolio"
+    - uses: actions/checkout@v4
+      with:
+        # Disabling shallow clones is recommended for improving the relevancy of reporting
+        fetch-depth: 0
+    - name: SonarQube Scan
+      uses: SonarSource/sonarqube-scan-action@v5.2.0 # Ex: v4.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
