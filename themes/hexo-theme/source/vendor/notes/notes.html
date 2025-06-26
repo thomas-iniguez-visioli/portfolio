@@ -392,6 +392,22 @@
 				}
 
 				/**
+				 * Validates if a URL belongs to a trusted domain.
+				 * @param {string} url - The URL to validate.
+				 * @returns {boolean} True if the URL is trusted, false otherwise.
+				 */
+				function isTrustedDomain(url) {
+					const trustedDomains = ['example.com', 'trustedsite.org'];
+					try {
+						const parsedUrl = new URL(url);
+						return trustedDomains.includes(parsedUrl.hostname);
+					} catch (e) {
+						console.error('Invalid URL:', url);
+						return false;
+					}
+				}
+
+				/**
 				 * Called when the main window sends an updated state.
 				 */
 				function handleStateMessage( data ) {
@@ -453,6 +469,10 @@
 					].join( '&' );
 
 					var sanitizedUrl = DOMPurify.sanitize(data.url);
+					if (!isTrustedDomain(sanitizedUrl)) {
+						console.error('Untrusted URL detected:', sanitizedUrl);
+						return;
+					}
 					var urlSeparator = /\?/.test(sanitizedUrl) ? '&' : '?';
 					var hash = '#/' + data.state.indexh + '/' + data.state.indexv;
 					var currentURL = sanitizedUrl + urlSeparator + params + '&postMessageEvents=true' + hash;
