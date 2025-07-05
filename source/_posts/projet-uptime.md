@@ -1,6 +1,6 @@
 ---
 title: uptime
-date: 2025-07-04T20:12:21.461Z
+date: 2025-07-05T11:33:11.109Z
 tags:
 layout: 'reading-note'
 lang: fr

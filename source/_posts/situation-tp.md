@@ -1,6 +1,6 @@
 ---
 title: tp
-date: 2025-07-04T20:12:21.462Z
+date: 2025-07-05T11:33:11.110Z
 tags:
 layout: 'journal'
 lang: fr
