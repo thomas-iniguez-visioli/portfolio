@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run clean && node prebuild.mjs && npx hexo deploy && rm .deploy_git -r ",
+    "build": "npm run clean &&  npx hexo deploy && rm .deploy_git -r ",
     "clean": "npx hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
@@ -21,6 +21,7 @@
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-pro": "^1.2.6",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",

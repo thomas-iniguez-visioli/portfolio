@@ -1,13 +1,13 @@
 ---
-title: tp
-date: 2025-03-06T15:13:15.463Z
-tags:
-layout: 'reading-note'
+title: preuve 2
+layout: reading-note
 lang: fr
-categories: 
+categories:
   - reading-note
 authors:
-      - thomas iniguez visioli 
-      - luc gardère 
+  - thomas iniguez visioli
+  - luc gardère
+date: 2025-03-06 15:13:15
+tags:
 ---
-content 
+les erreur sont réglée en interne par des issue github
