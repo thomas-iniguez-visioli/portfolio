@@ -37,7 +37,7 @@ importers:
         version: 2.0.0
       hexo-pro:
         specifier: ^1.2.6
-        version: 1.2.6(chokidar@3.6.0)
+        version: 1.2.7(chokidar@3.6.0)
       hexo-renderer-ejs:
         specifier: ^2.0.0
         version: 2.0.0
@@ -782,8 +782,8 @@ packages:
     resolution: {integrity: sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw==}
     engines: {node: '>=14'}
 
-  hexo-pro@1.2.6:
-    resolution: {integrity: sha512-U3cwVaurpy+zHlIvmMAQ6UuTmm7mDvDbFHqTYNMbq2yH6pSj0krA7q4wR6lGVQJgEm4rOEJDhEnXdHrMfARBKw==}
+  hexo-pro@1.2.7:
+    resolution: {integrity: sha512-mStyuOQPH82QquZy+7xNBmwp/zIE94RWfL3BHKeKdNk7MuCh5Tkq/cdzQLNuc9qy2VtBcDMU1Fb9pN/TVStCzQ==}
 
   hexo-renderer-ejs@2.0.0:
     resolution: {integrity: sha512-qCjE1IdwgDgv65qyb0KMVCwCdSVAkH0vwAe9XihjvaKWkmb9dtt8DgErOdqCXn0HReSyWiEVP2BrLRj3gyHwOQ==}
@@ -2519,7 +2519,7 @@ snapshots:
 
   hexo-pagination@3.0.0: {}
 
-  hexo-pro@1.2.6(chokidar@3.6.0):
+  hexo-pro@1.2.7(chokidar@3.6.0):
     dependencies:
       '@seald-io/nedb': 4.1.2
       axios: 1.10.0
