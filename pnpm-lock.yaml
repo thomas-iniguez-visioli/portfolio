@@ -36,7 +36,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       hexo-pro:
-        specifier: ^1.2.6
+        specifier: ^1.2.7
         version: 1.2.7(chokidar@3.6.0)
       hexo-renderer-ejs:
         specifier: ^2.0.0
