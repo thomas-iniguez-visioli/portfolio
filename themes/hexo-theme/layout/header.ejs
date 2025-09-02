@@ -1,25 +1,48 @@
-<header class="header container">
+<header class="page-header" role="banner">
+  <div class="container">
+    <div class="header-content">
+      <!-- Logo/Brand -->
+      <div class="header-brand">
+        <a href="<%= url_for('/') %>" rel="home" class="brand-link" aria-label="<%= config.title %> - Home">
+          <span class="brand-text">
+            <%= config.title %>
+          </span>
+        </a>
+      </div>
 
-  <div class="profile-picture">
-    <a href="<%= url_for('/' )%>" rel="home">
-      <img src="/assets/avatar.avif" alt="<%= config.title %>" class="is-avatar is-responsive">
-    </a>
+      <!-- Main Navigation -->
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <!-- Mobile menu button -->
+      
+
+        <!-- Navigation menu -->
+        <ul class="nav-menu" id="nav-menu">
+          <% getNavLinks(theme.links).forEach((link, index)=> { %>
+
+            <a href="<%= link.href %>" class="nav-link <%= link.classNames %>"
+              lang="<%= link.lang || config.language %>" <% if (link.href===url_for(page.path)) { %>aria-current="page"
+              <% } %>>
+                <%= link.label %>
+            </a>
+
+            <% }) %>
+        </ul>
+      </nav>
+
+      <!-- Header description (for home page) -->
+      <% if (is_home()) { %>
+        <div class="header-description">
+          <%- markdown(theme.description) %>
+        </div>
+        <% } %>
+    </div>
   </div>
-
-  <div class="presentation"><%- markdown(theme.description) %></div>
-
-  <nav>
-    <ul class="is-inline is-dotted">
-      <% getNavLinks(theme.links).forEach(link => { %>
-        <li class="<%= link.classNames %>"><a href="<%= link.href %>" lang="<%= link.lang || config.language %>"><%= link.label %></a></li>
-      <% }) %>
-    </ul>
-  </nav>
 </header>
 
 <section id="search" class="container<%= page.display_search ? ' is-active' : ''%>">
   <form action="#" role="search">
-    <input type="search" name="q" placeholder="<%= __('explain.search') %>" spellcheck autocomplete required><button type="submit"><%- partial('icon', {id: 'search', alt: __('search.label')}) %></button>
+    <input type="search" name="q" placeholder="<%= __('explain.search') %>" spellcheck autocomplete required><button
+      type="submit"><%- partial('icon', {id: 'search' , alt: __('search.label')}) %></button>
   </form>
 
   <ul class="search-results is-discrete with-metadata"></ul>
@@ -27,7 +50,7 @@
   <p class="next">
     <a href="https://www.algolia.com" class="credits" target="_blank" rel="noreferrer noopener">
       <%= __('search.powered_by') %>
-      <%- partial('icon', {id: 'algolia', alt: 'Algolia', size: 'auto'}) %>
+        <%- partial('icon', {id: 'algolia' , alt: 'Algolia' , size: 'auto' }) %>
     </a>
   </p>
 </section>

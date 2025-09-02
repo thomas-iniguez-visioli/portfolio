@@ -29,3 +29,8 @@ coverage
 
 *.tsbuildinfo
 .deploy_git
+
+# Environment variables
+.env
+.env.local
+.env.production

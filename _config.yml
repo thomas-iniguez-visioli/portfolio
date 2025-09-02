@@ -111,6 +111,22 @@ lang: fr
 ## include:/exclude: options only apply to the 'source/' folder
 
 
+# Newsletter Configuration
+newsletter:
+  enabled: true
+  discord_webhook: ${DISCORD_WEBHOOK_URL}
+  retry_attempts: 3
+  timeout_ms: 5000
+  rate_limit_ms: 1000
+
+# Build Optimization
+build_optimization:
+  timestamp_threshold: 24
+  source_files:
+    - 'data/twt.json'
+  output_files:
+    - 'source/_posts/twitter.md'
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/

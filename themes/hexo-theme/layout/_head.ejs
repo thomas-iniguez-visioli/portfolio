@@ -90,6 +90,9 @@
           },
         };
         </script>
+<!-- Modern font loading system -->
+<%- partial('_fonts') %>
+
 <link rel="preload" href="/assets/icons.svg">
 <link rel="preload" href="/assets/avatar.avif">
 <link rel="preload" href="/images/publications/nodejs-cover.png">
@@ -141,3 +144,25 @@
 <% } -%>
 
 <%- (page.scripts || []).map(script => `<script type="module" src="/assets/js/${script}"></script>`).join('\n') %>
+
+<!-- Modern navigation script -->
+<script type="module" src="<%= url_for('/js/navigation.js') %>"></script>
+
+<!-- Modern cards script -->
+<script type="module" src="<%= url_for('/js/cards.js') %>"></script>
+
+<!-- Modern animations script -->
+<script type="module" src="<%= url_for('/js/animations.js') %>"></script>
+
+<!-- Performance optimizations script -->
+<script type="module" src="<%= url_for('/js/performance.js') %>"></script>
+
+<!-- Accessibility enhancements script -->
+<script type="module" src="<%= url_for('/js/accessibility.js') %>"></script>
+
+<!-- Sidebar and simplified footer styles -->
+<link rel="stylesheet" href="<%= url_for('/css/sidebar.css') %>">
+<link rel="stylesheet" href="<%= url_for('/css/footer-simple.css') %>">
+
+<!-- Newsletter form styles -->
+<link rel="stylesheet" href="<%= url_for('/css/newsletter.css') %>">

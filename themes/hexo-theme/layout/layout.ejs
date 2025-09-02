@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="<%- config.language %>" prefix="og: http://ogp.me/ns#">
-<head><%- partial('_head') %></head>
-<body class="home <%= `site-${config.layout} content-${page.layout}` %>">
-<%- body %>
-<script src="<%= url_for(`/assets/js/main.js?v=${process.env.npm_package_version}`)%>" type="module"></script>
-<script>tarteaucitron.user.tawktoWidgetId = '1iu11r9a9';</script>
+<head>
+  <%- partial('_head') %>
+  <!-- Modern viewport meta tag for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+</head>
+<body class="modern-layout site-<%= config.layout %> content-<%= page.layout %>">
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Modern semantic HTML5 structure with CSS Grid -->
+  <div class="page-grid">
+    <%- partial('header') %>
+    
+    <div class="layout-with-sidebar">
+      <main id="main-content" class="main-content" role="main">
+        <%- body %>
+      </main>
+      
+      <%- partial('sidebar') %>
+    </div>
+    
+ 
+  </div>
+  
+  <!-- Modern script loading -->
+  <script src="<%= url_for(`/assets/js/main.js?v=${process.env.npm_package_version}`)%>" type="module"></script>
+  <script>tarteaucitron.user.tawktoWidgetId = '1iu11r9a9';</script>
 </body>
 </html>

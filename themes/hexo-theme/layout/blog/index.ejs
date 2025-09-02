@@ -1,16 +1,17 @@
-<%- partial('header') %>
 
 
-<main role="main">
-  <%- partial('blog/writings', {
-    post: site.posts.first(),
-    entries: site.posts.slice(1, 5),
-    readingNotes: site.posts.find({ layout: 'reading-note' }).sort('date', -1).limit(4),
-    journalEntries: site.posts.find({ layout: 'journal' }).sort('date', -1).limit(4),
+<!-- Modern Hero Section -->
+<%- partial('blog/hero-modern') %>
+
+<main class="page-main" role="main" id="main-content">
+  <!-- Modern Cards Section -->
+  <%- partial('blog/cards-modern', {
+    featuredPost: site.posts.first(),
+    posts: site.posts.slice(1, 8),
   }) %>
 
-
+  <!-- Additional Content -->
   <%- partial('blog/pictures', {}) %>
 </main>
 
-<%- partial("footer", {}, { cache: true }) %>
+
