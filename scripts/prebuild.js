@@ -10,7 +10,7 @@ const path = require('path');
 // Configuration par défaut
 const DEFAULT_CONFIG = {
     timestamp_threshold: 24,
-    source_files: ['data/twt.json'],
+    source_files: ['./twt.json'],
     output_files: ['source/_posts/twitter.md'],
     log_enabled: true
 };
