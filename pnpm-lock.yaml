@@ -1340,8 +1340,8 @@ packages:
   merge-descriptors@1.0.3:
     resolution: {integrity: sha512-gaNvAS7TZ897/rVaZ0nMtAyxNyi/pdbjbAwUpFQpN70GqnVfOiXpeUUMKRBmzXaSQ8DdTX4/0ms62r2K+hE6mQ==}
 
-  micro-memoize@4.1.3:
-    resolution: {integrity: sha512-DzRMi8smUZXT7rCGikRwldEh6eO6qzKiPPopcr1+2EY3AYKpy5fu159PKWwIS9A6IWnrvPKDMcuFtyrroZa8Bw==}
+  micro-memoize@4.2.0:
+    resolution: {integrity: sha512-dRxIsNh0XosO9sd3aASUabKOzG9dloLO41g74XUGThpHBoGm1ttakPT5in14CuW/EDedkniaShFHbymmmKGOQA==}
 
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
@@ -3708,7 +3708,7 @@ snapshots:
 
   merge-descriptors@1.0.3: {}
 
-  micro-memoize@4.1.3: {}
+  micro-memoize@4.2.0: {}
 
   micromatch@4.0.8:
     dependencies:
@@ -3756,7 +3756,7 @@ snapshots:
   moize@6.1.6:
     dependencies:
       fast-equals: 3.0.3
-      micro-memoize: 4.1.3
+      micro-memoize: 4.2.0
 
   moment-timezone@0.5.48:
     dependencies:
