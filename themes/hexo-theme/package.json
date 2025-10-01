@@ -7,7 +7,7 @@
   "scripts": {
     "build": "run-p 'build:*'",
     "build:js": "rollup --config",
-    "build:css": "postcss source/css/*.css source/css/slides/*.css --config postcss.config.js --base source/css --dir source/styles",
+    "build:css": "postcss source\\\\css\\\\*.css source\\\\css\\\\slides\\\\*.css --config postcss.config.js --base source\\css --dir source\\styles",
     "copy:vendor": "cp -rf node_modules/reveal.js/plugin/notes source/vendor && git add source/vendor/notes",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "run-p 'watch:*'",
@@ -27,6 +27,16 @@
     "url": "https://github.com/thom4parisot/hexo-theme/issues"
   },
   "homepage": "https://github.com/thom4parisot/hexo-theme#readme",
+  "browserslist": [
+    "Chrome >= 90",
+    "Firefox >= 88", 
+    "Safari >= 14",
+    "Edge >= 90",
+    "iOS >= 14",
+    "Android >= 90",
+    "> 1%",
+    "not dead"
+  ],
   "dependencies": {
     "group-array": "^1.0.0",
     "markdown-it": "^14.1.0",

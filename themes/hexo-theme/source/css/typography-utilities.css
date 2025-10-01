@@ -399,26 +399,112 @@
   font-weight: var(--font-weight-light);
 }
 
-/* ===== CODE STYLING ===== */
+/* ===== DEVELOPER CODE STYLING ===== */
 
 .code-inline {
   font-family: var(--font-family-mono);
   font-size: 0.875em;
-  background-color: var(--color-background-tertiary);
-  padding: 0.125em 0.25em;
-  border-radius: var(--border-radius-sm);
+  background-color: var(--dev-code-bg);
   color: var(--color-text-primary);
+  padding: 0.125em 0.375em;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--dev-code-border);
+  font-weight: var(--font-weight-medium);
+  font-feature-settings: var(--font-feature-mono);
 }
 
 .code-block {
   font-family: var(--font-family-mono);
   font-size: var(--font-size-sm);
-  line-height: var(--line-height-relaxed);
-  background-color: var(--color-neutral-900);
-  color: var(--color-neutral-100);
+  line-height: var(--line-height-code);
+  background-color: var(--dev-terminal-bg);
+  color: var(--dev-terminal-text);
   padding: var(--space-4);
-  border-radius: var(--border-radius-base);
+  border-radius: var(--border-radius-lg);
   overflow-x: auto;
+  border: 1px solid var(--dev-ide-border);
+  font-feature-settings: var(--font-feature-mono);
+}
+
+/* Terminal-style code block */
+.code-terminal {
+  font-family: var(--font-family-mono);
+  background-color: var(--dev-terminal-bg);
+  color: var(--dev-terminal-text);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--border-radius-base);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-code);
+  overflow-x: auto;
+  position: relative;
+}
+
+.code-terminal::before {
+  content: "$ ";
+  color: var(--dev-syntax-comment);
+  user-select: none;
+}
+
+/* IDE-style code block */
+.code-ide {
+  font-family: var(--font-family-mono);
+  background-color: var(--dev-ide-editor);
+  color: var(--dev-terminal-text);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-code);
+  overflow-x: auto;
+  border: 1px solid var(--dev-ide-border);
+  position: relative;
+}
+
+/* Code with language label */
+.code-snippet {
+  position: relative;
+  margin: var(--space-4) 0;
+}
+
+.code-snippet::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  right: var(--space-3);
+  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-200);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family-mono);
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Keyboard input styling */
+.kbd {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-800);
+  padding: 0.125em 0.375em;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-neutral-300);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: var(--font-weight-medium);
+  display: inline-block;
+}
+
+/* Sample output styling */
+.samp {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-700);
+  padding: 0.125em 0.375em;
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--color-primary);
+  display: inline-block;
 }
 
 /* ===== LIST STYLING ===== */
@@ -539,5 +625,345 @@
   .text-tertiary,
   .text-muted {
     color: #000000;
+  }
+}
+/* ====
+= DEVELOPER-SPECIFIC TYPOGRAPHY UTILITIES ===== */
+
+/* Developer badge text */
+.dev-badge {
+  display: inline-block;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: 1;
+  font-feature-settings: var(--font-feature-mono);
+}
+
+/* Technology stack text */
+.tech-stack {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--letter-spacing-normal);
+  font-feature-settings: var(--font-feature-mono);
+}
+
+/* Developer status text */
+.dev-status {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+}
+
+.dev-status--online {
+  color: var(--dev-status-online);
+}
+
+.dev-status--busy {
+  color: var(--dev-status-busy);
+}
+
+.dev-status--away {
+  color: var(--dev-status-away);
+}
+
+.dev-status--offline {
+  color: var(--dev-status-offline);
+}
+
+/* Developer heading styles */
+.dev-heading {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  font-feature-settings: var(--font-feature-sans);
+}
+
+.dev-heading--hero {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tighter);
+  line-height: var(--line-height-none);
+}
+
+.dev-heading--section {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.dev-heading--subsection {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Developer body text optimizations */
+.dev-prose {
+  font-family: var(--font-family-serif);
+  line-height: var(--line-height-relaxed);
+  max-width: 65ch;
+}
+
+.dev-prose--code {
+  max-width: 90ch; /* Wider for code examples */
+}
+
+.dev-prose--narrow {
+  max-width: 50ch;
+}
+
+/* Developer link styles */
+.dev-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-colors);
+}
+
+.dev-link:hover {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+  text-underline-offset: 0.125em;
+}
+
+.dev-link--mono {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+  font-feature-settings: var(--font-feature-mono);
+}
+
+/* Developer metadata text */
+.dev-meta {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Developer comment styles */
+.dev-comment {
+  font-family: var(--font-family-mono);
+  color: var(--dev-syntax-comment);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+}
+
+.dev-comment::before {
+  content: "// ";
+  font-style: normal;
+}
+
+/* Developer highlight text */
+.dev-highlight {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-900);
+  padding: 0.125em 0.25em;
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Developer variable text */
+.dev-var {
+  font-family: var(--font-family-mono);
+  color: var(--dev-syntax-variable);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9em;
+}
+
+/* Developer function text */
+.dev-function {
+  font-family: var(--font-family-mono);
+  color: var(--dev-syntax-function);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9em;
+}
+
+/* Developer keyword text */
+.dev-keyword {
+  font-family: var(--font-family-mono);
+  color: var(--dev-syntax-keyword);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.9em;
+}
+
+/* Developer string text */
+.dev-string {
+  font-family: var(--font-family-mono);
+  color: var(--dev-syntax-string);
+  font-size: 0.9em;
+}
+
+/* Developer number text */
+.dev-number {
+  font-family: var(--font-family-mono);
+  color: var(--dev-syntax-number);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9em;
+}
+
+/* ===== RESPONSIVE DEVELOPER TYPOGRAPHY ===== */
+
+@media (min-width: 640px) {
+  .sm\\:dev-heading--hero {
+    font-size: var(--font-size-6xl);
+  }
+  
+  .sm\\:dev-prose--wide {
+    max-width: 75ch;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\\:dev-heading--hero {
+    font-size: var(--font-size-6xl);
+  }
+  
+  .md\\:dev-heading--section {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .md\\:dev-prose--wide {
+    max-width: 80ch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\\:dev-heading--hero {
+    font-size: var(--font-size-6xl);
+  }
+  
+  .lg\\:dev-prose--wide {
+    max-width: 85ch;
+  }
+  
+  .lg\\:code-block {
+    font-size: var(--font-size-base);
+    padding: var(--space-6);
+  }
+}
+
+/* ===== DEVELOPER DARK MODE TYPOGRAPHY ===== */
+
+@media (prefers-color-scheme: dark) {
+  .dev-badge {
+    background-color: var(--color-neutral-800);
+    color: var(--color-neutral-200);
+  }
+  
+  .dev-highlight {
+    background-color: var(--color-primary-900);
+    color: var(--color-primary-100);
+  }
+  
+  .kbd {
+    background-color: var(--color-neutral-800);
+    color: var(--color-neutral-200);
+    border-color: var(--color-neutral-600);
+  }
+}
+
+[data-theme="dark"] {
+  .dev-badge {
+    background-color: var(--color-neutral-800);
+    color: var(--color-neutral-200);
+  }
+  
+  .dev-highlight {
+    background-color: var(--color-primary-900);
+    color: var(--color-primary-100);
+  }
+  
+  .kbd {
+    background-color: var(--color-neutral-800);
+    color: var(--color-neutral-200);
+    border-color: var(--color-neutral-600);
+  }
+}
+
+/* ===== DEVELOPER ACCESSIBILITY ENHANCEMENTS ===== */
+
+/* Ensure code ligatures work properly */
+.font-mono,
+.code-inline,
+.code-block,
+.code-terminal,
+.code-ide,
+.dev-badge,
+.tech-stack,
+.dev-status,
+.dev-meta,
+.dev-comment,
+.dev-var,
+.dev-function,
+.dev-keyword,
+.dev-string,
+.dev-number {
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: var(--font-feature-mono);
+}
+
+/* High contrast mode for developer elements */
+@media (prefers-contrast: high) {
+  .code-inline,
+  .code-block,
+  .code-terminal,
+  .code-ide {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+  }
+  
+  .dev-badge {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+  }
+  
+  .dev-highlight {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+  }
+}
+
+/* Print styles for developer content */
+@media print {
+  .code-inline,
+  .code-block,
+  .code-terminal,
+  .code-ide {
+    background: #f5f5f5 !important;
+    color: #000000 !important;
+    border: 1px solid #cccccc !important;
+  }
+  
+  .dev-badge {
+    background: #f0f0f0 !important;
+    color: #000000 !important;
+    border: 1px solid #cccccc !important;
+  }
+  
+  .dev-highlight {
+    background: #ffff99 !important;
+    color: #000000 !important;
+  }
+  
+  .dev-var,
+  .dev-function,
+  .dev-keyword,
+  .dev-string,
+  .dev-number {
+    color: #000000 !important;
   }
 }

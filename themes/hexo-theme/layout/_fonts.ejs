@@ -1,69 +1,123 @@
-<%# Modern System Font Loading This partial should be included in the <head> section
-    Uses only system fonts for optimal performance and privacy
+<%# Developer Typography System Font Loading
+    This partial should be included in the <head> section
+    Uses JetBrains Mono and Inter with system font fallbacks
     %>
 
-    <!-- Font loading CSS -->
+    <!-- Developer typography CSS -->
     <link rel="stylesheet" href="<%= url_for('/css/fonts.css') %>">
+    <link rel="stylesheet" href="<%= url_for('/css/foundation/typography.css') %>">
 
-    <!-- System font optimization -->
+    <!-- Critical font loading with fallbacks -->
     <style>
-        /* Immediate font loading with system fonts - no FOUT */
+        /* Immediate font loading with system fallbacks - prevents FOUT */
         html {
             font-family: Georgia, 'Times New Roman', Times, serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
+            font-kerning: normal;
         }
 
-        /* Modern system sans-serif for headings */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            font-feature-settings: 'kern' 1, 'liga' 1;
+        /* Developer headings with Inter fallback to system fonts */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-feature-settings: 'kern' 1, 'liga' 1, 'clig' 1;
+            font-weight: 600;
+            letter-spacing: -0.025em;
         }
 
-        /* System monospace for code */
-        code,
-        pre,
-        kbd,
-        samp {
-            font-family: 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-            font-feature-settings: 'liga' 1, 'calt' 1;
+        /* Developer code with JetBrains Mono fallback to system monospace */
+        code, pre, kbd, samp {
+            font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+            font-feature-settings: 'liga' 1, 'calt' 1, 'ss01' 1;
+            font-variant-ligatures: common-ligatures contextual;
         }
 
-        /* Optimize font rendering */
+        /* Optimize font rendering for developer content */
         body {
             font-kerning: normal;
             font-variant-ligatures: common-ligatures contextual;
             font-variant-numeric: oldstyle-nums proportional-nums;
         }
 
-        /* Better text rendering on high-DPI displays */
-        @media (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi) {
+        /* Enhanced text rendering on high-DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             body {
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
         }
+
+        /* Preload critical developer fonts */
+        .fonts-loading h1, .fonts-loading h2, .fonts-loading h3,
+        .fonts-loading h4, .fonts-loading h5, .fonts-loading h6 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .fonts-loading code, .fonts-loading pre {
+            font-family: 'SF Mono', Monaco, Consolas, 'Courier New', monospace;
+        }
     </style>
+
+    <!-- Font preloading for performance -->
+    <link rel="preload" href="<%= url_for('/fonts/inter/Inter-Regular.woff2') %>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<%= url_for('/fonts/inter/Inter-SemiBold.woff2') %>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<%= url_for('/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') %>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<%= url_for('/fonts/jetbrains-mono/JetBrainsMono-Medium.woff2') %>" as="font" type="font/woff2" crossorigin>
 
     <!-- Font loading performance optimization -->
     <script>
-        // Mark fonts as immediately available since we're using system fonts
-        document.documentElement.classList.add('fonts-loaded');
+        // Add loading class to prevent FOUT
+        document.documentElement.classList.add('fonts-loading');
 
-        // Optimize font rendering
+        // Font loading optimization for developer fonts
         (function () {
-            // Enable font-display: swap behavior for any future font loads
             if ('fonts' in document) {
+                // Load critical developer fonts
+                const interRegular = new FontFace('Inter', 'url(<%= url_for("/fonts/inter/Inter-Regular.woff2") %>) format("woff2")', {
+                    weight: '400',
+                    style: 'normal',
+                    display: 'swap'
+                });
+
+                const interSemiBold = new FontFace('Inter', 'url(<%= url_for("/fonts/inter/Inter-SemiBold.woff2") %>) format("woff2")', {
+                    weight: '600',
+                    style: 'normal',
+                    display: 'swap'
+                });
+
+                const jetbrainsRegular = new FontFace('JetBrains Mono', 'url(<%= url_for("/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") %>) format("woff2")', {
+                    weight: '400',
+                    style: 'normal',
+                    display: 'swap'
+                });
+
+                // Load fonts and update classes
+                Promise.all([
+                    interRegular.load(),
+                    interSemiBold.load(),
+                    jetbrainsRegular.load()
+                ]).then(function(fonts) {
+                    fonts.forEach(function(font) {
+                        document.fonts.add(font);
+                    });
+                    
+                    document.documentElement.classList.remove('fonts-loading');
+                    document.documentElement.classList.add('fonts-loaded');
+                }).catch(function() {
+                    // Fallback to system fonts if loading fails
+                    document.documentElement.classList.remove('fonts-loading');
+                    document.documentElement.classList.add('fonts-fallback');
+                });
+
+                // Mark all fonts as ready when complete
                 document.fonts.ready.then(function () {
                     document.documentElement.classList.add('fonts-ready');
                 });
+            } else {
+                // Fallback for browsers without Font Loading API
+                document.documentElement.classList.remove('fonts-loading');
+                document.documentElement.classList.add('fonts-fallback');
             }
         })();
     </script>

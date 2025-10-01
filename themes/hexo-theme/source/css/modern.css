@@ -5,8 +5,10 @@
  */
 
 /* ===== FOUNDATION ===== */
-@import url('./variables.css');
-@import url('./reset.css');
+/* Import the new cross-browser foundation system */
+@import url('./foundation/index.css');
+
+/* Import existing theme components */
 @import url('./responsive.css');
 @import url('./fonts.css');
 @import url('./typography-utilities.css');

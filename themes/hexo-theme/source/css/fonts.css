@@ -1,27 +1,80 @@
 /**
- * Modern Font Loading System
- * Optimized font loading with font-display: swap
- * Inter for headings, Georgia for body text
+ * Developer Typography System - Font Loading
+ * Optimized font loading with JetBrains Mono and Inter
+ * Includes system font fallbacks for performance
  */
 
-/* ===== SELF-HOSTED FONT SYSTEM ===== */
-/* No external dependencies - all fonts are system fonts or self-hosted */
+/* ===== DEVELOPER FONT FACE DECLARATIONS ===== */
 
-/* ===== FONT FACE DECLARATIONS ===== */
+/* JetBrains Mono - Developer monospace font */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-/* We'll use system fonts that are already available on most devices */
-/* This provides excellent performance and no external dependencies */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/jetbrains-mono/JetBrainsMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
-/* ===== FONT STACK DEFINITIONS ===== */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/jetbrains-mono/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter - Modern sans-serif for headings */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== DEVELOPER FONT STACK DEFINITIONS ===== */
 
 :root {
-  /* Modern system font stacks - no external dependencies */
-  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Developer-optimized font stacks with system fallbacks */
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-family-serif: Georgia, 'Times New Roman', Times, serif;
-  --font-family-mono: 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   
-  /* Alternative modern sans-serif stack */
-  --font-family-sans-alt: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  /* Developer-specific font features */
+  --font-feature-mono: 'liga' 1, 'calt' 1, 'ss01' 1; /* Enable ligatures and stylistic sets */
+  --font-feature-sans: 'kern' 1, 'liga' 1, 'clig' 1; /* Enable kerning and ligatures */
   
   /* Font loading optimization */
   --font-display: swap;

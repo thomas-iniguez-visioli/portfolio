@@ -1,13 +1,13 @@
 /**
- * Modern CSS Variables System
- * Replaces LESS variables with CSS custom properties
- * Based on modern design system principles
+ * Developer Theme CSS Variables System
+ * Modern design system optimized for developer content
+ * Features JetBrains Mono and Inter typography
  */
 
 :root {
   /* ===== COLOR SYSTEM ===== */
   
-  /* Primary Colors - Modern blue palette */
+  /* Primary Colors - Developer blue palette */
   --color-primary: #2563eb;
   --color-primary-50: #eff6ff;
   --color-primary-100: #dbeafe;
@@ -66,12 +66,16 @@
   --color-border-light: #f1f5f9;
   --color-border-dark: #cbd5e1;
   
-  /* ===== TYPOGRAPHY SYSTEM ===== */
+  /* ===== DEVELOPER TYPOGRAPHY SYSTEM ===== */
   
-  /* Font Families */
-  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-serif: 'Georgia', 'Times New Roman', Times, serif;
-  --font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+  /* Developer Font Families */
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  
+  /* Developer-specific font features */
+  --font-feature-mono: 'liga' 1, 'calt' 1, 'ss01' 1; /* Enable ligatures and stylistic sets */
+  --font-feature-sans: 'kern' 1, 'liga' 1, 'clig' 1; /* Enable kerning and ligatures */
   
   /* Font Sizes - Modern scale */
   --font-size-xs: 0.75rem;    /* 12px */
@@ -233,6 +237,55 @@
   --transition-opacity: opacity var(--duration-150) var(--ease-in-out);
   --transition-shadow: box-shadow var(--duration-150) var(--ease-in-out);
   --transition-transform: transform var(--duration-150) var(--ease-in-out);
+
+  /* ===== DEVELOPER THEME SPECIFIC ===== */
+  
+  /* Developer Terminal Colors */
+  --dev-terminal-bg: #1e1e1e;
+  --dev-terminal-text: #d4d4d4;
+  --dev-terminal-cursor: #ffffff;
+  --dev-terminal-selection: #264f78;
+  
+  /* Syntax Highlighting Colors */
+  --dev-syntax-keyword: #569cd6;
+  --dev-syntax-string: #ce9178;
+  --dev-syntax-comment: #6a9955;
+  --dev-syntax-number: #b5cea8;
+  --dev-syntax-function: #dcdcaa;
+  --dev-syntax-variable: #9cdcfe;
+  --dev-syntax-operator: #d4d4d4;
+  --dev-syntax-punctuation: #808080;
+  
+  /* Developer Status Colors */
+  --dev-status-online: #10b981;
+  --dev-status-busy: #f59e0b;
+  --dev-status-away: #6b7280;
+  --dev-status-offline: #ef4444;
+  
+  /* IDE-inspired Colors */
+  --dev-ide-sidebar: #252526;
+  --dev-ide-editor: #1e1e1e;
+  --dev-ide-panel: #2d2d30;
+  --dev-ide-border: #3e3e42;
+  --dev-ide-accent: #007acc;
+  
+  /* Code Block Colors */
+  --dev-code-bg: #f8f8f8;
+  --dev-code-bg-dark: #2d2d2d;
+  --dev-code-border: #e1e5e9;
+  --dev-code-border-dark: #404040;
+  
+  /* Developer Badge Colors */
+  --dev-badge-javascript: #f7df1e;
+  --dev-badge-typescript: #3178c6;
+  --dev-badge-react: #61dafb;
+  --dev-badge-vue: #4fc08d;
+  --dev-badge-node: #339933;
+  --dev-badge-python: #3776ab;
+  --dev-badge-git: #f05032;
+  --dev-badge-docker: #2496ed;
+  --dev-badge-aws: #ff9900;
+  --dev-badge-vscode: #007acc;
 }
 
 /* ===== LEGACY COMPATIBILITY ===== */
@@ -259,4 +312,87 @@
   
   /* Legacy borders */
   --border-radius-base: var(--border-radius-base);
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override colors for dark mode */
+    --color-background: var(--color-neutral-900);
+    --color-background-secondary: var(--color-neutral-800);
+    --color-background-tertiary: var(--color-neutral-700);
+    
+    --color-text-primary: var(--color-neutral-100);
+    --color-text-secondary: var(--color-neutral-300);
+    --color-text-tertiary: var(--color-neutral-400);
+    --color-text-muted: var(--color-neutral-500);
+    
+    --color-border: var(--color-neutral-700);
+    --color-border-light: var(--color-neutral-600);
+    --color-border-dark: var(--color-neutral-800);
+    
+    /* Developer code blocks in dark mode */
+    --dev-code-bg: var(--dev-code-bg-dark);
+    --dev-code-border: var(--dev-code-border-dark);
+  }
+}
+
+/* Manual dark mode toggle support */
+[data-theme="dark"] {
+  --color-background: var(--color-neutral-900);
+  --color-background-secondary: var(--color-neutral-800);
+  --color-background-tertiary: var(--color-neutral-700);
+  
+  --color-text-primary: var(--color-neutral-100);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-muted: var(--color-neutral-500);
+  
+  --color-border: var(--color-neutral-700);
+  --color-border-light: var(--color-neutral-600);
+  --color-border-dark: var(--color-neutral-800);
+  
+  --dev-code-bg: var(--dev-code-bg-dark);
+  --dev-code-border: var(--dev-code-border-dark);
+}
+
+/* ===== CROSS-BROWSER FALLBACKS ===== */
+/* Fallbacks for browsers that don't support CSS custom properties */
+.no-css-variables {
+  /* Fallback colors */
+  color: #0f172a;
+  background-color: #ffffff;
+}
+
+.no-css-variables a {
+  color: #2563eb;
+}
+
+.no-css-variables code,
+.no-css-variables pre {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background-color: #f8f8f8;
+}
+
+/* Feature detection for CSS Grid fallback */
+@supports not (display: grid) {
+  .layout-grid {
+    display: block;
+  }
+  
+  .layout-grid > * {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Feature detection for CSS Flexbox fallback */
+@supports not (display: flex) {
+  .flex {
+    display: block;
+  }
+  
+  .flex > * {
+    display: inline-block;
+    vertical-align: top;
+  }
 }

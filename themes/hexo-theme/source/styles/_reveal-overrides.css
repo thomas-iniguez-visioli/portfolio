@@ -1,0 +1,215 @@
+.controls div.navigate-down {
+    border-top-color: var(--brand-primary);
+  }
+  .controls div.navigate-up {
+    border-bottom-color: var(--brand-primary);
+  }
+  .controls div.navigate-right {
+    border-left-color: var(--brand-primary);
+  }
+  .controls div.navigate-left {
+    border-right-color: var(--brand-primary);
+  }
+
+.progress span {
+  background: color(var(--brand-primary) shade(30%));
+}
+
+.code body {
+    background-color: #23241f;    /*monokai background color*/
+    color: #fff;
+  }
+
+.code .reveal pre {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+.code .reveal pre .attribute,
+      .code .reveal pre .symbol,
+      .code .reveal pre .symbol .string,
+      .code .reveal pre .tag .title,
+      .code .reveal pre .value,
+      .code .reveal pre .css .tag {
+        color: rgb(250, 71, 135);
+      }
+
+.code .reveal pre code {
+        background: transparent;
+        color: var(--code-background);
+      }
+
+.code .reveal pre .tag .title, .code .reveal pre .value, .code .reveal pre .css .tag {
+
+    }
+
+.reveal {
+  font-family: var(--type-headlines);
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.reveal, .reveal a {
+    text-shadow: none;
+  }
+
+.reveal sup {
+    top: 0;
+  }
+
+.reveal small {
+    display: inline-block;
+    font-size: .6em;
+    line-height: 1.2em;
+    vertical-align: top;
+  }
+
+.reveal small * {
+      vertical-align: top;
+    }
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+    font-family: var(--type-headlines);
+    font-weight: 300;
+    line-height: 1.25;
+  }
+
+.reveal h1 small, .reveal h2 small, .reveal h3 small, .reveal h4 small, .reveal h5 small {
+      color: var(--light-accent);
+    }
+
+.reveal blockquote {
+    background: transparent;
+    box-shadow: none;
+    font-size: 1.55em;
+    font-style: normal;
+    margin-bottom: 1em;
+    text-align: left;
+    width: 80%;
+  }
+
+.reveal blockquote p {
+      border-left: 7px solid var(--light-accent);
+      padding-left: 1em;
+    }
+
+.reveal table {
+    border-collapse: collapse;
+  }
+
+.reveal table thead th {
+      border-bottom: 1px double var(--dark-accent);
+      font-weight: normal;
+      padding: .7em .5em;
+    }
+
+.reveal table tbody td, .reveal table tbody th {
+      border-bottom: 1px solid var(--dark-accent);
+      padding: .5em;
+    }
+
+.reveal ul, .reveal ol {
+    display: inline-block;
+    margin: .5em 0;
+    text-align: left;
+  }
+
+.reveal pre, .reveal code {
+    font-family: var(--type-code);
+  }
+
+.reveal code {
+    background-color: var(--code-background);
+    color: var(--code-foreground);
+  }
+
+.reveal pre {
+    font-size: .9em;
+    text-align: left;
+    width: auto;
+  }
+
+.reveal pre code[class] {
+      background-color: transparent;
+      max-height: 80vh;
+    }
+
+.reveal a {
+    color: var(--link-foreground);
+    text-decoration: underline;
+  }
+
+.reveal em {
+    color: var(--brand-color);
+    font-style: normal;
+  }
+
+.reveal strong {
+    background: var(--dark-accent);
+    border-radius: 3px;
+    color: #fff;
+    font-weight: inherit;
+    padding-left: .3em;
+    padding-right: .3em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+.reveal section h1:last-child,
+  .reveal section h2:last-child,
+  .reveal section h3:last-child,
+  .reveal section h1.last-child,
+  .reveal section h2.last-child,
+  .reveal section h3.last-child {
+    margin-bottom: 0;
+  }
+
+.background-light .slide-background.present::before, .background-dark .slide-background.present::before, .background-contrasted .slide-background.present::before {
+      content: "";
+      background-color: transparent;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+    }
+
+.background-light .reveal .slide-background.present::before {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+.background-light .reveal .slides .present {
+      color: #fff;
+      text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    }
+
+.background-dark a:link, .background-dark a:visited, .background-contrasted a:link, .background-contrasted a:visited {
+      --link-foreground: var(--light-shade);
+    }
+
+.background-dark strong, .background-contrasted strong {
+      background: color(var(--brand-color) tint(80%));
+      color: #fff;
+      text-shadow: 1px 1px 1px rgb(128, 128, 128);
+    }
+
+.background-dark .slide-background.present::before {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+.background-dark .slides .present {
+    color: #fff;
+    text-shadow: 1px 1px rgba(255, 255, 255, .5);
+  }
+
+.reveal .slides .pdf-page {
+  page-break-after: unset !important;
+}
+
+.reveal .slides .pdf-page:not(:first-of-type) {
+    page-break-before: always;
+  }
+
+.reveal .slides .pdf-page .speaker-notes {
+    position: unset;
+  }

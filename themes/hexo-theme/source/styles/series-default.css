@@ -53,8 +53,7 @@
   }
 
 .series-item__picture {
-        -o-object-fit: contain;
-           object-fit: contain;
+        object-fit: contain;
         max-height: 85vh;
         max-width: 100%;
       }

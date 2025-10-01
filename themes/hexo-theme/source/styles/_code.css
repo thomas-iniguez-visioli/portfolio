@@ -1,0 +1,25 @@
+
+.code body {
+    background-color: #23241f;    /*monokai background color*/
+    color: #fff;
+  }
+  .code .reveal pre {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  .code .reveal pre .attribute,
+      .code .reveal pre .symbol,
+      .code .reveal pre .symbol .string,
+      .code .reveal pre .tag .title,
+      .code .reveal pre .value,
+      .code .reveal pre .css .tag {
+        color: rgb(250, 71, 135);
+      }
+  .code .reveal pre code {
+        background: transparent;
+        color: var(--code-background);
+      }
+  .code .reveal pre .tag .title, .code .reveal pre .value, .code .reveal pre .css .tag {
+
+    }
