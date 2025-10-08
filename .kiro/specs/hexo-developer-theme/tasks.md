@@ -178,6 +178,7 @@
   - _Requirements: 5.1, 5.2, 4.1, 4.3_
 
 
+
 - [ ] 14. Créer la documentation et guide de style
 
   - Documenter tous les composants CSS avec exemples d'usage
