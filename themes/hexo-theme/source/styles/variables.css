@@ -1,13 +1,13 @@
 /**
- * Modern CSS Variables System - Enhanced for Developer Theme
- * Replaces LESS variables with CSS custom properties
- * Based on modern design system principles with developer-focused tokens
+ * Developer Theme CSS Variables System
+ * Modern design system optimized for developer content
+ * Features JetBrains Mono and Inter typography
  */
 
 :root {
   /* ===== COLOR SYSTEM ===== */
   
-  /* Primary Colors - Modern blue palette */
+  /* Primary Colors - Developer blue palette */
   --color-primary: #2563eb;
   --color-primary-50: #eff6ff;
   --color-primary-100: #dbeafe;
@@ -66,12 +66,16 @@
   --color-border-light: #f1f5f9;
   --color-border-dark: #cbd5e1;
   
-  /* ===== TYPOGRAPHY SYSTEM ===== */
+  /* ===== DEVELOPER TYPOGRAPHY SYSTEM ===== */
   
-  /* Font Families - Enhanced for developer theme */
-  --font-family-sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-serif: 'Georgia', 'Times New Roman', Times, serif;
-  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', Consolas, 'Courier New', monospace;
+  /* Developer Font Families */
+  --font-family-sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  
+  /* Developer-specific font features */
+  --font-feature-mono: 'liga' 1, 'calt' 1, 'ss01' 1; /* Enable ligatures and stylistic sets */
+  --font-feature-sans: 'kern' 1, 'liga' 1, 'clig' 1; /* Enable kerning and ligatures */
   
   /* Font Sizes - Modern scale */
   --font-size-xs: 0.75rem;    /* 12px */
@@ -242,7 +246,7 @@
   --dev-terminal-cursor: #ffffff;
   --dev-terminal-selection: #264f78;
   
-  /* Syntax Highlighting Colors - VS Code Dark+ theme inspired */
+  /* Syntax Highlighting Colors */
   --dev-syntax-keyword: #569cd6;
   --dev-syntax-string: #ce9178;
   --dev-syntax-comment: #6a9955;
@@ -251,19 +255,12 @@
   --dev-syntax-variable: #9cdcfe;
   --dev-syntax-operator: #d4d4d4;
   --dev-syntax-punctuation: #808080;
-  --dev-syntax-type: #4ec9b0;
-  --dev-syntax-constant: #4fc1ff;
-  --dev-syntax-property: #92c5f8;
-  --dev-syntax-tag: #569cd6;
-  --dev-syntax-attribute: #92c5f8;
-  --dev-syntax-value: #ce9178;
   
   /* Developer Status Colors */
   --dev-status-online: #10b981;
   --dev-status-busy: #f59e0b;
   --dev-status-away: #6b7280;
   --dev-status-offline: #ef4444;
-  --dev-status-dnd: #dc2626;
   
   /* IDE-inspired Colors */
   --dev-ide-sidebar: #252526;
@@ -271,49 +268,24 @@
   --dev-ide-panel: #2d2d30;
   --dev-ide-border: #3e3e42;
   --dev-ide-accent: #007acc;
-  --dev-ide-selection: #264f78;
-  --dev-ide-line-highlight: #2a2d2e;
   
   /* Code Block Colors */
   --dev-code-bg: #f8f8f8;
   --dev-code-bg-dark: #2d2d2d;
   --dev-code-border: #e1e5e9;
   --dev-code-border-dark: #404040;
-  --dev-code-line-numbers: #858585;
-  --dev-code-highlight-line: #fffbdd;
-  --dev-code-highlight-line-dark: #2a2d2e;
   
   /* Developer Badge Colors */
   --dev-badge-javascript: #f7df1e;
   --dev-badge-typescript: #3178c6;
   --dev-badge-react: #61dafb;
   --dev-badge-vue: #4fc08d;
-  --dev-badge-angular: #dd0031;
   --dev-badge-node: #339933;
   --dev-badge-python: #3776ab;
-  --dev-badge-java: #ed8b00;
-  --dev-badge-csharp: #239120;
-  --dev-badge-php: #777bb4;
-  --dev-badge-ruby: #cc342d;
-  --dev-badge-go: #00add8;
-  --dev-badge-rust: #000000;
   --dev-badge-git: #f05032;
   --dev-badge-docker: #2496ed;
-  --dev-badge-kubernetes: #326ce5;
   --dev-badge-aws: #ff9900;
-  --dev-badge-azure: #0078d4;
-  --dev-badge-gcp: #4285f4;
   --dev-badge-vscode: #007acc;
-  --dev-badge-github: #181717;
-  --dev-badge-gitlab: #fc6d26;
-  --dev-badge-figma: #f24e1e;
-  --dev-badge-slack: #4a154b;
-  
-  /* Developer Skill Level Colors */
-  --dev-skill-beginner: #10b981;
-  --dev-skill-intermediate: #f59e0b;
-  --dev-skill-advanced: #ef4444;
-  --dev-skill-expert: #8b5cf6;
 }
 
 /* ===== LEGACY COMPATIBILITY ===== */
@@ -364,7 +336,6 @@
     /* Developer code blocks in dark mode */
     --dev-code-bg: var(--dev-code-bg-dark);
     --dev-code-border: var(--dev-code-border-dark);
-    --dev-code-highlight-line: var(--dev-code-highlight-line-dark);
   }
 }
 
@@ -386,7 +357,6 @@
   
   --dev-code-bg: var(--dev-code-bg-dark);
   --dev-code-border: var(--dev-code-border-dark);
-  --dev-code-highlight-line: var(--dev-code-highlight-line-dark);
 }
 
 /* ===== CROSS-BROWSER FALLBACKS ===== */
@@ -405,30 +375,8 @@
 
 .no-css-variables code,
 .no-css-variables pre {
-  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-family: 'Consolas', 'Courier New', monospace;
   background-color: #f8f8f8;
-  border: 1px solid #e1e5e9;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-.no-css-variables pre {
-  padding: 1rem;
-  overflow-x: auto;
-}
-
-.no-css-variables .dev-terminal {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-}
-
-.no-css-variables .dev-badge {
-  background-color: #2563eb;
-  color: #ffffff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 500;
 }
 
 /* Feature detection for CSS Grid fallback */
@@ -440,20 +388,6 @@
   
   .layout-grid > * {
     margin-bottom: 1rem;
-  }
-  
-  .grid-2-cols > * {
-    width: 48%;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 2%;
-  }
-  
-  .grid-3-cols > * {
-    width: 31%;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 2%;
   }
 }
 
@@ -467,72 +401,5 @@
   .flex > * {
     display: inline-block;
     vertical-align: top;
-  }
-  
-  .flex-center {
-    text-align: center;
-  }
-  
-  .flex-between > *:first-child {
-    float: left;
-  }
-  
-  .flex-between > *:last-child {
-    float: right;
-  }
-  
-  .flex-between::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-/* Feature detection for CSS Custom Properties fallback */
-
-@supports not (--css: variables) {
-  /* Provide static fallback values for critical properties */
-  body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, sans-serif;
-    color: #0f172a;
-    background-color: #ffffff;
-    line-height: 1.5;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #0f172a;
-    font-weight: 700;
-  }
-  
-  a {
-    color: #2563eb;
-  }
-  
-  code, pre {
-    font-family: 'Consolas', 'Monaco', monospace;
-    background-color: #f8f8f8;
-  }
-  
-  button {
-    background-color: #2563eb;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input, textarea {
-    border: 1px solid #e2e8f0;
-    padding: 0.5rem;
-    border-radius: 4px;
-  }
-}er;
-  }
-  
-  input, textarea {
-    border: 1px solid #e2e8f0;
-    padding: 0.5rem;
-    border-radius: 4px;
   }
 }

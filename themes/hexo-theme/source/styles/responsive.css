@@ -71,7 +71,6 @@
 .grid {
   display: grid;
   grid-gap: var(--space-4);
-  grid-gap: var(--space-4);
   gap: var(--space-4);
 }
 
@@ -247,28 +246,28 @@
 
 /* Gap utilities */
 
-.gap-1 { grid-gap: var(--space-1); grid-gap: var(--space-1); gap: var(--space-1); }
+.gap-1 { grid-gap: var(--space-1); gap: var(--space-1); }
 
-.gap-2 { grid-gap: var(--space-2); grid-gap: var(--space-2); gap: var(--space-2); }
+.gap-2 { grid-gap: var(--space-2); gap: var(--space-2); }
 
-.gap-3 { grid-gap: var(--space-3); grid-gap: var(--space-3); gap: var(--space-3); }
+.gap-3 { grid-gap: var(--space-3); gap: var(--space-3); }
 
-.gap-4 { grid-gap: var(--space-4); grid-gap: var(--space-4); gap: var(--space-4); }
+.gap-4 { grid-gap: var(--space-4); gap: var(--space-4); }
 
-.gap-6 { grid-gap: var(--space-6); grid-gap: var(--space-6); gap: var(--space-6); }
+.gap-6 { grid-gap: var(--space-6); gap: var(--space-6); }
 
-.gap-8 { grid-gap: var(--space-8); grid-gap: var(--space-8); gap: var(--space-8); }
+.gap-8 { grid-gap: var(--space-8); gap: var(--space-8); }
 
-.gap-12 { grid-gap: var(--space-12); grid-gap: var(--space-12); gap: var(--space-12); }
+.gap-12 { grid-gap: var(--space-12); gap: var(--space-12); }
 
-.gap-16 { grid-gap: var(--space-16); grid-gap: var(--space-16); gap: var(--space-16); }
+.gap-16 { grid-gap: var(--space-16); gap: var(--space-16); }
 
 /* Responsive gap utilities */
 
 @media (min-width: 768px) {
-  .md\\:gap-6 { grid-gap: var(--space-6); grid-gap: var(--space-6); gap: var(--space-6); }
-  .md\\:gap-8 { grid-gap: var(--space-8); grid-gap: var(--space-8); gap: var(--space-8); }
-  .md\\:gap-12 { grid-gap: var(--space-12); grid-gap: var(--space-12); gap: var(--space-12); }
+  .md\\:gap-6 { grid-gap: var(--space-6); gap: var(--space-6); }
+  .md\\:gap-8 { grid-gap: var(--space-8); gap: var(--space-8); }
+  .md\\:gap-12 { grid-gap: var(--space-12); gap: var(--space-12); }
 }
 
 /* ===== TOUCH TARGET OPTIMIZATION ===== */

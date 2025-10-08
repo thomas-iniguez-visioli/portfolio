@@ -89,7 +89,9 @@
   - Créer les animations de chargement et hover effects
   - Ajouter le support de prefers-reduced-motion pour l'accessibilité
   - Optimiser les animations pour 60fps sur tous les navigateurs
-- [-] 8. Implémenter les optimisations de performance
+- [x] 8. Implémenter les optimisations de performance
+
+
 
 
 
@@ -105,6 +107,8 @@
 
   - Optimiser les web fonts avec font-display et preload
   - _Requirements: 4.1, 4.3, 4.4_
+- [-] 9. Ajouter les améliorations d'accessibilité
+
 
 - [ ] 9. Ajouter les améliorations d'accessibilité
 
@@ -122,6 +126,7 @@
 
 
 
+
   - Mettre en place les tests visuels avec captures d'écran
 
   - Implémenter les tests de régression CSS sur différents navigateurs
@@ -132,6 +137,7 @@
 - [ ] 11. Développer les utilitaires et helpers CSS
 
 
+
   - Créer les classes utilitaires pour spacing, colors, typography
   - Implémenter les helpers responsive (show/hide par breakpoint)
   - Ajouter les utilitaires d'état (loading, error, success)
@@ -139,6 +145,7 @@
   - _Requirements: 5.1, 5.2, 5.3, 5.4_
 
 - [ ] 12. Optimiser pour les navigateurs anciens
+
   - Ajouter les polyfills CSS pour les propriétés modernes
   - Implémenter les fallbacks pour CSS Grid et Flexbox
   - Créer les alternatives pour les propriétés non supportées
@@ -146,6 +153,7 @@
   - _Requirements: 1.3, 1.4, 5.3_
 
 - [ ] 13. Finaliser l'intégration avec Hexo
+
   - Mettre à jour les templates EJS avec les nouvelles classes CSS
   - Intégrer le système de build CSS avec PostCSS et Autoprefixer
   - Configurer la génération des CSS critiques et non-critiques
@@ -153,6 +161,7 @@
   - _Requirements: 5.1, 5.2, 4.1, 4.3_
 
 - [ ] 14. Créer la documentation et guide de style
+
   - Documenter tous les composants CSS avec exemples d'usage
   - Créer le guide de style avec palette de couleurs et typographie
   - Ajouter les instructions de personnalisation du thème

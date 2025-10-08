@@ -538,7 +538,6 @@
   display: flex;
   flex-wrap: wrap;
   grid-gap: var(--space-4);
-  grid-gap: var(--space-4);
   gap: var(--space-4);
 }
 
@@ -639,7 +638,10 @@
   .text-muted {
     color: #000000;
   }
-}IFIC TYPOGRAPHY UTILITIES ===== */
+}
+
+/* ====
+= DEVELOPER-SPECIFIC TYPOGRAPHY UTILITIES ===== */
 
 /* Developer badge text */
 

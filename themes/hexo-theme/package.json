@@ -7,12 +7,15 @@
   "scripts": {
     "build": "run-p 'build:*'",
     "build:js": "rollup --config",
-    "build:css": "postcss source\\\\css\\\\*.css source\\\\css\\\\slides\\\\*.css --config postcss.config.js --base source\\css --dir source\\styles",
+    "build:css": "set NODE_ENV=production && postcss \"source/css/*.css\" \"source/css/slides/*.css\" --config postcss.config.js --base source/css --dir source/styles",
+    "build:css:dev": "postcss source\\\\css\\\\*.css source\\\\css\\\\slides\\\\*.css --config postcss.config.js --base source\\css --dir source\\styles",
+    "build:critical": "node scripts/extract-critical-css.js",
     "copy:vendor": "cp -rf node_modules/reveal.js/plugin/notes source/vendor && git add source/vendor/notes",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "run-p 'watch:*'",
     "watch:js": "npm run build:js -- --watch",
-    "watch:css": "npm run build:css -- --watch --verbose --map"
+    "watch:css": "npm run build:css:dev -- --watch --verbose --map",
+    "optimize": "npm run build && npm run build:critical"
   },
   "repository": {
     "type": "git",
@@ -29,7 +32,7 @@
   "homepage": "https://github.com/thom4parisot/hexo-theme#readme",
   "browserslist": [
     "Chrome >= 90",
-    "Firefox >= 88", 
+    "Firefox >= 88",
     "Safari >= 14",
     "Edge >= 90",
     "iOS >= 14",
@@ -53,6 +56,8 @@
     "@babel/plugin-external-helpers": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^6.1.2",
     "ejs": "^3.1.5",
     "highlight.js": "^10.1.2",
     "npm-run-all": "^4.1.3",

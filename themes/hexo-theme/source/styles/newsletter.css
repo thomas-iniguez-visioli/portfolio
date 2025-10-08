@@ -22,7 +22,6 @@
   display: flex;
   align-items: center;
   grid-gap: 0.5rem;
-  grid-gap: 0.5rem;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
@@ -54,7 +53,6 @@
 .newsletter-input-group {
   display: flex;
   flex-direction: column;
-  grid-gap: 0.75rem;
   grid-gap: 0.75rem;
   gap: 0.75rem;
   margin-bottom: 1rem;
@@ -146,7 +144,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-gap: 0.5rem;
   grid-gap: 0.5rem;
   gap: 0.5rem;
   transition: opacity 0.2s ease;
@@ -389,17 +386,7 @@
   outline-offset: 2px;
 }
 
-.newsletter-button.focus-visible {
-  outline: 2px solid var(--color-primary, #007bff);
-  outline-offset: 2px;
-}
-
 .newsletter-button:focus-visible {
-  outline: 2px solid var(--color-primary, #007bff);
-  outline-offset: 2px;
-}
-
-.newsletter-input.focus-visible {
   outline: 2px solid var(--color-primary, #007bff);
   outline-offset: 2px;
 }

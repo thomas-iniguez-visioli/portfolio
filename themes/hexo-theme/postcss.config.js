@@ -5,7 +5,14 @@ module.exports = {
       { filter: '**/*.woff2', url: 'inline' },
     ]),
     require('postcss-preset-env')({
-      stage: 0,
+      stage: 1, // Changed from 0 to 1 to avoid experimental features that might cause issues
+      features: {
+        'custom-properties': true,
+        'nesting-rules': true,
+        'color-function': true,
+        // Disable env-function that's causing issues with clamp()
+        'environment-variables': false
+      },
       autoprefixer: {
         // Enhanced browser support for performance
         overrideBrowserslist: [
@@ -26,20 +33,18 @@ module.exports = {
     ...(process.env.NODE_ENV === 'production' ? [
       // CSS minification and compression
       require('cssnano')({
-        preset: ['advanced', {
-          // Aggressive minification for better compression
+        preset: ['default', {
+          // Optimized minification for better compression
           discardComments: { removeAll: true },
           normalizeWhitespace: true,
           colormin: true,
           convertValues: true,
           discardDuplicates: true,
           discardEmpty: true,
-          mergeIdents: true,
           mergeLonghand: true,
           mergeRules: true,
           minifyFontValues: true,
           minifyGradients: true,
-          minifyParams: true,
           minifySelectors: true,
           normalizeCharset: true,
           normalizeDisplayValues: true,
@@ -50,10 +55,8 @@ module.exports = {
           normalizeUnicode: true,
           normalizeUrl: true,
           orderedValues: true,
-          reduceIdents: true,
           reduceInitial: true,
           reduceTransforms: true,
-          svgo: true,
           uniqueSelectors: true
         }]
       })

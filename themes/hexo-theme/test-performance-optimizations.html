@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Optimizations Test</title>
+  
+  <!-- Critical CSS inlined (Requirement 4.1) -->
+  <style id="critical-css">
+    /* Critical above-the-fold styles */
+    :root {
+      --header-height: 80px;
+      --hero-min-height: 60vh;
+      --sidebar-width: 300px;
+      --color-text-primary: #0f172a;
+      --color-background: #ffffff;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-text-primary);
+      background-color: var(--color-background);
+    }
+    
+    .critical-layout {
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      min-height: 100vh;
+      contain: layout;
+    }
+    
+    .header {
+      height: var(--header-height);
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    
+    .sidebar {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 2rem;
+    }
+    
+    .main-content {
+      padding: 2rem;
+    }
+    
+    .fcp-optimized {
+      contain: layout style paint;
+    }
+    
+    .lcp-optimized {
+      content-visibility: auto;
+      contain-intrinsic-size: 800px 600px;
+    }
+    
+    .cls-stable {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  
+  <!-- Font loading optimization with preload and font-display: swap (Requirement 4.4) -->
+  <link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/JetBrainsMono-400.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <style id="font-faces">
+    @font-face {
+      font-family: 'Inter';
+      src: url('/fonts/Inter-400.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('/fonts/Inter-500.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: url('/fonts/JetBrainsMono-400.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  
+  <!-- Resource hints for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/assets/icons.svg" as="image">
+  <link rel="preload" href="/js/performance.js" as="script">
+  
+  <!-- Non-critical CSS lazy loading (Requirement 4.1) -->
+  <link rel="preload" href="/css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/animations.css"></noscript>
+  
+  <link rel="preload" href="/css/cards.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/cards.css"></noscript>
+  
+  <link rel="preload" href="/css/buttons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/buttons.css"></noscript>
+</head>
+<body class="fonts-loading">
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <div class="critical-layout">
+    <!-- Header (above-the-fold, critical) -->
+    <header class="header fcp-optimized">
+      <h1>Performance Optimizations Test</h1>
+    </header>
+    
+    <!-- Sidebar (above-the-fold, critical) -->
+    <aside class="sidebar fcp-optimized">
+      <h2>Developer Sidebar</h2>
+      <nav>
+        <ul>
+          <li><a href="#critical-css">Critical CSS</a></li>
+          <li><a href="#lazy-loading">Lazy Loading</a></li>
+          <li><a href="#font-optimization">Font Optimization</a></li>
+          <li><a href="#compression">Compression</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <!-- Main content -->
+    <main id="main-content" class="main-content">
+      <section id="critical-css" class="fcp-optimized">
+        <h2>Critical CSS Inlining ✅</h2>
+        <p>Critical above-the-fold styles are inlined in the HTML head for immediate rendering.</p>
+        <ul>
+          <li>Layout essentials (grid, header, sidebar)</li>
+          <li>Typography basics (fonts, sizes, colors)</li>
+          <li>Above-the-fold components</li>
+          <li>Performance optimization classes</li>
+        </ul>
+      </section>
+      
+      <section id="lazy-loading" class="lcp-optimized">
+        <h2>Non-Critical CSS Lazy Loading ✅</h2>
+        <p>Non-critical styles are loaded asynchronously to improve initial page load.</p>
+        <ul>
+          <li>Animations and transitions</li>
+          <li>Component styles (cards, buttons)</li>
+          <li>Form styles</li>
+          <li>Responsive enhancements</li>
+        </ul>
+      </section>
+      
+      <section id="font-optimization">
+        <h2>Font Loading Optimization ✅</h2>
+        <p>Web fonts are optimized with preload and font-display: swap.</p>
+        <ul>
+          <li><strong>Inter</strong> - Main UI font (400, 500, 600 weights)</li>
+          <li><code>JetBrains Mono</code> - Code font (400, 500 weights)</li>
+          <li>System font fallbacks during loading</li>
+          <li>Preload for critical font files</li>
+        </ul>
+      </section>
+      
+      <section id="compression" class="cls-stable">
+        <h2>CSS Minification and Compression ✅</h2>
+        <p>CSS is minified and optimized for better compression.</p>
+        <ul>
+          <li>Comments removed</li>
+          <li>Whitespace optimized</li>
+          <li>Properties shortened</li>
+          <li>Gzip-friendly patterns</li>
+        </ul>
+      </section>
+      
+      <section id="performance-monitoring">
+        <h2>Performance Monitoring 📊</h2>
+        <div id="performance-metrics">
+          <p>Core Web Vitals will be displayed here...</p>
+          <ul>
+            <li>First Contentful Paint (FCP): <span id="fcp-value">Measuring...</span></li>
+            <li>Largest Contentful Paint (LCP): <span id="lcp-value">Measuring...</span></li>
+            <li>Cumulative Layout Shift (CLS): <span id="cls-value">Measuring...</span></li>
+            <li>First Input Delay (FID): <span id="fid-value">Measuring...</span></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section id="lazy-images">
+        <h2>Image Lazy Loading Test</h2>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23374151'%3ELazy loaded image placeholder%3C/text%3E%3C/svg%3E" 
+             data-src="/images/test-image.jpg" 
+             alt="Test image for lazy loading" 
+             class="cls-stable lazy-image"
+             loading="lazy">
+      </section>
+    </main>
+  </div>
+  
+  <!-- Performance optimization script -->
+  <script type="module" src="/js/performance.js"></script>
+  
+  <!-- Test script for performance monitoring -->
+  <script>
+    // Test performance monitoring
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simulate font loading completion
+      setTimeout(() => {
+        document.body.classList.remove('fonts-loading');
+        document.body.classList.add('fonts-loaded');
+      }, 1000);
+      
+      // Test performance metrics display
+      if ('PerformanceObserver' in window) {
+        // Monitor FCP
+        const fcpObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.name === 'first-contentful-paint') {
+              document.getElementById('fcp-value').textContent = `${entry.startTime.toFixed(2)}ms`;
+            }
+          }
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+        
+        // Monitor LCP
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          document.getElementById('lcp-value').textContent = `${lastEntry.startTime.toFixed(2)}ms`;
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        
+        // Monitor CLS
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          }
+          document.getElementById('cls-value').textContent = clsValue.toFixed(4);
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+      
+      // Test lazy loading
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.classList.add('loaded');
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+    });
+  </script>
+  
+  <!-- Test styles for demonstration -->
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
+    }
+    
+    .skip-link:focus {
+      top: 6px;
+    }
+    
+    .lazy-image {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .lazy-image.loaded {
+      opacity: 1;
+    }
+    
+    #performance-metrics {
+      background: #f8fafc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    #performance-metrics ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    #performance-metrics li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    #performance-metrics li:last-child {
+      border-bottom: none;
+    }
+    
+    code {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      background: #f1f5f9;
+      padding: 0.2em 0.4em;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+    }
+  </style>
+</body>
+</html>
