@@ -45,6 +45,7 @@ jobs:
           
           npx pnpm i
           npm run build
+          npm run deploy
    
       env:
             GIT_USER: ${{ github.actor }}

@@ -50,26 +50,23 @@
 
 /* Layout with sidebar using CSS Grid with Flexbox fallback */
 
-.layout-with-sidebar,
-.dev-layout-container {
+.layout-with-sidebar {
   display: flex; /* Flexbox fallback */
   flex: 1;
-  flex-direction: row; /* Force horizontal layout */
-  align-items: flex-start;
+  grid-gap: 0;
   gap: 0;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0;
-  min-height: calc(100vh - 80px); /* Account for header */
+  padding: 0 var(--space-4);
 }
 
 @supports (display: grid) {
-  .layout-with-sidebar,
-  .dev-layout-container {
+  .layout-with-sidebar {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-areas: "sidebar content";
-    gap: 0;
+    grid-gap: var(--space-8);
+    gap: var(--space-8);
     align-items: start;
   }
   
@@ -77,8 +74,7 @@
     grid-area: sidebar;
   }
   
-  .main-content,
-  .dev-main-content {
+  .main-content {
     grid-area: content;
   }
 }
@@ -87,44 +83,21 @@
 
 /* Mobile-first responsive design */
 
-@media (max-width: 1023px) {
-  .layout-with-sidebar,
-  .dev-layout-container {
-    flex-direction: row; /* Keep horizontal even on mobile */
-    padding: 0;
+@media (max-width: 767px) {
+  .layout-with-sidebar {
+    flex-direction: column;
+    padding: 0 var(--space-4);
   }
   
   @supports (display: grid) {
-    .layout-with-sidebar,
-    .dev-layout-container {
-      grid-template-columns: 1fr; /* Only content visible on mobile */
-      grid-template-areas: "content";
-      gap: 0;
+    .layout-with-sidebar {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "sidebar"
+        "content";
+      grid-gap: var(--space-6);
+      gap: var(--space-6);
     }
-  }
-  
-  /* Hide sidebar on mobile by default */
-  .dev-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 320px;
-    height: 100vh;
-    transform: translateX(-100%);
-    z-index: var(--z-index-modal);
-    transition: transform 0.3s ease-out;
-  }
-  
-  /* Show sidebar when open */
-  .dev-sidebar.dev-sidebar-open {
-    transform: translateX(0);
-  }
-  
-  /* Main content takes full width on mobile */
-  .main-content,
-  .dev-main-content {
-    width: 100%;
-    margin-left: 0;
   }
 }
 
