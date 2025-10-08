@@ -14,6 +14,9 @@
     // Add theme classes to body
     document.body.classList.add('dev-theme-loaded');
     
+    // Fix z-index and positioning issues
+    fixLayeringIssues();
+    
     // Initialize responsive behavior
     initResponsiveBehavior();
     
@@ -24,39 +27,153 @@
     initKeyboardShortcuts();
   }
 
-  // Responsive behavior
-  function initResponsiveBehavior() {
-    const sidebar = document.getElementById('dev-sidebar');
-    const toggle = document.querySelector('.dev-sidebar-toggle');
+  // Fix layering and z-index issues
+  function fixLayeringIssues() {
+    // Ensure CSS variables are available
+    const root = document.documentElement;
+    const computedStyle = getComputedStyle(root);
     
-    if (!sidebar || !toggle) return;
+    // Check if z-index variables are defined
+    const zIndexSticky = computedStyle.getPropertyValue('--z-index-sticky');
+    if (!zIndexSticky || zIndexSticky === '') {
+      // Define z-index variables if missing
+      root.style.setProperty('--z-index-hide', '-1');
+      root.style.setProperty('--z-index-auto', 'auto');
+      root.style.setProperty('--z-index-base', '0');
+      root.style.setProperty('--z-index-docked', '10');
+      root.style.setProperty('--z-index-dropdown', '1000');
+      root.style.setProperty('--z-index-sticky', '1100');
+      root.style.setProperty('--z-index-banner', '1200');
+      root.style.setProperty('--z-index-overlay', '1300');
+      root.style.setProperty('--z-index-modal', '1400');
+      root.style.setProperty('--z-index-popover', '1500');
+      root.style.setProperty('--z-index-skiplink', '1600');
+      root.style.setProperty('--z-index-toast', '1700');
+      root.style.setProperty('--z-index-tooltip', '1800');
+    }
+    
+    // Fix header positioning
+    const header = document.querySelector('.page-header, .dev-header');
+    if (header) {
+      header.style.position = 'sticky';
+      header.style.top = '0';
+      header.style.zIndex = 'var(--z-index-sticky)';
+    }
+    
+    // Fix sidebar positioning
+    const sidebar = document.querySelector('.dev-sidebar, #dev-sidebar');
+    if (sidebar) {
+      if (window.innerWidth > 1023) {
+        sidebar.style.position = 'sticky';
+        sidebar.style.top = '0';
+        sidebar.style.zIndex = 'var(--z-index-docked)';
+      } else {
+        sidebar.style.position = 'fixed';
+        sidebar.style.zIndex = 'var(--z-index-modal)';
+      }
+    }
+    
+    // Fix sidebar toggle
+    const toggle = document.querySelector('.dev-sidebar-toggle');
+    if (toggle) {
+      toggle.style.position = 'fixed';
+      toggle.style.zIndex = 'calc(var(--z-index-modal) + 2)';
+    }
+    
+    console.log('🔧 Layering issues fixed');
+  }
+
+  // Responsive behavior with layering fixes
+  function initResponsiveBehavior() {
+    const sidebar = document.querySelector('.dev-sidebar, #dev-sidebar');
+    const toggle = document.querySelector('.dev-sidebar-toggle');
+    const backdrop = document.querySelector('.dev-sidebar-backdrop');
+    
+    if (!sidebar) return;
+    
+    // Create backdrop if it doesn't exist
+    if (!backdrop && toggle) {
+      const newBackdrop = document.createElement('div');
+      newBackdrop.className = 'dev-sidebar-backdrop';
+      document.body.appendChild(newBackdrop);
+    }
     
     // Handle sidebar toggle
-    toggle.addEventListener('click', function() {
-      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', !isExpanded);
-      sidebar.classList.toggle('dev-sidebar--collapsed', isExpanded);
-      
-      // Update body class for layout adjustments
-      document.body.classList.toggle('sidebar-collapsed', isExpanded);
-    });
+    if (toggle) {
+      toggle.addEventListener('click', function() {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        const newState = !isExpanded;
+        
+        toggle.setAttribute('aria-expanded', newState);
+        
+        if (newState) {
+          sidebar.classList.add('dev-sidebar-open', 'dev-sidebar--open');
+          if (backdrop) {
+            backdrop.classList.add('dev-sidebar-backdrop-visible', 'visible');
+          }
+          document.body.classList.add('sidebar-open');
+        } else {
+          sidebar.classList.remove('dev-sidebar-open', 'dev-sidebar--open');
+          if (backdrop) {
+            backdrop.classList.remove('dev-sidebar-backdrop-visible', 'visible');
+          }
+          document.body.classList.remove('sidebar-open');
+        }
+      });
+    }
     
-    // Handle responsive breakpoints
-    const mediaQuery = window.matchMedia('(max-width: 767px)');
+    // Handle backdrop click
+    if (backdrop) {
+      backdrop.addEventListener('click', function() {
+        sidebar.classList.remove('dev-sidebar-open', 'dev-sidebar--open');
+        backdrop.classList.remove('dev-sidebar-backdrop-visible', 'visible');
+        if (toggle) {
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        document.body.classList.remove('sidebar-open');
+      });
+    }
+    
+    // Handle responsive breakpoints with layering fixes
+    const mediaQuery = window.matchMedia('(max-width: 1023px)');
     function handleBreakpointChange(e) {
       if (e.matches) {
-        // Mobile: hide sidebar by default
+        // Mobile: setup mobile sidebar
         sidebar.classList.add('dev-sidebar--mobile');
-        toggle.style.display = 'flex';
+        sidebar.style.position = 'fixed';
+        sidebar.style.zIndex = 'var(--z-index-modal)';
+        
+        if (toggle) {
+          toggle.style.display = 'flex';
+          toggle.style.position = 'fixed';
+          toggle.style.zIndex = 'calc(var(--z-index-modal) + 2)';
+        }
       } else {
-        // Desktop: show sidebar
-        sidebar.classList.remove('dev-sidebar--mobile');
-        toggle.style.display = 'none';
+        // Desktop: setup desktop sidebar
+        sidebar.classList.remove('dev-sidebar--mobile', 'dev-sidebar-open', 'dev-sidebar--open');
+        sidebar.style.position = 'sticky';
+        sidebar.style.zIndex = 'var(--z-index-docked)';
+        
+        if (toggle) {
+          toggle.style.display = 'none';
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        
+        if (backdrop) {
+          backdrop.classList.remove('dev-sidebar-backdrop-visible', 'visible');
+        }
+        
+        document.body.classList.remove('sidebar-open');
       }
     }
     
     mediaQuery.addListener(handleBreakpointChange);
     handleBreakpointChange(mediaQuery);
+    
+    // Handle window resize for layering fixes
+    window.addEventListener('resize', function() {
+      setTimeout(fixLayeringIssues, 100);
+    });
   }
 
   // Sidebar interactions
@@ -147,6 +264,7 @@
   // Export for testing
   window.DevTheme = {
     init: initDeveloperTheme,
+    fixLayering: fixLayeringIssues,
     responsive: initResponsiveBehavior,
     sidebar: initSidebarInteractions,
     shortcuts: initKeyboardShortcuts
