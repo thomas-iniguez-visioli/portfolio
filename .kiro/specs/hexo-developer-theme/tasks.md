@@ -179,6 +179,7 @@
 
 
 
+
 - [ ] 14. Créer la documentation et guide de style
 
   - Documenter tous les composants CSS avec exemples d'usage
