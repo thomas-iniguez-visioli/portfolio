@@ -13,14 +13,18 @@
   <div class="page-grid">
     <%- partial('header') %>
     
-    <div class="layout-with-sidebar">
-      <%- partial('sidebar') %>
-      <main id="main-content" class="main-content" role="main">
-        <div class="container <%= page.layout === 'post' ? '' : 'wide' %>">
-          <%- body %>
+    <main class="page-main" role="main">
+      <div class="layout-with-sidebar">
+        <%- partial('sidebar') %>
+        <div id="main-content" class="main-content">
+          <div class="container <%= page.layout === 'post' ? '' : 'wide' %>">
+            <%- body %>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
+    
+    <%- partial('footer') %>
   </div>
   
   <!-- Modern script loading -->
