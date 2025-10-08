@@ -56,7 +56,7 @@
     "reveal-random-colors": "^2.0.0",
     "reveal.js": "^4.3.0",
     "somebody": "^2.0.0",
-     "postcss": "^8.4.44",
+    "postcss": "^8.4.44",
     "postcss-cli": "^11.0.1",
     "postcss-color-function": "^4.1.0",
     "postcss-extend-rule": "^3.0.0",

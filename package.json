@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run clean &&  npx hexo deploy && rm .deploy_git -r ",
-    "clean": "npx hexo clean",
+    "clean": "cd themes && cd hexo-theme && npm i && cd .. && cd .. hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
   },

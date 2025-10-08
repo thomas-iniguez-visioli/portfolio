@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr" class="dev-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test des Corrections de Superposition</title>
+    
+    <!-- CSS dans le bon ordre -->
+    <link rel="stylesheet" href="source/styles/reset.css">
+    <link rel="stylesheet" href="source/styles/variables.css">
+    <link rel="stylesheet" href="source/styles/layout-fixes.css">
+    <link rel="stylesheet" href="source/styles/z-index-fix.css">
+    <link rel="stylesheet" href="source/styles/layout.css">
+    <link rel="stylesheet" href="source/styles/header.css">
+    <link rel="stylesheet" href="source/styles/sidebar.css">
+    <link rel="stylesheet" href="source/styles/buttons.css">
+    <link rel="stylesheet" href="source/styles/cards.css">
+    
+    <style>
+        /* Styles de test */
+        .test-section {
+            padding: 2rem;
+            margin: 1rem 0;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background: #f8fafc;
+        }
+        
+        .test-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .test-description {
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+        
+        .test-result {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        
+        .test-pass {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+        
+        .test-fail {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+        
+        .debug-info {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="dev-layout modern-layout debug-mode">
+    <!-- Skip link pour test -->
+    <a href="#main-content" class="dev-skip-link skip-link">Aller au contenu principal</a>
+    
+    <div class="dev-page-grid page-grid">
+        <!-- Header de test -->
+        <header class="page-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-brand">
+                        <a href="#" class="brand-link">
+                            <span class="brand-text">Test Theme</span>
+                        </a>
+                    </div>
+                    
+                    <nav class="header-nav">
+                        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                            <span class="nav-toggle-icon"></span>
+                            <span class="nav-toggle-icon"></span>
+                            <span class="nav-toggle-icon"></span>
+                        </button>
+                        
+                        <ul class="nav-menu" id="nav-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" aria-current="page">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Projets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Contenu principal -->
+        <main class="dev-page-main page-main" role="main" id="main-content">
+            <div class="dev-layout-container layout-with-sidebar">
+                <!-- Sidebar de test -->
+                <aside class="dev-sidebar">
+                    <div class="dev-sidebar-content">
+                        <div class="dev-sidebar-section dev-profile">
+                            <div class="dev-profile-header">
+                                <div class="dev-profile-avatar">
+                                    <span class="dev-profile-initial">JD</span>
+                                    <div class="dev-profile-status"></div>
+                                </div>
+                                <div class="dev-profile-info">
+                                    <h3 class="dev-profile-name">
+                                        <a href="#" class="dev-profile-link">John Developer</a>
+                                    </h3>
+                                    <p class="dev-profile-title">Full-Stack Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dev-sidebar-section">
+                            <h4 class="dev-section-title">Navigation</h4>
+                            <ul class="dev-nav-list">
+                                <li class="dev-nav-item">
+                                    <a href="#" class="dev-nav-link active">
+                                        <span class="dev-nav-text">Accueil</span>
+                                    </a>
+                                </li>
+                                <li class="dev-nav-item">
+                                    <a href="#" class="dev-nav-link">
+                                        <span class="dev-nav-text">Projets</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                
+                <!-- Toggle mobile pour sidebar -->
+                <button class="dev-sidebar-toggle" aria-expanded="false">
+                    <div class="dev-sidebar-toggle-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                
+                <!-- Backdrop pour sidebar mobile -->
+                <div class="dev-sidebar-backdrop"></div>
+                
+                <!-- Contenu principal -->
+                <div class="dev-main-content main-content">
+                    <div class="container">
+                        <h1>Test des Corrections de Superposition</h1>
+                        <p>Cette page teste les corrections CSS pour les problèmes de superposition.</p>
+                        
+                        <!-- Section de test 1: Z-Index -->
+                        <div class="test-section">
+                            <h2 class="test-title">Test 1: Échelle Z-Index</h2>
+                            <p class="test-description">Vérification que les z-index sont correctement définis.</p>
+                            
+                            <div id="zindex-test-result" class="test-result"></div>
+                            <div id="zindex-debug" class="debug-info"></div>
+                        </div>
+                        
+                        <!-- Section de test 2: Positionnement -->
+                        <div class="test-section">
+                            <h2 class="test-title">Test 2: Positionnement des Éléments</h2>
+                            <p class="test-description">Vérification que les éléments sont correctement positionnés.</p>
+                            
+                            <div id="positioning-test-result" class="test-result"></div>
+                            <div id="positioning-debug" class="debug-info"></div>
+                        </div>
+                        
+                        <!-- Section de test 3: Responsive -->
+                        <div class="test-section">
+                            <h2 class="test-title">Test 3: Comportement Responsive</h2>
+                            <p class="test-description">Vérification du comportement sur différentes tailles d'écran.</p>
+                            
+                            <div id="responsive-test-result" class="test-result"></div>
+                            <div id="responsive-debug" class="debug-info"></div>
+                        </div>
+                        
+                        <!-- Section de test 4: Cartes -->
+                        <div class="test-section">
+                            <h2 class="test-title">Test 4: Cartes et Composants</h2>
+                            <p class="test-description">Test des cartes pour vérifier qu'elles ne se chevauchent pas.</p>
+                            
+                            <div class="cards-grid">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Carte 1</h3>
+                                        <p class="card-description">Contenu de la première carte.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Carte 2</h3>
+                                        <p class="card-description">Contenu de la deuxième carte.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Carte 3</h3>
+                                        <p class="card-description">Contenu de la troisième carte.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Boutons de test -->
+                        <div class="test-section">
+                            <h2 class="test-title">Test 5: Boutons et Interactions</h2>
+                            <p class="test-description">Test des boutons et de leurs états hover/focus.</p>
+                            
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <button class="btn btn-primary">Bouton Principal</button>
+                                <button class="btn btn-secondary">Bouton Secondaire</button>
+                                <button class="btn btn-terminal">Bouton Terminal</button>
+                                <button class="btn btn-ghost">Bouton Ghost</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Modal de test -->
+    <div class="modal" id="test-modal" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Modal de Test</h3>
+                <button class="modal-close">×</button>
+            </div>
+            <div class="modal-content">
+                <p>Cette modal teste le z-index et le positionnement.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts de test -->
+    <script>
+        // Test des z-index
+        function testZIndex() {
+            const elements = {
+                'Header': document.querySelector('.page-header'),
+                'Sidebar': document.querySelector('.dev-sidebar'),
+                'Sidebar Toggle': document.querySelector('.dev-sidebar-toggle'),
+                'Skip Link': document.querySelector('.skip-link')
+            };
+            
+            let results = [];
+            let debugInfo = [];
+            
+            Object.entries(elements).forEach(([name, element]) => {
+                if (element) {
+                    const zIndex = window.getComputedStyle(element).zIndex;
+                    const position = window.getComputedStyle(element).position;
+                    
+                    results.push(`${name}: z-index ${zIndex}, position ${position}`);
+                    debugInfo.push(`${name}: ${zIndex !== 'auto' ? '✓' : '✗'}`);
+                }
+            });
+            
+            document.getElementById('zindex-test-result').innerHTML = 
+                debugInfo.every(info => info.includes('✓')) 
+                    ? '<span class="test-pass">✓ Tous les z-index sont définis</span>'
+                    : '<span class="test-fail">✗ Certains z-index manquent</span>';
+            
+            document.getElementById('zindex-debug').innerHTML = results.join('<br>');
+        }
+        
+        // Test du positionnement
+        function testPositioning() {
+            const header = document.querySelector('.page-header');
+            const sidebar = document.querySelector('.dev-sidebar');
+            
+            const headerRect = header.getBoundingClientRect();
+            const sidebarRect = sidebar.getBoundingClientRect();
+            
+            const headerSticky = window.getComputedStyle(header).position === 'sticky';
+            const sidebarSticky = window.getComputedStyle(sidebar).position === 'sticky';
+            
+            const results = [
+                `Header sticky: ${headerSticky ? '✓' : '✗'}`,
+                `Sidebar sticky: ${sidebarSticky ? '✓' : '✗'}`,
+                `Header top: ${headerRect.top}px`,
+                `Sidebar top: ${sidebarRect.top}px`
+            ];
+            
+            document.getElementById('positioning-test-result').innerHTML = 
+                headerSticky && sidebarSticky
+                    ? '<span class="test-pass">✓ Positionnement correct</span>'
+                    : '<span class="test-fail">✗ Problème de positionnement</span>';
+            
+            document.getElementById('positioning-debug').innerHTML = results.join('<br>');
+        }
+        
+        // Test responsive
+        function testResponsive() {
+            const width = window.innerWidth;
+            const toggle = document.querySelector('.dev-sidebar-toggle');
+            const sidebar = document.querySelector('.dev-sidebar');
+            
+            const toggleVisible = window.getComputedStyle(toggle).display !== 'none';
+            const sidebarPosition = window.getComputedStyle(sidebar).position;
+            
+            let expected = '';
+            if (width <= 1023) {
+                expected = 'Toggle visible, sidebar fixed';
+            } else {
+                expected = 'Toggle hidden, sidebar sticky';
+            }
+            
+            const results = [
+                `Largeur écran: ${width}px`,
+                `Toggle visible: ${toggleVisible ? '✓' : '✗'}`,
+                `Sidebar position: ${sidebarPosition}`,
+                `Comportement attendu: ${expected}`
+            ];
+            
+            const isCorrect = (width <= 1023 && toggleVisible && sidebarPosition === 'fixed') ||
+                             (width > 1023 && !toggleVisible && sidebarPosition === 'sticky');
+            
+            document.getElementById('responsive-test-result').innerHTML = 
+                isCorrect
+                    ? '<span class="test-pass">✓ Comportement responsive correct</span>'
+                    : '<span class="test-fail">✗ Problème responsive</span>';
+            
+            document.getElementById('responsive-debug').innerHTML = results.join('<br>');
+        }
+        
+        // Fonctionnalité de toggle sidebar
+        function setupSidebarToggle() {
+            const toggle = document.querySelector('.dev-sidebar-toggle');
+            const sidebar = document.querySelector('.dev-sidebar');
+            const backdrop = document.querySelector('.dev-sidebar-backdrop');
+            
+            if (toggle && sidebar && backdrop) {
+                toggle.addEventListener('click', () => {
+                    const isOpen = sidebar.classList.contains('dev-sidebar-open');
+                    
+                    if (isOpen) {
+                        sidebar.classList.remove('dev-sidebar-open');
+                        backdrop.classList.remove('dev-sidebar-backdrop-visible');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        sidebar.classList.add('dev-sidebar-open');
+                        backdrop.classList.add('dev-sidebar-backdrop-visible');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+                
+                backdrop.addEventListener('click', () => {
+                    sidebar.classList.remove('dev-sidebar-open');
+                    backdrop.classList.remove('dev-sidebar-backdrop-visible');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            }
+        }
+        
+        // Fonctionnalité de toggle navigation
+        function setupNavToggle() {
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.querySelector('.nav-menu');
+            
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !isOpen);
+                });
+            }
+        }
+        
+        // Exécuter les tests
+        document.addEventListener('DOMContentLoaded', () => {
+            testZIndex();
+            testPositioning();
+            testResponsive();
+            setupSidebarToggle();
+            setupNavToggle();
+            
+            // Re-tester lors du redimensionnement
+            window.addEventListener('resize', () => {
+                setTimeout(() => {
+                    testResponsive();
+                }, 100);
+            });
+        });
+        
+        // Fonction pour afficher les informations de debug
+        function showDebugInfo() {
+            console.log('=== DEBUG INFO ===');
+            console.log('CSS Variables:', {
+                zIndexSticky: getComputedStyle(document.documentElement).getPropertyValue('--z-index-sticky'),
+                zIndexModal: getComputedStyle(document.documentElement).getPropertyValue('--z-index-modal'),
+                zIndexDocked: getComputedStyle(document.documentElement).getPropertyValue('--z-index-docked')
+            });
+            
+            console.log('Element positions:', {
+                header: window.getComputedStyle(document.querySelector('.page-header')),
+                sidebar: window.getComputedStyle(document.querySelector('.dev-sidebar')),
+                toggle: window.getComputedStyle(document.querySelector('.dev-sidebar-toggle'))
+            });
+        }
+        
+        // Exposer la fonction de debug globalement
+        window.showDebugInfo = showDebugInfo;
+    </script>
+    
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+        <button onclick="showDebugInfo()" style="background: #2563eb; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
+            Debug Info
+        </button>
+    </div>
+</body>
+</html>
