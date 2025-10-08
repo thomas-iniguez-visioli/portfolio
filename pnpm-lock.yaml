@@ -59,6 +59,9 @@ importers:
       reading-time:
         specifier: ^1.5.0
         version: 1.5.0
+      reveal.js:
+        specifier: ^5.2.1
+        version: 5.2.1
       somebody:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1695,6 +1698,10 @@ packages:
   resp-modifier@6.0.2:
     resolution: {integrity: sha512-U1+0kWC/+4ncRFYqQWTx/3qkfE6a4B/h3XXgmXypfa0SPZ3t7cbbaFk297PjQS/yov24R18h6OZe6iZwj3NSLw==}
     engines: {node: '>= 0.8.0'}
+
+  reveal.js@5.2.1:
+    resolution: {integrity: sha512-r7//6mIM5p34hFiDMvYfXgyjXqGRta+/psd9YtytsgRlrpRzFv4RbH76TXd2qD+7ZPZEbpBDhdRhJaFgfQ7zNQ==}
+    engines: {node: '>=18.0.0'}
 
   rfdc@1.4.1:
     resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==}
@@ -4061,6 +4068,8 @@ snapshots:
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
+
+  reveal.js@5.2.1: {}
 
   rfdc@1.4.1: {}
 
