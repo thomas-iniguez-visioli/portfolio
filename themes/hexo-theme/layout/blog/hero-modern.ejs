@@ -2,13 +2,71 @@
 
     <section class="hero" role="banner" aria-labelledby="hero-title">
         <div class="container">
+            <div class="hero-content">
+                <!-- Profile Avatar -->
+                
 
-            <!-- Profile Avatar -->
+                <!-- Hero Text Content -->
+                <div class="hero-text">
+                    <h1 class="hero-title" id="hero-title">
+                        <%= config.title %>
+                    </h1>
 
+                    <p class="hero-subtitle">
+                        <%= config.subtitle || theme.tagline || 'Développeur Full-Stack & Créateur de Contenu' %>
+                    </p>
 
-            <!-- Hero Text Content -->
+                    <div class="hero-description">
+                        <%- markdown(theme.description
+                            || 'Passionné par les technologies web modernes et le partage de connaissances.' ) %>
+                    </div>
 
+                    <!-- Call to Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="<%= url_for('/about/') %>" class="hero-cta">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            À propos
+                        </a>
 
+                        <a href="<%= url_for('/archives/') %>" class="hero-cta hero-cta-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            Mes articles
+                        </a>
+                    </div>
+
+                    <!-- Hero Stats (optional) -->
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">
+                                <%= site.posts.length %>
+                            </div>
+                            <div class="hero-stat-label">Articles</div>
+                        </div>
+
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">
+                                <%= site.categories.length %>
+                            </div>
+                            <div class="hero-stat-label">Catégories</div>
+                        </div>
+
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">
+                                <%= new Date().getFullYear() - 2020 %>+
+                            </div>
+                            <div class="hero-stat-label">Années</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Scroll Indicator -->
             <a href="#main-content" class="hero-scroll" aria-label="Scroll to main content">
