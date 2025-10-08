@@ -120,27 +120,57 @@ Cette correction utilise `!important` pour forcer les styles. C'est une solution
 
 ## 🔄 Intégration dans Hexo
 
-### Dans `_config.yml`
+### ✅ DÉJÀ INTÉGRÉ !
+
+Les corrections sont **déjà intégrées** dans les templates Hexo :
+
+- ✅ **CSS** ajouté dans `layout/_head.ejs`
+- ✅ **JavaScript** ajouté dans `layout/layout.ejs`
+- ✅ **Page de test** disponible : `layout/test-layering.ejs`
+
+### Test avec Hexo
+
+1. **Créer une page de test** :
+```bash
+# Dans votre site Hexo
+hexo new page test-layering
+```
+
+2. **Utiliser le template de test** :
 ```yaml
-# Ajouter les fichiers de correction
+# Dans source/test-layering/index.md
+---
+title: Test Corrections Superposition
+layout: test-layering
+---
+```
+
+3. **Générer et servir** :
+```bash
+hexo generate
+hexo server
+```
+
+4. **Ouvrir** : `http://localhost:4000/test-layering/`
+
+### Configuration Hexo (Optionnel)
+
+Si vous voulez ajouter les corrections via `_config.yml` :
+
+```yaml
+# Dans _config.yml
 inject:
   head:
-    - <link rel="stylesheet" href="/css/layering-emergency-fix.css">
+    - <link rel="stylesheet" href="<%= url_for('/css/layering-emergency-fix.css') %>">
   bottom:
-    - <script src="/js/layering-emergency-fix.js"></script>
+    - <script src="<%= url_for('/js/layering-emergency-fix.js') %>"></script>
 ```
 
-### Dans le template `_head.ejs`
-```html
-<!-- À la fin du <head> -->
-<link rel="stylesheet" href="<%= url_for('/css/layering-emergency-fix.css') %>">
-```
+### URLs Hexo Générées
 
-### Dans le template `layout.ejs`
-```html
-<!-- Avant la fermeture du </body> -->
-<script src="<%= url_for('/js/layering-emergency-fix.js') %>"></script>
-```
+Les corrections utilisent les `url_for` de Hexo :
+- CSS: `<%= url_for('/css/layering-emergency-fix.css') %>`
+- JS: `<%= url_for('/js/layering-emergency-fix.js') %>`
 
 ## 📞 Support
 

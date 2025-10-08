@@ -1,65 +1,112 @@
-description: >
-  thomas iniguez visioli
-author: thomas iniguez visioli
-email: thomas.iniguez@free.fr
+# Configuration du thème Hexo Developer
+# Theme configuration for Hexo Developer Theme
 
-graph:
-  twitter:            
-  mastodon:           
-  fediverse_creator:  ''
-  github:             
-  gitlab:             
-  framagit:           
-  pro:                
-  old:                
+# ===== CORRECTIONS DE SUPERPOSITION =====
+# Layering fixes configuration
+layering_fix: true  # Activer les corrections de superposition (true/false)
 
+# ===== PROFIL DÉVELOPPEUR =====
+# Developer profile configuration
+profile:
+  name: "Développeur"
+  title: "Full-Stack Developer"
+  avatar: "/images/avatar.jpg"
+  status: "Available for work"
+  location: "France"
+  bio: "Développeur passionné par les technologies modernes"
 
-summary:
-  home: |
-    Hello and welcome to my online&nbsp;space.
-    Here, I explore a way to document my journey through life.
+# ===== STACK TECHNIQUE =====
+# Technology stack configuration
+tech_stack:
+  languages:
+    - "JavaScript"
+    - "TypeScript" 
+    - "Python"
+    - "Java"
+  frameworks:
+    - "React"
+    - "Node.js"
+    - "Express"
+    - "Spring Boot"
+  tools:
+    - "VS Code"
+    - "Git"
+    - "Docker"
+    - "AWS"
 
-    _Enjoy!_ — Thomas
-  work: >
-    I combine web development, UX research and human-centered agile practices
-    to put people at ease, to create a shared understanding of the _whys_ and the _whats_
-    and to move from ideas to prototyping then to production.
+# ===== LIENS SOCIAUX =====
+# Social links configuration
+social:
+  github: "your-username"
+  linkedin: "your-username"
+  twitter: "your-username"
+  email: "your-email@example.com"
 
-# Newsletter Theme Configuration
-newsletter:
-  form_id: 'newsletter-form'
-  email_input_id: 'newsletter-email'
-  submit_button_id: 'newsletter-submit'
-  success_message: 'Merci pour votre inscription !'
-  error_message: 'Erreur lors de l inscription'
-  loading_message: 'Inscription en cours...'
-  placeholder_text: 'Votre adresse email'
-  submit_text: 'inscription'
-  enabled_pages: ['index', 'post', 'page']
+# ===== NAVIGATION =====
+# Navigation menu configuration
+menu:
+  Accueil: /
+  Projets: /projects/
+  Blog: /blog/
+  À propos: /about/
+  Contact: /contact/
 
-links:
-  - label: contenu
-    href: /
-  - label: suivis de site 
-    href: /status/
-  - label: Reading Notes
-    href: /reading-notes/
-  - label: veille
-    href: https://feed-blush.vercel.app
+# ===== FONCTIONNALITÉS =====
+# Theme features configuration
+features:
+  dark_mode: true           # Mode sombre
+  syntax_highlighting: true # Coloration syntaxique
+  search: true             # Recherche
+  comments: true           # Commentaires
+  analytics: true          # Analytics
+  
+# ===== PERFORMANCE =====
+# Performance optimization
+performance:
+  critical_css: true       # CSS critique inline
+  lazy_loading: true       # Chargement paresseux des images
+  minify: true            # Minification
+  compression: true       # Compression
 
-  - label: About
-    href: /about/
+# ===== ACCESSIBILITÉ =====
+# Accessibility features
+accessibility:
+  skip_links: true        # Liens d'évitement
+  high_contrast: true     # Support contraste élevé
+  keyboard_nav: true      # Navigation clavier
+  screen_reader: true     # Support lecteur d'écran
 
+# ===== DEBUG =====
+# Debug configuration (development only)
+debug:
+  layering_info: false    # Afficher les infos de debug layering
+  performance_info: false # Afficher les infos de performance
+  
+# ===== COULEURS PERSONNALISÉES =====
+# Custom colors (optional)
+colors:
+  primary: "#2563eb"      # Couleur primaire
+  secondary: "#64748b"    # Couleur secondaire
+  success: "#10b981"      # Couleur succès
+  warning: "#f59e0b"      # Couleur avertissement
+  error: "#ef4444"        # Couleur erreur
 
-less:
-  layouts:
-    series-day-to-day:
-      - styles/series-day-to-day.css
-    series-default:
-      - styles/series-default.css
-  paths:
-    - source/less
-    - node_modules/bootstrap/less
-    - node_modules/hexo-theme-thom4/source/less
-    - node_modules/hexo-theme-thom4/node_modules
-    - node_modules
+# ===== TYPOGRAPHIE =====
+# Typography configuration
+typography:
+  font_sans: "Inter"      # Police sans-serif
+  font_serif: "Georgia"   # Police serif
+  font_mono: "JetBrains Mono" # Police monospace
+  
+# ===== LAYOUT =====
+# Layout configuration
+layout:
+  sidebar_position: "left" # Position de la sidebar (left/right)
+  container_width: "1200px" # Largeur max du conteneur
+  
+# ===== INTÉGRATIONS =====
+# Third-party integrations
+integrations:
+  google_analytics: ""    # ID Google Analytics
+  disqus: ""             # Nom d'utilisateur Disqus
+  github_repo: ""        # Repository GitHub du site

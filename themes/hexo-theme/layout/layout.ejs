@@ -54,7 +54,9 @@
   <script src="<%= url_for('/js/dev-theme.js') %>" type="module"></script>
   
   <!-- CORRECTION D'URGENCE - Script de correction des problèmes de superposition -->
-  <script src="<%= url_for('/js/layering-emergency-fix.js') %>"></script>
+  <% if (needs_layering_fix()) { %>
+  <%- layering_fix_js() %>
+  <% } %>
   
   <script>tarteaucitron.user.tawktoWidgetId = '1iu11r9a9';</script>
 </body>

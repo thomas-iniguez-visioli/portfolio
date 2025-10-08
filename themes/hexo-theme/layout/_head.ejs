@@ -196,7 +196,10 @@
 <% } %>
 
 <!-- CORRECTION D'URGENCE - Problèmes de superposition CSS -->
-<link rel="stylesheet" href="<%= url_for('/css/layering-emergency-fix.css') %>">
+<%- layering_debug_info() %>
+<% if (needs_layering_fix()) { %>
+<%- layering_fix_css() %>
+<% } %>
 
 <!-- Sidebar and simplified footer styles -->
 <link rel="stylesheet" href="<%= url_for('/css/sidebar.css') %>">
