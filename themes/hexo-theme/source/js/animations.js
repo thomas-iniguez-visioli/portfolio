@@ -10,6 +10,13 @@ class ModernAnimations {
             rootMargin: '50px 0px'
         };
 
+        // Performance monitoring
+        this.performanceMonitor = {
+            frameCount: 0,
+            lastTime: performance.now(),
+            fps: 60
+        };
+
         this.init();
     }
 
@@ -19,6 +26,32 @@ class ModernAnimations {
         this.setupLoadingStates();
         this.setupMicroInteractions();
         this.setupPageTransitions();
+        this.startPerformanceMonitoring();
+    }
+
+    startPerformanceMonitoring() {
+        // Monitor animation performance to ensure 60fps
+        const monitorFrame = (currentTime) => {
+            this.performanceMonitor.frameCount++;
+            
+            if (currentTime - this.performanceMonitor.lastTime >= 1000) {
+                this.performanceMonitor.fps = this.performanceMonitor.frameCount;
+                this.performanceMonitor.frameCount = 0;
+                this.performanceMonitor.lastTime = currentTime;
+                
+                // Log performance issues in development
+                if (this.performanceMonitor.fps < 55 && console && console.warn) {
+                    console.warn(`Animation performance warning: ${this.performanceMonitor.fps} FPS`);
+                }
+            }
+            
+            requestAnimationFrame(monitorFrame);
+        };
+        
+        // Only monitor in development or when explicitly enabled
+        if (window.location.hostname === 'localhost' || window.DEBUG_ANIMATIONS) {
+            requestAnimationFrame(monitorFrame);
+        }
     }
 
     setupScrollAnimations() {
@@ -64,12 +97,15 @@ class ModernAnimations {
     }
 
     animateElement(element) {
+        // Use transform3d for hardware acceleration
         element.style.opacity = '1';
-        element.style.transform = 'translateY(0)';
+        element.style.transform = 'translate3d(0, 0, 0)';
 
-        // Add animation complete class after animation
+        // Add animation complete class after animation and clean up will-change
         setTimeout(() => {
             element.classList.add('animation-complete');
+            // Remove will-change to free GPU memory
+            element.style.willChange = 'auto';
         }, 800);
     }
 
