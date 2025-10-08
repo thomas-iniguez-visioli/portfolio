@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid System Test - Developer Theme</title>
+    <link rel="stylesheet" href="source/css/variables.css">
+    <link rel="stylesheet" href="source/css/layout/grid.css">
+    <link rel="stylesheet" href="source/css/utilities/responsive.css">
+    <style>
+        /* Test styles */
+        body {
+            font-family: var(--font-family-sans);
+            margin: 0;
+            padding: var(--space-4);
+            background: var(--color-background);
+            color: var(--color-text-primary);
+        }
+        
+        .test-section {
+            margin-bottom: var(--space-12);
+            padding: var(--space-6);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+        }
+        
+        .test-item {
+            background: var(--color-primary-100);
+            padding: var(--space-4);
+            border-radius: var(--border-radius-base);
+            text-align: center;
+            border: 1px solid var(--color-primary-200);
+        }
+        
+        .dev-sidebar-mock {
+            background: var(--color-neutral-800);
+            color: var(--color-neutral-100);
+            padding: var(--space-6);
+            border-radius: var(--border-radius-lg);
+            min-height: 300px;
+        }
+        
+        .main-content-mock {
+            background: var(--color-background-secondary);
+            padding: var(--space-6);
+            border-radius: var(--border-radius-lg);
+            min-height: 300px;
+        }
+        
+        .breakpoint-indicator {
+            position: fixed;
+            top: var(--space-4);
+            right: var(--space-4);
+            background: var(--color-primary);
+            color: var(--color-text-inverse);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--border-radius-base);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            z-index: var(--z-index-tooltip);
+        }
+        
+        .breakpoint-indicator::before {
+            content: 'XS (< 640px)';
+        }
+        
+        @media (min-width: 640px) {
+            .breakpoint-indicator::before {
+                content: 'SM (≥ 640px)';
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .breakpoint-indicator::before {
+                content: 'MD (≥ 768px)';
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .breakpoint-indicator::before {
+                content: 'LG (≥ 1024px)';
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .breakpoint-indicator::before {
+                content: 'XL (≥ 1280px)';
+            }
+        }
+        
+        @media (min-width: 1536px) {
+            .breakpoint-indicator::before {
+                content: '2XL (≥ 1536px)';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="breakpoint-indicator"></div>
+    
+    <h1>Grid System Test - Developer Theme</h1>
+    <p>Resize your browser window to test responsive behavior across different breakpoints.</p>
+    
+    <!-- Test 1: Main Layout Grid -->
+    <div class="test-section">
+        <h2>1. Main Layout with Sidebar</h2>
+        <div class="page-grid">
+            <div class="layout-with-sidebar">
+                <div class="dev-sidebar-mock">
+                    <h3>Developer Sidebar</h3>
+                    <p>This sidebar should:</p>
+                    <ul>
+                        <li>Be 300px wide on desktop</li>
+                        <li>Stack above content on mobile</li>
+                        <li>Adapt width on tablet</li>
+                    </ul>
+                </div>
+                <div class="main-content-mock">
+                    <h3>Main Content Area</h3>
+                    <p>This content area should:</p>
+                    <ul>
+                        <li>Take remaining space on desktop</li>
+                        <li>Be full width on mobile</li>
+                        <li>Have responsive padding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Test 2: Responsive Grid Columns -->
+    <div class="test-section">
+        <h2>2. Responsive Grid Columns</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="test-item">Item 1</div>
+            <div class="test-item">Item 2</div>
+            <div class="test-item">Item 3</div>
+            <div class="test-item">Item 4</div>
+            <div class="test-item">Item 5</div>
+            <div class="test-item">Item 6</div>
+        </div>
+        <p><small>Should be: 1 column on mobile, 2 on tablet, 3 on desktop</small></p>
+    </div>
+    
+    <!-- Test 3: Card Grid -->
+    <div class="test-section">
+        <h2>3. Card Grid Layout</h2>
+        <div class="card-grid">
+            <div class="test-item">Card 1</div>
+            <div class="test-item">Card 2</div>
+            <div class="test-item">Card 3</div>
+            <div class="test-item">Card 4</div>
+        </div>
+        <p><small>Responsive card grid with automatic column adjustment</small></p>
+    </div>
+    
+    <!-- Test 4: Flexbox Utilities -->
+    <div class="test-section">
+        <h2>4. Flexbox Utilities</h2>
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div class="test-item flex-1">Flexible Item 1</div>
+            <div class="test-item flex-none">Fixed Item</div>
+            <div class="test-item flex-1">Flexible Item 2</div>
+        </div>
+        <p><small>Should stack vertically on mobile, horizontally on desktop</small></p>
+    </div>
+    
+    <!-- Test 5: Spacing Utilities -->
+    <div class="test-section">
+        <h2>5. Spacing Utilities (4px Grid)</h2>
+        <div class="space-y-4">
+            <div class="test-item p-2">Padding: 8px (space-2)</div>
+            <div class="test-item p-4">Padding: 16px (space-4)</div>
+            <div class="test-item p-6">Padding: 24px (space-6)</div>
+            <div class="test-item p-8">Padding: 32px (space-8)</div>
+        </div>
+        <p><small>All spacing based on 4px grid system</small></p>
+    </div>
+    
+    <!-- Test 6: Responsive Visibility -->
+    <div class="test-section">
+        <h2>6. Responsive Visibility</h2>
+        <div class="grid gap-4">
+            <div class="test-item md:hidden">Mobile Only (hidden on MD+)</div>
+            <div class="test-item hidden md:block lg:hidden">Tablet Only (MD only)</div>
+            <div class="test-item hidden lg:block">Desktop Only (LG+)</div>
+        </div>
+        <p><small>Different items visible at different breakpoints</small></p>
+    </div>
+    
+    <!-- Test 7: Container System -->
+    <div class="test-section">
+        <h2>7. Container System</h2>
+        <div class="container-sm mx-auto">
+            <div class="test-item">Small Container (640px max)</div>
+        </div>
+        <div class="container-md mx-auto mt-4">
+            <div class="test-item">Medium Container (768px max)</div>
+        </div>
+        <div class="container-lg mx-auto mt-4">
+            <div class="test-item">Large Container (1024px max)</div>
+        </div>
+        <p><small>Containers with different max-widths</small></p>
+    </div>
+    
+    <!-- Test 8: Cross-browser Fallbacks -->
+    <div class="test-section">
+        <h2>8. Cross-browser Support</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="test-item">
+                <h4>CSS Grid Support</h4>
+                <p>Modern browsers use CSS Grid</p>
+            </div>
+            <div class="test-item">
+                <h4>Flexbox Fallback</h4>
+                <p>Older browsers use Flexbox</p>
+            </div>
+        </div>
+        <p><small>Automatic fallback to Flexbox for browsers without Grid support</small></p>
+    </div>
+    
+    <!-- Test 9: Touch-friendly Spacing -->
+    <div class="test-section">
+        <h2>9. Touch Device Optimization</h2>
+        <div class="flex gap-2 touch:gap-4">
+            <button class="test-item touch:min-h-11 touch:min-w-11">Btn 1</button>
+            <button class="test-item touch:min-h-11 touch:min-w-11">Btn 2</button>
+            <button class="test-item touch:min-h-11 touch:min-w-11">Btn 3</button>
+        </div>
+        <p><small>Larger spacing and touch targets on touch devices</small></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Testing Instructions</h2>
+        <ol>
+            <li><strong>Resize browser window</strong> to test responsive breakpoints</li>
+            <li><strong>Check mobile view</strong> (< 640px) - sidebar should stack above content</li>
+            <li><strong>Check tablet view</strong> (768px-1023px) - 2-column grids should appear</li>
+            <li><strong>Check desktop view</strong> (1024px+) - full layout with sidebar</li>
+            <li><strong>Test in different browsers</strong> to verify cross-browser compatibility</li>
+            <li><strong>Use developer tools</strong> to simulate touch devices</li>
+        </ol>
+    </div>
+</body>
+</html>

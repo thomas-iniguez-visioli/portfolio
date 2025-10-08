@@ -1,37 +1,60 @@
 /**
- * Modern Layout System
- * CSS Grid-based layout replacing float-based system
- * Semantic HTML5 structure with responsive design
+ * Enhanced Layout System
+ * CSS Grid-based layout with comprehensive responsive design
+ * Integrates with the new grid system and utilities
  */
 
-/* ===== PAGE GRID SYSTEM ===== */
+/* Import the comprehensive grid system */
+@import url('./layout/grid.css');
 
-.page-grid {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  gap: 0;
-}
-
-/* Layout with integrated sidebar */
-.layout-with-sidebar {
-  display: flex;
-  flex: 1;
-  gap: 0;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 var(--space-6);
-}
+/* ===== ENHANCED MAIN CONTENT LAYOUT ===== */
 
 .main-content {
   flex: 1;
   min-width: 0;
-  padding: var(--space-8) 0;
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-background);
+  
+  /* Optimal content width for readability */
+  max-width: none;
 }
 
-@media (max-width: 1023px) {
-  .layout-with-sidebar {
-    flex-direction: column;
+/* Content wrapper with responsive behavior */
+.main-content > .container {
+  max-width: 65ch; /* Optimal reading width */
+  margin: 0 auto;
+}
+
+.main-content > .container.wide {
+  max-width: var(--container-max);
+}
+
+.main-content > .container.full {
+  max-width: none;
+}
+
+/* Responsive main content padding */
+@media (max-width: 767px) {
+  .main-content {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-content {
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: var(--space-12) var(--space-8);
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-content {
+    padding: var(--space-16) var(--space-12);
   }
 }
 

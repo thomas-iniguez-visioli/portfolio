@@ -24,15 +24,21 @@
 
 
 
-- [ ] 3. Créer le système de couleurs et thèmes
+- [x] 3. Créer le système de couleurs et thèmes
+
+
 
   - Implémenter la palette de couleurs développeur avec variables CSS
   - Ajouter le support du mode sombre avec media queries et toggle manuel
   - Créer les utilitaires de couleurs avec contraste WCAG AA
   - Tester la compatibilité des couleurs sur tous les navigateurs
   - _Requirements: 2.1, 2.2, 3.2, 1.1_
+-
 
-- [ ] 4. Développer la sidebar développeur
+- [x] 4. Développer la sidebar développeur
+
+
+
 
   - Créer la structure HTML sémantique de la sidebar
   - Implémenter les styles CSS avec thème sombre par défaut
@@ -41,7 +47,13 @@
   - Implémenter la navigation responsive avec menu hamburger mobile
   - _Requirements: 2.1, 2.2, 6.2, 6.3_
 
-- [ ] 5. Implémenter le système de grille et layout responsive
+
+- [-] 5. Implémenter le système de grille et layout responsive
+
+
+
+
+
 
   - Créer le layout principal avec CSS Grid et fallback Flexbox
   - Implémenter les breakpoints responsive avec mobile-first approach
@@ -82,6 +94,7 @@
   - _Requirements: 3.1, 3.2, 3.4_
 
 - [ ] 10. Créer les tests cross-browser automatisés
+
   - Mettre en place les tests visuels avec captures d'écran
   - Implémenter les tests de régression CSS sur différents navigateurs
   - Ajouter les tests de performance avec métriques Core Web Vitals
@@ -89,6 +102,7 @@
   - _Requirements: 1.1, 1.2, 1.3, 4.1_
 
 - [ ] 11. Développer les utilitaires et helpers CSS
+
   - Créer les classes utilitaires pour spacing, colors, typography
   - Implémenter les helpers responsive (show/hide par breakpoint)
   - Ajouter les utilitaires d'état (loading, error, success)
