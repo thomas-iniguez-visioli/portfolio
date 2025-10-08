@@ -22,6 +22,12 @@ class ModernAnimations {
     }
 
     setupScrollAnimations() {
+        // Check for reduced motion preference
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            this.fallbackAnimations();
+            return;
+        }
+
         if (!('IntersectionObserver' in window)) {
             // Fallback for older browsers
             this.fallbackAnimations();
@@ -31,7 +37,10 @@ class ModernAnimations {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    this.animateElement(entry.target);
+                    // Use requestAnimationFrame for smooth animations
+                    requestAnimationFrame(() => {
+                        this.animateElement(entry.target);
+                    });
                     observer.unobserve(entry.target);
                 }
             });
@@ -126,7 +135,7 @@ class ModernAnimations {
         // Form loading states
         const forms = document.querySelectorAll('form');
         forms.forEach(form => {
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', () => {
                 this.showFormLoading(form);
             });
         });
@@ -278,7 +287,7 @@ class ModernAnimations {
         const links = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]');
 
         links.forEach(link => {
-            link.addEventListener('click', (e) => {
+            link.addEventListener('click', () => {
                 if (link.hostname !== window.location.hostname) return;
 
                 // Add page exit animation
