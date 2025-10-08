@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="<%- config.language %>" prefix="og: http://ogp.me/ns#">
+<html lang="<%- config.language %>" prefix="og: http://ogp.me/ns#" class="dev-theme">
 <head>
+  <!-- Legacy browser polyfills - load first -->
+  <script src="<%= url_for('/js/legacy-polyfills.js') %>"></script>
+  
   <%- partial('_head') %>
+  
+  <!-- Legacy browser support CSS -->
+  <link rel="stylesheet" href="<%= url_for('/css/legacy-browser-support.css') %>">
+  <link rel="stylesheet" href="<%= url_for('/css/vendor-prefixes.css') %>">
+  
   <!-- Modern viewport meta tag for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- Conditional comments for IE -->
+  <!--[if IE]>
+    <script>document.documentElement.classList.add('browser-ie');</script>
+  <![endif]-->
+  <!--[if IE 11]>
+    <script>document.documentElement.classList.add('browser-ie11');</script>
+  <![endif]-->
 </head>
-<body class="modern-layout site-<%= config.layout %> content-<%= page.layout %>">
+<body class="dev-layout modern-layout site-<%= config.layout %> content-<%= page.layout %> theme-developer"
+      data-theme="<%= page.theme || 'developer' %>"
+      data-layout="<%= page.layout %>"
+      data-responsive="true">
   <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   

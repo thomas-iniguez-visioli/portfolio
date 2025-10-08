@@ -1,7 +1,12 @@
 /**
  * Cross-Browser Compatibility Utilities
  * Ensures consistent behavior across all target browsers
+ * Enhanced with comprehensive legacy browser support
  */
+
+/* Import comprehensive legacy browser support */
+@import url('../css/legacy-browser-support.css');
+@import url('../css/vendor-prefixes.css');
 
 /* ===== FEATURE DETECTION UTILITIES ===== */
 

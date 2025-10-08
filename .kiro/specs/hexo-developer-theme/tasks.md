@@ -155,7 +155,9 @@
   - _Requirements: 5.1, 5.2, 5.3, 5.4_
 -
 
-- [-] 12. Optimiser pour les navigateurs anciens
+- [x] 12. Optimiser pour les navigateurs anciens
+
+
 
 
   - Ajouter les polyfills CSS pour les propriétés modernes
@@ -163,6 +165,7 @@
   - Créer les alternatives pour les propriétés non supportées
   - Tester sur les versions minimales des navigateurs cibles
   - _Requirements: 1.3, 1.4, 5.3_
+
 
 - [ ] 13. Finaliser l'intégration avec Hexo
 

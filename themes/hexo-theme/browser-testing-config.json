@@ -1,0 +1,349 @@
+{
+  "name": "Hexo Developer Theme - Cross-Browser Testing Configuration",
+  "description": "Configuration for testing the developer theme across all target browsers",
+  "version": "1.0.0",
+  "targetBrowsers": {
+    "desktop": {
+      "chrome": {
+        "versions": ["90+", "latest"],
+        "features": ["css-grid", "css-variables", "flexbox", "object-fit", "sticky"],
+        "testPriority": "high"
+      },
+      "firefox": {
+        "versions": ["88+", "latest"],
+        "features": ["css-grid", "css-variables", "flexbox", "object-fit", "sticky"],
+        "testPriority": "high"
+      },
+      "safari": {
+        "versions": ["14+", "latest"],
+        "features": ["css-grid", "css-variables", "flexbox", "object-fit", "sticky"],
+        "testPriority": "high",
+        "notes": "Test webkit-specific prefixes and iOS Safari behavior"
+      },
+      "edge": {
+        "versions": ["90+", "latest"],
+        "features": ["css-grid", "css-variables", "flexbox", "object-fit", "sticky"],
+        "testPriority": "high"
+      },
+      "ie11": {
+        "versions": ["11"],
+        "features": ["flexbox-legacy", "css-variables-polyfill", "grid-fallback"],
+        "testPriority": "medium",
+        "notes": "Requires polyfills and fallbacks",
+        "fallbacks": {
+          "css-grid": "flexbox",
+          "css-variables": "hardcoded-values",
+          "object-fit": "positioning-hack",
+          "sticky": "fixed-positioning"
+        }
+      }
+    },
+    "mobile": {
+      "ios-safari": {
+        "versions": ["14+", "latest"],
+        "devices": ["iPhone", "iPad"],
+        "features": ["css-grid", "css-variables", "flexbox", "object-fit", "sticky"],
+        "testPriority": "high",
+        "notes": "Test touch interactions and viewport handling"
+      },
+      "android-chrome": {
+        "versions": ["90+", "latest"],
+        "devices": ["Android Phone", "Android Tablet"],
+        "features": ["css-grid", "css-variables", "flexbox", "object-fit", "sticky"],
+        "testPriority": "high"
+      },
+      "samsung-internet": {
+        "versions": ["13+", "latest"],
+        "features": ["css-grid", "css-variables", "flexbox", "object-fit", "sticky"],
+        "testPriority": "medium"
+      }
+    }
+  },
+  "testScenarios": [
+    {
+      "name": "Layout Rendering",
+      "description": "Test main layout with sidebar and content area",
+      "pages": ["/", "/blog", "/projects"],
+      "checks": [
+        "sidebar-width-300px",
+        "main-content-responsive",
+        "grid-layout-fallback",
+        "flexbox-alignment"
+      ]
+    },
+    {
+      "name": "Typography System",
+      "description": "Test font loading and typography rendering",
+      "pages": ["/", "/blog/sample-post"],
+      "checks": [
+        "jetbrains-mono-loading",
+        "inter-font-loading",
+        "code-block-styling",
+        "heading-hierarchy",
+        "line-height-consistency"
+      ]
+    },
+    {
+      "name": "Color System",
+      "description": "Test color variables and dark mode",
+      "pages": ["/"],
+      "checks": [
+        "css-variables-support",
+        "fallback-colors",
+        "dark-mode-toggle",
+        "contrast-ratios",
+        "syntax-highlighting"
+      ]
+    },
+    {
+      "name": "Developer Components",
+      "description": "Test developer-specific UI components",
+      "pages": ["/"],
+      "checks": [
+        "sidebar-navigation",
+        "tech-stack-badges",
+        "status-indicators",
+        "social-links",
+        "code-blocks"
+      ]
+    },
+    {
+      "name": "Responsive Behavior",
+      "description": "Test responsive design across breakpoints",
+      "viewports": [
+        {"width": 320, "height": 568, "name": "mobile-portrait"},
+        {"width": 768, "height": 1024, "name": "tablet-portrait"},
+        {"width": 1024, "height": 768, "name": "tablet-landscape"},
+        {"width": 1440, "height": 900, "name": "desktop"},
+        {"width": 1920, "height": 1080, "name": "large-desktop"}
+      ],
+      "checks": [
+        "mobile-menu-toggle",
+        "sidebar-collapse",
+        "content-reflow",
+        "touch-targets",
+        "horizontal-scroll"
+      ]
+    },
+    {
+      "name": "Performance Metrics",
+      "description": "Test loading performance and Core Web Vitals",
+      "pages": ["/", "/blog"],
+      "metrics": [
+        {"name": "FCP", "target": "<1.5s"},
+        {"name": "LCP", "target": "<2.5s"},
+        {"name": "CLS", "target": "<0.1"},
+        {"name": "FID", "target": "<100ms"},
+        {"name": "TTI", "target": "<3.5s"}
+      ]
+    },
+    {
+      "name": "Accessibility Testing",
+      "description": "Test accessibility compliance",
+      "pages": ["/", "/blog"],
+      "checks": [
+        "keyboard-navigation",
+        "screen-reader-compatibility",
+        "focus-indicators",
+        "color-contrast",
+        "aria-labels",
+        "skip-links"
+      ]
+    }
+  ],
+  "polyfillTests": [
+    {
+      "name": "CSS Variables Polyfill",
+      "description": "Test CSS custom properties fallback",
+      "browsers": ["ie11"],
+      "checks": [
+        "fallback-colors-applied",
+        "no-css-variables-class-added",
+        "hardcoded-values-working"
+      ]
+    },
+    {
+      "name": "CSS Grid Polyfill",
+      "description": "Test CSS Grid to Flexbox fallback",
+      "browsers": ["ie11"],
+      "checks": [
+        "flexbox-layout-applied",
+        "grid-items-wrapped",
+        "spacing-maintained"
+      ]
+    },
+    {
+      "name": "Object-fit Polyfill",
+      "description": "Test object-fit positioning fallback",
+      "browsers": ["ie11"],
+      "checks": [
+        "image-positioning-correct",
+        "aspect-ratio-maintained",
+        "container-overflow-hidden"
+      ]
+    },
+    {
+      "name": "Sticky Positioning Polyfill",
+      "description": "Test sticky to fixed positioning fallback",
+      "browsers": ["ie11"],
+      "checks": [
+        "fixed-positioning-applied",
+        "scroll-behavior-correct",
+        "z-index-appropriate"
+      ]
+    }
+  ],
+  "automatedTests": {
+    "visualRegression": {
+      "tool": "Percy",
+      "baselineScreenshots": true,
+      "thresholds": {
+        "pixel": 0.1,
+        "threshold": 0.05
+      }
+    },
+    "crossBrowser": {
+      "tool": "BrowserStack",
+      "parallel": 5,
+      "timeout": 300
+    },
+    "performance": {
+      "tool": "Lighthouse CI",
+      "budgets": {
+        "performance": 90,
+        "accessibility": 95,
+        "best-practices": 90,
+        "seo": 90
+      }
+    },
+    "accessibility": {
+      "tool": "axe-core",
+      "level": "WCAG21AA",
+      "tags": ["wcag2a", "wcag2aa", "wcag21aa"]
+    }
+  },
+  "manualTestChecklist": [
+    {
+      "category": "Layout",
+      "items": [
+        "Sidebar displays correctly on desktop",
+        "Mobile menu toggle works",
+        "Content area responsive",
+        "Grid layouts fallback to flexbox",
+        "No horizontal scrollbars"
+      ]
+    },
+    {
+      "category": "Typography",
+      "items": [
+        "JetBrains Mono loads for code",
+        "Inter loads for body text",
+        "Font fallbacks work",
+        "Code syntax highlighting visible",
+        "Text remains readable at all sizes"
+      ]
+    },
+    {
+      "category": "Colors",
+      "items": [
+        "CSS variables work in modern browsers",
+        "Fallback colors work in IE11",
+        "Dark mode toggle functions",
+        "Sufficient color contrast",
+        "Developer theme colors consistent"
+      ]
+    },
+    {
+      "category": "Interactions",
+      "items": [
+        "Hover effects work",
+        "Focus indicators visible",
+        "Keyboard navigation functional",
+        "Touch targets appropriate size",
+        "Animations respect reduced motion"
+      ]
+    },
+    {
+      "category": "Performance",
+      "items": [
+        "Page loads under 3 seconds",
+        "No layout shifts during load",
+        "Images load progressively",
+        "CSS critical path optimized",
+        "JavaScript non-blocking"
+      ]
+    }
+  ],
+  "browserSpecificIssues": {
+    "ie11": {
+      "knownIssues": [
+        "CSS Grid not supported - uses Flexbox fallback",
+        "CSS Variables not supported - uses hardcoded values",
+        "Object-fit not supported - uses positioning hack",
+        "Sticky positioning not supported - uses fixed fallback"
+      ],
+      "workarounds": [
+        "Load legacy-browser-support.css",
+        "Load legacy-polyfills.js",
+        "Add no-css-variables class",
+        "Use vendor prefixes for transforms"
+      ]
+    },
+    "safari": {
+      "knownIssues": [
+        "iOS Safari input zoom on small font sizes",
+        "Webkit-specific vendor prefixes needed",
+        "Flexbox bugs in older versions"
+      ],
+      "workarounds": [
+        "Use 16px minimum font size on inputs",
+        "Add webkit prefixes for transforms",
+        "Use flex-shrink: 0 for flex items"
+      ]
+    },
+    "firefox": {
+      "knownIssues": [
+        "Button focus inner border",
+        "Select dropdown styling differences",
+        "Scrollbar styling limited"
+      ],
+      "workarounds": [
+        "Reset button::-moz-focus-inner",
+        "Use appearance: none for selects",
+        "Use scrollbar-width and scrollbar-color"
+      ]
+    }
+  },
+  "testingTools": {
+    "required": [
+      "BrowserStack (cross-browser testing)",
+      "Percy (visual regression)",
+      "Lighthouse CI (performance)",
+      "axe-core (accessibility)"
+    ],
+    "optional": [
+      "WebPageTest (performance)",
+      "WAVE (accessibility)",
+      "Can I Use (feature support)",
+      "Autoprefixer (vendor prefixes)"
+    ]
+  },
+  "reportingFormat": {
+    "sections": [
+      "Executive Summary",
+      "Browser Compatibility Matrix",
+      "Performance Metrics",
+      "Accessibility Compliance",
+      "Visual Regression Results",
+      "Known Issues and Workarounds",
+      "Recommendations"
+    ],
+    "deliverables": [
+      "HTML test report",
+      "Screenshot comparisons",
+      "Performance audit",
+      "Accessibility report",
+      "Browser support matrix"
+    ]
+  }
+}
