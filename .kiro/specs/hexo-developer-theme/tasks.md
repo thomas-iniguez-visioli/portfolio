@@ -140,7 +140,9 @@
   - Créer les tests d'accessibilité automatisés
   - _Requirements: 1.1, 1.2, 1.3, 4.1_
 
-- [-] 11. Développer les utilitaires et helpers CSS
+- [x] 11. Développer les utilitaires et helpers CSS
+
+
 
 
 
@@ -151,8 +153,10 @@
   - Ajouter les utilitaires d'état (loading, error, success)
   - Créer les classes de debug pour le développement
   - _Requirements: 5.1, 5.2, 5.3, 5.4_
+-
 
-- [ ] 12. Optimiser pour les navigateurs anciens
+- [-] 12. Optimiser pour les navigateurs anciens
+
 
   - Ajouter les polyfills CSS pour les propriétés modernes
   - Implémenter les fallbacks pour CSS Grid et Flexbox

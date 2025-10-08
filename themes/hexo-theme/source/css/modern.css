@@ -23,6 +23,14 @@
 @import url('./performance.css');
 @import url('./accessibility.css');
 
+/* ===== IMPORT UTILITY SYSTEMS ===== */
+@import url('./utilities/colors.css');
+@import url('./utilities/spacing.css');
+@import url('./utilities/responsive.css');
+@import url('./utilities/state.css');
+@import url('./utilities/debug.css');
+@import url('./utilities/responsive-helpers.css');
+
 /* ===== TYPOGRAPHY ===== */
 
 /* Typography is now handled by fonts.css and typography-utilities.css */

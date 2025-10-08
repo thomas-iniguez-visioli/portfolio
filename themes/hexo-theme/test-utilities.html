@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Utilities Test - Developer Theme</title>
+    <link rel="stylesheet" href="source/css/variables.css">
+    <link rel="stylesheet" href="source/css/utilities/colors.css">
+    <link rel="stylesheet" href="source/css/utilities/spacing.css">
+    <link rel="stylesheet" href="source/css/utilities/responsive.css">
+    <link rel="stylesheet" href="source/css/utilities/state.css">
+    <link rel="stylesheet" href="source/css/utilities/debug.css">
+    <link rel="stylesheet" href="source/css/utilities/responsive-helpers.css">
+    <link rel="stylesheet" href="source/css/typography-utilities.css">
+    <style>
+        /* Basic variables for testing */
+        :root {
+            --color-primary: #2563eb;
+            --color-primary-50: #eff6ff;
+            --color-primary-100: #dbeafe;
+            --color-primary-600: #2563eb;
+            --color-primary-700: #1d4ed8;
+            --color-success: #10b981;
+            --color-success-light: #d1fae5;
+            --color-success-dark: #065f46;
+            --color-error: #ef4444;
+            --color-error-light: #fee2e2;
+            --color-error-dark: #991b1b;
+            --color-warning: #f59e0b;
+            --color-warning-light: #fef3c7;
+            --color-warning-dark: #92400e;
+            --color-info: #06b6d4;
+            --color-info-light: #cffafe;
+            --color-info-dark: #164e63;
+            --color-neutral-100: #f1f5f9;
+            --color-neutral-200: #e2e8f0;
+            --color-neutral-300: #cbd5e1;
+            --color-neutral-600: #475569;
+            --color-neutral-700: #334155;
+            --color-neutral-800: #1e293b;
+            --color-neutral-900: #0f172a;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --border-radius-base: 0.375rem;
+            --border-radius-sm: 0.25rem;
+            --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --dev-status-online: #10b981;
+            --dev-status-busy: #f59e0b;
+            --dev-terminal-bg: #1e1e1e;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: var(--space-4);
+            background-color: #ffffff;
+        }
+        
+        .test-section {
+            margin-bottom: var(--space-8);
+            padding: var(--space-6);
+            border: 1px solid var(--color-neutral-200);
+            border-radius: var(--border-radius-base);
+        }
+        
+        .test-item {
+            margin-bottom: var(--space-4);
+            padding: var(--space-3);
+            border: 1px solid var(--color-neutral-300);
+            border-radius: var(--border-radius-sm);
+        }
+        
+        .demo-box {
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            margin: var(--space-2);
+            border-radius: var(--border-radius-sm);
+        }
+    </style>
+</head>
+<body class="debug-breakpoint">
+    <h1>CSS Utilities Test Suite</h1>
+    <p>This page tests all the CSS utilities implemented for the developer theme.</p>
+
+    <!-- Color Utilities Test -->
+    <section class="test-section">
+        <h2>Color Utilities</h2>
+        
+        <div class="test-item">
+            <h3>Background Colors</h3>
+            <div class="demo-box bg-primary"></div>
+            <div class="demo-box bg-success"></div>
+            <div class="demo-box bg-error"></div>
+            <div class="demo-box bg-warning"></div>
+            <div class="demo-box bg-info"></div>
+            <div class="demo-box bg-neutral-800"></div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Text Colors</h3>
+            <p class="text-primary">Primary text color</p>
+            <p class="text-success">Success text color</p>
+            <p class="text-error">Error text color</p>
+            <p class="text-warning">Warning text color</p>
+            <p class="text-info">Info text color</p>
+        </div>
+        
+        <div class="test-item">
+            <h3>Developer Badge Colors</h3>
+            <span class="badge-javascript p-2">JavaScript</span>
+            <span class="badge-typescript p-2">TypeScript</span>
+            <span class="badge-react p-2">React</span>
+            <span class="badge-node p-2">Node.js</span>
+        </div>
+    </section>
+
+    <!-- Spacing Utilities Test -->
+    <section class="test-section">
+        <h2>Spacing Utilities</h2>
+        
+        <div class="test-item">
+            <h3>Margin Utilities</h3>
+            <div class="bg-primary-100 p-4">
+                <div class="bg-primary m-2 p-2">m-2</div>
+                <div class="bg-primary m-4 p-2">m-4</div>
+                <div class="bg-primary mx-6 p-2">mx-6</div>
+                <div class="bg-primary my-3 p-2">my-3</div>
+            </div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Padding Utilities</h3>
+            <div class="bg-success p-2">p-2</div>
+            <div class="bg-success p-4">p-4</div>
+            <div class="bg-success px-6 py-2">px-6 py-2</div>
+        </div>
+    </section>
+
+    <!-- State Utilities Test -->
+    <section class="test-section">
+        <h2>State Utilities</h2>
+        
+        <div class="test-item">
+            <h3>Loading States</h3>
+            <button class="loading p-3 bg-primary text-white">Loading Button</button>
+            <div class="loading-dots">Loading</div>
+            <div class="loading-pulse bg-neutral-200 p-4">Pulsing content</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Message States</h3>
+            <div class="success-message">
+                <span class="success-icon"></span>
+                This is a success message!
+            </div>
+            <div class="error-message mt-2">
+                <span class="error-icon"></span>
+                This is an error message!
+            </div>
+            <div class="warning-message mt-2">
+                <span class="warning-icon"></span>
+                This is a warning message!
+            </div>
+            <div class="info-message mt-2">
+                <span class="info-icon"></span>
+                This is an info message!
+            </div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Developer Status</h3>
+            <div class="dev-online">Online Status</div>
+            <div class="dev-busy">Busy Status</div>
+            <div class="dev-away">Away Status</div>
+            <div class="dev-offline">Offline Status</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Build Status</h3>
+            <span class="build-success">Build Passed</span>
+            <span class="build-failed ml-2">Build Failed</span>
+            <span class="build-pending ml-2">Build Pending</span>
+        </div>
+        
+        <div class="test-item">
+            <h3>Progress Indicators</h3>
+            <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 60%;"></div>
+            </div>
+            <div class="progress-bar progress-bar-animated mt-2">
+                <div class="progress-bar-fill" style="width: 40%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Helpers Test -->
+    <section class="test-section">
+        <h2>Responsive Helper Utilities</h2>
+        
+        <div class="test-item">
+            <h3>Show/Hide by Breakpoint</h3>
+            <div class="mobile-only bg-error text-white p-2">Mobile Only (hidden on sm+)</div>
+            <div class="tablet-only bg-warning text-white p-2">Tablet Only (visible on md only)</div>
+            <div class="desktop-only bg-success text-white p-2">Desktop Only (visible on lg+)</div>
+            <div class="large-desktop-only bg-info text-white p-2">Large Desktop Only (visible on xl+)</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Device-Specific Utilities</h3>
+            <div class="touch-only bg-primary text-white p-2">Touch Devices Only</div>
+            <div class="mouse-only bg-neutral-800 text-white p-2">Mouse/Trackpad Only</div>
+            <div class="hover-capable bg-success text-white p-2">Hover Capable Devices</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Orientation-Based</h3>
+            <div class="portrait-only bg-warning text-white p-2">Portrait Only</div>
+            <div class="landscape-only bg-info text-white p-2">Landscape Only</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Accessibility-Based</h3>
+            <div class="motion-only bg-primary text-white p-2">Motion Enabled</div>
+            <div class="no-motion-only bg-error text-white p-2">Reduced Motion</div>
+            <div class="dark-mode-only bg-neutral-800 text-white p-2">Dark Mode Only</div>
+            <div class="light-mode-only bg-neutral-100 p-2">Light Mode Only</div>
+        </div>
+    </section>
+
+    <!-- Debug Utilities Test -->
+    <section class="test-section debug-mode">
+        <h2>Debug Utilities</h2>
+        <p><strong>Note:</strong> Add <code>debug-mode</code> class to body to enable debug utilities.</p>
+        
+        <div class="test-item">
+            <h3>Layout Debug</h3>
+            <div class="debug-grid p-4">
+                <p>Grid overlay for alignment</p>
+            </div>
+            <div class="debug-flexbox flex gap-4 mt-2">
+                <div class="p-2">Flex item 1</div>
+                <div class="p-2">Flex item 2</div>
+                <div class="p-2">Flex item 3</div>
+            </div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Responsive Debug</h3>
+            <div class="debug-responsive-xs p-2">XS Only</div>
+            <div class="debug-responsive-sm p-2">SM+</div>
+            <div class="debug-responsive-md p-2">MD+</div>
+            <div class="debug-responsive-lg p-2">LG+</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Content Debug</h3>
+            <div class="debug-empty"></div>
+            <div class="debug-long-content" data-length="150">This is a long piece of content that might need attention for readability and layout purposes.</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Performance Debug</h3>
+            <div class="debug-slow p-2">Slow element indicator</div>
+            <div class="debug-large p-2" data-size="2MB">Large element indicator</div>
+        </div>
+    </section>
+
+    <!-- Typography Utilities Test -->
+    <section class="test-section">
+        <h2>Typography Utilities</h2>
+        
+        <div class="test-item">
+            <h3>Font Families</h3>
+            <p class="font-sans">Sans-serif font family</p>
+            <p class="font-mono">Monospace font family</p>
+            <p class="font-serif">Serif font family</p>
+        </div>
+        
+        <div class="test-item">
+            <h3>Font Sizes</h3>
+            <p class="text-xs">Extra small text</p>
+            <p class="text-sm">Small text</p>
+            <p class="text-base">Base text</p>
+            <p class="text-lg">Large text</p>
+            <p class="text-xl">Extra large text</p>
+            <p class="text-2xl">2XL text</p>
+        </div>
+        
+        <div class="test-item">
+            <h3>Font Weights</h3>
+            <p class="font-light">Light weight</p>
+            <p class="font-normal">Normal weight</p>
+            <p class="font-medium">Medium weight</p>
+            <p class="font-semibold">Semibold weight</p>
+            <p class="font-bold">Bold weight</p>
+        </div>
+        
+        <div class="test-item">
+            <h3>Developer Typography</h3>
+            <span class="dev-badge">BADGE</span>
+            <p class="tech-stack">JavaScript, TypeScript, React</p>
+            <p class="dev-comment">This is a developer comment</p>
+            <code class="code-inline">inline code</code>
+            <div class="code-block mt-2">
+function example() {
+    return "Hello, World!";
+}
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Elements Test -->
+    <section class="test-section">
+        <h2>Interactive State Utilities</h2>
+        
+        <div class="test-item">
+            <h3>Hover Effects</h3>
+            <div class="hover-lift bg-primary text-white p-3 inline-block cursor-pointer">Hover Lift</div>
+            <div class="hover-glow bg-success text-white p-3 inline-block cursor-pointer ml-2">Hover Glow</div>
+            <div class="hover-scale bg-warning text-white p-3 inline-block cursor-pointer ml-2">Hover Scale</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Focus States</h3>
+            <button class="focus-ring p-3 bg-primary text-white">Focus Ring</button>
+            <button class="focus-ring-success p-3 bg-success text-white ml-2">Success Focus</button>
+            <button class="focus-ring-error p-3 bg-error text-white ml-2">Error Focus</button>
+        </div>
+        
+        <div class="test-item">
+            <h3>Active/Selected States</h3>
+            <div class="active p-3 inline-block text-white">Active State</div>
+            <div class="selected p-3 inline-block ml-2">Selected State</div>
+            <div class="disabled p-3 inline-block ml-2">Disabled State</div>
+        </div>
+    </section>
+
+    <!-- Responsive Grid Test -->
+    <section class="test-section">
+        <h2>Responsive Display Test</h2>
+        
+        <div class="test-item">
+            <h3>Responsive Grid</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-primary-100 p-4">Item 1</div>
+                <div class="bg-primary-100 p-4">Item 2</div>
+                <div class="bg-primary-100 p-4">Item 3</div>
+                <div class="bg-primary-100 p-4">Item 4</div>
+                <div class="bg-primary-100 p-4">Item 5</div>
+                <div class="bg-primary-100 p-4">Item 6</div>
+            </div>
+        </div>
+        
+        <div class="test-item">
+            <h3>Responsive Flexbox</h3>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="bg-success-light p-4 flex-1">Flex item 1</div>
+                <div class="bg-success-light p-4 flex-1">Flex item 2</div>
+                <div class="bg-success-light p-4 flex-1">Flex item 3</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen Reader Test -->
+    <section class="test-section">
+        <h2>Accessibility Utilities</h2>
+        
+        <div class="test-item">
+            <h3>Screen Reader Content</h3>
+            <button>
+                Click me
+                <span class="sr-only">to perform an action</span>
+            </button>
+            <a href="#" class="sr-only-focusable">Skip to main content</a>
+        </div>
+        
+        <div class="test-item">
+            <h3>High Contrast Support</h3>
+            <p class="text-contrast-high p-2">High contrast text</p>
+            <p class="text-contrast-medium p-2">Medium contrast text</p>
+        </div>
+    </section>
+
+    <script>
+        // Add some interactivity for testing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Test loading states
+            const loadingButton = document.querySelector('.loading');
+            if (loadingButton) {
+                setTimeout(() => {
+                    loadingButton.classList.remove('loading');
+                    loadingButton.textContent = 'Loaded!';
+                    loadingButton.classList.add('bg-success');
+                }, 3000);
+            }
+            
+            // Add debug mode toggle
+            const debugToggle = document.createElement('button');
+            debugToggle.textContent = 'Toggle Debug Mode';
+            debugToggle.style.position = 'fixed';
+            debugToggle.style.top = '10px';
+            debugToggle.style.left = '10px';
+            debugToggle.style.zIndex = '10000';
+            debugToggle.style.padding = '8px 16px';
+            debugToggle.style.backgroundColor = '#2563eb';
+            debugToggle.style.color = 'white';
+            debugToggle.style.border = 'none';
+            debugToggle.style.borderRadius = '4px';
+            debugToggle.style.cursor = 'pointer';
+            
+            debugToggle.addEventListener('click', function() {
+                document.body.classList.toggle('debug-mode');
+            });
+            
+            document.body.appendChild(debugToggle);
+            
+            // Log utility classes for debugging
+            console.log('CSS Utilities Test Page Loaded');
+            console.log('Available utility classes tested:');
+            console.log('- Color utilities (bg-*, text-*, border-*)');
+            console.log('- Spacing utilities (m-*, p-*, mx-*, my-*, px-*, py-*)');
+            console.log('- State utilities (loading, success-message, error-message, etc.)');
+            console.log('- Responsive helpers (mobile-only, tablet-only, desktop-only, etc.)');
+            console.log('- Debug utilities (debug-*, requires debug-mode class)');
+            console.log('- Typography utilities (font-*, text-*, dev-*)');
+        });
+    </script>
+</body>
+</html>
