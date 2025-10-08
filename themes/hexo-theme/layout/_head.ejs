@@ -91,14 +91,14 @@
         };
         </script>
 <!-- Performance optimized font loading system with preload and font-display: swap -->
-<link rel="preload" href="/fonts/inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<%= url_for('/fonts/inter/Inter-Regular.woff2') %>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<%= url_for('/fonts/inter/Inter-SemiBold.woff2') %>" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<%= url_for('/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') %>" as="font" type="font/woff2" crossorigin>
 
 <!-- Critical resource preloading -->
-<link rel="preload" href="/assets/icons.svg" as="image">
-<link rel="preload" href="/assets/avatar.avif" as="image">
-<link rel="preload" href="/js/performance.js" as="script">
+<link rel="preload" href="<%= url_for('/assets/icons.svg') %>" as="image">
+<link rel="preload" href="<%= url_for('/assets/avatar.avif') %>" as="image">
+<link rel="preload" href="<%= url_for('/js/performance.js') %>" as="script">
 
 <!-- Critical CSS inlined for immediate rendering -->
 <%- partial('_critical-css') %>
