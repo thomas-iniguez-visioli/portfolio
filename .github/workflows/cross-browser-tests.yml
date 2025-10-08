@@ -1,0 +1,85 @@
+name: Cross-Browser Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'themes/hexo-theme/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'themes/hexo-theme/**'
+
+jobs:
+  cross-browser-tests:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install main dependencies
+      run: npm ci
+    
+    - name: Build Hexo site
+      run: |
+        npx hexo clean
+        npx hexo generate
+    
+    - name: Install test dependencies
+      run: |
+        cd themes/hexo-theme/tests
+        npm install
+    
+    - name: Install Playwright browsers
+      run: |
+        cd themes/hexo-theme/tests
+        npx playwright install --with-deps
+    
+    - name: Start test server
+      run: |
+        npx hexo server --port 8080 &
+        sleep 10
+      
+    - name: Run visual tests
+      run: |
+        cd themes/hexo-theme/tests
+        npm run test:visual
+      
+    - name: Run performance tests
+      run: |
+        cd themes/hexo-theme/tests
+        npm run test:performance
+      
+    - name: Run accessibility tests
+      run: |
+        cd themes/hexo-theme/tests
+        npm run test:accessibility
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ matrix.node-version }}
+        path: |
+          themes/hexo-theme/tests/test-results/
+          themes/hexo-theme/tests/reports/
+          themes/hexo-theme/tests/backstop_data/html_report/
+        retention-days: 7
+    
+    - name: Upload Playwright report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-report-${{ matrix.node-version }}
+        path: themes/hexo-theme/tests/playwright-report/
+        retention-days: 7

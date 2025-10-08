@@ -166,6 +166,11 @@
 <!-- Accessibility enhancements script -->
 <script type="module" src="<%= url_for('/js/accessibility.js') %>"></script>
 
+<!-- Accessibility testing script (development only) -->
+<% if (process.env.NODE_ENV !== 'production') { %>
+<script type="module" src="<%= url_for('/js/accessibility-tests.js') %>"></script>
+<% } %></script>
+
 <!-- Sidebar and simplified footer styles -->
 <link rel="stylesheet" href="<%= url_for('/css/sidebar.css') %>">
 <link rel="stylesheet" href="<%= url_for('/css/footer-simple.css') %>">

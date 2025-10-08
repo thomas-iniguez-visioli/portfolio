@@ -107,7 +107,9 @@
 
   - Optimiser les web fonts avec font-display et preload
   - _Requirements: 4.1, 4.3, 4.4_
-- [-] 9. Ajouter les améliorations d'accessibilité
+- [x] 9. Ajouter les améliorations d'accessibilité
+
+
 
 
 - [ ] 9. Ajouter les améliorations d'accessibilité
@@ -121,6 +123,10 @@
   - Tester avec les lecteurs d'écran et outils d'accessibilité
 
   - _Requirements: 3.1, 3.2, 3.4_
+- [x] 10. Créer les tests cross-browser automatisés
+
+
+
 
 - [ ] 10. Créer les tests cross-browser automatisés
 
@@ -134,7 +140,9 @@
   - Créer les tests d'accessibilité automatisés
   - _Requirements: 1.1, 1.2, 1.3, 4.1_
 
-- [ ] 11. Développer les utilitaires et helpers CSS
+- [-] 11. Développer les utilitaires et helpers CSS
+
+
 
 
 

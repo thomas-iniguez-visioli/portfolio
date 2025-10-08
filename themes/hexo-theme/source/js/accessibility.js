@@ -20,6 +20,7 @@ class AccessibilityManager {
   }
   
   init() {
+    this.loadAccessibilityPreferences();
     this.setupKeyboardNavigation();
     this.setupFocusManagement();
     this.setupAriaLabels();
@@ -29,6 +30,18 @@ class AccessibilityManager {
     this.setupFormAccessibility();
     this.setupColorContrastToggle();
     this.setupReducedMotionToggle();
+    
+    // Run initial accessibility audit in development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      setTimeout(() => {
+        const audit = this.runAccessibilityAudit();
+        if (audit.issues.length > 0) {
+          console.warn('Problèmes d\'accessibilité détectés:', audit.issues);
+        } else {
+          console.log('✓ Audit d\'accessibilité réussi');
+        }
+      }, 1000);
+    }
   }
   
   setupKeyboardNavigation() {
@@ -54,6 +67,12 @@ class AccessibilityManager {
     
     // Arrow key navigation for menus
     this.setupArrowKeyNavigation();
+    
+    // Keyboard shortcuts for accessibility features
+    this.setupAccessibilityShortcuts();
+    
+    // Enhanced keyboard navigation for complex widgets
+    this.setupAdvancedKeyboardNavigation();
   }
   
   setupArrowKeyNavigation() {
@@ -580,6 +599,137 @@ class AccessibilityManager {
     this.announce(message, priority);
   }
   
+  setupAccessibilityShortcuts() {
+    document.addEventListener('keydown', (e) => {
+      // Alt + H: Go to main content
+      if (e.altKey && e.key === 'h') {
+        e.preventDefault();
+        const mainContent = document.getElementById('main-content') || document.querySelector('main');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+          this.announce('Navigation vers le contenu principal');
+        }
+      }
+      
+      // Alt + N: Go to navigation
+      if (e.altKey && e.key === 'n') {
+        e.preventDefault();
+        const nav = document.querySelector('nav[role="navigation"], .nav-menu');
+        if (nav) {
+          const firstLink = nav.querySelector('a, button');
+          if (firstLink) {
+            firstLink.focus();
+            this.announce('Navigation vers le menu principal');
+          }
+        }
+      }
+      
+      // Alt + S: Go to search
+      if (e.altKey && e.key === 's') {
+        e.preventDefault();
+        const search = document.querySelector('input[type="search"], .search-input');
+        if (search) {
+          search.focus();
+          this.announce('Navigation vers la recherche');
+        }
+      }
+      
+      // Alt + C: Toggle high contrast
+      if (e.altKey && e.key === 'c') {
+        e.preventDefault();
+        this.toggleHighContrast();
+      }
+      
+      // Alt + M: Toggle reduced motion
+      if (e.altKey && e.key === 'm') {
+        e.preventDefault();
+        this.toggleReducedMotion();
+      }
+    });
+  }
+  
+  setupAdvancedKeyboardNavigation() {
+    // Tab panels navigation
+    const tabLists = document.querySelectorAll('[role="tablist"]');
+    tabLists.forEach(tabList => {
+      const tabs = tabList.querySelectorAll('[role="tab"]');
+      
+      tabList.addEventListener('keydown', (e) => {
+        const currentIndex = Array.from(tabs).indexOf(e.target);
+        
+        switch (e.key) {
+          case 'ArrowRight':
+          case 'ArrowDown':
+            e.preventDefault();
+            const nextIndex = (currentIndex + 1) % tabs.length;
+            tabs[nextIndex].focus();
+            tabs[nextIndex].click();
+            break;
+            
+          case 'ArrowLeft':
+          case 'ArrowUp':
+            e.preventDefault();
+            const prevIndex = currentIndex === 0 ? tabs.length - 1 : currentIndex - 1;
+            tabs[prevIndex].focus();
+            tabs[prevIndex].click();
+            break;
+            
+          case 'Home':
+            e.preventDefault();
+            tabs[0].focus();
+            tabs[0].click();
+            break;
+            
+          case 'End':
+            e.preventDefault();
+            tabs[tabs.length - 1].focus();
+            tabs[tabs.length - 1].click();
+            break;
+        }
+      });
+    });
+    
+    // Accordion navigation
+    const accordions = document.querySelectorAll('.accordion, [data-accordion]');
+    accordions.forEach(accordion => {
+      const headers = accordion.querySelectorAll('.accordion-header, [data-accordion-header]');
+      
+      headers.forEach(header => {
+        header.addEventListener('keydown', (e) => {
+          switch (e.key) {
+            case 'Enter':
+            case ' ':
+              e.preventDefault();
+              header.click();
+              break;
+          }
+        });
+      });
+    });
+  }
+  
+  toggleHighContrast() {
+    document.documentElement.classList.toggle('high-contrast');
+    const isHighContrast = document.documentElement.classList.contains('high-contrast');
+    
+    // Store preference
+    localStorage.setItem('high-contrast', isHighContrast);
+    
+    this.announce(isHighContrast ? 'Mode contraste élevé activé' : 'Mode contraste normal activé');
+  }
+  
+  toggleReducedMotion() {
+    document.documentElement.classList.toggle('reduce-motion');
+    const isReduced = document.documentElement.classList.contains('reduce-motion');
+    
+    // Store preference
+    localStorage.setItem('reduce-motion', isReduced);
+    
+    this.announce(isReduced ? 'Animations réduites' : 'Animations normales activées');
+  }
+  
+  // Enhanced color contrast checker
   checkColorContrast(foreground, background) {
     // Simple color contrast checker
     const getLuminance = (color) => {
@@ -601,8 +751,81 @@ class AccessibilityManager {
     return {
       ratio: ratio,
       AA: ratio >= 4.5,
-      AAA: ratio >= 7
+      AAA: ratio >= 7,
+      AALarge: ratio >= 3,
+      AAALarge: ratio >= 4.5
     };
+  }
+  
+  // Automatic accessibility testing
+  runAccessibilityAudit() {
+    const issues = [];
+    
+    // Check for missing alt text
+    const images = document.querySelectorAll('img:not([alt])');
+    if (images.length > 0) {
+      issues.push(`${images.length} image(s) sans attribut alt`);
+    }
+    
+    // Check for missing form labels
+    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+    const unlabeledInputs = Array.from(inputs).filter(input => {
+      return !document.querySelector(`label[for="${input.id}"]`) && !input.closest('label');
+    });
+    if (unlabeledInputs.length > 0) {
+      issues.push(`${unlabeledInputs.length} champ(s) de formulaire sans label`);
+    }
+    
+    // Check for missing headings hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let previousLevel = 0;
+    let hierarchyIssues = 0;
+    
+    headings.forEach(heading => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > previousLevel + 1) {
+        hierarchyIssues++;
+      }
+      previousLevel = level;
+    });
+    
+    if (hierarchyIssues > 0) {
+      issues.push(`${hierarchyIssues} problème(s) de hiérarchie des titres`);
+    }
+    
+    // Check for missing landmarks
+    const landmarks = document.querySelectorAll('[role="banner"], [role="main"], [role="navigation"], [role="contentinfo"], header, main, nav, footer');
+    if (landmarks.length === 0) {
+      issues.push('Aucun landmark ARIA détecté');
+    }
+    
+    return {
+      issues: issues,
+      score: Math.max(0, 100 - (issues.length * 10)),
+      passed: issues.length === 0
+    };
+  }
+  
+  // Load user preferences
+  loadAccessibilityPreferences() {
+    // Load high contrast preference
+    if (localStorage.getItem('high-contrast') === 'true') {
+      document.documentElement.classList.add('high-contrast');
+    }
+    
+    // Load reduced motion preference
+    if (localStorage.getItem('reduce-motion') === 'true') {
+      document.documentElement.classList.add('reduce-motion');
+    }
+    
+    // Respect system preferences
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduce-motion');
+    }
+    
+    if (window.matchMedia('(prefers-contrast: high)').matches) {
+      document.documentElement.classList.add('high-contrast');
+    }
   }
 }
 
