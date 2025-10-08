@@ -164,7 +164,7 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
   
-  /* Z-Index Scale */
+  /* Z-Index Scale - Fixed and Consistent */
   --z-index-hide: -1;
   --z-index-auto: auto;
   --z-index-base: 0;
