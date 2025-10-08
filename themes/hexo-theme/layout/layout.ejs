@@ -26,18 +26,20 @@
       data-layout="<%= page.layout %>"
       data-responsive="true">
   <!-- Skip link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="dev-skip-link skip-link" tabindex="1">Skip to main content</a>
   
   <!-- Enhanced semantic HTML5 structure with responsive CSS Grid -->
-  <div class="page-grid">
+  <div class="dev-page-grid page-grid responsive-grid">
     <%- partial('header') %>
     
-    <main class="page-main" role="main">
-      <div class="layout-with-sidebar">
+    <main class="dev-page-main page-main" role="main" id="main-content">
+      <div class="dev-layout-container layout-with-sidebar">
         <%- partial('sidebar') %>
-        <div id="main-content" class="main-content">
-          <div class="container <%= page.layout === 'post' ? '' : 'wide' %>">
-            <%- body %>
+        <div class="dev-main-content main-content">
+          <div class="dev-container container <%= page.layout === 'post' ? 'dev-container--post' : 'dev-container--wide wide' %>">
+            <div class="dev-content-wrapper">
+              <%- body %>
+            </div>
           </div>
         </div>
       </div>
@@ -46,9 +48,10 @@
     <%- partial('footer') %>
   </div>
   
-  <!-- Modern script loading -->
+  <!-- Modern script loading with developer enhancements -->
   <script src="<%= url_for(`/assets/js/main.js?v=${process.env.npm_package_version}`)%>" type="module"></script>
   <script src="<%= url_for('/js/dev-sidebar.js') %>" defer></script>
+  <script src="<%= url_for('/js/dev-theme.js') %>" type="module"></script>
   <script>tarteaucitron.user.tawktoWidgetId = '1iu11r9a9';</script>
 </body>
 </html>

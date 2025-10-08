@@ -1,34 +1,49 @@
 <!-- Mobile Menu Toggle -->
-<button class="dev-sidebar-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="dev-sidebar">
-  <span class="dev-sidebar-toggle-icon">
-    <span></span>
-    <span></span>
-    <span></span>
+<button class="dev-sidebar-toggle dev-mobile-toggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="dev-sidebar"
+        data-toggle="sidebar">
+  <span class="dev-sidebar-toggle-icon dev-hamburger-icon">
+    <span class="dev-hamburger-line"></span>
+    <span class="dev-hamburger-line"></span>
+    <span class="dev-hamburger-line"></span>
   </span>
+  <span class="dev-toggle-label visually-hidden">Menu</span>
 </button>
 
-<aside id="dev-sidebar" class="dev-sidebar" role="complementary" aria-label="Developer sidebar">
-  <div class="dev-sidebar-content">
+<aside id="dev-sidebar" 
+       class="dev-sidebar developer-sidebar" 
+       role="complementary" 
+       aria-label="Developer sidebar"
+       data-sidebar="developer"
+       data-responsive="true">
+  <div class="dev-sidebar-content developer-sidebar-content">
     <!-- Developer Profile Section -->
-    <div class="dev-sidebar-section dev-profile">
-      <div class="dev-profile-header">
-        <div class="dev-profile-avatar">
-          <div class="dev-profile-status" aria-label="Status: Online"></div>
-          <span class="dev-profile-initial"><%= config.title.charAt(0) %></span>
+    <div class="dev-sidebar-section dev-profile developer-profile" data-section="profile">
+      <div class="dev-profile-header developer-profile-header">
+        <div class="dev-profile-avatar developer-avatar" data-status="online">
+          <div class="dev-profile-status dev-status-indicator" 
+               aria-label="Status: Online"
+               data-status="online"></div>
+          <span class="dev-profile-initial developer-initial"><%= config.title.charAt(0) %></span>
         </div>
-        <div class="dev-profile-info">
-          <h2 class="dev-profile-name">
-            <a href="<%= url_for('/') %>" class="dev-profile-link" aria-label="<%= config.title %> - Home">
+        <div class="dev-profile-info developer-info">
+          <h2 class="dev-profile-name developer-name">
+            <a href="<%= url_for('/') %>" 
+               class="dev-profile-link developer-link" 
+               aria-label="<%= config.title %> - Home"
+               data-nav="home">
               <%= config.title %>
             </a>
           </h2>
-          <p class="dev-profile-title">Full-Stack Developer</p>
-          <div class="dev-profile-location">
-            <svg class="dev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <p class="dev-profile-title developer-title">Full-Stack Developer</p>
+          <div class="dev-profile-location developer-location">
+            <svg class="dev-icon location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>Remote</span>
+            <span class="location-text">Remote</span>
           </div>
         </div>
       </div>
@@ -38,23 +53,47 @@
       </p>
 
       <!-- Tech Stack Section -->
-      <div class="dev-tech-stack">
-        <h3 class="dev-section-title">
-          <svg class="dev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <div class="dev-tech-stack developer-tech-stack" data-section="tech-stack">
+        <h3 class="dev-section-title developer-section-title">
+          <svg class="dev-icon tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="16 18 22 12 16 6"></polyline>
             <polyline points="8 6 2 12 8 18"></polyline>
           </svg>
-          Tech Stack
+          <span class="section-title-text">Tech Stack</span>
         </h3>
-        <div class="dev-tech-badges">
-          <span class="dev-tech-badge dev-tech-javascript" data-tech="JavaScript">JS</span>
-          <span class="dev-tech-badge dev-tech-typescript" data-tech="TypeScript">TS</span>
-          <span class="dev-tech-badge dev-tech-react" data-tech="React">React</span>
-          <span class="dev-tech-badge dev-tech-node" data-tech="Node.js">Node</span>
-          <span class="dev-tech-badge dev-tech-python" data-tech="Python">Python</span>
-          <span class="dev-tech-badge dev-tech-git" data-tech="Git">Git</span>
-          <span class="dev-tech-badge dev-tech-docker" data-tech="Docker">Docker</span>
-          <span class="dev-tech-badge dev-tech-vscode" data-tech="VS Code">VSCode</span>
+        <div class="dev-tech-badges developer-tech-badges" role="list" aria-label="Technologies">
+          <span class="dev-tech-badge dev-tech-javascript tech-badge" 
+                data-tech="JavaScript" 
+                role="listitem" 
+                title="JavaScript">JS</span>
+          <span class="dev-tech-badge dev-tech-typescript tech-badge" 
+                data-tech="TypeScript" 
+                role="listitem" 
+                title="TypeScript">TS</span>
+          <span class="dev-tech-badge dev-tech-react tech-badge" 
+                data-tech="React" 
+                role="listitem" 
+                title="React">React</span>
+          <span class="dev-tech-badge dev-tech-node tech-badge" 
+                data-tech="Node.js" 
+                role="listitem" 
+                title="Node.js">Node</span>
+          <span class="dev-tech-badge dev-tech-python tech-badge" 
+                data-tech="Python" 
+                role="listitem" 
+                title="Python">Python</span>
+          <span class="dev-tech-badge dev-tech-git tech-badge" 
+                data-tech="Git" 
+                role="listitem" 
+                title="Git">Git</span>
+          <span class="dev-tech-badge dev-tech-docker tech-badge" 
+                data-tech="Docker" 
+                role="listitem" 
+                title="Docker">Docker</span>
+          <span class="dev-tech-badge dev-tech-vscode tech-badge" 
+                data-tech="VS Code" 
+                role="listitem" 
+                title="VS Code">VSCode</span>
         </div>
       </div>
 
@@ -95,24 +134,27 @@
     </div>
 
     <!-- Developer Navigation -->
-    <div class="dev-sidebar-section dev-navigation">
-      <h3 class="dev-section-title">
-        <svg class="dev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="dev-sidebar-section dev-navigation developer-navigation" data-section="navigation">
+      <h3 class="dev-section-title developer-section-title">
+        <svg class="dev-icon nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9,22 9,12 15,12 15,22"></polyline>
         </svg>
-        Navigation
+        <span class="section-title-text">Navigation</span>
       </h3>
-      <nav aria-label="Main navigation">
-        <ul class="dev-nav-list">
-          <li class="dev-nav-item">
-            <a href="<%= url_for('/') %>" class="dev-nav-link" data-nav="home">
-              <svg class="dev-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <nav class="dev-main-nav developer-main-nav" aria-label="Main navigation">
+        <ul class="dev-nav-list developer-nav-list" role="list">
+          <li class="dev-nav-item developer-nav-item" role="listitem">
+            <a href="<%= url_for('/') %>" 
+               class="dev-nav-link developer-nav-link" 
+               data-nav="home"
+               aria-current="<%= is_home() ? 'page' : 'false' %>">
+              <svg class="dev-nav-icon nav-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 <polyline points="9,22 9,12 15,12 15,22"></polyline>
               </svg>
-              <span class="dev-nav-text">Home</span>
-              <kbd class="dev-nav-shortcut">⌘H</kbd>
+              <span class="dev-nav-text nav-text">Home</span>
+              <kbd class="dev-nav-shortcut nav-shortcut" aria-label="Keyboard shortcut">⌘H</kbd>
             </a>
           </li>
           <li class="dev-nav-item">
@@ -190,15 +232,15 @@
     </div>
 
     <!-- Newsletter Section -->
-    <div class="sidebar-section sidebar-newsletter">
-      <h3 class="sidebar-section-title">
-        <svg class="sidebar-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="dev-sidebar-section sidebar-section sidebar-newsletter developer-newsletter" data-section="newsletter">
+      <h3 class="dev-section-title sidebar-section-title developer-section-title">
+        <svg class="dev-icon sidebar-section-icon newsletter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
           <polyline points="22,6 12,13 2,6"></polyline>
         </svg>
-        Newsletter
+        <span class="section-title-text">Newsletter</span>
       </h3>
-      <p class="sidebar-description">
+      <p class="sidebar-description newsletter-description">
         Restez informé des derniers articles et actualités. Recevez les nouveautés directement dans votre boîte mail.
       </p>
       

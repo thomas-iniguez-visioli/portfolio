@@ -42,13 +42,14 @@ const CRITICAL_SELECTORS = [
 
 // CSS files to extract critical styles from
 const CSS_FILES = [
-  'source/css/foundation/reset.css',
-  'source/css/foundation/variables.css',
-  'source/css/foundation/typography.css',
-  'source/css/layout/grid.css',
-  'source/css/layout/header.css',
-  'source/css/components/sidebar.css',
-  'source/css/critical-performance.css'
+  'source/styles/foundation.css',
+  'source/styles/variables.css',
+  'source/styles/typography.css',
+  'source/styles/grid-system.css',
+  'source/styles/header.css',
+  'source/styles/sidebar.css',
+  'source/styles/critical-performance.css',
+  'source/styles/reset.css'
 ];
 
 /**
