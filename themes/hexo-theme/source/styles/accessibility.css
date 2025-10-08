@@ -6,32 +6,18 @@
 
 /* ===== FOCUS MANAGEMENT ===== */
 
-/* Enhanced focus indicators - WCAG 2.1 AA compliant */
+/* Enhanced focus indicators */
 
 .focus-visible {
-  outline: 3px solid var(--color-primary, #2563eb);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-  border-radius: var(--border-radius-sm, 4px);
-  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.2);
+  border-radius: var(--border-radius-sm);
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-primary, #2563eb);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-  border-radius: var(--border-radius-sm, 4px);
-  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.2);
-}
-
-/* Enhanced focus for interactive elements */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-[tabindex]:focus-visible {
-  outline: 3px solid var(--color-primary, #2563eb);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.2);
+  border-radius: var(--border-radius-sm);
 }
 
 /* Remove default focus outline when not using keyboard */
@@ -72,49 +58,24 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
-/* Skip links - Enhanced for better accessibility */
+/* Skip links */
 
 .skip-link {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--color-primary, #2563eb);
-  color: var(--color-text-inverse, #ffffff);
-  padding: var(--space-2, 8px) var(--space-4, 16px);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-2) var(--space-4);
   text-decoration: none;
-  border-radius: var(--border-radius-base, 6px);
-  z-index: var(--z-index-skiplink, 9999);
-  transition: var(--transition-all, all 0.2s ease);
-  font-weight: var(--font-weight-medium, 500);
-  font-size: var(--font-size-sm, 14px);
-  border: 2px solid transparent;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
+  border-radius: var(--border-radius-base);
+  z-index: var(--z-index-skiplink);
+  transition: var(--transition-all);
+  font-weight: var(--font-weight-medium);
 }
 
 .skip-link:focus {
   top: 6px;
-  outline: 3px solid var(--color-background, #ffffff);
-  outline-offset: 2px;
-}
-
-.skip-link:hover {
-  background: var(--color-primary-dark, #1d4ed8);
-  transform: translateY(1px);
-}
-
-/* Multiple skip links container */
-.skip-links {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: var(--z-index-skiplink, 9999);
-}
-
-.skip-links .skip-link + .skip-link {
-  left: calc(6px + 150px); /* Offset for multiple skip links */
 }
 
 /* ===== SCREEN READER SUPPORT ===== */
@@ -664,165 +625,6 @@ th[aria-sort="none"]::after {
   border-top-color: var(--color-neutral-900);
 }
 
-/* ===== ADDITIONAL ACCESSIBILITY UTILITIES ===== */
-
-/* Focus management for dynamic content */
-.focus-trap-active {
-  position: relative;
-}
-
-.focus-trap-active::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: var(--z-index-modal, 1000);
-  pointer-events: none;
-}
-
-/* Accessible hide/show utilities */
-.a11y-hidden {
-  display: none !important;
-}
-
-.a11y-visible {
-  display: block !important;
-}
-
-/* Text scaling support */
-@media (min-resolution: 192dpi) {
-  body {
-    font-size: calc(var(--font-size-base, 16px) * 1.1);
-  }
-}
-
-/* Support for 200% zoom */
-@media (max-width: 640px) {
-  .responsive-text {
-    font-size: calc(var(--font-size-base, 16px) * 1.2);
-    line-height: 1.5;
-  }
-  
-  button,
-  .btn,
-  input,
-  select,
-  textarea {
-    min-height: 48px;
-    font-size: calc(var(--font-size-base, 16px) * 1.1);
-  }
-}
-
-/* Windows High Contrast Mode improvements */
-@media (forced-colors: active) {
-  .skip-link {
-    background-color: ButtonFace;
-    color: ButtonText;
-    border: 2px solid ButtonText;
-  }
-  
-  .skip-link:focus {
-    background-color: Highlight;
-    color: HighlightText;
-    outline: 2px solid HighlightText;
-  }
-  
-  .focus-visible,
-  :focus-visible {
-    outline: 2px solid Highlight;
-    box-shadow: none;
-  }
-  
-  .sr-only:focus {
-    background-color: Highlight;
-    color: HighlightText;
-    border: 2px solid HighlightText;
-  }
-}
-
-/* Improved error states for better visibility */
-.error,
-[aria-invalid="true"] {
-  border-color: var(--color-error, #ef4444) !important;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
-  background-color: rgba(239, 68, 68, 0.05);
-}
-
-.error:focus,
-[aria-invalid="true"]:focus {
-  outline: 3px solid var(--color-error, #ef4444);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.2) !important;
-}
-
-/* Enhanced status messages */
-.status-message {
-  border-left: 4px solid;
-  position: relative;
-}
-
-.status-message::before {
-  content: '';
-  position: absolute;
-  left: -2px;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: currentColor;
-}
-
-.status-message.success::before {
-  background: var(--color-success, #10b981);
-}
-
-.status-message.error::before {
-  background: var(--color-error, #ef4444);
-}
-
-.status-message.warning::before {
-  background: var(--color-warning, #f59e0b);
-}
-
-.status-message.info::before {
-  background: var(--color-info, #06b6d4);
-}
-
-/* Accessible loading states */
-.loading {
-  position: relative;
-}
-
-.loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid var(--color-primary, #2563eb);
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Respect reduced motion for loading animation */
-@media (prefers-reduced-motion: reduce) {
-  .loading::after {
-    animation: none;
-    border-top-color: var(--color-primary, #2563eb);
-  }
-}
-
 /* ===== PRINT ACCESSIBILITY ===== */
 
 @media print {
@@ -844,21 +646,8 @@ th[aria-sort="none"]::after {
   .btn,
   .nav-toggle,
   .modal,
-  .tooltip,
-  .skip-link {
+  .tooltip {
     display: none !important;
-  }
-  
-  /* Show skip link content as regular text */
-  .skip-link {
-    position: static !important;
-    display: block !important;
-    background: none !important;
-    color: #000000 !important;
-    padding: 0 !important;
-    margin: 1em 0 !important;
-    border: 1px solid #000000 !important;
-    font-weight: bold !important;
   }
   
   /* Optimize headings for print */
@@ -872,12 +661,5 @@ th[aria-sort="none"]::after {
   .article-content > *,
   blockquote {
     page-break-inside: avoid;
-  }
-  
-  /* Print-friendly error messages */
-  .error-message {
-    border: 1px solid #000000 !important;
-    background: #f0f0f0 !important;
-    padding: 0.5em !important;
   }
 }

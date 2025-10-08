@@ -1,0 +1,19 @@
+.container {
+  margin: calc(var(--main-font-gap) * 2) auto;
+  max-width: 46rem;
+}
+.container.with-aside {
+  max-width: calc(46rem + 12rem);
+}
+@media screen and (min-width: 1280px) {
+  .side-by-side {
+    display: flex;
+    grid-gap: 4rem;
+    gap: 4rem;
+    justify-content: center;
+  }
+
+  .side-by-side > * {
+    flex: 0 0 33%;
+  }
+}

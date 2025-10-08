@@ -1,0 +1,164 @@
+body {
+  font-family: var(--type-body);
+  font-size: 100%;
+  line-height: var(--main-font-lineHeight); /* ~24px */
+}
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 110%;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+  color: var(--light-accent);
+  font-family: var(--type-headlines);
+  font-style: normal;
+  font-weight: bold;
+  line-height: var(--main-font-gap);
+  margin: 0 0 var(--main-font-gap) 0;
+  padding: 0;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
+}
+
+  @media (min-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    -webkit-hyphens: unset;
+            hyphens: unset;
+  }
+}
+
+  h1, .h1 {
+  font-size: 2rem;
+  line-height: calc(var(--main-font-gap) * 2);
+}
+
+  h2, .h2 {
+  font-size: 1.75rem;
+  line-height: calc(var(--main-font-gap) * 2);
+}
+
+  h3, .h3 {
+  font-size: 1.5rem;
+  line-height: calc(var(--main-font-gap) * 1);
+}
+
+  h4, .h4 {
+  font-size: 1.3rem;
+  line-height: calc(var(--main-font-gap) * 1);
+}
+
+  h5, .h5 {
+  font-size: 1.1667rem;
+  line-height: calc(var(--main-font-gap) * 1);
+}
+
+  h6, .h6 {
+  font-size: 1rem;
+  line-height: calc(var(--main-font-gap) * 1);
+}
+
+  @media (min-width: 768px) {
+    h1, .h1 {
+      font-size: 3.42308rem;
+      line-height: calc(var(--main-font-gap) * 3);
+    }
+    h2, .h2 {
+      font-size: 2.61538rem;
+      line-height: calc(var(--main-font-gap) * 3);
+    }
+    h3, .h3 {
+      font-size: 2rem;
+      line-height: calc(var(--main-font-gap) * 2);
+    }
+    h4, .h4 {
+      font-size: 1.61538rem;
+      line-height: calc(var(--main-font-gap) * 2);
+    }
+    h5, .h5 {
+      font-size: 1.30769rem;
+      line-height: calc(var(--main-font-gap) * 2);
+    }
+    h6, .h6 {
+      font-size: 1rem;
+      line-height: calc(var(--main-font-gap) * 1);
+    }
+  }
+
+  p, .p {
+  font-weight: normal;
+  padding: 0;
+  line-height: var(--main-font-gap);
+  margin: 0 0 var(--main-font-gap);
+}
+
+  ul, ol {
+  margin: 0 0 var(--main-font-gap) 0;
+}
+
+  address {
+  font-style: normal;
+}
+
+  blockquote {
+  color: var(--commented);
+  margin: var(--main-font-gap) 0;
+	position: relative;
+}
+
+  blockquote::before,
+  blockquote p:last-child:after {
+    color: var(--light-accent);
+    font-size: 3rem;
+		line-height: 1;
+    position: absolute;
+    z-index: 0;
+  }
+
+  blockquote::before {
+		content: "“";
+		left: -0.6em;
+		top: -0.1em;
+	}
+
+  blockquote p:last-child:after {
+		content: "”";
+	}
+
+  blockquote p:last-child {
+	  margin:0;
+	}
+
+  blockquote h3 {
+    font-size: inherit !important;
+    padding-bottom: .5em !important;
+  }
+
+  blockquote cite {
+    color: var(--dark-accent);
+    font-style: normal;
+  }
+
+  blockquote cite:before {
+    content: "—";
+    margin-right: .5em;
+  }
+
+  .leading {
+  font-size: 1.30rem;
+  line-height: calc(var(--main-font-gap) * 2)
+}
+
+  @media (min-width: 738px) {
+
+  .leading {
+    font-size: 1.80rem;
+}
+
+    .leading p {
+      line-height: inherit;
+      max-width: 80%;
+    }
+  }

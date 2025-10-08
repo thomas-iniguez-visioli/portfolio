@@ -167,13 +167,16 @@
   - _Requirements: 1.3, 1.4, 5.3_
 
 
-- [ ] 13. Finaliser l'intégration avec Hexo
+- [x] 13. Finaliser l'intégration avec Hexo
+
+
 
   - Mettre à jour les templates EJS avec les nouvelles classes CSS
   - Intégrer le système de build CSS avec PostCSS et Autoprefixer
   - Configurer la génération des CSS critiques et non-critiques
   - Tester l'intégration complète avec le processus de build Hexo
   - _Requirements: 5.1, 5.2, 4.1, 4.3_
+
 
 - [ ] 14. Créer la documentation et guide de style
 
