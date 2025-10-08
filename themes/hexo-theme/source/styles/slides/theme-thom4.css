@@ -444,7 +444,6 @@ template {
 
 .code .reveal pre code {
         background: transparent;
-        color: #ECEEF1;
         color: var(--code-background);
       }
 
@@ -453,7 +452,6 @@ template {
     }
 
 .reveal {
-  font-family: Inconsolata, sans-serif;
   font-family: var(--type-headlines);
   font-size: 36px;
   font-weight: 300;
@@ -480,14 +478,12 @@ template {
     }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
-    font-family: Inconsolata, sans-serif;
     font-family: var(--type-headlines);
     font-weight: 300;
     line-height: 1.25;
   }
 
 .reveal h1 small, .reveal h2 small, .reveal h3 small, .reveal h4 small, .reveal h5 small {
-      color: #B15A17;
       color: var(--light-accent);
     }
 
@@ -502,7 +498,6 @@ template {
   }
 
 .reveal blockquote p {
-      border-left: 7px solid #B15A17;
       border-left: 7px solid var(--light-accent);
       padding-left: 1em;
     }
@@ -512,14 +507,12 @@ template {
   }
 
 .reveal table thead th {
-      border-bottom: 1px double #733D15;
       border-bottom: 1px double var(--dark-accent);
       font-weight: normal;
       padding: .7em .5em;
     }
 
 .reveal table tbody td, .reveal table tbody th {
-      border-bottom: 1px solid #733D15;
       border-bottom: 1px solid var(--dark-accent);
       padding: .5em;
     }
@@ -531,14 +524,11 @@ template {
   }
 
 .reveal pre, .reveal code {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     font-family: var(--type-code);
   }
 
 .reveal code {
-    background-color: #ECEEF1;
     background-color: var(--code-background);
-    color: #424C5A;
     color: var(--code-foreground);
   }
 
@@ -554,19 +544,16 @@ template {
     }
 
 .reveal a {
-    color: #0000FC;
     color: var(--link-foreground);
     text-decoration: underline;
   }
 
 .reveal em {
-    color: #FE821F;
     color: var(--brand-color);
     font-style: normal;
   }
 
 .reveal strong {
-    background: #733D15;
     background: var(--dark-accent);
     border-radius: 3px;
     color: #fff;
@@ -608,7 +595,6 @@ template {
     }
 
 .background-dark strong, .background-contrasted strong {
-      background: rgb(255, 230, 210);
       background: color(var(--brand-color) tint(80%));
       color: #fff;
       text-shadow: 1px 1px 1px rgb(128, 128, 128);
@@ -624,7 +610,7 @@ template {
   }
 
 .reveal .slides .pdf-page {
-  page-break-after: unset !important;
+  page-break-after: unset !important
 }
 
 .reveal .slides .pdf-page:not(:first-of-type) {
@@ -636,14 +622,12 @@ template {
   }
 
 .contrasted body, .attention body {
-    background-color: #733D15;
     background-color: var(--dark-accent);
     color: #fff;
   }
 
 .contrasted strong, .attention strong {
     background: #fff;
-    color: #733D15;
     color: var(--dark-accent);
   }
 
