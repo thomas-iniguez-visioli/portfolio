@@ -1,5 +1,5 @@
-@import '../../node_modules/reveal.js/css/reveal.css';
-@import './includes/highlight.css';
+/*@import '../../node_modules/reveal.js/css/reveal.css';
+*/@import './includes/highlight.css';
 
 body {
   background: #fafafa;
