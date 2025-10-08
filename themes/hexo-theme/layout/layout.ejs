@@ -52,6 +52,10 @@
   <script src="<%= url_for(`/assets/js/main.js?v=${process.env.npm_package_version}`)%>" type="module"></script>
   <script src="<%= url_for('/js/dev-sidebar.js') %>" defer></script>
   <script src="<%= url_for('/js/dev-theme.js') %>" type="module"></script>
+  
+  <!-- CORRECTION D'URGENCE - Script de correction des problèmes de superposition -->
+  <script src="<%= url_for('/js/layering-emergency-fix.js') %>"></script>
+  
   <script>tarteaucitron.user.tawktoWidgetId = '1iu11r9a9';</script>
 </body>
 </html>

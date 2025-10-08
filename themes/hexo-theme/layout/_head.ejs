@@ -193,7 +193,10 @@
 <!-- Accessibility testing script (development only) -->
 <% if (process.env.NODE_ENV !== 'production') { %>
 <script type="module" src="<%= url_for('/js/accessibility-tests.js') %>"></script>
-<% } %></script>
+<% } %>
+
+<!-- CORRECTION D'URGENCE - Problèmes de superposition CSS -->
+<link rel="stylesheet" href="<%= url_for('/css/layering-emergency-fix.css') %>">
 
 <!-- Sidebar and simplified footer styles -->
 <link rel="stylesheet" href="<%= url_for('/css/sidebar.css') %>">
