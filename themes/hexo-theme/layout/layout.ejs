@@ -35,14 +35,15 @@
     <main class="dev-page-main page-main" role="main" id="main-content">
       <div class="dev-layout-container layout-with-sidebar">
         <%- partial('sidebar') %>
-        <div class="dev-main-content main-content">
+       
+      </div>
+       <div class="dev-main-content main-content">
           <div class="dev-container container <%= page.layout === 'post' ? 'dev-container--post' : 'dev-container--wide wide' %>">
             <div class="dev-content-wrapper">
               <%- body %>
             </div>
           </div>
         </div>
-      </div>
     </main>
     
     <%- partial('footer') %>
