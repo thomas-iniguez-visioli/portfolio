@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Responsive Grid Test - All Screen Sizes</title>
+  <link rel="stylesheet" href="source/css/foundation/variables.css">
+  <link rel="stylesheet" href="source/css/foundation/reset.css">
+  <link rel="stylesheet" href="source/css/layout/grid.css">
+  <link rel="stylesheet" href="source/css/utilities/enhanced-spacing.css">
+  <link rel="stylesheet" href="source/css/utilities/enhanced-responsive.css">
+  <link rel="stylesheet" href="source/css/grid-system.css">
+  <style>
+    /* Test styles for visual verification */
+    body {
+      font-family: var(--font-family-sans);
+      background: var(--color-background);
+      color: var(--color-text-primary);
+      margin: 0;
+      padding: var(--space-4);
+    }
+    
+    .test-item {
+      background: var(--color-primary-100);
+      border: 1px solid var(--color-primary-300);
+      padding: var(--space-4);
+      border-radius: var(--border-radius-base);
+      text-align: center;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+    }
+    
+    .test-section {
+      margin-bottom: var(--space-12);
+      padding: var(--space-6);
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-lg);
+      border: 1px solid var(--color-border);
+    }
+    
+    .test-title {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--space-6);
+      color: var(--color-text-primary);
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: var(--space-2);
+    }
+    
+    .breakpoint-indicator {
+      position: fixed;
+      top: var(--space-4);
+      right: var(--space-4);
+      background: var(--color-primary);
+      color: white;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--border-radius-base);
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-sm);
+      z-index: var(--z-index-overlay);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .sidebar-demo {
+      background: var(--color-neutral-800);
+      color: white;
+      padding: var(--space-6);
+      border-radius: var(--border-radius-base);
+      min-height: 200px;
+    }
+    
+    .main-content-demo {
+      background: var(--color-background);
+      padding: var(--space-6);
+      border-radius: var(--border-radius-base);
+      border: 1px solid var(--color-border);
+      min-height: 200px;
+    }
+    
+    .spacing-demo {
+      background: var(--color-success-light);
+      border: 1px solid var(--color-success);
+      border-radius: var(--border-radius-base);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--font-weight-medium);
+      color: var(--color-neutral-800);
+    }
+    
+    /* Visual grid overlay for debugging */
+    .debug-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.1) 1px, transparent 1px);
+      background-size: var(--space-4) var(--space-4);
+      pointer-events: none;
+      z-index: var(--z-index-base);
+      opacity: 0;
+      transition: opacity var(--duration-300);
+    }
+    
+    .debug-overlay.active {
+      opacity: 1;
+    }
+    
+    .debug-toggle {
+      position: fixed;
+      bottom: var(--space-4);
+      right: var(--space-4);
+      background: var(--color-warning);
+      color: white;
+      border: none;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--border-radius-base);
+      cursor: pointer;
+      font-weight: var(--font-weight-medium);
+      z-index: var(--z-index-overlay);
+    }
+  </style>
+</head>
+<body>
+  <!-- Breakpoint indicator -->
+  <div class="breakpoint-indicator" id="breakpoint-indicator">XS</div>
+  
+  <!-- Debug grid overlay -->
+  <div class="debug-overlay" id="debug-overlay"></div>
+  <button class="debug-toggle" onclick="toggleDebug()">Toggle 4px Grid</button>
+  
+  <div class="container">
+    <h1 style="text-align: center; margin-bottom: var(--space-12); font-size: var(--font-size-4xl);">
+      Complete Responsive Grid System Test
+    </h1>
+    
+    <!-- Test 1: Main Layout Structure -->
+    <div class="test-section">
+      <h2 class="test-title">1. Main Layout Structure (Page Grid)</h2>
+      <div class="page-grid" style="min-height: 300px; border: 2px dashed var(--color-primary);">
+        <header style="background: var(--color-primary-100); padding: var(--space-4); text-align: center; border-radius: var(--border-radius-base);">
+          Header Area
+        </header>
+        <main class="page-main" style="flex: 1; padding: var(--space-4);">
+          <div class="layout-with-sidebar">
+            <div class="dev-sidebar sidebar-demo">
+              <h3 style="margin-top: 0;">Sidebar</h3>
+              <p>Responsive sidebar that collapses on mobile</p>
+            </div>
+            <div class="main-content main-content-demo">
+              <h3 style="margin-top: 0;">Main Content</h3>
+              <p>Main content area that adapts to available space</p>
+            </div>
+          </div>
+        </main>
+        <footer style="background: var(--color-neutral-200); padding: var(--space-4); text-align: center; border-radius: var(--border-radius-base);">
+          Footer Area
+        </footer>
+      </div>
+    </div>
+    
+    <!-- Test 2: Responsive Grid Columns -->
+    <div class="test-section">
+      <h2 class="test-title">2. Responsive Grid Columns</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        <div class="test-item">1 col mobile<br>2 cols SM<br>3 cols MD<br>4 cols LG<br>6 cols XL</div>
+        <div class="test-item">Item 2</div>
+        <div class="test-item">Item 3</div>
+        <div class="test-item">Item 4</div>
+        <div class="test-item">Item 5</div>
+        <div class="test-item">Item 6</div>
+        <div class="test-item">Item 7</div>
+        <div class="test-item">Item 8</div>
+        <div class="test-item">Item 9</div>
+        <div class="test-item">Item 10</div>
+        <div class="test-item">Item 11</div>
+        <div class="test-item">Item 12</div>
+      </div>
+    </div>
+    
+    <!-- Test 3: 4px-based Spacing System -->
+    <div class="test-section">
+      <h2 class="test-title">3. 4px-based Spacing System</h2>
+      <div class="space-y-4">
+        <div class="flex flex-wrap gap-2">
+          <div class="spacing-demo p-1">p-1 (4px)</div>
+          <div class="spacing-demo p-2">p-2 (8px)</div>
+          <div class="spacing-demo p-3">p-3 (12px)</div>
+          <div class="spacing-demo p-4">p-4 (16px)</div>
+          <div class="spacing-demo p-6">p-6 (24px)</div>
+          <div class="spacing-demo p-8">p-8 (32px)</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <div class="spacing-demo m-1">m-1 (4px)</div>
+          <div class="spacing-demo m-2">m-2 (8px)</div>
+          <div class="spacing-demo m-4">m-4 (16px)</div>
+          <div class="spacing-demo m-6">m-6 (24px)</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Test 4: Responsive Spacing -->
+    <div class="test-section">
+      <h2 class="test-title">4. Responsive Spacing</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-12">
+        <div class="test-item p-2 md:p-4 lg:p-6">
+          Responsive padding:<br>
+          p-2 mobile<br>
+          p-4 tablet<br>
+          p-6 desktop
+        </div>
+        <div class="test-item m-1 md:m-4 lg:m-8">
+          Responsive margin:<br>
+          m-1 mobile<br>
+          m-4 tablet<br>
+          m-8 desktop
+        </div>
+      </div>
+    </div>
+    
+    <!-- Test 5: Flexbox Fallback -->
+    <div class="test-section">
+      <h2 class="test-title">5. Flexbox Fallback System</h2>
+      <div class="flex flex-col md:flex-row gap-4 items-stretch">
+        <div class="test-item flex-1">Flex Item 1<br>(flex-1)</div>
+        <div class="test-item flex-2" style="flex: 2;">Flex Item 2<br>(flex-2)</div>
+        <div class="test-item flex-1">Flex Item 3<br>(flex-1)</div>
+      </div>
+    </div>
+    
+    <!-- Test 6: Container System -->
+    <div class="test-section">
+      <h2 class="test-title">6. Container System</h2>
+      <div class="space-y-4">
+        <div class="container-sm mx-auto bg-primary-100 p-4 text-center" style="background: var(--color-primary-100);">
+          Container SM (640px max)
+        </div>
+        <div class="container-md mx-auto bg-primary-200 p-4 text-center" style="background: var(--color-primary-200);">
+          Container MD (768px max)
+        </div>
+        <div class="container-lg mx-auto bg-primary-300 p-4 text-center" style="background: var(--color-primary-300);">
+          Container LG (1024px max)
+        </div>
+      </div>
+    </div>
+    
+    <!-- Test 7: Card Grid Layouts -->
+    <div class="test-section">
+      <h2 class="test-title">7. Card Grid Layouts</h2>
+      <div class="card-grid">
+        <div class="test-item">Card 1</div>
+        <div class="test-item">Card 2</div>
+        <div class="test-item">Card 3</div>
+        <div class="test-item">Card 4</div>
+        <div class="test-item">Card 5</div>
+        <div class="test-item">Card 6</div>
+      </div>
+    </div>
+    
+    <!-- Test 8: Responsive Visibility -->
+    <div class="test-section">
+      <h2 class="test-title">8. Responsive Visibility</h2>
+      <div class="space-y-4">
+        <div class="test-item block md:hidden">Visible on mobile only</div>
+        <div class="test-item hidden md:block lg:hidden">Visible on tablet only</div>
+        <div class="test-item hidden lg:block">Visible on desktop only</div>
+        <div class="test-item block">Always visible</div>
+      </div>
+    </div>
+    
+    <!-- Test 9: Auto-fit Grids -->
+    <div class="test-section">
+      <h2 class="test-title">9. Auto-fit Grid System</h2>
+      <div class="auto-fit-md">
+        <div class="test-item">Auto-fit 1</div>
+        <div class="test-item">Auto-fit 2</div>
+        <div class="test-item">Auto-fit 3</div>
+        <div class="test-item">Auto-fit 4</div>
+        <div class="test-item">Auto-fit 5</div>
+      </div>
+    </div>
+    
+    <!-- Test 10: Cross-browser Compatibility -->
+    <div class="test-section">
+      <h2 class="test-title">10. Cross-browser Compatibility Test</h2>
+      <div class="enhanced-grid">
+        <div class="test-item">CSS Grid with Flexbox fallback</div>
+        <div class="test-item">Works in all browsers</div>
+        <div class="test-item">Progressive enhancement</div>
+        <div class="test-item">Graceful degradation</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="test-grid-verification.js"></script>
+  <script>
+    // Breakpoint detection and display
+    function updateBreakpointIndicator() {
+      const width = window.innerWidth;
+      const indicator = document.getElementById('breakpoint-indicator');
+      let breakpoint = 'XS';
+      let color = '#ef4444'; // red
+      
+      if (width >= 1536) {
+        breakpoint = '2XL';
+        color = '#8b5cf6'; // purple
+      } else if (width >= 1280) {
+        breakpoint = 'XL';
+        color = '#06b6d4'; // cyan
+      } else if (width >= 1024) {
+        breakpoint = 'LG';
+        color = '#10b981'; // green
+      } else if (width >= 768) {
+        breakpoint = 'MD';
+        color = '#f59e0b'; // yellow
+      } else if (width >= 640) {
+        breakpoint = 'SM';
+        color = '#3b82f6'; // blue
+      }
+      
+      indicator.textContent = `${breakpoint} (${width}px)`;
+      indicator.style.backgroundColor = color;
+      document.title = `Grid Test - ${breakpoint} (${width}px)`;
+    }
+    
+    // Debug grid toggle
+    function toggleDebug() {
+      const overlay = document.getElementById('debug-overlay');
+      overlay.classList.toggle('active');
+    }
+    
+    // Test CSS Grid support
+    function testCSSGridSupport() {
+      const testElement = document.createElement('div');
+      testElement.style.display = 'grid';
+      const supportsGrid = testElement.style.display === 'grid';
+      
+      if (!supportsGrid) {
+        console.warn('CSS Grid not supported, using Flexbox fallback');
+        document.body.classList.add('no-css-grid');
+      } else {
+        console.log('CSS Grid supported');
+      }
+    }
+    
+    // Test CSS Custom Properties support
+    function testCSSCustomProperties() {
+      const testElement = document.createElement('div');
+      testElement.style.setProperty('--test', 'test');
+      const supportsCustomProps = testElement.style.getPropertyValue('--test') === 'test';
+      
+      if (!supportsCustomProps) {
+        console.warn('CSS Custom Properties not supported');
+        document.body.classList.add('no-css-variables');
+      } else {
+        console.log('CSS Custom Properties supported');
+      }
+    }
+    
+    // Initialize tests
+    window.addEventListener('load', function() {
+      updateBreakpointIndicator();
+      testCSSGridSupport();
+      testCSSCustomProperties();
+    });
+    
+    window.addEventListener('resize', updateBreakpointIndicator);
+    
+    // Performance monitoring
+    if ('performance' in window) {
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          console.log('Page load performance:', {
+            domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+            loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+            totalTime: perfData.loadEventEnd - perfData.fetchStart
+          });
+        }, 0);
+      });
+    }
+  </script>
+</body>
+</html>

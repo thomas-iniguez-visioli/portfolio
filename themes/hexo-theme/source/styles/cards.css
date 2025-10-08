@@ -165,6 +165,161 @@
   gap: var(--space-1);
 }
 
+/* ===== DEVELOPER-SPECIFIC METADATA ===== */
+
+.card-meta-dev {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-mono);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.card-commit-hash {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background-color: var(--color-background-tertiary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.card-commit-hash::before {
+  content: '#';
+  color: var(--color-text-muted);
+}
+
+.card-build-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-build-status.passing {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+}
+
+.card-build-status.failing {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-error);
+}
+
+.card-build-status.pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+}
+
+.card-build-status::before {
+  content: '';
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.card-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.card-tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-background-tertiary);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-base);
+  text-decoration: none;
+  transition: var(--transition-colors);
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-family-sans);
+}
+
+.card-tech-badge:hover {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+/* Technology-specific badge colors */
+.card-tech-badge.javascript {
+  background-color: rgba(247, 223, 30, 0.1);
+  color: #f7df1e;
+}
+
+.card-tech-badge.typescript {
+  background-color: rgba(49, 120, 198, 0.1);
+  color: #3178c6;
+}
+
+.card-tech-badge.react {
+  background-color: rgba(97, 218, 251, 0.1);
+  color: #61dafb;
+}
+
+.card-tech-badge.vue {
+  background-color: rgba(79, 192, 141, 0.1);
+  color: #4fc08d;
+}
+
+.card-tech-badge.node {
+  background-color: rgba(51, 153, 51, 0.1);
+  color: #339933;
+}
+
+.card-tech-badge.python {
+  background-color: rgba(55, 118, 171, 0.1);
+  color: #3776ab;
+}
+
+.card-lines-of-code {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.card-lines-of-code::before {
+  content: '';
+  width: var(--space-3);
+  height: var(--space-3);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'/%3e%3c/svg%3e");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.card-last-updated::before {
+  content: 'Updated ';
+}
+
 .card-tags {
   display: flex;
   flex-wrap: wrap;

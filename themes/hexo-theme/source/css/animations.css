@@ -7,34 +7,55 @@
 /* ===== ANIMATION VARIABLES ===== */
 
 :root {
-  /* Animation durations */
+  /* Animation durations - optimized for 60fps performance */
   --duration-fast: 150ms;
   --duration-normal: 300ms;
   --duration-slow: 500ms;
   --duration-slower: 800ms;
   
-  /* Animation easings */
+  /* Animation easings - optimized curves for smooth performance */
   --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   
-  /* Spring animations */
+  /* Spring animations - natural motion curves */
   --spring-bounce: cubic-bezier(0.68, -0.6, 0.32, 1.6);
   --spring-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Performance optimized easing */
+  --ease-gpu: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fallback values for browsers without CSS custom properties */
+.no-css-variables {
+  /* Static fallback values */
+}
+
+.no-css-variables .card {
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.no-css-variables .btn {
+  transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ===== MICRO-INTERACTIONS ===== */
 
-/* Button hover effects */
+/* Button hover effects - cross-browser optimized */
 .btn,
 .hero-cta,
 .card-action,
 .article-action {
   position: relative;
   overflow: hidden;
-  transition: all var(--duration-normal) var(--ease-out-quad);
+  /* Cross-browser transition support */
+  -webkit-transition: all var(--duration-normal, 300ms) var(--ease-out-quad, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+  -moz-transition: all var(--duration-normal, 300ms) var(--ease-out-quad, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+  -o-transition: all var(--duration-normal, 300ms) var(--ease-out-quad, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+  transition: all var(--duration-normal, 300ms) var(--ease-out-quad, cubic-bezier(0.25, 0.46, 0.45, 0.94));
 }
 
 .btn::before,
@@ -491,18 +512,80 @@ input[type="radio"]:checked {
 
 /* ===== PERFORMANCE OPTIMIZATIONS ===== */
 
-/* GPU acceleration for animations */
+/* GPU acceleration for animations - optimized for 60fps */
 .card,
 .btn,
 .hero-cta,
 .nav-link,
-.footer-social-link {
+.footer-social-link,
+.parallax,
+.reveal {
   will-change: transform;
+  /* Force hardware acceleration */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-/* Remove will-change after animation */
+/* Remove will-change after animation to free GPU memory */
 .animation-complete {
   will-change: auto;
+}
+
+/* Optimize animations for 60fps */
+@media (prefers-reduced-motion: no-preference) {
+  .card,
+  .btn,
+  .hero-cta,
+  .nav-link,
+  .footer-social-link {
+    /* Use transform3d for better performance */
+    transition: transform var(--duration-normal) var(--ease-out-quad),
+                box-shadow var(--duration-normal) var(--ease-out-quad),
+                opacity var(--duration-normal) var(--ease-out-quad);
+  }
+  
+  .card:hover {
+    transform: translate3d(0, -8px, 0) scale(1.02);
+  }
+  
+  .footer-social-link:hover {
+    transform: translate3d(0, -4px, 0) rotate(5deg);
+  }
+}
+
+/* Cross-browser animation optimizations */
+@supports (transform: translate3d(0, 0, 0)) {
+  .card:hover {
+    transform: translate3d(0, -8px, 0) scale(1.02);
+  }
+  
+  .footer-social-link:hover {
+    transform: translate3d(0, -4px, 0) rotate(5deg);
+  }
+  
+  .btn:active,
+  .hero-cta:active,
+  .card-action:active {
+    transform: translate3d(0, 0, 0) scale(0.98);
+  }
+}
+
+/* Fallback for browsers without 3D transforms */
+@supports not (transform: translate3d(0, 0, 0)) {
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+  
+  .footer-social-link:hover {
+    transform: translateY(-4px) rotate(5deg);
+  }
+  
+  .btn:active,
+  .hero-cta:active,
+  .card-action:active {
+    transform: scale(0.98);
+  }
 }
 
 /* ===== CUSTOM ANIMATIONS ===== */

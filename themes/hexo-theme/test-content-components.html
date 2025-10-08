@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Components Test - Developer Theme</title>
+    <link rel="stylesheet" href="source/styles/variables.css">
+    <link rel="stylesheet" href="source/styles/reset.css">
+    <link rel="stylesheet" href="source/styles/foundation.css">
+    <link rel="stylesheet" href="source/styles/cards.css">
+    <link rel="stylesheet" href="source/styles/buttons.css">
+    <link rel="stylesheet" href="source/styles/navigation.css">
+    <link rel="stylesheet" href="source/styles/forms.css">
+    <style>
+        body {
+            font-family: var(--font-family-sans);
+            line-height: var(--line-height-normal);
+            color: var(--color-text-primary);
+            background-color: var(--color-background);
+            padding: var(--space-8);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin-bottom: var(--space-12);
+            padding: var(--space-6);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            background-color: var(--color-background-secondary);
+        }
+        
+        .section-title {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-6);
+            color: var(--color-text-primary);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: var(--space-2);
+        }
+        
+        .demo-grid {
+            display: grid;
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+        
+        .demo-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+        }
+    </style>
+</head>
+<body>
+    <h1>Developer Theme - Content Components Test</h1>
+    
+    <!-- Article Cards Section -->
+    <section class="section">
+        <h2 class="section-title">Article Cards with Developer Metadata</h2>
+        
+        <div class="cards-grid">
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">📝</div>
+                    <div>
+                        <h3 class="card-title">
+                            <a href="#">Building a Modern React Application</a>
+                        </h3>
+                        <p class="card-subtitle">Tutorial</p>
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <p class="card-description">
+                        Learn how to build a modern React application with TypeScript, 
+                        hooks, and best practices for 2024. This comprehensive guide 
+                        covers everything from setup to deployment.
+                    </p>
+                    
+                    <div class="card-tech-stack">
+                        <span class="card-tech-badge react">React</span>
+                        <span class="card-tech-badge typescript">TypeScript</span>
+                        <span class="card-tech-badge node">Node.js</span>
+                    </div>
+                </div>
+                
+                <div class="card-meta">
+                    <span class="card-date">📅 Dec 8, 2024</span>
+                    <span class="card-reading-time">⏱️ 12 min read</span>
+                </div>
+                
+                <div class="card-meta-dev">
+                    <span class="card-commit-hash">a1b2c3d</span>
+                    <span class="card-build-status passing">Passing</span>
+                    <span class="card-lines-of-code">1,247 lines</span>
+                    <span class="card-last-updated">2 hours ago</span>
+                </div>
+                
+                <div class="card-tags">
+                    <a href="#" class="card-tag">React</a>
+                    <a href="#" class="card-tag">Frontend</a>
+                    <a href="#" class="card-tag">JavaScript</a>
+                </div>
+            </article>
+            
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">🚀</div>
+                    <div>
+                        <h3 class="card-title">
+                            <a href="#">Deploying with Docker & Kubernetes</a>
+                        </h3>
+                        <p class="card-subtitle">DevOps</p>
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <p class="card-description">
+                        Master container orchestration with Docker and Kubernetes. 
+                        From basic containerization to advanced deployment strategies.
+                    </p>
+                    
+                    <div class="card-tech-stack">
+                        <span class="card-tech-badge">Docker</span>
+                        <span class="card-tech-badge">Kubernetes</span>
+                        <span class="card-tech-badge">AWS</span>
+                    </div>
+                </div>
+                
+                <div class="card-meta">
+                    <span class="card-date">📅 Dec 5, 2024</span>
+                    <span class="card-reading-time">⏱️ 18 min read</span>
+                </div>
+                
+                <div class="card-meta-dev">
+                    <span class="card-commit-hash">f4e5d6c</span>
+                    <span class="card-build-status failing">Failing</span>
+                    <span class="card-lines-of-code">892 lines</span>
+                    <span class="card-last-updated">1 day ago</span>
+                </div>
+                
+                <div class="card-tags">
+                    <a href="#" class="card-tag">DevOps</a>
+                    <a href="#" class="card-tag">Docker</a>
+                    <a href="#" class="card-tag">Cloud</a>
+                </div>
+            </article>
+            
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon">🐍</div>
+                    <div>
+                        <h3 class="card-title">
+                            <a href="#">Python Data Science Pipeline</a>
+                        </h3>
+                        <p class="card-subtitle">Data Science</p>
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <p class="card-description">
+                        Build robust data science pipelines with Python, pandas, 
+                        and machine learning libraries. Process and analyze large datasets efficiently.
+                    </p>
+                    
+                    <div class="card-tech-stack">
+                        <span class="card-tech-badge python">Python</span>
+                        <span class="card-tech-badge">Pandas</span>
+                        <span class="card-tech-badge">Jupyter</span>
+                    </div>
+                </div>
+                
+                <div class="card-meta">
+                    <span class="card-date">📅 Dec 1, 2024</span>
+                    <span class="card-reading-time">⏱️ 25 min read</span>
+                </div>
+                
+                <div class="card-meta-dev">
+                    <span class="card-commit-hash">9g8h7i6</span>
+                    <span class="card-build-status pending">Pending</span>
+                    <span class="card-lines-of-code">2,156 lines</span>
+                    <span class="card-last-updated">3 days ago</span>
+                </div>
+                
+                <div class="card-tags">
+                    <a href="#" class="card-tag">Python</a>
+                    <a href="#" class="card-tag">Data Science</a>
+                    <a href="#" class="card-tag">ML</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Developer Button Variants Section -->
+    <section class="section">
+        <h2 class="section-title">Developer Button Variants</h2>
+        
+        <h3>Terminal Style Buttons</h3>
+        <div class="demo-buttons">
+            <button class="btn btn-terminal">Execute Command</button>
+            <button class="btn btn-terminal btn-sm">npm install</button>
+            <button class="btn btn-terminal btn-lg">Deploy to Production</button>
+        </div>
+        
+        <h3>IDE Style Buttons</h3>
+        <div class="demo-buttons">
+            <button class="btn btn-ide">Open File</button>
+            <button class="btn btn-ide btn-sm">Debug</button>
+            <button class="btn btn-ide btn-lg">Build Project</button>
+        </div>
+        
+        <h3>Ghost Style Buttons</h3>
+        <div class="demo-buttons">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-ghost btn-sm">Skip</button>
+            <button class="btn btn-ghost btn-lg">Maybe Later</button>
+        </div>
+        
+        <h3>Status Buttons</h3>
+        <div class="demo-buttons">
+            <button class="btn btn-ghost btn-status status-online">Online</button>
+            <button class="btn btn-ghost btn-status status-busy">Busy</button>
+            <button class="btn btn-ghost btn-status status-away">Away</button>
+            <button class="btn btn-ghost btn-status status-dnd">Do Not Disturb</button>
+        </div>
+        
+        <h3>Semantic Buttons</h3>
+        <div class="demo-buttons">
+            <button class="btn btn-primary">Primary Action</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-error">Error</button>
+        </div>
+        
+        <h3>Button Groups</h3>
+        <div class="btn-group">
+            <button class="btn btn-secondary">Left</button>
+            <button class="btn btn-secondary">Center</button>
+            <button class="btn btn-secondary">Right</button>
+        </div>
+    </section>
+    
+    <!-- Navigation Components Section -->
+    <section class="section">
+        <h2 class="section-title">Navigation Components</h2>
+        
+        <h3>Technical Breadcrumbs</h3>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">home</a>
+            </div>
+            <span class="breadcrumb-separator">/</span>
+            <div class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">projects</a>
+            </div>
+            <span class="breadcrumb-separator">/</span>
+            <div class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">react-app</a>
+            </div>
+            <span class="breadcrumb-separator">/</span>
+            <div class="breadcrumb-item">
+                <span class="breadcrumb-current">src</span>
+            </div>
+        </nav>
+        
+        <h3>Terminal Style Breadcrumbs</h3>
+        <nav class="breadcrumb breadcrumb-terminal" aria-label="Terminal Breadcrumb">
+            <div class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">projects</a>
+            </div>
+            <span class="breadcrumb-separator"></span>
+            <div class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">my-app</a>
+            </div>
+            <span class="breadcrumb-separator"></span>
+            <div class="breadcrumb-item">
+                <span class="breadcrumb-current">components</span>
+            </div>
+        </nav>
+        
+        <h3>IDE-Inspired Navigation</h3>
+        <nav class="nav nav-ide">
+            <a href="#" class="nav-link active">
+                <span class="nav-icon">📁</span>
+                Explorer
+                <span class="nav-shortcut">
+                    <span class="nav-shortcut-key">Ctrl</span>
+                    <span class="nav-shortcut-key">E</span>
+                </span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="nav-icon">🔍</span>
+                Search
+                <span class="nav-shortcut">
+                    <span class="nav-shortcut-key">Ctrl</span>
+                    <span class="nav-shortcut-key">F</span>
+                </span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="nav-icon">🐛</span>
+                Debug
+                <span class="nav-shortcut">
+                    <span class="nav-shortcut-key">F5</span>
+                </span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="nav-icon">⚙️</span>
+                Settings
+            </a>
+        </nav>
+        
+        <h3>Navigation Tabs</h3>
+        <nav class="nav nav-tabs">
+            <a href="#" class="nav-link active">Overview</a>
+            <a href="#" class="nav-link">Code</a>
+            <a href="#" class="nav-link">Issues <span class="nav-badge">3</span></a>
+            <a href="#" class="nav-link">Pull Requests</a>
+            <a href="#" class="nav-link">Actions</a>
+        </nav>
+        
+        <h3>Navigation Pills</h3>
+        <nav class="nav nav-pills">
+            <a href="#" class="nav-link active">All</a>
+            <a href="#" class="nav-link">Frontend</a>
+            <a href="#" class="nav-link">Backend</a>
+            <a href="#" class="nav-link">DevOps</a>
+            <a href="#" class="nav-link">Data Science</a>
+        </nav>
+    </section>
+    
+    <!-- Form Components Section -->
+    <section class="section">
+        <h2 class="section-title">Form Components</h2>
+        
+        <form class="form">
+            <div class="form-group">
+                <label class="form-label form-label-required" for="project-name">Project Name</label>
+                <input type="text" id="project-name" class="form-input" placeholder="Enter project name">
+                <p class="form-help">Choose a unique name for your project</p>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="description">Description</label>
+                <textarea id="description" class="form-textarea" placeholder="Describe your project..."></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label" for="tech-stack">Technology Stack</label>
+                    <select id="tech-stack" class="form-select">
+                        <option>Select technology</option>
+                        <option>React</option>
+                        <option>Vue.js</option>
+                        <option>Angular</option>
+                        <option>Node.js</option>
+                        <option>Python</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label form-label-optional" for="version">Version</label>
+                    <input type="text" id="version" class="form-input" placeholder="1.0.0">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="terminal-command">Terminal Command</label>
+                <input type="text" id="terminal-command" class="form-input form-input-terminal" placeholder="npm run dev">
+                <p class="form-help">Enter the command to run your project</p>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="code-snippet">Code Snippet</label>
+                <textarea id="code-snippet" class="form-textarea form-input-code" placeholder="// Enter your code here"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Project Type</label>
+                <div class="form-radio-group">
+                    <div class="form-radio-item">
+                        <input type="radio" id="frontend" name="project-type" class="form-radio" value="frontend">
+                        <label for="frontend">Frontend</label>
+                    </div>
+                    <div class="form-radio-item">
+                        <input type="radio" id="backend" name="project-type" class="form-radio" value="backend">
+                        <label for="backend">Backend</label>
+                    </div>
+                    <div class="form-radio-item">
+                        <input type="radio" id="fullstack" name="project-type" class="form-radio" value="fullstack" checked>
+                        <label for="fullstack">Full Stack</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Features</label>
+                <div class="form-checkbox-group">
+                    <div class="form-checkbox-item">
+                        <input type="checkbox" id="auth" class="form-checkbox" value="auth" checked>
+                        <label for="auth">Authentication</label>
+                    </div>
+                    <div class="form-checkbox-item">
+                        <input type="checkbox" id="api" class="form-checkbox" value="api">
+                        <label for="api">REST API</label>
+                    </div>
+                    <div class="form-checkbox-item">
+                        <input type="checkbox" id="database" class="form-checkbox" value="database" checked>
+                        <label for="database">Database Integration</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="search">Search Projects</label>
+                <div class="form-search">
+                    <span class="form-search-icon">🔍</span>
+                    <input type="search" id="search" class="form-input" placeholder="Search projects...">
+                    <button type="button" class="form-search-clear">✕</button>
+                </div>
+            </div>
+            
+            <div class="form-group has-success">
+                <label class="form-label" for="success-input">Success State</label>
+                <input type="text" id="success-input" class="form-input" value="Valid input">
+                <p class="form-success">✓ This field is valid</p>
+            </div>
+            
+            <div class="form-group has-error">
+                <label class="form-label" for="error-input">Error State</label>
+                <input type="text" id="error-input" class="form-input" value="Invalid input">
+                <p class="form-error">✗ This field has an error</p>
+            </div>
+            
+            <div class="form-group has-warning">
+                <label class="form-label" for="warning-input">Warning State</label>
+                <input type="text" id="warning-input" class="form-input" value="Warning input">
+                <p class="form-warning">⚠ This field has a warning</p>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-ghost">Cancel</button>
+                <button type="submit" class="btn btn-primary">Create Project</button>
+            </div>
+        </form>
+    </section>
+    
+    <script>
+        // Simple demo functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search form demo
+            const searchInput = document.querySelector('.form-search input');
+            const searchClear = document.querySelector('.form-search-clear');
+            const searchForm = document.querySelector('.form-search');
+            
+            searchInput.addEventListener('input', function() {
+                if (this.value) {
+                    searchForm.classList.add('has-value');
+                } else {
+                    searchForm.classList.remove('has-value');
+                }
+            });
+            
+            searchClear.addEventListener('click', function() {
+                searchInput.value = '';
+                searchForm.classList.remove('has-value');
+                searchInput.focus();
+            });
+        });
+    </script>
+</body>
+</html>

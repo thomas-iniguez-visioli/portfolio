@@ -7,6 +7,9 @@
 /* ===== IMPORT MODERN FOUNDATION ===== */
 @import url('./modern.css');
 
+/* ===== IMPORT ENHANCED GRID SYSTEM ===== */
+@import url('./grid-system.css');
+
 /* ===== LAYOUT STRUCTURE ===== */
 
 /* Modern viewport meta tag support */
@@ -21,7 +24,8 @@ main {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--space-4);
-  min-height: calc(100vh - 200px); /* Account for header/footer */
+  min-height: calc(100vh - 200px);
+  /* Account for header/footer */
 }
 
 @media (min-width: 768px) {
@@ -33,7 +37,12 @@ main {
 /* ===== MODERN HEADING STYLES ===== */
 
 /* Override default heading margins for better spacing */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: var(--space-4) 0;
   font-family: var(--font-family-sans);
@@ -169,7 +178,9 @@ a:focus-visible {
 /* ===== MODERN FORM ELEMENTS ===== */
 
 /* Enhanced form styling */
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
@@ -181,7 +192,9 @@ input, textarea, select {
   transition: var(--transition-colors);
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
@@ -196,7 +209,8 @@ table {
   font-size: var(--font-size-sm);
 }
 
-th, td {
+th,
+td {
   padding: var(--space-3);
   text-align: left;
   border-bottom: 1px solid var(--color-border);
@@ -260,7 +274,8 @@ figcaption {
 
 /* Modern content width utilities */
 .content-width {
-  max-width: 65ch; /* Optimal reading width */
+  max-width: 65ch;
+  /* Optimal reading width */
   margin: 0 auto;
 }
 
@@ -290,6 +305,7 @@ figcaption {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -306,6 +322,7 @@ figcaption {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -320,10 +337,10 @@ figcaption {
 
 /* Loading skeleton */
 .skeleton {
-  background: linear-gradient(90deg, 
-    var(--color-neutral-200) 25%, 
-    var(--color-neutral-100) 50%, 
-    var(--color-neutral-200) 75%);
+  background: linear-gradient(90deg,
+      var(--color-neutral-200) 25%,
+      var(--color-neutral-100) 50%,
+      var(--color-neutral-200) 75%);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
   border-radius: var(--border-radius-base);
@@ -333,6 +350,7 @@ figcaption {
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -347,35 +365,41 @@ figcaption {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  
+
   body {
     font-size: 12pt;
     line-height: 1.4;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     page-break-after: avoid;
     font-family: serif;
   }
-  
-  p, blockquote {
+
+  p,
+  blockquote {
     orphans: 3;
     widows: 3;
   }
-  
+
   blockquote {
     page-break-inside: avoid;
   }
-  
+
   a {
     text-decoration: underline;
   }
-  
+
   a[href^="http"]:after {
     content: " (" attr(href) ")";
     font-size: 10pt;
   }
-  
+
   .no-print {
     display: none !important;
   }
