@@ -91,7 +91,9 @@
         };
         </script>
 <!-- Performance optimized font loading system with preload and font-display: swap -->
-<%- optimizedFonts() %>
+<link rel="preload" href="/fonts/inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- Critical resource preloading -->
 <link rel="preload" href="/assets/icons.svg" as="image">
@@ -102,7 +104,10 @@
 <%- partial('_critical-css') %>
 
 <!-- Optimized CSS loading: critical inline, non-critical lazy loaded -->
-<%- optimizedCSS() %>
+<link rel="stylesheet" href="<%= url_for('/css/reset.css') %>">
+<link rel="stylesheet" href="<%= url_for('/css/variables.css') %>">
+<link rel="stylesheet" href="<%= url_for('/styles/fonts.css') %>">
+<link rel="stylesheet" href="<%= url_for('/styles/fonts-fallback.css') %>">
 
 <!-- Developer theme specific CSS -->
 <link rel="preload" href="<%= url_for('/css/dev-theme.css') %>" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -163,6 +168,12 @@
 <% } -%>
 
 <%- (page.scripts || []).map(script => `<script type="module" src="/assets/js/${script}"></script>`).join('\n') %>
+
+<!-- Font loading script -->
+<script src="<%= url_for('/js/font-loader.js') %>" defer></script>
+
+<!-- Developer theme script -->
+<script src="<%= url_for('/js/dev-theme.js') %>" type="module"></script>
 
 <!-- Modern navigation script -->
 <script type="module" src="<%= url_for('/js/navigation.js') %>"></script>

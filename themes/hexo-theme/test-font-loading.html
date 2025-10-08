@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr" class="dev-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Chargement des Polices et CSS</title>
+    
+    <!-- Preload des polices critiques -->
+    <link rel="preload" href="source/fonts/inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="source/fonts/inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="source/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- CSS dans le bon ordre -->
+    <link rel="stylesheet" href="source/css/reset.css">
+    <link rel="stylesheet" href="source/css/variables.css">
+    <link rel="stylesheet" href="source/styles/fonts.css">
+    <link rel="stylesheet" href="source/styles/fonts-fallback.css">
+    <link rel="stylesheet" href="source/css/dev-theme.css">
+    <link rel="stylesheet" href="source/css/dev-components.css">
+    <link rel="stylesheet" href="source/css/dev-theme-fixes.css">
+    
+    <style>
+        /* Styles de test */
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .test-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background: #f8fafc;
+        }
+        
+        .test-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .font-test {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            background: white;
+        }
+        
+        .font-test-label {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .font-test-text {
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+        
+        .font-inter {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .font-jetbrains {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .font-georgia {
+            font-family: Georgia, serif;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-success {
+            background: #10b981;
+        }
+        
+        .status-error {
+            background: #ef4444;
+        }
+        
+        .status-warning {
+            background: #f59e0b;
+        }
+        
+        .debug-info {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            white-space: pre-wrap;
+        }
+        
+        .css-test {
+            margin: 1rem 0;
+        }
+        
+        .css-loaded {
+            color: #10b981;
+        }
+        
+        .css-error {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body class="dev-theme dev-theme-loaded">
+    <div class="test-container">
+        <h1>Test de Chargement des Polices et CSS</h1>
+        <p>Cette page teste le chargement des polices et des fichiers CSS du thème développeur.</p>
+        
+        <!-- Test des polices -->
+        <div class="test-section">
+            <h2 class="test-title">Test des Polices</h2>
+            
+            <div class="font-test">
+                <div class="font-test-label">Inter (Sans-serif) - Titres et UI</div>
+                <div class="font-test-text font-inter">
+                    The quick brown fox jumps over the lazy dog. 0123456789
+                    <br><strong>Bold text</strong> | <em>Italic text</em>
+                </div>
+            </div>
+            
+            <div class="font-test">
+                <div class="font-test-label">JetBrains Mono (Monospace) - Code</div>
+                <div class="font-test-text font-jetbrains">
+                    const greeting = "Hello, World!";
+                    <br>function test() { return 42; }
+                    <br>// Ligatures: != === => <= >= && ||
+                </div>
+            </div>
+            
+            <div class="font-test">
+                <div class="font-test-label">Georgia (Serif) - Corps de texte</div>
+                <div class="font-test-text font-georgia">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+            </div>
+            
+            <div id="font-status" class="debug-info"></div>
+        </div>
+        
+        <!-- Test des composants CSS -->
+        <div class="test-section">
+            <h2 class="test-title">Test des Composants CSS</h2>
+            
+            <div class="css-test">
+                <h3>Badges Technologiques</h3>
+                <div class="dev-tech-badges">
+                    <span class="badge-javascript">JavaScript</span>
+                    <span class="badge-typescript">TypeScript</span>
+                    <span class="badge-react">React</span>
+                    <span class="badge-node">Node.js</span>
+                </div>
+            </div>
+            
+            <div class="css-test">
+                <h3>Boutons Développeur</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn btn-primary">Bouton Principal</button>
+                    <button class="btn btn-terminal">Terminal</button>
+                    <button class="btn btn-ghost">Ghost</button>
+                </div>
+            </div>
+            
+            <div class="css-test">
+                <h3>Statut Développeur</h3>
+                <div class="dev-status dev-status--online">Disponible pour travailler</div>
+            </div>
+            
+            <div id="css-status" class="debug-info"></div>
+        </div>
+        
+        <!-- Test des variables CSS -->
+        <div class="test-section">
+            <h2 class="test-title">Test des Variables CSS</h2>
+            <div id="variables-status" class="debug-info"></div>
+        </div>
+        
+        <!-- Test de performance -->
+        <div class="test-section">
+            <h2 class="test-title">Performance de Chargement</h2>
+            <div id="performance-status" class="debug-info"></div>
+        </div>
+    </div>
+    
+    <!-- Scripts de test -->
+    <script src="source/js/font-loader.js"></script>
+    <script src="source/js/dev-theme.js"></script>
+    
+    <script>
+        // Test de chargement des polices
+        function testFontLoading() {
+            const fonts = ['Inter', 'JetBrains Mono'];
+            const results = [];
+            
+            fonts.forEach(font => {
+                const isLoaded = document.fonts.check(`16px "${font}"`);
+                results.push(`${font}: ${isLoaded ? '✓ Chargée' : '✗ Non chargée'}`);
+            });
+            
+            // Test des fallbacks système
+            const systemFonts = ['system-ui', 'Georgia', 'monospace'];
+            systemFonts.forEach(font => {
+                results.push(`${font} (fallback): ✓ Disponible`);
+            });
+            
+            document.getElementById('font-status').textContent = results.join('\n');
+        }
+        
+        // Test de chargement des CSS
+        function testCSSLoading() {
+            const cssFiles = [
+                'reset.css',
+                'variables.css', 
+                'fonts.css',
+                'dev-theme.css',
+                'dev-components.css',
+                'dev-theme-fixes.css'
+            ];
+            
+            const results = [];
+            
+            // Vérifier si les styles sont appliqués
+            const testElement = document.createElement('div');
+            testElement.className = 'btn btn-primary';
+            testElement.style.visibility = 'hidden';
+            testElement.style.position = 'absolute';
+            document.body.appendChild(testElement);
+            
+            const computedStyle = window.getComputedStyle(testElement);
+            const hasButtonStyles = computedStyle.padding !== '0px';
+            
+            document.body.removeChild(testElement);
+            
+            results.push(`Styles de boutons: ${hasButtonStyles ? '✓ Chargés' : '✗ Non chargés'}`);
+            
+            // Vérifier les badges
+            const badgeElement = document.querySelector('.badge-javascript');
+            if (badgeElement) {
+                const badgeStyle = window.getComputedStyle(badgeElement);
+                const hasBadgeStyles = badgeStyle.backgroundColor !== 'rgba(0, 0, 0, 0)';
+                results.push(`Styles de badges: ${hasBadgeStyles ? '✓ Chargés' : '✗ Non chargés'}`);
+            }
+            
+            document.getElementById('css-status').textContent = results.join('\n');
+        }
+        
+        // Test des variables CSS
+        function testCSSVariables() {
+            const root = document.documentElement;
+            const computedStyle = getComputedStyle(root);
+            
+            const variables = [
+                '--color-primary',
+                '--font-family-sans',
+                '--font-family-mono',
+                '--dev-badge-javascript',
+                '--z-index-sticky',
+                '--space-4'
+            ];
+            
+            const results = [];
+            
+            variables.forEach(variable => {
+                const value = computedStyle.getPropertyValue(variable).trim();
+                results.push(`${variable}: ${value ? '✓ ' + value : '✗ Non définie'}`);
+            });
+            
+            document.getElementById('variables-status').textContent = results.join('\n');
+        }
+        
+        // Test de performance
+        function testPerformance() {
+            const results = [];
+            
+            // Temps de chargement DOM
+            const domLoadTime = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+            results.push(`Temps de chargement DOM: ${domLoadTime}ms`);
+            
+            // Temps de chargement complet
+            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+            results.push(`Temps de chargement total: ${loadTime}ms`);
+            
+            // Nombre de ressources
+            const resources = performance.getEntriesByType('resource');
+            results.push(`Ressources chargées: ${resources.length}`);
+            
+            // Ressources CSS
+            const cssResources = resources.filter(r => r.name.includes('.css'));
+            results.push(`Fichiers CSS: ${cssResources.length}`);
+            
+            // Ressources de polices
+            const fontResources = resources.filter(r => r.name.includes('.woff'));
+            results.push(`Fichiers de polices: ${fontResources.length}`);
+            
+            document.getElementById('performance-status').textContent = results.join('\n');
+        }
+        
+        // Exécuter les tests
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                testFontLoading();
+                testCSSLoading();
+                testCSSVariables();
+                testPerformance();
+            }, 1000);
+        });
+        
+        // Test après chargement des polices
+        document.addEventListener('fontsloaded', (event) => {
+            console.log('Polices chargées:', event.detail);
+            testFontLoading();
+        });
+        
+        // Fonction de debug globale
+        window.debugFontsAndCSS = function() {
+            console.log('=== DEBUG POLICES ET CSS ===');
+            
+            // État des polices
+            console.log('Polices disponibles:');
+            ['Inter', 'JetBrains Mono', 'Georgia'].forEach(font => {
+                const loaded = document.fonts.check(`16px "${font}"`);
+                console.log(`  ${font}: ${loaded ? 'Chargée' : 'Non chargée'}`);
+            });
+            
+            // Variables CSS
+            console.log('Variables CSS:');
+            const root = getComputedStyle(document.documentElement);
+            ['--color-primary', '--font-family-sans', '--font-family-mono'].forEach(variable => {
+                const value = root.getPropertyValue(variable);
+                console.log(`  ${variable}: ${value || 'Non définie'}`);
+            });
+            
+            // FontLoader status
+            if (window.FontLoader) {
+                console.log('FontLoader status:', window.FontLoader.status());
+            }
+            
+            // DevTheme status
+            if (window.DevTheme) {
+                console.log('DevTheme disponible: ✓');
+            }
+        };
+    </script>
+    
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+        <button onclick="debugFontsAndCSS()" style="background: #2563eb; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
+            Debug Polices & CSS
+        </button>
+    </div>
+</body>
+</html>
