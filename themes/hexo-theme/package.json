@@ -7,7 +7,7 @@
   "scripts": {
     "build": "run-p 'build:*'",
     "build:js": "rollup --config",
-    "build:css": "set NODE_ENV=production && node node_modules/postcss-cli/index.js \"source/css/**/*.css\" --config postcss.config.js --base source/css --dir source/styles",
+    "build:css": "npm run copy:vendor&&set NODE_ENV=production && node node_modules/postcss-cli/index.js \"source/css/**/*.css\" --config postcss.config.js --base source/css --dir source/styles",
     "build:css:dev": "node node_modules/postcss-cli/index.js \"source/css/**/*.css\" --config postcss.config.js --base source/css --dir source/styles",
     "build:critical": "node scripts/extract-critical-css.js",
     "build:dev-theme": "node node_modules/postcss-cli/index.js \"source/css/foundation/*.css\" \"source/css/components/*.css\" \"source/css/layout/*.css\" \"source/css/utilities/*.css\" --config postcss.config.js --base source/css --dir source/styles",
