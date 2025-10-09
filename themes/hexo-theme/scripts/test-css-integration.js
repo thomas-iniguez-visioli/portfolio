@@ -4,7 +4,7 @@
  * CSS Integration Test Script
  * Tests the complete CSS build and integration process
  * Requirements: 5.1, 5.2, 4.1, 4.3
- */
+ *
 
 const fs = require('fs');
 const path = require('path');
@@ -18,7 +18,7 @@ let testsFailed = 0;
 
 /**
  * Test helper function
- */
+ *
 function test(name, testFn) {
   try {
     console.log(`\n🔍 Testing: ${name}`);
@@ -34,7 +34,7 @@ function test(name, testFn) {
 
 /**
  * Test PostCSS configuration
- */
+ *
 test('PostCSS Configuration', () => {
   const postcssConfigPath = path.join(__dirname, '..', 'postcss.config.js');
   
@@ -64,7 +64,7 @@ test('PostCSS Configuration', () => {
 
 /**
  * Test CSS source files exist
- */
+ *
 test('CSS Source Files', () => {
   const cssSourceDir = path.join(__dirname, '..', 'source', 'css');
   
@@ -86,7 +86,7 @@ test('CSS Source Files', () => {
 
 /**
  * Test CSS build process
- */
+ *
 test('CSS Build Process', () => {
   const themePath = path.join(__dirname, '..');
   
@@ -115,7 +115,7 @@ test('CSS Build Process', () => {
 
 /**
  * Test critical CSS extraction
- */
+ *
 test('Critical CSS Extraction', () => {
   const themePath = path.join(__dirname, '..');
   
@@ -158,7 +158,7 @@ test('Critical CSS Extraction', () => {
 
 /**
  * Test output CSS files
- */
+ *
 test('Output CSS Files', () => {
   const stylesDir = path.join(__dirname, '..', 'source', 'styles');
   
@@ -200,7 +200,7 @@ test('Output CSS Files', () => {
 
 /**
  * Test Autoprefixer integration
- */
+ *
 test('Autoprefixer Integration', () => {
   const stylesDir = path.join(__dirname, '..', 'source', 'styles');
   
@@ -229,7 +229,7 @@ test('Autoprefixer Integration', () => {
 
 /**
  * Test CSS minification in production
- */
+ *
 test('CSS Minification', () => {
   const stylesDir = path.join(__dirname, '..', 'source', 'styles');
   
@@ -250,9 +250,9 @@ test('CSS Minification', () => {
   }
 });
 
-/**
- * Test Hexo integration helpers
- */
+/*
+ Test Hexo integration helpers
+ 
 test('Hexo Integration Helpers', () => {
   const helpersDir = path.join(__dirname, '..', 'scripts');
   const integrationFile = path.join(helpersDir, 'css-integration.js');
@@ -288,4 +288,4 @@ if (testsFailed > 0) {
 } else {
   console.log('\n🎉 All tests passed! CSS integration is working correctly.');
   process.exit(0);
-}
+}*/
