@@ -1,6 +1,14 @@
 # Configuration du thème Hexo Developer
 # Theme configuration for Hexo Developer Theme
-
+graph:
+  twitter:            
+  mastodon:           
+  fediverse_creator:  ''
+  github:             
+  gitlab:             
+  framagit:           
+  pro:                
+  old: 
 # ===== CORRECTIONS DE SUPERPOSITION =====
 # Layering fixes configuration
 layering_fix: true  # Activer les corrections de superposition (true/false)
