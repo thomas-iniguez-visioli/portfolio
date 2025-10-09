@@ -51,6 +51,17 @@ jobs:
             GIT_USER: ${{ github.actor }}
             GIT_EMAIL: ${{ github.actor }}@users.noreply.github.com
             TOKEN: ${{ secrets.TOKEN }}
+    - name: deploy
+      
+      
+      
+      run: |
+        npm run deploy
+   
+      env:
+            GIT_USER: ${{ github.actor }}
+            GIT_EMAIL: ${{ github.actor }}@users.noreply.github.com
+            TOKEN: ${{ secrets.TOKEN }}
       # Leave this line unchanged
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
