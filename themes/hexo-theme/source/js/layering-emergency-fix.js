@@ -38,10 +38,10 @@
       header.style.position = 'sticky';
       header.style.top = '0';
       header.style.zIndex = '1100';
-      header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+     // header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
       header.style.backdropFilter = 'blur(12px)';
       header.style.webkitBackdropFilter = 'blur(12px)';
-      header.style.borderBottom = '1px solid #e2e8f0';
+    //  header.style.borderBottom = '1px solid #e2e8f0';
       header.style.width = '100%';
       header.style.isolation = 'isolate';
     }
@@ -61,7 +61,7 @@
         sidebar.style.height = '100vh';
         sidebar.style.transform = 'translateX(-100%)';
         sidebar.style.transition = 'transform 0.3s ease-out';
-        sidebar.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+     //   sidebar.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
       }
       sidebar.style.overflowY = 'auto';
       sidebar.style.overflowX = 'hidden';
@@ -74,8 +74,8 @@
       toggle.style.top = '1rem';
       toggle.style.right = '1rem';
       toggle.style.zIndex = '1402';
-      toggle.style.background = '#252526';
-      toggle.style.border = '1px solid #3e3e42';
+     // toggle.style.background = '#252526';
+     // toggle.style.border = '1px solid #3e3e42';
       toggle.style.borderRadius = '6px';
       toggle.style.padding = '12px';
       toggle.style.cursor = 'pointer';
@@ -96,7 +96,7 @@
       backdrop.style.left = '0';
       backdrop.style.width = '100%';
       backdrop.style.height = '100%';
-      backdrop.style.background = 'rgba(0, 0, 0, 0.5)';
+     // backdrop.style.background = 'rgba(0, 0, 0, 0.5)';
       backdrop.style.zIndex = '1399';
       backdrop.style.opacity = '0';
       backdrop.style.visibility = 'hidden';
