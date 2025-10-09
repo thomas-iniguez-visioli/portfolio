@@ -23,9 +23,9 @@
       
       // Apply fallback styles programmatically
       var fallbackStyles = {
-        '--color-primary': '#2563eb',
-        '--color-background': '#ffffff',
-        '--color-text-primary': '#0f172a',
+       // '--color-primary': '#2563eb',
+     //   '--color-background': '#ffffff',
+      //  '--color-text-primary': '#0f172a',
         '--space-4': '1rem',
         '--border-radius-base': '4px',
         '--font-family-sans': 'Inter, system-ui, sans-serif',

@@ -46,7 +46,7 @@
         return DARK_THEME;
       }
 
-      return LIGHT_THEME;
+      return DARK_THEME;
     }
 
     /**
