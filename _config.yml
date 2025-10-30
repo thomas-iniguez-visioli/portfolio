@@ -81,7 +81,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-layout: blog
+
 # Category & Tag
 default_category: uncategorized
 category_map: 
@@ -130,7 +130,7 @@ build_optimization:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme
+theme: matrix-flow
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

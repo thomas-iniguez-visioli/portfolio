@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="<%- config.language %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- page.title ? page.title + ' | ' : '' %><%- config.title %></title>
+  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrix-canvas"></canvas>
+  <div class="site-container">
+    <header class="site-header">
+      <div class="logo-glitch" data-text="<%- theme.glitch_text || config.author %>">
+        <a href="<%- url_for('/') %>"><%- theme.glitch_text || config.author %></a>
+      </div>
+      <nav class="main-nav">
+        <% for (var i in theme.menu) { %>
+          <a href="<%- url_for(theme.menu[i]) %>" class="nav-item">[<%- i %>]</a>
+        <% } %>
+      </nav>
+    </header>
+    <main class="site-main">
+      <div class="main-content">
+        <%- body %>
+      </div>
+      <aside class="sidebar">
+        <%- partial('_partial/sidebar') %>
+      </aside>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; <%= new Date().getFullYear() %> <%- config.author %>. All rights reserved.</p>
+      <p class="social-links">
+        <% if (theme.social.github) { %>
+          <a href="https://github.com/<%= theme.social.github %>" target="_blank">[GitHub]</a>
+        <% } %>
+        <% if (theme.social.linkedin) { %>
+          <a href="https://linkedin.com/in/<%= theme.social.linkedin %>" target="_blank">[LinkedIn]</a>
+        <% } %>
+        <% if (theme.social.email) { %>
+          <a href="mailto:<%= theme.social.email %>">[Email]</a>
+        <% } %>
+      </p>
+    </footer>
+  </div>
+  <script src="<%- url_for('/js/matrix.js') %>"></script>
+</body>
+</html>

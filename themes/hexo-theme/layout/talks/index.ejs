@@ -1,9 +1,0 @@
-<%- partial('header') %>
-<% const posts = site.posts.find({ title: {$ne: ''} }).sort('date', -1) %>
-
-<main role="main">
-  <%- partial('talks/intro') %>
-  <%- partial('talks/catalog', {posts}) %>
-</main>
-
-<%- partial("footer", {}, { cache: true }) %>

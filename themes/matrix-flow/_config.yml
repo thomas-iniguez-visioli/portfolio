@@ -1,0 +1,18 @@
+
+# ------------------------------------
+# matrix-flow Theme Configuration
+# ------------------------------------
+
+# Social links that appear in the footer
+social:
+  github: your-github-username
+  linkedin: your-linkedin-profile
+  email: your-email@example.com
+
+# Glitch effect text on the home page
+glitch_text: 'PORTFOLIO'
+
+# Navigation menu
+menu:
+  Home: /
+  Archives: /archives

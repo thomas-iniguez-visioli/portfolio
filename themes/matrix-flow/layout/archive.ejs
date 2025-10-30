@@ -1,0 +1,26 @@
+<%
+  // This is the template for the archive page.
+%>
+<div class="archive-page">
+  <h1 class="page-title">[ARCHIVES]</h1>
+  <% const years = {}; %>
+  <% site.posts.sort('date', -1).each(function(post) { %>
+    <% const year = date(post.date, 'YYYY'); %>
+    <% if (!years[year]) { %>
+      <% years[year] = []; %>
+    <% } %>
+    <% years[year].push(post); %>
+  <% }); %>
+
+  <% Object.keys(years).sort().reverse().forEach(function(year) { %>
+    <h2 class="archive-year">== <%- year %> ==</h2>
+    <ul class="archive-list">
+      <% years[year].forEach(function(post) { %>
+        <li class="archive-item">
+          <span class="archive-date"><%- date(post.date, 'MM-DD') %></span>
+          <a href="<%- url_for(post.path) %>" class="archive-title"><%- post.title %></a>
+        </li>
+      <% }); %>
+    </ul>
+  <% }); %>
+</div>

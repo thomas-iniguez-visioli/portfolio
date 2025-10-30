@@ -1,0 +1,30 @@
+<%
+  // This is the template for the homepage.
+  // It iterates through your posts and displays them as a list.
+%>
+<div class="post-list">
+  <% page.posts.each(function(post){ %>
+    <article class="post-list-item">
+      <h2 class="post-title">
+        <a href="<%- url_for(post.path) %>"><%- post.title || 'Untitled' %></a>
+      </h2>
+      <div class="post-meta">
+        <span>[<%- date(post.date, 'YYYY-MM-DD') %>]</span>
+      </div>
+      <div class="post-excerpt">
+        <%- post.excerpt || post.content %>
+      </div>
+    </article>
+  <% }) %>
+</div>
+
+<%# --- PAGINATION --- %>
+<% if (page.total > 1) { %>
+<nav class="pagination">
+  <%- paginator({
+    prev_text: '[PREV]',
+    next_text: '[NEXT]',
+    escape: false
+  }) %>
+</nav>
+<% } %>

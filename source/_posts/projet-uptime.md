@@ -8,6 +8,7 @@ categories:
   - reading-note
 authors:
     - thomas iniguez visioli
+lien: https://thomas-iniguez-visioli.github.io/status/
 ---
 pour voir si un site est en panne 
 <a href="https://thomas-iniguez-visioli.github.io/status/">[lien actif]</a>

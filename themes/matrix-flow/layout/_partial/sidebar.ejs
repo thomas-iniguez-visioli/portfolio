@@ -1,0 +1,31 @@
+<div class="widget">
+  <h3 class="widget-title">Projets</h3>
+  <ul class="widget-list">
+    <% site.posts.each(function(post){ %>
+      <li><a href="<%- url_for(post.path) %>"><%- post.title %></a></li>
+    <% }) %>
+  </ul>
+</div>
+
+<div class="widget">
+  <h3 class="widget-title">Preuves</h3>
+  <ul class="widget-list">
+    <% site.posts.each(function(post){ %>
+      <% if (post.lien) { %>
+        <li><a href="<%- url_for(post.lien) %>" target="_blank"><%- post.title %> (preuve)</a></li>
+      <% } %>
+    <% }) %>
+  </ul>
+</div>
+
+<div class="widget">
+  <h3 class="widget-title">Compétences</h3>
+  <div class="skills-list">
+    <!-- Vous pouvez ajouter vos compétences ici -->
+    <span class="skill">JavaScript</span>
+    <span class="skill">HTML</span>
+    <span class="skill">CSS</span>
+    <span class="skill">Node.js</span>
+    <span class="skill">Hexo</span>
+  </div>
+</div>

@@ -8,6 +8,7 @@ categories:
   - reading-note
 authors:
     - thomas iniguez visioli
+lien: https://france-nuit.github.io/
 ---
 projet de site internet parodique destiné à parodier France soir 
 <a href="https://france-nuit.github.io/">un lien</a>

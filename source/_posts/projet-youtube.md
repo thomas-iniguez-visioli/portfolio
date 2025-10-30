@@ -8,6 +8,7 @@ categories:
   - reading-note
 authors:
     - thomas iniguez visioli
+lien: https://github.com/thomas-iniguez-visioli/youtube-public/releases/latest
 ---
 un outil pour regarder youtube sans pub 
 <a href="https://github.com/thomas-iniguez-visioli/youtube-public/releases/latest">[download]</a>

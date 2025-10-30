@@ -8,6 +8,7 @@ categories:
   - reading-note
 authors:
     - thomas iniguez visioli
+lien: https://france-nuit.github.io/article/
 ---
 Là où j'ai aidé à faire appliquer le rgpd 
 <a href="https://france-nuit.github.io/article/">[redacted]</a> 
