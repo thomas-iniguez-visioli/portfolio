@@ -12,17 +12,15 @@
   <%- resource_hints() %>
   
   <!-- Critical CSS inlined for faster rendering -->
-  <%- critical_css() %>
+
   
   <!-- Performance configuration -->
-  <%- performance_scripts() %>
-  
+
   <!-- Non-critical CSS loaded asynchronously -->
-  <%- non_critical_css(url_for('/css/newsletter.css')) %>
-  <%- non_critical_css(url_for('/css/lazy-loading.css')) %>
+
   
   <!-- Fonts with optimized loading -->
-  <%- preload_fonts() %>
+
 </head>
 <body>
   <canvas id="matrix-canvas"></canvas>

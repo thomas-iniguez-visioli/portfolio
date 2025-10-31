@@ -1,4 +1,4 @@
-<%
+
 /**
  * Non-Critical CSS Loader - Auto-generated
  * Loads non-critical CSS asynchronously after page load
@@ -29,4 +29,3 @@ function resource_hints() {
 function critical_css() {
     return partial('_partial/critical-css');
 }
-%>
