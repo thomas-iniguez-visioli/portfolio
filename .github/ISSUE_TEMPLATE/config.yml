@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Newsletter Subscription
+    url: https://github.com/owner/repo/issues/new?template=newsletter_subscription.yml
+    about: Subscribe to receive newsletter updates about the portfolio
+  - name: General Questions
+    url: https://github.com/owner/repo/discussions
+    about: Ask questions and discuss topics in GitHub Discussions

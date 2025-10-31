@@ -1,0 +1,150 @@
+name: Newsletter Scheduler
+
+on:
+  schedule:
+    # Check for scheduled newsletters every hour
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      newsletter_file:
+        description: 'Newsletter file to send (optional)'
+        required: false
+        type: string
+      force_send:
+        description: 'Force send even if not scheduled'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  check-scheduled-newsletters:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: newsletter-program/package-lock.json
+          
+      - name: Install dependencies
+        run: |
+          cd newsletter-program
+          npm ci
+          
+      - name: Check for scheduled newsletters
+        id: check-newsletters
+        run: |
+          cd newsletter-program
+          node -e "
+          const NewsletterComposer = require('./src/core/newsletter-composer.js');
+          const composer = new NewsletterComposer();
+          
+          async function checkScheduled() {
+            try {
+              const newsletters = await composer.listNewsletters();
+              const now = new Date();
+              const scheduled = newsletters.filter(n => 
+                n.scheduledAt && 
+                n.scheduledAt <= now && 
+                n.status === 'scheduled'
+              );
+              
+              if (scheduled.length > 0) {
+                console.log('SCHEDULED_NEWSLETTERS=' + JSON.stringify(scheduled.map(n => n.file)));
+                process.exit(0);
+              } else {
+                console.log('SCHEDULED_NEWSLETTERS=[]');
+                process.exit(0);
+              }
+            } catch (error) {
+              console.error('Error checking scheduled newsletters:', error);
+              process.exit(1);
+            }
+          }
+          
+          checkScheduled();
+          " >> $GITHUB_OUTPUT
+          
+      - name: Send scheduled newsletters
+        if: steps.check-newsletters.outputs.SCHEDULED_NEWSLETTERS != '[]'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          cd newsletter-program
+          echo '${{ steps.check-newsletters.outputs.SCHEDULED_NEWSLETTERS }}' | jq -r '.[]' | while read newsletter; do
+            echo "Sending scheduled newsletter: $newsletter"
+            node src/cli/newsletter-cli.js send "$newsletter" --scheduled
+          done
+          
+      - name: Send manual newsletter
+        if: github.event.inputs.newsletter_file != ''
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          cd newsletter-program
+          if [ "${{ github.event.inputs.force_send }}" = "true" ]; then
+            node src/cli/newsletter-cli.js send "${{ github.event.inputs.newsletter_file }}" --force
+          else
+            node src/cli/newsletter-cli.js send "${{ github.event.inputs.newsletter_file }}"
+          fi
+          
+      - name: Archive sent newsletters
+        if: steps.check-newsletters.outputs.SCHEDULED_NEWSLETTERS != '[]' || github.event.inputs.newsletter_file != ''
+        run: |
+          cd newsletter-program
+          node -e "
+          const NewsletterComposer = require('./src/core/newsletter-composer.js');
+          const composer = new NewsletterComposer();
+          
+          async function archiveSent() {
+            try {
+              const newsletters = JSON.parse('${{ steps.check-newsletters.outputs.SCHEDULED_NEWSLETTERS }}');
+              if ('${{ github.event.inputs.newsletter_file }}') {
+                newsletters.push('${{ github.event.inputs.newsletter_file }}');
+              }
+              
+              for (const newsletter of newsletters) {
+                const filePath = \`newsletters/\${newsletter}\`;
+                await composer.archiveNewsletter(filePath);
+                console.log(\`Archived: \${newsletter}\`);
+              }
+            } catch (error) {
+              console.error('Error archiving newsletters:', error);
+            }
+          }
+          
+          archiveSent();
+          "
+          
+      - name: Commit archived newsletters
+        if: steps.check-newsletters.outputs.SCHEDULED_NEWSLETTERS != '[]' || github.event.inputs.newsletter_file != ''
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add newsletters/archive/
+          git diff --staged --quiet || git commit -m "Archive sent newsletters [skip ci]"
+          git push
+          
+      - name: Notify Discord
+        if: always() && (steps.check-newsletters.outputs.SCHEDULED_NEWSLETTERS != '[]' || github.event.inputs.newsletter_file != '')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            curl -H "Content-Type: application/json" \
+                 -d "{\"content\":\"✅ Newsletter scheduler completed successfully\"}" \
+                 $DISCORD_WEBHOOK_URL
+          else
+            curl -H "Content-Type: application/json" \
+                 -d "{\"content\":\"❌ Newsletter scheduler failed\"}" \
+                 $DISCORD_WEBHOOK_URL
+          fi

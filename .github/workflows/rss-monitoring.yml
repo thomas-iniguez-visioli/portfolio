@@ -1,0 +1,128 @@
+name: RSS Feed Monitoring
+
+on:
+  schedule:
+    # Run every hour
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      force_check:
+        description: 'Force check all feeds regardless of interval'
+        type: boolean
+        required: false
+        default: false
+      send_newsletter:
+        description: 'Automatically send newsletter if new items found'
+        type: boolean
+        required: false
+        default: true
+
+jobs:
+  monitor-rss:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: newsletter-program/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd newsletter-program
+        npm ci
+        
+    - name: Check RSS feeds
+      id: rss_check
+      run: |
+        # Run RSS monitoring using GitHub Actions-specific script
+        node .github/scripts/rss-monitor-action.js monitor >> $GITHUB_OUTPUT
+      env:
+        RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
+        FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+        FROM_NAME: ${{ secrets.FROM_NAME }}
+        WEBSITE_URL: ${{ secrets.WEBSITE_URL }}
+        UNSUBSCRIBE_SECRET: ${{ secrets.UNSUBSCRIBE_SECRET }}
+        SEND_NEWSLETTER: ${{ github.event.inputs.send_newsletter }}
+        
+    - name: Commit RSS cache updates
+      if: steps.rss_check.outputs.new_items > 0
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Add RSS cache files from repository data directory if they exist and have changes
+        if [ -f ".github/data/rss-cache.json" ]; then
+          git add .github/data/rss-cache.json
+        fi
+        
+        if [ -f ".github/data/rss-feeds.json" ]; then
+          git add .github/data/rss-feeds.json
+        fi
+        
+        # Add encrypted subscriber file if updated
+        if [ -f ".github/data/subscribers.encrypted.json" ]; then
+          git add .github/data/subscribers.encrypted.json
+        fi
+        
+        # Only commit if there are changes
+        if ! git diff --staged --quiet; then
+          git commit -m "Update RSS cache and subscriber data with new items [skip ci]"
+          git push
+        else
+          echo "No RSS cache changes to commit"
+        fi
+        
+    - name: Send Discord notification
+      if: always()
+      run: |
+        if [ "${{ job.status }}" == "success" ]; then
+          STATUS_EMOJI="✅"
+          STATUS_COLOR="3066993"
+          STATUS_TEXT="Success"
+        else
+          STATUS_EMOJI="❌"
+          STATUS_COLOR="15158332"
+          STATUS_TEXT="Failed"
+        fi
+        
+        NEW_ITEMS="${{ steps.rss_check.outputs.new_items || 0 }}"
+        NEWSLETTERS_SENT="${{ steps.rss_check.outputs.newsletters_sent || 0 }}"
+        TOTAL_FEEDS="${{ steps.rss_check.outputs.total_feeds || 0 }}"
+        ERRORS="${{ steps.rss_check.outputs.errors || 0 }}"
+        
+        curl -H "Content-Type: application/json" \
+             -X POST \
+             -d "{
+               \"embeds\": [{
+                 \"title\": \"$STATUS_EMOJI RSS Monitoring $STATUS_TEXT\",
+                 \"color\": $STATUS_COLOR,
+                 \"fields\": [
+                   {
+                     \"name\": \"📊 Summary\",
+                     \"value\": \"Feeds: $TOTAL_FEEDS\\nNew Items: $NEW_ITEMS\\nNewsletters Sent: $NEWSLETTERS_SENT\",
+                     \"inline\": true
+                   },
+                   {
+                     \"name\": \"🔍 Status\",
+                     \"value\": \"Errors: $ERRORS\\nTrigger: ${{ github.event_name }}\",
+                     \"inline\": true
+                   },
+                   {
+                     \"name\": \"🔗 Links\",
+                     \"value\": \"[View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\",
+                     \"inline\": false
+                   }
+                 ],
+                 \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"
+               }]
+             }" \
+             ${{ secrets.DISCORD_WEBHOOK_URL }}
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

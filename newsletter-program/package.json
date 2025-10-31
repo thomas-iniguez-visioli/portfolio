@@ -1,0 +1,44 @@
+{
+  "name": "newsletter-program",
+  "version": "1.0.0",
+  "description": "Standalone newsletter management program with RSS monitoring and encryption",
+  "main": "src/index.js",
+  "bin": {
+    "newsletter": "./src/cli/index.js",
+    "newsletter-subscribers": "./src/cli/subscriber-cli.js",
+    "newsletter-send": "./src/cli/newsletter-cli.js",
+    "newsletter-rss": "./src/cli/rss-cli.js",
+    "newsletter-analytics": "./src/cli/analytics-cli.js",
+    "newsletter-export": "./src/cli/export-cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli/index.js",
+    "subscribers": "node src/cli/subscriber-cli.js",
+    "newsletter": "node src/cli/newsletter-cli.js",
+    "rss": "node src/cli/rss-cli.js",
+    "analytics": "node src/cli/analytics-cli.js",
+    "export": "node src/cli/export-cli.js",
+    "test": "vitest --run",
+    "dev": "node --watch src/cli/index.js"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "js-yaml": "^4.1.0",
+    "marked": "^9.1.6",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "jsdom": "^27.1.0",
+    "vitest": "^1.0.4"
+  },
+  "keywords": [
+    "newsletter",
+    "email",
+    "rss",
+    "encryption",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT"
+}

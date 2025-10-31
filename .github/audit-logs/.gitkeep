@@ -1,0 +1,21 @@
+# Audit Logs Directory
+
+This directory contains audit logs for newsletter subscription processing.
+
+## Log Files
+
+- `newsletter-subscriptions.log` - Main audit log for all subscription processing activities
+- `issue-deletions.log` - Log of automated issue deletions for compliance
+
+## Retention Policy
+
+Audit logs are retained for compliance and debugging purposes. They contain:
+- Timestamps of all processing activities
+- Issue numbers and basic metadata
+- Processing results (success/failure)
+- No sensitive personal information (emails are masked in logs)
+
+## Privacy Notice
+
+These logs are designed to maintain audit trails while protecting user privacy.
+Email addresses and personal information are not stored in plain text in these logs.

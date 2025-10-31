@@ -1,0 +1,68 @@
+<div class="widget newsletter-widget" data-lazy="newsletter-widget" data-modules="/js/newsletter.js">
+  <h3 class="widget-title">Newsletter</h3>
+  <p class="newsletter-description">
+    Restez informé des dernières mises à jour du portfolio et des nouveaux projets.
+  </p>
+  
+  <form id="newsletter-form" class="newsletter-form">
+    <div class="form-group">
+      <label for="newsletter-email" class="form-label">Email</label>
+      <input 
+        type="email" 
+        id="newsletter-email" 
+        name="email" 
+        class="form-input" 
+        placeholder="votre-email@exemple.com"
+        required
+      >
+      <div class="form-error" id="email-error"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="newsletter-frequency" class="form-label">Fréquence</label>
+      <select id="newsletter-frequency" name="frequency" class="form-select" required>
+        <option value="">Choisir...</option>
+        <option value="Weekly">Hebdomadaire</option>
+        <option value="Monthly">Mensuelle</option>
+        <option value="Major updates only">Mises à jour importantes uniquement</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label class="form-label">Sujets d'intérêt (optionnel)</label>
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="topics" value="development"> Développement
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="topics" value="portfolio"> Portfolio
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="topics" value="articles"> Articles techniques
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="topics" value="projects"> Annonces de projets
+        </label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="checkbox-label consent-checkbox">
+        <input type="checkbox" id="newsletter-consent" name="consent" required>
+        J'accepte de recevoir la newsletter et comprends que mes données seront chiffrées et stockées de manière sécurisée.
+      </label>
+    </div>
+    
+    <button type="submit" class="newsletter-submit" id="newsletter-submit">
+      <span class="submit-text">S'abonner</span>
+      <span class="submit-loading" style="display: none;">Traitement...</span>
+    </button>
+    
+    <div class="newsletter-message" id="newsletter-message"></div>
+  </form>
+  
+  <div class="newsletter-success" id="newsletter-success" style="display: none;">
+    <h4>✅ Inscription réussie!</h4>
+    <p>Merci de vous être abonné à la newsletter. Vous recevrez bientôt un email de confirmation.</p>
+  </div>
+</div>

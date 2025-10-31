@@ -16,3 +16,19 @@ glitch_text: 'PORTFOLIO'
 menu:
   Home: /
   Archives: /archives
+
+# Newsletter configuration
+newsletter:
+  # GitHub repository for issue-based subscriptions
+  github_owner: your-github-username
+  github_repo: your-repo-name
+  
+  # Use GitHub redirect method (true) or API endpoint (false)
+  use_github_redirect: true
+  
+  # Optional: API endpoint for backend processing
+  # api_endpoint: https://your-api.com/newsletter/subscribe
+  
+  # Widget placement
+  enabled: true
+  position: sidebar  # sidebar, footer, or header

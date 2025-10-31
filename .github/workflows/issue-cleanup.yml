@@ -1,0 +1,141 @@
+name: Newsletter Issue Cleanup
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  cleanup-processed-issues:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      issues: write
+      contents: read
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Find and delete old processed issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            
+            // Configuration
+            const DELETION_DELAY_HOURS = 24; // Configurable delay before deletion
+            const LABELS_TO_DELETE = ['scheduled-for-deletion'];
+            
+            console.log(`Looking for issues with labels: ${LABELS_TO_DELETE.join(', ')}`);
+            
+            // Get all closed issues with deletion labels
+            const issues = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'closed',
+              labels: LABELS_TO_DELETE.join(','),
+              per_page: 100
+            });
+            
+            console.log(`Found ${issues.data.length} issues marked for deletion`);
+            
+            const now = new Date();
+            const deletionCutoff = new Date(now.getTime() - (DELETION_DELAY_HOURS * 60 * 60 * 1000));
+            
+            for (const issue of issues.data) {
+              const closedAt = new Date(issue.closed_at);
+              const issueAge = now - closedAt;
+              const hoursOld = issueAge / (1000 * 60 * 60);
+              
+              console.log(`Issue #${issue.number}: closed ${hoursOld.toFixed(1)} hours ago`);
+              
+              if (closedAt < deletionCutoff) {
+                try {
+                  // Create final audit log entry before deletion
+                  console.log(`Deleting issue #${issue.number} (${issue.title})`);
+                  
+                  // Add final audit log
+                  const auditEntry = {
+                    timestamp: now.toISOString(),
+                    action: 'issue_deleted',
+                    issue_number: issue.number,
+                    issue_title: issue.title,
+                    closed_at: issue.closed_at,
+                    deletion_reason: 'Automated cleanup after processing delay',
+                    labels: issue.labels.map(label => label.name)
+                  };
+                  
+                  console.log('Audit entry:', JSON.stringify(auditEntry, null, 2));
+                  
+                  // Note: GitHub API doesn't allow deleting issues
+                  // Instead, we'll lock the conversation and add a final comment
+                  await github.rest.issues.createComment({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    body: `🔒 **Issue Archived**\\n\\nThis newsletter subscription issue has been automatically archived after the ${DELETION_DELAY_HOURS}-hour retention period for privacy protection.\\n\\n**Archived at:** ${now.toISOString()}`
+                  });
+                  
+                  // Lock the conversation
+                  await github.rest.issues.lock({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    lock_reason: 'resolved'
+                  });
+                  
+                  // Remove deletion label and add archived label
+                  await github.rest.issues.removeLabel({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    name: 'scheduled-for-deletion'
+                  });
+                  
+                  await github.rest.issues.addLabels({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    labels: ['newsletter-archived']
+                  });
+                  
+                  console.log(`✅ Issue #${issue.number} archived successfully`);
+                  
+                } catch (error) {
+                  console.error(`❌ Failed to archive issue #${issue.number}:`, error.message);
+                  
+                  // Add error label for manual review
+                  try {
+                    await github.rest.issues.addLabels({
+                      owner,
+                      repo,
+                      issue_number: issue.number,
+                      labels: ['cleanup-error']
+                    });
+                  } catch (labelError) {
+                    console.error(`Failed to add error label:`, labelError.message);
+                  }
+                }
+              } else {
+                console.log(`⏳ Issue #${issue.number} not old enough for deletion (${hoursOld.toFixed(1)}h < ${DELETION_DELAY_HOURS}h)`);
+              }
+            }
+            
+            console.log('Cleanup process completed');
+            
+      - name: Create cleanup summary
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const summary = `## Newsletter Issue Cleanup Summary
+            
+            **Run Date:** ${new Date().toISOString()}
+            **Retention Period:** 24 hours
+            **Action:** Archive processed newsletter subscription issues
+            
+            This automated cleanup helps maintain privacy by archiving newsletter subscription issues after they've been processed.
+            `;
+            
+            console.log(summary);

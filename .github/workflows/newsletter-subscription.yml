@@ -1,0 +1,439 @@
+name: Newsletter Subscription Processor
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  process-newsletter-subscription:
+    if: contains(github.event.issue.labels.*.name, 'newsletter-subscription')
+    runs-on: ubuntu-latest
+    
+    permissions:
+      issues: write
+      contents: read
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: |
+          npm ci
+          
+      - name: Extract subscription data from issue
+        id: extract-data
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || '';
+            
+            // Extract form data using regex patterns
+            const extractField = (fieldName, body) => {
+              const regex = new RegExp(`### ${fieldName}\\s*\\n\\s*([^\\n]+)`, 'i');
+              const match = body.match(regex);
+              return match ? match[1].trim() : '';
+            };
+            
+            const extractCheckboxes = (fieldName, body) => {
+              const regex = new RegExp(`### ${fieldName}[\\s\\S]*?(?=###|$)`, 'i');
+              const section = body.match(regex);
+              if (!section) return [];
+              
+              const checkboxRegex = /- \[x\] (.+)/gi;
+              const matches = [...section[0].matchAll(checkboxRegex)];
+              return matches.map(match => match[1].trim());
+            };
+            
+            // Extract data
+            const email = extractField('Email Address', body);
+            const frequency = extractField('Newsletter Frequency', body);
+            const format = extractField('Email Format', body);
+            const topics = extractCheckboxes('Topics of Interest', body);
+            const consent = extractCheckboxes('Consent & Privacy', body);
+            const additionalInfo = extractField('Additional Information \\(Optional\\)', body);
+            
+            // Validate required fields
+            const errors = [];
+            if (!email) errors.push('Email address is required');
+            if (!frequency) errors.push('Newsletter frequency is required');
+            if (!format) errors.push('Email format is required');
+            if (consent.length < 3) errors.push('All consent checkboxes must be checked');
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email)) {
+              errors.push('Invalid email format');
+            }
+            
+            const subscriptionData = {
+              email,
+              frequency,
+              format,
+              topics,
+              consent,
+              additionalInfo,
+              issueNumber: issue.number,
+              createdAt: issue.created_at,
+              errors
+            };
+            
+            console.log('Extracted subscription data:', JSON.stringify(subscriptionData, null, 2));
+            
+            // Set outputs
+            core.setOutput('email', email);
+            core.setOutput('frequency', frequency);
+            core.setOutput('format', format);
+            core.setOutput('topics', JSON.stringify(topics));
+            core.setOutput('consent', JSON.stringify(consent));
+            core.setOutput('additional_info', additionalInfo);
+            core.setOutput('errors', JSON.stringify(errors));
+            core.setOutput('is_valid', errors.length === 0);
+            core.setOutput('subscription_data', JSON.stringify(subscriptionData));
+            
+            return subscriptionData;
+            
+      - name: Create audit log entry
+        id: audit-log
+        run: |
+          # Create audit log directory if it doesn't exist
+          mkdir -p .github/audit-logs
+          
+          # Create audit log entry
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          LOG_FILE=".github/audit-logs/newsletter-subscriptions.log"
+          
+          echo "[$TIMESTAMP] Processing newsletter subscription issue #${{ github.event.issue.number }}" >> $LOG_FILE
+          echo "  Email: ${{ steps.extract-data.outputs.email }}" >> $LOG_FILE
+          echo "  Frequency: ${{ steps.extract-data.outputs.frequency }}" >> $LOG_FILE
+          echo "  Valid: ${{ steps.extract-data.outputs.is_valid }}" >> $LOG_FILE
+          echo "  Errors: ${{ steps.extract-data.outputs.errors }}" >> $LOG_FILE
+          echo "  Issue URL: ${{ github.event.issue.html_url }}" >> $LOG_FILE
+          echo "---" >> $LOG_FILE
+          
+          echo "audit_timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
+          
+      - name: Add subscriber to encrypted storage
+        if: steps.extract-data.outputs.is_valid == 'true'
+        id: add-subscriber
+        env:
+          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+          STORAGE_DIR: '.github/data'
+          OPERATION: 'add'
+          SUBSCRIBER_EMAIL: ${{ steps.extract-data.outputs.email }}
+          SUBSCRIBER_FREQUENCY: ${{ steps.extract-data.outputs.frequency }}
+          SUBSCRIBER_FORMAT: ${{ steps.extract-data.outputs.format }}
+          SUBSCRIBER_TOPICS: ${{ steps.extract-data.outputs.topics }}
+          SUBSCRIBER_ADDITIONAL_INFO: ${{ steps.extract-data.outputs.additional_info }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          echo "💾 Adding subscriber to encrypted storage"
+          
+          # Check if encryption key is configured
+          if [ -z "$ENCRYPTION_KEY" ]; then
+            echo "❌ ENCRYPTION_KEY not configured"
+            echo "storage_success=false" >> $GITHUB_OUTPUT
+            echo "storage_error=ENCRYPTION_KEY not configured" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          
+          # Run the subscriber management script
+          node .github/scripts/manage-subscribers.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Subscriber added to encrypted storage successfully"
+            echo "storage_success=true" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Failed to add subscriber to encrypted storage"
+            echo "storage_success=false" >> $GITHUB_OUTPUT
+            echo "storage_error=Failed to add to encrypted storage" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Process valid subscription
+        if: steps.add-subscriber.outputs.storage_success == 'true'
+        id: process-subscription
+        run: |
+          echo "Processing valid subscription for: ${{ steps.extract-data.outputs.email }}"
+          
+          # Check if this is a duplicate subscription
+          if [ "${{ steps.add-subscriber.outputs.is_duplicate }}" = "true" ]; then
+            echo "⚠️ Duplicate subscription detected"
+            echo "success=true" >> $GITHUB_OUTPUT
+            echo "is_duplicate=true" >> $GITHUB_OUTPUT
+          else
+            echo "✅ New subscription processed successfully"
+            echo "success=true" >> $GITHUB_OUTPUT
+            echo "is_duplicate=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Send welcome email via Resend
+        if: steps.process-subscription.outputs.success == 'true' && steps.process-subscription.outputs.is_duplicate == 'false'
+        id: send-welcome-email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'newsletter@yourdomain.com' }}
+          PORTFOLIO_URL: ${{ secrets.PORTFOLIO_URL || 'https://your-portfolio.com' }}
+          UNSUBSCRIBE_URL: ${{ secrets.UNSUBSCRIBE_URL || 'https://your-portfolio.com/unsubscribe' }}
+          CONTACT_URL: ${{ secrets.CONTACT_URL || 'https://your-portfolio.com/contact' }}
+          SUBSCRIBER_EMAIL: ${{ steps.extract-data.outputs.email }}
+          SUBSCRIBER_FREQUENCY: ${{ steps.extract-data.outputs.frequency }}
+          SUBSCRIBER_FORMAT: ${{ steps.extract-data.outputs.format }}
+          SUBSCRIBER_TOPICS: ${{ steps.extract-data.outputs.topics }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+        run: |
+          echo "🚀 Sending welcome email to ${{ steps.extract-data.outputs.email }}"
+          
+          # Check if Resend API key is configured
+          if [ -z "$RESEND_API_KEY" ]; then
+            echo "⚠️ RESEND_API_KEY not configured, skipping email send"
+            echo "email_sent=false" >> $GITHUB_OUTPUT
+            echo "email_error=RESEND_API_KEY not configured" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # Run the welcome email script
+          node .github/scripts/send-welcome-email.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Welcome email sent successfully"
+            echo "email_sent=true" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Failed to send welcome email"
+            echo "email_sent=false" >> $GITHUB_OUTPUT
+            echo "email_error=Failed to send via Resend API" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Send Discord notification
+        if: steps.process-subscription.outputs.success == 'true' && steps.process-subscription.outputs.is_duplicate == 'false'
+        id: send-discord-notification
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_BOT_NAME: ${{ secrets.DISCORD_BOT_NAME || 'Newsletter Bot' }}
+          DISCORD_BOT_AVATAR: ${{ secrets.DISCORD_BOT_AVATAR }}
+          SUBSCRIBER_EMAIL: ${{ steps.extract-data.outputs.email }}
+          SUBSCRIBER_FREQUENCY: ${{ steps.extract-data.outputs.frequency }}
+          SUBSCRIBER_FORMAT: ${{ steps.extract-data.outputs.format }}
+          SUBSCRIBER_TOPICS: ${{ steps.extract-data.outputs.topics }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          NOTIFICATION_TYPE: 'success'
+        run: |
+          echo "🔔 Sending Discord notification for new subscriber"
+          
+          # Check if Discord webhook is configured
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "⚠️ DISCORD_WEBHOOK_URL not configured, skipping Discord notification"
+            echo "discord_sent=false" >> $GITHUB_OUTPUT
+            echo "discord_error=DISCORD_WEBHOOK_URL not configured" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # Run the Discord notification script
+          node .github/scripts/send-discord-notification.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Discord notification sent successfully"
+            echo "discord_sent=true" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Failed to send Discord notification"
+            echo "discord_sent=false" >> $GITHUB_OUTPUT
+            echo "discord_error=Failed to send Discord webhook" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Label issue as processed (success)
+        if: steps.process-subscription.outputs.success == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['newsletter-processed', 'subscription-success']
+            });
+            
+      - name: Comment on duplicate subscription
+        if: steps.process-subscription.outputs.success == 'true' && steps.process-subscription.outputs.is_duplicate == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = `## ⚠️ Duplicate Subscription Detected
+            
+            The email address \`${{ steps.extract-data.outputs.email }}\` is already subscribed to the newsletter.
+            
+            **Existing Subscription Details:**
+            - Email: \`${{ steps.extract-data.outputs.email }}\`
+            - Status: Active
+            - Previously subscribed via GitHub issue
+            
+            No changes have been made to your existing subscription. If you need to update your preferences, please contact us directly.
+            
+            **Processed at:** ${{ steps.audit-log.outputs.audit_timestamp }}
+            
+            This issue will be automatically closed and deleted in 24 hours for privacy protection.`;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+
+      - name: Comment on successful processing
+        if: steps.process-subscription.outputs.success == 'true' && steps.process-subscription.outputs.is_duplicate == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const emailSent = '${{ steps.send-welcome-email.outputs.email_sent }}' === 'true';
+            const emailError = '${{ steps.send-welcome-email.outputs.email_error }}';
+            const discordSent = '${{ steps.send-discord-notification.outputs.discord_sent }}' === 'true';
+            const discordError = '${{ steps.send-discord-notification.outputs.discord_error }}';
+            
+            let emailStatus = '';
+            if (emailSent) {
+              emailStatus = '📧 **Welcome email:** Sent successfully to your email address';
+            } else if (emailError) {
+              emailStatus = `⚠️ **Welcome email:** Failed to send (${emailError})`;
+            } else {
+              emailStatus = '📧 **Welcome email:** Processing...';
+            }
+            
+            let discordStatus = '';
+            if (discordSent) {
+              discordStatus = '🔔 **Discord notification:** Sent to admin channel';
+            } else if (discordError) {
+              discordStatus = `⚠️ **Discord notification:** Failed (${discordError})`;
+            } else {
+              discordStatus = '🔔 **Discord notification:** Not configured';
+            }
+            
+            const comment = `## ✅ Subscription Processed Successfully
+            
+            Thank you for subscribing to the newsletter!
+            
+            **Details:**
+            - Email: \`${{ steps.extract-data.outputs.email }}\`
+            - Frequency: ${{ steps.extract-data.outputs.frequency }}
+            - Format: ${{ steps.extract-data.outputs.format }}
+            - Topics: ${{ steps.extract-data.outputs.topics }}
+            
+            **Status:**
+            ${emailStatus}
+            ${discordStatus}
+            
+            **Processed at:** ${{ steps.audit-log.outputs.audit_timestamp }}
+            
+            This issue will be automatically closed and deleted in 24 hours for privacy protection.`;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+            
+      - name: Send Discord error notification
+        if: steps.extract-data.outputs.is_valid == 'false'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_BOT_NAME: ${{ secrets.DISCORD_BOT_NAME || 'Newsletter Bot' }}
+          DISCORD_BOT_AVATAR: ${{ secrets.DISCORD_BOT_AVATAR }}
+          SUBSCRIBER_EMAIL: ${{ steps.extract-data.outputs.email }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          VALIDATION_ERRORS: ${{ steps.extract-data.outputs.errors }}
+          NOTIFICATION_TYPE: 'error'
+        run: |
+          echo "🔔 Sending Discord error notification"
+          
+          # Send Discord error notification if configured
+          if [ -n "$DISCORD_WEBHOOK_URL" ]; then
+            node .github/scripts/send-discord-notification.js || echo "Failed to send Discord error notification"
+          else
+            echo "⚠️ DISCORD_WEBHOOK_URL not configured, skipping Discord error notification"
+          fi
+
+      - name: Handle validation errors
+        if: steps.extract-data.outputs.is_valid == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const errors = JSON.parse('${{ steps.extract-data.outputs.errors }}');
+            
+            // Add error labels
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['newsletter-error', 'validation-failed']
+            });
+            
+            // Comment with error details
+            const errorList = errors.map(error => `- ${error}`).join('\\n');
+            const comment = `## ❌ Subscription Processing Failed
+            
+            There were validation errors with your subscription request:
+            
+            ${errorList}
+            
+            Please create a new issue with the correct information.
+            
+            **Processed at:** ${{ steps.audit-log.outputs.audit_timestamp }}
+            
+            This issue will be automatically closed and deleted in 24 hours.`;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+            
+      - name: Schedule issue deletion
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Close the issue first
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });
+            
+            // Add a label to mark for deletion
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['scheduled-for-deletion']
+            });
+            
+            console.log('Issue closed and marked for deletion');
+            
+      - name: Commit encrypted storage and audit logs
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Add encrypted storage files and audit logs
+          git add .github/data/ .github/audit-logs/
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update encrypted subscriber storage and audit log for issue #${{ github.event.issue.number }}"
+            git push || echo "Failed to push changes"
+          fi

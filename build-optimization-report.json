@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-10-31T16:41:15.302Z",
+  "duration": "128ms",
+  "optimizations": {
+    "criticalCSS": {
+      "enabled": true,
+      "size": "7.88KB"
+    },
+    "codeSplitting": {
+      "enabled": true,
+      "strategy": "dynamic-imports"
+    },
+    "resourceHints": {
+      "preload": 5,
+      "prefetch": 3
+    }
+  },
+  "recommendations": []
+}

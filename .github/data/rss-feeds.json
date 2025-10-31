@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2024-10-31T00:00:00.000Z",
+  "lastModified": "2024-10-31T00:00:00.000Z",
+  "feeds": [
+    {
+      "id": "example-tech-blog",
+      "url": "https://feeds.feedburner.com/oreilly/radar",
+      "title": "O'Reilly Radar",
+      "description": "Technology insights and trends",
+      "isActive": false,
+      "checkInterval": 120,
+      "lastChecked": null,
+      "lastItemDate": null,
+      "settings": {
+        "autoSend": false,
+        "subjectPrefix": "[Tech News]",
+        "includeFullContent": false,
+        "maxItemsPerNewsletter": 3,
+        "template": "rss-newsletter"
+      },
+      "createdAt": "2024-10-31T00:00:00.000Z"
+    }
+  ]
+}

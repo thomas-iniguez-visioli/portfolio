@@ -3,10 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run clean &&  npx hexo deploy ",
-    "clean": "cd themes && cd hexo-theme && npm i && cd .. && cd .. &&  hexo clean",
+    "build": "npm run optimize && npm run clean && npx hexo deploy",
+    "build:fast": "npm run clean && npx hexo deploy",
+    "clean": "cd themes && cd hexo-theme && npm i && cd .. && cd .. && hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "optimize": "node scripts/build-optimizer.js",
+    "optimize:css": "node themes/matrix-flow/scripts/critical-css-extractor.js",
+    "test:performance": "node scripts/performance-test.js",
+    "test": "vitest --run",
+    "test:watch": "vitest"
   },
   "hexo": {
     "version": "7.3.0"
@@ -31,5 +37,11 @@
     "reading-time": "^1.5.0",
     "reveal.js": "^5.2.1",
     "somebody": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "jsdom": "^27.1.0",
+    "vite": "^7.1.12",
+    "vitest": "^4.0.6"
   }
 }

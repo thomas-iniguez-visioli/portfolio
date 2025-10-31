@@ -1,0 +1,237 @@
+name: Newsletter Distribution
+
+on:
+  workflow_dispatch:
+    inputs:
+      newsletter_file:
+        description: 'Newsletter markdown file path (relative to repository root)'
+        required: true
+        default: 'newsletters/latest.md'
+      subject_prefix:
+        description: 'Email subject prefix'
+        required: false
+        default: '[Newsletter]'
+      test_mode:
+        description: 'Send to test email only'
+        type: boolean
+        required: false
+        default: false
+      test_email:
+        description: 'Test email address (required if test_mode is true)'
+        required: false
+        default: ''
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: newsletter-program/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd newsletter-program
+        npm ci
+        
+    - name: Validate newsletter file exists
+      run: |
+        if [ ! -f "${{ github.event.inputs.newsletter_file }}" ]; then
+          echo "❌ Newsletter file not found: ${{ github.event.inputs.newsletter_file }}"
+          exit 1
+        fi
+        echo "✅ Newsletter file found: ${{ github.event.inputs.newsletter_file }}"
+        
+    - name: Validate test mode configuration
+      if: github.event.inputs.test_mode == 'true'
+      run: |
+        if [ -z "${{ github.event.inputs.test_email }}" ]; then
+          echo "❌ Test email is required when test_mode is enabled"
+          exit 1
+        fi
+        echo "✅ Test mode enabled with email: ${{ github.event.inputs.test_email }}"
+        
+    - name: Process newsletter content
+      id: process_newsletter
+      run: |
+        cd newsletter-program
+        
+        # Read newsletter content
+        NEWSLETTER_CONTENT=$(cat "../${{ github.event.inputs.newsletter_file }}")
+        
+        # Extract title from first line (assuming # Title format)
+        NEWSLETTER_TITLE=$(echo "$NEWSLETTER_CONTENT" | head -n1 | sed 's/^# //')
+        
+        # Generate HTML from markdown
+        node -e "
+        const fs = require('fs');
+        const content = fs.readFileSync('../${{ github.event.inputs.newsletter_file }}', 'utf8');
+        
+        // Simple markdown to HTML conversion
+        let html = content
+          .replace(/^# (.+)$/gm, '<h1>\$1</h1>')
+          .replace(/^## (.+)$/gm, '<h2>\$1</h2>')
+          .replace(/^### (.+)$/gm, '<h3>\$1</h3>')
+          .replace(/\*\*(.+?)\*\*/g, '<strong>\$1</strong>')
+          .replace(/\*(.+?)\*/g, '<em>\$1</em>')
+          .replace(/\[(.+?)\]\((.+?)\)/g, '<a href=\"\$2\">\$1</a>')
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>');
+        
+        html = '<p>' + html + '</p>';
+        
+        fs.writeFileSync('newsletter.html', html);
+        console.log('Newsletter HTML generated');
+        "
+        
+        # Set outputs
+        echo "title=$NEWSLETTER_TITLE" >> $GITHUB_OUTPUT
+        echo "html_file=newsletter-program/newsletter.html" >> $GITHUB_OUTPUT
+        
+    - name: Send newsletter (Test Mode)
+      if: github.event.inputs.test_mode == 'true'
+      run: |
+        cd newsletter-program
+        node -e "
+        const { NewsletterSender } = require('./src/core/newsletter-sender.js');
+        const fs = require('fs');
+        
+        async function sendTestNewsletter() {
+          try {
+            const sender = new NewsletterSender();
+            const htmlContent = fs.readFileSync('newsletter.html', 'utf8');
+            
+            const result = await sender.sendToEmail(
+              '${{ github.event.inputs.test_email }}',
+              '${{ github.event.inputs.subject_prefix }} ${{ steps.process_newsletter.outputs.title }}',
+              htmlContent
+            );
+            
+            console.log('✅ Test newsletter sent successfully:', result);
+          } catch (error) {
+            console.error('❌ Failed to send test newsletter:', error.message);
+            process.exit(1);
+          }
+        }
+        
+        sendTestNewsletter();
+        "
+      env:
+        RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        
+    - name: Send newsletter (Production Mode)
+      if: github.event.inputs.test_mode != 'true'
+      run: |
+        cd newsletter-program
+        node -e "
+        const { NewsletterSender } = require('./src/core/newsletter-sender.js');
+        const { SubscriberFileManager } = require('./src/core/subscriber-file-manager.js');
+        const fs = require('fs');
+        
+        async function sendNewsletter() {
+          try {
+            const sender = new NewsletterSender();
+            const subscriberManager = new SubscriberFileManager();
+            
+            // Get active subscribers
+            const subscribers = await subscriberManager.getSubscribers({ status: 'active' });
+            console.log(\`📧 Found \${subscribers.length} active subscribers\`);
+            
+            if (subscribers.length === 0) {
+              console.log('ℹ️ No active subscribers found. Newsletter not sent.');
+              return;
+            }
+            
+            const htmlContent = fs.readFileSync('newsletter.html', 'utf8');
+            const subject = '${{ github.event.inputs.subject_prefix }} ${{ steps.process_newsletter.outputs.title }}';
+            
+            const results = await sender.sendToSubscribers(
+              subscribers,
+              subject,
+              htmlContent
+            );
+            
+            console.log('✅ Newsletter distribution completed:');
+            console.log(\`   Total subscribers: \${results.total}\`);
+            console.log(\`   Successfully sent: \${results.sent}\`);
+            console.log(\`   Failed: \${results.failed}\`);
+            
+            if (results.errors.length > 0) {
+              console.log('❌ Errors:');
+              results.errors.forEach(error => console.log(\`   - \${error}\`));
+            }
+            
+          } catch (error) {
+            console.error('❌ Failed to send newsletter:', error.message);
+            process.exit(1);
+          }
+        }
+        
+        sendNewsletter();
+        "
+      env:
+        RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
+        
+    - name: Send Discord notification
+      if: always()
+      run: |
+        if [ "${{ job.status }}" == "success" ]; then
+          STATUS_EMOJI="✅"
+          STATUS_COLOR="3066993"
+          STATUS_TEXT="Success"
+        else
+          STATUS_EMOJI="❌"
+          STATUS_COLOR="15158332"
+          STATUS_TEXT="Failed"
+        fi
+        
+        if [ "${{ github.event.inputs.test_mode }}" == "true" ]; then
+          MODE_TEXT="Test Mode"
+          RECIPIENT_TEXT="Test Email: ${{ github.event.inputs.test_email }}"
+        else
+          MODE_TEXT="Production Mode"
+          RECIPIENT_TEXT="All Active Subscribers"
+        fi
+        
+        curl -H "Content-Type: application/json" \
+             -X POST \
+             -d "{
+               \"embeds\": [{
+                 \"title\": \"$STATUS_EMOJI Newsletter Distribution $STATUS_TEXT\",
+                 \"color\": $STATUS_COLOR,
+                 \"fields\": [
+                   {
+                     \"name\": \"Newsletter\",
+                     \"value\": \"${{ steps.process_newsletter.outputs.title }}\",
+                     \"inline\": true
+                   },
+                   {
+                     \"name\": \"Mode\",
+                     \"value\": \"$MODE_TEXT\",
+                     \"inline\": true
+                   },
+                   {
+                     \"name\": \"Recipients\",
+                     \"value\": \"$RECIPIENT_TEXT\",
+                     \"inline\": false
+                   },
+                   {
+                     \"name\": \"Workflow\",
+                     \"value\": \"[View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\",
+                     \"inline\": false
+                   }
+                 ],
+                 \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"
+               }]
+             }" \
+             ${{ secrets.DISCORD_WEBHOOK_URL }}
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

@@ -1,0 +1,425 @@
+name: RSS Feed Management
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action to perform'
+        required: true
+        type: choice
+        options:
+          - 'add'
+          - 'list'
+          - 'update'
+          - 'remove'
+          - 'validate'
+          - 'stats'
+        default: 'list'
+      
+      feed_url:
+        description: 'RSS feed URL (required for add action)'
+        required: false
+        type: string
+      
+      feed_title:
+        description: 'RSS feed title (optional for add action)'
+        required: false
+        type: string
+      
+      feed_id:
+        description: 'RSS feed ID (required for update/remove actions)'
+        required: false
+        type: string
+      
+      is_active:
+        description: 'Set feed active status (for update action)'
+        required: false
+        type: boolean
+        default: true
+      
+      auto_send:
+        description: 'Enable automatic newsletter sending (for add/update actions)'
+        required: false
+        type: boolean
+        default: true
+      
+      check_interval:
+        description: 'Check interval in minutes (for add/update actions)'
+        required: false
+        type: string
+        default: '60'
+      
+      subject_prefix:
+        description: 'Email subject prefix (for add/update actions)'
+        required: false
+        type: string
+        default: '[RSS Update]'
+
+jobs:
+  manage-rss:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        cd newsletter-program
+        npm ci
+        
+    - name: Execute RSS management action
+      id: rss_action
+      env:
+        ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
+      run: |
+        cd newsletter-program
+        
+        case "${{ github.event.inputs.action }}" in
+          "add")
+            if [ -z "${{ github.event.inputs.feed_url }}" ]; then
+              echo "❌ Error: feed_url is required for add action"
+              exit 1
+            fi
+            
+            echo "➕ Adding RSS feed: ${{ github.event.inputs.feed_url }}"
+            
+            node -e "
+            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            
+            async function addFeed() {
+              try {
+                const rssMonitor = new RSSMonitor('./data');
+                
+                const feedConfig = {
+                  url: '${{ github.event.inputs.feed_url }}',
+                  title: '${{ github.event.inputs.feed_title }}' || undefined,
+                  isActive: ${{ github.event.inputs.is_active }},
+                  settings: {
+                    autoSend: ${{ github.event.inputs.auto_send }},
+                    subjectPrefix: '${{ github.event.inputs.subject_prefix }}' || '[RSS Update]'
+                  },
+                  checkInterval: parseInt('${{ github.event.inputs.check_interval }}') || 60
+                };
+                
+                const feed = await rssMonitor.addFeed(feedConfig);
+                console.log('✅ RSS feed added successfully:');
+                console.log('   ID:', feed.id);
+                console.log('   Title:', feed.title);
+                console.log('   URL:', feed.url);
+                console.log('   Active:', feed.isActive);
+                console.log('   Auto-send:', feed.settings.autoSend);
+                console.log('action_result=success');
+              } catch (error) {
+                console.error('❌ Error adding RSS feed:', error.message);
+                console.log('action_result=error');
+                process.exit(1);
+              }
+            }
+            
+            addFeed();
+            "
+            ;;
+            
+          "list")
+            echo "📡 Listing RSS feeds..."
+            
+            node -e "
+            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            
+            try {
+              const rssMonitor = new RSSMonitor('./data');
+              const feeds = rssMonitor.getFeeds();
+              
+              console.log('📡 RSS Feeds (' + feeds.length + ' found):');
+              console.log('─'.repeat(80));
+              
+              if (feeds.length === 0) {
+                console.log('No RSS feeds configured.');
+              } else {
+                feeds.forEach(feed => {
+                  console.log('ID:', feed.id);
+                  console.log('Title:', feed.title);
+                  console.log('URL:', feed.url);
+                  console.log('Status:', feed.isActive ? '🟢 Active' : '🔴 Inactive');
+                  console.log('Auto-send:', feed.settings?.autoSend ? '✅ Yes' : '❌ No');
+                  console.log('Check interval:', feed.checkInterval, 'minutes');
+                  console.log('Last checked:', feed.lastChecked || 'Never');
+                  console.log('─'.repeat(40));
+                });
+              }
+              console.log('action_result=success');
+            } catch (error) {
+              console.error('❌ Error listing RSS feeds:', error.message);
+              console.log('action_result=error');
+              process.exit(1);
+            }
+            "
+            ;;
+            
+          "update")
+            if [ -z "${{ github.event.inputs.feed_id }}" ]; then
+              echo "❌ Error: feed_id is required for update action"
+              exit 1
+            fi
+            
+            echo "🔄 Updating RSS feed: ${{ github.event.inputs.feed_id }}"
+            
+            node -e "
+            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            
+            async function updateFeed() {
+              try {
+                const rssMonitor = new RSSMonitor('./data');
+                
+                const updates = {};
+                if ('${{ github.event.inputs.feed_title }}') {
+                  updates.title = '${{ github.event.inputs.feed_title }}';
+                }
+                if ('${{ github.event.inputs.is_active }}' !== '') {
+                  updates.isActive = ${{ github.event.inputs.is_active }};
+                }
+                if ('${{ github.event.inputs.check_interval }}') {
+                  updates.checkInterval = parseInt('${{ github.event.inputs.check_interval }}');
+                }
+                
+                if ('${{ github.event.inputs.auto_send }}' !== '' || '${{ github.event.inputs.subject_prefix }}') {
+                  updates.settings = {};
+                  if ('${{ github.event.inputs.auto_send }}' !== '') {
+                    updates.settings.autoSend = ${{ github.event.inputs.auto_send }};
+                  }
+                  if ('${{ github.event.inputs.subject_prefix }}') {
+                    updates.settings.subjectPrefix = '${{ github.event.inputs.subject_prefix }}';
+                  }
+                }
+                
+                const updatedFeed = await rssMonitor.updateFeed('${{ github.event.inputs.feed_id }}', updates);
+                console.log('✅ RSS feed updated successfully:');
+                console.log('   ID:', updatedFeed.id);
+                console.log('   Title:', updatedFeed.title);
+                console.log('   Active:', updatedFeed.isActive);
+                console.log('   Auto-send:', updatedFeed.settings?.autoSend);
+                console.log('action_result=success');
+              } catch (error) {
+                console.error('❌ Error updating RSS feed:', error.message);
+                console.log('action_result=error');
+                process.exit(1);
+              }
+            }
+            
+            updateFeed();
+            "
+            ;;
+            
+          "remove")
+            if [ -z "${{ github.event.inputs.feed_id }}" ]; then
+              echo "❌ Error: feed_id is required for remove action"
+              exit 1
+            fi
+            
+            echo "🗑️ Removing RSS feed: ${{ github.event.inputs.feed_id }}"
+            
+            node -e "
+            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            
+            async function removeFeed() {
+              try {
+                const rssMonitor = new RSSMonitor('./data');
+                const removedFeed = await rssMonitor.removeFeed('${{ github.event.inputs.feed_id }}');
+                
+                console.log('✅ RSS feed removed successfully:');
+                console.log('   Title:', removedFeed.title);
+                console.log('   URL:', removedFeed.url);
+                console.log('action_result=success');
+              } catch (error) {
+                console.error('❌ Error removing RSS feed:', error.message);
+                console.log('action_result=error');
+                process.exit(1);
+              }
+            }
+            
+            removeFeed();
+            "
+            ;;
+            
+          "validate")
+            echo "🔍 Validating RSS feed configuration..."
+            
+            node -e "
+            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            
+            try {
+              const rssMonitor = new RSSMonitor('./data');
+              const feeds = rssMonitor.getFeeds();
+              
+              let isValid = true;
+              const errors = [];
+              const warnings = [];
+              
+              // Basic validation
+              if (feeds.length === 0) {
+                warnings.push('No RSS feeds configured');
+              }
+              
+              feeds.forEach(feed => {
+                if (!feed.url) {
+                  errors.push('Feed ' + feed.id + ' missing URL');
+                  isValid = false;
+                }
+                if (!feed.title) {
+                  warnings.push('Feed ' + feed.id + ' missing title');
+                }
+              });
+              
+              console.log('🔍 Configuration validation:', isValid ? '✅ Valid' : '❌ Invalid');
+              console.log('   Feed count:', feeds.length);
+              
+              if (errors.length > 0) {
+                console.log('❌ Errors:');
+                errors.forEach(error => console.log('   -', error));
+              }
+              
+              if (warnings.length > 0) {
+                console.log('⚠️ Warnings:');
+                warnings.forEach(warning => console.log('   -', warning));
+              }
+              
+              console.log('action_result=' + (isValid ? 'success' : 'error'));
+              if (!isValid) process.exit(1);
+            } catch (error) {
+              console.error('❌ Error validating configuration:', error.message);
+              console.log('action_result=error');
+              process.exit(1);
+            }
+            "
+            ;;
+            
+          "stats")
+            echo "📊 Getting RSS feed statistics..."
+            
+            node -e "
+            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            
+            try {
+              const rssMonitor = new RSSMonitor('./data');
+              const feeds = rssMonitor.getFeeds();
+              
+              const totalFeeds = feeds.length;
+              const activeFeeds = feeds.filter(f => f.isActive).length;
+              const inactiveFeeds = totalFeeds - activeFeeds;
+              
+              console.log('📊 RSS Feed Statistics:');
+              console.log('─'.repeat(40));
+              console.log('Total Feeds:', totalFeeds);
+              console.log('Active Feeds:', activeFeeds);
+              console.log('Inactive Feeds:', inactiveFeeds);
+              console.log('Last Modified:', new Date().toISOString());
+              
+              if (feeds.length > 0) {
+                console.log('');
+                console.log('📡 Feed Details:');
+                feeds.forEach(feed => {
+                  console.log('  ' + feed.title + ':');
+                  console.log('    ID:', feed.id);
+                  console.log('    Status:', feed.isActive ? '🟢 Active' : '🔴 Inactive');
+                  console.log('    Auto-send:', feed.settings?.autoSend ? '✅ Yes' : '❌ No');
+                  console.log('    Last checked:', feed.lastChecked || 'Never');
+                });
+              }
+              
+              console.log('action_result=success');
+            } catch (error) {
+              console.error('❌ Error getting statistics:', error.message);
+              console.log('action_result=error');
+              process.exit(1);
+            }
+            "
+            ;;
+            
+          *)
+            echo "❌ Unknown action: ${{ github.event.inputs.action }}"
+            exit 1
+            ;;
+        esac
+        
+    - name: Commit configuration changes
+      if: contains(fromJSON('["add", "update", "remove"]'), github.event.inputs.action)
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Add RSS configuration files if they have changes
+        if [ -f "newsletter-program/data/rss-feeds.json" ]; then
+          git add newsletter-program/data/rss-feeds.json
+        fi
+        
+        if [ -f "newsletter-program/data/rss-cache.json" ]; then
+          git add newsletter-program/data/rss-cache.json
+        fi
+        
+        # Only commit if there are changes
+        if ! git diff --staged --quiet; then
+          git commit -m "Update RSS feed configuration via GitHub Actions"
+          git push
+        else
+          echo "No RSS configuration changes to commit"
+        fi
+        
+    - name: Send Discord notification
+      if: always()
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      run: |
+        if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+          echo "Discord webhook not configured, skipping notification"
+          exit 0
+        fi
+        
+        if [ "${{ job.status }}" == "success" ]; then
+          STATUS_EMOJI="✅"
+          STATUS_COLOR="3066993"
+          STATUS_TEXT="Success"
+        else
+          STATUS_EMOJI="❌"
+          STATUS_COLOR="15158332"
+          STATUS_TEXT="Failed"
+        fi
+        
+        ACTION="${{ github.event.inputs.action }}"
+        FEED_URL="${{ github.event.inputs.feed_url }}"
+        FEED_ID="${{ github.event.inputs.feed_id }}"
+        
+        curl -H "Content-Type: application/json" \
+             -X POST \
+             -d "{
+               \"embeds\": [{
+                 \"title\": \"$STATUS_EMOJI RSS Feed Management $STATUS_TEXT\",
+                 \"color\": $STATUS_COLOR,
+                 \"fields\": [
+                   {
+                     \"name\": \"🔧 Action\",
+                     \"value\": \"$ACTION\",
+                     \"inline\": true
+                   },
+                   {
+                     \"name\": \"📡 Details\",
+                     \"value\": \"Feed URL: ${FEED_URL:-N/A}\\nFeed ID: ${FEED_ID:-N/A}\",
+                     \"inline\": true
+                   },
+                   {
+                     \"name\": \"🔗 Links\",
+                     \"value\": \"[View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\",
+                     \"inline\": false
+                   }
+                 ],
+                 \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"
+               }]
+             }" \
+             "$DISCORD_WEBHOOK_URL"
