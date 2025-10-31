@@ -1,0 +1,72 @@
+# Configuration CSS pour Matrix Flow Theme
+# Intégration sans preload - Approche directe
+
+# Fichiers CSS principaux
+main_css:
+  # Fichier CSS consolidé principal
+  file: "/css/main.css"
+  # Minification automatique en production
+  minify: true
+  # Inline du CSS critique
+  inline_critical: true
+
+# CSS conditionnels
+conditional_css:
+  # Newsletter - chargé seulement si activé
+  newsletter:
+    file: "/css/newsletter.css"
+    condition: "page.newsletter || theme.newsletter?.enabled"
+    
+  # Lazy loading - chargé pour les pages avec images
+  lazy_loading:
+    file: "/css/lazy-loading.css"
+    condition: "page.images || page.gallery || is_post()"
+
+# CSS critique inline
+critical_css:
+  # Inclure le layout de base
+  include_layout: true
+  # Inclure les styles responsive
+  include_responsive: true
+  # Inclure la prévention FOUC
+  include_fouc_prevention: true
+
+# Optimisations
+optimizations:
+  # Minification CSS
+  minify: true
+  # Optimisation des variables CSS
+  optimize_variables: true
+  # Regroupement des media queries
+  group_media_queries: true
+  # Optimisation des couleurs
+  optimize_colors: true
+  # Suppression des CSS inutilisés
+  remove_unused: false
+
+# Performance
+performance:
+  # Prévention du FOUC
+  prevent_fouc: true
+  # Chargement synchrone pour le CSS critique
+  sync_critical: true
+  # Chargement asynchrone pour le CSS non-critique
+  async_non_critical: false
+
+# Développement
+development:
+  # CSS non minifié en développement
+  minify: false
+  # Source maps
+  source_maps: true
+  # Rechargement automatique
+  auto_reload: true
+
+# Production
+production:
+  # CSS minifié en production
+  minify: true
+  # Pas de source maps
+  source_maps: false
+  # Compression gzip
+  gzip: true

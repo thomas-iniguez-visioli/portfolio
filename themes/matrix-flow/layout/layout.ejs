@@ -1,27 +1,99 @@
 <!DOCTYPE html>
 <html lang="<%- config.language %>">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%- page.title ? page.title + ' | ' : '' %><%- config.title %></title>
-  
-  <!-- Include CSS helper functions -->
-  <%- partial('_partial/css-helpers') %>
-  
-  <!-- Resource hints for better performance -->
-  <%- resource_hints() %>
-  
-  <!-- Critical CSS inlined for faster rendering -->
 
-  
-  <!-- Performance configuration -->
+  <!-- Chargement direct de tous les CSS -->
+  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>" type="text/css">
+  <link rel="stylesheet" href="<%- url_for('/css/matrix-theme.css') %>" type="text/css">
+  <link rel="stylesheet" href="<%- url_for('/css/responsive.css') %>" type="text/css">
+  <link rel="stylesheet" href="<%- url_for('/css/newsletter.css') %>" type="text/css">
+  <link rel="stylesheet" href="<%- url_for('/css/glitch-effects.css') %>" type="text/css">
 
-  <!-- Non-critical CSS loaded asynchronously -->
+  <!-- CSS critique inline -->
+  <style>
+    body {
+      opacity: 1;
+      margin: 0;
+      padding: 0;
+      font-family: 'VT323', monospace;
+      background: #000;
+      color: #00FF41;
+    }
 
-  
-  <!-- Fonts with optimized loading -->
+    .fullscreen-container {
+      min-height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 1fr 300px;
+      gap: 1rem;
+      background: #000;
+      color: #00FF41;
+    }
+
+    .site-header {
+      grid-area: header;
+      padding: 1rem;
+      border-bottom: 1px solid #00FF41;
+    }
+
+    .site-main {
+      grid-area: main;
+      padding: 1rem;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      padding: 1rem;
+      border-left: 1px solid #00FF41;
+    }
+
+    .site-footer {
+      grid-area: footer;
+      padding: 1rem;
+      border-top: 1px solid #00FF41;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .fullscreen-container {
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+      }
+
+      .sidebar {
+        border-left: none;
+        border-top: 1px solid #00FF41;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <!-- Fonts avec chargement direct -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
   <canvas id="matrix-canvas"></canvas>
   <div class="fullscreen-container">
@@ -33,88 +105,37 @@
         <nav class="main-nav">
           <% for (var i in theme.menu) { %>
             <a href="<%- url_for(theme.menu[i]) %>" class="nav-item">[<%- i %>]</a>
-          <% } %>
+            <% } %>
         </nav>
       </header>
-      
+
       <main class="site-main">
         <div class="main-content">
           <%- body %>
         </div>
       </main>
-      
+
       <aside class="sidebar">
         <%- partial('_partial/sidebar') %>
       </aside>
-      
+
       <footer class="site-footer">
         <p>&copy; <%= new Date().getFullYear() %> <%- config.author %>. All rights reserved.</p>
         <p class="social-links">
           <% if (theme.social.github) { %>
             <a href="https://github.com/<%= theme.social.github %>" target="_blank">[GitHub]</a>
-          <% } %>
-          <% if (theme.social.linkedin) { %>
-            <a href="https://linkedin.com/in/<%= theme.social.linkedin %>" target="_blank">[LinkedIn]</a>
-          <% } %>
-          <% if (theme.social.email) { %>
-            <a href="mailto:<%= theme.social.email %>">[Email]</a>
-          <% } %>
+            <% } %>
+              <% if (theme.social.linkedin) { %>
+                <a href="https://linkedin.com/in/<%= theme.social.linkedin %>" target="_blank">[LinkedIn]</a>
+                <% } %>
+                  <% if (theme.social.email) { %>
+                    <a href="mailto:<%= theme.social.email %>">[Email]</a>
+                    <% } %>
         </p>
       </footer>
     </div>
   </div>
-  <script>
-    // Newsletter configuration
-    window.NEWSLETTER_CONFIG = {
-      github_owner: '<%- theme.newsletter?.github_owner || "your-username" %>',
-      github_repo: '<%- theme.newsletter?.github_repo || "your-repo" %>',
-      use_github_redirect: <%- theme.newsletter?.use_github_redirect || true %>,
-      api_endpoint: '<%- theme.newsletter?.api_endpoint || "" %>'
-    };
-  </script>
-  <!-- Critical JavaScript loaded immediately with optimizations -->
-  <script src="<%- url_for('/js/code-splitter.js') %>" async></script>
-  <script src="<%- url_for('/js/resource-preloader.js') %>" async></script>
-  <script src="<%- url_for('/js/module-loader.js') %>" async></script>
-  <script src="<%- url_for('/js/performance-monitor.js') %>" defer></script>
-  
-  <!-- Optimized module loading -->
-  <script>
-    // Initialize optimized loading system
-    document.addEventListener('DOMContentLoaded', function() {
-      // Setup code splitting and resource preloading
-      if (window.codeSplitter) {
-        window.codeSplitter.setupInteractionPreloading();
-        window.codeSplitter.setupViewportBasedLoading();
-        window.codeSplitter.setupIdleLoading();
-      }
-      
-      if (window.resourcePreloader) {
-        window.resourcePreloader.setupBehaviorBasedPreloading();
-      }
-      
-      // Load modules based on page content
-      const hasNewsletter = document.querySelector('[data-modules*="newsletter"]');
-      const hasLazyImages = document.querySelector('img[data-src]');
-      
-      if (hasNewsletter && window.codeSplitter) {
-        window.codeSplitter.loadModule('newsletter');
-      }
-      
-      if (hasLazyImages && window.codeSplitter) {
-        window.codeSplitter.loadModule('lazy-loader');
-      }
-    });
-    
-    // Preload resources on user interaction
-    ['mousedown', 'touchstart', 'keydown'].forEach(event => {
-      document.addEventListener(event, function() {
-        if (window.resourcePreloader) {
-          window.resourcePreloader.preloadScript('<%- url_for('/js/newsletter.js') %>', 'high');
-          window.resourcePreloader.preloadScript('<%- url_for('/js/lazy-loader.js') %>', 'medium');
-        }
-      }, { once: true, passive: true });
-    });
-  </script>
+
 </body>
+
 </html>

@@ -10,6 +10,8 @@
     "server": "hexo server",
     "optimize": "node scripts/build-optimizer.js",
     "optimize:css": "node themes/matrix-flow/scripts/critical-css-extractor.js",
+    "build:css": "node themes/matrix-flow/scripts/css-build.js",
+    "test:css": "node themes/matrix-flow/scripts/test-css-integration.js",
     "test:performance": "node scripts/performance-test.js",
     "test": "vitest --run",
     "test:watch": "vitest"

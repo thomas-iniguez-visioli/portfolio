@@ -1,0 +1,201 @@
+<!-- CSS Integration sans preload - Approche optimisée et directe -->
+
+<!-- CSS principal consolidé - Chargement synchrone prioritaire -->
+<% 
+const isDev = process.env.NODE_ENV !== 'production';
+const mainCSS = isDev ? '/css/main.css' : '/css/main.min.css';
+%>
+<link rel="stylesheet" href="<%- url_for(mainCSS) %>" type="text/css">
+
+<!-- CSS conditionnels - Chargés selon le contexte de la page -->
+<% if (page.newsletter || theme.newsletter?.enabled) { %>
+  <% const newsletterCSS = isDev ? '/css/newsletter.css' : '/css/newsletter.min.css'; %>
+  <link rel="stylesheet" href="<%- url_for(newsletterCSS) %>" type="text/css">
+<% } %>
+
+<% if (page.images || page.gallery || is_post()) { %>
+  <% const lazyCSS = isDev ? '/css/lazy-loading.css' : '/css/lazy-loading.min.css'; %>
+  <link rel="stylesheet" href="<%- url_for(lazyCSS) %>" type="text/css">
+<% } %>
+
+<!-- CSS critique inline pour un rendu immédiat -->
+<style>
+  /* Prévention du FOUC (Flash of Unstyled Content) */
+  body {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  body.loaded {
+    opacity: 1;
+  }
+  
+  /* Layout critique - Grid fullscreen */
+  .fullscreen-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "main sidebar"
+      "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 300px;
+    gap: 1rem;
+    background: #000;
+    color: #00FF41;
+    font-family: 'VT323', monospace;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Zones de layout critiques */
+  .site-header {
+    grid-area: header;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #00FF41;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .site-main {
+    grid-area: main;
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    padding: 2rem 1rem;
+    border-left: 2px solid #00FF41;
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+  }
+  
+  .site-footer {
+    grid-area: footer;
+    padding: 1rem 2rem;
+    border-top: 2px solid #00FF41;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Responsive critique - Mobile first */
+  @media (max-width: 1024px) {
+    .fullscreen-container {
+      grid-template-columns: 1fr 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .fullscreen-container {
+      grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto auto;
+    }
+    
+    .sidebar {
+      border-left: none;
+      border-top: 2px solid #00FF41;
+      max-height: none;
+    }
+    
+    .site-header {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .site-main {
+      max-height: none;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .site-header,
+    .site-main,
+    .sidebar,
+    .site-footer {
+      padding: 1rem 0.5rem;
+    }
+  }
+  
+  /* Performance - Optimisations critiques */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+</style>
+
+<!-- Script anti-FOUC - Exécution immédiate -->
+<script>
+  // Fonction optimisée pour marquer le chargement
+  (function() {
+    'use strict';
+    
+    function markAsLoaded() {
+      document.body.classList.add('loaded');
+      
+      // Déclencher un événement personnalisé pour les autres scripts
+      if (typeof CustomEvent !== 'undefined') {
+        document.dispatchEvent(new CustomEvent('cssLoaded', {
+          detail: { timestamp: Date.now() }
+        }));
+      }
+    }
+    
+    // Vérifier l'état du document
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', markAsLoaded, { once: true });
+    } else {
+      // Le DOM est déjà prêt
+      markAsLoaded();
+    }
+    
+    // Fallback de sécurité
+    window.addEventListener('load', markAsLoaded, { once: true });
+    
+    // Fallback temporel (au cas où les événements ne se déclenchent pas)
+    setTimeout(markAsLoaded, 100);
+  })();
+</script>
+
+<!-- Métriques de performance en développement -->
+<% if (isDev) { %>
+<script>
+  // Mesurer les performances CSS en développement
+  (function() {
+    if (typeof performance !== 'undefined' && performance.mark) {
+      performance.mark('css-integration-start');
+      
+      document.addEventListener('cssLoaded', function() {
+        performance.mark('css-integration-end');
+        performance.measure('css-integration', 'css-integration-start', 'css-integration-end');
+        
+        const measure = performance.getEntriesByName('css-integration')[0];
+        console.log('🎨 CSS Integration Performance:', {
+          duration: Math.round(measure.duration * 100) / 100 + 'ms',
+          timestamp: new Date().toISOString()
+        });
+      });
+    }
+  })();
+</script>
+<% } %>
