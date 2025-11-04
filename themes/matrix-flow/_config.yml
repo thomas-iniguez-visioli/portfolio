@@ -16,6 +16,7 @@ glitch_text: 'PORTFOLIO'
 menu:
   Home: /
   Archives: /archives
+  veille: https://feed-blush.vercel.app/
 
 # Newsletter configuration
 newsletter:
