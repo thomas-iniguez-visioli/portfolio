@@ -725,7 +725,7 @@ Timestamp: ${formData.timestamp}`;
   }
 }
 
-}
+
 
 // Progressive enhancement initialization
 function initializeNewsletter() {
