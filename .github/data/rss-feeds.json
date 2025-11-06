@@ -1,25 +1,25 @@
 {
   "version": "1.0.0",
-  "createdAt": "2024-10-31T00:00:00.000Z",
-  "lastModified": "2024-10-31T00:00:00.000Z",
+  "createdAt": "2025-10-31T15:53:24.813Z",
   "feeds": [
     {
-      "id": "example-tech-blog",
-      "url": "https://feeds.feedburner.com/oreilly/radar",
-      "title": "O'Reilly Radar",
-      "description": "Technology insights and trends",
-      "isActive": false,
-      "checkInterval": 120,
+      "id": "2fefc7a5-ae06-4b25-abca-74568216d7c7",
+      "url": "https://feed-blush.vercel.app/atom.xml",
+      "title": "Feed Blush",
+      "description": "Personal blog feed",
+      "isActive": true,
+      "checkInterval": 60,
       "lastChecked": null,
       "lastItemDate": null,
       "settings": {
-        "autoSend": false,
-        "subjectPrefix": "[Tech News]",
-        "includeFullContent": false,
-        "maxItemsPerNewsletter": 3,
+        "autoSend": true,
+        "subjectPrefix": "[RSS Update]",
+        "includeFullContent": true,
+        "maxItemsPerNewsletter": 5,
         "template": "rss-newsletter"
       },
-      "createdAt": "2024-10-31T00:00:00.000Z"
+      "createdAt": "2025-10-31T15:55:03.088Z"
     }
-  ]
+  ],
+  "lastModified": "2025-10-31T15:55:03.089Z"
 }
