@@ -179,6 +179,7 @@ ${content}`;
             });
           } catch (error) {
             // Skip files that can't be parsed
+            console.log(error)
             console.warn(`Skipping invalid newsletter file: ${file}`);
           }
         }
