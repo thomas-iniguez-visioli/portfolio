@@ -15,10 +15,10 @@ const __dirname = path.dirname(__filename);
 // Import newsletter program modules
 const newsletterProgramPath = path.join(__dirname, '..', '..', 'newsletter-program');
 process.chdir(newsletterProgramPath);
-console.log(__dirname)
+
 import { RSSMonitor } from '../../newsletter-program/src/core/rss-monitor.js';
-import { NewsletterSender } from './src/core/newsletter-sender.js';
-import { SubscriberFileManager } from './src/core/subscriber-file-manager.js';
+import { NewsletterSender } from '../../newsletter-program/src/core/newsletter-sender.js';
+import { SubscriberFileManager } from '../../newsletter-program/src/core/subscriber-file-manager.js';
 
 class GitHubActionsRSSMonitor {
   constructor() {
