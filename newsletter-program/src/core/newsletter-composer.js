@@ -69,7 +69,7 @@ class NewsletterComposer {
    */
   async composeNewsletter(newsletterFile, templateName = 'newsletter') {
     try {
-      const newsletter = await this.parseNewsletterFile(newsletterFile);
+      const newsletter = await this.parseNewsletterFile(path.join(this.newslettersDir,newsletterFile));
       
       // Prepare template variables
       const variables = {
@@ -137,7 +137,7 @@ class NewsletterComposer {
       await fs.mkdir(this.archiveDir, { recursive: true });
       
       // Copy file to archive with timestamp
-      const content = await fs.readFile(newsletterFile, 'utf-8');
+      const content = await fs.readFile(path.join(this.newslettersDir,newsletterFile), 'utf-8');
       const archivedContent = `---
 archived_at: ${sentAt.toISOString()}
 original_file: ${fileName}
