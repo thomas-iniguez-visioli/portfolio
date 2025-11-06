@@ -23,9 +23,9 @@ async function sendWelcomeEmail(subscriptionData, config) {
             topics: Array.isArray(topics) ? topics.join(', ') : topics,
             issueNumber: issueNumber,
             subscribedAt: new Date(createdAt).toLocaleDateString(),
-            portfolioUrl: config.portfolioUrl || 'https://your-portfolio.com',
-            unsubscribeUrl: config.unsubscribeUrl || 'https://your-portfolio.com/unsubscribe',
-            contactUrl: config.contactUrl || 'https://your-portfolio.com/contact'
+            portfolioUrl: config.portfolioUrl || 'https://thomas-iniguez-visioli.github.io/',
+            unsubscribeUrl: config.unsubscribeUrl || 'https://thomas-iniguez-visioli.github.io/unsubscribe',
+            contactUrl: config.contactUrl || 'https://thomas-iniguez-visioli.github.io/contact'
         };
         
         // Replace template variables
@@ -40,7 +40,7 @@ async function sendWelcomeEmail(subscriptionData, config) {
         
         // Prepare email payload
         const emailPayload = {
-            from: config.fromEmail || 'newsletter@yourdomain.com',
+            from: config.fromEmail || 'Acme <onboarding@resend.dev>',
             to: email,
             subject: '🎯 Welcome to Our Newsletter - Subscription Confirmed',
             html: htmlContent,
