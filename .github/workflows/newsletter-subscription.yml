@@ -6,7 +6,7 @@ on:
 
 jobs:
   process-newsletter-subscription:
-    if: contains(github.event.issue.labels.*.name, 'newsletter-subscription')
+    if: contains(github.event.issue.labels.*.name, '[NEWSLETTER]')
     runs-on: ubuntu-latest
     
     permissions:
