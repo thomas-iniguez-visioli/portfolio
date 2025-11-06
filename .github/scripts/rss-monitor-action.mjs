@@ -16,9 +16,9 @@ const __dirname = path.dirname(__filename);
 const newsletterProgramPath = path.join(__dirname, '..', '..', 'newsletter-program');
 process.chdir(newsletterProgramPath);
 
-import { RSSMonitor } from '../../newsletter-program/src/core/rss-monitor.js';
-import { NewsletterSender } from '../../newsletter-program/src/core/newsletter-sender.js';
-import { SubscriberFileManager } from '../../newsletter-program/src/core/subscriber-file-manager.js';
+import { RSSMonitor } from './src/core/rss-monitor.js';
+import { NewsletterSender } from './src/core/newsletter-sender.js';
+import { SubscriberFileManager } from './src/core/subscriber-file-manager.js';
 
 class GitHubActionsRSSMonitor {
   constructor() {
