@@ -260,8 +260,8 @@ program
 if (require.main === module) {
   program.parse();
 }
+module.exports = { program, composer, subscriberManager, resendClient };
 });
 
 
 
-module.exports = { program, composer, subscriberManager, resendClient };
