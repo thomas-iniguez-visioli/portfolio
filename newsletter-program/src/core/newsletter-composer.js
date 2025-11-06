@@ -6,9 +6,9 @@ const yaml = require('js-yaml');
 class NewsletterComposer {
   constructor(options = {}) {
     this.templatesDir = options.templatesDir || path.join(__dirname, '../templates');
-    this.newslettersDir = options.newslettersDir || path.join(process.cwd(), 'newsletters');
-    this.archiveDir = options.archiveDir || path.join(process.cwd(), 'newsletters/archive');
-    this.outputDir = options.outputDir || path.join(process.cwd(), 'newsletters/output');
+    this.newslettersDir = options.newslettersDir || path.join(process.cwd(), '../newsletters');
+    this.archiveDir = options.archiveDir || path.join(process.cwd(), '../newsletters/archive');
+    this.outputDir = options.outputDir || path.join(process.cwd(), '../newsletters/output');
   }
 
   /**
