@@ -147,10 +147,10 @@ async function main() {
         // Get configuration from environment variables
         const config = {
             resendApiKey: process.env.RESEND_API_KEY,
-            fromEmail: process.env.FROM_EMAIL || 'newsletter@yourdomain.com',
-            portfolioUrl: process.env.PORTFOLIO_URL || 'https://your-portfolio.com',
-            unsubscribeUrl: process.env.UNSUBSCRIBE_URL || 'https://your-portfolio.com/unsubscribe',
-            contactUrl: process.env.CONTACT_URL || 'https://your-portfolio.com/contact'
+            fromEmail: process.env.FROM_EMAIL || 'newsletter <onboarding@resend.dev>',
+            portfolioUrl: process.env.PORTFOLIO_URL || 'https://thomas-iniguez-visioli.github.io/',
+            unsubscribeUrl: process.env.UNSUBSCRIBE_URL || 'https://thomas-iniguez-visioli.github.io/unsubscribe',
+            contactUrl: process.env.CONTACT_URL || 'https://thomas-iniguez-visioli.github.io/contact'
         };
         
         // Validate required configuration
