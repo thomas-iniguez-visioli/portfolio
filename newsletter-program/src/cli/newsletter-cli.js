@@ -11,6 +11,8 @@ let ResendClient
  ResendClient = await import('../core/newsletter-sender.mjs');
 })().then(()=>{
 
+console.log(SubscriberManager)
+
 const program = new Command();
 
 program
