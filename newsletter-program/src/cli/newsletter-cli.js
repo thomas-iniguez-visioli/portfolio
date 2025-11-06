@@ -23,7 +23,7 @@ program
 // Initialize components
 const composer = new NewsletterComposer();
 const subscriberManager = new SubscriberManager.SubscriberManager();
-const resendClient = new  ResendClient.ResendClient();
+const resendClient = new  ResendClient.NewsletterSender();
 
 // Create newsletter command
 program

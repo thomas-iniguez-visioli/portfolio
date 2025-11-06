@@ -74,7 +74,7 @@ jobs:
         if: steps.check-newsletters.outputs.SCHEDULED_NEWSLETTERS != '[]'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+          ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           cd newsletter-program
@@ -87,7 +87,7 @@ jobs:
         if: github.event.inputs.newsletter_file != ''
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+          ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           cd newsletter-program

@@ -124,7 +124,7 @@ jobs:
         if: steps.extract-data.outputs.is_valid == 'true'
         id: add-subscriber
         env:
-          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+          ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
           STORAGE_DIR: '.github/data'
           OPERATION: 'add'
           SUBSCRIBER_EMAIL: ${{ steps.extract-data.outputs.email }}
