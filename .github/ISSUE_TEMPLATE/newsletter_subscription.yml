@@ -5,40 +5,43 @@ labels: ["newsletter-subscription", "automated"]
 assignees: []
 body:
   - type: markdown
-    id: entete
+    id: header
     attributes:
       value: |
-        Thank you for your interest in subscribing to the newsletter! Please fill out the form below.
-        
-        **Privacy Notice**: Your email will be encrypted and stored securely. You can unsubscribe at any time.
-        
+        ### Newsletter Subscription
+        Thank you for your interest in our newsletter! Please fill out the form below to subscribe.
+
+        **Privacy Notice:**
+        - Your email will be encrypted and stored securely.
+        - You can unsubscribe at any time by following the link in the newsletter.
+
   - type: input
     id: email
     attributes:
       label: Email Address
-      description: Enter your email address to receive newsletter updates
-      placeholder: your-email@example.com
+      description: Enter your email address to receive updates
+      placeholder: example@domain.com
     validations:
       required: true
-      
+
   - type: dropdown
     id: frequency
     attributes:
       label: Newsletter Frequency
-      description: How often would you like to receive newsletters?
+      description: How often would you like to receive the newsletter?
       options:
         - Weekly
+        - Bi-weekly
         - Monthly
         - Major updates only
-      default: 0
     validations:
       required: true
-      
+
   - type: checkboxes
     id: topics
     attributes:
       label: Topics of Interest
-      description: Select the topics you're most interested in
+      description: Select the topics you are interested in (select all that apply)
       options:
         - label: Development & Programming
           value: development
@@ -50,44 +53,36 @@ body:
           value: projects
         - label: Industry News & Insights
           value: industry
-    validations:
-      required: false
-      
+
   - type: dropdown
     id: format
     attributes:
       label: Email Format
-      description: Preferred email format
+      description: Choose your preferred email format
       options:
         - HTML (Rich formatting)
         - Plain Text
-      default: 0
     validations:
       required: true
-      
+
   - type: checkboxes
     id: consent
     attributes:
-      label: Consent & Privacy
-      description: Please confirm your consent
+      label: Consent & Privacy Agreement
+      description: Please confirm the following to proceed
       options:
         - label: I consent to receiving newsletters at the provided email address
-          value: consent_email
           required: true
-        - label: I understand that my email will be encrypted and stored securely
-          value: consent_privacy
+        - label: I understand my email will be encrypted and stored securely
           required: true
         - label: I understand I can unsubscribe at any time
-          value: consent_unsubscribe
           required: true
     validations:
       required: true
-      
+
   - type: textarea
     id: additional_info
     attributes:
-      label: Additional Information (Optional)
-      description: Any additional preferences or comments
-      placeholder: Optional feedback or specific interests...
-    validations:
-      required: false
+      label: Additional Comments (Optional)
+      description: Any additional preferences, feedback, or specific interests?
+      placeholder: "Example: I'm particularly interested in AI-related projects..."
