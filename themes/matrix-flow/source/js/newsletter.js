@@ -526,7 +526,7 @@ class NewsletterManager {
     const issueBody = this.generateIssueBody(formData);
     
     // Method 1: Redirect to GitHub issue creation (more secure)
-    if (window.NEWSLETTER_CONFIG?.use_github_redirect) {
+    if (true) {
       const githubUrl = this.generateGitHubIssueUrl(issueTitle, issueBody);
       window.open(githubUrl, '_blank');
       return;
