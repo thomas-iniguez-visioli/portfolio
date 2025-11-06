@@ -4,7 +4,7 @@
   "feeds": [
     {
       "id": "2fefc7a5-ae06-4b25-abca-74568216d7c7",
-      "url": "https://feed-blush.vercel.app/atom.xml",
+      "url": "https://alphaleadership.github.io/feed/atom.xml",
       "title": "Feed Blush",
       "description": "Personal blog feed",
       "isActive": true,
