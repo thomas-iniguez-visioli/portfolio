@@ -4,7 +4,8 @@ const { Command } = require('commander');
 const path = require('path');
 const fs = require('fs').promises;
 const NewsletterComposer = require('../core/newsletter-composer');
-let SubscriberManager,ResendClient={}
+let SubscriberManager
+let ResendClient
 (async() => {
  SubscriberManager = await import('../core/subscriber-manager.mjs');
  ResendClient = await import('../core/newsletter-sender.mjs');
