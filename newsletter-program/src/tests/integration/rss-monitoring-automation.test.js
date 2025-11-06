@@ -443,7 +443,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
   describe('Integration with External Newsletter Service', () => {
     it('should integrate RSS monitoring with encrypted subscriber storage', async () => {
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
-      const { SubscriberManager } = await import('../../core/subscriber-manager.js');
+      const { SubscriberManager } = await import('../../core/subscriber-manager.mjs');
       
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
       const subscriberManager = new SubscriberManager(testDataDir);

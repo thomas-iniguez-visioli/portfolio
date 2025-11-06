@@ -173,7 +173,7 @@ Test subscription`,
       const email = 'duplicate@example.com';
       
       // Create initial subscriber
-      const { SubscriberManager } = await import('../../core/subscriber-manager.js');
+      const { SubscriberManager } = await import('../../core/subscriber-manager.mjs');
       const subscriberManager = new SubscriberManager(testDataDir);
       
       const firstSubscriber = {

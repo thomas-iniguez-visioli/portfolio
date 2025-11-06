@@ -4,7 +4,7 @@ const { Command } = require('commander');
 const path = require('path');
 const fs = require('fs').promises;
 const NewsletterComposer = require('../core/newsletter-composer');
-const SubscriberManager = require('../core/subscriber-manager');
+const SubscriberManager = require('../core/subscriber-manager.mjs');
 const ResendClient = require('../core/resend-client');
 
 const program = new Command();
