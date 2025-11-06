@@ -209,4 +209,4 @@ class EncryptionManager {
   }
 }
 
-export { EncryptionManager };
+module.exports= { EncryptionManager };
