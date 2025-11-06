@@ -351,49 +351,51 @@ export class RSSMonitor {
   /**
    * Validate RSS feed URL
    */
-  async validateFeed(url) {
-    try {
-      const response = await fetch(url, {
-        headers: {
-          'User-Agent': 'RSS-Monitor/1.0'
-        },
-        timeout: 10000
-      });
-
-      if (!response.ok) {
-        return {
-          valid: false,
-          error: `HTTP ${response.status}: ${response.statusText}`
-        };
-      }
-
-      const content = await response.text();
-      
-      // Basic RSS/Atom validation
-      if (!content.includes('<rss') && !content.includes('<feed')) {
-        return {
-          valid: false,
-          error: 'Not a valid RSS or Atom feed'
-        };
-      }
-
-      // Extract basic info
-      const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
-      const descMatch = content.match(/<description[^>]*>([^<]+)<\/description>/i);
-
-      return {
-        valid: true,
-        title: titleMatch ? titleMatch[1].trim() : 'Unknown Feed',
-        description: descMatch ? descMatch[1].trim() : null
-      };
-
-    } catch (error) {
+async validateFeed(url) {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'RSS-Monitor/1.0'
+      },
+      timeout: 10000
+    });
+    if (!response.ok) {
       return {
         valid: false,
-        error: error.message
+        error: `HTTP ${response.status}: ${response.statusText}`
       };
     }
+    const content = await response.text();
+
+    // Vérifier si c'est un flux RSS ou Atom
+    if (!content.includes('<rss') && !content.includes('<feed')) {
+      return {
+        valid: false,
+        error: 'Not a valid RSS or Atom feed'
+      };
+    }
+
+    // Extraire les infos de base
+    const isAtom = content.includes('<feed');
+    const titleTag = isAtom ? '<title>' : '<title>';
+    const descTag = isAtom ? '<subtitle>' : '<description>';
+
+    const titleMatch = content.match(new RegExp(`${titleTag}[^>]*>([^<]+)<\\/${isAtom ? 'title' : 'title'}`, 'i'));
+    const descMatch = content.match(new RegExp(`${descTag}[^>]*>([^<]+)<\\/${isAtom ? 'subtitle' : 'description'}`, 'i'));
+
+    return {
+      valid: true,
+      title: titleMatch ? titleMatch[1].trim() : 'Unknown Feed',
+      description: descMatch ? descMatch[1].trim() : null
+    };
+  } catch (error) {
+    return {
+      valid: false,
+      error: error.message
+    };
   }
+}
+
 
   /**
    * Fetch and parse RSS feed (alias for fetchRSSFeed for test compatibility)
@@ -458,68 +460,97 @@ export class RSSMonitor {
   /**
    * Parse RSS items from XML content
    */
-  parseRSSItems(xmlContent) {
-    const items = [];
-    
-    // Simple XML parsing for RSS items
-    const itemMatches = xmlContent.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || [];
-    
-    itemMatches.forEach(itemXml => {
-      const item = this.parseRSSItem(itemXml);
-      if (item) {
-        items.push(item);
-      }
-    });
+parseRSSItems(xmlContent) {
+  const items = [];
+  let itemMatches;
 
-    // Sort by publication date (newest first)
-    items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+  // Détecter si c'est un flux Atom
+  const isAtom = xmlContent.includes('<feed');
 
-    return items;
+  if (isAtom) {
+    // Parser les entrées Atom (<entry>)
+    itemMatches = xmlContent.match(/<entry[^>]*>[\s\S]*?<\/entry>/gi) || [];
+  } else {
+    // Parser les items RSS (<item>)
+    itemMatches = xmlContent.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || [];
   }
+
+  itemMatches.forEach(itemXml => {
+    const item = this.parseRSSItem(itemXml, isAtom);
+    if (item) {
+      items.push(item);
+    }
+  });
+
+  // Trier par date de publication (du plus récent au plus ancien)
+  items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+  return items;
+}
+
 
   /**
    * Parse individual RSS item
    */
-  parseRSSItem(itemXml) {
-    try {
-      const extractTag = (tagName) => {
-        const match = itemXml.match(new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i'));
-        return match ? match[1].trim() : null;
-      };
-
-      const extractCDATA = (content) => {
-        if (!content) return null;
-        const cdataMatch = content.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
-        return cdataMatch ? cdataMatch[1] : content;
-      };
-
-      const title = extractCDATA(extractTag('title'));
-      const link = extractTag('link');
-      const description = extractCDATA(extractTag('description'));
-      const pubDate = extractTag('pubDate') || extractTag('published');
-      const author = extractTag('author') || extractTag('creator');
-      const guid = extractTag('guid') || link;
-      const content = extractCDATA(extractTag('content:encoded')) || extractCDATA(extractTag('content'));
-
-      if (!title || !link) {
-        return null;
+parseRSSItem(itemXml, isAtom = false) {
+  try {
+    const extractTag = (tagName, isAtom = false) => {
+      let regex;
+      if (isAtom && tagName === 'link') {
+        // Pour Atom, <link> est auto-fermant avec un attribut href
+        const linkMatch = itemXml.match(/<link[^>]*href=["']([^"']+)["']/i);
+        return linkMatch ? linkMatch[1].trim() : null;
+      } else if (isAtom && tagName === 'id') {
+        // Pour Atom, l'identifiant est dans <id>
+        regex = new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
+      } else {
+        // Cas standard (RSS ou Atom pour les autres balises)
+        regex = new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
       }
+      const match = itemXml.match(regex);
+      return match ? match[1].trim() : null;
+    };
 
-      return {
-        title: title,
-        link: link,
-        description: description,
-        content: content,
-        pubDate: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        author: author,
-        guid: guid || crypto.createHash('md5').update(title + link).digest('hex')
-      };
+    const extractCDATA = (content) => {
+      if (!content) return null;
+      const cdataMatch = content.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
+      return cdataMatch ? cdataMatch[1] : content;
+    };
 
-    } catch (error) {
-      console.warn('Failed to parse RSS item:', error.message);
+    // Récupérer les champs selon le format
+    const titleTag = isAtom ? 'title' : 'title';
+    const linkTag = isAtom ? 'link' : 'link';
+    const idTag = isAtom ? 'id' : 'guid';
+    const dateTag = isAtom ? 'published' : 'pubDate';
+    const descriptionTag = isAtom ? 'summary' : 'description';
+    const contentTag = isAtom ? 'content' : 'content:encoded';
+
+    const title = extractCDATA(extractTag(titleTag, isAtom));
+    const link = extractTag(linkTag, isAtom);
+    const description = extractCDATA(extractTag(descriptionTag, isAtom));
+    const pubDate = extractTag(dateTag, isAtom) || extractTag('updated', isAtom);
+    const author = extractTag('author', isAtom) || extractTag('creator', isAtom);
+    const guid = extractTag(idTag, isAtom) || link;
+    const content = extractCDATA(extractTag(contentTag, isAtom)) || extractCDATA(extractTag('content'));
+
+    if (!title || !link) {
       return null;
     }
+
+    return {
+      title: title,
+      link: link,
+      description: description,
+      content: content,
+      pubDate: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
+      author: author,
+      guid: guid || crypto.createHash('md5').update(title + link).digest('hex')
+    };
+  } catch (error) {
+    console.warn('Failed to parse RSS/Atom item:', error.message);
+    return null;
   }
+}
+
 
   /**
    * Filter new items that haven't been processed
