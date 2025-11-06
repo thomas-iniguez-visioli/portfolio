@@ -15,8 +15,8 @@ const __dirname = path.dirname(__filename);
 // Import newsletter program modules
 const newsletterProgramPath = path.join(__dirname, '..', '..', 'newsletter-program');
 process.chdir(newsletterProgramPath);
-
-import { RSSMonitor } from './src/core/rss-monitor.js';
+console.log(__dirname)
+import { RSSMonitor } from '../../newsletter-program/src/core/rss-monitor.js';
 import { NewsletterSender } from './src/core/newsletter-sender.js';
 import { SubscriberFileManager } from './src/core/subscriber-file-manager.js';
 
