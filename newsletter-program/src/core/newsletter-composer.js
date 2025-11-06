@@ -16,7 +16,7 @@ class NewsletterComposer {
    */
   async parseNewsletterFile(filePath) {
     try {
-      const content = await fs.readFile(path.join(this.newslettersDir,filePath), 'utf-8');
+      const content = await fs.readFile(filePath, 'utf-8');
       
       // Check if file has frontmatter
       if (content.startsWith('---')) {
