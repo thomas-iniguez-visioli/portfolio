@@ -113,7 +113,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
       });
 
       // Import and create RSS monitor with mocked fetch
-      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
       
       // Override the fetch method to use our mock
@@ -148,7 +148,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should detect new items in RSS feed', async () => {
-      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       // Setup initial feed configuration
@@ -210,7 +210,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     it('should handle RSS feed fetch errors gracefully', async () => {
       mockFetch.mockRejectedValue(new Error('Network error'));
 
-      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       const feedUrl = 'https://example.com/invalid-feed.xml';
@@ -230,7 +230,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should store and retrieve RSS cache correctly', async () => {
-      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       const feedId = 'test-feed';
@@ -287,7 +287,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
         status: 'sent'
       });
 
-      const { NewsletterSender } = await import('../../core/newsletter-sender.js');
+      const { NewsletterSender } = await import('../../core/newsletter-sender.mjs');
       const newsletterSender = new NewsletterSender(testDataDir);
 
       // Setup test subscribers
@@ -338,7 +338,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
         .mockRejectedValueOnce(new Error('Rate limit exceeded'))
         .mockResolvedValueOnce({ id: 'email-123', status: 'sent' });
 
-      const { NewsletterSender } = await import('../../core/newsletter-sender.js');
+      const { NewsletterSender } = await import('../../core/newsletter-sender.mjs');
       const newsletterSender = new NewsletterSender(testDataDir);
       newsletterSender.resendClient = mockResendAPI;
 
@@ -442,7 +442,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
 
   describe('Integration with External Newsletter Service', () => {
     it('should integrate RSS monitoring with encrypted subscriber storage', async () => {
-      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const { SubscriberManager } = await import('../../core/subscriber-manager.js');
       
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
@@ -505,7 +505,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should handle RSS feed configuration updates', async () => {
-      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       // Add initial feed
@@ -557,7 +557,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should validate RSS feed URLs and handle invalid feeds', async () => {
-      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       // Test invalid RSS feed

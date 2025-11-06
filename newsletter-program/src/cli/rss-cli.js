@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import { RSSMonitor } from '../core/rss-monitor.js';
-import { NewsletterSender } from '../core/newsletter-sender.js';
+import { RSSMonitor } from '../core/rss-monitor.mjs';
+import { NewsletterSender } from '../core/newsletter-sender.mjs';
 import { SubscriberFileManager } from '../core/subscriber-file-manager.js';
 
 const program = new Command();

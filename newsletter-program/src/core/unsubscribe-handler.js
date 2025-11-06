@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 import { SubscriberFileManager } from './subscriber-file-manager.js';
-import { NewsletterSender } from './newsletter-sender.js';
+import { NewsletterSender } from './newsletter-sender.mjs';
 
 /**
  * Handles unsubscribe requests and preference management
