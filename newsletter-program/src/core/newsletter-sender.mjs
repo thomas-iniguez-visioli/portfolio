@@ -5,7 +5,7 @@ export class NewsletterSender {
     this.dataDir = dataDir;
     this.resendClient = null;
     this.apiKey = process.env.RESEND_API_KEY;
-    this.fromEmail = process.env.FROM_EMAIL || 'newsletter@example.com';
+    this.fromEmail ='Acme <onboarding@resend.dev>';
   }
 
   async sendToSubscribers(subscribers, subject, content, options = {}) {
