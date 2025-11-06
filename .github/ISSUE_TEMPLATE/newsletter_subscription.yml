@@ -43,16 +43,11 @@ body:
       label: Topics of Interest
       description: Select the topics you are interested in (select all that apply)
       options:
-        - label: Development & Programming
-          value: development
-        - label: Portfolio Updates
-          value: portfolio
-        - label: Technical Articles
-          value: articles
-        - label: Project Announcements
-          value: projects
-        - label: Industry News & Insights
-          value: industry
+        - Development & Programming
+        - Portfolio Updates
+        - Technical Articles
+        - Project Announcements
+        - Industry News & Insights
 
   - type: dropdown
     id: format
@@ -71,12 +66,9 @@ body:
       label: Consent & Privacy Agreement
       description: Please confirm the following to proceed
       options:
-        - label: I consent to receiving newsletters at the provided email address
-          required: true
-        - label: I understand my email will be encrypted and stored securely
-          required: true
-        - label: I understand I can unsubscribe at any time
-          required: true
+        - I consent to receiving newsletters at the provided email address
+        - I understand my email will be encrypted and stored securely
+        - I understand I can unsubscribe at any time
     validations:
       required: true
 
