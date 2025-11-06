@@ -10,7 +10,7 @@ let ResendClient
  SubscriberManager = await import('../core/subscriber-manager.mjs');
  ResendClient = await import('../core/newsletter-sender.mjs');
 })();
-
+console.log(SubscriberManager)
 
 const program = new Command();
 
