@@ -62,20 +62,20 @@ class GitHubActionsRSSMonitor {
    */
   async monitorRSS() {
     try {
-      console.log('🔍 Starting RSS monitoring...');
-      console.log(`📁 Data path: ${this.dataPath}`);
-      console.log(`📧 Send newsletters: ${this.shouldSendNewsletter}`);
+    //  console.log('🔍 Starting RSS monitoring...');
+    //  console.log(`📁 Data path: ${this.dataPath}`);
+    //  console.log(`📧 Send newsletters: ${this.shouldSendNewsletter}`);
       
       // Check all RSS feeds for new items
       const results = await this.rssMonitor.checkAllFeeds();
       
-      console.log('📊 RSS Check Results:');
-      console.log(`   Total feeds: ${results.totalFeeds}`);
-      console.log(`   Checked feeds: ${results.checkedFeeds}`);
-      console.log(`   New items found: ${results.newItems}`);
+     // console.log('📊 RSS Check Results:');
+     // console.log(`   Total feeds: ${results.totalFeeds}`);
+    //  console.log(`   Checked feeds: ${results.checkedFeeds}`);
+     // console.log(`   New items found: ${results.newItems}`);
       
       if (results.errors.length > 0) {
-        console.log('❌ Errors:');
+      //  console.log('❌ Errors:');
         results.errors.forEach(error => console.log(`   - ${error}`));
       }
       
@@ -89,13 +89,13 @@ class GitHubActionsRSSMonitor {
       
       // Generate and send newsletters if there are new items
       if (results.newItems > 0 && this.shouldSendNewsletter) {
-        console.log('📧 Processing new RSS items for newsletter generation...');
+       // console.log('📧 Processing new RSS items for newsletter generation...');
         
         const feeds = this.rssMonitor.getFeeds(true); // Get active feeds only
         
         for (const feed of feeds) {
           if (!feed.settings.autoSend) {
-            console.log(`⏭️ Skipping feed ${feed.title} (auto-send disabled)`);
+           // console.log(`⏭️ Skipping feed ${feed.title} (auto-send disabled)`);
             continue;
           }
           
@@ -104,7 +104,7 @@ class GitHubActionsRSSMonitor {
             const feedResult = await this.rssMonitor.checkFeed(feed.id);
             
             if (feedResult.newItems.length > 0) {
-              console.log(`📰 Processing ${feedResult.newItems.length} new items for: ${feed.title}`);
+             /// console.log(`📰 Processing ${feedResult.newItems.length} new items for: ${feed.title}`);
               
               // Generate newsletter from new items
               const newsletter = await this.rssMonitor.generateNewsletterFromItems(
@@ -119,7 +119,7 @@ class GitHubActionsRSSMonitor {
                 });
                 
                 if (subscribers.length > 0) {
-                  console.log(`📤 Sending newsletter to ${subscribers.length} subscribers...`);
+               //   console.log(`📤 Sending newsletter to ${subscribers.length} subscribers...`);
                   
                   // Send newsletter using Resend API
                   const sendResults = await this.newsletterSender.sendToSubscribers(
@@ -129,35 +129,35 @@ class GitHubActionsRSSMonitor {
                     newsletter.textContent
                   );
                   
-                  console.log(`✅ Newsletter sent for ${feed.title}:`);
+              /*    console.log(`✅ Newsletter sent for ${feed.title}:`);
                   console.log(`   Total: ${sendResults.total}`);
                   console.log(`   Sent: ${sendResults.sent}`);
                   console.log(`   Failed: ${sendResults.failed}`);
-                  
+                  */
                   if (sendResults.errors.length > 0) {
-                    console.log('❌ Send errors:');
+                   // console.log('❌ Send errors:');
                     sendResults.errors.forEach(error => console.log(`   - ${error}`));
                   }
                   
                   newslettersSent++;
                 } else {
-                  console.log(`ℹ️ No active subscribers found for ${feed.title}`);
+                //  console.log(`ℹ️ No active subscribers found for ${feed.title}`);
                 }
               } else {
-                console.log(`⚠️ No newsletter generated for ${feed.title}`);
+              //  console.log(`⚠️ No newsletter generated for ${feed.title}`);
               }
             } else {
-              console.log(`ℹ️ No new items for feed: ${feed.title}`);
+             // console.log(`ℹ️ No new items for feed: ${feed.title}`);
             }
             
           } catch (error) {
-            console.error(`❌ Error processing feed ${feed.title}:`, error.message);
+          //  console.error(`❌ Error processing feed ${feed.title}:`, error.message);
           }
         }
       } else if (results.newItems === 0) {
-        console.log('ℹ️ No new RSS items found');
+       // console.log('ℹ️ No new RSS items found');
       } else {
-        console.log('ℹ️ Newsletter sending disabled for this run');
+       // console.log('ℹ️ Newsletter sending disabled for this run');
       }
       
       this.setOutput('newsletters_sent', newslettersSent);
@@ -172,17 +172,17 @@ class GitHubActionsRSSMonitor {
         timestamp: new Date().toISOString()
       };
       
-      console.log('📋 Final Summary:');
+   /*   console.log('📋 Final Summary:');
       console.log(`   Feeds checked: ${summary.checkedFeeds}/${summary.totalFeeds}`);
       console.log(`   New items: ${summary.newItems}`);
       console.log(`   Newsletters sent: ${summary.newslettersSent}`);
       console.log(`   Errors: ${summary.errors}`);
-      
+      */
       return summary;
       
     } catch (error) {
-      console.error('❌ RSS monitoring failed:', error.message);
-      console.error('Stack trace:', error.stack);
+     // console.error('❌ RSS monitoring failed:', error.message);
+     // console.error('Stack trace:', error.stack);
       
       this.setOutput('error', error.message);
       throw error;
@@ -203,7 +203,7 @@ class GitHubActionsRSSMonitor {
         timestamp: new Date().toISOString()
       };
       
-      console.log('📊 RSS Monitoring Statistics:');
+     /* console.log('📊 RSS Monitoring Statistics:');
       console.log('─'.repeat(50));
       console.log('RSS Feeds:');
       console.log(`  Total: ${rssStats.totalFeeds}`);
@@ -216,7 +216,7 @@ class GitHubActionsRSSMonitor {
       console.log(`  Active: ${subscriberStats.active}`);
       console.log(`  Unsubscribed: ${subscriberStats.unsubscribed}`);
       console.log(`  Recent (7 days): ${subscriberStats.recentSubscriptions}`);
-      
+      */
       return stats;
       
     } catch (error) {
@@ -230,7 +230,7 @@ class GitHubActionsRSSMonitor {
    */
   async validateConfiguration() {
     try {
-      console.log('🔍 Validating RSS and subscriber configuration...');
+     // console.log('🔍 Validating RSS and subscriber configuration...');
       
       const validation = {
         isValid: true,
@@ -293,22 +293,22 @@ class GitHubActionsRSSMonitor {
         validation.isValid = false;
       }
       
-      console.log(`🔍 Configuration validation: ${validation.isValid ? '✅ Valid' : '❌ Invalid'}`);
+      //console.log(`🔍 Configuration validation: ${validation.isValid ? '✅ Valid' : '❌ Invalid'}`);
       
       if (validation.errors.length > 0) {
-        console.log('❌ Errors:');
+      //  console.log('❌ Errors:');
         validation.errors.forEach(error => console.log(`   - ${error}`));
       }
       
       if (validation.warnings.length > 0) {
-        console.log('⚠️ Warnings:');
+      //  console.log('⚠️ Warnings:');
         validation.warnings.forEach(warning => console.log(`   - ${warning}`));
       }
       
       return validation;
       
     } catch (error) {
-      console.error('❌ Configuration validation failed:', error.message);
+    //  console.error('❌ Configuration validation failed:', error.message);
       throw error;
     }
   }
@@ -345,7 +345,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         process.exit(1);
     }
   } catch (error) {
-    console.error('❌ Error:', error.message);
+   // console.error('❌ Error:', error.message);
     process.exit(1);
   }
 }
