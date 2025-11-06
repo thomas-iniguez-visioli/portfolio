@@ -1,7 +1,7 @@
 ---
 subject: Weekly Update - October 2025
 date: 2025-10-31
-status: draft
+status: scheduled
 scheduled_at: 2025-11-06
 website_url: https://portfolio.example.com
 github_url: ht-ps://github.com/username/portfolio
