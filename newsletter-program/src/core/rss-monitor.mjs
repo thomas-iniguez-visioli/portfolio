@@ -167,11 +167,11 @@ export class RSSMonitor {
         results.checkedFeeds++;
         results.newItems += feedResult.newItems.length;
         
-        console.log(`✅ Checked feed: ${feed.title} (${feedResult.newItems.length} new items)`);
+       // console.log(`✅ Checked feed: ${feed.title} (${feedResult.newItems.length} new items)`);
         
       } catch (error) {
         results.errors.push(`${feed.title}: ${error.message}`);
-        console.error(`❌ Error checking feed ${feed.title}:`, error.message);
+       // console.error(`❌ Error checking feed ${feed.title}:`, error.message);
       }
     }
 
