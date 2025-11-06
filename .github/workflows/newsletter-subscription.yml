@@ -179,7 +179,7 @@ jobs:
         id: send-welcome-email
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'newsletter@yourdomain.com' }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'newsletter <onboarding@resend.dev>' }}
           PORTFOLIO_URL: ${{ secrets.PORTFOLIO_URL || 'https://your-portfolio.com' }}
           UNSUBSCRIBE_URL: ${{ secrets.UNSUBSCRIBE_URL || 'https://your-portfolio.com/unsubscribe' }}
           CONTACT_URL: ${{ secrets.CONTACT_URL || 'https://your-portfolio.com/contact' }}
