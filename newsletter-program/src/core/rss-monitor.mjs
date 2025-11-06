@@ -406,7 +406,7 @@ export class RSSMonitor {
     
     const xmlContent = await response.text();
     const items = this.parseRSSItems(xmlContent);
-    
+    console.log(items.length)
     // Extract feed metadata
     const titleMatch = xmlContent.match(/<title[^>]*>(.*?)<\/title>/i);
     const descriptionMatch = xmlContent.match(/<description[^>]*>(.*?)<\/description>/i);
