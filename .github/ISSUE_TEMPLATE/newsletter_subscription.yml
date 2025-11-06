@@ -5,6 +5,7 @@ labels: ["newsletter-subscription", "automated"]
 assignees: []
 body:
   - type: markdown
+    id: entete
     attributes:
       value: |
         Thank you for your interest in subscribing to the newsletter! Please fill out the form below.
