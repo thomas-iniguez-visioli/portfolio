@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import striptags from 'striptags';
 
 /**
  * RSS feed monitoring and processing system
@@ -337,7 +338,7 @@ export class RSSMonitor {
       text += `\n`;
       
       if (item.description) {
-        text += `   ${item.description.replace(/<[^>]*>/g, '').substring(0, 200)}...\n`;
+        text += `   ${striptags(item.description).substring(0, 200)}...\n`;
       }
       
       text += `   Read more: ${item.link}\n\n`;
