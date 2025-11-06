@@ -9,7 +9,7 @@
       "description": "Personal blog feed",
       "isActive": true,
       "checkInterval": 60,
-      "lastChecked": null,
+
       "lastItemDate": null,
       "settings": {
         "autoSend": true,
