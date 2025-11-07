@@ -12,7 +12,7 @@ class EncryptedSubscriberStorage {
         this.subscribersFile = path.join(this.storageDir, 'subscribers.enc');
         this.backupDir = path.join(this.storageDir, 'backups');
         this.algorithm = 'aes-256-gcm';
-        
+        console.log(__dirname)
         // Ensure directories exist
         this.ensureDirectories();
     }
