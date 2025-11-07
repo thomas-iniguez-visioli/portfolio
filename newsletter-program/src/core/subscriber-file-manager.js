@@ -16,6 +16,7 @@ class SubscriberFileManager {
    */
   async initializeFile() {
     try {
+      console.log(this.dataFile)
       await fs.access(this.dataFile);
     } catch (error) {
       if (error.code === 'ENOENT') {
