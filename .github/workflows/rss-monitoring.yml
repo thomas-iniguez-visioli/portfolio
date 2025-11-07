@@ -35,7 +35,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd newsletter-program
-        npm ci
+        npm i
         
     - name: Check RSS feeds
       id: rss_check
@@ -70,7 +70,7 @@ jobs:
         if [ -f ".github/data/subscribers.encrypted.json" ]; then
           git add .github/data/subscribers.encrypted.json
         fi
-        
+        git add .
         # Only commit if there are changes
         if ! git diff --staged --quiet; then
           git commit -m "Update RSS cache and subscriber data with new items [skip ci]"
