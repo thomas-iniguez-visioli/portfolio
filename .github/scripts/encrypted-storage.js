@@ -9,7 +9,7 @@ class EncryptedSubscriberStorage {
     constructor(config) {
         this.encryptionKey = config.encryptionKey;
         this.storageDir = config.storageDir || '.github/data';
-        this.subscribersFile = path.join(this.storageDir, 'subscribers.enc');
+        this.subscribersFile = path.join(__dirname,"..","..",this.storageDir, 'subscribers.enc');
         this.backupDir = path.join(this.storageDir, 'backups');
         this.algorithm = 'aes-256-gcm';
         console.log(__dirname)
