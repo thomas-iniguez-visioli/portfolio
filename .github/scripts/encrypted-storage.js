@@ -77,6 +77,7 @@ class EncryptedSubscriberStorage {
     loadSubscribers() {
         try {
             if (!fs.existsSync(this.subscribersFile)) {
+                console.log(this.subscriberFile)
                 console.log('Subscribers file does not exist, starting with empty list');
                 return [];
             }
