@@ -9,7 +9,7 @@
       "description": "Personal blog feed",
       "isActive": true,
       "checkInterval": 60,
-      "lastItemDate": "2025-10-22T00:00:00.000Z",
+      "lastItemDate": "2025-11-07T00:00:00.000Z",
       "settings": {
         "autoSend": true,
         "subjectPrefix": "[RSS Update]",
@@ -18,7 +18,7 @@
         "template": "rss-newsletter"
       },
       "createdAt": "2025-10-31T15:55:03.088Z",
-      "lastChecked": "2025-11-08T15:19:14.479Z"
+      "lastChecked": "2025-11-08T16:24:26.838Z"
     }
   ],
   "lastModified": "2025-10-31T15:55:03.089Z"
