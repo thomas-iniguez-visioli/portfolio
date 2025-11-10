@@ -8,7 +8,7 @@
   --background-black: #000;
   --scan-line-color: rgba(0, 0, 0, 0.3);
   --font-family: 'VT323', monospace;
-  --base-font-size: 18px;
+  --base-font-size: 36px;
   --dynamic-gap: 1rem;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-duration: 0.4s;
@@ -24,7 +24,7 @@ html, body {
   background-color: var(--background-black);
   color: var(--matrix-green);
   font-family: var(--font-family);
-  font-size: var(--base-font-size, 18px);
+  font-size: var(--base-font-size, 36px);
   text-shadow: 0 0 5px var(--matrix-green), 0 0 10px var(--matrix-green);
   overflow-x: hidden;
   height: 100%;
