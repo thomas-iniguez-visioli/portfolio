@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-
+import { htmlToText as convertHtmlToText } from 'html-to-text';
 export class NewsletterSender {
   constructor(dataDir = './data') {
     this.dataDir = dataDir;
@@ -151,17 +151,13 @@ export class NewsletterSender {
   }
 
   htmlToText(html) {
-    return html
-      .replace(/<br\s*\/?>/gi, '\n')
-      .replace(/<\/p>/gi, '\n\n')
-      .replace(/<[^>]*>/g, '')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&quot;/g, '"')
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      .trim();
+    // Use html-to-text library for robust sanitization
+    return convertHtmlToText(html, {
+      wordwrap: false,
+      selectors: [
+        { selector: 'a', options: { ignoreHref: true } }
+      ]
+    }).trim();
   }
 
   generateUnsubscribeUrl(subscriber) {
