@@ -428,7 +428,7 @@ jobs:
           git config --local user.name "GitHub Action"
           
           # Add encrypted storage files and audit logs
-          git add .github/data/ .github/audit-logs/
+          git add . 
           
           # Check if there are changes to commit
           if git diff --staged --quiet; then

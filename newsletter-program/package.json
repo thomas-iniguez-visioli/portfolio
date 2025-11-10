@@ -26,7 +26,8 @@
     "dotenv": "^16.3.1",
     "js-yaml": "^4.1.0",
     "marked": "^9.1.6",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "striptags": "^3.2.0"
   },
   "devDependencies": {
     "jsdom": "^27.1.0",

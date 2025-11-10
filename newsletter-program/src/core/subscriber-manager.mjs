@@ -7,6 +7,7 @@ export class SubscriberManager {
     this.dataDir = dataDir;
     this.encryptionManager = new EncryptionManager();
     this.subscribersFile = path.join(dataDir, 'subscribers.encrypted.json');
+    console.log(this.subscribersFile)
   }
 
   async addSubscriber(subscriberData) {
