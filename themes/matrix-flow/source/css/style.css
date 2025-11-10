@@ -8,7 +8,7 @@
   --background-black: #000;
   --scan-line-color: rgba(0, 0, 0, 0.3);
   --font-family: 'VT323', monospace;
-  --base-font-size: 36px;
+  --base-font-size: 18px;
   --dynamic-gap: 1rem;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-duration: 0.4s;
@@ -24,7 +24,7 @@ html, body {
   background-color: var(--background-black);
   color: var(--matrix-green);
   font-family: var(--font-family);
-  font-size: var(--base-font-size, 36px);
+  font-size: var(--base-font-size, 18px);
   text-shadow: 0 0 5px var(--matrix-green), 0 0 10px var(--matrix-green);
   overflow-x: hidden;
   height: 100%;
@@ -213,7 +213,7 @@ a:hover {
 
 .nav-item {
   margin: 0 1rem;
-  font-size: 2.4rem;
+  font-size: 1.2rem;
 }
 
 .site-main {
@@ -241,11 +241,11 @@ a:hover {
 }
 
 .post-title a {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .post-meta {
-  font-size: 2rem;
+  font-size: 0.9rem;
   margin: 0.5rem 0;
   color: var(--dark-green);
   text-shadow: none;
@@ -291,7 +291,7 @@ a:hover {
   text-align: center;
   border-top: 2px solid var(--dark-green);
   padding: 1rem 2rem;
-  font-size: 2rem;
+  font-size: 0.9rem;
   color: var(--dark-green);
   text-shadow: none;
   background: rgba(0, 0, 0, 0.4);
@@ -375,7 +375,7 @@ a:hover {
   }
   
   .logo-glitch {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 
@@ -405,16 +405,16 @@ a:hover {
 /* Viewport-specific optimizations */
 @media (max-width: 480px) {
   .logo-glitch {
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
   
   .nav-item {
-    font-size: 2rem;
+    font-size: 1rem;
     margin: 0 0.5rem;
   }
   
   .widget {
-    padding: 2rem;
+    padding: 1rem;
     margin-bottom: 1rem;
   }
   

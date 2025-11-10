@@ -6,7 +6,7 @@
   --background-black: #000;
   --scan-line-color: rgba(0, 0, 0, 0.3);
   --font-family: 'VT323', monospace;
-  --base-font-size: 36px;
+  --base-font-size: 18px;
   --dynamic-gap: 1rem;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-duration: 0.4s;
