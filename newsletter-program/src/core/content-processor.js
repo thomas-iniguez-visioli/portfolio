@@ -165,8 +165,13 @@ export class ContentProcessor {
     if (!html) return '';
     
     // Remove HTML tags and decode entities
-    return html
-      .replace(/<[^>]*>/g, '')
+    let output = html;
+    let prev;
+    do {
+      prev = output;
+      output = output.replace(/<[^>]*>/g, '');
+    } while (output !== prev);
+    return output
       .replace(/&nbsp;/g, ' ')
       .replace(/&amp;/g, '&')
       .replace(/&lt;/g, '<')
