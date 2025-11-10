@@ -18,7 +18,7 @@
     "rss": "node src/cli/rss-cli.js",
     "analytics": "node src/cli/analytics-cli.js",
     "export": "node src/cli/export-cli.js",
-    "test": "vitest --run",
+    "test": "cross-env ENCRYPTION_KEY=VIuLCAQyhcllhrh4PdxlGB6OBsKhdD/8qpbNC0Yk/7A= vitest --run",
     "dev": "node --watch src/cli/index.js"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "html-to-text": "^9.0.5"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "jsdom": "^27.1.0",
     "vitest": "^4.0.6"
   },

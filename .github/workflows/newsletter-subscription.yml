@@ -134,7 +134,10 @@ jobs:
           SUBSCRIBER_ADDITIONAL_INFO: ${{ steps.extract-data.outputs.additional_info }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
-          echo "💾 Adding subscriber to encrypted storage"
+          echo "📦 Installing newsletter-program dependencies..."
+          npm install --prefix newsletter-program
+          
+          echo "💾 Adding subscriber via newsletter-program CLI..."
           
           # Check if encryption key is configured
           if [ -z "$ENCRYPTION_KEY" ]; then
@@ -145,15 +148,19 @@ jobs:
           fi
           
           # Run the subscriber management script
-          node .github/scripts/manage-subscribers.js
+          node newsletter-program/src/cli/subscriber-cli.js add \
+            --email "${{ steps.extract-data.outputs.email }}" \
+            --source "github-issue" \
+            --frequency "${{ steps.extract-data.outputs.frequency }}" \
+            --topics "${{ steps.extract-data.outputs.topics }}"
           
           if [ $? -eq 0 ]; then
-            echo "✅ Subscriber added to encrypted storage successfully"
+            echo "✅ Subscriber added successfully via CLI"
             echo "storage_success=true" >> $GITHUB_OUTPUT
           else
-            echo "❌ Failed to add subscriber to encrypted storage"
+            echo "❌ Failed to add subscriber via CLI"
             echo "storage_success=false" >> $GITHUB_OUTPUT
-            echo "storage_error=Failed to add to encrypted storage" >> $GITHUB_OUTPUT
+            echo "storage_error=Failed to add subscriber via CLI" >> $GITHUB_OUTPUT
             exit 1
           fi
 

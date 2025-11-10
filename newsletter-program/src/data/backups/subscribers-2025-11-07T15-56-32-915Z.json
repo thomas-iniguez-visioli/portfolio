@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2025-11-07T15:56:32.713Z",
+  "lastModified": "2025-11-07T15:56:32.893Z",
+  "keyVersion": "env-v1",
+  "subscribers": [
+    {
+      "id": "4ec4fb5f-0a25-414a-9cbb-06398a616774",
+      "status": "active",
+      "subscribedAt": "2025-11-07T15:56:32.745Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": [
+          "tech",
+          "news"
+        ]
+      },
+      "unsubscribeToken": "859dc46d850f339a01b5e6bf1766ed570c71270a0cf70473fbd09bdea9fc3a24",
+      "metadata": {},
+      "encryptedEmail": {
+        "encrypted": "43b51e467ace650aed10a012ff5f9fe8314deecaaed549a38f4378438cc60a10",
+        "iv": "4fc212f3a4701f73cd7290a480cd6a31",
+        "keyVersion": "env-v1"
+      }
+    },
+    {
+      "id": "5bc68707-0462-4b09-8a8f-c9be89fcb3ce",
+      "status": "active",
+      "subscribedAt": "2025-11-07T15:56:32.795Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": []
+      },
+      "unsubscribeToken": "03ad3a0cfd8b62c38c379cf8a02b48c1915c94a92eae910d0b2ab751c1c10c08",
+      "metadata": {},
+      "encryptedEmail": {
+        "encrypted": "863d24eee31177d531d3001c36d5a2e4f131ddf5b0119de393b175f82a1356d0",
+        "iv": "c0d2db48e35c144c3fb4750975725068",
+        "keyVersion": "env-v1"
+      }
+    },
+    {
+      "id": "dedf4eb8-ecc5-4497-bf95-8926b0ed99ec",
+      "status": "unsubscribed",
+      "subscribedAt": "2025-11-07T15:56:32.818Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": []
+      },
+      "unsubscribeToken": "a97c54d4f10318365224e74fcd3d7fdfeb398da925fa9015608479c85a522719",
+      "metadata": {},
+      "encryptedEmail": {
+        "encrypted": "8fd7f223503a0bfd0f4cdfc7579acccfd32d49a4d3134b832a59483e36b7084a",
+        "iv": "4d59ff710e38af9ded78e0fa2a8be1be",
+        "keyVersion": "env-v1"
+      },
+      "updatedAt": "2025-11-07T15:56:32.845Z"
+    },
+    {
+      "id": "14b33371-08c8-483e-8cb8-d4ac653eaaea",
+      "status": "active",
+      "subscribedAt": "2025-11-07T15:56:32.888Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": []
+      },
+      "unsubscribeToken": "a3e9f12d518c5db53ddc8ba284e66992ba2fea72058c77d1b857ecf2e2ec9bbc",
+      "metadata": {},
+      "encryptedEmail": {
+        "encrypted": "b3f0de91038ea7b3723be3e19f699c855c7cdbde3adc0a15b0567505155906e7",
+        "iv": "d5dd8a9469b09a7a1247719583c81123",
+        "keyVersion": "env-v1"
+      }
+    }
+  ]
+}

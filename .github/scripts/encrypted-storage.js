@@ -1,18 +1,17 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { EncryptionManager } = require('../../newsletter-program/src/core/encryption');
 
 /**
  * Encrypted file-based subscriber storage system
  */
 class EncryptedSubscriberStorage {
     constructor(config) {
-        this.encryptionKey = config.encryptionKey;
+        this.encryptionManager = new EncryptionManager();
         this.storageDir = config.storageDir || '.github/data';
         this.subscribersFile = path.join(__dirname,"..","..",this.storageDir, 'subscribers.enc');
         this.backupDir = path.join(this.storageDir, 'backups');
-        this.algorithm = 'aes-256-gcm';
-        console.log(__dirname)
         // Ensure directories exist
         this.ensureDirectories();
     }
@@ -30,42 +29,24 @@ class EncryptedSubscriberStorage {
     }
     
     /**
-     * Encrypt data using AES-256-GCM
+     * Encrypt data using EncryptionManager
      */
-    encrypt(data) {
+    async encrypt(data) {
         try {
-            const iv = crypto.randomBytes(16);
-            const cipher = crypto.createCipher(this.algorithm, this.encryptionKey);
-            cipher.setAAD(Buffer.from('newsletter-subscribers'));
-            
-            let encrypted = cipher.update(JSON.stringify(data), 'utf8', 'hex');
-            encrypted += cipher.final('hex');
-            
-            const authTag = cipher.getAuthTag();
-            
-            return {
-                iv: iv.toString('hex'),
-                authTag: authTag.toString('hex'),
-                data: encrypted
-            };
+            const encryptedData = await this.encryptionManager.encrypt(JSON.stringify(data));
+            return encryptedData;
         } catch (error) {
             throw new Error(`Encryption failed: ${error.message}`);
         }
     }
     
     /**
-     * Decrypt data using AES-256-GCM
+     * Decrypt data using EncryptionManager
      */
-    decrypt(encryptedData) {
+    async decrypt(encryptedData) {
         try {
-            const decipher = crypto.createDecipher(this.algorithm, this.encryptionKey);
-            decipher.setAAD(Buffer.from('newsletter-subscribers'));
-            decipher.setAuthTag(Buffer.from(encryptedData.authTag, 'hex'));
-            
-            let decrypted = decipher.update(encryptedData.data, 'hex', 'utf8');
-            decrypted += decipher.final('utf8');
-            
-            return JSON.parse(decrypted);
+            const decryptedData = await this.encryptionManager.decrypt(encryptedData);
+            return JSON.parse(decryptedData);
         } catch (error) {
             throw new Error(`Decryption failed: ${error.message}`);
         }
@@ -74,10 +55,9 @@ class EncryptedSubscriberStorage {
     /**
      * Load subscribers from encrypted file
      */
-    loadSubscribers() {
+    async loadSubscribers() {
         try {
             if (!fs.existsSync(this.subscribersFile)) {
-                console.log(this)
                 console.log('Subscribers file does not exist, starting with empty list');
                 return [];
             }
@@ -85,7 +65,7 @@ class EncryptedSubscriberStorage {
             const encryptedContent = fs.readFileSync(this.subscribersFile, 'utf8');
             const encryptedData = JSON.parse(encryptedContent);
             
-            const subscribers = this.decrypt(encryptedData);
+            const subscribers = await this.decrypt(encryptedData);
             console.log(`Loaded ${subscribers.length} subscribers from encrypted storage`);
             
             return subscribers;
@@ -98,12 +78,12 @@ class EncryptedSubscriberStorage {
     /**
      * Save subscribers to encrypted file
      */
-    saveSubscribers(subscribers) {
+    async saveSubscribers(subscribers) {
         try {
             // Create backup before saving
             this.createBackup();
             
-            const encryptedData = this.encrypt(subscribers);
+            const encryptedData = await this.encrypt(subscribers);
             const encryptedContent = JSON.stringify(encryptedData, null, 2);
             
             // Write to temporary file first, then rename (atomic operation)
@@ -169,9 +149,9 @@ class EncryptedSubscriberStorage {
     /**
      * Add new subscriber
      */
-    addSubscriber(subscriberData) {
+    async addSubscriber(subscriberData) {
         try {
-            const subscribers = this.loadSubscribers();
+            const subscribers = await this.loadSubscribers();
             
             // Check for duplicates
             const existingSubscriber = subscribers.find(sub => sub.email === subscriberData.email);
@@ -204,7 +184,7 @@ class EncryptedSubscriberStorage {
             subscribers.push(newSubscriber);
             
             // Save updated list
-            this.saveSubscribers(subscribers);
+            await this.saveSubscribers(subscribers);
             
             console.log(`Added new subscriber: ${subscriberData.email}`);
             
@@ -227,9 +207,9 @@ class EncryptedSubscriberStorage {
     /**
      * Get subscriber by email
      */
-    getSubscriber(email) {
+    async getSubscriber(email) {
         try {
-            const subscribers = this.loadSubscribers();
+            const subscribers = await this.loadSubscribers();
             const subscriber = subscribers.find(sub => sub.email === email);
             
             return subscriber || null;
@@ -242,9 +222,9 @@ class EncryptedSubscriberStorage {
     /**
      * Get all subscribers
      */
-    getAllSubscribers() {
+    async getAllSubscribers() {
         try {
-            return this.loadSubscribers();
+            return await this.loadSubscribers();
         } catch (error) {
             console.error('Failed to get all subscribers:', error.message);
             return [];
@@ -254,9 +234,9 @@ class EncryptedSubscriberStorage {
     /**
      * Update subscriber status
      */
-    updateSubscriberStatus(email, status) {
+    async updateSubscriberStatus(email, status) {
         try {
-            const subscribers = this.loadSubscribers();
+            const subscribers = await this.loadSubscribers();
             const subscriberIndex = subscribers.findIndex(sub => sub.email === email);
             
             if (subscriberIndex === -1) {
@@ -270,7 +250,7 @@ class EncryptedSubscriberStorage {
             subscribers[subscriberIndex].status = status;
             subscribers[subscriberIndex].updatedAt = new Date().toISOString();
             
-            this.saveSubscribers(subscribers);
+            await this.saveSubscribers(subscribers);
             
             console.log(`Updated subscriber status: ${email} -> ${status}`);
             
@@ -293,9 +273,9 @@ class EncryptedSubscriberStorage {
     /**
      * Get subscriber statistics
      */
-    getStatistics() {
+    async getStatistics() {
         try {
-            const subscribers = this.loadSubscribers();
+            const subscribers = await this.loadSubscribers();
             
             const stats = {
                 total: subscribers.length,

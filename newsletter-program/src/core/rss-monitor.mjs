@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import striptags from 'striptags';
+
 
 /**
  * RSS feed monitoring and processing system
@@ -322,7 +322,8 @@ export class RSSMonitor {
   /**
    * Generate text content for newsletter
    */
-  generateTextContent(feed, items) {
+  async generateTextContent(feed, items) {
+    const striptags = (await import('striptags')).default;
     let text = `${feed.title}\n${'='.repeat(feed.title.length)}\n\n`;
     
     if (feed.description) {

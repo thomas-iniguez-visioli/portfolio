@@ -8,7 +8,11 @@ describe('SubscriberFileManager', () => {
   const testDataPath = './test-data';
   const testBackupPath = './test-data/backups';
 
-  beforeEach(() => {
+  beforeEach(async () => {
+    const testId = Math.random().toString(36).substring(2);
+    testDataPath = `./test-data-${testId}`;
+    testBackupPath = `./test-data-${testId}/backups`;
+
     // Clean up test directories
     if (fs.existsSync(testDataPath)) {
       fs.rmSync(testDataPath, { recursive: true, force: true });
@@ -17,7 +21,7 @@ describe('SubscriberFileManager', () => {
     manager = new SubscriberFileManager(testDataPath, testBackupPath);
   });
 
-  afterEach(() => {
+  afterEach(async () => {
     // Clean up test directories
     if (fs.existsSync(testDataPath)) {
       fs.rmSync(testDataPath, { recursive: true, force: true });

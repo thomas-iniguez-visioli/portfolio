@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2025-11-07T15:56:32.713Z",
+  "lastModified": "2025-11-07T15:56:32.823Z",
+  "keyVersion": "env-v1",
+  "subscribers": [
+    {
+      "id": "4ec4fb5f-0a25-414a-9cbb-06398a616774",
+      "status": "active",
+      "subscribedAt": "2025-11-07T15:56:32.745Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": [
+          "tech",
+          "news"
+        ]
+      },
+      "unsubscribeToken": "859dc46d850f339a01b5e6bf1766ed570c71270a0cf70473fbd09bdea9fc3a24",
+      "metadata": {},
+      "encryptedEmail": {
+        "encrypted": "970da41fb1e03c8c25437f47058b890e75173b8e007ef7ec7c71758260f4fa6e",
+        "iv": "2d2fdd709fecf1c6b798dcf578011b28",
+        "keyVersion": "env-v1"
+      }
+    },
+    {
+      "id": "5bc68707-0462-4b09-8a8f-c9be89fcb3ce",
+      "status": "active",
+      "subscribedAt": "2025-11-07T15:56:32.795Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": []
+      },
+      "unsubscribeToken": "03ad3a0cfd8b62c38c379cf8a02b48c1915c94a92eae910d0b2ab751c1c10c08",
+      "metadata": {},
+      "encryptedEmail": {
+        "encrypted": "b38ce44f600a179f4dd48f66cf7eecfdb4e1289a1f3a513119f13c6d0ec9a53d",
+        "iv": "aa371eaf0a21c361909f641fa93eaa5e",
+        "keyVersion": "env-v1"
+      }
+    },
+    {
+      "id": "dedf4eb8-ecc5-4497-bf95-8926b0ed99ec",
+      "status": "active",
+      "subscribedAt": "2025-11-07T15:56:32.818Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": []
+      },
+      "unsubscribeToken": "a97c54d4f10318365224e74fcd3d7fdfeb398da925fa9015608479c85a522719",
+      "metadata": {},
+      "encryptedEmail": {
+        "encrypted": "a2729f2410414bf5966957281cd0dbd980303d80f9fed6da6cb8ea7fad0496c7",
+        "iv": "e2eb2988967e9299e5ce33a8dd56a68d",
+        "keyVersion": "env-v1"
+      }
+    }
+  ]
+}

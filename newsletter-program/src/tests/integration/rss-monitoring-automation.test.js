@@ -112,6 +112,9 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
         text: () => Promise.resolve(mockRSSFeed)
       });
 
+      try {
+        fs.mkdirSync(testDataDir, { recursive: true });
+      } catch (e) {}
       // Import and create RSS monitor with mocked fetch
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
@@ -148,6 +151,9 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should detect new items in RSS feed', async () => {
+      try {
+        fs.mkdirSync(testDataDir, { recursive: true });
+      } catch (e) {}
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
@@ -210,6 +216,9 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     it('should handle RSS feed fetch errors gracefully', async () => {
       mockFetch.mockRejectedValue(new Error('Network error'));
 
+      try {
+        fs.mkdirSync(testDataDir, { recursive: true });
+      } catch (e) {}
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
@@ -230,6 +239,9 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should store and retrieve RSS cache correctly', async () => {
+      try {
+        fs.mkdirSync(testDataDir, { recursive: true });
+      } catch (e) {}
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
@@ -442,8 +454,11 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
 
   describe('Integration with External Newsletter Service', () => {
     it('should integrate RSS monitoring with encrypted subscriber storage', async () => {
+      try {
+        fs.mkdirSync(testDataDir, { recursive: true });
+      } catch (e) {}
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
-      const { SubscriberManager } = await import('../../core/subscriber-manager.mjs');
+      const { SubscriberManager } = await import('../../core/subscriber-manager.js');
       
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
       const subscriberManager = new SubscriberManager(testDataDir);
@@ -505,6 +520,9 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should handle RSS feed configuration updates', async () => {
+      try {
+        fs.mkdirSync(testDataDir, { recursive: true });
+      } catch (e) {}
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
@@ -557,6 +575,9 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
     });
 
     it('should validate RSS feed URLs and handle invalid feeds', async () => {
+      try {
+        fs.mkdirSync(testDataDir, { recursive: true });
+      } catch (e) {}
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
