@@ -213,7 +213,7 @@ a:hover {
 
 .nav-item {
   margin: 0 1rem;
-  font-size: 1.2rem;
+  font-size: 2.4rem;
 }
 
 .site-main {
@@ -241,11 +241,11 @@ a:hover {
 }
 
 .post-title a {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .post-meta {
-  font-size: 0.9rem;
+  font-size: 2rem;
   margin: 0.5rem 0;
   color: var(--dark-green);
   text-shadow: none;
@@ -291,7 +291,7 @@ a:hover {
   text-align: center;
   border-top: 2px solid var(--dark-green);
   padding: 1rem 2rem;
-  font-size: 0.9rem;
+  font-size: 2rem;
   color: var(--dark-green);
   text-shadow: none;
   background: rgba(0, 0, 0, 0.4);
@@ -375,7 +375,7 @@ a:hover {
   }
   
   .logo-glitch {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 }
 
@@ -405,16 +405,16 @@ a:hover {
 /* Viewport-specific optimizations */
 @media (max-width: 480px) {
   .logo-glitch {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
   
   .nav-item {
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 0 0.5rem;
   }
   
   .widget {
-    padding: 1rem;
+    padding: 2rem;
     margin-bottom: 1rem;
   }
   
