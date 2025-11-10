@@ -256,13 +256,13 @@ a:hover {
 }
 
 .post-full-content {
-  margin-top: 2rem;
+  margin-top: 0rem;
   line-height: 1.8;
 }
 
 .post-full-content h1, .post-full-content h2, .post-full-content h3 {
   color: var(--matrix-green);
-  margin: 2rem 0 1rem;
+  margin: 0rem 0 1rem;
   border-bottom: 1px solid var(--dark-green);
 }
 
