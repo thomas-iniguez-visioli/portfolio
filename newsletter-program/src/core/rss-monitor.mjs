@@ -9,7 +9,7 @@ import crypto from 'crypto';
  * Monitors RSS feeds and generates newsletters from new items
  */
 export class RSSMonitor {
-  constructor(dataPath = '.github/data', options = {}) {
+  constructor(dataPath = './xdata', options = {}) {
     this.dataPath = dataPath;
     this.feedsFile = path.join(dataPath, 'rss-feeds.json');
     this.cacheFile = path.join(dataPath, 'rss-cache.json');
