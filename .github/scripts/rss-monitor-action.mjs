@@ -28,7 +28,7 @@ class GitHubActionsRSSMonitor {
     // Initialize components with repository data path
     this.rssMonitor = new RSSMonitor(this.dataPath);
     this.newsletterSender = new NewsletterSender();
-    this.subscriberManager = new SubscriberFileManager(this.dataPath);
+    this.subscriberManager = new SubscriberFileManager();
     
     // GitHub Actions environment
     this.isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
