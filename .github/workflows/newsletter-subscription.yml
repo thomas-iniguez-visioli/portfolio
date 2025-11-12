@@ -152,7 +152,7 @@ jobs:
             --email "${{ steps.extract-data.outputs.email }}" \
             --source "github-issue" \
             --frequency "${{ steps.extract-data.outputs.frequency }}" \
-            --topics "${{ steps.extract-data.outputs.topics }}"
+            --topics "all"
           
           if [ $? -eq 0 ]; then
             echo "✅ Subscriber added successfully via CLI"
