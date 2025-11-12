@@ -45,7 +45,7 @@ jobs:
           
           npx pnpm i
           cd newsletter-program
-          npx pnpm i 
+          npm i 
           cd ..
           npm run build
           npm run deploy
