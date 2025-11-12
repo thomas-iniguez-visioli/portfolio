@@ -114,9 +114,7 @@ class GitHubActionsRSSMonitor {
               
               if (newsletter) {
                 // Get active subscribers
-                const subscribers = await this.subscriberManager.getSubscribers({ 
-                  status: 'active' 
-                });
+                const subscribers = await this.subscriberManager.getSubscribers();
                 
                 if (subscribers.length > 0) {
                //   console.log(`📤 Sending newsletter to ${subscribers.length} subscribers...`);
