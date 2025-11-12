@@ -3,7 +3,7 @@
 const { Command } = require('commander');
 const fs = require('fs');
 const path = require('path');
-const { SubscriberFileManager } = require('../core/subscriber-file-manager.mjs');
+const { SubscriberFileManager } =async import('../core/subscriber-file-manager.mjs');
 
 const program = new Command();
 
