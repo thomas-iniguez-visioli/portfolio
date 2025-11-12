@@ -4,7 +4,7 @@ import { Command } from 'commander';
 import { RSSMonitor } from '../core/rss-monitor.mjs';
 import { NewsletterSender } from '../core/newsletter-sender.mjs';
 import { SubscriberFileManager } from '../core/subscriber-file-manager.js';
-
+import * as fs  from 'fs'
 const program = new Command();
 
 program
@@ -173,7 +173,7 @@ program
             console.log(`   Items: ${newsletter.items.length}`);
 
             if (options.output) {
-                const fs = await import('fs');
+             
                 const content = {
                     subject: newsletter.subject,
                     htmlContent: newsletter.htmlContent,
