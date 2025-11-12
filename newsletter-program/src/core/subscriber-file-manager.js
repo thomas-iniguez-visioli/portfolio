@@ -44,7 +44,7 @@ class SubscriberFileManager {
 
   try {
     // Lire le fichier
-    const data = await fs.promises.readFile(this.dataFile, 'utf8');
+    const data = await fs.readFile(this.dataFile, 'utf8');
 
     // Si le fichier est vide, retourner une structure vide
     if (!data.trim()) {
