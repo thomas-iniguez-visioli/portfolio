@@ -42,10 +42,16 @@ export class ContentProcessor {
     const dangerousAttributes = /\s(on\w+|javascript:)[^>]*/gi;
     const dangerousTags = /<(script|iframe|object|embed|form)[^>]*>.*?<\/\1>/gi;
 
-    let sanitized = content
-      .replace(dangerousElements, '')
-      .replace(dangerousTags, '')
-      .replace(dangerousAttributes, '');
+    let sanitized = content;
+    // Repeat replacements until no further dangerous elements/tags/attributes remain
+    let previous;
+    do {
+      previous = sanitized;
+      sanitized = sanitized
+        .replace(dangerousElements, '')
+        .replace(dangerousTags, '')
+        .replace(dangerousAttributes, '');
+    } while (sanitized !== previous);
 
     // Allow only safe HTML tags
     const allowedTags = ['p', 'br', 'strong', 'em', 'u', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'a', 'img'];
