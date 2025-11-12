@@ -39,27 +39,49 @@ class SubscriberFileManager {
   /**
    * Load and decrypt subscriber data
    */
-  async loadSubscribers() {
-    await this.initializeFile();
-    
-    try {
-      const data = await fs.readFile(this.dataFile, 'utf-8');
-      const parsed = JSON.parse(data);
-      
-      // Decrypt subscriber emails
-      const decryptedSubscribers = parsed.subscribers.map(subscriber => ({
+ async loadSubscribers() {
+  await this.initializeFile();
+
+  try {
+    // Lire le fichier
+    const data = await fs.promises.readFile(this.dataFile, 'utf8');
+
+    // Si le fichier est vide, retourner une structure vide
+    if (!data.trim()) {
+      console.warn('⚠️ Le fichier des abonnés est vide. Initialisation avec une liste vide.');
+      return { subscribers: [] };
+    }
+
+    // Parser les données
+    const parsed = JSON.parse(data);
+
+    // Vérifier que les abonnés existent
+    if (!parsed.subscribers || !Array.isArray(parsed.subscribers)) {
+      console.warn('⚠️ Aucune liste d\'abonnés valide trouvée. Initialisation avec une liste vide.');
+      return { subscribers: [] };
+    }
+
+    // Déchiffrer les emails des abonnés
+    const decryptedSubscribers = parsed.subscribers.map(subscriber => {
+      if (!subscriber.encryptedEmail || typeof subscriber.encryptedEmail !== 'string') {
+        throw new Error(`L'email chiffré de l'abonné ${subscriber.id} est invalide ou manquant.`);
+      }
+
+      return {
         ...subscriber,
         email: this.encryption.decryptEmail(subscriber.encryptedEmail)
-      }));
-      
-      return {
-        ...parsed,
-        subscribers: decryptedSubscribers
       };
-    } catch (error) {
-      throw new Error(`Failed to load subscribers: ${error.message}`);
-    }
+    });
+
+    return {
+      ...parsed,
+      subscribers: decryptedSubscribers
+    };
+  } catch (error) {
+    throw new Error(`Échec du chargement des abonnés : ${error.message}`);
   }
+}
+
 
   /**
    * Save encrypted subscriber data
