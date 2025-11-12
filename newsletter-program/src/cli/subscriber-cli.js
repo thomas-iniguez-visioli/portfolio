@@ -1,12 +1,16 @@
 #!/usr/bin/env node
-
+(async () => {
 const { Command } = require('commander');
 const fs = require('fs');
 const path = require('path');
-const { SubscriberFileManager } = await import('../core/subscriber-file-manager.mjs').catch(err => {
-  console.error('❌ Erreur lors du chargement du module SubscriberFileManager:', err.message);
-  process.exit(1);
-});
+ let SubscriberFileManager;
+  try {
+    const module = await import('../core/subscriber-file-manager.mjs');
+    SubscriberFileManager = module.SubscriberFileManager;
+  } catch (err) {
+    console.error('❌ Erreur lors du chargement du module SubscriberFileManager:', err.message);
+    process.exit(1);
+  }
 
 
 const program = new Command();
@@ -349,3 +353,4 @@ program
   });
 
 program.parse();
+})();
