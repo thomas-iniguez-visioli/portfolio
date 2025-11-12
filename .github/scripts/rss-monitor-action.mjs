@@ -24,7 +24,7 @@ class GitHubActionsRSSMonitor {
   constructor() {
     // Use repository data path for GitHub Actions
     this.dataPath = path.join(__dirname, '..','data');
-    //console.log(this.dataPath)
+    console.log(this.dataPath)
     // Initialize components with repository data path
     this.rssMonitor = new RSSMonitor(this.dataPath);
     this.newsletterSender = new NewsletterSender();
