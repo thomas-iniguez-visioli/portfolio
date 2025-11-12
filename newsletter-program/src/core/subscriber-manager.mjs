@@ -11,6 +11,33 @@ export class SubscriberManager {
   }
 
   async addSubscriber(subscriberData) {
+    // Dans la méthode `addSubscriber` de `SubscriberFileManager`
+try {
+  console.log('🔑 Clé de chiffrement utilisée :', this.encryptionKey);
+  console.log('📁 Chemin du fichier des abonnés :', this.subscribersFilePath);
+
+  // Essaye de déchiffrer les données existantes
+  const encryptedData = fs.readFileSync(this.subscribersFilePath, 'utf8');
+  console.log('📜 Données chiffrées lues :', encryptedData.substring(0, 50) + '...');
+
+  // Logique de déchiffrement
+  const decryptedData = this.decryptData(encryptedData);
+  console.log('🔓 Données déchiffrées :', decryptedData.substring(0, 50) + '...');
+
+  // Ajoute le nouvel abonné
+  const subscribers = JSON.parse(decryptedData);
+//  subscribers.push(newSubscriber);
+
+  // Rechiffre et sauvegarde
+  const reencryptedData = this.encryptData(JSON.stringify(subscribers, null, 2));
+  //fs.writeFileSync(this.subscribersFilePath, reencryptedData);
+
+  
+} catch (error) {
+  console.error('❌ Erreur détaillée lors de l\'ajout de l\'abonné :', error);
+  throw new Error(`Failed to load subscribers: ${error.message}`);
+}
+
     try {
       // Check for duplicates first
       const existingSubscribers = await this.getSubscribers();
