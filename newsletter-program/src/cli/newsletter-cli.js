@@ -7,7 +7,7 @@ const NewsletterComposer = require('../core/newsletter-composer');
 let SubscriberManager
 let ResendClient
 (async() => {
- SubscriberManager = await import('../core/subscriber-manager.js');
+ SubscriberManager = await import('../core/subscriber-manager.mjs');
  ResendClient = await import('../core/newsletter-sender.mjs');
 })().then(()=>{
 
