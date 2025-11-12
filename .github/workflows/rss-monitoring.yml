@@ -54,7 +54,7 @@ jobs:
       id: rss_send
       run: |
         # Run RSS monitoring using GitHub Actions-specific script
-        node newsletter-program/src/cli/rss-cli.mjs generate  --feed-id 2fefc7a5-ae06-4b25-abca-74568216d7c7 -o feed.json --send
+        node newsletter-program/src/cli/rss-cli.mjs generate  --feed-id "2fefc7a5-ae06-4b25-abca-74568216d7c7" -o feed.json --send
       env:
         RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
