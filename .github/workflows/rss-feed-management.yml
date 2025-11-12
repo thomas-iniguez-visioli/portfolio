@@ -91,10 +91,10 @@ jobs:
             
             echo "➕ Adding RSS feed: ${{ github.event.inputs.feed_url }}"
             
-            node -e "
-            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            node --input-type=module -e "
+            import { RSSMonitor } from './src/core/rss-monitor.mjs';
             
-            async function addFeed() {
+            (async () => {
               try {
                 const rssMonitor = new RSSMonitor('./data');
                 
@@ -122,45 +122,45 @@ jobs:
                 console.log('action_result=error');
                 process.exit(1);
               }
-            }
-            
-            addFeed();
+            })();
             "
             ;;
             
           "list")
             echo "📡 Listing RSS feeds..."
             
-            node -e "
-            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            node --input-type=module -e "
+            import { RSSMonitor } from './src/core/rss-monitor.mjs';
             
-            try {
-              const rssMonitor = new RSSMonitor('./data');
-              const feeds = rssMonitor.getFeeds();
-              
-              console.log('📡 RSS Feeds (' + feeds.length + ' found):');
-              console.log('─'.repeat(80));
-              
-              if (feeds.length === 0) {
-                console.log('No RSS feeds configured.');
-              } else {
-                feeds.forEach(feed => {
-                  console.log('ID:', feed.id);
-                  console.log('Title:', feed.title);
-                  console.log('URL:', feed.url);
-                  console.log('Status:', feed.isActive ? '🟢 Active' : '🔴 Inactive');
-                  console.log('Auto-send:', feed.settings?.autoSend ? '✅ Yes' : '❌ No');
-                  console.log('Check interval:', feed.checkInterval, 'minutes');
-                  console.log('Last checked:', feed.lastChecked || 'Never');
-                  console.log('─'.repeat(40));
-                });
+            (async () => {
+              try {
+                const rssMonitor = new RSSMonitor('./data');
+                const feeds = rssMonitor.getFeeds();
+                
+                console.log('📡 RSS Feeds (' + feeds.length + ' found):');
+                console.log('─'.repeat(80));
+                
+                if (feeds.length === 0) {
+                  console.log('No RSS feeds configured.');
+                } else {
+                  feeds.forEach(feed => {
+                    console.log('ID:', feed.id);
+                    console.log('Title:', feed.title);
+                    console.log('URL:', feed.url);
+                    console.log('Status:', feed.isActive ? '🟢 Active' : '🔴 Inactive');
+                    console.log('Auto-send:', feed.settings?.autoSend ? '✅ Yes' : '❌ No');
+                    console.log('Check interval:', feed.checkInterval, 'minutes');
+                    console.log('Last checked:', feed.lastChecked || 'Never');
+                    console.log('─'.repeat(40));
+                  });
+                }
+                console.log('action_result=success');
+              } catch (error) {
+                console.error('❌ Error listing RSS feeds:', error.message);
+                console.log('action_result=error');
+                process.exit(1);
               }
-              console.log('action_result=success');
-            } catch (error) {
-              console.error('❌ Error listing RSS feeds:', error.message);
-              console.log('action_result=error');
-              process.exit(1);
-            }
+            })();
             "
             ;;
             
@@ -172,10 +172,10 @@ jobs:
             
             echo "🔄 Updating RSS feed: ${{ github.event.inputs.feed_id }}"
             
-            node -e "
-            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            node --input-type=module -e "
+            import { RSSMonitor } from './src/core/rss-monitor.mjs';
             
-            async function updateFeed() {
+            (async () => {
               try {
                 const rssMonitor = new RSSMonitor('./data');
                 
@@ -212,9 +212,7 @@ jobs:
                 console.log('action_result=error');
                 process.exit(1);
               }
-            }
-            
-            updateFeed();
+            })();
             "
             ;;
             
@@ -226,10 +224,10 @@ jobs:
             
             echo "🗑️ Removing RSS feed: ${{ github.event.inputs.feed_id }}"
             
-            node -e "
-            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            node --input-type=module -e "
+            import { RSSMonitor } from './src/core/rss-monitor.mjs';
             
-            async function removeFeed() {
+            (async () => {
               try {
                 const rssMonitor = new RSSMonitor('./data');
                 const removedFeed = await rssMonitor.removeFeed('${{ github.event.inputs.feed_id }}');
@@ -243,61 +241,61 @@ jobs:
                 console.log('action_result=error');
                 process.exit(1);
               }
-            }
-            
-            removeFeed();
+            })();
             "
             ;;
             
           "validate")
             echo "🔍 Validating RSS feed configuration..."
             
-            node -e "
-            const { RSSMonitor } = require('./src/core/rss-monitor.js');
+            node --input-type=module -e "
+            import { RSSMonitor } from './src/core/rss-monitor.mjs';
             
-            try {
-              const rssMonitor = new RSSMonitor('./data');
-              const feeds = rssMonitor.getFeeds();
-              
-              let isValid = true;
-              const errors = [];
-              const warnings = [];
-              
-              // Basic validation
-              if (feeds.length === 0) {
-                warnings.push('No RSS feeds configured');
-              }
-              
-              feeds.forEach(feed => {
-                if (!feed.url) {
-                  errors.push('Feed ' + feed.id + ' missing URL');
-                  isValid = false;
+            (async () => {
+              try {
+                const rssMonitor = new RSSMonitor('./data');
+                const feeds = rssMonitor.getFeeds();
+                
+                let isValid = true;
+                const errors = [];
+                const warnings = [];
+                
+                // Basic validation
+                if (feeds.length === 0) {
+                  warnings.push('No RSS feeds configured');
                 }
-                if (!feed.title) {
-                  warnings.push('Feed ' + feed.id + ' missing title');
+                
+                feeds.forEach(feed => {
+                  if (!feed.url) {
+                    errors.push('Feed ' + feed.id + ' missing URL');
+                    isValid = false;
+                  }
+                  if (!feed.title) {
+                    warnings.push('Feed ' + feed.id + ' missing title');
+                  }
+                });
+                
+                console.log('🔍 Configuration validation:', isValid ? '✅ Valid' : '❌ Invalid');
+                console.log('   Feed count:', feeds.length);
+                
+                if (errors.length > 0) {
+                  console.log('❌ Errors:');
+                  errors.forEach(error => console.log('   -', error));
                 }
-              });
-              
-              console.log('🔍 Configuration validation:', isValid ? '✅ Valid' : '❌ Invalid');
-              console.log('   Feed count:', feeds.length);
-              
-              if (errors.length > 0) {
-                console.log('❌ Errors:');
-                errors.forEach(error => console.log('   -', error));
+                
+                if (warnings.length > 0) {
+                  console.log('⚠️ Warnings:');
+                  warnings.forEach(warning => console.log('   -', warning));
+                }
+                
+                console.log('action_result=' + (isValid ? 'success' : 'error'));
+                if (!isValid) process.exit(1);
+              } catch (error) {
+                console.error('❌ Error validating configuration:', error.message);
+                console.log('action_result=error');
+                process.exit(1);
               }
-              
-              if (warnings.length > 0) {
-                console.log('⚠️ Warnings:');
-                warnings.forEach(warning => console.log('   -', warning));
-              }
-              
-              console.log('action_result=' + (isValid ? 'success' : 'error'));
-              if (!isValid) process.exit(1);
-            } catch (error) {
-              console.error('❌ Error validating configuration:', error.message);
-              console.log('action_result=error');
-              process.exit(1);
-            }
+            })();
             "
             ;;
             
