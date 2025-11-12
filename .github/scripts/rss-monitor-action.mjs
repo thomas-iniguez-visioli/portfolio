@@ -84,8 +84,7 @@ class GitHubActionsRSSMonitor {
       this.setOutput('total_feeds', results.totalFeeds);
       this.setOutput('checked_feeds', results.checkedFeeds);
       this.setOutput('errors', results.errors.length);
-      const subscribers = await this.subscriberManager.getSubscribers();
-      this.setOutput('sub', subscribers.length);
+      
       let newslettersSent = 0;
       
       // Generate and send newsletters if there are new items
@@ -115,7 +114,8 @@ class GitHubActionsRSSMonitor {
               
               if (newsletter) {
                 // Get active subscribers
-              
+              const subscribers = await this.subscriberManager.getSubscribers();
+              this.setOutput('sub', subscribers.length);
                 if (subscribers.length > 0) {
                //   console.log(`📤 Sending newsletter to ${subscribers.length} subscribers...`);
                   
