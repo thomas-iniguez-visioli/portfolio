@@ -20,6 +20,7 @@
     "version": "8.1.1"
   },
   "dependencies": {
+    "aes256": "^1.1.0",
     "group-array": "^1.0.0",
     "hexo": "^8.1.1",
     "hexo-deployer-git": "^4.0.0",
@@ -35,10 +36,13 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
+    "html-to-text": "^9.0.5",
     "markdown-it-container": "^4.0.0",
+    "node-fetch": "^3.3.2",
     "reading-time": "^1.5.0",
     "reveal.js": "^5.2.1",
-    "somebody": "^3.0.0"
+    "somebody": "^3.0.0",
+    "striptags": "^3.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",

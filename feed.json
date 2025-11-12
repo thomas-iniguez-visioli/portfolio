@@ -1,0 +1,38 @@
+{
+  "subject": "[RSS Update] Feed Blush - 5 new items",
+  "htmlContent": "\n    <h1>📰 Feed Blush</h1>\n    <p><em>Personal blog feed</em></p>\n    <hr>\n    \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"undefined\" style=\"color: #2c3e50; text-decoration: none;\">France Travail Fuite Du 2025-10-29</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 Invalid Date \n          \n        </p>\n        \n        \n        <p><a href=\"undefined\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"undefined\" style=\"color: #2c3e50; text-decoration: none;\">Myvidster2025 Fuite Du 2025-10-27</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 Invalid Date \n          \n        </p>\n        \n        \n        <p><a href=\"undefined\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"undefined\" style=\"color: #2c3e50; text-decoration: none;\">Fédération Française De Tir Fuite Du 2025-10-23</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 Invalid Date \n          \n        </p>\n        \n        \n        <p><a href=\"undefined\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"undefined\" style=\"color: #2c3e50; text-decoration: none;\">Agences Régionales De Santé De L’île Fuite Du 2025-10-22</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 Invalid Date \n          \n        </p>\n        \n        \n        <p><a href=\"undefined\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; \">\n        <h2><a href=\"undefined\" style=\"color: #2c3e50; text-decoration: none;\">Artistsnclients Fuite Du 2025-10-4</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 Invalid Date \n          \n        </p>\n        \n        \n        <p><a href=\"undefined\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n    <hr>\n    <p style=\"color: #666; font-size: 12px; text-align: center;\">\n      This newsletter was automatically generated from <a href=\"https://alphaleadership.github.io/feed/atom.xml\">Feed Blush</a>\n    </p>\n    ",
+  "textContent": {},
+  "items": [
+    {
+      "guid": "https://feed-blush.vercel.app/france-travail-fuite-du-2025-10-29/",
+      "pubDate": "2025-10-29T00:00:00.000Z",
+      "title": "France Travail Fuite Du 2025-10-29",
+      "processedAt": "2025-11-12T12:46:48.614Z"
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/myvidster2025-fuite-du-2025-10-27/",
+      "pubDate": "2025-10-27T00:00:00.000Z",
+      "title": "Myvidster2025 Fuite Du 2025-10-27",
+      "processedAt": "2025-11-12T12:46:48.614Z"
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/federation-francaise-de-tir-fuite-du-2025-10-23/",
+      "pubDate": "2025-10-23T00:00:00.000Z",
+      "title": "Fédération Française De Tir Fuite Du 2025-10-23",
+      "processedAt": "2025-11-12T12:46:48.614Z"
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/agences-regionales-de-sante-de-l%E2%80%99ile-fuite-du-2025-10-22/",
+      "pubDate": "2025-10-22T00:00:00.000Z",
+      "title": "Agences Régionales De Santé De L’île Fuite Du 2025-10-22",
+      "processedAt": "2025-11-12T12:46:48.614Z"
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/artistsnclients-fuite-du-2025-10-4/",
+      "pubDate": "2025-10-04T00:00:00.000Z",
+      "title": "Artistsnclients Fuite Du 2025-10-4",
+      "processedAt": "2025-11-12T12:46:48.614Z"
+    }
+  ],
+  "generatedAt": "2025-11-12T14:50:51.696Z"
+}

@@ -9,7 +9,7 @@ import crypto from 'crypto';
  * Monitors RSS feeds and generates newsletters from new items
  */
 export class RSSMonitor {
-  constructor(dataPath = './data', options = {}) {
+  constructor(dataPath = '.github/data', options = {}) {
     this.dataPath = dataPath;
     this.feedsFile = path.join(dataPath, 'rss-feeds.json');
     this.cacheFile = path.join(dataPath, 'rss-cache.json');
@@ -23,6 +23,7 @@ export class RSSMonitor {
    * Ensure data directory exists
    */
   ensureDataDirectory() {
+    console.log(this.dataPath)
     if (!fs.existsSync(this.dataPath)) {
       fs.mkdirSync(this.dataPath, { recursive: true });
     }
@@ -143,9 +144,7 @@ export class RSSMonitor {
   getFeeds(activeOnly = false) {
     const feeds = this.loadFeeds();
     
-    if (activeOnly) {
-      return feeds.feeds.filter(feed => feed.isActive);
-    }
+    
     
     return feeds.feeds;
   }
@@ -222,7 +221,7 @@ export class RSSMonitor {
     cache.items[feedId] = [
       ...newItems.map(item => ({
         guid: item.guid,
-        pubDate: item.pubDate,
+        published: item.published,
         title: item.title,
         processedAt: new Date().toISOString()
       })),
@@ -235,11 +234,11 @@ export class RSSMonitor {
     // Update feed last checked time
     feed.lastChecked = new Date().toISOString();
     if (newItems.length > 0) {
-      feed.lastItemDate = newItems[0].pubDate;
+      feed.lastItemDate = newItems[0].published;
     }
     
     this.saveFeeds(feeds);
-  
+    await this.generateNewsletterFromItems(feed.id)
     return {
       feed: feed,
       newItems: newItems,
@@ -250,9 +249,9 @@ export class RSSMonitor {
   /**
    * Generate newsletter from RSS items
    */
-  async generateNewsletterFromItems( items = null) {
-    const feed = this.getFeeds()[0];
-    const feedId=feed.id
+  async generateNewsletterFromItems(feedId, items = null) {
+    const feed = this.getFeeds(true)[0]
+    console.log(feed);
     if (!feed) {
       throw new Error(`Feed not found: ${feedId}`);
     }
@@ -300,7 +299,7 @@ export class RSSMonitor {
       <div style="margin-bottom: 30px; padding-bottom: 20px; ${index < items.length - 1 ? 'border-bottom: 1px solid #eee;' : ''}">
         <h2><a href="${item.link}" style="color: #2c3e50; text-decoration: none;">${item.title}</a></h2>
         <p style="color: #666; font-size: 14px; margin: 5px 0;">
-          📅 ${new Date(item.pubDate).toLocaleDateString()} 
+          📅 ${new Date(item.published).toLocaleDateString()} 
           ${item.author ? `• ✍️ ${item.author}` : ''}
         </p>
         ${item.description ? `<p>${item.description}</p>` : ''}
@@ -333,7 +332,7 @@ export class RSSMonitor {
 
     items.forEach((item, index) => {
       text += `${index + 1}. ${item.title}\n`;
-      text += `   ${new Date(item.pubDate).toLocaleDateString()}`;
+      text += `   ${new Date(item.published).toLocaleDateString()}`;
       if (item.author) {
         text += ` • ${item.author}`;
       }
@@ -523,7 +522,7 @@ parseRSSItem(itemXml, isAtom = false) {
     const titleTag = isAtom ? 'title' : 'title';
     const linkTag = isAtom ? 'link' : 'link';
     const idTag = isAtom ? 'id' : 'guid';
-    const dateTag = isAtom ? 'published' : 'pubDate';
+    const dateTag = isAtom ? 'published' : 'published';
     const descriptionTag = isAtom ? 'summary' : 'description';
     const contentTag = isAtom ? 'content' : 'content:encoded';
 

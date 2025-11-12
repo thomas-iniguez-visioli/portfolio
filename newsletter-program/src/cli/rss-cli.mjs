@@ -105,7 +105,7 @@ program
     .option('--force', 'ignore check interval and force check')
     .action(async (options) => {
         try {
-            const monitor = new RSSMonitor();
+            const monitor = new RSSMonitor(".github/data/");
 
             if (options.feedId) {
                 console.log(`🔍 Checking specific feed: ${options.feedId}`);
