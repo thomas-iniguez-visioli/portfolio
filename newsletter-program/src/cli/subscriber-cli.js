@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
  let SubscriberFileManager;
   try {
-    const module = await import('../core/subscriber-file-manager.mjs');
+    const module = await import('../core/subscriber-file-manager.js');
     SubscriberFileManager = module.SubscriberFileManager;
   } catch (err) {
     console.error('❌ Erreur lors du chargement du module SubscriberFileManager:', err.message);
