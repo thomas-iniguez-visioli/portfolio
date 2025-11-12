@@ -40,7 +40,7 @@ class GitHubActionsRSSMonitor {
    */
   getSendNewsletterSetting() {
     if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
-      return process.env.SEND_NEWSLETTER !== 'false';
+      return true;
     }
     // For scheduled runs, always send newsletters
     return true;
