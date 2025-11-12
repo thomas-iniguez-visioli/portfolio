@@ -1,4 +1,5 @@
 import { marked } from 'marked';
+import sanitizeHtml from 'sanitize-html';
 
 export class ContentProcessor {
   constructor() {
@@ -37,41 +38,21 @@ export class ContentProcessor {
   async sanitizeContent(content) {
     if (!content) return '';
 
-    // Remove potentially dangerous HTML elements and attributes
-    const dangerousElements = /<script[^>]*>.*?<\/script>/gi;
-    const dangerousAttributes = /\s(on\w+|javascript:)[^>]*/gi;
-    const dangerousTags = /<(script|iframe|object|embed|form)[^>]*>.*?<\/\1>/gi;
-
-    let sanitized = content;
-    // Repeat replacements until no further dangerous elements/tags/attributes remain
-    let previous;
-    do {
-      previous = sanitized;
-      sanitized = sanitized
-        .replace(dangerousElements, '')
-        .replace(dangerousTags, '')
-        .replace(dangerousAttributes, '');
-    } while (sanitized !== previous);
-
-    // Allow only safe HTML tags
+    // Use sanitize-html to robustly sanitize input
     const allowedTags = ['p', 'br', 'strong', 'em', 'u', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'a', 'img'];
-    const tagRegex = /<\/?([a-zA-Z][a-zA-Z0-9]*)[^>]*>/g;
-    
-    sanitized = sanitized.replace(tagRegex, (match, tagName) => {
-      if (allowedTags.includes(tagName.toLowerCase())) {
-        // For links, ensure href is safe
-        if (tagName.toLowerCase() === 'a') {
-          return match.replace(/href\s*=\s*["']?javascript:[^"'>]*/gi, 'href="#"');
-        }
-        // For images, ensure src is safe
-        if (tagName.toLowerCase() === 'img') {
-          return match.replace(/src\s*=\s*["']?javascript:[^"'>]*/gi, 'src=""');
-        }
-        return match;
-      }
-      return '';
+    const allowedAttributes = {
+      a: ['href', 'name', 'target', 'rel'],
+      img: ['src', 'alt', 'title', 'width', 'height'],
+    };
+    const sanitized = sanitizeHtml(content, {
+      allowedTags,
+      allowedAttributes,
+      allowedSchemes: ['http', 'https', 'mailto', 'data'],
+      allowedSchemesByTag: {
+        img: ['http', 'https', 'data'],
+      },
+      allowProtocolRelative: false,
     });
-
     return sanitized;
   }
 
