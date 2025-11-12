@@ -51,7 +51,7 @@ jobs:
         UNSUBSCRIBE_SECRET: ${{ secrets.UNSUBSCRIBE_SECRET }}
         SEND_NEWSLETTER: ${{ github.event.inputs.send_newsletter }}
     - name: Check RSS feeds
-      id: rss_check
+      id: rss_send
       run: |
         # Run RSS monitoring using GitHub Actions-specific script
         node newsletter-program\src\cli\rss-cli.js generate  --feed 2fefc7a5-ae06-4b25-abca-74568216d7c7 -o feed.json --send
