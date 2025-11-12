@@ -23,8 +23,8 @@ import { SubscriberFileManager } from '../../newsletter-program/src/core/subscri
 class GitHubActionsRSSMonitor {
   constructor() {
     // Use repository data path for GitHub Actions
-    this.dataPath = path.join(__dirname, '..','..','newsletter-program','src', 'data');
-    console.log(this.dataPath)
+    this.dataPath = path.join(__dirname, '..','data');
+    //console.log(this.dataPath)
     // Initialize components with repository data path
     this.rssMonitor = new RSSMonitor(this.dataPath);
     this.newsletterSender = new NewsletterSender();
