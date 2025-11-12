@@ -18,7 +18,7 @@ process.chdir(newsletterProgramPath);
 
 import { RSSMonitor } from '../../newsletter-program/src/core/rss-monitor.mjs';
 import { NewsletterSender } from '../../newsletter-program/src/core/newsletter-sender.mjs';
-import { SubscriberFileManager } from '../../newsletter-program/src/core/subscriber-file-manager.js';
+import { SubscriberFileManager } from '../../newsletter-program/src/core/subscriber-file-manager.mjs';
 
 class GitHubActionsRSSMonitor {
   constructor() {
