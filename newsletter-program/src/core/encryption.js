@@ -126,35 +126,43 @@ class EncryptionManager {
    * Decrypt email address
    * For environment-based keys, all data uses the same key version
    */
-  decryptEmail(encryptedData) {
-    if (!this.currentKey) {
-      throw new Error('No encryption key available');
-    }
+decryptEmail(encryptedData) {
+  if (!this.currentKey) {
+    throw new Error('No encryption key available');
+  }
 
-    // Handle both old format (object) and new format (string)
-    let encrypted, iv, keyVersion;
-    
-    if (typeof encryptedData === 'string') {
-      // Legacy format: assume current key
-      encrypted = encryptedData;
-      iv = crypto.randomBytes(16).toString('hex'); // This won't work for legacy data
-      keyVersion = this.keyVersion;
-    } else {
-      // New format: object with metadata
-      ({ encrypted, iv, keyVersion } = encryptedData);
-    }
+  let encrypted, iv, keyVersion;
 
-    if (keyVersion && keyVersion !== this.keyVersion) {
-      console.warn(`Warning: Encrypted data uses key version ${keyVersion}, but current version is ${this.keyVersion}`);
-    }
+  if (typeof encryptedData === 'string') {
+    // Format hérité : assume que la chaîne est les données chiffrées et que l'IV est stocké ailleurs
+    // ⚠️ Attention : ce format n'est pas sécurisé et ne peut pas être déchiffré sans l'IV original
+    throw new Error('Legacy string format not supported without original IV');
+  } else {
+    // Format attendu : objet avec encrypted, iv, et keyVersion
+    ({ encrypted, iv, keyVersion } = encryptedData);
+  }
 
+  // Valider l'IV
+  if (!iv || Buffer.from(iv, 'hex').length !== 16) {
+    throw new Error(`IV invalide : ${iv}`);
+  }
+
+  // Valider la version de la clé
+  if (keyVersion && keyVersion !== this.keyVersion) {
+    console.warn(`⚠️  Les données chiffrées utilisent la version de clé ${keyVersion}, mais la version actuelle est ${this.keyVersion}`);
+  }
+
+  // Déchiffrer
+  try {
     const decipher = crypto.createDecipheriv(this.algorithm, this.currentKey, Buffer.from(iv, 'hex'));
-
     let decrypted = decipher.update(encrypted, 'hex', 'utf8');
     decrypted += decipher.final('utf8');
-
     return decrypted;
+  } catch (error) {
+    throw new Error(`Échec du déchiffrement : ${error.message}`);
   }
+}
+
 
   /**
    * Get current key version
