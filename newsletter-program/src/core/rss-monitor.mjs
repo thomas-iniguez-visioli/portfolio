@@ -239,7 +239,7 @@ export class RSSMonitor {
     }
     
     this.saveFeeds(feeds);
-    await this.generateNewsletterFromItems(feed.id)
+  
     return {
       feed: feed,
       newItems: newItems,
