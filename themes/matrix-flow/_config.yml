@@ -5,9 +5,9 @@
 
 # Social links that appear in the footer
 social:
-  github: your-github-username
-  linkedin: your-linkedin-profile
-  email: your-email@example.com
+  github: alphaleadership 
+  linkedin: thomas-iniguez-visioli/
+  email: thomas.iniguez@free.fr
 
 # Glitch effect text on the home page
 glitch_text: 'PORTFOLIO'
