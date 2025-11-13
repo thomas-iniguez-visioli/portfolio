@@ -10,7 +10,7 @@ import crypto from 'crypto';
  */
 export class RSSMonitor {
   constructor(dataPath = './data', options = {}) {
-    this.dataPath = './data/';
+    this.dataPath = 'data/';
     this.feedsFile = path.join(dataPath, 'rss-feeds.json');
     this.cacheFile = path.join(dataPath, 'rss-cache.json');
     this.testMode = options.testMode || false;
