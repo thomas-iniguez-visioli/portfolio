@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2025-11-12T09:43:11.479Z",
+  "lastModified": "2025-11-12T09:43:11.483Z",
+  "keyVersion": "env-v1",
+  "subscribers": [
+    {
+      "id": "54030106-2ac7-4083-83df-c44da7b48606",
+      "status": "active",
+      "subscribedAt": "2025-11-12T09:43:11.481Z",
+      "format":"",
+      "source": "github-issue",
+      "preferences": {
+        "frequency": "Weekly",
+        "topics": [
+          "all"
+        ]
+      },
+      "unsubscribeToken": "9f30812c6e1d5463bd863ee5bc990a222c1f2daea89001c6fc99cfab87b89dab",
+      "metadata": {},
+      "encryptedEmail": "JezRpFiOpZHzM6h4icfacjDjq0gRyM4xQ8rRSDJGV4Y+vUsPQOg="
+    }
+  ]
+}

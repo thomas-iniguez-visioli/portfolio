@@ -11,7 +11,7 @@ export class ContentProcessor {
     });
   }
 
-  async rssToEmail(rssItem, template) {
+  async rssToEmail(rssItem, template, options = {}) {
     try {
       // Process the RSS item content
       const processedContent = await this.processContent(rssItem.description || rssItem.content);
@@ -22,7 +22,11 @@ export class ContentProcessor {
         .replace(/\{\{description\}\}/g, processedContent)
         .replace(/\{\{link\}\}/g, rssItem.link || '')
         .replace(/\{\{pubDate\}\}/g, this.formatDate(rssItem.pubDate))
-        .replace(/\{\{guid\}\}/g, rssItem.guid || '');
+        .replace(/\{\{guid\}\}/g, rssItem.guid || '')
+        .replace(/\{\{logo_url\}\}/g, options.logo_url || '')
+        .replace(/\{\{company_name\}\}/g, options.company_name || 'Your Company')
+        .replace(/\{\{website_url\}\}/g, options.website_url || '#')
+        .replace(/\{\{formatted_date\}\}/g, this.formatDate(rssItem.pubDate));
 
       return emailContent;
     } catch (error) {

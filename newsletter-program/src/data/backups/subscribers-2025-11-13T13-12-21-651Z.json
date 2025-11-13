@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "createdAt": "2025-11-12T09:43:11.479Z",
-  "lastModified": "2025-11-13T13:12:21.687Z",
+  "lastModified": "2025-11-13T13:12:21.631Z",
   "keyVersion": "env-v1",
   "subscribers": [
     {
@@ -18,7 +18,7 @@
       },
       "unsubscribeToken": "9f30812c6e1d5463bd863ee5bc990a222c1f2daea89001c6fc99cfab87b89dab",
       "metadata": {},
-      "encryptedEmail": "XVf/iSs8f8J84cCl+GhKQBny8rTtx1HwAof37xMimQGnREOdsyl45RLCdZYbT0rfdS+QJPES0i7nQwd8w4C/1w=="
+      "encryptedEmail": "aAygDhnEkdHPQODDFFhq2FK/erW3iXpPNxeh8lMCQrjjCxmZrA6wJSTwz03xGltpZ9UqWrC5MCh13TF1oHXLmA=="
     },
     {
       "id": "bf37831f-ab73-404c-b11d-f707dd129e00",
@@ -34,7 +34,7 @@
       },
       "unsubscribeToken": "3f19a513afd429f3122fba709c8d28f1fbcdcd9fbc5636ff9be4de9f9eec5639",
       "metadata": {},
-      "encryptedEmail": "QVvuDIozbyQ9TLMMU8gUfux2lBqy1l67a025hQFp8dk="
+      "encryptedEmail": "ZCdwS5XygBz8z8itXHZMlf866kdcBMmfKS53MPzjlhs="
     },
     {
       "id": "9bed57c8-d94f-45c9-b3b6-26004d741878",
@@ -47,7 +47,7 @@
       },
       "unsubscribeToken": "e41eeccc3132fc290b701731931dad8d7853773d9ae9e32e29b663722b09d478",
       "metadata": {},
-      "encryptedEmail": "YO2T0B/PB2ZXNbts060CMYMf0LZmNjJMK9C4HDRVJ0J52g=="
+      "encryptedEmail": "vLVGtysUrZamZx4Q7IEKhQZPNyOZ+4P4U/MycsvAeCjEDw=="
     },
     {
       "id": "bec24c5b-325e-4335-8cf4-c0954053a9cf",
@@ -60,47 +60,8 @@
       },
       "unsubscribeToken": "304f196fb9bdfcc3ca32f28ad39d218f38a69830d9c16051b6fc1ef979c9ae42",
       "metadata": {},
-      "encryptedEmail": "7Y3rcmikdFweb7wke40eckIYQxl+lgD1Rj1yhnFA6usDy/fC",
+      "encryptedEmail": "gFK3NDtZvF4NyWtdfKVOme4wHOuWJvf69ZPjh8kuA9cQHS21",
       "updatedAt": "2025-11-13T13:12:21.629Z"
-    },
-    {
-      "id": "cdbc361f-33e9-41db-89b6-f3c94cf21027",
-      "status": "active",
-      "subscribedAt": "2025-11-13T13:12:21.651Z",
-      "source": "test",
-      "preferences": {
-        "frequency": "weekly",
-        "topics": []
-      },
-      "unsubscribeToken": "a2d03097748ae9f96aff3a432924d19119fb7131b73d2740e873e91d53cf375c",
-      "metadata": {},
-      "encryptedEmail": "+G1s/dDM/102B+0/qBqLgoOXQi8vWuqLDqn+4b1xktap"
-    },
-    {
-      "id": "9ccb380f-78d8-44e1-8c32-90733f992cdb",
-      "status": "active",
-      "subscribedAt": "2025-11-13T13:12:21.668Z",
-      "source": "test",
-      "preferences": {
-        "frequency": "weekly",
-        "topics": []
-      },
-      "unsubscribeToken": "0202f43fc09d61fecac55002029507b73119e5b100586097cf0febafdadf2706",
-      "metadata": {},
-      "encryptedEmail": "/5qNLGB5pAJnrPnEp7cWEqu6ICiRBV/3OJZ8FYwzlRke"
-    },
-    {
-      "id": "1764001a-47ea-4d66-a735-0b6b133d799e",
-      "status": "active",
-      "subscribedAt": "2025-11-13T13:12:21.685Z",
-      "source": "test",
-      "preferences": {
-        "frequency": "weekly",
-        "topics": []
-      },
-      "unsubscribeToken": "9069622b120911d938186ef632574cb50a1b2190e180a8455ac393c66374738d",
-      "metadata": {},
-      "encryptedEmail": "+KdPtVYefSMrjyTT+2U7U7e/R0VDS2iFO0gdmpsHR7Mp"
     }
   ]
 }

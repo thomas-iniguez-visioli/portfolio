@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2025-11-12T09:43:11.479Z",
+  "lastModified": "2025-11-13T13:12:21.611Z",
+  "keyVersion": "env-v1",
+  "subscribers": [
+    {
+      "id": "54030106-2ac7-4083-83df-c44da7b48606",
+      "status": "active",
+      "subscribedAt": "2025-11-12T09:43:11.481Z",
+      "format": "",
+      "source": "github-issue",
+      "preferences": {
+        "frequency": "Weekly",
+        "topics": [
+          "all"
+        ]
+      },
+      "unsubscribeToken": "9f30812c6e1d5463bd863ee5bc990a222c1f2daea89001c6fc99cfab87b89dab",
+      "metadata": {},
+      "encryptedEmail": "fW5tyPNjNUkDrjsCNbDPK4+FxuNv9OVovvGCE94AsdqwuDMp79FkpyICsVkU31EJsfqsQQ5kPx3rHCAlF2+JIw=="
+    },
+    {
+      "id": "bf37831f-ab73-404c-b11d-f707dd129e00",
+      "status": "active",
+      "subscribedAt": "2025-11-13T13:12:21.568Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": [
+          "tech",
+          "news"
+        ]
+      },
+      "unsubscribeToken": "3f19a513afd429f3122fba709c8d28f1fbcdcd9fbc5636ff9be4de9f9eec5639",
+      "metadata": {},
+      "encryptedEmail": "lipTRqYYkGkSTnP6BwW0ByOEAm1Zc7P0RpmTFWD4txY="
+    },
+    {
+      "id": "9bed57c8-d94f-45c9-b3b6-26004d741878",
+      "status": "active",
+      "subscribedAt": "2025-11-13T13:12:21.594Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": []
+      },
+      "unsubscribeToken": "e41eeccc3132fc290b701731931dad8d7853773d9ae9e32e29b663722b09d478",
+      "metadata": {},
+      "encryptedEmail": "lbapYEXBql1OxgZB4udxxt4Zp6zq+7wL0iF+Amx8OdaRJg=="
+    },
+    {
+      "id": "bec24c5b-325e-4335-8cf4-c0954053a9cf",
+      "status": "active",
+      "subscribedAt": "2025-11-13T13:12:21.609Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": []
+      },
+      "unsubscribeToken": "304f196fb9bdfcc3ca32f28ad39d218f38a69830d9c16051b6fc1ef979c9ae42",
+      "metadata": {},
+      "encryptedEmail": "q4ZZZNkjdQbUiPY0SRCohnJz1gJfyX7pQGhPkCmgXcqkwfmL"
+    }
+  ]
+}
