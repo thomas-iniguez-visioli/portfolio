@@ -5,8 +5,8 @@ import { SubscriberFileManager } from './subscriber-file-manager.js';
 
 describe('SubscriberFileManager', () => {
   let manager;
-  const testDataPath = './test-data';
-  const testBackupPath = './test-data/backups';
+  let testDataPath = './test-data';
+  let testBackupPath = './test-data/backups';
 
   beforeEach(async () => {
     const testId = Math.random().toString(36).substring(2);

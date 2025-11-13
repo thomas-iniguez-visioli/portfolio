@@ -458,7 +458,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
       const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
-      const { SubscriberManager } = await import('../../core/subscriber-manager.js');
+      const { SubscriberManager } = await import('../../core/subscriber-manager.mjs');
       
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
       const subscriberManager = new SubscriberManager(testDataDir);
