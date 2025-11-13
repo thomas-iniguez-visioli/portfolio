@@ -37,3 +37,6 @@ db.json
 .env
 .env.local
 .env.production
+
+# Hexo cache
+db.json
