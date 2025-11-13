@@ -24,9 +24,9 @@ class GitHubActionsRSSMonitor {
   constructor() {
     // Use repository data path for GitHub Actions
     this.dataPath = path.join(__dirname, '..','data');
-    console.log(this.dataPath)
+    //console.log(this.dataPath)
     // Initialize components with repository data path
-    this.rssMonitor = new RSSMonitor()//this.dataPath);
+    this.rssMonitor = new RSSMonitor(this.dataPath);
     this.newsletterSender = new NewsletterSender();
     this.subscriberManager = new SubscriberFileManager();
     
@@ -115,7 +115,7 @@ class GitHubActionsRSSMonitor {
               if (newsletter) {
                 // Get active subscribers
               const subscribers = await this.subscriberManager.getSubscribers();
-              console.log('sub', subscribers.length);
+              //console.log('sub', subscribers.length);
                 if (subscribers.length > 0) {
                //   console.log(`📤 Sending newsletter to ${subscribers.length} subscribers...`);
                   

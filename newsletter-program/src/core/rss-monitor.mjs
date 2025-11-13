@@ -9,10 +9,10 @@ import crypto from 'crypto';
  * Monitors RSS feeds and generates newsletters from new items
  */
 export class RSSMonitor {
-  constructor(dataPath = './data', options = {}) {
-    this.dataPath = './data';
-    this.feedsFile = path.join(__dirname,dataPath, 'rss-feeds.json');
-    this.cacheFile = path.join(__dirname,dataPath, 'rss-cache.json');
+  constructor(dataPath = './.github/data', options = {}) {
+    this.dataPath = dataPath;
+    this.feedsFile = path.join(dataPath, 'rss-feeds.json');
+    this.cacheFile = path.join(dataPath, 'rss-cache.json');
     this.testMode = options.testMode || false;
     
     this.ensureDataDirectory();
@@ -23,7 +23,7 @@ export class RSSMonitor {
    * Ensure data directory exists
    */
   ensureDataDirectory() {
-    console.log(this.dataPath)
+  //  console.log(this.dataPath)
     if (!fs.existsSync(this.dataPath)) {
       fs.mkdirSync(this.dataPath, { recursive: true });
     }
@@ -186,7 +186,7 @@ export class RSSMonitor {
     const feed = feeds.feeds.find(f => f.id === feedId);
     
     if (!feed) {
-      throw new Error(`Feed not found: ${feedId}`);
+     return // throw new Error(`Feed not found: ${feedId}`);
     }
 
     if (!feed.isActive) {
@@ -251,9 +251,10 @@ export class RSSMonitor {
    */
   async generateNewsletterFromItems(feedId, items = null) {
     const feed = this.getFeeds(true)[0]
-    console.log(feed);
+    //console.log(feed);
     if (!feed) {
-      throw new Error(`Feed not found: ${feedId}`);
+      return
+     // throw new Error(`Feed not found: ${feedId}`);
     }
 
     // If no items provided, get recent items from cache
@@ -264,7 +265,7 @@ export class RSSMonitor {
       // Get items from last 24 hours
       const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
       items = feedCache
-        .filter(item => new Date(item.processedAt) > oneDayAgo)
+        .filter(item => new Date(item.published) > oneDayAgo)
         .slice(0, feed.settings.maxItemsPerNewsletter);
     }
 
@@ -297,14 +298,14 @@ export class RSSMonitor {
     items.forEach((item, index) => {
       html += `
       <div style="margin-bottom: 30px; padding-bottom: 20px; ${index < items.length - 1 ? 'border-bottom: 1px solid #eee;' : ''}">
-        <h2><a href="${item.link}" style="color: #2c3e50; text-decoration: none;">${item.title}</a></h2>
+        <h2><a href="${item.guid}" style="color: #2c3e50; text-decoration: none;">${item.title}</a></h2>
         <p style="color: #666; font-size: 14px; margin: 5px 0;">
           📅 ${new Date(item.published).toLocaleDateString()} 
           ${item.author ? `• ✍️ ${item.author}` : ''}
         </p>
         ${item.description ? `<p>${item.description}</p>` : ''}
         ${feed.settings.includeFullContent && item.content ? `<div>${item.content}</div>` : ''}
-        <p><a href="${item.link}" style="color: #3498db;">Read more →</a></p>
+        <p><a href="${item.guid}" style="color: #3498db;">Read more →</a></p>
       </div>
       `;
     });
@@ -342,7 +343,7 @@ export class RSSMonitor {
         text += `   ${striptags(item.description).substring(0, 200)}...\n`;
       }
       
-      text += `   Read more: ${item.link}\n\n`;
+      text += `   Read more: ${item.guid}\n\n`;
     });
 
     text += `---\nThis newsletter was automatically generated from ${feed.title}\n${feed.url}`;
@@ -485,7 +486,7 @@ parseRSSItems(xmlContent) {
   });
 
   // Trier par date de publication (du plus récent au plus ancien)
-  items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+  items.sort((a, b) => new Date(b.published) - new Date(a.published));
   return items;
 }
 
@@ -543,7 +544,7 @@ parseRSSItem(itemXml, isAtom = false) {
       link: link,
       description: description,
       content: content,
-      pubDate: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
+      published: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
       author: author,
       guid: guid || crypto.createHash('md5').update(title + link).digest('hex')
     };

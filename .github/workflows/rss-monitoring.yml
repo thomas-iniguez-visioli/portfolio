@@ -3,7 +3,7 @@ name: RSS Feed Monitoring
 on:
   schedule:
     # Run every hour
-    - cron: '0 * * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
       force_check:
@@ -68,7 +68,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        
+        git add .
         # Add RSS cache files from repository data directory if they exist and have changes
         if [ -f ".github/data/rss-cache.json" ]; then
           git add .github/data/rss-cache.json
