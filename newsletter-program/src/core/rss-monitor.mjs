@@ -226,7 +226,7 @@ export class RSSMonitor {
         processedAt: new Date().toISOString()
       })),
       ...feedCache
-    ].slice(0, 100); // Keep only last 100 items
+    ].slice(0, 2000); // Keep only last 100 items
 
     cache.lastUpdated = new Date().toISOString();
     this.saveCache(cache);

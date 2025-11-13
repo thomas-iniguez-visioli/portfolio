@@ -30,7 +30,13 @@ coverage
 *.tsbuildinfo
 .deploy_git
 
+# Hexo cache files
+db.json
+
 # Environment variables
 .env
 .env.local
 .env.production
+
+# Hexo cache
+db.json
