@@ -251,7 +251,7 @@ export class RSSMonitor {
    */
   async generateNewsletterFromItems(feedId, items = null) {
     const feed = this.getFeeds(true)[0]
-    console.log(feed);
+    //console.log(feed);
     if (!feed) {
       throw new Error(`Feed not found: ${feedId}`);
     }
