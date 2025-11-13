@@ -68,7 +68,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        
+        git add .
         # Add RSS cache files from repository data directory if they exist and have changes
         if [ -f ".github/data/rss-cache.json" ]; then
           git add .github/data/rss-cache.json
