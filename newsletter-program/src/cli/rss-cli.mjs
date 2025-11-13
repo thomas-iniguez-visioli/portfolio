@@ -160,7 +160,7 @@ program
             const monitor = new RSSMonitor();
 
             console.log(`📰 Generating newsletter for feed: ${options.feedId}`);
-
+            console.log(monitor.feedsFile)
             const newsletter = await monitor.generateNewsletterFromItems(options.feedId);
 
             if (!newsletter) {
