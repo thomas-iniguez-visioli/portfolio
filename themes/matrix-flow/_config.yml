@@ -21,8 +21,8 @@ menu:
 # Newsletter configuration
 newsletter:
   # GitHub repository for issue-based subscriptions
-  github_owner: your-github-username
-  github_repo: your-repo-name
+  github_owner: thomas-iniguez-visioli
+  github_repo: portfolio
   
   # Use GitHub redirect method (true) or API endpoint (false)
   use_github_redirect: true
