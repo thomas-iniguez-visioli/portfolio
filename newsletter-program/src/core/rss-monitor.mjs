@@ -23,7 +23,7 @@ export class RSSMonitor {
    * Ensure data directory exists
    */
   ensureDataDirectory() {
-    console.log(this.dataPath)
+  //  console.log(this.dataPath)
     if (!fs.existsSync(this.dataPath)) {
       fs.mkdirSync(this.dataPath, { recursive: true });
     }
