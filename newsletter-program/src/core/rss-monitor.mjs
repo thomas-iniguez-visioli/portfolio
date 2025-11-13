@@ -186,7 +186,7 @@ export class RSSMonitor {
     const feed = feeds.feeds.find(f => f.id === feedId);
     
     if (!feed) {
-      throw new Error(`Feed not found: ${feedId}`);
+     return // throw new Error(`Feed not found: ${feedId}`);
     }
 
     if (!feed.isActive) {
@@ -253,7 +253,8 @@ export class RSSMonitor {
     const feed = this.getFeeds(true)[0]
     //console.log(feed);
     if (!feed) {
-      throw new Error(`Feed not found: ${feedId}`);
+      return
+     // throw new Error(`Feed not found: ${feedId}`);
     }
 
     // If no items provided, get recent items from cache
