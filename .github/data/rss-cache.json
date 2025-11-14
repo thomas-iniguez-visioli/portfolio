@@ -1,8 +1,668 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-13T13:38:39.551Z",
+  "lastUpdated": "2025-11-14T01:21:36.381Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/adpost-fuite-de-donnees/",
+        "published": "2025-10-07T00:15:09.000Z",
+        "title": "Adpost - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/animeify-fuite-de-donnees/",
+        "published": "2025-09-21T05:48:38.000Z",
+        "title": "Animeify - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/allianz-life-fuite-de-donnees/",
+        "published": "2025-08-18T20:20:19.000Z",
+        "title": "Allianz Life - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/air-france-fuite-du-2025-8-6/",
+        "published": "2025-08-05T22:00:00.000Z",
+        "title": "Air France Fuite Du 2025-8-6",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/bouygues-telecom-fuite-du-2025-8-6/",
+        "published": "2025-08-05T22:00:00.000Z",
+        "title": "Bouygues Telecom Fuite Du 2025-8-6",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/pandora-fuite-du-2025-8-5/",
+        "published": "2025-08-04T22:00:00.000Z",
+        "title": "Pandora Fuite Du 2025-8-5",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/thepi-fuite-du-2025-8-1/",
+        "published": "2025-08-01T00:00:00.000Z",
+        "title": "Thepi Fuite Du 2025-8-1",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/thepi-fuite-du-2025-7-31/",
+        "published": "2025-07-31T00:00:00.000Z",
+        "title": "Thepi Fuite Du 2025-7-31",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/orange-fuite-du-2025-7-25/",
+        "published": "2025-07-24T22:00:00.000Z",
+        "title": "Orange Fuite Du 2025-7-25",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/france-travail-fuite-du-2025-7-22/",
+        "published": "2025-07-22T00:00:00.000Z",
+        "title": "France Travail Fuite Du 2025-7-22",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/groupe-5asec-fuite-du-2025-7-22/",
+        "published": "2025-07-21T22:00:00.000Z",
+        "title": "Groupe 5àsec Fuite Du 2025-7-22",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/centre-national-de-la-fonction-publique-territoriale-fuite-du-2025-7-11/",
+        "published": "2025-07-10T22:00:00.000Z",
+        "title": "Centre National De La Fonction Publique Territoriale Fuite Du 2025-7-11",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/louis-vuitton-fuite-du-2025-7-11/",
+        "published": "2025-07-10T22:00:00.000Z",
+        "title": "Louis Vuitton Fuite Du 2025-7-11",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/sorbonne-universite-fuite-du-2025-7-11/",
+        "published": "2025-07-10T22:00:00.000Z",
+        "title": "Sorbonne Université Fuite Du 2025-7-11",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/union-nationale-du-sport-scolaire-fuite-du-2025-7-7/",
+        "published": "2025-07-06T22:00:00.000Z",
+        "title": "Union Nationale Du Sport Scolaire Fuite Du 2025-7-7",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/disneyland-fuite-du-2025-6-21/",
+        "published": "2025-06-20T22:00:00.000Z",
+        "title": "Disneyland Fuite Du 2025-6-21",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/hopital-prive-de-la-loire-fuite-du-2025-6-21/",
+        "published": "2025-06-20T22:00:00.000Z",
+        "title": "Hôpital Privé De La Loire Fuite Du 2025-6-21",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/cartier-fuite-du-2025-6-3/",
+        "published": "2025-06-02T22:00:00.000Z",
+        "title": "Cartier Fuite Du 2025-6-3",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/kaviari-fuite-du-2025-6-3/",
+        "published": "2025-06-02T22:00:00.000Z",
+        "title": "Kaviari Fuite Du 2025-6-3",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/autosur-fuite-du-2025-5-26/",
+        "published": "2025-05-25T22:00:00.000Z",
+        "title": "Autosur Fuite Du 2025-5-26",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/dior-fuite-du-2025-5-13/",
+        "published": "2025-05-12T22:00:00.000Z",
+        "title": "Dior Fuite Du 2025-5-13",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/pulsy-fuite-du-2025-5-13/",
+        "published": "2025-05-12T22:00:00.000Z",
+        "title": "Pulsy Fuite Du 2025-5-13",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/cerballiance-fuite-du-2025-4-30/",
+        "published": "2025-04-29T22:00:00.000Z",
+        "title": "Cerballiance Fuite Du 2025-4-30",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/carrefour-mobile-fuite-du-2025-4-24/",
+        "published": "2025-04-23T22:00:00.000Z",
+        "title": "Carrefour Mobile Fuite Du 2025-4-24",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/easy-cash-fuite-du-2025-4-22/",
+        "published": "2025-04-21T22:00:00.000Z",
+        "title": "Easy Cash Fuite Du 2025-4-22",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/indigo-fuite-du-2025-4-18/",
+        "published": "2025-04-17T22:00:00.000Z",
+        "title": "Indigo Fuite Du 2025-4-18",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/afflelou-fuite-du-2025-4-15/",
+        "published": "2025-04-14T22:00:00.000Z",
+        "title": "Afflelou Fuite Du 2025-4-15",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/hertz-fuite-du-2025-4-15/",
+        "published": "2025-04-14T22:00:00.000Z",
+        "title": "Hertz Fuite Du 2025-4-15",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/harvest-fuite-du-2025-4-11/",
+        "published": "2025-04-10T22:00:00.000Z",
+        "title": "Harvest Fuite Du 2025-4-11",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/utwin-fuite-du-2025-4-7/",
+        "published": "2025-04-06T22:00:00.000Z",
+        "title": "Utwin Fuite Du 2025-4-7",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/reporterre-fuite-du-2025-4-1/",
+        "published": "2025-03-31T22:00:00.000Z",
+        "title": "Reporterre Fuite Du 2025-4-1",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/maif-bpce-fuite-du-2025-3-28/",
+        "published": "2025-03-27T23:00:00.000Z",
+        "title": "Maif  Bpce Fuite Du 2025-3-28",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/oracle-cloud-fuite-du-2025-3-27/",
+        "published": "2025-03-26T23:00:00.000Z",
+        "title": "Oracle Cloud Fuite Du 2025-3-27",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/centrale-nantes-fuite-du-2025-3-26/",
+        "published": "2025-03-25T23:00:00.000Z",
+        "title": "Centrale Nantes Fuite Du 2025-3-26",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/cerballiance-fuite-du-2025-3-25/",
+        "published": "2025-03-24T23:00:00.000Z",
+        "title": "Cerballiance Fuite Du 2025-3-25",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/autosur-diagnosur-fuite-du-2025-3-24/",
+        "published": "2025-03-23T23:00:00.000Z",
+        "title": "Autosur  Diagnosur Fuite Du 2025-3-24",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/intersport-fuite-du-2025-3-20/",
+        "published": "2025-03-19T23:00:00.000Z",
+        "title": "Intersport Fuite Du 2025-3-20",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/eclaireuses-et-eclaireurs-de-france-fuite-du-2025-3-20/",
+        "published": "2025-03-19T23:00:00.000Z",
+        "title": "Éclaireuses Et Éclaireurs De France Fuite Du 2025-3-20",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/direct-assurance-fuite-du-2025-3-18/",
+        "published": "2025-03-17T23:00:00.000Z",
+        "title": "Direct Assurance Fuite Du 2025-3-18",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/laforet-fuite-du-2025-3-13/",
+        "published": "2025-03-12T23:00:00.000Z",
+        "title": "Laforêt Fuite Du 2025-3-13",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/utwin-fuite-du-2025-3-5/",
+        "published": "2025-03-04T23:00:00.000Z",
+        "title": "Utwin Fuite Du 2025-3-5",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/cote-sushi-fuite-du-2025-3-4/",
+        "published": "2025-03-03T23:00:00.000Z",
+        "title": "Côté Sushi Fuite Du 2025-3-4",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/la-poste-fuite-du-2025-3-4/",
+        "published": "2025-03-03T23:00:00.000Z",
+        "title": "La Poste Fuite Du 2025-3-4",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/edf-dpih-fuite-du-2025-2-28/",
+        "published": "2025-02-27T23:00:00.000Z",
+        "title": "Edf Dpih Fuite Du 2025-2-28",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/zephir-fuite-du-2025-2-28/",
+        "published": "2025-02-27T23:00:00.000Z",
+        "title": "Zephir Fuite Du 2025-2-28",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/ecole-nationale-de-la-securite-fuite-du-2025-2-28/",
+        "published": "2025-02-27T23:00:00.000Z",
+        "title": "École Nationale De La Sécurité Fuite Du 2025-2-28",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/nord-emploi-fuite-du-2025-2-26/",
+        "published": "2025-02-25T23:00:00.000Z",
+        "title": "Nord Emploi Fuite Du 2025-2-26",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/alien-txtbase-stealer-logs-fuite-de-donnees/",
+        "published": "2025-02-25T19:25:18.000Z",
+        "title": "ALIEN TXTBASE Stealer Logs - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/federation-francaise-de-foot-fuite-du-2025-2-21/",
+        "published": "2025-02-20T23:00:00.000Z",
+        "title": "Fédération Française De Foot Fuite Du 2025-2-21",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/service-departemental-d-incendie-et-de-secours-de-la-vienne-fuite-du-2025-2-19/",
+        "published": "2025-02-19T00:00:00.000Z",
+        "title": "Service Départemental D&#39;incendie Et De Secours De La Vienne Fuite Du 2025-2-19",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/sport-decouverte-fuite-du-2025-2-17/",
+        "published": "2025-02-16T23:00:00.000Z",
+        "title": "Sport Découverte Fuite Du 2025-2-17",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/mutuelle-des-motards-fuite-du-2025-2-13/",
+        "published": "2025-02-12T23:00:00.000Z",
+        "title": "Mutuelle Des Motards Fuite Du 2025-2-13",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/caisse-des-depots-et-des-consignations-fuite-du-2025-2-12/",
+        "published": "2025-02-11T23:00:00.000Z",
+        "title": "Caisse Des Dépôts Et Des Consignations Fuite Du 2025-2-12",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/chronopost-fuite-du-2025-2-12/",
+        "published": "2025-02-11T23:00:00.000Z",
+        "title": "Chronopost Fuite Du 2025-2-12",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/adopt-me-trading-values-fuite-de-donnees/",
+        "published": "2025-02-10T02:58:18.000Z",
+        "title": "Adopt Me Trading Values - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/1win-fuite-de-donnees/",
+        "published": "2025-02-03T16:37:55.000Z",
+        "title": "1win - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/9lives-fuite-de-donnees/",
+        "published": "2025-02-02T02:04:44.000Z",
+        "title": "9Lives - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/altenen-fuite-de-donnees/",
+        "published": "2024-11-05T05:20:27.000Z",
+        "title": "Altenen - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/alpinereplay-fuite-de-donnees/",
+        "published": "2024-10-17T02:01:13.000Z",
+        "title": "AlpineReplay - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/animeleague-fuite-de-donnees/",
+        "published": "2024-07-31T05:57:48.000Z",
+        "title": "AnimeLeague - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/advance-auto-parts-fuite-de-donnees/",
+        "published": "2024-06-24T09:51:11.000Z",
+        "title": "Advance Auto Parts - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/apk-tw-fuite-de-donnees/",
+        "published": "2024-03-09T00:17:54.000Z",
+        "title": "APK.TW - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/acuity-fuite-de-donnees/",
+        "published": "2023-11-15T06:16:23.000Z",
+        "title": "Acuity - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/androidlista-fuite-de-donnees/",
+        "published": "2023-10-17T19:15:55.000Z",
+        "title": "AndroidLista - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/activision-fuite-de-donnees/",
+        "published": "2023-10-03T05:09:49.000Z",
+        "title": "Activision - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/apexsms-fuite-de-donnees/",
+        "published": "2023-09-21T14:57:43.000Z",
+        "title": "ApexSMS - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/abandonia-2022-fuite-de-donnees/",
+        "published": "2022-12-07T05:04:17.000Z",
+        "title": "Abandonia (2022) - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/adecco-fuite-de-donnees/",
+        "published": "2022-05-31T06:33:24.000Z",
+        "title": "Adecco - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/amart-furniture-fuite-de-donnees/",
+        "published": "2022-05-25T21:43:23.000Z",
+        "title": "Amart Furniture - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/aimware-fuite-de-donnees/",
+        "published": "2022-05-02T02:13:41.000Z",
+        "title": "Aimware - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/aditya-birla-fashion-and-retail-fuite-de-donnees/",
+        "published": "2022-01-15T02:58:39.000Z",
+        "title": "Aditya Birla Fashion and Retail - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/actmobile-fuite-de-donnees/",
+        "published": "2021-11-09T06:55:03.000Z",
+        "title": "ActMobile - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/ajarn-fuite-de-donnees/",
+        "published": "2021-09-26T03:45:38.000Z",
+        "title": "Ajarn - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/123rf-fuite-de-donnees/",
+        "published": "2020-11-14T23:59:50.000Z",
+        "title": "123RF - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/animal-jam-fuite-de-donnees/",
+        "published": "2020-11-12T00:18:50.000Z",
+        "title": "Animal Jam - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/appen-fuite-de-donnees/",
+        "published": "2020-07-30T07:00:21.000Z",
+        "title": "Appen - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/aptoide-fuite-de-donnees/",
+        "published": "2020-04-19T03:07:42.000Z",
+        "title": "Aptoide - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/animegame-fuite-de-donnees/",
+        "published": "2020-03-09T04:52:08.000Z",
+        "title": "AnimeGame - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/adult-friendfinder-2016-fuite-de-donnees/",
+        "published": "2020-02-06T22:53:53.000Z",
+        "title": "Adult FriendFinder (2016) - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/agusiq-torrents-pl-fuite-de-donnees/",
+        "published": "2019-12-04T21:54:50.000Z",
+        "title": "AgusiQ-Torrents.pl - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/anime-planet-fuite-de-donnees/",
+        "published": "2019-07-28T00:35:07.000Z",
+        "title": "Anime-Planet - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/armor-games-fuite-de-donnees/",
+        "published": "2019-07-20T06:03:31.000Z",
+        "title": "Armor Games - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/animoto-fuite-de-donnees/",
+        "published": "2019-07-18T05:04:08.000Z",
+        "title": "Animoto - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/appartoo-fuite-de-donnees/",
+        "published": "2019-05-02T07:07:24.000Z",
+        "title": "Appartoo - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/500px-fuite-de-donnees/",
+        "published": "2019-03-25T07:01:09.000Z",
+        "title": "500px - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/8fit-fuite-de-donnees/",
+        "published": "2019-03-21T17:50:00.000Z",
+        "title": "8fit - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/aerserv-fuite-de-donnees/",
+        "published": "2018-12-06T02:58:12.000Z",
+        "title": "AerServ - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/adapt-fuite-de-donnees/",
+        "published": "2018-11-22T19:43:06.000Z",
+        "title": "Adapt - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/apollo-fuite-de-donnees/",
+        "published": "2018-10-05T19:14:11.000Z",
+        "title": "Apollo - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/adult-fanfiction-org-fuite-de-donnees/",
+        "published": "2018-08-06T08:56:03.000Z",
+        "title": "Adult-FanFiction.Org - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/17173-fuite-de-donnees/",
+        "published": "2018-04-28T02:53:15.000Z",
+        "title": "17173 - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/2-844-separate-data-breaches-fuite-de-donnees/",
+        "published": "2018-02-26T09:06:02.000Z",
+        "title": "2,844 Separate Data Breaches - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/8tracks-fuite-de-donnees/",
+        "published": "2018-02-16T06:09:30.000Z",
+        "title": "8tracks - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/2fast4u-fuite-de-donnees/",
+        "published": "2018-01-07T07:19:39.000Z",
+        "title": "2fast4u - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/ancestry-fuite-de-donnees/",
+        "published": "2017-12-24T03:28:45.000Z",
+        "title": "Ancestry - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/ai-type-fuite-de-donnees/",
+        "published": "2017-12-08T21:31:25.000Z",
+        "title": "ai.type - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/abusewith-us-fuite-de-donnees/",
+        "published": "2017-10-09T09:08:45.000Z",
+        "title": "AbuseWith.Us - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/akp-emails-fuite-de-donnees/",
+        "published": "2017-10-01T03:52:37.000Z",
+        "title": "AKP Emails - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/7k7k-fuite-de-donnees/",
+        "published": "2017-09-26T19:54:01.000Z",
+        "title": "7k7k - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/abandonia-2015-fuite-de-donnees/",
+        "published": "2017-06-05T03:56:47.000Z",
+        "title": "Abandonia (2015) - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/anti-public-combo-list-fuite-de-donnees/",
+        "published": "2017-05-04T22:07:38.000Z",
+        "title": "Anti Public Combo List - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/aipai-com-fuite-de-donnees/",
+        "published": "2016-11-07T21:55:29.000Z",
+        "title": "Aipai.com - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/126-fuite-de-donnees/",
+        "published": "2016-10-08T05:46:05.000Z",
+        "title": "126 - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/17-fuite-de-donnees/",
+        "published": "2016-07-07T23:55:03.000Z",
+        "title": "17 - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/acne-org-fuite-de-donnees/",
+        "published": "2016-03-06T10:07:41.000Z",
+        "title": "Acne.org - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/android-forums-fuite-de-donnees/",
+        "published": "2015-12-20T05:47:19.000Z",
+        "title": "Android Forums - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/000webhost-fuite-de-donnees/",
+        "published": "2015-10-26T22:35:45.000Z",
+        "title": "000webhost - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/adult-friendfinder-2015-fuite-de-donnees/",
+        "published": "2015-05-22T06:03:44.000Z",
+        "title": "Adult FriendFinder (2015) - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/ahashare-com-fuite-de-donnees/",
+        "published": "2014-11-06T21:47:52.000Z",
+        "title": "AhaShare.com - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/adobe-fuite-de-donnees/",
+        "published": "2013-12-04T00:00:00.000Z",
+        "title": "Adobe - Fuite De Données",
+        "processedAt": "2025-11-14T01:21:36.381Z"
+      },
       {
         "guid": "https://feed-blush.vercel.app/king-jouet-fuite-du-2025-2-11/",
         "published": "2025-02-11T00:00:00.000Z",
