@@ -88,7 +88,7 @@ importers:
         specifier: ^7.2.2
         version: 7.2.2(@types/node@24.10.1)(stylus@0.62.0)
       vitest:
-        specifier: ^4.0.8
+        specifier: ^4.0.9
         version: 4.0.9(@types/node@24.10.1)(jsdom@27.2.0)(stylus@0.62.0)
 
 packages:
