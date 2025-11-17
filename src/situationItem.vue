@@ -14,7 +14,8 @@ Object.keys(document.getElementsByTagName("a")).map((ite)=>{
     //console.log(item.parentElement)
     log.info(item.href.includes("situation"))
 
-      item.href=window.location.href+"situation/"+item.textContent.split("/")[item.textContent.split("/").length-1]
+      const safeText = encodeURIComponent(item.textContent.split("/")[item.textContent.split("/").length-1]);
+      item.href = window.location.href + "situation/" + safeText;
     item.href=item.href.replace("situationsituation",'situation').replace("projetprojet",'projet')
     
     log.info(item.href)
