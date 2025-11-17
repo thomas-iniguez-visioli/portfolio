@@ -213,7 +213,7 @@ program
 
                 if (results.errors.length > 0) {
                     console.log('❌ Errors:');
-                    results.errors.forEach(error => console.log(`   - ${error}`));
+                    results.errors.forEach(error => console.log(`   - ${JSON.stringify(error)}`));
                 }
             }
 
