@@ -265,7 +265,7 @@ export class RSSMonitor {
       // Get items from last 24 hours
       const oneDayAgo = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000);
       items = feedCache
-        .filter(item => new Date(item.published) > oneDayAgo)
+        .filter(item => new Date(item.processedAt) > oneDayAgo)
         .slice(0, feed.settings.maxItemsPerNewsletter);
     }
 
