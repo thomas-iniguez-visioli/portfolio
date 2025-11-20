@@ -1,8 +1,20 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T01:20:52.068Z",
+  "lastUpdated": "2025-11-20T01:19:51.605Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/electro-depot-fuite-du-2024-12-20/",
+        "published": "2024-12-20T00:00:00.000Z",
+        "title": "Electro Dépôt Fuite Du 2024-12-20",
+        "processedAt": "2025-11-20T01:19:51.605Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/free-fuite-du-2024-10-25/",
+        "published": "2024-10-25T00:00:00.000Z",
+        "title": "Free Fuite Du 2024-10-25",
+        "processedAt": "2025-11-20T01:19:51.605Z"
+      },
       {
         "guid": "https://feed-blush.vercel.app/fuite-du-2025-11-12/",
         "published": "2025-11-12T00:00:00.000Z",

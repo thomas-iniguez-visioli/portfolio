@@ -1,26 +1,26 @@
 {
   "subject": "[RSS Update] Feed Blush - 3 new items",
-  "htmlContent": "\n    <h1>📰 Feed Blush</h1>\n    <p><em>Personal blog feed</em></p>\n    <hr>\n    \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuite-du-2025-11-12/\" style=\"color: #2c3e50; text-decoration: none;\">Fuite Du 2025-11-12</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 11/12/2025 \n          \n        </p>\n        \n        \n        <p><a href=\"https://feed-blush.vercel.app/fuite-du-2025-11-12/\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/sante-pro-fuite-du-2025-11-17/\" style=\"color: #2c3e50; text-decoration: none;\">Santé Pro Fuite Du 2025-11-17</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 11/17/2025 \n          \n        </p>\n        \n        \n        <p><a href=\"https://feed-blush.vercel.app/sante-pro-fuite-du-2025-11-17/\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; \">\n        <h2><a href=\"https://feed-blush.vercel.app/sante-pro-fuite-du-2025-11-17/\" style=\"color: #2c3e50; text-decoration: none;\">Santé Pro Fuite Du 2025-11-17</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 11/17/2025 \n          \n        </p>\n        \n        \n        <p><a href=\"https://feed-blush.vercel.app/sante-pro-fuite-du-2025-11-17/\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n    <hr>\n    <p style=\"color: #666; font-size: 12px; text-align: center;\">\n      This newsletter was automatically generated from <a href=\"https://alphaleadership.github.io/feed/atom.xml\">Feed Blush</a>\n    </p>\n    ",
+  "htmlContent": "\n    <h1>📰 Feed Blush</h1>\n    <p><em>Personal blog feed</em></p>\n    <hr>\n    \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/electro-depot-fuite-du-2024-12-20/\" style=\"color: #2c3e50; text-decoration: none;\">Electro Dépôt Fuite Du 2024-12-20</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 12/20/2024 \n          \n        </p>\n        \n        \n        <p><a href=\"https://feed-blush.vercel.app/electro-depot-fuite-du-2024-12-20/\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/free-fuite-du-2024-10-25/\" style=\"color: #2c3e50; text-decoration: none;\">Free Fuite Du 2024-10-25</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 10/25/2024 \n          \n        </p>\n        \n        \n        <p><a href=\"https://feed-blush.vercel.app/free-fuite-du-2024-10-25/\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; \">\n        <h2><a href=\"https://feed-blush.vercel.app/fuite-du-2025-11-12/\" style=\"color: #2c3e50; text-decoration: none;\">Fuite Du 2025-11-12</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 11/12/2025 \n          \n        </p>\n        \n        \n        <p><a href=\"https://feed-blush.vercel.app/fuite-du-2025-11-12/\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n    <hr>\n    <p style=\"color: #666; font-size: 12px; text-align: center;\">\n      This newsletter was automatically generated from <a href=\"https://alphaleadership.github.io/feed/atom.xml\">Feed Blush</a>\n    </p>\n    ",
   "textContent": {},
   "items": [
+    {
+      "guid": "https://feed-blush.vercel.app/electro-depot-fuite-du-2024-12-20/",
+      "published": "2024-12-20T00:00:00.000Z",
+      "title": "Electro Dépôt Fuite Du 2024-12-20",
+      "processedAt": "2025-11-20T01:19:51.605Z"
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/free-fuite-du-2024-10-25/",
+      "published": "2024-10-25T00:00:00.000Z",
+      "title": "Free Fuite Du 2024-10-25",
+      "processedAt": "2025-11-20T01:19:51.605Z"
+    },
     {
       "guid": "https://feed-blush.vercel.app/fuite-du-2025-11-12/",
       "published": "2025-11-12T00:00:00.000Z",
       "title": "Fuite Du 2025-11-12",
       "processedAt": "2025-11-19T01:20:52.067Z"
-    },
-    {
-      "guid": "https://feed-blush.vercel.app/sante-pro-fuite-du-2025-11-17/",
-      "published": "2025-11-17T00:00:00.000Z",
-      "title": "Santé Pro Fuite Du 2025-11-17",
-      "processedAt": "2025-11-18T01:21:18.353Z"
-    },
-    {
-      "guid": "https://feed-blush.vercel.app/sante-pro-fuite-du-2025-11-17/",
-      "published": "2025-11-17T00:00:00.000Z",
-      "title": "Santé Pro Fuite Du 2025-11-17",
-      "processedAt": "2025-11-18T01:21:18.353Z"
     }
   ],
-  "generatedAt": "2025-11-19T01:20:52.227Z"
+  "generatedAt": "2025-11-20T01:19:51.775Z"
 }
