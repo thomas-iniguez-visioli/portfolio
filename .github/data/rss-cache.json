@@ -1,8 +1,56 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-20T01:19:51.605Z",
+  "lastUpdated": "2025-11-21T01:20:36.559Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/beckett-fuite-du-2025-11-20/",
+        "published": "2025-11-20T00:00:00.000Z",
+        "title": "Beckett Fuite Du 2025-11-20",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/eurofiber-fuite-du-2025-11-20/",
+        "published": "2025-11-20T00:00:00.000Z",
+        "title": "Eurofiber Fuite Du 2025-11-20",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/vultr-fuite-du-2025-11-20/",
+        "published": "2025-11-20T00:00:00.000Z",
+        "title": "Vultr Fuite Du 2025-11-20",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/iko-fuite-du-2025-11-20/",
+        "published": "2025-11-20T00:00:00.000Z",
+        "title": "Iko Fuite Du 2025-11-20",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/2121983-fuite-du-2025-11-19/",
+        "published": "2025-11-19T00:00:00.000Z",
+        "title": "2121983 Fuite Du 2025-11-19",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/2122247-fuite-du-2025-11-19/",
+        "published": "2025-11-19T00:00:00.000Z",
+        "title": "2122247 Fuite Du 2025-11-19",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/resana-fuite-du-2025-11-18/",
+        "published": "2025-11-18T00:00:00.000Z",
+        "title": "Resana Fuite Du 2025-11-18",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/synbird-fuite-du-2025-11-18/",
+        "published": "2025-11-18T00:00:00.000Z",
+        "title": "Synbird Fuite Du 2025-11-18",
+        "processedAt": "2025-11-21T01:20:36.559Z"
+      },
       {
         "guid": "https://feed-blush.vercel.app/electro-depot-fuite-du-2024-12-20/",
         "published": "2024-12-20T00:00:00.000Z",
