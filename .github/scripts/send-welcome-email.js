@@ -40,7 +40,7 @@ async function sendWelcomeEmail(subscriptionData, config) {
         
         // Prepare email payload
         const emailPayload = {
-            from: config.fromEmail || 'Acme <onboarding@resend.dev>',
+            from: config.fromEmail || 'Acme <news@arbinger.is-a.dev',
             to: email,
             subject: '🎯 Welcome to Our Newsletter - Subscription Confirmed',
             html: htmlContent,
@@ -147,7 +147,7 @@ async function main() {
         // Get configuration from environment variables
         const config = {
             resendApiKey: process.env.RESEND_API_KEY,
-            fromEmail: process.env.FROM_EMAIL || 'newsletter <onboarding@resend.dev>',
+            fromEmail: process.env.FROM_EMAIL || 'newsletter <news@arbinger.is-a.dev>',
             portfolioUrl: process.env.PORTFOLIO_URL || 'https://thomas-iniguez-visioli.github.io/',
             unsubscribeUrl: process.env.UNSUBSCRIBE_URL || 'https://thomas-iniguez-visioli.github.io/unsubscribe',
             contactUrl: process.env.CONTACT_URL || 'https://thomas-iniguez-visioli.github.io/contact'
