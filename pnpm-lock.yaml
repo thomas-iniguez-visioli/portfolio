@@ -85,7 +85,7 @@ importers:
         specifier: ^27.2.0
         version: 27.2.0
       vite:
-        specifier: ^7.2.2
+        specifier: ^7.2.4
         version: 7.2.4(@types/node@24.10.1)(stylus@0.62.0)
       vitest:
         specifier: ^4.0.13
