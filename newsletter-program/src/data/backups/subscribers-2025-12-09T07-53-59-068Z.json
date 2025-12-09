@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2025-11-12T09:43:11.479Z",
+  "lastModified": "2025-12-09T07:53:59.055Z",
+  "keyVersion": "env-v1",
+  "subscribers": [
+    {
+      "id": "b2bb6d1e-da78-448b-8494-31af6ab54ddb",
+      "status": "active",
+      "subscribedAt": "2025-11-17T16:04:14.271Z",
+      "source": "github-issue",
+      "preferences": {
+        "frequency": "Weekly",
+        "topics": [
+          "all"
+        ]
+      },
+      "unsubscribeToken": "be9c165075d85764c2fda418bbdcb75f27e8366a2eff46a38dd083ffb3d5e0f5",
+      "metadata": {},
+      "encryptedEmail": "FH4/VgOmeBbxFZq3Z2qXUgAr0/v+dnprZ9uWbEQPmv5D76cPg9F2mYCWf2lCsW4RGMpZgCpZQ2QYzQ=="
+    },
+    {
+      "id": "36cdb9a2-6625-44c4-940b-a6e8062dec35",
+      "status": "active",
+      "subscribedAt": "2025-11-24T12:43:04.477Z",
+      "source": "github-issue",
+      "preferences": {
+        "frequency": "Weekly",
+        "topics": [
+          "all"
+        ]
+      },
+      "unsubscribeToken": "da99ff3986b1211e4aff890f16c0100ba6bfde77dfecc48066b810d5cff74f1d",
+      "metadata": {},
+      "encryptedEmail": "IqJcUw8VmB+CpszPE0ysVmBBinAr72TPXDKpvEaTuIGGdIbLmsaLR6GAsE7M8vN9JAJ/JJr+gEEGPmea9j01gqpa6+1cuHCPhUY="
+    },
+    {
+      "id": "ac8e4e36-31c1-4512-a75e-351164061c3f",
+      "status": "active",
+      "subscribedAt": "2025-12-09T07:53:59.053Z",
+      "source": "test",
+      "preferences": {
+        "frequency": "weekly",
+        "topics": [
+          "tech",
+          "news"
+        ]
+      },
+      "unsubscribeToken": "d946b65c37fa389245718d6ce31608df739eae180fc3589a35aa5454de183056",
+      "metadata": {},
+      "encryptedEmail": "i1SDC4B+jFC5GmNAtzuZc3UidI4j/OcWVo1RnWtp+/M="
+    }
+  ]
+}

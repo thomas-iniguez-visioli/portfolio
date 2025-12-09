@@ -22,6 +22,7 @@
     "dev": "node --watch src/cli/index.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "aes256": "1.1.0",
     "app-root-path": "^3.1.0",
     "commander": "^11.1.0",
