@@ -145,7 +145,12 @@ class NewsletterComposer {
         path.join(this.newslettersDir, newsletterFile),
         "utf-8"
       );
-      const archivedContent = `--- archived_at: ${sentAt.toISOString()} original_file: ${fileName} ---  ${content}`;
+      const archivedContent = `---
+archived_at: ${sentAt.toISOString()}
+original_file: ${fileName}
+---
+
+${content}`;
       await fs.writeFile(archivePath, archivedContent);
       return archivePath;
     } catch (error) {
