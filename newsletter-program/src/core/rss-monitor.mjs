@@ -307,7 +307,10 @@ export class RSSMonitor {
     let html = `
     <h1>📰 ${feed.title}</h1>
     <p><em>${feed.description || 'Latest updates from ' + feed.title}</em></p>
-    ${getGeminiLeaksSummary(process.env.GEMINI_API_KEY,items.map((e)=>{return e.content}).join("\n")).then((content)=>{return content})}
+    ${getGeminiLeaksSummary(process.env.GEMINI_API_KEY,items.map((e)=>{return e.content}).join("\n")).then((content)=>{
+      console.log(content)
+      return content
+    })}
     <hr>
     `;
 
