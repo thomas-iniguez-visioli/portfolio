@@ -35,7 +35,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd newsletter-program
-        npm ci
+        npm i
         
     - name: Check RSS feeds
       id: rss_check
