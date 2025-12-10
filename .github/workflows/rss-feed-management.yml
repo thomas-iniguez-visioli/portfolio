@@ -73,7 +73,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd newsletter-program
-        npm ci
+        npm i
         
     - name: Execute RSS management action
       id: rss_action
