@@ -2,7 +2,22 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-
+import { GoogleGenerativeAI } from "@google/generative-ai";
+async function getGeminiLeaksSummary(apiKey,content) {
+  if (!apiKey) return null;
+  try {
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const prompt =
+      "fait moi et résumée compatible pour un humain normal du contenu suivant :"+content;
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    return response.text();
+  } catch (error) {
+    console.error("Error fetching Gemini leaks summary:", error);
+    return null;
+  }
+}
 
 /**
  * RSS feed monitoring and processing system
@@ -292,6 +307,7 @@ export class RSSMonitor {
     let html = `
     <h1>📰 ${feed.title}</h1>
     <p><em>${feed.description || 'Latest updates from ' + feed.title}</em></p>
+    ${getGeminiLeaksSummary(process.env.GEMINI_API_KEY,items.map((e)=>{return e.content}).join("\n")}
     <hr>
     `;
 
