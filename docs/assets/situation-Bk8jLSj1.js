@@ -14,7 +14,8 @@ const _sfc_main$1 = {
         console.log(item.href);
         if (item.id) {
           log.info(item.href.includes("situation"));
-          item.href = window.location.href + "situation/" + item.textContent.split("/")[item.textContent.split("/").length - 1];
+          const safeSegment = encodeURIComponent(item.textContent.split("/")[item.textContent.split("/").length - 1]);
+          item.href = window.location.href + "situation/" + safeSegment;
           item.href = item.href.replace("situationsituation", "situation").replace("projetprojet", "projet");
           log.info(item.href);
         }
