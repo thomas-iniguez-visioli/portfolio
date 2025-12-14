@@ -41,7 +41,7 @@ jobs:
       id: rss_check
       run: |
         # Run RSS monitoring using GitHub Actions-specific script
-        node .github/scripts/rss-monitor-action.mjs monitor >> $GITHUB_OUTPUT
+        node .github/scripts/rss-monitor-action.mjs monitor 
       env:
         RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
@@ -65,7 +65,7 @@ jobs:
         SEND_NEWSLETTER: ${{ github.event.inputs.send_newsletter }}
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY}}
     - name: Commit RSS cache updates
-      if: steps.rss_check.outputs.new_items > 0
+
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
