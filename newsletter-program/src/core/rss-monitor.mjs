@@ -175,7 +175,7 @@ export class RSSMonitor {
       newItems: 0,
       errors: []
     };
-
+    console.log(feeds.length)
     for (const feed of feeds) {
       try {
         const feedResult = await this.checkFeed(feed.id);
