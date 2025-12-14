@@ -51,7 +51,7 @@ export class NewsletterSender {
         subject: personalizedSubject,
         html: personalizedContent
       };
-
+      subscriber.format=subscriber.format||"html
       // Add text version if subscriber prefers text format
       if (subscriber.format === 'Text') {
         emailData.text = this.htmlToText(personalizedContent);
