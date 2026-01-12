@@ -238,7 +238,7 @@ export class RSSMonitor {
         guid: item.guid,
         published: item.published,
         title: item.title,
-        processedAt: new Date().toISOString()
+        processedAt: new Date().toISOString(),content: item.content
       })),
       ...feedCache
     ].slice(0, 2000); // Keep only last 100 items
