@@ -337,7 +337,7 @@ export class RSSMonitor {
     `
     })
    ;
-
+    console.log(html)
     return html;
   }
 
