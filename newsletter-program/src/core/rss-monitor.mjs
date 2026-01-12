@@ -7,7 +7,7 @@ async function getGeminiLeaksSummary(apiKey,content) {
   if (!apiKey) return null;
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-3-pro-preview" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const prompt =
       "fait moi et résumée compatible pour un humain normal du contenu suivant :"+content;
     const result = await model.generateContent(prompt);
