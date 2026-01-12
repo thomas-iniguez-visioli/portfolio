@@ -291,7 +291,7 @@ export class RSSMonitor {
     // Generate newsletter content
     const newsletter = {
       subject: `${feed.settings.subjectPrefix} ${feed.title} - ${items.length} new item${items.length > 1 ? 's' : ''}`,
-      htmlContent: this.generateHTMLContent(feed, items),
+      htmlContent: await this.generateHTMLContent(feed, items),
       textContent: this.generateTextContent(feed, items),
       items: items,
       generatedAt: new Date().toISOString()
@@ -303,12 +303,12 @@ export class RSSMonitor {
   /**
    * Generate HTML content for newsletter
    */
-  generateHTMLContent(feed, items) {
+  async generateHTMLContent(feed, items) {
     console.log(items)
     let html
-    getGeminiLeaksSummary(process.env.GEMINI_API_KEY,items.map((e)=>{return e.content}).join("\n")).then((content)=>{
-      console.log(content)
-      html= `
+    const content = await getGeminiLeaksSummary(process.env.GEMINI_API_KEY,items.map((e)=>{return e.content}).join("\n"));
+    console.log(content)
+    html= `
     <h1>📰 ${feed.title}</h1>
     <p><em>${feed.description || 'Latest updates from ' + feed.title}</em></p>
     ${content ? `<h2>Résumé Généré par Gemini :</h2><p>${content}</p><hr>` : ''}
@@ -336,7 +336,7 @@ export class RSSMonitor {
       This newsletter was automatically generated from <a href="${feed.url}">${feed.title}</a>
     </p>
     `
-    })
+    
    ;
     console.log(html)
     return html;
