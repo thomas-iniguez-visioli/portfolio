@@ -253,7 +253,7 @@ export class RSSMonitor {
     }
     
     this.saveFeeds(feeds);
-    await this.generateNewsletterFromItems(feed.id)
+    //await this.generateNewsletterFromItems(feed.id)
     return {
       feed: feed,
       newItems: newItems,
@@ -304,6 +304,7 @@ export class RSSMonitor {
    * Generate HTML content for newsletter
    */
   generateHTMLContent(feed, items) {
+    console.log(items)
     let html
     getGeminiLeaksSummary(process.env.GEMINI_API_KEY,items.map((e)=>{return e.content}).join("\n")).then((content)=>{
       console.log(content)
