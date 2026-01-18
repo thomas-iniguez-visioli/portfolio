@@ -48,6 +48,7 @@ export class NewsletterSender {
       const emailData = {
         from: this.fromEmail,
         to: subscriber.email,
+         replyTo: 'admin@arbinger.is-a.dev',
         subject: personalizedSubject,
         html: personalizedContent
       };
