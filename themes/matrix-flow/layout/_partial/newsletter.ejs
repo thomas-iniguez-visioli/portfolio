@@ -3,22 +3,21 @@
   <p class="newsletter-description">
     Restez informé des dernières mises à jour du portfolio et des nouveaux projets.
   </p>
-  
-  <form id="newsletter-form" class="newsletter-form">
-    <div class="form-group">
-      <label for="newsletter-email" class="form-label">Email</label>
-      <input 
-        type="email" 
-        id="newsletter-email" 
-        name="email" 
-        class="form-input" 
-        placeholder="votre-email@exemple.com"
-        required
-      >
-      <div class="form-error" id="email-error"></div>
-    </div>
-    
-    <div class="form-group">
+  <form action="" method="post" id="newsletter-form" class="newsletter-form">
+    <fieldset class="fr-fieldset" aria-labelledby="text-legend text-messages">
+        <legend class="fr-fieldset__legend" id="text-legend">
+          formulaire d'inscription à la newsletter
+            <span class="fr-hint-text">Texte de description additionnel</span>
+        </legend>
+        <div class="fr-fieldset__element">
+            <div class="fr-input-group">
+                <label class="fr-label" for="newsletter-email">
+                    Adresse e-mail
+                </label>
+                <input class="fr-input" name="newsletter-email" id="newsletter-email" type="email">
+            </div>
+        </div>
+            <div class="form-group">
       <label for="newsletter-frequency" class="form-label">Fréquence</label>
       <select id="newsletter-frequency" name="frequency" class="form-select" required>
         <option value="">Choisir...</option>
@@ -59,10 +58,22 @@
     </button>
     
     <div class="newsletter-message" id="newsletter-message"></div>
-  </form>
-  
-  <div class="newsletter-success" id="newsletter-success" style="display: none;">
-    <h4>✅ Inscription réussie!</h4>
-    <p>Merci de vous être abonné à la newsletter. Vous recevrez bientôt un email de confirmation.</p>
-  </div>
+        <div class="fr-fieldset__element">
+            <div class="fr-input-group">
+                <label class="fr-label" for="text-2">
+                    Libellé champ de saisie
+                </label>
+                <input class="fr-input" name="text-2" id="text-2" type="text">
+            </div>
+        </div>
+        <div class="fr-messages-group" id="text-messages" aria-live="polite">
+        </div>
+    </fieldset>
+
+    <button class="fr-btn" type="submit">
+        Enregistrer les informations
+    </button>
+</form>
+
+
 </div>

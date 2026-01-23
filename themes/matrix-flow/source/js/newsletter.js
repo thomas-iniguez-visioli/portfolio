@@ -319,6 +319,7 @@ class NewsletterManager {
   }
   
   async handleSubmit(event) {
+    console.log('Newsletter form submission initiated');
     event.preventDefault();
     
     // Prevent double submission
@@ -524,7 +525,7 @@ class NewsletterManager {
     
     const issueTitle = `[NEWSLETTER] Subscription Request - ${formData.email}`;
     const issueBody = this.generateIssueBody(formData);
-    
+    console.log('Generated GitHub issue body:', issueBody);
     // Method 1: Redirect to GitHub issue creation (more secure)
     if (true) {
       const githubUrl = this.generateGitHubIssueUrl(issueTitle, issueBody);

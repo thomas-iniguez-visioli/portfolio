@@ -25,7 +25,7 @@ class ModuleLoader {
     async preloadCriticalModules() {
         const criticalModules = [
             '/js/viewport-manager.js',
-            '/js/matrix.js'
+         
         ];
 
         for (const module of criticalModules) {

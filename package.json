@@ -5,9 +5,9 @@
   "scripts": {
     "build": "npm run optimize && npm run clean && npx hexo deploy",
     "build:fast": "npm run clean && npx hexo deploy",
-    "clean": "cd themes && cd hexo-theme && npm i && cd .. && cd .. && hexo clean",
+    "clean": " hexo clean --debug",
     "deploy": "hexo deploy",
-    "server": "hexo server",
+    "server": "hexo server --verbose --debug",
     "optimize": "node scripts/build-optimizer.js",
     "optimize:css": "node themes/matrix-flow/scripts/critical-css-extractor.js",
     "build:css": "node themes/matrix-flow/scripts/css-build.js",
@@ -17,7 +17,7 @@
     "test:watch": "vitest"
   },
   "hexo": {
-    "version": "8.1.1"
+    "version": "8.1.0"
   },
   "dependencies": {
     "aes256": "^1.1.0",

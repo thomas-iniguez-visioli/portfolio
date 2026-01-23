@@ -1,22 +1,47 @@
-<div class="widget">
-  <h3 class="widget-title">Projets</h3>
-  <ul class="widget-list">
-    <% site.posts.each(function(post){ %>
-      <li><a href="<%- url_for(post.path) %>"><%- post.title %></a></li>
+<nav class="fr-sidemenu" role="navigation" aria-labelledby="sidemenu-title">
+  <div class="fr-sidemenu__inner">
+    <button aria-expanded="false" aria-controls="sidemenu" type="button" class="fr-sidemenu__btn">annexe</button>
+    <div class="fr-collapse" id="sidemenu">
+      <p class="fr-sidemenu__title" id="sidemenu-title">annexe</p>
+      <ul class="fr-sidemenu__list">
+        <li class="fr-sidemenu__item">
+          <button aria-expanded="true" aria-controls="sidemenu-submenu-level-02" aria-current="false" type="button" class="fr-sidemenu__btn">projet</button>
+          <div class="fr-collapse" id="sidemenu-submenu-level-02">
+            <ul class="fr-sidemenu__list">
+             
+              <li class="fr-sidemenu__item">
+                <button aria-expanded="true" aria-controls="sidemenu-submenu-level-03-1" aria-current="false" type="button" class="fr-sidemenu__btn">liste des projet  </button>
+                <div class="fr-collapse" id="sidemenu-submenu-level-03-1">
+                  <ul class="fr-sidemenu__list">
+                      <% site.posts.each(function(post){ %>
+      <li><a href="<%- url_for(post.path) %>" class="fr-sidemenu__link"><%- post.title %></a></li>
     <% }) %>
-  </ul>
-</div>
-
-<div class="widget">
-  <h3 class="widget-title">Preuves</h3>
-  <ul class="widget-list">
-    <% site.posts.each(function(post){ %>
+                  
+                  </ul>
+                </div>
+              </li>
+                 <li class="fr-sidemenu__item">
+                <button aria-expanded="true" aria-controls="sidemenu-submenu-level-03-2" aria-current="false" type="button" class="fr-sidemenu__btn">liste des preuves  </button>
+                <div class="fr-collapse" id="sidemenu-submenu-level-03-2">
+                  <ul class="fr-sidemenu__list">
+                    <% site.posts.each(function(post){ %>
       <% if (post.lien) { %>
-        <li><a href="<%- url_for(post.lien) %>" target="_blank"><%- post.title %> (preuve)</a></li>
+        <li><a href="<%- url_for(post.lien) %>" target="_blank" class="fr-sidemenu__link"><%- post.title %> (preuve)</a></li>
       <% } %>
     <% }) %>
-  </ul>
-</div>
+                  
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
 <div class="widget" data-lazy="social-links" data-modules="/js/lazy-loader.js">
   <h3 class="widget-title">Compétences</h3>
@@ -30,4 +55,4 @@
   </div>
 </div>
 
-<%- partial('newsletter') %>
+<!--<%- partial('newsletter') %>
