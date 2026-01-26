@@ -1,3 +1,15 @@
+---
+title: système de support prefecture 
+layout: journal
+lang: fr
+categories:
+  - journal
+authors:
+  - thomas iniguez visioli
+date: 2026-01-026 11:33:11
+tags:
+---
+
 # Description du Projet : Prefsup
 
 ## 1. Objectif Général
