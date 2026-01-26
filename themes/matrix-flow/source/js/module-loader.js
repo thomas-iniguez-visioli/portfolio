@@ -83,7 +83,7 @@ class ModuleLoader {
 
     async preloadInteractiveModules() {
         const interactiveModules = [
-            '/js/newsletter.js',
+         //   '/js/newsletter.js',
             '/js/lazy-loader.js'
         ];
 
