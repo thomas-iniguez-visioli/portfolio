@@ -164,13 +164,13 @@ program
             const newsletter = await monitor.generateNewsletterFromItems(options.feedId);
 
             if (!newsletter) {
-         //       console.log('ℹ️ No new items found for newsletter generation');
+                console.log('ℹ️ No new items found for newsletter generation');
                 return;
             }
 
-//            console.log('✅ Newsletter generated:');
-    //        console.log(`   Subject: ${newsletter.subject}`);
-         //   console.log(`   Items: ${newsletter.items.length}`);
+           console.log('✅ Newsletter generated:');
+            console.log(`   Subject: ${newsletter.subject}`);
+            console.log(`   Items: ${newsletter.items.length}`);
 
             if (options.output) {
              
@@ -193,11 +193,11 @@ program
                 const subscribers = await subscriberManager.getSubscribers({ status: 'active' });
 
                 if (subscribers.length === 0) {
-                  //  console.log('ℹ️ No active subscribers found');
+                    console.log('ℹ️ No active subscribers found');
                     return;
                 }
 
-               //    console.log(`📧 Sending newsletter to ${subscribers.length} subscribers...`);
+                   console.log(`📧 Sending newsletter to ${subscribers.length} subscribers...`);
 
                 const results = await sender.sendToSubscribers(
                     subscribers,
