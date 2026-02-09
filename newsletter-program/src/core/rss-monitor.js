@@ -287,8 +287,7 @@ class RSSMonitor {
    * Generate HTML content for newsletter
    */
   async generateHTMLContent(feed, items) {
-    const summaryContent = await getGeminiLeaksSummary(process.env.GEMINI_API_KEY, items.map(e => e.content).join("
-"));
+    const summaryContent = await getGeminiLeaksSummary(process.env.GEMINI_API_KEY, items.map(e => e.content).join("\n"));
     
     let html = `
     <h1>📰 ${feed.title}</h1>
