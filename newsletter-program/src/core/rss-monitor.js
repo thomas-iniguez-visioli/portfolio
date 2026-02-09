@@ -1,15 +1,15 @@
-import fetch from 'node-fetch';
-import fs from 'fs';
-import path from 'path';
-import crypto from 'crypto';
-import { GoogleGenerativeAI } from "@google/generative-ai";
-async function getGeminiLeaksSummary(apiKey,content) {
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+const striptags = require('striptags');
+
+async function getGeminiLeaksSummary(apiKey, content) {
   if (!apiKey) return null;
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-    const prompt =
-      "fait moi et résumée compatible pour un humain normal du contenu suivant :"+content;
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const prompt = "fait moi et résumée compatible pour un humain normal du contenu suivant :" + content;
     const result = await model.generateContent(prompt);
     const response = await result.response;
     return response.text();
@@ -23,7 +23,7 @@ async function getGeminiLeaksSummary(apiKey,content) {
  * RSS feed monitoring and processing system
  * Monitors RSS feeds and generates newsletters from new items
  */
-export class RSSMonitor {
+class RSSMonitor {
   constructor(dataPath = './.github/data', options = {}) {
     this.dataPath = dataPath;
     this.feedsFile = path.join(dataPath, 'rss-feeds.json');
@@ -38,7 +38,6 @@ export class RSSMonitor {
    * Ensure data directory exists
    */
   ensureDataDirectory() {
-  //  console.log(this.dataPath)
     if (!fs.existsSync(this.dataPath)) {
       fs.mkdirSync(this.dataPath, { recursive: true });
     }
@@ -75,7 +74,6 @@ export class RSSMonitor {
     
     let validation = { valid: true, title: feedConfig.title || 'RSS Feed', description: feedConfig.description };
     
-    // Validate feed URL unless skipping validation or in test mode
     if (!feedConfig.skipValidation && !this.testMode) {
       validation = await this.validateFeed(feedConfig.url);
       if (!validation.valid) {
@@ -157,11 +155,12 @@ export class RSSMonitor {
    * Get all RSS feeds
    */
   getFeeds(activeOnly = false) {
-    const feeds = this.loadFeeds();
-    
-    
-    
-    return feeds.feeds;
+    const feedsData = this.loadFeeds();
+    let feeds = feedsData.feeds;
+    if (activeOnly) {
+      feeds = feeds.filter(f => f.isActive);
+    }
+    return feeds;
   }
 
   /**
@@ -175,18 +174,16 @@ export class RSSMonitor {
       newItems: 0,
       errors: []
     };
-    console.log(feeds.length)
+
     for (const feed of feeds) {
       try {
         const feedResult = await this.checkFeed(feed.id);
-        results.checkedFeeds++;
-        results.newItems += feedResult.newItems.length;
-        
-       // console.log(`✅ Checked feed: ${feed.title} (${feedResult.newItems.length} new items)`);
-        
+        if (feedResult) {
+          results.checkedFeeds++;
+          results.newItems += (feedResult.newItems || []).length;
+        }
       } catch (error) {
         results.errors.push(`${feed.title}: ${error.message}`);
-       // console.error(`❌ Error checking feed ${feed.title}:`, error.message);
       }
     }
 
@@ -200,15 +197,12 @@ export class RSSMonitor {
     const feeds = this.loadFeeds();
     const feed = feeds.feeds.find(f => f.id === feedId);
     
-    if (!feed) {
-     return // throw new Error(`Feed not found: ${feedId}`);
-    }
+    if (!feed) return null;
 
     if (!feed.isActive) {
       throw new Error(`Feed is not active: ${feed.title}`);
     }
 
-    // Check if enough time has passed since last check
     if (feed.lastChecked) {
       const lastCheck = new Date(feed.lastChecked);
       const now = new Date();
@@ -223,37 +217,34 @@ export class RSSMonitor {
       }
     }
 
-    // Fetch and parse RSS feed
     const rssData = await this.fetchRSSFeed(feed.url);
     const items = this.parseRSSItems(rssData);
     
-    // Filter new items
     const cache = this.loadCache();
     const feedCache = cache.items[feedId] || [];
     const newItems = this.filterNewItems(items, feedCache);
 
-    // Update cache with new items
     cache.items[feedId] = [
       ...newItems.map(item => ({
         guid: item.guid,
         published: item.published,
         title: item.title,
-        processedAt: new Date().toISOString(),content: item.content
+        processedAt: new Date().toISOString(),
+        content: item.content
       })),
       ...feedCache
-    ].slice(0, 2000); // Keep only last 100 items
+    ].slice(0, 2000);
 
     cache.lastUpdated = new Date().toISOString();
     this.saveCache(cache);
 
-    // Update feed last checked time
     feed.lastChecked = new Date().toISOString();
     if (newItems.length > 0) {
       feed.lastItemDate = newItems[0].published;
     }
     
     this.saveFeeds(feeds);
-    //await this.generateNewsletterFromItems(feed.id)
+    
     return {
       feed: feed,
       newItems: newItems,
@@ -265,30 +256,22 @@ export class RSSMonitor {
    * Generate newsletter from RSS items
    */
   async generateNewsletterFromItems(feedId, items = null) {
-    const feed = this.getFeeds(true)[0]
-    //console.log(feed);
-    if (!feed) {
-      return
-     // throw new Error(`Feed not found: ${feedId}`);
-    }
+    const feeds = this.getFeeds(true);
+    const feed = feeds.find(f => f.id === feedId);
+    
+    if (!feed) return null;
 
-    // If no items provided, get recent items from cache
     if (!items) {
       const cache = this.loadCache();
       const feedCache = cache.items[feedId] || [];
-      
-      // Get items from last 24 hours
       const oneDayAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
       items = feedCache
         .filter(item => new Date(item.processedAt) > oneDayAgo)
         .slice(0, feed.settings.maxItemsPerNewsletter);
     }
 
-    if (items.length === 0) {
-      return null;
-    }
+    if (items.length === 0) return null;
 
-    // Generate newsletter content
     const newsletter = {
       subject: `${feed.settings.subjectPrefix} ${feed.title} - ${items.length} new item${items.length > 1 ? 's' : ''}`,
       htmlContent: await this.generateHTMLContent(feed, items),
@@ -304,14 +287,13 @@ export class RSSMonitor {
    * Generate HTML content for newsletter
    */
   async generateHTMLContent(feed, items) {
-    console.log(items)
-    let html
-    const content = await getGeminiLeaksSummary(process.env.GEMINI_API_KEY,items.map((e)=>{return e.content}).join("\n"));
-    console.log(content)
-    html= `
+    const summaryContent = await getGeminiLeaksSummary(process.env.GEMINI_API_KEY, items.map(e => e.content).join("
+"));
+    
+    let html = `
     <h1>📰 ${feed.title}</h1>
     <p><em>${feed.description || 'Latest updates from ' + feed.title}</em></p>
-    ${content ? `<h2>Résumé Généré par Gemini :</h2><p>${content}</p><hr>` : ''}
+    ${summaryContent ? `<h2>Résumé Généré par Gemini :</h2><p>${summaryContent}</p><hr>` : ''}
     <hr>
     `;
 
@@ -335,40 +317,49 @@ export class RSSMonitor {
     <p style="color: #666; font-size: 12px; text-align: center;">
       This newsletter was automatically generated from <a href="${feed.url}">${feed.title}</a>
     </p>
-    `
+    `;
     
-   ;
-    console.log(html)
     return html;
   }
 
   /**
    * Generate text content for newsletter
    */
-  async generateTextContent(feed, items) {
-    const striptags = (await import('striptags')).default;
-    let text = `${feed.title}\n${'='.repeat(feed.title.length)}\n\n`;
+  generateTextContent(feed, items) {
+    let text = `${feed.title}
+${'='.repeat(feed.title.length)}
+
+`;
     
     if (feed.description) {
-      text += `${feed.description}\n\n`;
+      text += `${feed.description}
+
+`;
     }
 
     items.forEach((item, index) => {
-      text += `${index + 1}. ${item.title}\n`;
+      text += `${index + 1}. ${item.title}
+`;
       text += `   ${new Date(item.published).toLocaleDateString()}`;
       if (item.author) {
         text += ` • ${item.author}`;
       }
-      text += `\n`;
+      text += `
+`;
       
       if (item.description) {
-        text += `   ${striptags(item.description).substring(0, 200)}...\n`;
+        text += `   ${striptags(item.description).substring(0, 200)}...
+`;
       }
       
-      text += `   Read more: ${item.guid}\n\n`;
+      text += `   Read more: ${item.guid}
+
+`;
     });
 
-    text += `---\nThis newsletter was automatically generated from ${feed.title}\n${feed.url}`;
+    text += `---
+This newsletter was automatically generated from ${feed.title}
+${feed.url}`;
 
     return text;
   }
@@ -376,103 +367,54 @@ export class RSSMonitor {
   /**
    * Validate RSS feed URL
    */
-async validateFeed(url) {
-  try {
-    const response = await fetch(url, {
-      headers: {
-        'User-Agent': 'RSS-Monitor/1.0'
-      },
-      timeout: 10000
-    });
-    if (!response.ok) {
+  async validateFeed(url) {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'RSS-Monitor/1.0'
+        }
+      });
+      if (!response.ok) {
+        return {
+          valid: false,
+          error: `HTTP ${response.status}: ${response.statusText}`
+        };
+      }
+      const content = await response.text();
+
+      if (!content.includes('<rss') && !content.includes('<feed')) {
+        return {
+          valid: false,
+          error: 'Not a valid RSS or Atom feed'
+        };
+      }
+
+      const isAtom = content.includes('<feed');
+      const titleTag = '<title>';
+      const descTag = isAtom ? '<subtitle>' : '<description>';
+
+      const titleMatch = content.match(new RegExp(`${titleTag}[^>]*>([^<]+)<\/title>`, 'i'));
+      const descMatch = content.match(new RegExp(`${descTag}[^>]*>([^<]+)<\/${isAtom ? 'subtitle' : 'description'}`, 'i'));
+
+      return {
+        valid: true,
+        title: titleMatch ? titleMatch[1].trim() : 'Unknown Feed',
+        description: descMatch ? descMatch[1].trim() : null
+      };
+    } catch (error) {
       return {
         valid: false,
-        error: `HTTP ${response.status}: ${response.statusText}`
+        error: error.message
       };
     }
-    const content = await response.text();
-
-    // Vérifier si c'est un flux RSS ou Atom
-    if (!content.includes('<rss') && !content.includes('<feed')) {
-      return {
-        valid: false,
-        error: 'Not a valid RSS or Atom feed'
-      };
-    }
-
-    // Extraire les infos de base
-    const isAtom = content.includes('<feed');
-    const titleTag = isAtom ? '<title>' : '<title>';
-    const descTag = isAtom ? '<subtitle>' : '<description>';
-
-    const titleMatch = content.match(new RegExp(`${titleTag}[^>]*>([^<]+)<\\/${isAtom ? 'title' : 'title'}`, 'i'));
-    const descMatch = content.match(new RegExp(`${descTag}[^>]*>([^<]+)<\\/${isAtom ? 'subtitle' : 'description'}`, 'i'));
-
-    return {
-      valid: true,
-      title: titleMatch ? titleMatch[1].trim() : 'Unknown Feed',
-      description: descMatch ? descMatch[1].trim() : null
-    };
-  } catch (error) {
-    return {
-      valid: false,
-      error: error.message
-    };
-  }
-}
-
-
-  /**
-   * Fetch and parse RSS feed (alias for fetchRSSFeed for test compatibility)
-   */
-  async fetchFeed(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-    }
-    
-    const xmlContent = await response.text();
-    const items = this.parseRSSItems(xmlContent);
-    console.log(items.length)
-    // Extract feed metadata
-    const titleMatch = xmlContent.match(/<title[^>]*>(.*?)<\/title>/i);
-    const descriptionMatch = xmlContent.match(/<description[^>]*>(.*?)<\/description>/i);
-    
-    return {
-      title: titleMatch ? titleMatch[1].trim() : 'Unknown Feed',
-      description: descriptionMatch ? descriptionMatch[1].trim() : '',
-      items: items
-    };
   }
 
-  /**
-   * Update RSS cache for a specific feed
-   */
-  async updateCache(feedId, cacheData) {
-    const cache = this.loadCache();
-    cache.items[feedId] = cacheData;
-    cache.lastUpdated = new Date().toISOString();
-    this.saveCache(cache);
-  }
-
-  /**
-   * Get RSS cache for a specific feed
-   */
-  async getCache(feedId) {
-    const cache = this.loadCache();
-    return cache.items[feedId] || null;
-  }
-
-  /**
-   * Fetch RSS feed content
-   */
   async fetchRSSFeed(url) {
     const response = await fetch(url, {
       headers: {
         'User-Agent': 'RSS-Monitor/1.0',
         'Accept': 'application/rss+xml, application/xml, text/xml'
-      },
-      timeout: 15000
+      }
     });
 
     if (!response.ok) {
@@ -482,161 +424,94 @@ async validateFeed(url) {
     return await response.text();
   }
 
-  /**
-   * Parse RSS items from XML content
-   */
-parseRSSItems(xmlContent) {
-  const items = [];
-  let itemMatches;
+  parseRSSItems(xmlContent) {
+    const items = [];
+    const isAtom = xmlContent.includes('<feed');
+    let itemMatches = isAtom ? 
+      (xmlContent.match(/<entry[^>]*>[\s\S]*?<\/entry>/gi) || []) :
+      (xmlContent.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || []);
 
-  // Détecter si c'est un flux Atom
-  const isAtom = xmlContent.includes('<feed');
+    itemMatches.forEach(itemXml => {
+      const item = this.parseRSSItem(itemXml, isAtom);
+      if (item) {
+        items.push(item);
+      }
+    });
 
-  if (isAtom) {
-    // Parser les entrées Atom (<entry>)
-    itemMatches = xmlContent.match(/<entry[^>]*>[\s\S]*?<\/entry>/gi) || [];
-  } else {
-    // Parser les items RSS (<item>)
-    itemMatches = xmlContent.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || [];
+    items.sort((a, b) => new Date(b.published) - new Date(a.published));
+    return items;
   }
 
-  itemMatches.forEach(itemXml => {
-    const item = this.parseRSSItem(itemXml, isAtom);
-    if (item) {
-      items.push(item);
-    }
-  });
+  parseRSSItem(itemXml, isAtom = false) {
+    try {
+      const extractTag = (tagName, atom = false) => {
+        let regex;
+        if (atom && tagName === 'link') {
+          const linkMatch = itemXml.match(/<link[^>]*href=["']([^"']+)["']/i);
+          return linkMatch ? linkMatch[1].trim() : null;
+        } else {
+          regex = new RegExp(`<${tagName}[^>]*>([\s\S]*?)<\/${tagName}>`, 'i');
+        }
+        const match = itemXml.match(regex);
+        return match ? match[1].trim() : null;
+      };
 
-  // Trier par date de publication (du plus récent au plus ancien)
-  items.sort((a, b) => new Date(b.published) - new Date(a.published));
-  return items;
-}
+      const extractCDATA = (content) => {
+        if (!content) return null;
+        const cdataMatch = content.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
+        return cdataMatch ? cdataMatch[1] : content;
+      };
 
+      const title = extractCDATA(extractTag('title', isAtom));
+      const link = extractTag('link', isAtom);
+      const description = extractCDATA(extractTag(isAtom ? 'summary' : 'description', isAtom));
+      const pubDate = extractTag(isAtom ? 'published' : 'pubDate', isAtom) || extractTag('updated', isAtom);
+      const author = extractTag('author', isAtom) || extractTag('dc:creator', isAtom);
+      const guid = extractTag(isAtom ? 'id' : 'guid', isAtom) || link;
+      const content = extractCDATA(extractTag(isAtom ? 'content' : 'content:encoded', isAtom)) || extractCDATA(extractTag('content'));
 
-  /**
-   * Parse individual RSS item
-   */
-parseRSSItem(itemXml, isAtom = false) {
-  try {
-    const extractTag = (tagName, isAtom = false) => {
-      let regex;
-      if (isAtom && tagName === 'link') {
-        // Pour Atom, <link> est auto-fermant avec un attribut href
-        const linkMatch = itemXml.match(/<link[^>]*href=["']([^"']+)["']/i);
-        return linkMatch ? linkMatch[1].trim() : null;
-      } else if (isAtom && tagName === 'id') {
-        // Pour Atom, l'identifiant est dans <id>
-        regex = new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
-      } else {
-        // Cas standard (RSS ou Atom pour les autres balises)
-        regex = new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
-      }
-      const match = itemXml.match(regex);
-      return match ? match[1].trim() : null;
-    };
+      if (!title || !link) return null;
 
-    const extractCDATA = (content) => {
-      if (!content) return null;
-      const cdataMatch = content.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
-      return cdataMatch ? cdataMatch[1] : content;
-    };
-
-    // Récupérer les champs selon le format
-    const titleTag = isAtom ? 'title' : 'title';
-    const linkTag = isAtom ? 'link' : 'link';
-    const idTag = isAtom ? 'id' : 'guid';
-    const dateTag = isAtom ? 'published' : 'published';
-    const descriptionTag = isAtom ? 'summary' : 'description';
-    const contentTag = isAtom ? 'content' : 'content:encoded';
-
-    const title = extractCDATA(extractTag(titleTag, isAtom));
-    const link = extractTag(linkTag, isAtom);
-    const description = extractCDATA(extractTag(descriptionTag, isAtom));
-    const pubDate = extractTag(dateTag, isAtom) || extractTag('updated', isAtom);
-    const author = extractTag('author', isAtom) || extractTag('creator', isAtom);
-    const guid = extractTag(idTag, isAtom) || link;
-    const content = extractCDATA(extractTag(contentTag, isAtom)) || extractCDATA(extractTag('content'));
-
-    if (!title || !link) {
+      return {
+        title: title,
+        link: link,
+        description: description,
+        content: content,
+        published: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
+        author: author,
+        guid: guid || crypto.createHash('md5').update(title + link).digest('hex')
+      };
+    } catch (error) {
       return null;
     }
-
-    return {
-      title: title,
-      link: link,
-      description: description,
-      content: content,
-      published: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-      author: author,
-      guid: guid || crypto.createHash('md5').update(title + link).digest('hex')
-    };
-  } catch (error) {
-    console.warn('Failed to parse RSS/Atom item:', error.message);
-    return null;
   }
-}
 
-
-  /**
-   * Filter new items that haven't been processed
-   */
   filterNewItems(items, cachedItems) {
     const cachedGuids = new Set(cachedItems.map(item => item.guid));
     return items.filter(item => !cachedGuids.has(item.guid));
   }
 
-  /**
-   * Load RSS feeds configuration
-   */
   loadFeeds() {
-    try {
-      return JSON.parse(fs.readFileSync(this.feedsFile, 'utf8'));
-    } catch (error) {
-      throw new Error(`Failed to load RSS feeds: ${error.message}`);
-    }
+    return JSON.parse(fs.readFileSync(this.feedsFile, 'utf8'));
   }
 
-  /**
-   * Save RSS feeds configuration
-   */
   saveFeeds(feeds) {
-    try {
-      fs.writeFileSync(this.feedsFile, JSON.stringify(feeds, null, 2));
-    } catch (error) {
-      throw new Error(`Failed to save RSS feeds: ${error.message}`);
-    }
+    fs.writeFileSync(this.feedsFile, JSON.stringify(feeds, null, 2));
   }
 
-  /**
-   * Load RSS cache
-   */
   loadCache() {
-    try {
-      return JSON.parse(fs.readFileSync(this.cacheFile, 'utf8'));
-    } catch (error) {
-      throw new Error(`Failed to load RSS cache: ${error.message}`);
-    }
+    return JSON.parse(fs.readFileSync(this.cacheFile, 'utf8'));
   }
 
-  /**
-   * Save RSS cache
-   */
   saveCache(cache) {
-    try {
-      fs.writeFileSync(this.cacheFile, JSON.stringify(cache, null, 2));
-    } catch (error) {
-      throw new Error(`Failed to save RSS cache: ${error.message}`);
-    }
+    fs.writeFileSync(this.cacheFile, JSON.stringify(cache, null, 2));
   }
 
-  /**
-   * Get RSS monitoring statistics
-   */
   getStats() {
     const feeds = this.getFeeds();
     const cache = this.loadCache();
     
-    const stats = {
+    return {
       totalFeeds: feeds.length,
       activeFeeds: feeds.filter(f => f.isActive).length,
       inactiveFeeds: feeds.filter(f => !f.isActive).length,
@@ -650,7 +525,7 @@ parseRSSItem(itemXml, isAtom = false) {
         cachedItems: cache.items[feed.id]?.length || 0
       }))
     };
-
-    return stats;
   }
 }
+
+module.exports = { RSSMonitor };

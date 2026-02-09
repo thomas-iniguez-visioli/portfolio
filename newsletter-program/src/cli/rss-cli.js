@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-import { Command } from 'commander';
-import { RSSMonitor } from '../core/rss-monitor.mjs';
-import { NewsletterSender } from '../core/newsletter-sender.mjs';
-import { SubscriberFileManager } from '../core/subscriber-file-manager.js';
-import * as fs  from 'fs'
+const { Command } = require('commander');
+const { RSSMonitor } = require('../core/rss-monitor.js');
+const { NewsletterSender } = require('../core/newsletter-sender.js');
+const { SubscriberFileManager } = require('../core/subscriber-file-manager.js');
+const fs = require('fs');
+
 const program = new Command();
 
 program
@@ -39,7 +40,7 @@ program
                 title: options.title,
                 description: options.description,
                 skipValidation: options.force,
-                autoSend: options.autoSend,
+                autoSend: options.autoSend !== false,
                 subjectPrefix: options.subjectPrefix,
                 checkInterval: parseInt(options.checkInterval),
                 maxItemsPerNewsletter: parseInt(options.maxItems)
@@ -67,12 +68,13 @@ program
     .action(async (options) => {
         try {
             const monitor = new RSSMonitor();
-            const feeds = monitor.getFeeds(!options.activeOnly);
+            const feeds = monitor.getFeeds(options.activeOnly);
 
             if (options.format === 'json') {
                 console.log(JSON.stringify(feeds, null, 2));
             } else {
-                console.log(`\n📡 RSS Feeds (${feeds.length} found):`);
+                console.log(`
+📡 RSS Feeds (${feeds.length} found):`);
                 console.log('─'.repeat(80));
 
                 if (feeds.length === 0) {
@@ -112,18 +114,21 @@ program
 
                 const result = await monitor.checkFeed(options.feedId);
 
-                console.log('✅ Feed check completed:');
-                console.log(`   Feed: ${result.feed.title}`);
-                console.log(`   New items: ${result.newItems.length}`);
-                console.log(`   Total items: ${result.totalItems}`);
+                if (result) {
+                    console.log('✅ Feed check completed:');
+                    console.log(`   Feed: ${result.feed.title}`);
+                    console.log(`   New items: ${result.newItems.length}`);
+                    console.log(`   Total items: ${result.totalItems}`);
 
-                if (result.newItems.length > 0) {
-                    console.log('\n📰 New items:');
-                    result.newItems.forEach((item, index) => {
-                        console.log(`   ${index + 1}. ${item.title}`);
-                        console.log(`      ${item.link}`);
-                        console.log(`      ${new Date(item.pubDate).toLocaleString()}`);
-                    });
+                    if (result.newItems.length > 0) {
+                        console.log('
+📰 New items:');
+                        result.newItems.forEach((item, index) => {
+                            console.log(`   ${index + 1}. ${item.title}`);
+                            console.log(`      ${item.link}`);
+                            console.log(`      ${new Date(item.published).toLocaleString()}`);
+                        });
+                    }
                 }
 
             } else {
@@ -137,7 +142,8 @@ program
                 console.log(`   New items found: ${results.newItems}`);
 
                 if (results.errors.length > 0) {
-                    console.log('\n❌ Errors:');
+                    console.log('
+❌ Errors:');
                     results.errors.forEach(error => console.log(`   - ${error}`));
                 }
             }
@@ -160,7 +166,6 @@ program
             const monitor = new RSSMonitor();
 
             console.log(`📰 Generating newsletter for feed: ${options.feedId}`);
-            console.log(monitor.feedsFile)
             const newsletter = await monitor.generateNewsletterFromItems(options.feedId);
 
             if (!newsletter) {
@@ -168,22 +173,13 @@ program
                 return;
             }
 
-           console.log('✅ Newsletter generated:');
+            console.log('✅ Newsletter generated:');
             console.log(`   Subject: ${newsletter.subject}`);
             console.log(`   Items: ${newsletter.items.length}`);
 
             if (options.output) {
-             
-                const content = {
-                    subject: newsletter.subject,
-                    htmlContent: newsletter.htmlContent,
-                    textContent: newsletter.textContent,
-                    items: newsletter.items,
-                    generatedAt: newsletter.generatedAt
-                };
-
-                fs.writeFileSync(options.output, JSON.stringify(content, null, 2));
-              //  console.log(`   Saved to: ${options.output}`);
+                fs.writeFileSync(options.output, JSON.stringify(newsletter, null, 2));
+                console.log(`   Saved to: ${options.output}`);
             }
 
             if (options.send) {
@@ -197,17 +193,15 @@ program
                     return;
                 }
 
-                   console.log(`📧 Sending newsletter to ${subscribers.length} subscribers...`);
+                console.log(`📧 Sending newsletter to ${subscribers.length} subscribers...`);
 
                 const results = await sender.sendToSubscribers(
                     subscribers,
                     newsletter.subject,
-                    newsletter.htmlContent,
-                    newsletter.textContent
+                    newsletter.htmlContent
                 );
 
                 console.log('✅ Newsletter sent:');
-                console.log(`   Total: ${results.total}`);
                 console.log(`   Sent: ${results.sent}`);
                 console.log(`   Failed: ${results.failed}`);
 
@@ -219,105 +213,6 @@ program
 
         } catch (error) {
             console.error('❌ Error generating newsletter:', error.message);
-            process.exit(1);
-        }
-    });
-
-// Update RSS feed command
-program
-    .command('update')
-    .description('Update RSS feed configuration')
-    .requiredOption('-f, --feed-id <id>', 'RSS feed ID')
-    .option('--title <title>', 'new title')
-    .option('--active <boolean>', 'set active status (true/false)')
-    .option('--auto-send <boolean>', 'set auto-send status (true/false)')
-    .option('--check-interval <minutes>', 'check interval in minutes')
-    .option('--subject-prefix <prefix>', 'email subject prefix')
-    .action(async (options) => {
-        try {
-            const monitor = new RSSMonitor();
-
-            const updates = {};
-            if (options.title) updates.title = options.title;
-            if (options.active !== undefined) updates.isActive = options.active === 'true';
-            if (options.checkInterval) updates.checkInterval = parseInt(options.checkInterval);
-
-            if (options.autoSend !== undefined || options.subjectPrefix) {
-                updates.settings = {};
-                if (options.autoSend !== undefined) updates.settings.autoSend = options.autoSend === 'true';
-                if (options.subjectPrefix) updates.settings.subjectPrefix = options.subjectPrefix;
-            }
-
-            const updatedFeed = await monitor.updateFeed(options.feedId, updates);
-
-            console.log('✅ RSS feed updated successfully:');
-            console.log(`   ID: ${updatedFeed.id}`);
-            console.log(`   Title: ${updatedFeed.title}`);
-            console.log(`   Active: ${updatedFeed.isActive}`);
-            console.log(`   Auto-send: ${updatedFeed.settings.autoSend}`);
-
-        } catch (error) {
-            console.error('❌ Error updating RSS feed:', error.message);
-            process.exit(1);
-        }
-    });
-
-// Remove RSS feed command
-program
-    .command('remove')
-    .description('Remove RSS feed from monitoring')
-    .requiredOption('-f, --feed-id <id>', 'RSS feed ID')
-    .option('--confirm', 'confirm removal without prompt')
-    .action(async (options) => {
-        try {
-            if (!options.confirm) {
-                console.log('⚠️  This will permanently remove the RSS feed from monitoring.');
-                console.log('Use --confirm flag to proceed with removal');
-                process.exit(1);
-            }
-
-            const monitor = new RSSMonitor();
-            const removedFeed = await monitor.removeFeed(options.feedId);
-
-            console.log('✅ RSS feed removed successfully:');
-            console.log(`   Title: ${removedFeed.title}`);
-            console.log(`   URL: ${removedFeed.url}`);
-
-        } catch (error) {
-            console.error('❌ Error removing RSS feed:', error.message);
-            process.exit(1);
-        }
-    });
-
-// Stats command
-program
-    .command('stats')
-    .description('Show RSS monitoring statistics')
-    .action(async () => {
-        try {
-            const monitor = new RSSMonitor();
-            const stats = monitor.getStats();
-
-            console.log('\n📊 RSS Monitoring Statistics:');
-            console.log('─'.repeat(40));
-            console.log(`Total Feeds: ${stats.totalFeeds}`);
-            console.log(`Active Feeds: ${stats.activeFeeds}`);
-            console.log(`Inactive Feeds: ${stats.inactiveFeeds}`);
-            console.log(`Total Cached Items: ${stats.totalCachedItems}`);
-            console.log(`Last Updated: ${stats.lastUpdated}`);
-
-            if (stats.feedStats.length > 0) {
-                console.log('\n📡 Feed Details:');
-                stats.feedStats.forEach(feed => {
-                    console.log(`  ${feed.title}:`);
-                    console.log(`    Status: ${feed.isActive ? '🟢 Active' : '🔴 Inactive'}`);
-                    console.log(`    Last checked: ${feed.lastChecked || 'Never'}`);
-                    console.log(`    Cached items: ${feed.cachedItems}`);
-                });
-            }
-
-        } catch (error) {
-            console.error('❌ Error getting RSS statistics:', error.message);
             process.exit(1);
         }
     });

@@ -1,11 +1,11 @@
-import fetch from 'node-fetch';
-import { htmlToText as convertHtmlToText } from 'html-to-text';
-export class NewsletterSender {
+const { htmlToText: convertHtmlToText } = require('html-to-text');
+
+class NewsletterSender {
   constructor(dataDir = './data') {
     this.dataDir = dataDir;
     this.resendClient = null;
     this.apiKey = process.env.RESEND_API_KEY;
-    this.fromEmail ='newsletter <news@arbinger.is-a.dev>';
+    this.fromEmail = process.env.FROM_EMAIL || 'newsletter <news@arbinger.is-a.dev>';
   }
 
   async sendToSubscribers(subscribers, subject, content, options = {}) {
@@ -48,11 +48,13 @@ export class NewsletterSender {
       const emailData = {
         from: this.fromEmail,
         to: subscriber.email,
-         replyTo: 'admin@arbinger.is-a.dev',
+        replyTo: process.env.REPLY_TO_EMAIL || 'admin@arbinger.is-a.dev',
         subject: personalizedSubject,
         html: personalizedContent
       };
-      subscriber.format=subscriber.format||"html"
+      
+      subscriber.format = subscriber.format || "html";
+      
       // Add text version if subscriber prefers text format
       if (subscriber.format === 'Text') {
         emailData.text = this.htmlToText(personalizedContent);
@@ -84,6 +86,7 @@ export class NewsletterSender {
       throw new Error('Resend API key not configured');
     }
 
+    // Using global fetch (available in Node 18+)
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -93,12 +96,13 @@ export class NewsletterSender {
       body: JSON.stringify(emailData)
     });
 
+    const result = await response.json();
+
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(`Resend API error: ${error.message || response.statusText}`);
+      throw new Error(`Resend API error: ${result.message || response.statusText}`);
     }
 
-    return await response.json();
+    return result;
   }
 
   async sendWithRetry(subscriber, subject, content, options = {}) {
@@ -198,3 +202,5 @@ export class NewsletterSender {
     return await response.json();
   }
 }
+
+module.exports = { NewsletterSender };

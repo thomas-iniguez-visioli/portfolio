@@ -116,7 +116,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
       // Import and create RSS monitor with mocked fetch
-      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
+      const { RSSMonitor } = await import('../../core/rss-monitor.js');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
       
       // Override the fetch method to use our mock
@@ -154,7 +154,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
       try {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
-      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
+      const { RSSMonitor } = await import('../../core/rss-monitor.js');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       // Setup initial feed configuration
@@ -219,7 +219,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
       try {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
-      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
+      const { RSSMonitor } = await import('../../core/rss-monitor.js');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       const feedUrl = 'https://example.com/invalid-feed.xml';
@@ -242,7 +242,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
       try {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
-      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
+      const { RSSMonitor } = await import('../../core/rss-monitor.js');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       const feedId = 'test-feed';
@@ -299,7 +299,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
         status: 'sent'
       });
 
-      const { NewsletterSender } = await import('../../core/newsletter-sender.mjs');
+      const { NewsletterSender } = await import('../../core/newsletter-sender.js');
       const newsletterSender = new NewsletterSender(testDataDir);
 
       // Setup test subscribers
@@ -350,7 +350,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
         .mockRejectedValueOnce(new Error('Rate limit exceeded'))
         .mockResolvedValueOnce({ id: 'email-123', status: 'sent' });
 
-      const { NewsletterSender } = await import('../../core/newsletter-sender.mjs');
+      const { NewsletterSender } = await import('../../core/newsletter-sender.js');
       const newsletterSender = new NewsletterSender(testDataDir);
       newsletterSender.resendClient = mockResendAPI;
 
@@ -457,8 +457,8 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
       try {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
-      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
-      const { SubscriberManager } = await import('../../core/subscriber-manager.mjs');
+      const { RSSMonitor } = await import('../../core/rss-monitor.js');
+      const { SubscriberManager } = await import('../../core/subscriber-manager.js');
       
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
       const subscriberManager = new SubscriberManager(testDataDir);
@@ -523,7 +523,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
       try {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
-      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
+      const { RSSMonitor } = await import('../../core/rss-monitor.js');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       // Add initial feed
@@ -578,7 +578,7 @@ describe('RSS Monitoring and Automation Integration Tests', () => {
       try {
         fs.mkdirSync(testDataDir, { recursive: true });
       } catch (e) {}
-      const { RSSMonitor } = await import('../../core/rss-monitor.mjs');
+      const { RSSMonitor } = await import('../../core/rss-monitor.js');
       const rssMonitor = new RSSMonitor(testDataDir, { testMode: true });
 
       // Test invalid RSS feed
