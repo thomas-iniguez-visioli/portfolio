@@ -25,9 +25,9 @@ async function getGeminiLeaksSummary(apiKey, content) {
  */
 class RSSMonitor {
   constructor(dataPath = './.github/data', options = {}) {
-    this.dataPath = dataPath;
-    this.feedsFile = path.join(dataPath, 'rss-feeds.json');
-    this.cacheFile = path.join(dataPath, 'rss-cache.json');
+    this.dataPath = path.isAbsolute(dataPath) ? dataPath : path.resolve(process.cwd(), dataPath);
+    this.feedsFile = path.join(this.dataPath, 'rss-feeds.json');
+    this.cacheFile = path.join(this.dataPath, 'rss-cache.json');
     this.testMode = options.testMode || false;
     
     this.ensureDataDirectory();

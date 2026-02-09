@@ -11,7 +11,8 @@ const program = new Command();
 program
     .name('rss-cli')
     .description('CLI for RSS feed monitoring and newsletter generation')
-    .version('1.0.0');
+    .version('1.0.0')
+    .option('-p, --data-path <path>', 'path to the data directory', './.github/data');
 
 // Add RSS feed command
 program
@@ -27,7 +28,7 @@ program
     .option('--force', 'skip RSS feed validation')
     .action(async (options) => {
         try {
-            const monitor = new RSSMonitor();
+            const monitor = new RSSMonitor(program.opts().dataPath);
 
             if (options.force) {
                 console.log(`⚠️ Forcing addition of RSS feed (skipping validation): ${options.url}`);
@@ -67,7 +68,7 @@ program
     .option('--format <format>', 'output format (table/json)', 'table')
     .action(async (options) => {
         try {
-            const monitor = new RSSMonitor();
+            const monitor = new RSSMonitor(program.opts().dataPath);
             const feeds = monitor.getFeeds(options.activeOnly);
 
             if (options.format === 'json') {
@@ -107,7 +108,7 @@ program
     .option('--force', 'ignore check interval and force check')
     .action(async (options) => {
         try {
-            const monitor = new RSSMonitor();
+            const monitor = new RSSMonitor(program.opts().dataPath);
 
             if (options.feedId) {
                 console.log(`🔍 Checking specific feed: ${options.feedId}`);
@@ -163,7 +164,7 @@ program
     .option('--send', 'send newsletter to subscribers')
     .action(async (options) => {
         try {
-            const monitor = new RSSMonitor();
+            const monitor = new RSSMonitor(program.opts().dataPath);
 
             console.log(`📰 Generating newsletter for feed: ${options.feedId}`);
             const newsletter = await monitor.generateNewsletterFromItems(options.feedId);

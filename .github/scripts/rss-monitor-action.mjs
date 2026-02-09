@@ -13,15 +13,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Import newsletter program modules
-const newsletterProgramPath = path.join(__dirname, '..', '..', 'newsletter-program');
-process.chdir(newsletterProgramPath);
-
 import RSSMonitorModule from '../../newsletter-program/src/core/rss-monitor.js';
 import NewsletterSenderModule from '../../newsletter-program/src/core/newsletter-sender.js';
 import SubscriberFileManagerModule from '../../newsletter-program/src/core/subscriber-file-manager.js';
 
+const newsletterProgramPath = path.join(__dirname, '..', '..', 'newsletter-program');
+
 class GitHubActionsRSSMonitor {
   constructor() {
+    // Change directory to newsletter-program to ensure relative paths and dependencies work
+    process.chdir(newsletterProgramPath);
+    
     // Use repository data path for GitHub Actions
     this.dataPath = path.join(__dirname, '..','data');
     //console.log(this.dataPath)
