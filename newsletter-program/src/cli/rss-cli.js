@@ -74,8 +74,7 @@ program
             if (options.format === 'json') {
                 console.log(JSON.stringify(feeds, null, 2));
             } else {
-                console.log(`
-📡 RSS Feeds (${feeds.length} found):`);
+                console.log('\n📡 RSS Feeds (' + feeds.length + ' found):');
                 console.log('─'.repeat(80));
 
                 if (feeds.length === 0) {
@@ -122,8 +121,7 @@ program
                     console.log(`   Total items: ${result.totalItems}`);
 
                     if (result.newItems.length > 0) {
-                        console.log('
-📰 New items:');
+                        console.log('\n📰 New items:');
                         result.newItems.forEach((item, index) => {
                             console.log(`   ${index + 1}. ${item.title}`);
                             console.log(`      ${item.link}`);
@@ -143,8 +141,7 @@ program
                 console.log(`   New items found: ${results.newItems}`);
 
                 if (results.errors.length > 0) {
-                    console.log('
-❌ Errors:');
+                    console.log('\n❌ Errors:');
                     results.errors.forEach(error => console.log(`   - ${error}`));
                 }
             }
