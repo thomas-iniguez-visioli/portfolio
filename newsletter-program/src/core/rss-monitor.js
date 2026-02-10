@@ -25,9 +25,9 @@ async function getGeminiLeaksSummary(apiKey, content) {
  */
 class RSSMonitor {
   constructor(dataPath = './.github/data', options = {}) {
-    this.dataPath = dataPath;
-    this.feedsFile = path.join(dataPath, 'rss-feeds.json');
-    this.cacheFile = path.join(dataPath, 'rss-cache.json');
+    this.dataPath = path.isAbsolute(dataPath) ? dataPath : path.resolve(process.cwd(), dataPath);
+    this.feedsFile = path.join(this.dataPath, 'rss-feeds.json');
+    this.cacheFile = path.join(this.dataPath, 'rss-cache.json');
     this.testMode = options.testMode || false;
     
     this.ensureDataDirectory();
@@ -469,16 +469,16 @@ ${feed.url}`;
       const guid = extractTag(isAtom ? 'id' : 'guid', isAtom) || link;
       const content = extractCDATA(extractTag(isAtom ? 'content' : 'content:encoded', isAtom)) || extractCDATA(extractTag('content'));
 
-      if (!title || !link) return null;
+      if (!link) return null;
 
       return {
-        title: title,
+        title: title || 'Sans titre',
         link: link,
         description: description,
         content: content,
         published: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
         author: author,
-        guid: guid || crypto.createHash('md5').update(title + link).digest('hex')
+        guid: guid || crypto.createHash('md5').update((title || '') + link).digest('hex')
       };
     } catch (error) {
       return null;
