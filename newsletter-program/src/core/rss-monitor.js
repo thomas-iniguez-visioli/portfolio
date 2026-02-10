@@ -469,16 +469,16 @@ ${feed.url}`;
       const guid = extractTag(isAtom ? 'id' : 'guid', isAtom) || link;
       const content = extractCDATA(extractTag(isAtom ? 'content' : 'content:encoded', isAtom)) || extractCDATA(extractTag('content'));
 
-      if (!title || !link) return null;
+      if (!link) return null;
 
       return {
-        title: title,
+        title: title || 'Sans titre',
         link: link,
         description: description,
         content: content,
         published: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
         author: author,
-        guid: guid || crypto.createHash('md5').update(title + link).digest('hex')
+        guid: guid || crypto.createHash('md5').update((title || '') + link).digest('hex')
       };
     } catch (error) {
       return null;
