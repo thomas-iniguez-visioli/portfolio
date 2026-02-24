@@ -8,80 +8,71 @@ authors:
   - thomas iniguez visioli
 date: 2026-01-26 14:00:00
 tags:
+  - github
+  - open-source
+  - organisation
 ---
-# Description des dépôts de l'organisation vbcq-volley
 
-Voici une description à jour des dépôts de l'organisation GitHub `vbcq-volley`, générée le 26 janvier 2026.
+Vue d'ensemble des dépôts de l'organisation GitHub **[vbcq-volley](https://github.com/vbcq-volley)**, mise à jour le 26 janvier 2026.
 
-## app-updater
-- **Description**: Ce dépôt ne possède pas de description.
-- **Langage principal**: Non spécifié.
-- **Date de création**: 14 mai 2024.
-- **Dernière mise à jour**: 14 mai 2024.
-- **URL**: https://github.com/vbcq-volley/app-updater
+---
 
-## clabot-config
-- **Description**: Ce dépôt ne possède pas de description.
-- **Langage principal**: Non spécifié.
-- **Date de création**: 19 août 2023.
-- **Dernière mise à jour**: 19 août 2023.
-- **URL**: https://github.com/vbcq-volley/clabot-config
+## Sites & Contenu
 
-## content
-- **Description**: Contenu du site web de l'association VBCQ (Volley Ball Corpo Quimper), généré avec Hexo.
-- **Langage principal**: CSS.
-- **Date de création**: 21 mai 2024.
-- **Dernière mise à jour**: 22 juillet 2024.
-- **URL**: https://github.com/vbcq-volley/content
+### [source](https://github.com/vbcq-volley/source)
+Site principal de l'association VBCQ, développé en **Svelte**.
+- Déployé sur [vbcq.vercel.app](https://vbcq.vercel.app/)
+- Dernière mise à jour : 26 janvier 2026
 
-## git-win
-- **Description**: Un fork de git-win.
-- **Langage principal**: JavaScript.
-- **Date de création**: 12 juin 2024.
-- **Dernière mise à jour**: 22 juillet 2024.
-- **URL**: https://github.com/vbcq-volley/git-win
-- **Note**: Il s'agit d'un fork.
+### [content](https://github.com/vbcq-volley/content)
+Contenu du site vitrine statique, généré avec **Hexo**.
+- Langage principal : CSS
+- Dernière mise à jour : 22 juillet 2024
 
-## hexo-theme-material-extended
-- **Description**: Fork du thème hexo-theme-material avec des fonctionnalités étendues.
-- **Langage principal**: SCSS.
-- **Date de création**: 23 janvier 2026.
-- **Dernière mise à jour**: 23 janvier 2026.
-- **URL**: https://github.com/vbcq-volley/hexo-theme-material-extended
-- **Note**: Il s'agit d'un fork.
+### [vbcq-volley.github.io](https://github.com/vbcq-volley/vbcq-volley.github.io)
+Site vitrine de l'organisation, hébergé sur GitHub Pages.
+- Langage principal : HTML
+- Dernière mise à jour : 26 janvier 2026
 
-## plugin
-- **Description**: Ce dépôt ne possède pas de description.
-- **Langage principal**: JavaScript.
-- **Date de création**: 23 mai 2024.
-- **Dernière mise à jour**: 26 juin 2024.
-- **URL**: https://github.com/vbcq-volley/plugin
+---
 
-## plugin-build
-- **Description**: Ce dépôt ne possède pas de description.
-- **Langage principal**: JavaScript.
-- **Date de création**: 28 mai 2024.
-- **Dernière mise à jour**: 26 juin 2024.
-- **URL**: https://github.com/vbcq-volley/plugin-build
+## Plugins & Outils
 
-## source
-- **Description**: Contient les sources du site principal de vbcq.
-- **Langage principal**: Svelte.
-- **Page d'accueil**: https://vbcq.vercel.app/
-- **Date de création**: 13 juin 2024.
-- **Dernière mise à jour**: 26 janvier 2026.
-- **URL**: https://github.com/vbcq-volley/source
+### [plugin](https://github.com/vbcq-volley/plugin)
+Plugin JavaScript sur-mesure pour Hexo — étend les fonctionnalités du générateur de site.
+- Langage : JavaScript
+- Dernière mise à jour : 26 juin 2024
 
-## temp
-- **Description**: Lanceur pour l'administration Hexo, gérant la synchronisation de dépôts, le serveur local et les mises à jour.
-- **Langage principal**: JavaScript.
-- **Date de création**: 21 mai 2024.
-- **Dernière mise à jour**: 27 juin 2024.
-- **URL**: https://github.com/vbcq-volley/temp
+### [plugin-build](https://github.com/vbcq-volley/plugin-build)
+Version compilée et optimisée du plugin Hexo, prête pour la production.
+- Langage : JavaScript
+- Dernière mise à jour : 26 juin 2024
 
-## vbcq-volley.github.io
-- **Description**: Le site vitrine de l'organisation.
-- **Langage principal**: HTML.
-- **Date de création**: 17 juin 2024.
-- **Dernière mise à jour**: 26 janvier 2026.
-- **URL**: https://github.com/vbcq-volley/vbcq-volley.github.io
+### [temp](https://github.com/vbcq-volley/temp)
+Lanceur d'administration Hexo — gère la synchronisation des dépôts, le serveur local et les mises à jour.
+- Langage : JavaScript
+- Dernière mise à jour : 27 juin 2024
+
+### [app-updater](https://github.com/vbcq-volley/app-updater)
+Système de mise à jour automatique des applications de l'organisation.
+- Créé : 14 mai 2024
+
+---
+
+## Forks & Extensions
+
+### [hexo-theme-material-extended](https://github.com/vbcq-volley/hexo-theme-material-extended)
+Fork du thème `hexo-theme-material` avec des fonctionnalités additionnelles adaptées aux besoins de VBCQ.
+- Langage : SCSS
+- Créé : 23 janvier 2026
+
+### [git-win](https://github.com/vbcq-volley/git-win)
+Fork de l'outil `git-win`, adapté à l'environnement Windows de l'organisation.
+- Langage : JavaScript
+
+---
+
+## Configuration
+
+### [clabot-config](https://github.com/vbcq-volley/clabot-config)
+Configuration du CLA Bot pour la gestion des contributions externes sur l'organisation.
