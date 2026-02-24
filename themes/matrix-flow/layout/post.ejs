@@ -1,19 +1,25 @@
 <%
-  // This is the template for a single post.
+  // Template article complet
 %>
 <article class="post-full">
   <h1 class="post-title"><%- page.title %></h1>
   <div class="post-meta">
-    <span>[<%- date(page.date, 'YYYY-MM-DD') %>]</span>
+    <span><%- date(page.date, 'YYYY-MM-DD') %></span>
     <% if (page.tags && page.tags.length) { %>
-      <span class="tags"> | tags: 
+      <span class="tags">
         <% page.tags.each(function(tag){ %>
-          <a href="<%- url_for(tag.path) %>">#<%- tag.name %></a> 
+          <a href="<%- url_for(tag.path) %>">#<%- tag.name %></a>
         <% }) %>
       </span>
+    <% } %>
+    <% if (page.lien) { %>
+      <span> | <a href="<%- page.lien %>" target="_blank" rel="noopener">[preuve →]</a></span>
     <% } %>
   </div>
   <div class="post-full-content">
     <%- page.content %>
+  </div>
+  <div class="post-meta" style="margin-top:2rem; border-top: 1px solid var(--dim-green); padding-top:1rem;">
+    <a href="/">[← retour]</a>
   </div>
 </article>
