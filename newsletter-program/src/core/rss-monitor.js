@@ -3,6 +3,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const striptags = require('striptags');
+const { XMLParser } = require('fast-xml-parser');
 
 async function getGeminiLeaksSummary(apiKey, content) {
   if (!apiKey) return null;
@@ -29,6 +30,15 @@ class RSSMonitor {
     this.feedsFile = path.join(this.dataPath, 'rss-feeds.json');
     this.cacheFile = path.join(this.dataPath, 'rss-cache.json');
     this.testMode = options.testMode || false;
+    
+    this.xmlParser = new XMLParser({
+      ignoreAttributes: false,
+      attributeNamePrefix: '@_',
+      textNodeName: '#text',
+      cdataPropName: '__cdata',
+      parseTagValue: false,
+      trimValues: true
+    });
     
     this.ensureDataDirectory();
     this.initializeFiles();
@@ -388,17 +398,24 @@ ${feed.url}`;
         };
       }
 
-      const isAtom = content.includes('<feed');
-      const titleTag = '<title>';
-      const descTag = isAtom ? '<subtitle>' : '<description>';
+      const parsed = this.xmlParser.parse(content);
+      const isAtom = !!parsed.feed;
+      
+      let title = 'Unknown Feed';
+      let description = null;
 
-      const titleMatch = content.match(new RegExp(`${titleTag}[^>]*>([^<]+)<\/title>`, 'i'));
-      const descMatch = content.match(new RegExp(`${descTag}[^>]*>([^<]+)<\/${isAtom ? 'subtitle' : 'description'}`, 'i'));
+      if (isAtom) {
+        title = parsed.feed?.title || title;
+        description = parsed.feed?.subtitle || null;
+      } else if (parsed.rss?.channel) {
+        title = parsed.rss.channel.title || title;
+        description = parsed.rss.channel.description || null;
+      }
 
       return {
         valid: true,
-        title: titleMatch ? titleMatch[1].trim() : 'Unknown Feed',
-        description: descMatch ? descMatch[1].trim() : null
+        title: title,
+        description: description
       };
     } catch (error) {
       return {
@@ -424,14 +441,24 @@ ${feed.url}`;
   }
 
   parseRSSItems(xmlContent) {
+    const parsed = this.xmlParser.parse(xmlContent);
     const items = [];
-    const isAtom = xmlContent.includes('<feed');
-    let itemMatches = isAtom ? 
-      (xmlContent.match(/<entry[^>]*>[\s\S]*?<\/entry>/gi) || []) :
-      (xmlContent.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || []);
+    
+    const isAtom = !!parsed.feed;
+    let rawItems = [];
 
-    itemMatches.forEach(itemXml => {
-      const item = this.parseRSSItem(itemXml, isAtom);
+    if (isAtom) {
+      rawItems = parsed.feed?.entry || [];
+    } else if (parsed.rss?.channel) {
+      rawItems = parsed.rss.channel.item || [];
+    }
+
+    if (!Array.isArray(rawItems)) {
+      rawItems = [rawItems];
+    }
+
+    rawItems.forEach(rawItem => {
+      const item = this.parseRSSItem(rawItem, isAtom);
       if (item) {
         items.push(item);
       }
@@ -441,33 +468,39 @@ ${feed.url}`;
     return items;
   }
 
-  parseRSSItem(itemXml, isAtom = false) {
+  parseRSSItem(itemData, isAtom = false) {
     try {
-      const extractTag = (tagName, atom = false) => {
-        let regex;
-        if (atom && tagName === 'link') {
-          const linkMatch = itemXml.match(/<link[^>]*href=["']([^"']+)["']/i);
-          return linkMatch ? linkMatch[1].trim() : null;
-        } else {
-          regex = new RegExp(`<${tagName}[^>]*>([\s\S]*?)<\/${tagName}>`, 'i');
+      const getValue = (obj, ...keys) => {
+        for (const key of keys) {
+          if (obj?.[key]) {
+            const val = obj[key];
+            if (typeof val === 'object' && val['#text']) return val['#text'];
+            if (typeof val === 'object' && val['__cdata']) return val['__cdata'];
+            return val;
+          }
         }
-        const match = itemXml.match(regex);
-        return match ? match[1].trim() : null;
+        return null;
       };
 
-      const extractCDATA = (content) => {
-        if (!content) return null;
-        const cdataMatch = content.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
-        return cdataMatch ? cdataMatch[1] : content;
-      };
+      let title, link, description, content, pubDate, author, guid;
 
-      const title = extractCDATA(extractTag('title', isAtom));
-      const link = extractTag('link', isAtom);
-      const description = extractCDATA(extractTag(isAtom ? 'summary' : 'description', isAtom));
-      const pubDate = extractTag(isAtom ? 'published' : 'pubDate', isAtom) || extractTag('updated', isAtom);
-      const author = extractTag('author', isAtom) || extractTag('dc:creator', isAtom);
-      const guid = extractTag(isAtom ? 'id' : 'guid', isAtom) || link;
-      const content = extractCDATA(extractTag(isAtom ? 'content' : 'content:encoded', isAtom)) || extractCDATA(extractTag('content'));
+      if (isAtom) {
+        title = getValue(itemData, 'title');
+        link = itemData.link?.['@_href'] || getValue(itemData, 'link');
+        description = getValue(itemData, 'summary');
+        content = getValue(itemData, 'content');
+        pubDate = getValue(itemData, 'published', 'updated');
+        author = getValue(itemData.author, 'name') || getValue(itemData, 'author');
+        guid = getValue(itemData, 'id');
+      } else {
+        title = getValue(itemData, 'title');
+        link = getValue(itemData, 'link');
+        description = getValue(itemData, 'description');
+        content = getValue(itemData, 'content:encoded', 'content');
+        pubDate = getValue(itemData, 'pubDate', 'dc:date');
+        author = getValue(itemData, 'author', 'dc:creator');
+        guid = getValue(itemData, 'guid');
+      }
 
       if (!link) return null;
 
@@ -478,7 +511,7 @@ ${feed.url}`;
         content: content,
         published: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
         author: author,
-        guid: guid || crypto.createHash('md5').update((title || '') + link).digest('hex')
+        guid: guid || link || crypto.createHash('md5').update((title || '') + link).digest('hex')
       };
     } catch (error) {
       return null;
