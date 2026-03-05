@@ -31,8 +31,9 @@ class NewsletterSender {
       errors: []
     };
 
-    for await (const subscriber of subscribers) {
-      sleep(humantimems("1s"))
+    for (let i = 0; i < subscribers.length; i++) {
+      const subscriber = subscribers[i];
+      
       try {
         const result = await this.sendToSubscriber(subscriber, subject, content, options);
         if (result.success) {
@@ -50,6 +51,11 @@ class NewsletterSender {
           email: subscriber.email,
           error: error.message
         });
+      }
+
+      // Pause d'une seconde entre chaque envoi (sauf après le dernier)
+      if (i < subscribers.length - 1) {
+        await sleep(1000);
       }
     }
 
