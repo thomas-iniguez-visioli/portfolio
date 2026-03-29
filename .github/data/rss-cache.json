@@ -1,8 +1,71 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-22T01:00:31.976Z",
+  "lastUpdated": "2026-03-29T01:07:26.601Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1759",
+        "published": "2026-03-28T00:00:00.000Z",
+        "title": "Le Petit Vapoteur",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "La fuite de données de 3.3 millions de clients et 599 employés de Le Petit Vapoteur, revendiquée par l'acteur 'undef' en mars 2026, proviendrait du site e-commerce et expose des données personnelles, coordonnées, logs de connexion et des informations sur les employés incluant leurs photos.Statut: RevendiquéeType de service: E-commerce (Vapotage)\n    \t  <a href=\"https://fuitesinfos.fr/wp-content/uploads/2026/03/Le-petit-vapoteur-Fuites-de-donnees-leak.png\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1760",
+        "published": "2026-03-28T00:00:00.000Z",
+        "title": "Fédération Française Handisport",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "La vente des données personnelles de 197 276 adhérents de la Fédération Française Handisport a été revendiquée par l'acteur HexDex le 28 mars 2026.Statut: RevendiquéeType de service: Fédération sportive\n    \t  <a href=\"https://fuitesinfos.fr/wp-content/uploads/2026/03/Handisport-Leak-fuites-de-donnees.png\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1756",
+        "published": "2026-03-27T00:00:00.000Z",
+        "title": "Scalian",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "Le 24 mars 2026, le CSE de Scalian a informé ses salariés d'un vol de données depuis un applicatif interne. Les données personnelles d'un nombre non spécifié de salariés ont été dérobées, ainsi que des documents d'identité et informations bancaires pour 'quelques dizaines' d'entre eux.Statut: ConfirméeType de service: Conseil en management et ingénierie\n    \t  <a href=\"https://fuitesinfos.fr/wp-content/uploads/2026/03/Scalian-Fuites-infos-leak-.png\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1757",
+        "published": "2026-03-27T00:00:00.000Z",
+        "title": "système d’information sur les armes fuite du 2026-3-27",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "-Nomprénom • Adresse postale • Adresse email • Typemarque et modèle de l’arme • Source]&gt;\n    \t  <a href=\"https://bonjourlafuite.eu.org/img/sia.jpg\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1753",
+        "published": "2026-03-26T00:00:00.000Z",
+        "title": "les champs libres fuite du 2026-3-26",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Mot de passe (🤬) • Source]&gt;\n    \t  <a href=\"https://bonjourlafuite.eu.org/img/champs-libres.png\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1752",
+        "published": "2026-03-25T00:00:00.000Z",
+        "title": "Sound Radix",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "In March 2026, the audio production tools company <a href=\"https://support.soundradix.com/support/solutions/articles/5000900043\" target=\"_blank\" rel=\"noopener\">Sound Radix disclosed a data breach that they subsequently self-submitted to HIBP</a>. Attributed to unauthorised access to a customer support platform, the incident impacted 293k unique email addresses and names of users who had interacted with their support team. Sound Radix advised that whilst there is no evidence their broader user database was accessed, it is possible that additional data including hashed passwords may have been exposed. No financial or credit card information was impacted.\n    \t  <a href=\"https://haveibeenpwned.com/Breach/SoundRadix\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1745",
+        "published": "2026-03-24T00:00:00.000Z",
+        "title": "crunchyroll fuite du 2026-3-24",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "-Nomprénom • Adresse email • Adresse IP • Données bancaires • Source]&gt;\n    \t  <a href=\"https://www.tomsguide.fr/piratage-de-crunchyroll-des-cartes-bancaires-de-clients-seraient-compromises/\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1746",
+        "published": "2026-03-24T00:00:00.000Z",
+        "title": "fédération française de vol libre fuite du 2026-3-24",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "-Nomprénom• Numéro de licence fédérale • Structure de rattachement • Sports pratiqués • Âge et date de naissance • Qualifications éventuelles • Source]&gt;\n    \t  <a href=\"https://bonjourlafuite.eu.org/img/ffvl.png\" target=\"_blank\">source</a>"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1747",
+        "published": "2026-03-24T00:00:00.000Z",
+        "title": "métropole marseille fuite du 2026-3-24",
+        "processedAt": "2026-03-29T01:07:26.600Z",
+        "content": "-Adresse email • Source]&gt;\n    \t  <a href=\"https://bonjourlafuite.eu.org/img/metropole-marseille-provence.png\" target=\"_blank\">source</a>"
+      },
       {
         "guid": "https://feed-blush.vercel.app/fuites?id=1744",
         "published": "2026-03-14T00:00:00.000Z",
