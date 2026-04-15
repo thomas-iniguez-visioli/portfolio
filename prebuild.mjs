@@ -69,14 +69,18 @@ function curlEquivalent(url) {
   const filePath = `./public/feed.xml`;
   const file = fs.createWriteStream(filePath+".new");
   const request = https.get(url,  /*{agent: staticDnsAgent(resolvConf)},*/response => {
-    response.pipe(file);
-    file.on('finish', () => {
-      file.close();
+    let content = '';
+    response.on('data', chunk => { content += chunk; });
+    response.on('end', () => {
+      if (content.includes('Vercel Security Checkpoint') || (!content.includes('<rss') && !content.includes('<feed'))) {
+        console.error('❌ Erreur : Le flux téléchargé est invalide ou bloqué par Vercel.');
+        return;
+      }
+      fs.writeFileSync(filePath + ".new", content);
       console.log(fs.readdirSync("./public"))
       fs.renameSync('./public/feed.xml.new','./public/feed.xml')
       console.log(`File downloaded and saved to ${filePath}`);
     });
-    file.on("error",((err)=>{console.log(err)}))
   }).on('error', err => {
    //fs.unlinkSync(filePath);
     console.log(err.message);

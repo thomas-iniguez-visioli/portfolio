@@ -1,6 +1,6 @@
 {
   "name": "newsletter-program",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standalone newsletter management program with RSS monitoring and encryption",
   "main": "src/index.js",
   "bin": {

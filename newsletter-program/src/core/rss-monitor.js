@@ -420,7 +420,13 @@ ${feed.url}`;
       throw new Error(`Failed to fetch RSS feed: HTTP ${response.status}`);
     }
 
-    return await response.text();
+    const content = await response.text();
+
+    if (content.includes('Vercel Security Checkpoint') || (!content.includes('<rss') && !content.includes('<feed'))) {
+      throw new Error('Le flux RSS est invalide ou bloqué par un pare-feu (ex: Vercel)');
+    }
+
+    return content;
   }
 
   parseRSSItems(xmlContent) {
