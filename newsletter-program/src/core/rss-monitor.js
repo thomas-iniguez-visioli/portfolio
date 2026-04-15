@@ -389,11 +389,11 @@ ${feed.url}`;
       }
 
       const isAtom = content.includes('<feed');
-      const titleTag = '<title>';
-      const descTag = isAtom ? '<subtitle>' : '<description>';
+      const titleTag = 'title';
+      const descTag = isAtom ? 'subtitle' : 'description';
 
-      const titleMatch = content.match(new RegExp(`${titleTag}[^>]*>([^<]+)<\/title>`, 'i'));
-      const descMatch = content.match(new RegExp(`${descTag}[^>]*>([^<]+)<\/${isAtom ? 'subtitle' : 'description'}`, 'i'));
+      const titleMatch = content.match(new RegExp(`<${titleTag}[^>]*>([^<]+)<\\/${titleTag}>`, 'i'));
+      const descMatch = content.match(new RegExp(`<${descTag}[^>]*>([^<]+)<\\/${descTag}>`, 'i'));
 
       return {
         valid: true,
@@ -432,16 +432,19 @@ ${feed.url}`;
   parseRSSItems(xmlContent) {
     const items = [];
     const isAtom = xmlContent.includes('<feed');
-    let itemMatches = isAtom ? 
-      (xmlContent.match(/<entry[^>]*>[\s\S]*?<\/entry>/gi) || []) :
-      (xmlContent.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || []);
-
-    itemMatches.forEach(itemXml => {
+    
+    // Improved item extraction to handle nested tags or issues with greedy matching
+    const tag = isAtom ? 'entry' : 'item';
+    const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'gi');
+    
+    let match;
+    while ((match = regex.exec(xmlContent)) !== null) {
+      const itemXml = match[1];
       const item = this.parseRSSItem(itemXml, isAtom);
       if (item) {
         items.push(item);
       }
-    });
+    }
 
     items.sort((a, b) => new Date(b.published) - new Date(a.published));
     return items;
@@ -455,7 +458,7 @@ ${feed.url}`;
           const linkMatch = itemXml.match(/<link[^>]*href=["']([^"']+)["']/i);
           return linkMatch ? linkMatch[1].trim() : null;
         } else {
-          regex = new RegExp(`<${tagName}[^>]*>([\s\S]*?)<\/${tagName}>`, 'i');
+          regex = new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
         }
         const match = itemXml.match(regex);
         return match ? match[1].trim() : null;
@@ -463,8 +466,7 @@ ${feed.url}`;
 
       const extractCDATA = (content) => {
         if (!content) return null;
-        const cdataMatch = content.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
-        return cdataMatch ? cdataMatch[1] : content;
+        return content.replace(/<!\[CDATA\[([\\s\\S]*?)\]\]>/g, (match, p1) => p1);
       };
 
       const title = extractCDATA(extractTag('title', isAtom));
