@@ -466,7 +466,7 @@ ${feed.url}`;
 
       const extractCDATA = (content) => {
         if (!content) return null;
-        return content.replace(/<!\[CDATA\[([\\s\\S]*?)\]\]>/g, (match, p1) => p1);
+        return content.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1');
       };
 
       const title = extractCDATA(extractTag('title', isAtom));
