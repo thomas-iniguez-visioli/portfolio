@@ -287,7 +287,7 @@ class RSSMonitor {
    * Generate HTML content for newsletter
    */
   async generateHTMLContent(feed, items) {
-    const summaryContent = await getGeminiLeaksSummary(process.env.GEMINI_API_KEY, items.map(e => e.content).join("\n"));
+    const summaryContent = ""//await getGeminiLeaksSummary(process.env.GEMINI_API_KEY, items.map(e => e.content).join("\n"));
     
     let html = `
     <h1>📰 ${feed.title}</h1>
@@ -431,7 +431,7 @@ ${feed.url}`;
 
   parseRSSItems(xmlContent) {
     const items = [];
-    const isAtom = xmlContent.includes('<feed');
+    const isAtom = true;
     
     // Improved item extraction to handle nested tags or issues with greedy matching
     const tag = isAtom ? 'entry' : 'item';
@@ -472,7 +472,7 @@ ${feed.url}`;
       const title = extractCDATA(extractTag('title', isAtom));
       const link = extractTag('link', isAtom);
       const description = extractCDATA(extractTag(isAtom ? 'summary' : 'description', isAtom));
-      const pubDate = extractTag(isAtom ? 'published' : 'pubDate', isAtom) || extractTag('updated', isAtom);
+      const pubDate =  extractTag('updated', isAtom);
       const author = extractTag('author', isAtom) || extractTag('dc:creator', isAtom);
       const guid = extractTag(isAtom ? 'id' : 'guid', isAtom) || link;
       const content = extractCDATA(extractTag(isAtom ? 'content' : 'content:encoded', isAtom)) || extractCDATA(extractTag('content'));
