@@ -287,7 +287,7 @@ class RSSMonitor {
    * Generate HTML content for newsletter
    */
   async generateHTMLContent(feed, items) {
-    const summaryContent = await getGeminiLeaksSummary(process.env.GEMINI_API_KEY, items.map(e => e.content).join("\n"));
+    const summaryContent = ""//await getGeminiLeaksSummary(process.env.GEMINI_API_KEY, items.map(e => e.content).join("\n"));
     
     let html = `
     <h1>📰 ${feed.title}</h1>
@@ -389,11 +389,11 @@ ${feed.url}`;
       }
 
       const isAtom = content.includes('<feed');
-      const titleTag = '<title>';
-      const descTag = isAtom ? '<subtitle>' : '<description>';
+      const titleTag = 'title';
+      const descTag = isAtom ? 'subtitle' : 'description';
 
-      const titleMatch = content.match(new RegExp(`${titleTag}[^>]*>([^<]+)<\/title>`, 'i'));
-      const descMatch = content.match(new RegExp(`${descTag}[^>]*>([^<]+)<\/${isAtom ? 'subtitle' : 'description'}`, 'i'));
+      const titleMatch = content.match(new RegExp(`<${titleTag}[^>]*>([^<]+)<\\/${titleTag}>`, 'i'));
+      const descMatch = content.match(new RegExp(`<${descTag}[^>]*>([^<]+)<\\/${descTag}>`, 'i'));
 
       return {
         valid: true,
@@ -420,22 +420,31 @@ ${feed.url}`;
       throw new Error(`Failed to fetch RSS feed: HTTP ${response.status}`);
     }
 
-    return await response.text();
+    const content = await response.text();
+
+    if (content.includes('Vercel Security Checkpoint') || (!content.includes('<rss') && !content.includes('<feed'))) {
+      throw new Error('Le flux RSS est invalide ou bloqué par un pare-feu (ex: Vercel)');
+    }
+
+    return content;
   }
 
   parseRSSItems(xmlContent) {
     const items = [];
-    const isAtom = xmlContent.includes('<feed');
-    let itemMatches = isAtom ? 
-      (xmlContent.match(/<entry[^>]*>[\s\S]*?<\/entry>/gi) || []) :
-      (xmlContent.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || []);
-
-    itemMatches.forEach(itemXml => {
+    const isAtom = true;
+    
+    // Improved item extraction to handle nested tags or issues with greedy matching
+    const tag = isAtom ? 'entry' : 'item';
+    const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'gi');
+    
+    let match;
+    while ((match = regex.exec(xmlContent)) !== null) {
+      const itemXml = match[1];
       const item = this.parseRSSItem(itemXml, isAtom);
       if (item) {
         items.push(item);
       }
-    });
+    }
 
     items.sort((a, b) => new Date(b.published) - new Date(a.published));
     return items;
@@ -449,7 +458,7 @@ ${feed.url}`;
           const linkMatch = itemXml.match(/<link[^>]*href=["']([^"']+)["']/i);
           return linkMatch ? linkMatch[1].trim() : null;
         } else {
-          regex = new RegExp(`<${tagName}[^>]*>([\s\S]*?)<\/${tagName}>`, 'i');
+          regex = new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
         }
         const match = itemXml.match(regex);
         return match ? match[1].trim() : null;
@@ -457,14 +466,13 @@ ${feed.url}`;
 
       const extractCDATA = (content) => {
         if (!content) return null;
-        const cdataMatch = content.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
-        return cdataMatch ? cdataMatch[1] : content;
+        return content.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1');
       };
 
       const title = extractCDATA(extractTag('title', isAtom));
       const link = extractTag('link', isAtom);
       const description = extractCDATA(extractTag(isAtom ? 'summary' : 'description', isAtom));
-      const pubDate = extractTag(isAtom ? 'published' : 'pubDate', isAtom) || extractTag('updated', isAtom);
+      const pubDate =  extractTag('updated', isAtom);
       const author = extractTag('author', isAtom) || extractTag('dc:creator', isAtom);
       const guid = extractTag(isAtom ? 'id' : 'guid', isAtom) || link;
       const content = extractCDATA(extractTag(isAtom ? 'content' : 'content:encoded', isAtom)) || extractCDATA(extractTag('content'));

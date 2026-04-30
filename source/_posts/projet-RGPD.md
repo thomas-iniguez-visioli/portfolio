@@ -11,7 +11,7 @@ categories:
   - reading-note
 authors:
     - thomas iniguez visioli
-lien: https://france-nuit.github.io/article/
+lien: https://france-nuit.github.io/
 ---
 
 Contribution à la **mise en conformité RGPD** d'un site web, en charge d'implémenter les bonnes pratiques de protection des données personnelles côté front-end et de conseiller sur les obligations légales.
@@ -32,4 +32,4 @@ Le RGPD (Règlement Général sur la Protection des Données) impose à tout sit
 
 `RGPD` · `Cookies` · `tarteaucitron.js` · `Conformité web` · `Vie privée`
 
-[→ Voir l'article associé](https://france-nuit.github.io/article/)
+[→ Voir l'article associé](https://france-nuit.github.io/)

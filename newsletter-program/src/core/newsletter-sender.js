@@ -1,5 +1,21 @@
 const { htmlToText: convertHtmlToText } = require('html-to-text');
-
+const sleep=async(ms)=>{
+  return new Promise(r=>setTimeout(r, ms))}
+const humantimems=(string)=>{
+  const regex=/(\d+(?:\.\d+)?)\s*(ms|seconds?|mins?|hours?|days?)/;
+  const match=string.match(regex);
+  if(!match)return 0;
+  const [,value,unit]=match;
+  const num=parseFloat(value);
+  switch(unit){
+    case'ms':return num;
+    case'second':case'seconds':return num*1000;
+    case'min':case'mins':return num*60*1000;
+    case'hour':case'hours':return num*60*60*1000;
+    case'day':case'days':return num*24*60*60*1000;
+    default:return 0;
+  }
+}
 class NewsletterSender {
   constructor(dataDir = './data') {
     this.dataDir = dataDir;
@@ -15,7 +31,9 @@ class NewsletterSender {
       errors: []
     };
 
-    for (const subscriber of subscribers) {
+    for (let i = 0; i < subscribers.length; i++) {
+      const subscriber = subscribers[i];
+      
       try {
         const result = await this.sendToSubscriber(subscriber, subject, content, options);
         if (result.success) {
@@ -34,12 +52,18 @@ class NewsletterSender {
           error: error.message
         });
       }
+
+      // Pause d'une seconde entre chaque envoi (sauf après le dernier)
+      if (i < subscribers.length - 1) {
+        await sleep(1000);
+      }
     }
 
     return results;
   }
 
   async sendToSubscriber(subscriber, subject, content, options = {}) {
+    console.log(subscriber)
     try {
       // Personalize content if needed
       const personalizedContent = this.personalizeContent(content, subscriber);
