@@ -10,11 +10,11 @@ social:
   email: thomas.iniguez@free.fr
 
 # Glitch effect text on the home page
-glitch_text: 'PORTFOLIO'
+glitch_text: 'PORTFOLIO thomas iniguez visioli'
 
 # Navigation menu
 menu:
-  Home: /
+  acceuil: /
   Archives: /archives
   veille: https://feed-blush.vercel.app/
 

@@ -40,7 +40,7 @@ async function sendWelcomeEmail(subscriptionData, config) {
         
         // Prepare email payload
         const emailPayload = {
-            from: config.fromEmail || 'Acme <news@arbinger.is-a.dev',
+            from: config.fromEmail || 'Acme <news@arbinger.is-a.dev>',
             to: email,
             subject: '🎯 Welcome to Our Newsletter - Subscription Confirmed',
             html: htmlContent,

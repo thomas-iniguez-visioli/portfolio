@@ -108,11 +108,11 @@ jobs:
             const sender = new NewsletterSender();
             const htmlContent = fs.readFileSync('newsletter.html', 'utf8');
             
-            const result = await sender.sendToEmail(
-              '${{ github.event.inputs.test_email }}',
-              '${{ github.event.inputs.subject_prefix }} ${{ steps.process_newsletter.outputs.title }}',
-              htmlContent
-            );
+            const result = await sender.sendEmail({
+              to: '${{ github.event.inputs.test_email }}',
+              subject: '${{ github.event.inputs.subject_prefix }} ${{ steps.process_newsletter.outputs.title }}',
+              html: htmlContent
+            });
             
             console.log('✅ Test newsletter sent successfully:', result);
           } catch (error) {
@@ -165,7 +165,7 @@ jobs:
             
             if (results.errors.length > 0) {
               console.log('❌ Errors:');
-              results.errors.forEach(error => console.log(\`   - \${error}\`));
+              results.errors.forEach(error => console.log(\`   - \${JSON.stringify(error)}\`));
             }
             
           } catch (error) {
@@ -179,6 +179,7 @@ jobs:
       env:
         RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         ENCRYPTION_KEY: ${{ secrets.NEWSLETTER_ENCRYPTION_KEY }}
+        FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
         
     - name: Send Discord notification
       if: always()

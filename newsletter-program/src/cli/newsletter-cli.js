@@ -4,14 +4,8 @@ const { Command } = require('commander');
 const path = require('path');
 const fs = require('fs').promises;
 const NewsletterComposer = require('../core/newsletter-composer');
-let SubscriberManager
-let ResendClient
-(async() => {
- SubscriberManager = await import('../core/subscriber-manager.mjs');
- ResendClient = await import('../core/newsletter-sender.mjs');
-})().then(()=>{
-
-console.log( ResendClient)
+const { SubscriberManager } = require('../core/subscriber-manager.js');
+const { NewsletterSender } = require('../core/newsletter-sender.js');
 
 const program = new Command();
 
@@ -22,8 +16,8 @@ program
 
 // Initialize components
 const composer = new NewsletterComposer();
-const subscriberManager = new SubscriberManager.SubscriberManager();
-const resendClient = new  ResendClient.NewsletterSender();
+const subscriberManager = new SubscriberManager();
+const resendClient = new NewsletterSender();
 
 // Create newsletter command
 program
@@ -261,7 +255,6 @@ if (require.main === module) {
   program.parse();
 }
 module.exports = { program, composer, subscriberManager, resendClient };
-});
 
 
 

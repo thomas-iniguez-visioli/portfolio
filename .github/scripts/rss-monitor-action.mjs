@@ -13,22 +13,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Import newsletter program modules
-const newsletterProgramPath = path.join(__dirname, '..', '..', 'newsletter-program');
-process.chdir(newsletterProgramPath);
+import RSSMonitorModule from '../../newsletter-program/src/core/rss-monitor.js';
+import NewsletterSenderModule from '../../newsletter-program/src/core/newsletter-sender.js';
+import SubscriberFileManagerModule from '../../newsletter-program/src/core/subscriber-file-manager.js';
 
-import { RSSMonitor } from '../../newsletter-program/src/core/rss-monitor.mjs';
-import { NewsletterSender } from '../../newsletter-program/src/core/newsletter-sender.mjs';
-import { SubscriberFileManager } from '../../newsletter-program/src/core/subscriber-file-manager.js';
+const newsletterProgramPath = path.join(__dirname, '..', '..', 'newsletter-program');
 
 class GitHubActionsRSSMonitor {
   constructor() {
+    // Change directory to newsletter-program to ensure relative paths and dependencies work
+    process.chdir(newsletterProgramPath);
+    
     // Use repository data path for GitHub Actions
     this.dataPath = path.join(__dirname, '..','data');
     //console.log(this.dataPath)
     // Initialize components with repository data path
-    this.rssMonitor = new RSSMonitor(this.dataPath);
-    this.newsletterSender = new NewsletterSender();
-    this.subscriberManager = new SubscriberFileManager();
+    this.rssMonitor = new RSSMonitorModule.RSSMonitor(this.dataPath);
+    this.newsletterSender = new NewsletterSenderModule.NewsletterSender();
+    this.subscriberManager = new SubscriberFileManagerModule.SubscriberFileManager();
     
     // GitHub Actions environment
     this.isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
@@ -341,7 +343,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         console.log('  stats     - Show RSS and subscriber statistics');
         console.log('  validate  - Validate RSS and subscriber configuration');
         process.exit(1);
-    }
+  }
   } catch (error) {
    // console.error('❌ Error:', error.message);
     process.exit(1);

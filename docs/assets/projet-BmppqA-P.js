@@ -14,7 +14,10 @@ const _sfc_main$1 = {
         console.log(item.href);
         if (item.id) {
           log.info(item.href.includes("projet"));
-          item.href = window.location.href + "projet/" + item.textContent.split("/")[item.textContent.split("/").length - 1];
+          const text = String(item.textContent || "");
+          const rawSegment = text.split("/")[text.split("/").length - 1].trim();
+          const safeSegment = /^[a-zA-Z0-9_-]+$/.test(rawSegment) ? rawSegment : "";
+          item.href = window.location.href + "projet/" + encodeURIComponent(safeSegment);
           item.href = item.href.replace("situationsituation", "situation").replace("projetprojet", "projet");
           log.info(item.href);
         }

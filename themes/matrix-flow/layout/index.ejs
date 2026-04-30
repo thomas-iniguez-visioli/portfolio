@@ -1,7 +1,13 @@
 <%
-  // This is the template for the homepage.
-  // It iterates through your posts and displays them as a list.
+  // Template page d'accueil — liste des articles
 %>
+
+<% if (page.current === 1) { %>
+<div class="matrix-hero" data-subtitle="<%- config.subtitle || 'en maintenance' %>">
+  <h1 class="logo-glitch terminal-cursor" data-text="<%- config.author.toUpperCase() %>"><%- config.author.toUpperCase() %></h1>
+</div>
+<% } %>
+
 <div class="post-list">
   <% page.posts.each(function(post){ %>
     <article class="post-list-item">
@@ -9,21 +15,27 @@
         <a href="<%- url_for(post.path) %>"><%- post.title || 'Untitled' %></a>
       </h2>
       <div class="post-meta">
-        <span>[<%- date(post.date, 'YYYY-MM-DD') %>]</span>
+        <span><%- date(post.date, 'YYYY-MM-DD') %></span>
+        <% if (post.tags && post.tags.length) { %>
+          •
+          <% post.tags.each(function(tag){ %>
+            <a href="<%- url_for(tag.path) %>" class="tag-link">#<%- tag.name %></a>
+          <% }) %>
+        <% } %>
       </div>
       <div class="post-excerpt">
-        <%- post.excerpt || post.content %>
+        <%- post.excerpt || '' %>
       </div>
     </article>
   <% }) %>
 </div>
 
-<%# --- PAGINATION --- %>
+<%# Pagination %>
 <% if (page.total > 1) { %>
-<nav class="pagination">
+<nav class="pagination" aria-label="Pagination">
   <%- paginator({
-    prev_text: '[PREV]',
-    next_text: '[NEXT]',
+    prev_text: '[← PREV]',
+    next_text: '[NEXT →]',
     escape: false
   }) %>
 </nav>
