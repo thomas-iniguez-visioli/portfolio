@@ -1,8 +1,1695 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-04-30T10:12:15.347Z",
+  "lastUpdated": "2026-05-03T01:24:13.615Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1898",
+        "published": "2026-05-02T10:28:43.268Z",
+        "title": "ObjetRama",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Un cybercriminel a publié 209 410 commandes appartenant à ObjetRama, spécialiste des objets publicitaires. Cette fuite, couvrant la période de mai 2019 à avril 2026, impacterait environ 80 300 clients uniques.Statut: RevendiquéeType de service: Objets publicitaires"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1806",
+        "published": "2026-05-02T09:16:57.107Z",
+        "title": "son fuite du 2026-4-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Historique des commandes •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1755",
+        "published": "2026-05-02T05:53:38.000Z",
+        "title": "ZenBusiness",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, the hacker and extortion group &quot;ShinyHunters&quot; claimed to have obtained a substantial corpus of data from ZenBusiness, a business formation and compliance platform. The group claimed the data had been exfiltrated from platforms including Snowflake, Mixpanel and Salesforce, and threatened to publish it if a ransom was not paid. The following month, after claiming payment had not been made, ShinyHunters publicly released the data. The collection amounted to many terabytes across thousands of files that appeared to originate from multiple systems and business functions, including leads, support records and other CRM-related data. The data contained approximately 5M unique email addresses, often accompanied by name and phone number depending on the source file."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1897",
+        "published": "2026-05-01T23:09:16.750Z",
+        "title": "Easy Cash #2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Un cybercriminel a mis en vente une base de données contenant 17 861 681 enregistrements d'utilisateurs de l'enseigne Easy Cash le 29 avril 2026. Il s’agit probablement d’une compromission d’un compte utilisateur interne. L'enseigne a déjà fait l’objet d’une fuite de données en 2025.Statut: RevendiquéeType de service: Achat-vente de produits d'occasion"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1896",
+        "published": "2026-05-01T21:08:30.996Z",
+        "title": "Faco Paris",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur de la menace 'Spirigatito' revendique une fuite de 12 Go. La fuite, qui daterait de 2025, concernerait les promotions 2021 à 2024 et inclurait 11 447 documents personnels (pièces d'identité, passeports, IBANs, diplômes).Statut: RevendiquéeType de service: Faculté privée de Droit, Économie, Gestion"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1895",
+        "published": "2026-05-01T20:05:35.098Z",
+        "title": "La Pizza de Nico",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Un cybercriminel a publié une base de données de 67 767 clients de la chaîne de pizzerias 'La Pizza de Nico', couvrant la période d'avril 2017 à août 2025.Statut: RevendiquéeType de service: Restauration"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1775",
+        "published": "2026-05-01T14:37:36.620Z",
+        "title": "AmanResorts",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Aman, an ultra-luxury hotel brand, was allegedly targeted by the ShinyHunters group in April 2026 with data later leaked publicly, exposing over 262k unique email addresses along with some names, phone numbers, physical addresses, nationalities, dates of birth, and spouse names,."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1774",
+        "published": "2026-05-01T14:37:36.616Z",
+        "title": "MarcusMillichap",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Marcus &amp; Millichap, a real estate brokerage and advisory firm, was allegedly breached by the ShinyHunters group, exposing 1.8M email addresses along with personal information."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1894",
+        "published": "2026-05-01T10:08:01.371Z",
+        "title": "Madeindesign",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Données de juin 2013 à juin 2022. Publication d'une base de données du site de vente en ligne spécialisé dans le design et la décoration Madeindesign.com. La base de données publiée contient 464 662 commandes, impactant environ 228 600 clients uniques sur une période de 9 ans.Statut: RevendiquéeType de service: Vente en ligne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1673",
+        "published": "2026-04-30T15:23:18.837Z",
+        "title": "musée océanographique de monaco fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nomprénom • Date de naissance • Adresse email • Numéro de téléphone • Code postal et ville • Historique des commandes • Événements réservéstype et nombre • Mot de passe •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1889",
+        "published": "2026-04-30T13:03:08.236Z",
+        "title": "umanens fuite du 2026-4-30",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nomprénom • Adresse postale • Adresse email • Numéro de téléphone • Date et lieu de naissance • Composition familiale • Contratséchéanciers • Nature des prestations • Montant des remboursements • RIB • Carte d’identité • Attestation de Sécurité Sociale •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1868",
+        "published": "2026-04-30T12:26:21.566Z",
+        "title": "système u fuite du 2026-4-24",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nomprénom • Status professionel • Adresse email • Adresse postale • Numéro de téléphone • Numéro de la carte de fidélité •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1882",
+        "published": "2026-04-30T12:26:21.554Z",
+        "title": "métropole de bordeaux fuite du 2026-4-29",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Numéro d’enregistrement • Date de déclaration • Naturetype et capacité du bien •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1883",
+        "published": "2026-04-30T12:26:21.553Z",
+        "title": "métropole de saint fuite du 2026-4-29",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Aucune description disponible pour cette fuite de données."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1861",
+        "published": "2026-04-30T12:26:21.552Z",
+        "title": "my piscine fuite du 2026-4-23",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nomprénom • Adresse email • Adresse postale • Historique de commande • Mot de passe « sécurisé » (🤷) •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1867",
+        "published": "2026-04-30T12:26:21.490Z",
+        "title": "agence nationale des fréquences fuite du 2026-4-24",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nomprénom • Adresse postale • Numéro de téléphone • Adresse email • Date de naissance •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1879",
+        "published": "2026-04-30T12:26:21.488Z",
+        "title": "acrimed fuite du 2026-4-28",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Adresse email • Mot de passe chiffré (🤷) • Commandes passées •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1891",
+        "published": "2026-04-30T11:39:35.368Z",
+        "title": "Deltadore",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 29 avril 2026, l'entreprise Deltadore, spécialisée dans les solutions de maison connectée (gestion d'énergie, sécurité), a notifié par e-mail au moins 374 clients de son site de formation (formation-pro.deltadore.fr) d'une violation de données. Une vulnérabilité Magento a été exploitée. Le mail de notification aux utilisateurs a été envoyé à tous les concernés avec leur adresse en copie.Statut: ConfirméeType de service: Formation professionnelle en ligne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1890",
+        "published": "2026-04-30T11:39:35.364Z",
+        "title": "Ankama",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Fin avril 2026, l'éditeur de jeux vidéo Ankama a notifié par e-mail ses utilisateurs avoir été victime d'une cyberattaque résultant en un accès non autorisé à une partie des données des comptes.Statut: ConfirméeType de service: Éditeur de jeux vidéo"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1886",
+        "published": "2026-04-29T20:11:56.129Z",
+        "title": "Saint-Étienne Métropole",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Par email, la ville et la métropole de Saint-Étienne informent qu'un incident de sécurité a impacté l'un de leurs prestataires de billetterie en ligne. En conséquence, les mots de passe des comptes utilisateurs ont été préventivement désactivés et les usagers sont invités à les réinitialiser.Statut: ConfirméeType de service: Collectivité territoriale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1885",
+        "published": "2026-04-29T20:11:56.119Z",
+        "title": "Campus France",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "16 006 dossiers d'étudiants (pour 18 637 candidatures) de la plateforme CampusArt de Campus France, couvrant la période de 2014 à 2026, ont été publiés par un cybercriminel sur le forum de hacking PwnForums.Statut: ConfirméeType de service: Plateforme de candidatures étudiantes"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1884",
+        "published": "2026-04-29T11:20:16.926Z",
+        "title": "Areli",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Areli, une association spécialisée dans le logement social, a notifié ses partenaires par courrier le 8 avril 2026 avoir été victime d'une cyberattaque le 12 janvier 2026. Moins de 2% des données stockées sur ses serveurs ont été affectées.Statut: ConfirméeType de service: Association / Logement social"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1880",
+        "published": "2026-04-28T13:14:12.277Z",
+        "title": "Nemea",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le groupe Nemea est un opérateur français majeur spécialisé dans la gestion de résidences (tourisme, étudiantes, affaires). Une compromission a entraîné la fuite de l'export d'un de leurs outils de gestion locative. Bien que l'acteur malveillant revendique 330 000 enregistrements (baux, quittances, relances cumulées), cet incident concerne avec précision 12 590 personnes physiques et morales uniques. Les victimes sont des locataires du groupe Nemea, des propriétaires bailleurs, ainsi que des garants (cautions solidaires). L'impact est critique en raison de l'exposition de mots de passe non chiffrés et du vol de 1 000 documents d'identité numérisés, exposant ces personnes à des risques majeurs d'usurpation d'identité et de fraude ciblée.Statut: RevendiquéeType de service: Gestion de résidences immobilières"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1852",
+        "published": "2026-04-27T22:52:07.000Z",
+        "title": "Pitney Bowes",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In April 2026, the hacking collective ShinyHunters claimed to have obtained data from Pitney Bowes as part of a broader extortion campaign that also named several other organisations. After negotiations allegedly failed, the group publicly released the data which included 8.2M unique email addresses, along with names, phone numbers and physical addresses. A subset of the data also included Pitney Bowes employee records with job titles."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1877",
+        "published": "2026-04-27T11:18:08.125Z",
+        "title": "Bordeaux Métropole",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "La fuite de données concerne 11 666 enregistrements issus du registre d'inventaire des hébergements touristiques du service taxedesejour.bordeaux.metropole.fr, impactant 9 390 déclarants uniques. Revendiquée sur PwnForums comme une base de données partielle, elle contient la liste des biens déclarés et non l'historique des transactions financières.Statut: RevendiquéeType de service: Déclaration de taxe de séjour"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1851",
+        "published": "2026-04-27T07:36:42.000Z",
+        "title": "ADT",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In April 2026, home security firm ADT confirmed a data breach by ShinyHunters, which listed the company on its website as part of a &quot;pay or leak&quot; extortion attempt. The breach impacted 5.5M unique email addresses along with names, phone numbers and physical addresses. ADT also advised that &quot;in a small percentage of cases, dates of birth and the last four digits of Social Security numbers or Tax IDs were included&quot; and that it had contacted all affected people."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1871",
+        "published": "2026-04-26T23:01:50.000Z",
+        "title": "Udemy",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In April 2026, online training company Udemy was the victim of a “pay or leak” extortion attempt perpetrated by the ShinyHunters group. The data was subsequently leaked publicly and contained 1.4M unique email addresses belonging to customers and instructors. The data also included names, physical addresses, phone numbers, employer information and instructor payout methods including PayPal, cheque and bank transfer."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1876",
+        "published": "2026-04-26T13:20:11.085Z",
+        "title": "Sejourneur",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur ChimeraZ a publié une base de données de Sejourneur.com, un service de conciergerie et de gestion de locations saisonnières, contenant 46 689 réservations et 6 678 factures PDF, exposant les données de 39 285 clients uniques.Statut: ConfirméeType de service: Gestion de locations saisonnières"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1875",
+        "published": "2026-04-25T14:08:57.643Z",
+        "title": "Adele.org",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Publication sur un forum de cybercriminalité d'une base de données de 560 Mo provenant de la plateforme Adele.org. La fuite contient 233 000 dossiers de location, 28 000 factures B2B et 113 archives de documents d'identité, affectant environ 103 000 étudiants.Statut: RevendiquéeType de service: Plateforme de logement étudiant"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1874",
+        "published": "2026-04-25T11:54:55.557Z",
+        "title": "IFprofs",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Réseau collaboratif pour professeurs de français. 90 765 comptes utilisateurs et 20 514 publications/contenus (entre octobre 2015 et avril 2026), publiés par le cybercriminel ChimeraZ.Statut: ConfirméeType de service: Réseau collaboratif enseignants"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1870",
+        "published": "2026-04-24T17:00:37.571Z",
+        "title": "ANFR (Radiomaritime)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Les données d'environ 330 000 usagers du téléservice Radiomaritime de l'ANFR, dédié à la gestion des licences radio pour les navires, ont été compromises. L'incident a été confirmé suite à un signalement de l'ANSSI concernant la mise en vente en ligne d'un extrait des données.Statut: ConfirméeType de service: Service public (Fréquences radio)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1773",
+        "published": "2026-04-24T14:22:54.988Z",
+        "title": "CarnivalCorporation",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Carnival Corporation, a cruise operator, was allegedly breached by the ShinyHunters group in April 2026, with data later published exposing 8.7M records containing 7.5M unique email addresses, along with names, dates of birth, genders, and loyalty program details related to the Holland America Mariner Society."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1869",
+        "published": "2026-04-24T12:44:35.604Z",
+        "title": "Agence de Services et de Paiement",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'information sur la fuite de données a été communiquée par l'Agence de Services et de Paiement (ASP) via une notification par courriel. Cet organisme public français a indiqué que l'incident impacte les stagiaires de la formation professionnelle.Statut: ConfirméeType de service: Agence gouvernementale de paiement"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1864",
+        "published": "2026-04-24T00:09:14.259Z",
+        "title": "Bodyhit",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Une base de données de 218 542 clients de Bodyhit, incluant 42 480 enregistrements IBAN/BIC, a été mise en vente le 23 avril 2026 par l'acteur 'under' sur un forum du dark web.Statut: RevendiquéeType de service: Fitness"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1863",
+        "published": "2026-04-23T15:14:27.905Z",
+        "title": "Parcoursup",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Selon le ministère de l'Enseignement supérieur, les données d'environ 705 000 candidats des sessions 2023 et 2025 (région Occitanie) ont été exfiltrées en octobre 2025 suite à l'usurpation du compte d'un personnel sur un module de gestion. Détecté en mars 2026, le ministère a répondu en anonymisant le module et en renforçant les contrôles d'accès.Statut: ConfirméeType de service: Service public d'orientation"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1862",
+        "published": "2026-04-23T11:33:22.538Z",
+        "title": "Wazari",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le volume n'est pas spécifié dans la notification envoyée par le courtier en assurance Wazari, qui confirme une fuite de données suite à une attaque externe sur un de ses outils de gestion.Statut: ConfirméeType de service: Assurance"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1858",
+        "published": "2026-04-22T11:31:59.247Z",
+        "title": "Rituals",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Un volume non spécifié de données clients a été exfiltré suite à un accès non autorisé aux systèmes de Rituals, d'après une notification officielle de l'entreprise. Information SaxX.Statut: ConfirméeType de service: Cosmétiques"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1857",
+        "published": "2026-04-21T18:26:20.569Z",
+        "title": "Ledil Immobilier",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Publication d'une base de données de 6 700 enregistrements concernant Ledil Immobilier, un réseau français de mandataires immobiliers dont le siège est à Agen. La fuite, datée d'avril 2026, est revendiquée par l'acteur 888.Statut: RevendiquéeType de service: Immobilier"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1856",
+        "published": "2026-04-21T17:52:06.644Z",
+        "title": "Bienvenue sur le nouveau système d'actualités",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Ceci est un exemple de post d'actualité. Vous pouvez désormais créer vos propres articles dans le dossier `source/_posts/actualites/` sans qu'ils ne soient mélangés avec les fuites de données générées automatiquement par `index.js`.Les fuites de données sont désormais stockées dans `source/_posts/fuites/`."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1855",
+        "published": "2026-04-21T17:52:06.641Z",
+        "title": "Arrestation de Hexdex par la section J3 du parquet de Paris",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-La section J3 du parquet de Paris, spécialisée dans la lutte contre la cybercriminalité (JUNALCO), a procédé à l'arrestation de l'individu connu sous le pseudonyme de **Hexdex**.Hexdex est soupçonné d'être impliqué dans de nombreuses intrusions informatiques et reventes de données exfiltrées touchant plusieurs entités françaises et internationales. Cette opération marque une étape importante dans la lutte contre les acteurs malveillants opérant sur les forums de cybercriminalité.L'enquête, menée en collaboration avec les services de police spécialisés, se poursuit pour identifier l'ensemble des complices et évaluer l'étendue des dommages causés par les activités du suspect."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1854",
+        "published": "2026-04-21T16:36:43.051Z",
+        "title": "Magasins U",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Suite à une attaque informatique, Magasins U a informé ses clients par email d'une violation de données concernant les comptes de fidélité. Le volume exact de comptes affectés n'a pas été communiqué dans cette notification.Information : SaxXStatut: ConfirméeType de service: Grande distribution"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1850",
+        "published": "2026-04-20T10:11:25.611Z",
+        "title": "ANTS (France titres)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Mise en vente de 18 à 19 millions d'enregistrements de l'ANTS (France Titres) par 'breach3d' le 16/04/2026. Ces comptes, dont le rôle est de gérer les titres sécurisés (passeport, CNI), ont fait l'objet d'une communication de France Titres par mail le 19 avril 2026 confirmant un accès non-autorisé en date du 15 avril 2026.Statut: ConfirméeType de service: Agence gouvernementale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1848",
+        "published": "2026-04-19T16:46:29.857Z",
+        "title": "Comptoir du Rêve",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Publication par l'acteur 'ChimeraZ' de la base de données de 42 606 enregistrements clients du site comptoirdureve.fr, correspondant à 38 085 individus uniques.Statut: RevendiquéeType de service: Librairie en ligne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1837",
+        "published": "2026-04-18T14:59:01.822Z",
+        "title": "Imagerie Clinique Yvette",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Un échantillon de données de patients et un accès administrateur de la clinique située à Longjumeau (France) ont été publiés par l'acteur de la menace 'ntmpd' le 16 avril 2026.Statut: RevendiquéeType de service: Imagerie médicale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1841",
+        "published": "2026-04-17T20:27:14.087Z",
+        "title": "moulin roty fuite du 2026-4-17",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1840",
+        "published": "2026-04-17T20:27:12.487Z",
+        "title": "jeu jouet fuite du 2026-4-17",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1839",
+        "published": "2026-04-17T20:27:08.437Z",
+        "title": "bazar du manga fuite du 2026-4-17",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1843",
+        "published": "2026-04-17T17:07:51.715Z",
+        "title": "Fédération Française de Basket-Ball",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le cybercriminel 'HexDex' a annoncé la mise en vente des données de 2.7 millions de licenciés et proches (1.9M de licenciés et 800k de parents) de la Fédération Française de Basket-Ball.Statut: RevendiquéeType de service: Fédération sportive"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1781",
+        "published": "2026-04-17T04:54:48.000Z",
+        "title": "Amtrak",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In April 2026, the hacking group ShinyHunters claimed they had breached Amtrak. The group typically compromises organisations' Salesforce instances before demanding a ransom and later, if not paid, dumping the data publicly. The exposed data contained over 2M unique email addresses along with names, physical addresses and customer support records."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1834",
+        "published": "2026-04-16T23:27:57.016Z",
+        "title": "Pompes Funèbres Musulmanes Toulouse",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "La fuite de données, revendiquée par l'acteur 'ntmpd', expose un fichier CSV extrait de la plateforme de gestion Simplifia, contenant 1178 fiches individuelles (clients et défunts) sur une période s'étendant de mai 2023 à avril 2026.Statut: ConfirméeType de service: Services funéraires"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1836",
+        "published": "2026-04-16T23:27:56.985Z",
+        "title": "Filair",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "38 Go (100 000 fichiers) couvrant la période des années 1980 à 2026, incluant des données de production, financières, commerciales et RH, publiés par un groupe de ransomware.Statut: RevendiquéeType de service: Fabrication industrielle"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1842",
+        "published": "2026-04-16T23:27:56.976Z",
+        "title": "Gauthier Tissus",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Une fuite de 54 Go de données contenant 8 500 fichiers datant de 1996 à 2026, incluant des sauvegardes de décembre 2025 et janvier 2026. Les données ont été publiées par un agroupe de ransomware.Statut: RevendiquéeType de service: Tissage et ennoblissement de tissus techniques"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1835",
+        "published": "2026-04-16T17:25:01.437Z",
+        "title": "police nationale fuite du 2026-4-16",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Ville • Informations utilisateurs • Login • Premières et dernières connexions • modules suivis • Badges obtenus • Outils et portails utilisés •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1805",
+        "published": "2026-04-16T01:38:51.000Z",
+        "title": "McGraw Hill",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In April 2026, education company McGraw Hill confirmed a data breach following an extortion attempt. Attributed to a Salesforce misconfiguration, the company stated the incident exposed &quot;a limited set of data from a webpage hosted by Salesforce on its platform&quot;. More than 100GB of data was later publicly distributed, containing 13.5M unique email addresses across multiple files, with additional fields such as name, physical address and phone number appearing inconsistently across some records."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1827",
+        "published": "2026-04-15T19:53:13.626Z",
+        "title": "éducation nationale (éduconnect) fuite du 2026-4-14",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Identifiant ÉduConnect • Établissement et classe • Adresse email • Code d’activation •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1833",
+        "published": "2026-04-15T10:43:38.157Z",
+        "title": "Brit Hotel",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Les données personnelles de 682 662 membres du programme de fidélité de BritHotel, couvrant la période de réservation de 2016 à 2026, ont été mises en vente par l'acteur de la menace HexDex.Statut: RevendiquéeType de service: Chaîne hôtelière"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1832",
+        "published": "2026-04-15T10:43:38.146Z",
+        "title": "Assurea",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Mise en vente par l'acteur DumpsecV2 d'une base de données de 150 Go (2018-2026), exposant des données d'assurance extrêmement sensibles : 139 000 contrats (sinistres, bonus/malus, condamnations, tests d'alcoolémie), 11 000 fiches de conseil avec IBAN et plus de 2 millions de messages.Statut: RevendiquéeType de service: Courtier en assurance"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1830",
+        "published": "2026-04-14T18:48:03.113Z",
+        "title": "CNAOC (Confédération Nationale des Appellations d'Origine Contrôlée)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Une archive de 52.6 Go contenant environ 41 000 fichiers internes (1994-2025) a été publiée par un nouveau groupe de ransomware se présentant sous le nom Lamashtu.Statut: ConfirméeType de service: Organisation viticole"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1829",
+        "published": "2026-04-14T17:34:58.705Z",
+        "title": "EduConnect",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le groupe de hackers DumpSec revendique une fuite de 3,5 millions de comptes élèves. L'incident a été confirmé par le ministère de l'Éducation nationale le 14 avril 2026, résultant de l'usurpation d'un compte administrateur fin 2025, bien que le volume exact n'ait pas été officiellement validé.Statut: ConfirméeType de service: Education nationale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1828",
+        "published": "2026-04-14T10:17:12.890Z",
+        "title": "Logis Hôtels",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Mise en vente des données de 598 154 membres du programme de fidélité Etik (période 2012-2026) par l'acteur HexDex sur un forum, suite à une compromission.Statut: RevendiquéeType de service: Chaîne hôtelière"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1818",
+        "published": "2026-04-13T21:56:49.787Z",
+        "title": "INSEI / INSHEA",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le cybercriminel 'ChimeraZ' a publié les données de 1 303 personnes, principalement des personnels de l'Éducation Nationale inscrits à l'INSEI (Institut national supérieur de l'éducation inclusive). La fuite, provenant du portail de l'INSHEA, expose un état civil complet et plus de 1300 documents personnels critiques : CV, fiches de paie, relevés de notes et surtout des pièces d'identité numérisées (Passeports, CNI, Cartes Vitale).Statut: RevendiquéeType de service: Institut de formation (Éducation Nationale)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1822",
+        "published": "2026-04-13T19:41:09.181Z",
+        "title": "maison de la magie fuite du 2026-4-13",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nompréno • Adresse email • Date de naissance • Numéro de téléphone • Numéro de fax • Adresse postale • Numéro de TVA •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1821",
+        "published": "2026-04-13T19:41:07.727Z",
+        "title": "iae grenoble fuite du 2026-4-13",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Code postalville • Titre courant du poste • Souhait professionnel • Expérience professionnelle • Parcours au sein du réseau • Diplôme obtenuannée • Compétence •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1820",
+        "published": "2026-04-13T10:49:30.214Z",
+        "title": "basic fit fuite du 2026-4-13",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Adresse e-mail • Prénom et nom de famille • Adresse et ville • Numéro de téléphone • Numéro de compte bancaire • Titulaire du compte bancaire • Date de naissance • Informations sur les membres • Frais d'adhésion impayés •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1817",
+        "published": "2026-04-12T17:21:18.350Z",
+        "title": "Département de l'Ardèche",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "88 614 fichiers (26.3 Gb) composés exclusivement de documents de bénéficiaires du RSA (datation 2024) stockés par le département. Revendiqués par l'acteur Angel_Batista, provenant du site ardeche.fr.Statut: RevendiquéeType de service: Collectivité territoriale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1816",
+        "published": "2026-04-12T17:21:07.808Z",
+        "title": "booking fuite du 2026-4-12",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Toute information communiquée •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1768",
+        "published": "2026-04-12T02:01:11.000Z",
+        "title": "Hallmark",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, Hallmark suffered an alleged breach and subsequent extortion after attackers gained access to data stored within Salesforce. The data was later published after the extortion deadline passed, exposing 1.7M unique email addresses across both Hallmark and the Hallmark+ streaming service, along with names, phone numbers, physical addresses and support tickets."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1815",
+        "published": "2026-04-11T20:51:45.126Z",
+        "title": "Académie de Paris",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "5 512 enregistrements ont été mis en vente par l'acteur Cybernox, comprenant les données très sensibles de 1 701 étudiants (dont potentiellement des mineurs), incluant leurs photos d'identité, et de 3 811 responsables légaux ou personnels.Statut: RevendiquéeType de service: Éducation"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1814",
+        "published": "2026-04-11T20:51:45.112Z",
+        "title": "FranceVerif.fr",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 2026-04-11, l'acteur ChimeraZ a revendiqué sur DarkForums une fuite intitulée DATABASE | 35.820 FranceVerif.fr ; l'analyse des fichiers fournis (json/jsonl/csv) indique qu'au moins 3 204 personnes/comptes uniques sont concernées, sur la base d'une déduplication conservatrice par email normalisé entre les auteurs d'avis et les comptes utilisateurs de boutiques, tandis que la borne haute atteint 4 387 adresses email uniques si l'on inclut aussi les emails génériques de contact boutique ; les échantillons et fichiers observés couvrent notamment avis utilisateurs, fiches boutiques, offres, cartes cadeaux, catégories/domaines et données internes du service FranceVerif.fr.Statut: RevendiquéeType de service: Vérification de sites e-commerce"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1813",
+        "published": "2026-04-11T13:31:31.227Z",
+        "title": "Base véhicules d’occasion France",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 10 avril 2026, le cybercriminel « HexDex » a revendiqué la mise en vente d’une base portant sur 70 551 véhicules uniques en France. Les échantillons diffusés montrent un export très détaillé issu vraisemblablement d’un environnement professionnel de gestion de véhicules d’occasion. Les enregistrements exposent notamment des coordonnées d’acheteurs ou fournisseurs, des plaques d’immatriculation, des numéros de châssis (VIN), des informations de concession, des prix d’achat et de revente, des marges, des dates de transaction et plusieurs champs internes de suivi commercial.Statut: RevendiquéeType de service: Distribution automobile / gestion VO"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1803",
+        "published": "2026-04-10T22:04:07.022Z",
+        "title": "uppa alumni fuite du 2026-4-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Code postalville • Titre courant du poste • Souhait professionnel • Expérience professionnelle • Parcours au sein du réseau • Diplôme obtenuannée • Compétence •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1802",
+        "published": "2026-04-10T22:04:03.839Z",
+        "title": "lilagora fuite du 2026-4-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Code postalville • Titre courant du poste • Souhait professionnel • Expérience professionnelle • Parcours au sein du réseau • Diplôme obtenuannée • Compétence •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1801",
+        "published": "2026-04-10T22:04:00.959Z",
+        "title": "ensai network fuite du 2026-4-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Code postalville • Titre courant du poste • Souhait professionnel • Expérience professionnelle • Parcours au sein du réseau • Diplôme obtenuannée • Compétence •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1800",
+        "published": "2026-04-10T22:03:58.941Z",
+        "title": "alumni université côte d’azur fuite du 2026-4-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Code postalville • Titre courant du poste • Souhait professionnel • Expérience professionnelle • Parcours au sein du réseau • Diplôme obtenuannée • Compétence •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1799",
+        "published": "2026-04-10T14:51:55.777Z",
+        "title": "easy lounge fuite du 2026-4-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Historique des commandes •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1798",
+        "published": "2026-04-10T10:18:24.719Z",
+        "title": "Fédération Française du Sport Universitaire",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur de la menace HexDex a mis en vente les données personnelles de 1,133,731 adhérents de la Fédération Française du Sport Universitaire, détaillant un total de 1,023,774 adresses postales, 889,383 emails et 521,342 numéros de téléphone uniques.Statut: RevendiquéeType de service: Fédération sportive"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1804",
+        "published": "2026-04-09T22:44:42.955Z",
+        "title": "DB Telecom",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "41 470 fiches contacts clients uniques avec 30 410 emails, 44 202 numéros de téléphone et 41 470 mots de passe en clair, couvrant la période février 2019 à décembre 2025 (environ 6 ans et demi d'activité). Dump SQL de 455 Mo extrait le 7 avril 2026, totalisant ~2.8 millions de lignes réparties sur 61 tables, incluant 210 358 correspondances email intégrales, 55 652 documents référencés, 32 505 logs de connexion, 41 499 comptes WordPress et 23 comptes employés CRM. Mis en vente le 8 avril 2026 sur le forum spear[.]cx par l'acteur NormalLeVrai.Statut: ConfirméeType de service: Opérateur télécom B2B"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1633",
+        "published": "2026-04-09T14:15:09.341Z",
+        "title": "alinto fuite du 2026-2-24",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Émetteur et destinataire SMTP • Statistiques •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1797",
+        "published": "2026-04-09T10:55:40.539Z",
+        "title": "DCL (Diplôme de Compétence en Langue)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Mise en vente des données personnelles de 93 061 personnes par le cybercriminel HexDex. Les victimes sont des personnes ayant passé le DCL (Diplôme de Compétence en Langue), un diplôme national français certifiant les compétences linguistiques. La revendication expose des données très sensibles, incluant état civil, coordonnées, mais aussi des informations professionnelles détaillées (employeur, secteur d'activité, matricule), avec un focus sur 1 909 adresses email gouvernementales et de nombreux profils militaires.Statut: RevendiquéeType de service: Diplôme national de langue"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1795",
+        "published": "2026-04-08T11:41:12.964Z",
+        "title": "alumni université de strasbourg fuite du 2026-4-8",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Prénomnom • Adresse email • Numéro de téléphone • Code postalville • Titre courant du poste • Souhaits professionnels : Secteursrémunérations recherchéspays ou villes + codes postaux recherchésposte recherchéniveau d’expérience • Expérience professionnelle : mois et annétitre du posteentrepriseville • Parcours au sein du réseau : diplôme obtenu en annéenom du diplôme) • Compétences •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1793",
+        "published": "2026-04-08T03:40:14.000Z",
+        "title": "My Lovely AI",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In April 2026, the NSFW AI girlfriend platform My Lovely AI suffered a data breach that exposed over 100k users. The data included user-created prompts and links to the resulting AI-generated images, along with a small number of Discord and X usernames."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1792",
+        "published": "2026-04-07T19:32:30.123Z",
+        "title": "kfc fuite du 2026-4-7",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Numéro de fidélité •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1725",
+        "published": "2026-04-07T11:56:56.677Z",
+        "title": "Annuaire Administration",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur HexDex a publié sur le forum DarkForums les données de 60 000 agents du gouvernement français. La fuite, qui touche de nombreux secteurs régaliens (Défense, Justice, Intérieur, Finances...), semble provenir d'un annuaire centralisé de l'administration.Statut: RevendiquéeType de service: Service gouvernemental"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1790",
+        "published": "2026-04-06T12:36:48.485Z",
+        "title": "AlumnForce",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur de la menace HexDex a mis en vente une base de données de 2.7 millions d'utilisateurs d'AlumnForce, une plateforme de gestion de réseaux d'anciens élèves, affectant 49 écoles et universités françaises dont HEC Paris, l'École Polytechnique et Sciences Po.Statut: RevendiquéeType de service: Réseau d'alumni"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1664",
+        "published": "2026-04-06T10:33:34.245Z",
+        "title": "TLDRtech",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "TLDR.tech, a tech newsletter platform, had data exposed via an Apollo enrichment API endpoint in March 2026, leaking over 1.2M user records including email addresses, names, usernames, geographic locations, and linked social media profiles."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1663",
+        "published": "2026-04-06T10:33:34.242Z",
+        "title": "HumanizerPro",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "HumanizerPro.AI, an AI text rewriting tool, exposed data in March 2026 via a publicly accessible source, affecting over 65k users and leaking email addresses along with full input histories, user-submitted prompts, and rewritten texts."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1789",
+        "published": "2026-04-06T03:34:26.439Z",
+        "title": "YMED (SOONCARE®)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le groupe d'extorsion XP95 revendique l'exfiltration de 132 Go de données, impactant 253 342 patients et 431 579 fichiers médicaux. La fuite provient de la plateforme SOONCARE® et affecte les usagers de partenaires comme la Clinique Bordeaux Nord Aquitaine ou l'Institut Bergonié.Statut: RevendiquéeType de service: Éditeur de logiciels de santé"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1788",
+        "published": "2026-04-06T03:34:26.432Z",
+        "title": "Nosho",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 133 300 utilisateurs de la plateforme de gestion Nosho, exposés dans une fuite de données revendiquée.Statut: RevendiquéeType de service: CRM Santé"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1784",
+        "published": "2026-04-05T10:42:19.418Z",
+        "title": "Veuve Clicquot",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Les données personnelles des visiteurs ayant réservé une visite des caves depuis juillet 2024 ont été compromises suite à une attaque par rançongiciel contre un prestataire de billetterie, survenue le 2 mars 2026. Source: France 3 Grand Est.Statut: ConfirméeType de service: Champagne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1783",
+        "published": "2026-04-04T20:36:23.086Z",
+        "title": "Or en Cash",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Plus de 70 000 personnes seraient concernées par une fuite de données selon des éléments transmis par les hackers. L'entreprise a informé ses clients par mail.Statut: ConfirméeType de service: Achat et vente de métaux précieux"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1782",
+        "published": "2026-04-04T20:36:14.102Z",
+        "title": "contrat d’intégration républicaine fuite du 2026-4-4",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Adresse postale • Numéro de téléphone •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1780",
+        "published": "2026-04-04T19:46:18.657Z",
+        "title": "La Quiberonnaise",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Un accès non autorisé aux données personnelles a eu lieu suite à un incident de sécurité chez un prestataire technique, détecté le 3 avril 2026. L'information a été communiquée par email aux clients.Statut: ConfirméeType de service: Conserverie"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1662",
+        "published": "2026-04-04T05:59:06.189Z",
+        "title": "InfiniteCampus",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Infinite Campus, an education technology platform, disclosed a data breach in March 2026 that exposed 137K records. The compromised data included email addresses, phone numbers, names, physical addresses, usernames, dates of birth, genders, geographic locations, and passwords."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1661",
+        "published": "2026-04-04T05:59:06.185Z",
+        "title": "CFGI",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "CFGI, a consulting and advisory firm, disclosed a data breach in March 2026 that exposed over 800k records, including more than 40k financial documents and internal corporate data. Of these, 250k were unique email addresses. The compromised data included names, phone numbers, physical addresses, usernames, and geographic locations."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1717",
+        "published": "2026-04-04T04:47:29.000Z",
+        "title": "Crunchyroll",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, the anime streaming service Crunchyroll suffered a data breach alleged to have impacted 6.8M users. The exposed data is reported to have originated from the company's Zendesk support system where &quot;name, login name, email address, IP address, general geographic location and the contents of the support tickets&quot; were exposed. A subset of 1.2M email addresses from an alleged 2M record dataset being sold was later provided to HIBP."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1777",
+        "published": "2026-04-04T01:59:01.000Z",
+        "title": "SongTrivia2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In April 2026, the music trivia platform SongTrivia2 suffered a data breach that was subsequently published to a public hacking forum. The data contained a total of 291k unique email addresses sourced from either Google OAuth logins or accounts created on the site, the latter also containing bcrypt password hashes. The data also included names, usernames and avatars."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1776",
+        "published": "2026-04-02T09:44:22.348Z",
+        "title": "gold union fuite du 2026-4-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse postale • Carte d’identité • Factures • IBAN •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1772",
+        "published": "2026-04-01T11:13:48.849Z",
+        "title": "Force Ouvrière #2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "La base de données de 161 343 membres du syndicat Force Ouvrière (FO) a été mise en vente par l'acteur HexDex. Cette fuite est différente de celle enregistrée le 26 janvier 2026.Statut: RevendiquéeType de service: Syndicat"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1689",
+        "published": "2026-04-01T06:51:14.000Z",
+        "title": "SUCCESS",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, the personal development and achievement media brand SUCCESS suffered a data breach. The incident exposed 250k unique email addresses along with names, IP addresses, phone numbers and, for a limited number of staff members, bcrypt password hashes. The data also included orders containing physical addresses and the payment method used. In SUCCESS' disclosure notice, they advised their system had also been abused to send offensive newsletters with quotes falsely attributed to contributors."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1767",
+        "published": "2026-03-31T21:50:29.119Z",
+        "title": "Vacancéole",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le volume de données n'est pas précisé, la fuite a eu lieu entre le 16 et le 20 mars 2026 via un prestataire technique, selon une communication de Vacancéole. Cette fuite s'inscrit dans la continuité du prestataire technique de Belambra et Homair.Statut: ConfirméeType de service: Location de vacances"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1766",
+        "published": "2026-03-31T16:07:18.028Z",
+        "title": "vaucluse provence attractivité fuite du 2026-3-31",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Malware •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1765",
+        "published": "2026-03-31T16:07:13.983Z",
+        "title": "homair fuite du 2026-3-31",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Numéro de téléphone • Adresse email • Destination • Date d’arrivée et de départ • Montant de la réservation •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1641",
+        "published": "2026-03-31T13:56:05.015Z",
+        "title": "fédération sportive et culturelle de france fuite du 2026-2-26",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-civiliténomprénomgenre • date de naissance • nationalité • pays de naissance • adresse postale • numéro de licencecode adhérent • discipline sportive • structure d'appartenance •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1764",
+        "published": "2026-03-31T13:26:32.356Z",
+        "title": "la mine bleue fuite du 2026-3-31",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Code postalpays • Adresse email • Historique des achats •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1741",
+        "published": "2026-03-31T11:53:42.971Z",
+        "title": "europa (commission européenne) fuite du 2026-3-24",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Source •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1758",
+        "published": "2026-03-30T16:42:03.181Z",
+        "title": "La Centrale de Financement",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "411 000 fichiers (387 Go) revendiqués et mis en vente par l'acteur Sorb. Plusieurs documents d'identité, documents financier exposés en échantillons.Statut: RevendiquéeType de service: Courtier en crédit et assurance"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1759",
+        "published": "2026-03-30T15:44:02.590Z",
+        "title": "gdquest fuite du 2026-3-30",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Adresse email • Titre et tarif des cours suivi • Pseudo et slug du compte •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1760",
+        "published": "2026-03-30T11:42:14.961Z",
+        "title": "Belambra",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Information du 25 mars 2026 communiquée par email aux clients suite à un incident de sécurité chez un prestataire en charge du système de réservation. Le volume de données n'a pas été précisé.Statut: ConfirméeType de service: Hôtellerie"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1757",
+        "published": "2026-03-28T19:00:15.494Z",
+        "title": "Fédération Française Handisport",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "La vente des données personnelles de 197 276 adhérents de la Fédération Française Handisport a été revendiquée par l'acteur HexDex le 28 mars 2026.Statut: RevendiquéeType de service: Fédération sportive"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1756",
+        "published": "2026-03-28T18:02:04.986Z",
+        "title": "Le Petit Vapoteur",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "La fuite de données de 3.3 millions de clients et 599 employés de Le Petit Vapoteur, revendiquée par l'acteur 'undef' en mars 2026, proviendrait du site e-commerce et expose des données personnelles, coordonnées, logs de connexion et des informations sur les employés incluant leurs photos.Statut: RevendiquéeType de service: E-commerce (Vapotage)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1660",
+        "published": "2026-03-28T07:15:46.144Z",
+        "title": "Breachforums.V5",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "BreachForums Version 5, a hacking forum, was publicly exposed in March 2026, leaking 340k unique email addresses along with usernames and Argon2 password hashes."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1754",
+        "published": "2026-03-27T15:35:10.034Z",
+        "title": "Scalian",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 24 mars 2026, le CSE de Scalian a informé ses salariés d'un vol de données depuis un applicatif interne. Les données personnelles d'un nombre non spécifié de salariés ont été dérobées, ainsi que des documents d'identité et informations bancaires pour 'quelques dizaines' d'entre eux.Statut: ConfirméeType de service: Conseil en management et ingénierie"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1751",
+        "published": "2026-03-26T10:43:16.686Z",
+        "title": "les champs libres fuite du 2026-3-26",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Mot de passe (🤬) •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1750",
+        "published": "2026-03-26T00:09:14.000Z",
+        "title": "Sound Radix",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, the audio production tools company Sound Radix disclosed a data breach that they subsequently self-submitted to HIBP. Attributed to unauthorised access to a customer support platform, the incident impacted 293k unique email addresses and names of users who had interacted with their support team. Sound Radix advised that whilst there is no evidence their broader user database was accessed, it is possible that additional data including hashed passwords may have been exposed. No financial or credit card information was impacted."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1744",
+        "published": "2026-03-24T18:40:43.588Z",
+        "title": "Système d'Information sur les Armes (SIA)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 62 511 enregistrements d'armes et de leurs propriétaires, issus du Système d'Information sur les Armes (SIA), la base de données centralisée du gouvernement français pour le suivi et la gestion des armes à feu, ont été mis en vente par l'acteur de la menace HexDex.Statut: RevendiquéeType de service: Système d'information gouvernemental"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1740",
+        "published": "2026-03-24T16:42:22.070Z",
+        "title": "métropole marseille fuite du 2026-3-24",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Adresse email •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1743",
+        "published": "2026-03-24T12:35:17.430Z",
+        "title": "Mondial Tissus",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "365 900 clients uniques de Mondial Tissus (période de 2019 à 2026) revendiqués par l'acteur Dumpsec sur le forum DarkForums.Statut: RevendiquéeType de service: Vente de tissus et mercerie"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1742",
+        "published": "2026-03-24T12:35:17.421Z",
+        "title": "CROUS",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Revendication de la vente de 198 Go de données par l'acteur DumpSec, couvrant la période 2018-2026. La fuite contiendrait 1,9 million de lignes et 329 000 documents. Les CROUS étant un service public national, cette violation impacterait des étudiants sur l'ensemble du territoire français. Les données exposées sont particulièrement sensibles, incluant des documents d'identité (CNI, passeports), des dossiers scolaires et des informations financières (fiches de paie).Statut: RevendiquéeType de service: Services aux étudiants"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1739",
+        "published": "2026-03-24T10:35:28.546Z",
+        "title": "fédération française de vol libre fuite du 2026-3-24",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom• Numéro de licence fédérale • Structure de rattachement • Sports pratiqués • Âge et date de naissance • Qualifications éventuelles •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1731",
+        "published": "2026-03-23T22:52:37.164Z",
+        "title": "Ministère de l'Éducation",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur 'HexDex' a mis en vente une base de données provenant du système compas gérant les académies, couvrant 34 ans d'historique (1992-2026) et concernant 262 651 enseignants, futurs enseignants et professeurs stagiaires. La fuite contient notamment 231 941 numéros de téléphone et 206 169 adresses postales.Statut: ConfirméeType de service: Service public"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1738",
+        "published": "2026-03-23T09:13:57.426Z",
+        "title": "Allopneus",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Mise en vente par l'acteur HexDex sur le forum DarkForums d'une base de données contenant 739 316 enregistrements, correspondant à 453 299 clients uniques et 513 089 numéros de téléphone uniques. La fuite couvre la période de 2014 à 2026.Statut: RevendiquéeType de service: Vente de pneus en ligne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1736",
+        "published": "2026-03-21T23:34:54.179Z",
+        "title": "Airsoft-Entrepot",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur HexDex a mis en vente plusieurs bases de données d'Airsoft-Entrepot, contenant les informations de 363 000 clients (dont 328k emails et 243k téléphones), 2.9 millions de factures, 6.1 millions de lignes de livraison et 937 000 lignes de ventes. Les données s'étendent de 2013 au 17 mars 2026.Statut: RevendiquéeType de service: Vente en ligne (Airsoft)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1734",
+        "published": "2026-03-20T15:58:53.857Z",
+        "title": "La Mutuelle Familiale",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Les données de 113 000 adhérents de la Mutuelle Familiale sont potentiellement concernées suite à une intrusion informatique découverte le 17 mars 2026.Statut: ConfirméeType de service: Mutuelle"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1733",
+        "published": "2026-03-20T15:03:17.758Z",
+        "title": "Confédération Musicale de France (CMF)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Mise en vente des données de 109 302 membres de la Confédération Musicale de France (CMF) par l'acteur de la menace HexDex. La CMF est une organisation nationale qui rassemble des ensembles musicaux amateurs. La fuite est particulièrement sensible car elle expose les données personnelles complètes de nombreux membres, majoritairement mineurs, incluant des notes internes détaillant des informations sur leur santé (handicaps, troubles) et leur parcours scolaire.Statut: RevendiquéeType de service: Fédération musicale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1732",
+        "published": "2026-03-20T15:03:17.729Z",
+        "title": "Enseignement Catholique",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Revendication par les acteurs 'ryolait' et '@HexDex' de la compromission de l'annuaire Gabriel des établissements privés catholiques. Le volume est une estimation basée sur la revendication des hackers et contiendrait les données de 1.42 million de parents, 2 millions d'enfants et 246 000 enseignants. Mise en vente le 20 mars 2026.Statut: RevendiquéeType de service: Éducation"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1728",
+        "published": "2026-03-18T19:37:35.730Z",
+        "title": "Canada Goose",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "En février 2026, revendication par le groupe de hackers ShinyHunters d'une fuite de données désormais publiée sur Darkforums, contenant 538 334 comptes clients uniques du site CanadaGoose.com à travers le monde. Les données exposées contiennent un historique de transactions du 29 août 2014 au 22 juin 2025. Après analyse, 10 816 utilisateurs français sont concernés.Statut: ConfirméeType de service: Fabricant de vêtements de luxe"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1727",
+        "published": "2026-03-18T16:18:18.046Z",
+        "title": "musée des arts et métier fuite du 2026-3-18",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse mail • Information liés au compte utilisateur • Commandes •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1726",
+        "published": "2026-03-18T16:18:17.437Z",
+        "title": "mingat fuite du 2026-3-18",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Ransomware •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1698",
+        "published": "2026-03-18T05:34:44.000Z",
+        "title": "Aura",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, the online safety service Aura disclosed a data breach that exposed 900k unique email addresses. The data was primarily associated with a marketing tool from a previously acquired company, with fewer than 20k active Aura customers affected. Exposed data included names, phone numbers, physical and IP addresses, and customer service notes. Aura advised that no Social Security numbers, passwords or financial information were compromised."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1723",
+        "published": "2026-03-17T21:05:36.514Z",
+        "title": "bibliothèque nationale de france fuite du 2026-3-17",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse électronique •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1724",
+        "published": "2026-03-17T13:00:19.060Z",
+        "title": "Fédération Française de Rugby",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Plus de 500 000 licenciés (2003-2026) issus de la Fédération Française de Rugby. La fuite, publiée sur le forum DarkForums par l'acteur Cybernox, contient également des déclarations d'accident, des CNI, des photos et des informations sur les clubs et terrains.Statut: RevendiquéeType de service: Fédération sportive"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1672",
+        "published": "2026-03-17T10:35:07.109Z",
+        "title": "palais de la porte dorée fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Date de naissance • Historique des achats • Mot de passe chiffré (??? 🤷) • Source"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1721",
+        "published": "2026-03-15T10:13:33.603Z",
+        "title": "Divine Skins",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, the League of Legends custom skins service Divine Skins suffered a data breach. The incident was disclosed via the service's Discord server, where Divine Skins stated that an unauthorised third party accessed part of its systems, deleted all skins from the database and exposed email addresses and usernames. The data also contained a history of purchases made by users."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1705",
+        "published": "2026-03-15T10:13:33.592Z",
+        "title": "Baydöner",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In March 2026, the Turkish restaurant chain Baydöner suffered a data breach which was subsequently published to a public hacking forum. The incident exposed over 1.2M unique email addresses along with names, phone numbers, cities of residence and plaintext passwords. A small number of records also included Turkish national ID number and date of birth. In their disclosure notice, Baydöner stated that payment and financial data was not affected."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1722",
+        "published": "2026-03-14T03:06:58.580Z",
+        "title": "Sarah Knafo #2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Fuite de 594 numéros de téléphone issus du système de la campagne municipale (call center) de Sarah Knafo, et concernant principalement des membres parisiens du parti Reconquête!. Initialement publiée par solivann667 le 30 janvier 2026, le vol de données n'avaient pas été évoqué en l'absence de précision permettant d'identifier l'origine exacte. Le hacker a apporté des précisions ces derniers jours.Statut: RevendiquéeType de service: Parti politique"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1720",
+        "published": "2026-03-13T19:08:32.920Z",
+        "title": "GPS Santé",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "890 000 utilisateurs de GPS Santé, un réseau de professionnels de santé qui met en relation des patients avec des médecins et spécialistes. La fuite a été revendiquée par l'acteur DumpSec sur le forum BreachForums le 13 mars 2026.Statut: RevendiquéeType de service: Rendez-vous médicaux"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1719",
+        "published": "2026-03-13T15:58:30.275Z",
+        "title": "Université Paris-Est",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 315 000 lignes de données de l'Université Paris-Est ont été mises en vente par l'acteur s1n0xy le 8 mars 2026. Base administrative et partenaires.Statut: ConfirméeType de service: Éducation"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1718",
+        "published": "2026-03-13T11:46:46.774Z",
+        "title": "Therapeutes.com",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Fuite des données de 71 502 patients et 199 697 rendez-vous sur Therapeutes.com, une plateforme de mise en relation avec des professionnels de la santé mentale (thérapeutes, psychologues). Publiée par l'acteur HexDex.Statut: RevendiquéeType de service: Plateforme de santé mentale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1716",
+        "published": "2026-03-12T15:41:52.186Z",
+        "title": "Medoucine",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Les données de 813 866 utilisateurs de Medoucine.com, une plateforme de mise en relation avec des praticiens de médecines alternatives, ont été mises en vente par l'acteur HexDex le 12 mars 2026. La fuite, qui inclut 653 982 emails et 804 983 téléphones uniques, concerne des réservations s'étalant de 2021 à 2026.Statut: RevendiquéeType de service: Mise en relation (médecines alternatives)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1519",
+        "published": "2026-03-11T14:30:14.593Z",
+        "title": "Médecins Remplaçants (Base de données 2026)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 23 535 lignes de données. Publication sur BreachForums d'une base de données présentée comme le répertoire 2026 des médecins remplaçants en France.Statut: RevendiquéeType de service: Santé"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1551",
+        "published": "2026-03-11T14:30:14.205Z",
+        "title": "Voyages Robin",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Volume exact indéterminé au 07/02/2026. Attaque par ransomware avec double-extorsion menée par le groupe Qilin. L'attaque inclut l'exfiltration de documents sensibles tels que des passeports clients et des contrats consulaires avant le chiffrement des systèmes.Statut: RevendiquéeType de service: Voyage tourisme"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1554",
+        "published": "2026-03-11T14:30:14.198Z",
+        "title": "Immo-pop",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "28 000 enregistrements de clients et de personnels extraits d'une base de données compromise en juin 2025, mis en vente/publié sur BreachForums par l'acteur DumpSec en février 2026.Statut: RevendiquéeType de service: Immobilier"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1553",
+        "published": "2026-03-11T14:30:14.193Z",
+        "title": "Rankfyt",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "1 227 inscriptions de participants (incluant les détails de plus de 2 000 individus en comptant les coéquipiers) couvrant la période d'août 2025 à février 2026. Données exfiltrées de la plateforme française de gestion de compétitions de fitness et diffusées sur un forum spécialisé.Statut: ConfirméeType de service: Sport fitness"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1561",
+        "published": "2026-03-11T14:30:14.186Z",
+        "title": "Groupe Atalian",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "4 198 129 lignes (incluant des doublons) exfiltrées lors d'une attaque par rançongiciel survenue le 6 décembre 2025, confirmée par l'entreprise, publiées par l'acteur Shenron sur un forum cybercriminel en février 2026.Statut: ConfirméeType de service: Services externalisés"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1560",
+        "published": "2026-03-11T14:30:14.173Z",
+        "title": "Prozon",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Volume total non spécifié. Incident de sécurité informatique via un accès non autorisé à un outil d'infrastructure en février 2026. La fuite concerne les clients de la plateforme et inclut des documents joints sensibles. L'entreprise a confirmé l'incident et notifié la CNIL.Statut: ConfirméeType de service: Équipement professionnel"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1559",
+        "published": "2026-03-11T14:30:14.170Z",
+        "title": "Renault (Réseau de concessions Sud-Est)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "12 143 fiches clients extraites d'un export de base de données CRM daté du 21 mai 2025, ciblant les concessions du Sud-Est de la France (Miramas, Istres, Grans). Données mises en ligne le 9 février 2026 par l'acteur 0xKirigaya.Statut: RevendiquéeType de service: Automobile (Vente et entretien)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1568",
+        "published": "2026-03-11T14:30:14.099Z",
+        "title": "Ciffreo Bona",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "70 000 comptes clients (professionnels et particuliers) couvrant 15 ans d'activité (2009-2024), incluant des identifiants avec mots de passe en clair. Données publiées par l'acteur 'selluk' sur un forum de cybercriminalité.Statut: RevendiquéeType de service: Négoce BTP"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1567",
+        "published": "2026-03-11T14:30:14.092Z",
+        "title": "Birdee",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "13 016 comptes clients uniques extraits de deux fichiers de base de données (info et wallet). Birdee a fermé en 2025. La fuite, diffusée par l'acteur 'Zoro' sur un forum spécialisé, contient des archives de profils et de soldes d'investissement.Statut: RevendiquéeType de service: Gestion d'investissement numérique"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1566",
+        "published": "2026-03-11T14:30:14.089Z",
+        "title": "Safran Group",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "718 716 lignes de données critiques mises en vente sur BreachForums par l'acteur Spirigatito. Le leak, issu du portail digital sur la période 2020-2026, expose la chaîne logistique mondiale. L'auteur menace de publier d'autres bases de données supplémentaires si ses conditions ne sont pas remplies.Statut: ConfirméeType de service: Aéronautique et défense"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1578",
+        "published": "2026-03-11T14:30:14.047Z",
+        "title": "Chez Switch",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "19 313 clients compromis dans la base de données de chez-switch.fr, issue d'une intrusion réalisée en février 2025. Les données ont été publiées par l'acteur cry1ngb1tch6x6 après que l'entreprise a ignoré les demandes de rançon.Statut: RevendiquéeType de service: Fournisseur d'énergie et opérateur mobile"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1577",
+        "published": "2026-03-11T14:30:14.040Z",
+        "title": "Gustave-Auto",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "3 600 lignes de données contenant des informations personnelles (PII) et bancaires (IBAN) extraites de la base de données de gustave-auto.com, mises en vente par l'acteur p0ppin le 13 février 2026 sur un forum spécialisé.Statut: RevendiquéeType de service: Gestion de flotte de véhicules"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1576",
+        "published": "2026-03-11T14:30:14.033Z",
+        "title": "Kimsufi (OVHcloud)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le volume de cette fuite, revendiquée le 13 février 2026 par l'acteur Z-SH4DOWSPEECH sur Telegram, resterait inconnu. L'attaque ciblerait potentiellement 51 bases de données distinctes de l'infrastructure Kimsufi (marque d'OVHcloud). La mise en vente des données s'effectuerait via un canal privé, bien qu'aucun échantillon n'ait été diffusé pour confirmer officiellement l'ampleur de l'intrusion.Statut: RevendiquéeType de service: Hébergement web, serveurs dédiés et VPS"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1585",
+        "published": "2026-03-11T14:30:13.907Z",
+        "title": "EPITA (École Pour l'Informatique et les Techniques Avancées)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "14 753 enregistrements incluant des étudiants et membres du personnel jusqu'à l'horizon 2030, mis en vente par l'acteur 'yneov18' sur BreachForums. L'authenticité globale de la base resterait à confirmer et les éléments semble indiquer une fuite provenant d'un environnement de pré-production ou une base de données non exhaustive.Statut: RevendiquéeType de service: Enseignement Supérieur / École d'Ingénieurs"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1588",
+        "published": "2026-03-11T14:30:13.843Z",
+        "title": "Socloz (Apple, Nike etc...)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 31 millions de lignes de données (réservations) exfiltrées début 2026. La fuite, revendiquée par 'DumpSec', impacte les clients de nombreuses marques partenaires dont Adidas Originals, Apple, Bonobo, Bréal, Cache Cache, Creeks, Kimbaloo, Lacoste, Licencias, Logitech, Morgan, Nike, Olyne, Pimkie, Sandro, Trappeur.Statut: RevendiquéeType de service: Plateforme omnicanale de gestion de stock"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1587",
+        "published": "2026-03-11T14:30:13.819Z",
+        "title": "Adidas",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Fuite de données concernant environ 1 617 clients et partenaires uniques identifiés via leurs adresses e-mail. La revendication par le groupe LAPSUS$ fait état de 815 000 lignes, un chiffre correspondant principalement à des logs techniques. Attaque via Prestashop.Statut: ConfirméeType de service: Plateforme E-commerce B2B (PrestaShop)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1591",
+        "published": "2026-03-11T14:30:13.813Z",
+        "title": "Axa",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Plus de 8 millions de clients (données et accès) d'AXA France auraient été compromis en février 2026. L'acteur `kazutlg` exige une rançon pour éviter la publication des données sous 30 jours.Statut: RevendiquéeType de service: Assurance et Banque"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1596",
+        "published": "2026-03-11T14:30:13.784Z",
+        "title": "FICOBA (Ministère de l'Économie et des Finances)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Les données d'1,2 million de comptes bancaires français ont été consultées illégalement à partir de fin janvier 2026 par un acteur malveillant via l'usurpation d'identifiants, selon une annonce de Bercy.Statut: ConfirméeType de service: Fichier national des comptes bancaires"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1595",
+        "published": "2026-03-11T14:30:13.726Z",
+        "title": "Lycée Carnot Paris",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 5022 fiches utilisateurs (élèves, parents, professeurs) ont été extraites et publiées le 18 février 2026 sur BreachForums depuis une ancienne plateforme ENT.Statut: RevendiquéeType de service: Éducation / Lycée"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1594",
+        "published": "2026-03-11T14:30:13.714Z",
+        "title": "RTL Group",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Base de données de ~27 000+ employés et ex-employés, postée sur BreachForums le 18/02/2026. Le périmètre inclut potentiellement des salariés du Groupe M6 (M6, W9, RTL, Fun Radio) occupant des postes de journalistes, techniciens, ou administratifs.Statut: RevendiquéeType de service: Groupe audiovisuel"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1593",
+        "published": "2026-03-11T14:30:13.709Z",
+        "title": "Cyrillus",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Nombre de clients non communiqué, fuite issue d'un prestataire tiers détectée le 13 février 2026.Statut: ConfirméeType de service: Prêt-à-porter"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1601",
+        "published": "2026-03-11T14:30:13.704Z",
+        "title": "Valgo",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "279 Go de données (225 372 fichiers) internes, financières et clients, exfiltrées par un acteur de type ransomware et publiées le 11 février 2026.Statut: RevendiquéeType de service: Dépollution de sites industriels"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1612",
+        "published": "2026-03-11T14:30:13.626Z",
+        "title": "Azaé",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 19 000 personnes concernées (clients et employés) Données publiées le 20/02/2026 et 24/02/2026 sur BreachForums par 'naim1337', exposant les informations de personnes souvent âgées et dépendantes.Statut: RevendiquéeType de service: Services à la personne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1611",
+        "published": "2026-03-11T14:30:13.619Z",
+        "title": "Gendarmerie Nationale (RESANA)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Fuite de 65 000 lignes de données d'employés de la Gendarmerie et civils (via Resana), publiée sur BreachForums par l'acteur 'Angel_Batista'.Statut: ConfirméeType de service: Outil collaboratif"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1610",
+        "published": "2026-03-11T14:30:13.592Z",
+        "title": "Ministère de l'Intérieur & des Armées",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Compilation de 8 861 enregistrements uniques d'agents des ministères de l'Intérieur et des Armées, publiée le 20 février 2026 par l'acteur HexDex sur un forum.Statut: ConfirméeType de service: Gouvernement &amp; Défense"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1609",
+        "published": "2026-03-11T14:30:13.535Z",
+        "title": "Police, Gendarmerie, CNIL (agents)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Compilation de données personnelles concernant 2 393 agents de l'État (Gendarmerie, Police, Défense, CNIL) publiée le 20/02/2026 par l'acteur HexDex. La fuite est un agrégat de plus de 400 sources compromises, ciblant majoritairement les domaines gendarmerie.interieur.gouv.fr et interieur.gouv.fr.Statut: ConfirméeType de service: Sécurité intérieure et Renseignement"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1608",
+        "published": "2026-03-11T14:30:13.479Z",
+        "title": "OSAC (Aviation civile)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Extraction d'environ 420 Go de données revendiqués par le groupe LAPSUS$.Statut: RevendiquéeType de service: Sécurité de l'aviation civile"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1625",
+        "published": "2026-03-11T14:30:13.398Z",
+        "title": "MaSalleDeSport (Basic-Fit, Fitness Park..)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Revendication par le hacker '84City' d'une compromission de MaSalleDeSport, prestataire CRM pour plus de 2000 salles de sport (dont Basic-Fit, Fitness Park, ON AIR Fitness et L'Orange Bleue). L'attaquant affirme avoir un accès persistant aux données clients. Email du hacker envoyé aux clients. Volume non spécifié.Statut: RevendiquéeType de service: CRM pour salles de sport"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1639",
+        "published": "2026-03-11T14:30:13.189Z",
+        "title": "MyConnect",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Environ 125 000 lignes de données et 18 Go de fichiers (21 106 fichiers dans 15 978 dossiers) incluant des cartes d'identité, RIB, photos et actes de naissance, concernant les utilisateurs de l'agence d'intérim MyConnect, publiés par l'acteur DumpSec.Statut: RevendiquéeType de service: Agence d'intérim digitale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1638",
+        "published": "2026-03-11T14:30:13.184Z",
+        "title": "CAF (RSA)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Un volume non spécifié de données d'allocataires du RSA a été exfiltré suite à un accès non autorisé constaté en janvier 2026 chez la Dinum, un prestataire de la Caisse d'Allocations Familiales (CAF).Statut: ConfirméeType de service: Prestations sociales"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1642",
+        "published": "2026-03-11T14:30:13.039Z",
+        "title": "Santeo",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 26 février 2026, l'acteur HexDex a mis en vente la base de données de 116 122 clients et prospects du comparateur Santeo.net, couvrant la période de 2001 à 2026.Statut: RevendiquéeType de service: Comparateur d'assurances santé"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1648",
+        "published": "2026-03-11T14:30:12.992Z",
+        "title": "Eiffage (NextSend)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 25/02/2026, le groupe cybercriminel LAPSUS$ a revendiqué la publication d'une base de données de 175 942 enregistrements (collaborateurs et contacts externes) issue de la plateforme NextSend (Hegyd) utilisée par Eiffage contenus dans 77 fichiers issus du piratage. La fuite expose des informations d'identité, techniques, mais aussi des données commerciales et financières sensibles (SIRET, CA, niveau de satisfaction).Statut: ConfirméeType de service: BTP / Concessions"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1655",
+        "published": "2026-03-11T14:30:12.924Z",
+        "title": "UNSS #2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "9 700 000 enregistrements d'élèves (dont 1 557 000 photos) couvrant la période 2025-2026 et des archives, mis en vente par l'acteur DumpSec. Données concernant des mineurs sur plusieurs années à l'échelle nationaleStatut: RevendiquéeType de service: Fédération du sport scolaire"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1659",
+        "published": "2026-03-11T14:30:12.863Z",
+        "title": "BE ATEX",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Une base de données de 2500 enregistrements (+2200 clients et +300 employés) a été mise en vente en février 2026 par l'acteur 'toky019'.Statut: RevendiquéeType de service: Sécurité et détection de gaz en atmosphères explosives"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1675",
+        "published": "2026-03-11T14:30:12.859Z",
+        "title": "Bioserveur",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "2 200 documents (PDF), contenant des données médicales très sensibles (comptes rendus d'analyses), ont été exfiltrés de la plateforme bioserveur.com et mis en vente par l'acteur 'epi' sur BreachForums le 2 mars 2026. Les données exposées proviennent notamment des laboratoires SELARL de PATHOLOGIE et BIOPATH-OI.Statut: RevendiquéeType de service: Gestion d'analyses médicales"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1674",
+        "published": "2026-03-11T14:30:12.853Z",
+        "title": "Tchap",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Revendication par l'acteur 'epi' d'un scraping de plus de 10 000 membres ('member scrape: 10K+') et 7 conversations ('conversation scrape: 7'). Les salons prétendument aspirés incluent : Forge MI, PC STORM Admins, Police Nationale, Tchap Retex, DTNUM Interieur, Gendarmerie Nationale, et Police Judiciaire.Statut: RevendiquéeType de service: Messagerie de l'État"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1684",
+        "published": "2026-03-11T14:30:12.845Z",
+        "title": "Be-bunk",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Plus de 75 millions de lignes et 200 Go de données (logs, code source partiel, IBAN français) concernant les clients de la société de services de paiement Be-bunk, principalement active en Nouvelle-Calédonie, Wallis &amp; Futuna et Polynésie Française, ont été mises en vente par l'acteur de la menace Spirigatito.Statut: ConfirméeType de service: Services de paiement"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1688",
+        "published": "2026-03-11T14:30:12.841Z",
+        "title": "Brouillon de culture",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "8 220 utilisateurs revendiqués par l'acteur neurotoxine le 4 mars 2026 sur Breachforums.Statut: RevendiquéeType de service: Librairie"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1687",
+        "published": "2026-03-11T14:30:12.768Z",
+        "title": "YGG Torrent",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Compromission d'un administrateur résultant en la fuite d'une archive de ~29 Go (plus de 5 400 fichiers), exposant des données sur ~6,6 millions d'utilisateurs. Le dump contient le code source complet (.php, .js), les bases de données (.sql), et révèle des pseudonymes, l'historique P2P complet, des identifiants internes en clair (mots de passe, clés SSH) et des scripts malveillants (infostealers).Statut: ConfirméeType de service: Tracker BitTorrent"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1694",
+        "published": "2026-03-11T14:30:12.742Z",
+        "title": "ImmoJeune",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Les données de 713 814 personnes, principalement des étudiants et jeunes actifs, ayant déposé un dossier de location sur la plateforme ImmoJeune, ont été mises en vente par l'acteur 'HexDex' le 5 mars 2026. La fuite est d'une sensibilité particulièrement élevée car elle expose des dossiers complets contenant des informations d'identité, de contact, financières et professionnelles détaillées, non seulement sur les candidats mais aussi sur leurs garants.Statut: RevendiquéeType de service: Plateforme de location immobilière"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1697",
+        "published": "2026-03-11T14:30:12.737Z",
+        "title": "TAJ (Traitement d'antécédents judiciaires)",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Package de 4 Go revendiqué par LAPSUS$ le 6 mars 2026, présenté comme une image système complète. L'ensemble permettrait de transformer un ordinateur en un poste de travail pleinement opérationnel pour la Police ou la Gendarmerie, incluant les accès VPN, les logiciels métiers pour consulter le TAJ et rédiger des procédures, ainsi que les outils pour configurer les smartphones 'Neo' des agents.Statut: RevendiquéeType de service: Ministère de l'Intérieur"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1700",
+        "published": "2026-03-11T14:30:12.657Z",
+        "title": "Ordoclic",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 7 mars 2026, l'acteur ImVec4 a publié une fuite de données d'Ordoclic au nom du groupe 'samos &amp; his for life', contenant les données d'au moins 1520 patients, 3177 contacts professionnels et plus de 1076 historiques médicaux.Statut: RevendiquéeType de service: Gestion d'ordonnances médicales"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1699",
+        "published": "2026-03-11T14:30:12.652Z",
+        "title": "SYNLAB France",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur HexDex revendique 161 Go de données de SYNLAB, un des leaders européens du diagnostic médical (analyses de sang, etc.). Bien qu'il affirme que les données sont internes (financières, industrielles) et non des données de patients, un impact indirect est possible : la fuite peut être utilisée pour des attaques de phishing très ciblées contre les clients et perturber les services en révélant des failles de sécurité.Statut: RevendiquéeType de service: Diagnostic médical"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1704",
+        "published": "2026-03-11T14:30:12.645Z",
+        "title": "FNATH",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 2026-03-08, l'acteur Angel_Batista a publié sur Breachforums 197 Go de données de la FNATH, une association française dédiée à la défense des accidentés de la vie. La fuite contient les informations de 45 428 membres et 29 144 dossiers de cas.Statut: RevendiquéeType de service: Association d'aide aux accidentés"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1703",
+        "published": "2026-03-11T14:30:12.641Z",
+        "title": "Airclaim",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "1 042 ressortissants français figurent parmi les 55 867 dossiers clients de différents pays, incluant des documents d'identité (passeports, signatures), qui ont été mis en vente par les cybercriminels HexDex et Angel_Batista le 8 mars 2026.Statut: RevendiquéeType de service: Service de réclamation de compensation aérienne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1702",
+        "published": "2026-03-11T14:30:12.636Z",
+        "title": "Le Temps des Cerises",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "900 000 lignes (commandes clients), couvrant une période d'environ 6 ans (oct. 2019 - fév. 2026), ont été mises en vente par l'acteur 'DumpSec'.Statut: RevendiquéeType de service: Prêt-à-porter"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1701",
+        "published": "2026-03-11T14:30:12.622Z",
+        "title": "Stych",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le cybercriminel 'keta' a mis en vente une base de données de 1 342 952 enregistrements, correspondant à environ 1 268 460 personnes uniques, provenant de l'auto-école en ligne Stych.fr. La fuite a été annoncée le 8 mars 2026 sur BreachForums. Confirmé par l'entreprise auprès des clients.Statut: ConfirméeType de service: Auto-école en ligne"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1707",
+        "published": "2026-03-11T14:30:12.609Z",
+        "title": "Fédération Omnisports ASPTT",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "L'acteur HexDex revendique la vente des informations de 1 005 361 membres uniques de l'ASPTT pour la période d'inscriptions de 2014 à 2026.Statut: RevendiquéeType de service: Fédération sportive"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1706",
+        "published": "2026-03-11T14:30:12.586Z",
+        "title": "Vatel Capital",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Le 9 mars 2026, la société de gestion Vatel Capital a notifié ses clients par mail d'une exposition accidentelle de fichiers survenue entre le 21 février et le 3 mars 2026. La cause est une erreur de configuration sur un nouveau serveur ayant laissé un port de communication ouvert. Le volume de données exfiltrées par des tiers non autorisés n'est pas précisé.Statut: ConfirméeType de service: Gestion d'actifs"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1714",
+        "published": "2026-03-11T14:30:12.565Z",
+        "title": "Intersport Rent",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "Publication le 11 mars 2026 par l'acteur 'placenta' d'une base de données de plus de 1.2 million de lignes concernant 476 282 clients uniques, compromise en mars 2025. Sur ce volume, 891 972 enregistrements sont associés à des numéros de téléphone français (+33). Cette fuite de données cible spécifiquement la branche de location de matériel de ski ('Intersport Rent') et non l'ensemble des activités commerciales du groupe Intersport.Statut: RevendiquéeType de service: Location de matériel de ski"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1647",
+        "published": "2026-03-11T14:30:11.342Z",
+        "title": "westfield club fuite du 2026-2-27",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Numéro de téléphone • Code postal • Date de naissance • Plaque d’immatriculation • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1575",
+        "published": "2026-03-11T14:30:11.226Z",
+        "title": "voyage privé fuite du 2026-2-13",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Pays de résidence • Adresse email • Numéro de téléphone • Numéro et date d’expiration du passeport • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1710",
+        "published": "2026-03-11T14:30:11.170Z",
+        "title": "vivaticket fuite du 2026-3-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Données relatives aux comptes utilisateurs • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1629",
+        "published": "2026-03-11T14:30:10.999Z",
+        "title": "uniscité fuite du 2026-2-23",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Identité (nomprénomstatut) • Coordonnées (adresseemailtéléphone) • Données de mission (datesstatut) • Documents (CNIphotosdocuments signésactes de naissance) • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1671",
+        "published": "2026-03-11T14:30:10.740Z",
+        "title": "tactis fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Ransomware • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1558",
+        "published": "2026-03-11T14:30:10.628Z",
+        "title": "sumsub fuite du 2026-2-9",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Numéro de téléphone • Adresse email • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1618",
+        "published": "2026-03-11T14:30:10.230Z",
+        "title": "réglo mobile fuite du 2026-2-21",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse postale • Adresse email • Date de naissance • Numéro de téléphone • Code PUK • Relevés de communications • Numéro de carte bancaire (partiellement masqué) • IBAN (partiellement masqué) • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1709",
+        "published": "2026-03-11T14:30:10.201Z",
+        "title": "région occitanie fuite du 2026-3-10",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Date de naissance • Adresse email • Numéro de téléphone • Date de naissance • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1713",
+        "published": "2026-03-11T14:30:09.976Z",
+        "title": "pronote fuite du 2026-3-11",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1670",
+        "published": "2026-03-11T14:30:09.865Z",
+        "title": "plateforme des cours d’adultes de paris fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nom et prénom • Date de naissance • Adresse électronique • Adresse postale • Numéro de téléphone • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1557",
+        "published": "2026-03-11T14:30:09.781Z",
+        "title": "pharmashopi fuite du 2026-2-9",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Numéro de carte bleu • Date d’expiration • CVV • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1693",
+        "published": "2026-03-11T14:30:09.720Z",
+        "title": "penninghen fuite du 2026-3-5",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Date de naissance • Numéro de sécurité sociale • Numéros de téléphone (étudiant + parents) • Adresses postales (étudiant + parents) • Adresses email (étudiant + parents) • Situation familiale • Nomprénomprofession de la fratrie • Établissement scolaire • Photo d'identité • Pièce d'identité (passeport ou CNI) • IBAN • Bulletin de notes • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1617",
+        "published": "2026-03-11T14:30:09.664Z",
+        "title": "paypal fuite du 2026-2-21",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Numéro de téléphone • Adresse postale • Numéro de sécurité social • Date de naissance • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1624",
+        "published": "2026-03-11T14:30:09.232Z",
+        "title": "on air fitness fuite du 2026-2-22",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Source • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1628",
+        "published": "2026-03-11T14:30:09.206Z",
+        "title": "olympique de marseille fuite du 2026-2-23",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-nomprénom • adresse postale • date de naissance • numéro de téléphone • informations comptes de fidélité et historique de commandes • informations sur les membres du staff • profils réseaux sociaux • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1550",
+        "published": "2026-03-11T14:30:09.151Z",
+        "title": "office français de la biodiversité fuite du 2026-2-7",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénoms • Date et ville de naissance • Adresse postale • Numéros de téléphone fixe et portable • Nationalité • Adresse e-mail • Numéro de permis de chasser • Informations relatives à la demandel’instruction ou à l’examen du permis de chasser • Inscription au fichier national des personnes interdites d'acquisition et de détention d'armes • Convocationdatesprésence et résultat • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1669",
+        "published": "2026-03-11T14:30:08.575Z",
+        "title": "mdph 92 fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Adresse mail • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1668",
+        "published": "2026-03-11T14:30:08.114Z",
+        "title": "lisi fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-IBAN • Contrat • Données d’entreprise • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1574",
+        "published": "2026-03-11T14:30:08.062Z",
+        "title": "les restos du cœur fuite du 2026-2-13",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Fonction et statut • Adresse email • Numéro de téléphone • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1556",
+        "published": "2026-03-11T14:30:07.713Z",
+        "title": "la carte avantage jeune fuite du 2026-2-9",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Date de naissance • Adresse postale • Numéro de téléphone • Carte d’identité • Acte de naissance • Signature • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1607",
+        "published": "2026-03-11T14:30:07.635Z",
+        "title": "keep cool fuite du 2026-2-20",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-nomprénom • adresse email • numéro de téléphone • date de naissance • genre • numéro d'adhérent • nom du club • données d'adhésion • photo d'identité • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1616",
+        "published": "2026-03-11T14:30:07.347Z",
+        "title": "innovorder fuite du 2026-2-21",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Commandes (IDsticketsmontants TTC/HT/TVApaiements EWallet) • Clients (nomsprénomsemailstéléphones) • Restaurants (SIREN/TVAadressestél pros) • Interface Orders (liste paid WEBmulti-restoschurn tags) • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1600",
+        "published": "2026-03-11T14:30:07.265Z",
+        "title": "idmerit fuite du 2026-2-19",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse postale • Date de naissance • NIR • Numéro de téléphone • Adresse email • Métadonnées de télécommunication • Profils de réseaux sociaux • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1573",
+        "published": "2026-03-11T14:30:07.000Z",
+        "title": "grain de malice fuite du 2026-2-13",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse électronique • Numéro de téléphone • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1615",
+        "published": "2026-03-11T14:30:06.782Z",
+        "title": "fédération française d’athlétisme fuite du 2026-2-21",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse postale • Adresse email • Date et lieu de naissance • Numéro de téléphone • Type de licence • Fonction • Carte d’identité • Mot de passe en clair • Adresse IP • Source • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1582",
+        "published": "2026-03-11T14:30:06.754Z",
+        "title": "fédération française du sport automobile (ffsa) fuite du 2026-2-14",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse postale • Adresse email • Numéro de téléphone • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1606",
+        "published": "2026-03-11T14:30:06.629Z",
+        "title": "fédération française de voitures radio fuite du 2026-2-20",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-nomprénom • date de naissance • numéro de téléphone • adresse email • adresse postale • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1646",
+        "published": "2026-03-11T14:30:06.357Z",
+        "title": "fédération française de ski fuite du 2026-2-27",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-nom de naissanceprénomgenre • date de naissance • pays et ville de naissance • adresse postale • adresse email • numéro de téléphone • membres de la famille associés • type de licenceassuranceclub • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1645",
+        "published": "2026-03-11T14:30:06.099Z",
+        "title": "fédération française de gym fuite du 2026-2-27",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Date de naissance • Genre • Adresse postale • Adresse mail • Numéro de téléphone • N° de licence • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1623",
+        "published": "2026-03-11T14:30:05.869Z",
+        "title": "fédération française de badminton fuite du 2026-2-22",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse postale • Adresse email • Date de naissance • Numéro de téléphone • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1635",
+        "published": "2026-03-11T14:30:05.841Z",
+        "title": "fédération française d'aïkido fuite du 2026-2-25",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-civiliténomprénomnom de naissance • date de naissance • profession • villedépartement et pays de naissance • adresse email • numéro de téléphone • adresse postale • noms et prénoms des parents • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1654",
+        "published": "2026-03-11T14:30:05.812Z",
+        "title": "fédération française d'aéronautique fuite du 2026-2-28",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-nomprénom • date de naissance • adresse postale • adresse email • numéro de téléphone • numéro et type de licence • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1692",
+        "published": "2026-03-11T14:30:05.632Z",
+        "title": "florajet fuite du 2026-3-5",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Numéro de téléphone • Adresse postale • Achat effectué • Message d’accompagnement • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1599",
+        "published": "2026-03-11T14:30:05.567Z",
+        "title": "ffck et sports de pagaie fuite du 2026-2-19",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-NomPrénom • Sexe • Date de naissance • Nom du clubNom du comité départementalCode du comité départementalNom du comité régionalCode du comité régional • Couleur de pagaieType de licence • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1644",
+        "published": "2026-03-11T14:30:05.395Z",
+        "title": "espci fuite du 2026-2-27",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Civiliténom et prénom d’usage • Courriel proet éventuellement personnel s’il a été renseigné • Données d’identification: nom d’utilisateurmais pas le mot de passe • Fonction et affectation • Photosauf si il avait été indiqué qu’elle ne devait servir qu’au badge • Permissions d’accès aux services et aux locaux • Abonnements aux listes de diffusion • Pour les étudiants: inscriptions pédagogiques • Pour le personnel: employeurdomaine d’activité (BAPsection CNRS et CNU) • Pour le personnel salarié de la régie: corpsdate de fin de contrat • Pour les prestatairespartenaires et extérieurs: employeurcatégorie socioprofessionnelle • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1592",
+        "published": "2026-03-11T14:30:05.367Z",
+        "title": "espace ce fuite du 2026-2-18",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Date de naissance • Mot de passe hashé • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1570",
+        "published": "2026-03-11T14:30:04.512Z",
+        "title": "commune de bourg fuite du 2026-2-11",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1586",
+        "published": "2026-03-11T14:30:04.373Z",
+        "title": "cnrs fuite du 2026-2-16",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Date de naissance • Adresse postale • Numéro de sécurité sociale • RIB • Statuttype de contrat • Structure d’affectation • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1667",
+        "published": "2026-03-11T14:30:04.316Z",
+        "title": "cloud imperium games fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Pseudo • Date de naissance • Données de contact • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1598",
+        "published": "2026-03-11T14:30:04.148Z",
+        "title": "cfdt fuite du 2026-2-19",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1666",
+        "published": "2026-03-11T14:30:03.923Z",
+        "title": "centre des monuments nationaux fuite du 2026-3-2",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Adresse mail • Historique d’achat • Code postalpays • Mot de passe chiffré (???) • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1643",
+        "published": "2026-03-11T14:30:03.838Z",
+        "title": "cegedim fuite du 2026-2-27",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-nomprénom • coordonnées • dossier médical (commentaires médecinspathologiesantécédents) • orientation sexuelle • convictions religieuses • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1686",
+        "published": "2026-03-11T14:30:03.540Z",
+        "title": "banque alimentaire fuite du 2026-3-4",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-nomprénom • date de naissance (adultes et mineurs) • adresse postaletéléphone • nomsprénoms des enfants • situation familiale • situation professionnelle • quotient familialreste à vivre • historique de passages et de paiements • commentaires de travailleurs sociaux • identifiants et mots de passe d'associations partenaires • nomsprénoms des travailleurs sociaux • adresses mails des travailleurs sociaux • téléphones de travailleurs sociaux • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1555",
+        "published": "2026-03-11T14:30:03.486Z",
+        "title": "aïkan fuite du 2026-2-9",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-État civil • Données d’identification • IBAN • Source • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1658",
+        "published": "2026-03-11T14:30:03.456Z",
+        "title": "ayomi fuite du 2026-3-1",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-photo de pièce d'identité • extrait Kbis • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1685",
+        "published": "2026-03-11T14:30:02.893Z",
+        "title": "agence nationale de la cohésion des territoires (anct) fuite du 2026-3-4",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "-Nomprénom • Employeur • Adresse email (pro) • Numéro de téléphone (pro) • Adresse postale (pro) • Présentation et domaine d'expertise • Groupes de travail • Source&gt;"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1637",
+        "published": "2026-03-02T07:23:06.000Z",
+        "title": "Lovora",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In February 2026, the couples and relationship app Lovora allegedly suffered a data breach that exposed 496k unique email addresses. The data also included users’ display names and profile photos, along with other personal information collected through use of the app. The app’s maker, Plantake, did not respond to multiple attempts to contact them about the incident."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1590",
+        "published": "2026-03-02T05:27:11.000Z",
+        "title": "Quitbro",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In February 2026, the porn addiction app Quitbro allegedly suffered a data breach that exposed 23k unique email addresses. The data also included users’ years of birth, responses to questions within the app and their last recorded relapse time. The app’s maker, Plantake, did not respond to multiple attempts to contact them about the incident."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1636",
+        "published": "2026-03-02T01:31:29.000Z",
+        "title": "KomikoAI",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In February, the AI-powered comic generation platform KomikoAI suffered a data breach. The incident exposed 1M unique email addresses along with names, user posts and the AI prompts used to generate content. The exposed data enables the mapping of individual AI prompts to specific email addresses."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1572",
+        "published": "2026-03-01T05:34:14.000Z",
+        "title": "Odido",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In February 2026, Dutch telco Odido was the victim of a data breach and subsequent extortion attempt. Shortly after, a total of 6M unique email addresses were published across four separate data releases over consecutive days. The exposed data includes names, physical addresses, phone numbers, bank account numbers, dates of birth, customer service notes and passport, driver’s licence and European national ID numbers. Odido has published a disclosure notice including an FAQ to support affected customers."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1583",
+        "published": "2026-02-22T04:43:54.000Z",
+        "title": "CarGurus",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In February 2026, the automotive marketplace CarGurus was the target of a data breach attributed to the threat actor ShinyHunters. Following an attempted extortion, the data was published publicly and contained more than 12M email addresses across multiple files including user account ID mappings, finance pre-qualification application data and dealer account and subscription information. Impacted data also included names, phone numbers, physical and IP addresses, and auto finance application outcomes."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1543",
+        "published": "2026-02-10T02:44:47.000Z",
+        "title": "Toy Battles",
+        "processedAt": "2026-05-03T01:24:13.615Z",
+        "content": "In February 2026, the online gaming community Toy Battles suffered a data breach. The incident exposed 1k unique email addresses alongside usernames, IP addresses and chat logs. Following the breach, Toy Battles self-submitted the data to Have I Been Pwned."
+      },
       {
         "guid": "https://feed-blush.vercel.app/fuites?id=undefined",
         "published": "2026-04-30T09:57:57.488Z",
