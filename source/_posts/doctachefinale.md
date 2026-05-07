@@ -122,7 +122,7 @@ published: true
 <text x="416" y="626" style="fill:rgb(194, 192, 182);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Lien trunk dot1q</text>
 </svg>
 
-<svg width="1200" height="864" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 1200 864" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#fdfdfd" />
     <text x="50" y="45" font-family="Arial" font-size="24" font-weight="bold" fill="#2c3e50">Full Infrastructure Map - GSB7</text>
     <text x="50" y="80" font-family="Arial" font-size="14" fill="#7f8c8d">Cartographie exhaustive AD &amp; Réseau - 07/05/2026 15:54:54</text>
