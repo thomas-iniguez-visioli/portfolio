@@ -126,10 +126,8 @@ published: true
     <rect width="100%" height="100%" fill="#fdfdfd" />
     <text x="50" y="45" font-family="Arial" font-size="24" font-weight="bold" fill="#2c3e50">Full Infrastructure Map - GSB7</text>
     <text x="50" y="80" font-family="Arial" font-size="14" fill="#7f8c8d">Cartographie exhaustive AD &amp; Réseau - 07/05/2026 15:54:54</text>
-    
     <text x="50" y="110" font-family="Arial" font-size="16" font-weight="bold" fill="#34495e">Structure Active Directory (Case-Insensitive Root)</text>
     <text x="650" y="110" font-family="Arial" font-size="16" font-weight="bold" fill="#34495e">Topologie Réseau &amp; Voisins</text>
-    
     <line x1="600" y1="100" x2="600" y2="814" stroke="#eee" stroke-width="2" />
     <g transform="translate(50, 120)">
             <rect width="260" height="25" rx="3" fill="white" stroke="#3498db" stroke-width="1.5" />
