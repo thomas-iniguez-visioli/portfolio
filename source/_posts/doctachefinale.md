@@ -121,7 +121,7 @@ published: true
 <rect x="400" y="620" width="10" height="4" rx="1" fill="#5F5E5A" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
 <text x="416" y="626" style="fill:rgb(194, 192, 182);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Lien trunk dot1q</text>
 </svg>
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
 <svg width="1200" height="864" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#fdfdfd" />
     <text x="50" y="45" font-family="Arial" font-size="24" font-weight="bold" fill="#2c3e50">Full Infrastructure Map - GSB7</text>
