@@ -278,4 +278,4 @@ published: true
             <text x="140" y="28" font-family="Arial" font-size="9" fill="#7f8c8d" text-anchor="middle">MAC: N/A (External/VPN)</text>
         </g>
 </svg>
-![Texte alternatif](/capture.jpg "Titre de l'image").
+![image](/capture.jpg).
