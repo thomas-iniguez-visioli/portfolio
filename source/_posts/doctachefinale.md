@@ -278,4 +278,4 @@ published: true
             <text x="140" y="28" font-family="Arial" font-size="9" fill="#7f8c8d" text-anchor="middle">MAC: N/A (External/VPN)</text>
         </g>
 </svg>
-!["https://thomas-iniguez-visioli.github.io/capture.png"]("capturedepreuve").
+![https://thomas-iniguez-visioli.github.io/capture.png]("capturedepreuve").
