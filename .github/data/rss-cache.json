@@ -1,8 +1,113 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-05-10T01:28:10.413Z",
+  "lastUpdated": "2026-05-13T10:12:29.191Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1931",
+        "published": "2026-05-13T08:24:59.012Z",
+        "title": "ville de roubaix fuite du 2026-5-9",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Nomprénom • Situation familiale • École de rattachement •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1853",
+        "published": "2026-05-13T08:24:58.991Z",
+        "title": "moulin roty fuite du 2026-4-17",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": null
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1937",
+        "published": "2026-05-12T22:35:48.891Z",
+        "title": "LuxTrust — comptes liés à Thales",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Revendication publiée le 12 mai 2026 concernant un corpus présenté comme lié à Thales Group, mais dont la structure correspond à un environnement LuxTrust de gestion d'utilisateurs, de droits applicatifs et de signatures électroniques. Le lot contient environ 6 410 comptes utilisateurs, dont une forte proportion de comptes Thales ou apparentés, ainsi qu'environ 6 384 fichiers de signatures manuscrites numérisées. Les informations disponibles situent la préparation ou l'export local du corpus autour du 9 mai 2026.Statut: RevendiquéeType de service: Signature électronique"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1936",
+        "published": "2026-05-12T22:35:48.875Z",
+        "title": "La Boîte Immo",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Revendication publiée le 12 mai 2026 sous le titre « 28K La Boite Immo ». Le fichier de 245,8 MB correspond à un export composite lié à l'écosystème La Boîte Immo / Hektor : au moins 7 677 personnes physiques uniques directement exposées dans des exports CRM/prospects de trois agences, ainsi que 21 173 adresses email uniques de comptes clients dans un fichier d'appels support contenant 321 820 lignes d'appels et des métadonnées relatives à 7 397 instances clientes. Le volume maximal d'identifiants, comptes ou personnes concernés atteint environ 28 850, sous réserve de doublons, de comptes professionnels et de recoupements.Statut: RevendiquéeType de service: Logiciel immobilier"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1935",
+        "published": "2026-05-12T17:32:37.413Z",
+        "title": "Enercoop",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Incident de sécurité identifié par Enercoop le 11 mai 2026, ayant entraîné l'envoi de messages frauduleux usurpant l'identité du service client après la compromission d'un compte. Enercoop confirme que des adresses e-mail associées à des comptes client⋅es, prospects et sociétaires sont concernées. Le périmètre exact des données et des comptes touchés reste en cours d'analyse.Statut: ConfirméeType de service: Fournisseur d'électricité"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1934",
+        "published": "2026-05-12T10:42:30.971Z",
+        "title": "Best Western Hotels",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Accès non autorisé identifié le 22 avril 2026 dans une application web de BWH Hotels hébergeant certaines données de réservation de clients ; les données de certains clients auraient été consultées par un tiers non autorisé entre le 14 octobre 2025 et le 22 avril 2026. Aucun volume de personnes concernées n'est communiqué. Les informations de paiement et autres informations financières n'étaient pas stockées dans le système concerné et n'auraient pas été consultées. Clients informés par email.Statut: ConfirméeType de service: Hôtellerie"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1927",
+        "published": "2026-05-11T14:49:53.755Z",
+        "title": "la france insoumise fuite du 2026-5-9",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Nomprénom • Adresse email • Adresse postale • Information de profil • Participations à groupes ou évènements •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1932",
+        "published": "2026-05-11T12:12:33.495Z",
+        "title": "once for all fuite du 2026-5-11",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Nomprénom • Adresse email • Numéro de téléphone •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1925",
+        "published": "2026-05-08T12:53:19.635Z",
+        "title": "arsène valentin fuite du 2026-5-8",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Date de naissance • Historique des commandes •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1919",
+        "published": "2026-05-06T14:47:38.354Z",
+        "title": "Book MyName",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Le 5 mai 2026, BookMyName a informé par email ses clients qu'un tiers non autorisé avait exploité une vulnérabilité, permettant la consultation et la modification des données de contact associées aux comptes clients. Le volume de comptes affectés n'a pas été communiqué.Statut: ConfirméeType de service: Registrar de noms de domaine"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1918",
+        "published": "2026-05-06T12:08:12.673Z",
+        "title": "Cetelem",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Plusieurs centaines de milliers d'adresses e-mail de clients ont été compromises lors d'une attaque informatique le 20 avril 2026, confirmée par le groupe à Numerama.Statut: ConfirméeType de service: Crédit à la consommation"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1904",
+        "published": "2026-05-03T09:49:55.425Z",
+        "title": "fédération française de basketball fuite du 2026-5-3",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Nomprénom • Date de naissance • Adresse postale • Adresse électronique • Numéro de téléphone • Numéro de licence • Club •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1771",
+        "published": "2026-04-12T02:01:11.000Z",
+        "title": "Hallmark",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "In March 2026, Hallmark suffered an alleged breach and subsequent extortion after attackers gained access to data stored within Salesforce. The data was later published after the extortion deadline passed, exposing 1.7M unique email addresses across both Hallmark and the Hallmark+ streaming service, along with names, phone numbers, physical addresses and support tickets."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1763",
+        "published": "2026-03-30T15:44:02.590Z",
+        "title": "gdquest fuite du 2026-3-30",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "-Adresse email • Titre et tarif des cours suivi • Pseudo et slug du compte •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1747",
+        "published": "2026-03-24T18:40:43.588Z",
+        "title": "Système d'Information sur les Armes (SIA)",
+        "processedAt": "2026-05-13T10:12:29.191Z",
+        "content": "Environ 62 511 enregistrements d'armes et de leurs propriétaires, issus du Système d'Information sur les Armes (SIA), la base de données centralisée du gouvernement français pour le suivi et la gestion des armes à feu, ont été mis en vente par l'acteur de la menace HexDex.Statut: RevendiquéeType de service: Système d'information gouvernemental"
+      },
       {
         "guid": "https://feed-blush.vercel.app/fuites?id=1809",
         "published": "2026-05-09T17:00:18.307Z",
