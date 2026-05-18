@@ -1,8 +1,71 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-05-17T01:44:26.496Z",
+  "lastUpdated": "2026-05-18T16:26:19.437Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1942",
+        "published": "2026-05-17T16:39:00.542Z",
+        "title": "Gîtes de France",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "Fuite revendiquée le 17 mai 2026 concernant l'écosystème Gîtes de France, réseau français de locations de vacances, gîtes ruraux, chambres d'hôtes et hébergements touristiques. La base publiée représente 493,8 Mo de données et 312 685 enregistrements exploitables. Il contient notamment des réservations issues du Cantal, de la Guadeloupe et de la Haute-Garonne, avec des séjours couvrant une très longue période, jusqu'à fin 2026 pour certains dossiers. Le volume de personnes directement concernées est estimé à 185 929 réservants uniques après dédoublonnage. Les données exposées ne se limitent pas à de simples coordonnées : elles permettent de relier une personne à une réservation, une adresse postale, un téléphone, une adresse e-mail, des dates de séjour, un nombre de nuits, un montant ou une taxe de séjour. Le corpus contient également des tickets techniques, des journaux applicatifs, des traces liées au paiement en ligne et des informations internes d'exploitation, ce qui suggère une fuite depuis la couche applicative métier ou les outils de réservation, plutôt qu'un simple scraping du site public.Statut: RevendiquéeType de service: Tourisme / location saisonnière"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1941",
+        "published": "2026-05-15T22:38:21.641Z",
+        "title": "Djaboo",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "Djaboo est une plateforme SaaS de gestion d'entreprise combinant CRM, facturation, devis, paiements, dépenses, projets, support client, documents et fonctionnalités comptables. Lot de plus de 25 Go revendiqué contre Djaboo, comprenant un dump MySQL complet daté du 2026-05-01, environ 15 Go non compressé, ainsi que des archives applicatives contenant code source, dépôts Git, configurations, backups, logs et uploads clients. Le périmètre structuré identifie 12 378 comptes clients CRM, 6 372 noms de sociétés clientes uniques normalisés et un maximum consolidé fiable de 13 578 personnes uniques par email structuré toutes catégories confondues, incluant contacts clients, leads/prospects, staff/utilisateurs internes, clients WooCommerce, tickets/support et emails suivis. Les données clients exposées comprennent notamment comptes sociétés, contacts, prospects, factures, devis, propositions commerciales, paiements, dépenses, notes de frais, abonnements, tickets support, projets, tâches, documents clients, pièces jointes, données de connexion, sessions, tokens, hashes de mots de passe, secrets 2FA, intégrations email, paramètres SMTP/API/paiement, coffre-fort client et structures de transactions ou rapprochements bancaires.Statut: ConfirméeType de service: CRM / comptabilité SaaS"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1940",
+        "published": "2026-05-15T15:30:08.244Z",
+        "title": "Pierre & Vacances-Center Parcs / Maeva",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "Le groupe Pierre &amp; Vacances-Center Parcs a confirmé une fuite de données liée à sa plateforme de réservation La France du Nord au Sud, utilisée notamment pour Maeva, Maeva Club, Maeva Home, Pierre &amp; Vacances et Center Parcs ; le groupe, qui exploite plus de 300 sites, indique que l'incident concerne 1,6 million de réservations, avec un historique potentiel pouvant remonter à 10 ans, tandis que la revendication initiale évoquait 4 575 065 personnes ou passagers exposés et citait notamment maeva.com, vacansoleil.com, campings-paradis.com, leskidunordausud.fr, lafrancedunordausud.fr et lespagnedunordausud.fr.Statut: ConfirméeType de service: Locations de vacances"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1938",
+        "published": "2026-05-14T20:14:47.407Z",
+        "title": "Collège de France",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "Le Collège de France, grand établissement public français d'enseignement supérieur et de recherche, est visé par une fuite revendiquée en mai 2026 concernant college-de-france.fr et scripta.college-de-france.fr ; la base publiée comprend un annuaire de 1 637 personnes uniques, une archive Scripta/Nextcloud d'environ 867,7 MB, des documents RH, de gouvernance et DSI, avec une borne basse confirmée de 1 662 personnes uniques, des fichiers internes datés de 2020-03-19 à 2026-04-29 et des dossiers jusqu'au 2026-05-07.Statut: RevendiquéeType de service: Établissement public d'enseignement et de recherche"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1933",
+        "published": "2026-05-12T22:35:48.875Z",
+        "title": "La Boîte Immo",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "Revendication publiée le 12 mai 2026 sous le titre « 28K La Boite Immo ». Le fichier de 245,8 MB correspond à un export composite lié à l'écosystème La Boîte Immo / Hektor : au moins 7 677 personnes physiques uniques directement exposées dans des exports CRM/prospects de trois agences, ainsi que 21 173 adresses email uniques de comptes clients dans un fichier d'appels support contenant 321 820 lignes d'appels et des métadonnées relatives à 7 397 instances clientes. Le volume maximal d'identifiants, comptes ou personnes concernés atteint environ 28 850, sous réserve de doublons, de comptes professionnels et de recoupements.Statut: RevendiquéeType de service: Logiciel immobilier"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1928",
+        "published": "2026-05-11T12:12:33.495Z",
+        "title": "once for all fuite du 2026-5-11",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "Nomprénom • Adresse email • Numéro de téléphone •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1905",
+        "published": "2026-05-04T15:22:40.856Z",
+        "title": "Smallable",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "La fuite de données du site e-commerce Smallable.com (mode pour enfants) expose 677 023 profils d'enfants. Ces informations, généralement renseignées par les parents pour des offres d'anniversaire, ont été publiées sur un forum cybercriminel. Le fichier ne contient pas d'informations de contact directes (email, nom des parents).Statut: RevendiquéeType de service: E-commerce (mode enfant)"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1657",
+        "published": "2026-03-28T07:15:46.144Z",
+        "title": "Breachforums.V5",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "BreachForums Version 5, a hacking forum, was publicly exposed in March 2026, leaking 340k unique email addresses along with usernames and Argon2 password hashes."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1605",
+        "published": "2026-03-11T14:30:13.535Z",
+        "title": "Police, Gendarmerie, CNIL (agents)",
+        "processedAt": "2026-05-18T16:26:19.434Z",
+        "content": "Compilation de données personnelles concernant 2 393 agents de l'État (Gendarmerie, Police, Défense, CNIL) publiée le 20/02/2026 par l'acteur HexDex. La fuite est un agrégat de plus de 400 sources compromises, ciblant majoritairement les domaines gendarmerie.interieur.gouv.fr et interieur.gouv.fr.Statut: ConfirméeType de service: Sécurité intérieure et Renseignement"
+      },
       {
         "guid": "https://feed-blush.vercel.app/fuites?id=1810",
         "published": "2026-05-16T22:50:34.721Z",
