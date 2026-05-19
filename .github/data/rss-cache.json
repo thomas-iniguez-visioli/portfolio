@@ -1,8 +1,50 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-05-18T16:26:19.437Z",
+  "lastUpdated": "2026-05-19T08:01:04.406Z",
   "items": {
     "2fefc7a5-ae06-4b25-abca-74568216d7c7": [
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1826",
+        "published": "2026-05-19T03:52:02.060Z",
+        "title": "my piscine fuite du 2026-4-23",
+        "processedAt": "2026-05-19T08:01:04.406Z",
+        "content": "Nomprénom • Adresse email • Adresse postale • Historique de commande • Mot de passe « sécurisé » (🤷) •"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1749",
+        "published": "2026-04-17T04:54:48.000Z",
+        "title": "Amtrak",
+        "processedAt": "2026-05-19T08:01:04.406Z",
+        "content": "In April 2026, the hacking group ShinyHunters claimed they had breached Amtrak. The group typically compromises organisations' Salesforce instances before demanding a ransom and later, if not paid, dumping the data publicly. The exposed data contained over 2M unique email addresses along with names, physical addresses and customer support records."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1794",
+        "published": "2026-04-14T17:34:58.705Z",
+        "title": "EduConnect",
+        "processedAt": "2026-05-19T08:01:04.406Z",
+        "content": "Le groupe de hackers DumpSec revendique une fuite de 3,5 millions de comptes élèves. L'incident a été confirmé par le ministère de l'Éducation nationale le 14 avril 2026, résultant de l'usurpation d'un compte administrateur fin 2025, bien que le volume exact n'ait pas été officiellement validé.Statut: ConfirméeType de service: Education nationale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1677",
+        "published": "2026-03-18T05:34:44.000Z",
+        "title": "Aura",
+        "processedAt": "2026-05-19T08:01:04.406Z",
+        "content": "In March 2026, the online safety service Aura disclosed a data breach that exposed 900k unique email addresses. The data was primarily associated with a marketing tool from a previously acquired company, with fewer than 20k active Aura customers affected. Exposed data included names, phone numbers, physical and IP addresses, and customer service notes. Aura advised that no Social Security numbers, passwords or financial information were compromised."
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1620",
+        "published": "2026-03-11T14:30:13.189Z",
+        "title": "MyConnect",
+        "processedAt": "2026-05-19T08:01:04.406Z",
+        "content": "Environ 125 000 lignes de données et 18 Go de fichiers (21 106 fichiers dans 15 978 dossiers) incluant des cartes d'identité, RIB, photos et actes de naissance, concernant les utilisateurs de l'agence d'intérim MyConnect, publiés par l'acteur DumpSec.Statut: RevendiquéeType de service: Agence d'intérim digitale"
+      },
+      {
+        "guid": "https://feed-blush.vercel.app/fuites?id=1678",
+        "published": "2026-03-11T14:30:12.652Z",
+        "title": "SYNLAB France",
+        "processedAt": "2026-05-19T08:01:04.406Z",
+        "content": "L'acteur HexDex revendique 161 Go de données de SYNLAB, un des leaders européens du diagnostic médical (analyses de sang, etc.). Bien qu'il affirme que les données sont internes (financières, industrielles) et non des données de patients, un impact indirect est possible : la fuite peut être utilisée pour des attaques de phishing très ciblées contre les clients et perturber les services en révélant des failles de sécurité.Statut: RevendiquéeType de service: Diagnostic médical"
+      },
       {
         "guid": "https://feed-blush.vercel.app/fuites?id=1942",
         "published": "2026-05-17T16:39:00.542Z",
