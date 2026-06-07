@@ -1,22 +1,15 @@
 {
-  "subject": "[RSS Update] veille - 2 new items",
-  "htmlContent": "\n    <h1>📰 veille</h1>\n    <p><em>Personal blog feed</em></p>\n    \n    <hr>\n    \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1811\" style=\"color: #2c3e50; text-decoration: none;\">police nationale fuite du 2026-4-16</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 5/30/2026 \n          \n        </p>\n        \n        <div>Nomprénom • Adresse email • Ville • Informations utilisateurs • Login • Premières et dernières connexions • modules suivis • Badges obtenus • Outils et portails utilisés •</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1811\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; \">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1929\" style=\"color: #2c3e50; text-decoration: none;\">SOCOTEC</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 5/26/2026 \n          \n        </p>\n        \n        <div>SOCOTEC est un groupe français spécialisé dans le testing, l'inspection, la certification, la gestion des risques et le conseil technique pour la construction, l'immobilier, les infrastructures, l'industrie et l'environnement. Le lot revendiqué porte sur environ 8 494 documents de facturation attribués à SOCOTEC et SOCOTEC Pros, dont 8 483 documents indexés en OCR/JSON, pour environ 1 Go de données. Les factures couvrent une période allant du 21 février 2020 au 28 février 2025. Environ 5 272 personnes physiques uniques pourraient être concernées.Statut: RevendiquéeType de service: Contrôle, inspection et certification</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1929\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n    <hr>\n    <p style=\"color: #666; font-size: 12px; text-align: center;\">\n      This newsletter was automatically generated from <a href=\"https://alphaleadership.github.io/feed/atom.xml\">veille</a>\n    </p>\n    ",
-  "textContent": "veille\n======\n\nPersonal blog feed\n\n1. police nationale fuite du 2026-4-16\n   5/30/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1811\n\n2. SOCOTEC\n   5/26/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1929\n\n---\nThis newsletter was automatically generated from veille\nhttps://alphaleadership.github.io/feed/atom.xml",
+  "subject": "[RSS Update] veille - 1 new item",
+  "htmlContent": "\n    <h1>📰 veille</h1>\n    <p><em>Personal blog feed</em></p>\n    \n    <hr>\n    \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; \">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1458\" style=\"color: #2c3e50; text-decoration: none;\">métropole marseille fuite du 2026-3-24</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 3/24/2026 \n          \n        </p>\n        \n        <div>-Adresse email •</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1458\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n    <hr>\n    <p style=\"color: #666; font-size: 12px; text-align: center;\">\n      This newsletter was automatically generated from <a href=\"https://alphaleadership.github.io/feed/atom.xml\">veille</a>\n    </p>\n    ",
+  "textContent": "veille\n======\n\nPersonal blog feed\n\n1. métropole marseille fuite du 2026-3-24\n   3/24/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1458\n\n---\nThis newsletter was automatically generated from veille\nhttps://alphaleadership.github.io/feed/atom.xml",
   "items": [
     {
-      "guid": "https://feed-blush.vercel.app/fuites?id=1811",
-      "published": "2026-05-30T22:16:03.687Z",
-      "title": "police nationale fuite du 2026-4-16",
-      "processedAt": "2026-05-31T01:58:19.553Z",
-      "content": "Nomprénom • Adresse email • Ville • Informations utilisateurs • Login • Premières et dernières connexions • modules suivis • Badges obtenus • Outils et portails utilisés •"
-    },
-    {
-      "guid": "https://feed-blush.vercel.app/fuites?id=1929",
-      "published": "2026-05-26T21:46:59.754Z",
-      "title": "SOCOTEC",
-      "processedAt": "2026-05-31T01:58:19.553Z",
-      "content": "SOCOTEC est un groupe français spécialisé dans le testing, l'inspection, la certification, la gestion des risques et le conseil technique pour la construction, l'immobilier, les infrastructures, l'industrie et l'environnement. Le lot revendiqué porte sur environ 8 494 documents de facturation attribués à SOCOTEC et SOCOTEC Pros, dont 8 483 documents indexés en OCR/JSON, pour environ 1 Go de données. Les factures couvrent une période allant du 21 février 2020 au 28 février 2025. Environ 5 272 personnes physiques uniques pourraient être concernées.Statut: RevendiquéeType de service: Contrôle, inspection et certification"
+      "guid": "https://feed-blush.vercel.app/fuites?id=1458",
+      "published": "2026-03-24T16:42:22.070Z",
+      "title": "métropole marseille fuite du 2026-3-24",
+      "processedAt": "2026-06-07T02:02:56.312Z",
+      "content": "-Adresse email •"
     }
   ],
-  "generatedAt": "2026-05-31T01:58:19.686Z"
+  "generatedAt": "2026-06-07T02:02:56.452Z"
 }
