@@ -431,7 +431,7 @@ ${feed.url}`;
 
   parseRSSItems(xmlContent) {
     const items = [];
-    const isAtom = true;
+    const isAtom = xmlContent.includes('<feed') || xmlContent.includes('<entry');
     
     // Improved item extraction to handle nested tags or issues with greedy matching
     const tag = isAtom ? 'entry' : 'item';
@@ -472,7 +472,7 @@ ${feed.url}`;
       const title = extractCDATA(extractTag('title', isAtom));
       const link = extractTag('link', isAtom);
       const description = extractCDATA(extractTag(isAtom ? 'summary' : 'description', isAtom));
-      const pubDate =  extractTag('updated', isAtom);
+      const pubDate = extractTag(isAtom ? 'updated' : 'pubDate', isAtom) || extractTag('dc:date', isAtom);
       const author = extractTag('author', isAtom) || extractTag('dc:creator', isAtom);
       const guid = extractTag(isAtom ? 'id' : 'guid', isAtom) || link;
       const content = extractCDATA(extractTag(isAtom ? 'content' : 'content:encoded', isAtom)) || extractCDATA(extractTag('content'));
