@@ -264,9 +264,9 @@ class RSSMonitor {
     if (!items) {
       const cache = this.loadCache();
       const feedCache = cache.items[feedId] || [];
-      const oneDayAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+      const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
       items = feedCache
-        .filter(item => new Date(item.processedAt) > oneDayAgo)
+        .filter(item => new Date(item.published) > oneWeekAgo)
         .slice(0, feed.settings.maxItemsPerNewsletter);
     }
 
