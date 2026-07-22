@@ -224,6 +224,7 @@ class RSSMonitor {
     const feedCache = cache.items[feedId] || [];
     const newItems = this.filterNewItems(items, feedCache);
 
+    const updatedGuids = new Set(newItems.map(item => item.guid));
     cache.items[feedId] = [
       ...newItems.map(item => ({
         guid: item.guid,
@@ -232,7 +233,7 @@ class RSSMonitor {
         processedAt: new Date().toISOString(),
         content: item.content
       })),
-      ...feedCache
+      ...feedCache.filter(item => !updatedGuids.has(item.guid))
     ].slice(0, 2000);
 
     cache.lastUpdated = new Date().toISOString();
@@ -494,8 +495,21 @@ ${feed.url}`;
   }
 
   filterNewItems(items, cachedItems) {
-    const cachedGuids = new Set(cachedItems.map(item => item.guid));
-    return items.filter(item => !cachedGuids.has(item.guid));
+    const newOrUpdated = [];
+    for (const item of items) {
+      const cachedItem = cachedItems.find(c => c.guid === item.guid);
+      if (!cachedItem) {
+        newOrUpdated.push(item);
+      } else {
+        const isDateNewer = item.published && cachedItem.published && new Date(item.published) > new Date(cachedItem.published);
+        const isContentDifferent = (item.content !== undefined && cachedItem.content !== undefined && item.content !== cachedItem.content) || 
+                                   (item.title !== undefined && cachedItem.title !== undefined && item.title !== cachedItem.title);
+        if (isDateNewer || isContentDifferent) {
+          newOrUpdated.push(item);
+        }
+      }
+    }
+    return newOrUpdated;
   }
 
   loadFeeds() {
