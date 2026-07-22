@@ -1,15 +1,148 @@
 {
-  "subject": "[RSS Update] veille - 1 new item",
-  "htmlContent": "\n    <h1>📰 veille</h1>\n    <p><em>Personal blog feed</em></p>\n    \n    <hr>\n    \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; \">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1458\" style=\"color: #2c3e50; text-decoration: none;\">métropole marseille fuite du 2026-3-24</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 3/24/2026 \n          \n        </p>\n        \n        <div>-Adresse email •</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1458\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n    <hr>\n    <p style=\"color: #666; font-size: 12px; text-align: center;\">\n      This newsletter was automatically generated from <a href=\"https://alphaleadership.github.io/feed/atom.xml\">veille</a>\n    </p>\n    ",
-  "textContent": "veille\n======\n\nPersonal blog feed\n\n1. métropole marseille fuite du 2026-3-24\n   3/24/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1458\n\n---\nThis newsletter was automatically generated from veille\nhttps://alphaleadership.github.io/feed/atom.xml",
+  "subject": "[RSS Update] veille - 20 new items",
+  "htmlContent": "\n    <h1>📰 veille</h1>\n    <p><em>Personal blog feed</em></p>\n    \n    <hr>\n    \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1520\" style=\"color: #2c3e50; text-decoration: none;\">son fuite du 2026-4-10</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/22/2026 \n          \n        </p>\n        \n        <div>Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Historique des commandes •</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1520\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1155\" style=\"color: #2c3e50; text-decoration: none;\">Suno</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/20/2026 \n          \n        </p>\n        \n        <div>In November 2025, AI music generation tool Suno suffered a data breach that later came to light in July the following year. The data contained over 55M unique email addresses. Phone numbers were also present where they had been used as the sign-up method. Although representing a small portion of the corpus, the breach also included tens of thousands of Stripe records relating to purchases, containing names, physical addresses, purchase amounts and partial credit card data including the card type, expiry date and last 4 digits. The company advised that &quot;Suno does not have access to customers' full credit card numbers in Stripe&quot;.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1155\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1712\" style=\"color: #2c3e50; text-decoration: none;\">Fluke</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/15/2026 \n          \n        </p>\n        \n        <div>In July 2026, electronic test and measurement equipment company Fluke was targeted in a ShinyHunters &quot;pay or leak&quot; extortion campaign. The group subsequently published more than 100GB of data allegedly taken from the company. The corpus contained largely corporate contact information, including over 800k unique email addresses, names, phone numbers and physical addresses. A large collection of support cases was also present.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1712\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1685\" style=\"color: #2c3e50; text-decoration: none;\">Goose Creek</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/15/2026 \n          \n        </p>\n        \n        <div>In June 2026, a party claiming to have access to data from Goose Creek Candle Company sent emails to a number of the company's customers, claiming the company had a security vulnerability and suffered a data breach. The data was subsequently sent to Have I Been Pwned and contained 6.6M unique email addresses along with names, phone numbers, physical addresses, order IDs and total spent. The data appears to have been obtained from the company's Shopify instance. Goose Creek is aware of the reports but was unable to provide Have I Been Pwned with any further information at the time of publication.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1685\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1717\" style=\"color: #2c3e50; text-decoration: none;\">fédération française d’équitation fuite du 2026-7-11</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/11/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1717\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1715\" style=\"color: #2c3e50; text-decoration: none;\">espaces atypiques fuite du 2026-7-6</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/8/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1715\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1711\" style=\"color: #2c3e50; text-decoration: none;\">ens paris fuite du 2026-7-1</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/8/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1711\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1703\" style=\"color: #2c3e50; text-decoration: none;\">axeo services fuite du 2026-6-18</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/8/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1703\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1714\" style=\"color: #2c3e50; text-decoration: none;\">trenitalia fuite du 2026-7-3</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/8/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1714\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1713\" style=\"color: #2c3e50; text-decoration: none;\">spiko fuite du 2026-7-2</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/8/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1713\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1012\" style=\"color: #2c3e50; text-decoration: none;\">Turknet</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/4/2026 \n          \n        </p>\n        \n        <div>TurkNet, a major Turkish internet service provider, was breached in March 2025, exposing over 2.8M customer records including dates of birth, email addresses, static IP addresses, names, national ID numbers, phone numbers, physical addresses, and a small number of plaintext passwords and usernames.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1012\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1317\" style=\"color: #2c3e50; text-decoration: none;\">Mercer</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/3/2026 \n          \n        </p>\n        \n        <div>Mercer Advisors, a financial advisory firm, was allegedly breached by the ShinyHunters group in February 2026, exposing 321k unique email addresses along with names, phone numbers, physical addresses, and dates of birth.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1317\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=960\" style=\"color: #2c3e50; text-decoration: none;\">Maxance</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 7/2/2026 \n          \n        </p>\n        \n        <div>Maxance, a French wholesale insurance broker, was breached in December 2024 with the data later leaked, exposing over 348k client records including 268k unique email addresses, names, genders, IBANs, physical addresses, phone numbers, login details, and vehicle information.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=960\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1663\" style=\"color: #2c3e50; text-decoration: none;\">Moody</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 6/30/2026 \n          \n        </p>\n        \n        <div>Moody Bible Institute, a Christian higher education institution, was allegedly breached in June 2026 by ShinyHunters, exposing 2.35M unique email addresses along with names, dates of birth, physical addresses, and genders.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1663\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1709\" style=\"color: #2c3e50; text-decoration: none;\">insee fuite du 2026-6-26</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 6/29/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1709\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1708\" style=\"color: #2c3e50; text-decoration: none;\">fédération sportive de la police nationale fuite du 2026-6-22</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 6/29/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1708\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1710\" style=\"color: #2c3e50; text-decoration: none;\">capifrance fuite du 2026-6-29</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 6/29/2026 \n          \n        </p>\n        \n        <div>Aucune description disponible pour cette fuite de données.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1710\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1695\" style=\"color: #2c3e50; text-decoration: none;\">Sysco</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 6/28/2026 \n          \n        </p>\n        \n        <div>In June 2026, the food distribution company Sysco was targeted by a ShinyHunters &quot;pay or leak&quot; extortion campaign. Data was subsequently published containing 2.7M unique email addresses belonging to staff and customers. The data also contained largely corporate contact information including names, phone numbers, physical addresses, internal job titles, and customer feedback.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1695\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;\">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1103\" style=\"color: #2c3e50; text-decoration: none;\">Albertsons</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 6/26/2026 \n          \n        </p>\n        \n        <div>Albertsons, a grocery retail chain, had data allegedly exfiltrated from its Salesforce environment and published in October 2025, exposing over 151k unique email addresses along with dates of birth, genders, names, phone numbers, and physical addresses.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1103\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n      <div style=\"margin-bottom: 30px; padding-bottom: 20px; \">\n        <h2><a href=\"https://feed-blush.vercel.app/fuites?id=1662\" style=\"color: #2c3e50; text-decoration: none;\">JCPenney</a></h2>\n        <p style=\"color: #666; font-size: 14px; margin: 5px 0;\">\n          📅 6/19/2026 \n          \n        </p>\n        \n        <div>JCPenney, a retail department store chain, was allegedly breached in June 2026 as part of the ShinyHunters &quot;pay or leak&quot; campaign, exposing 879k unique email addresses along with names, phone numbers, physical addresses, genders, dates of birth, and ethnicities.</div>\n        <p><a href=\"https://feed-blush.vercel.app/fuites?id=1662\" style=\"color: #3498db;\">Read more →</a></p>\n      </div>\n      \n    <hr>\n    <p style=\"color: #666; font-size: 12px; text-align: center;\">\n      This newsletter was automatically generated from <a href=\"https://alphaleadership.github.io/feed/atom.xml\">veille</a>\n    </p>\n    ",
+  "textContent": "veille\n======\n\nPersonal blog feed\n\n1. son fuite du 2026-4-10\n   7/22/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1520\n\n2. Suno\n   7/20/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1155\n\n3. Fluke\n   7/15/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1712\n\n4. Goose Creek\n   7/15/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1685\n\n5. fédération française d’équitation fuite du 2026-7-11\n   7/11/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1717\n\n6. espaces atypiques fuite du 2026-7-6\n   7/8/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1715\n\n7. ens paris fuite du 2026-7-1\n   7/8/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1711\n\n8. axeo services fuite du 2026-6-18\n   7/8/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1703\n\n9. trenitalia fuite du 2026-7-3\n   7/8/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1714\n\n10. spiko fuite du 2026-7-2\n   7/8/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1713\n\n11. Turknet\n   7/4/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1012\n\n12. Mercer\n   7/3/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1317\n\n13. Maxance\n   7/2/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=960\n\n14. Moody\n   6/30/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1663\n\n15. insee fuite du 2026-6-26\n   6/29/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1709\n\n16. fédération sportive de la police nationale fuite du 2026-6-22\n   6/29/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1708\n\n17. capifrance fuite du 2026-6-29\n   6/29/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1710\n\n18. Sysco\n   6/28/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1695\n\n19. Albertsons\n   6/26/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1103\n\n20. JCPenney\n   6/19/2026\n   Read more: https://feed-blush.vercel.app/fuites?id=1662\n\n---\nThis newsletter was automatically generated from veille\nhttps://alphaleadership.github.io/feed/atom.xml",
   "items": [
     {
-      "guid": "https://feed-blush.vercel.app/fuites?id=1458",
-      "published": "2026-03-24T16:42:22.070Z",
-      "title": "métropole marseille fuite du 2026-3-24",
-      "processedAt": "2026-06-07T02:02:56.312Z",
-      "content": "-Adresse email •"
+      "guid": "https://feed-blush.vercel.app/fuites?id=1520",
+      "published": "2026-07-22T06:37:29.817Z",
+      "title": "son fuite du 2026-4-10",
+      "processedAt": "2026-07-22T09:19:09.157Z",
+      "content": "Nomprénom • Adresse email • Adresse postale • Numéro de téléphone • Historique des commandes •"
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1155",
+      "published": "2026-07-20T19:49:51.000Z",
+      "title": "Suno",
+      "processedAt": "2026-07-22T09:19:09.157Z",
+      "content": "In November 2025, AI music generation tool Suno suffered a data breach that later came to light in July the following year. The data contained over 55M unique email addresses. Phone numbers were also present where they had been used as the sign-up method. Although representing a small portion of the corpus, the breach also included tens of thousands of Stripe records relating to purchases, containing names, physical addresses, purchase amounts and partial credit card data including the card type, expiry date and last 4 digits. The company advised that &quot;Suno does not have access to customers' full credit card numbers in Stripe&quot;."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1712",
+      "published": "2026-07-15T08:01:04.000Z",
+      "title": "Fluke",
+      "processedAt": "2026-07-22T09:19:09.157Z",
+      "content": "In July 2026, electronic test and measurement equipment company Fluke was targeted in a ShinyHunters &quot;pay or leak&quot; extortion campaign. The group subsequently published more than 100GB of data allegedly taken from the company. The corpus contained largely corporate contact information, including over 800k unique email addresses, names, phone numbers and physical addresses. A large collection of support cases was also present."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1685",
+      "published": "2026-07-15T05:13:10.000Z",
+      "title": "Goose Creek",
+      "processedAt": "2026-07-22T09:19:09.157Z",
+      "content": "In June 2026, a party claiming to have access to data from Goose Creek Candle Company sent emails to a number of the company's customers, claiming the company had a security vulnerability and suffered a data breach. The data was subsequently sent to Have I Been Pwned and contained 6.6M unique email addresses along with names, phone numbers, physical addresses, order IDs and total spent. The data appears to have been obtained from the company's Shopify instance. Goose Creek is aware of the reports but was unable to provide Have I Been Pwned with any further information at the time of publication."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1717",
+      "published": "2026-07-11T15:26:08.205Z",
+      "title": "fédération française d’équitation fuite du 2026-7-11",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1715",
+      "published": "2026-07-08T21:52:11.260Z",
+      "title": "espaces atypiques fuite du 2026-7-6",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1711",
+      "published": "2026-07-08T21:52:11.257Z",
+      "title": "ens paris fuite du 2026-7-1",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1703",
+      "published": "2026-07-08T21:52:11.231Z",
+      "title": "axeo services fuite du 2026-6-18",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1714",
+      "published": "2026-07-08T20:32:25.162Z",
+      "title": "trenitalia fuite du 2026-7-3",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1713",
+      "published": "2026-07-08T20:32:25.158Z",
+      "title": "spiko fuite du 2026-7-2",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1012",
+      "published": "2026-07-04T14:19:37.410Z",
+      "title": "Turknet",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "TurkNet, a major Turkish internet service provider, was breached in March 2025, exposing over 2.8M customer records including dates of birth, email addresses, static IP addresses, names, national ID numbers, phone numbers, physical addresses, and a small number of plaintext passwords and usernames."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1317",
+      "published": "2026-07-03T11:27:20.485Z",
+      "title": "Mercer",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Mercer Advisors, a financial advisory firm, was allegedly breached by the ShinyHunters group in February 2026, exposing 321k unique email addresses along with names, phone numbers, physical addresses, and dates of birth."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=960",
+      "published": "2026-07-02T14:23:35.450Z",
+      "title": "Maxance",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Maxance, a French wholesale insurance broker, was breached in December 2024 with the data later leaked, exposing over 348k client records including 268k unique email addresses, names, genders, IBANs, physical addresses, phone numbers, login details, and vehicle information."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1663",
+      "published": "2026-06-30T09:58:53.712Z",
+      "title": "Moody",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Moody Bible Institute, a Christian higher education institution, was allegedly breached in June 2026 by ShinyHunters, exposing 2.35M unique email addresses along with names, dates of birth, physical addresses, and genders."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1709",
+      "published": "2026-06-29T19:03:44.926Z",
+      "title": "insee fuite du 2026-6-26",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1708",
+      "published": "2026-06-29T19:03:44.915Z",
+      "title": "fédération sportive de la police nationale fuite du 2026-6-22",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1710",
+      "published": "2026-06-29T19:03:44.877Z",
+      "title": "capifrance fuite du 2026-6-29",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Aucune description disponible pour cette fuite de données."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1695",
+      "published": "2026-06-28T15:57:29.000Z",
+      "title": "Sysco",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "In June 2026, the food distribution company Sysco was targeted by a ShinyHunters &quot;pay or leak&quot; extortion campaign. Data was subsequently published containing 2.7M unique email addresses belonging to staff and customers. The data also contained largely corporate contact information including names, phone numbers, physical addresses, internal job titles, and customer feedback."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1103",
+      "published": "2026-06-26T13:39:56.320Z",
+      "title": "Albertsons",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "Albertsons, a grocery retail chain, had data allegedly exfiltrated from its Salesforce environment and published in October 2025, exposing over 151k unique email addresses along with dates of birth, genders, names, phone numbers, and physical addresses."
+    },
+    {
+      "guid": "https://feed-blush.vercel.app/fuites?id=1662",
+      "published": "2026-06-19T16:24:01.660Z",
+      "title": "JCPenney",
+      "processedAt": "2026-07-22T09:19:09.158Z",
+      "content": "JCPenney, a retail department store chain, was allegedly breached in June 2026 as part of the ShinyHunters &quot;pay or leak&quot; campaign, exposing 879k unique email addresses along with names, phone numbers, physical addresses, genders, dates of birth, and ethnicities."
     }
   ],
-  "generatedAt": "2026-06-07T02:02:56.452Z"
+  "generatedAt": "2026-07-22T09:19:09.275Z"
 }
