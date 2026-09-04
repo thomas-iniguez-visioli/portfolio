@@ -307,7 +307,7 @@ class RSSMonitor {
         </p>
         ${item.description ? `<p>${item.description}</p>` : ''}
         ${feed.settings.includeFullContent && item.content ? `<div>${item.content}</div>` : ''}
-        <p><a href="${item.guid}" style="color: #3498db;">Read more →</a></p>
+        <p><a href="${item.guid.replace("https://feed-blush.vercel.app/","https://arbinger.is-a.dev/")}" style="color: #3498db;">Read more →</a></p>
       </div>
       `;
     });

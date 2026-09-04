@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "private": true,
   "scripts": {
-    "build": "npm run optimize && npm run clean && npx hexo deploy",
+    "build": " npm run clean && npx hexo deploy",
     "build:fast": "npm run clean && npx hexo deploy",
     "clean": " hexo clean --debug",
     "deploy": "hexo deploy",
