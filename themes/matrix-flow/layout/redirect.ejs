@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="<%- config.language || 'fr' %>">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirection en cours...</title>
+  
+  <% if (page.redirect_to) { %>
+    <!-- Secours initial si JS est désactivé -->
+    <meta http-equiv="refresh" content="0; url=<%- page.redirect_to %>">
+    
+    <script>
+      (function() {
+        var targetUrl = "<%- page.redirect_to %>";
+        // Récupère les paramètres de l'URL actuelle (ex: ?param1=val1&param2=val2)
+        var currentParams = window.location.search;
+        
+        if (currentParams) {
+          // Vérifie si l'URL cible a déjà des paramètres pour utiliser le bon séparateur (? ou &)
+          var separator = targetUrl.indexOf('?') !== -1 ? '&' : '?';
+          // Supprime le premier '?' des paramètres actuels s'il y a déjà un '?' dans l'URL cible
+          if (separator === '&') {
+            currentParams = currentParams.substring(1);
+          }
+          targetUrl += separator + currentParams;
+        }
+        
+        // Redirection immédiate
+        window.location.href = targetUrl;
+      })();
+    </script>
+  <% } %>
+</head>
+<body>
+  <% if (page.redirect_to) { %>
+    <p>Vous allez être redirigé automatiquement. Si rien ne se produit, 
+       <a id="fallback-link" href="<%- page.redirect_to %>">cliquez ici pour accéder au site</a>.
+    </p>
+    
+    <script>
+      // Met à jour dynamiquement le lien textuel de secours pour les utilisateurs lents à charger
+      var link = document.getElementById('fallback-link');
+      if (link && window.location.search) {
+        var sep = link.href.indexOf('?') !== -1 ? '&' : '?';
+        link.href += sep + window.location.search.replace(/^\?/, (sep === '&' ? '' : '?'));
+      }
+    </script>
+  <% } else { %>
+    <p>Erreur : Aucune URL de redirection n'a été spécifiée.</p>
+  <% } %>
+</body>
+</html>
