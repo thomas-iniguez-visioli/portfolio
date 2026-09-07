@@ -300,7 +300,7 @@ class RSSMonitor {
     items.forEach((item, index) => {
       html += `
       <div style="margin-bottom: 30px; padding-bottom: 20px; ${index < items.length - 1 ? 'border-bottom: 1px solid #eee;' : ''}">
-        <h2><a href="${item.guid}" style="color: #2c3e50; text-decoration: none;">${item.title}</a></h2>
+        <h2><a href="${item.guid.replace("https://feed-blush.vercel.app/","https://arbinger.is-a.dev/")}" style="color: #2c3e50; text-decoration: none;">${item.title}</a></h2>
         <p style="color: #666; font-size: 14px; margin: 5px 0;">
           📅 ${new Date(item.published).toLocaleDateString()} 
           ${item.author ? `• ✍️ ${item.author}` : ''}
